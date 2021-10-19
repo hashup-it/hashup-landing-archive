@@ -19,4 +19,24 @@ export const ButtonOutlined = styled.button`
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
+
+    :hover {
+        background-color: white;
+        color: ${Swatches.background_main};
+    }
+`;
+
+export const TestSpace = styled.div`
+    height: 100vh;
+`;
+
+export const GradientText = styled.span`
+    background: linear-gradient(90deg, #000000 0%, rgba(255, 0, 0, 0.5) 100%);
+`;
+
+export const BoldText = styled.span`
+    color: white;
+    font-weight: bold;
+
 `;

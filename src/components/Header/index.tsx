@@ -6,6 +6,7 @@ export const LandingHeader = () => {
         <LandingHeaderContainer>
             <HeaderText/>
             <CartirdgeContainer/>
+            
         </LandingHeaderContainer>
     )
 }
