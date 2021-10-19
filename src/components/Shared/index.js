@@ -38,5 +38,10 @@ export const GradientText = styled.span`
 export const BoldText = styled.span`
     color: white;
     font-weight: bold;
+`;
 
+export const StyledTopLine = styled.div`
+    width: 266.12px;
+    height: 4px;
+    background: ${Swatches.primary_color}
 `;

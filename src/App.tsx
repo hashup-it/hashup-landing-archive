@@ -6,7 +6,7 @@ import { Footer } from './components/Footer';
 import { GameCap } from './components/GameCap';
 import { LandingHeader } from './components/Header';
 import { NavBar } from './components/NavBar';
-import { TestSpace } from './components/Shared';
+import { StyledTopLine, TestSpace } from './components/Shared';
 
 
 export const App = () => {
@@ -15,6 +15,7 @@ export const App = () => {
       <NavBar/>
       <LandingHeader/>
       <AboutUs/>
+      <StyledTopLine/>
       <Calculator/>
       <TestSpace/>
       <GameCap/>
