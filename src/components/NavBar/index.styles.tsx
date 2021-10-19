@@ -14,7 +14,8 @@ export const StyledNavBar = styled.div`
     font-weight: 700;
     cursor: pointer;
     align-items: flex-start;
-
+    z-index: 999;
+    background-color: rgba(0,0,0,0.8);
 `;
 
 export const Logo = styled.img`
@@ -33,3 +34,4 @@ export const Icon = styled.img`
     padding-top: 6px;
     padding-left: 9px;
 `;
+

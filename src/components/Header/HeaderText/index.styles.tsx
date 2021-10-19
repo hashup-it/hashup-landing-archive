@@ -38,11 +38,18 @@ export const ButtonGroup = styled.div`
 
 export const HeaderAirdropWrapper = styled.div`
     display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    :hover {
+        opacity: 0.9;
+    }
+   
+
 `;
 
 export const HeaderAirdropIcon = styled.div`
     background-color: #FFFFFF;
-    border-radius: 15px 0px 0px 15px;   
+    border-radius: 15px 0px 0px 15px; 
     background-image: url('/assets/icons/bolt.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -50,5 +57,13 @@ export const HeaderAirdropIcon = styled.div`
 `;
 
 export const HeaderGetAirdrop = styled.div`
-    
+    background-color: ${Swatches.primary_color};
+    border-radius: 0px 15px 15px 0px;  
+    padding: 16px;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
 `;

@@ -5,11 +5,15 @@ export const LandingHeaderContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    
+    position: relative;
+
+
  
 `;
 
 export const CartirdgeContainer = styled.div`
    
 `;
+
+
 
