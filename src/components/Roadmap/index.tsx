@@ -36,7 +36,7 @@ const Slider = () => {
                     ))}
                 </StyledBoxesArea>
             </StyledSlider>
-            <SliderControls count={infoBoxesData.length - 3} select={select} selected={selected} />
+            <SliderControls count={infoBoxesData.length - 2} select={select} selected={selected} />
         </>
     )
 }
