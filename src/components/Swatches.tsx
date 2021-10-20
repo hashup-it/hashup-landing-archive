@@ -5,5 +5,4 @@ export const Swatches = {
     text_main: '#FFFFFF',
     text_secondary: '#ADADAD',
     text_tertiary: '#969DB2'
-
 }

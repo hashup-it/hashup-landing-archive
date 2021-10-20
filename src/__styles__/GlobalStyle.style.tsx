@@ -6,5 +6,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: 'Sora', normal;
         background-color: black;
+        overflow-x: hidden;
     }
 `
