@@ -74,7 +74,7 @@ export const infoBoxesData: InfoBoxInterface[] = [
         ],
     },
     {
-        label: "Q3 2021",
+        label: "Q2 2022",
         bullets: [
             {
                 content: "$10M seed funding form Dupa z trupa",
@@ -89,7 +89,7 @@ export const infoBoxesData: InfoBoxInterface[] = [
         ],
     },
     {
-        label: "Q4 2021",
+        label: "Q3 2022",
         bullets: [
             {
                 content: "$10M seed funding form Dupa z trupa",
@@ -104,7 +104,7 @@ export const infoBoxesData: InfoBoxInterface[] = [
         ],
     },
     {
-        label: "Q1 2022",
+        label: "Q4 2022",
         bullets: [
             {
                 content: "$10M seed funding form Dupa z trupa",
