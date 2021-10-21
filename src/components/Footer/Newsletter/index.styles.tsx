@@ -54,4 +54,10 @@ export const StyledSignUpButton = styled.button`
     font-family: Sora;
     font-style: normal;
     font-weight: 600;
+
+    cursor: pointer;
+    
+    :hover {
+        opacity: .9;
+    }
 `
