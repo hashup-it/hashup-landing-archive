@@ -36,9 +36,32 @@ export const GradientText = styled.span`
 `
 
 export const BoldText = styled.span`
-    color: white;
     font-weight: bold;
-`
+`;
+
+export const StyledTopLine = styled.div`
+    width: 266.12px;
+    height: 4px;
+    background: ${Swatches.primary_color};
+`;
+
+
+/* to delete */
+export const StyledContainerOutline = styled.div<({outlineColor : string})>`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: 200px;
+    width: 200px;
+    border-radius: inherit;
+    padding: 1px;
+    z-index: 1;
+    top: -1px;
+    left: -1px;
+    background: rgb(22,22,22);
+    background: linear-gradient(90deg, rgba(22,22,22,1) 43%, ${props => props.outlineColor} 100%);
+`;
+
 
 export const AccentLongEmDash = styled.div`
     background: url('assets/icons/accented-long-em-dash.svg');

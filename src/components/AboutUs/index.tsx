@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { BoldText, ColoredText, GradientText } from "../Shared"
-import { LeftWrapper, RightWrapper, SectionContainer, SectionHeader, SectionLabel, SectionText } from "../Shared/sections.styles"
-import { AboutCard, BackgroundWorld, CardHeader, CardLine, CardParticles, Cards, RadialGradient, StyledAboutUs } from "./index.styles"
+import { LeftWrapper, RightWrapper, SectionHeader, SectionLabel, SectionText } from "../Shared/sections.styles"
+import { AboutCard, BackgroundWorld, CardHeader, CardLine, CardParticles, Cards, RadialGradient, SectionContainer, StyledAboutUs } from "./index.styles"
 
 export const AboutUs = () => {
 
@@ -12,7 +12,7 @@ export const AboutUs = () => {
                 <LeftWrapper>
                     <SectionLabel>Posiadaj gry</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>Wolny</ColoredText> rynek gier i oprogramowania
+                        <ColoredText>Wolny</ColoredText> rynek gier i&nbsp;oprogramowania
                     </SectionHeader>
                     <SectionText>
                     Wolny rynek gier jest naturalną konsekwencją oddania w ręce graczy gier które zakupili. Handluj grami! Wolny rynek gier odkryje prawdziwą cenę oprogramowania. 

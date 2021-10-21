@@ -4,6 +4,14 @@ import { Swatches } from "../Swatches";
 export const StyledAboutUs = styled.div`
     position: relative;
     z-index: 0;
+    margin-top: 10vh;
+`;
+
+export const SectionContainer = styled.div`
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 200px;
+    margin-bottom: 100px;
 `;
 
 export const BackgroundWorld = styled.div`
@@ -11,6 +19,7 @@ export const BackgroundWorld = styled.div`
     background-image: url('/assets/background-world.png');
     width: 100vw;
     height: 200vh;
+    background-size: 80vw;
     background-repeat: no-repeat;
     top: -50vh;
     left: 0;
@@ -20,12 +29,14 @@ export const BackgroundWorld = styled.div`
 
 export const RadialGradient = styled.div`
     position: absolute;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(255,0,0,0.2) 0%, rgba(196, 196, 196, 0) 100%);
+    background: #C4C4C4;
+    opacity: 0.2;
+    filter: blur(122px);
     border-radius: 326px;
-    width: 100vw;
-    height: 100vh;
-    top: -40vh;
-    left: 0;
+    width: 250px;
+    height: 250px;
+    top: -10vh;
+    right: 5vw;
     pointer-events: none;
     z-index: -1;
 `;
@@ -36,7 +47,7 @@ export const Cards = styled.div`
 `;
 
 export const AboutCard = styled.div`
-    background: black;
+    background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
     z-index: 9990;
     width: 210px;
     padding: 43px;
@@ -67,6 +78,7 @@ export const CardLine = styled.div`
     width: 25px;
     height: 2px;
     background: ${Swatches.primary_color};
+    margin-top: 20px;
 `;
 
 export const CardParticles = styled.div`
@@ -78,4 +90,5 @@ export const CardParticles = styled.div`
     top: -40px;
     right: -40px;
     pointer-events: none;
+    z-index: -1;
 `;
