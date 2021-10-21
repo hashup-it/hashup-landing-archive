@@ -20,7 +20,7 @@ interface useSliderInterface {
 const useSlider = (): useSliderInterface => {
     const sliderRef = useRef<HTMLDivElement>(null)
     const sliderChildRef = useRef<HTMLDivElement>(null)
-    const mouse = useMouse(sliderRef, { fps: 100, enterDelay: 50 })
+    const mouse = useMouse(sliderRef, { fps: 90, enterDelay: 50 })
     const [selectedSlideId, selectSlideById] = useState<number>(0)
     const [isGrabbed, setIsGrabbed] = useState<boolean>(false)
     const [initMouseX, setInitMouseX] = useState<number>(0)
