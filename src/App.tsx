@@ -1,5 +1,4 @@
 
-
 import React from "react"
 import { LandingContainer } from "./App.styles"
 import { AboutUs } from "./components/AboutUs"
@@ -12,19 +11,27 @@ import { Roadmap } from "./components/Roadmap"
 import { TestSpace } from "./components/Shared"
 import { OurPartners } from "./components/OurPartners"
 import { InfoNotes } from "./components/InfoNotes"
+import Airdrop from "./components/Airdrop"
+import GameContract from "./components/GameContract"
+import { CreateCartridges } from "./components/CreateCartridges"
+import { GamExplorer } from "./components/GamExplorer"
+import Comparison from "./components/Comparison"
 
 export const App = () => (
     <LandingContainer>
         <NavBar />
         <LandingHeader />
         <AboutUs />
+        <Comparison/>
         <Calculator />
-        <TestSpace />
+        <Airdrop/>
+        <CreateCartridges/>
         <GameCap />
+        <GameContract/>
+        <GamExplorer/>
         <InfoNotes />
         <OurPartners />
         <Roadmap />
-        <TestSpace />
         <Footer />
     </LandingContainer>
 )

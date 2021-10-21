@@ -36,7 +36,6 @@ export const GradientText = styled.span`
 `
 
 export const BoldText = styled.span`
-    color: white;
     font-weight: bold;
 `;
 

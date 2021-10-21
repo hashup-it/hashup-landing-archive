@@ -7,6 +7,7 @@ export const StyledCalculator = styled.div`
     margin-top: 76px;
     padding: 0px 117px 0px 117px;
     z-index: 0;
+    margin-bottom: 100px;
 `;
 
 export const PercentBackground = styled.img`

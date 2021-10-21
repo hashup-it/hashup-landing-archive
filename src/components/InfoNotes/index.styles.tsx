@@ -21,7 +21,7 @@ export const StyledNote = styled.div`
     margin: 30px 20px;
 
     ${mediaQuery.laptopL} {
-        margin: 30px 60px;
+        margin: 20px 40px;
     }
 `
 

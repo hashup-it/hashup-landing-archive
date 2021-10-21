@@ -7,6 +7,13 @@ export const StyledAboutUs = styled.div`
     margin-top: 10vh;
 `;
 
+export const SectionContainer = styled.div`
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 200px;
+    margin-bottom: 100px;
+`;
+
 export const BackgroundWorld = styled.div`
     position: absolute;
     background-image: url('/assets/background-world.png');

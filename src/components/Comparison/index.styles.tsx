@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Swatches } from "../Swatches";
 
 export const StyledComparison = styled.div`
-    margin-top: 100px;
+    margin-top: 0px;
     margin-bottom: 250px;
     position: relative;
     display: grid;

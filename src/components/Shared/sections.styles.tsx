@@ -4,8 +4,8 @@ import { Swatches } from "../Swatches";
 export const SectionContainer = styled.div`
     display: grid;
     grid-template-columns: 3fr 3fr;
-
     gap: 200px;
+    margin-bottom: 300px;
 `;
 
 export const LeftWrapper = styled.div`
@@ -41,3 +41,4 @@ export const SectionText = styled.p`
     margin-bottom: 50px;
 
 `; 
+
