@@ -3,6 +3,7 @@ import React from "react";
 import { LandingContainer } from "./App.styles";
 import { AboutUs } from "./components/AboutUs";
 import { Calculator } from "./components/Calculator";
+import Comparison from "./components/Comparison";
 import { Footer } from "./components/Footer";
 import { GameCap } from "./components/GameCap";
 import { LandingHeader } from "./components/Header";
@@ -15,6 +16,7 @@ export const App = () => (
     <NavBar />
     <LandingHeader />
     <AboutUs />
+    <Comparison/>
     <Calculator />
     <TestSpace />
     <GameCap />

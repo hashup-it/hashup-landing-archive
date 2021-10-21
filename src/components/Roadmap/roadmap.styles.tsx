@@ -3,6 +3,7 @@ import { Swatches } from "../Swatches"
 
 export const StyledRoadmap = styled.div`
     text-align: center;
+    margin-top: 100px;
 `
 
 export const StyledSlider = styled.div`
