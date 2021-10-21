@@ -209,8 +209,6 @@ export const MenuHeader = styled(ListHeader)`
 `
 
 export const MenuItem = styled.li`
-    cursor: pointer;
-
     color: white;
 
     font-style: normal;
@@ -219,8 +217,8 @@ export const MenuItem = styled.li`
     line-height: 160%;
 
     display: flex;
-
-    :hover {
+    
+    > a:hover {
         text-decoration: underline;
     }
 `
@@ -267,7 +265,6 @@ export const Icon = styled.div<({ url: string })>`
     border-radius: 50%;
     border: 0.635381px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
-
 
     background: url(${props => '/assets/icons/' + props.url});
     background-repeat: no-repeat;

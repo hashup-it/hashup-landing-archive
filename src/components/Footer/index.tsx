@@ -26,6 +26,7 @@ import {
     StyledFooter
 } from './index.styles'
 import { Newsletter } from './Newsletter'
+import { Hyperlink } from '../Shared/sections.styles'
 
 export const Footer = () => {
     return (
@@ -36,9 +37,9 @@ export const Footer = () => {
                 <Logo src="/assets/logo.svg" />
                 <SocialMediaGroup>
                     <span>Our&nbsp;<ColoredText>social media</ColoredText></span>
-                    <Icon url={'facebook.svg'} />
-                    <Icon url={'instagram.svg'} />
-                    <Icon url={'linkedin.svg'} />
+                    <a href="https://www.facebook.com/HashUpIt"><Icon url={'facebook.svg'} /></a>
+                    <a href="https://www.instagram.com/hashup.it/"><Icon url={'instagram.svg'} /></a>
+                    <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
                 </SocialMediaGroup>
             </FooterHeading>
             <FooterQuickNavigation>
@@ -75,16 +76,23 @@ export const Footer = () => {
                             <MenuItem>Praca w #</MenuItem>
                         </MenuList>
                         <MenuList>
-                            <MenuHeader>Support</MenuHeader>
+                            <MenuHeader>Pomoc</MenuHeader>
                             <MenuItem>FAQ</MenuItem>
                             <MenuItem>Help center</MenuItem>
                             <MenuItem>Support</MenuItem>
                         </MenuList>
                         <MenuList>
-                            <MenuHeader>For Creators</MenuHeader> 
-                            <MenuItem>Dokumentacja</MenuItem> {/* https://hashup-it.gitbook.io/hashup-it-1/ */}
-                            <MenuItem>Czym jest kartridż?</MenuItem>
-                            {/* <MenuItem>Cde</MenuItem> */}
+                            <MenuHeader>Dla Twórców</MenuHeader>
+                            <MenuItem>
+                                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
+                                    Dokumentacja
+                                </Hyperlink>
+                            </MenuItem>
+                            <MenuItem>
+                                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/hashup-basics/cartridge">
+                                    Czym jest kartridż?
+                                </Hyperlink>
+                            </MenuItem>
                         </MenuList>
                     </MenuItems>
                 </FooterMenu>

@@ -74,7 +74,7 @@ export const Roadmap = () => (
             <ColoredText>Roadmapa</ColoredText>
         </SectionLabel>
         <SectionHeader>
-            Zobacz <ColoredText>kiedy zamierzamy to wszystko zrobić?</ColoredText>
+            Zobacz, <ColoredText>kiedy zamierzamy to wszystko zrobić</ColoredText>
         </SectionHeader>
         <Slider />
     </StyledRoadmap>

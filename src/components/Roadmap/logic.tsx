@@ -3,7 +3,7 @@ import useMouse from "@react-hook/mouse-position"
 import { useWindowWidth } from "@react-hook/window-size"
 import { infoBoxesData } from "./data"
 
-export const BOX_WIDTH: number = 400
+export const BOX_WIDTH: number = 367 + 2 * 13 // width + margin
 export const NUMBER_OF_BOXES = infoBoxesData.length
 // export const BOXES_PER_SLIDE: number = 2
 // export const NUMBER_OF_SLIDES: number = NUMBER_OF_BOXES / BOXES_PER_SLIDE - 1
@@ -34,7 +34,7 @@ const useSlider = (): useSliderInterface => {
         return v <= 1 ? 1 : v
     }, [windowWidth])
     const numberOfSlides = useMemo(
-        () => Math.round(NUMBER_OF_BOXES / boxesPerSlide),
+        () => Math.ceil(NUMBER_OF_BOXES / boxesPerSlide),
         [boxesPerSlide]
     )
     const maxOffsetX = useMemo(

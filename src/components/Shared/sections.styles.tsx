@@ -39,6 +39,10 @@ export const SectionText = styled.p`
     line-height: 160%; 
     color: ${Swatches.text_secondary};
     margin-bottom: 50px;
+`;
 
-`; 
 
+export const Hyperlink = styled.a`
+    text-decoration: none;
+    color: inherit;
+`
