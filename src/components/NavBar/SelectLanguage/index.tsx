@@ -4,7 +4,7 @@ import { StyledSelectLanguage } from "./index.styles"
 export const SelectLanguage = () => {
     return (
         <StyledSelectLanguage>
-            EN
+            PL
             {/* <Icon src='/assets/icons/chevron-down.svg'/> */}
         </StyledSelectLanguage>
     )
