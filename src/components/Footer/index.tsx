@@ -52,7 +52,7 @@ export const Footer = () => {
                     <ListHeader>Nasza siedziba</ListHeader>
                     <ContactField>
                         <AddressLineEmphasized>
-                            HashUp P.S.A
+                            HashUp P.S.A.
                         </AddressLineEmphasized>
                         Al. Jana Pawła II 27<br />
                         00-867 Warszawa<br />
