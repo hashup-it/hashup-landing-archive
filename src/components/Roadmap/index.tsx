@@ -58,11 +58,15 @@ const Slider = () => {
                     ))}
                 </StyledBoxesArea>
             </StyledSlider>
+<<<<<<< HEAD
             <SliderControls
                 numberOfBoxes={NUMBER_OF_SLIDES}
                 jumpToSlide={jumpToSlide}
                 selectedSlideId={selectedSlideId}
             />
+=======
+            <SliderControls count={infoBoxesData.length - 2} select={select} selected={selected} />
+>>>>>>> a5eb1b35062a640f8d8bba91e88721da06e5ec8e
         </>
     )
 }

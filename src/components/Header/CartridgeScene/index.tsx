@@ -1,21 +1,22 @@
 import React, { Suspense } from 'react'
-import { Canvas } from '@react-three/fiber'
-import Model from './Three/Suzanne'
+import { Canvas, extend } from '@react-three/fiber'
+import Model from './Three/Scene'
 import { OrbitControls } from '@react-three/drei'
 
-const FallbackScene = () => {
-    return (
-        <p>Loading THC</p>
-    )
-}
+extend({ OrbitControls })
 
 export const CartridgeScene = () => {
     return (
         <Canvas
             camera={{ position: [-6, 0, 0], fov: 40 }}
+            gl={{
+                antialias: true,
+                powerPreference: 'high-performance',
+                precision: 'highp'
+            }}
         >
-            <Suspense fallback={<FallbackScene/>}>
-                <ambientLight intensity={.4}/>
+            <Suspense fallback={null}>
+                <ambientLight intensity={.4} />
                 <directionalLight
                     castShadow
                     position={[-8, 16, -8]}
@@ -28,12 +29,15 @@ export const CartridgeScene = () => {
                     shadowCameraTop={10}
                     shadowCameraBottom={-10}
                 />
-                <pointLight position={[0, 50, 0]} intensity={2}/>
+                <pointLight position={[-200, 10, -200]} intensity={15} />
+                <pointLight position={[400, 10, 400]} intensity={.5} />
                 <OrbitControls
                     enableZoom={false}
                     enablePan={false}
+                    autoRotate
+                    autoRotateSpeed={-2}
                 />
-                <Model/>
+                <Model />
             </Suspense>
         </Canvas>
     )
