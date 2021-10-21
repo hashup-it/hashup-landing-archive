@@ -6,7 +6,6 @@ export const SectionContainer = styled.div`
     grid-template-columns: 3fr 3fr;
 
     gap: 200px;
-
 `;
 
 export const LeftWrapper = styled.div`
