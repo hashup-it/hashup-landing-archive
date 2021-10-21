@@ -1,4 +1,4 @@
-import { FC, useState } from "react"
+import { FC } from "react"
 import InfoBox from "./InfoBox"
 import { ColoredText } from "../Shared"
 import { SectionHeader, SectionLabel } from "../Shared/sections.styles"
@@ -10,33 +10,59 @@ import {
     StyledSliderControl,
 } from "./roadmap.styles"
 import { infoBoxesData, highlightedId } from "./data"
+import useSlider, {NUMBER_OF_SLIDES} from "./logic"
 
 interface SliderControlsProps {
-    readonly count: number
-    readonly selected: number
-    readonly select: (id: number) => void
+    readonly numberOfBoxes: number
+    readonly selectedSlideId: number
+    readonly jumpToSlide: (id: number) => void
 }
-const SliderControls: FC<SliderControlsProps> = ({ count, select, selected }) => (
+const SliderControls: FC<SliderControlsProps> = ({
+    numberOfBoxes,
+    jumpToSlide,
+    selectedSlideId,
+}) => (
     <StyledSliderControls>
-        {Array.from({ length: count }, (_, k) => (
-            <StyledSliderControl key={k} selected={selected === k} onClick={() => select(k)} />
+        {Array.from({ length: numberOfBoxes }, (_, k) => (
+            <StyledSliderControl
+                key={k}
+                selected={selectedSlideId === k}
+                onClick={() => jumpToSlide(k)}
+            />
         ))}
     </StyledSliderControls>
 )
 
 const Slider = () => {
-    const [selected, select] = useState(0)
+    const {
+        sliderRef,
+        sliderChildRef,
+        isGrabbed,
+        jumpToSlide,
+        selectedSlideId,
+        onSliderMouseDown,
+        onSliderMouseUp,
+    } = useSlider()
 
     return (
         <>
-            <StyledSlider>
-                <StyledBoxesArea selected={selected}>
+            <StyledSlider
+                ref={sliderRef}
+                isGrabbed={isGrabbed}
+                onMouseDown={onSliderMouseDown}
+                onMouseUp={onSliderMouseUp}
+            >
+                <StyledBoxesArea ref={sliderChildRef}>
                     {infoBoxesData.map((item, index) => (
                         <InfoBox key={item.label} highlighted={index === highlightedId} {...item} />
                     ))}
                 </StyledBoxesArea>
             </StyledSlider>
-            <SliderControls count={infoBoxesData.length - 2} select={select} selected={selected} />
+            <SliderControls
+                numberOfBoxes={NUMBER_OF_SLIDES}
+                jumpToSlide={jumpToSlide}
+                selectedSlideId={selectedSlideId}
+            />
         </>
     )
 }

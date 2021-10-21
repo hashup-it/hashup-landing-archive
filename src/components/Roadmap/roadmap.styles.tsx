@@ -6,22 +6,28 @@ export const StyledRoadmap = styled.div`
     margin-top: 100px;
 `
 
-export const StyledSlider = styled.div`
+export const StyledSlider = styled.div<{ isGrabbed: boolean }>`
     margin-top: 80px;
     min-width: 100%;
     max-width: 100%;
     position: relative;
+
+    cursor: grab;
+
+    ${props =>
+        props.isGrabbed &&
+        css`
+            cursor: grabbing;
+        `}
 `
 
-const ENTIRE_WIDTH_OF_INFOBOX: number = 393
-
-export const StyledBoxesArea = styled.div<{ selected: number }>`
+export const StyledBoxesArea = styled.div`
+    user-select: none;
     display: flex;
     justify-content: center;
     flex: 1;
     justify-content: left;
-    transition: transform 300ms ease-in-out;
-    transform: translateX(${({ selected }) => selected * ENTIRE_WIDTH_OF_INFOBOX * -1}px);
+    will-change: transform;
 `
 
 export const StyledSliderControls = styled.div`
