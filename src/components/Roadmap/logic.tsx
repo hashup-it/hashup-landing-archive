@@ -1,17 +1,19 @@
 import { useState, useRef, useMemo, useEffect } from "react"
 import useMouse from "@react-hook/mouse-position"
+import { useWindowWidth } from "@react-hook/window-size"
 import { infoBoxesData } from "./data"
 
-export const BOXES_PER_SLIDE: number = 2
 export const BOX_WIDTH: number = 400
 export const NUMBER_OF_BOXES = infoBoxesData.length
-export const NUMBER_OF_SLIDES: number = NUMBER_OF_BOXES / BOXES_PER_SLIDE - 1
+// export const BOXES_PER_SLIDE: number = 2
+// export const NUMBER_OF_SLIDES: number = NUMBER_OF_BOXES / BOXES_PER_SLIDE - 1
 
 interface useSliderInterface {
     sliderRef: React.RefObject<HTMLDivElement>
     sliderChildRef: React.RefObject<HTMLDivElement>
     readonly isGrabbed: boolean
     readonly selectedSlideId: number
+    readonly numberOfSlides: number
     readonly onSliderMouseDown: () => void
     readonly onSliderMouseUp: () => void
     readonly jumpToSlide: (slide: number) => void
@@ -26,9 +28,18 @@ const useSlider = (): useSliderInterface => {
     const [initMouseX, setInitMouseX] = useState<number>(0)
     const [initOffsetX, setInitOffsetX] = useState<number>(0)
     const [offsetX, _setOffsetX] = useState<number>(0)
+    const windowWidth = useWindowWidth()
+    const boxesPerSlide = useMemo(() => {
+        const v = Math.floor(windowWidth / BOX_WIDTH)
+        return v <= 1 ? 1 : v
+    }, [windowWidth])
+    const numberOfSlides = useMemo(
+        () => Math.round(NUMBER_OF_BOXES / boxesPerSlide),
+        [boxesPerSlide]
+    )
     const maxOffsetX = useMemo(
-        (): number => BOX_WIDTH * (NUMBER_OF_BOXES - 3) - BOX_WIDTH,
-        [NUMBER_OF_BOXES]
+        (): number => BOX_WIDTH * NUMBER_OF_BOXES - boxesPerSlide * BOX_WIDTH,
+        [boxesPerSlide]
     )
 
     const onSliderMouseDown = (): void => {
@@ -45,7 +56,7 @@ const useSlider = (): useSliderInterface => {
 
     const jumpToSlide = (slide: number): void => {
         // Smoothly jump to another slide
-        const off = slide * BOXES_PER_SLIDE * BOX_WIDTH
+        const off = slide * boxesPerSlide * BOX_WIDTH
         _updateStyle("transition", "transform 250ms ease-in-out")
         setTimeout(() => {
             setOffsetX(off)
@@ -56,7 +67,7 @@ const useSlider = (): useSliderInterface => {
     }
 
     const selectSlideByOffsetX = (off: number): void => {
-        const delta: number = off / (BOXES_PER_SLIDE * BOX_WIDTH)
+        const delta: number = off / (boxesPerSlide * BOX_WIDTH)
         selectSlideById(Math.floor(delta))
     }
 
@@ -77,7 +88,7 @@ const useSlider = (): useSliderInterface => {
         } else if (off >= maxOffsetX) {
             _setTranslateStyle(maxOffsetX)
             _setOffsetX(maxOffsetX)
-            selectSlideById(NUMBER_OF_SLIDES - 1)
+            selectSlideById(numberOfSlides - 1)
         } else {
             _setTranslateStyle(off)
             _setOffsetX(off)
@@ -115,6 +126,7 @@ const useSlider = (): useSliderInterface => {
         onSliderMouseUp,
         selectedSlideId,
         jumpToSlide,
+        numberOfSlides,
     }
 }
 

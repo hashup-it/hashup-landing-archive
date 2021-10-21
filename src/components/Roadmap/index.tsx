@@ -10,7 +10,7 @@ import {
     StyledSliderControl,
 } from "./roadmap.styles"
 import { infoBoxesData, highlightedId } from "./data"
-import useSlider, {NUMBER_OF_SLIDES} from "./logic"
+import useSlider from "./logic"
 
 interface SliderControlsProps {
     readonly numberOfBoxes: number
@@ -42,6 +42,7 @@ const Slider = () => {
         selectedSlideId,
         onSliderMouseDown,
         onSliderMouseUp,
+        numberOfSlides
     } = useSlider()
 
     return (
@@ -59,7 +60,7 @@ const Slider = () => {
                 </StyledBoxesArea>
             </StyledSlider>
             <SliderControls
-                numberOfBoxes={NUMBER_OF_SLIDES}
+                numberOfBoxes={numberOfSlides}
                 jumpToSlide={jumpToSlide}
                 selectedSlideId={selectedSlideId}
             />
@@ -70,10 +71,10 @@ const Slider = () => {
 export const Roadmap = () => (
     <StyledRoadmap>
         <SectionLabel>
-            <ColoredText>roadmap</ColoredText>
+            <ColoredText>Roadmapa</ColoredText>
         </SectionLabel>
         <SectionHeader>
-            So, how are we <ColoredText>going to do all of this?</ColoredText>
+            Zobacz <ColoredText>kiedy zamierzamy to wszystko zrobić?</ColoredText>
         </SectionHeader>
         <Slider />
     </StyledRoadmap>

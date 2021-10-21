@@ -1,70 +1,103 @@
-import { ColoredText } from "../Shared";
-import { ColoredLine, Copyright, FooterBottom, FooterBottomGroup, FooterLink, FooterMenu, FooterTop, FooterTopLeft, Icon, Icons, Logo, MenuItem, MenuItems, MenuLabel, MenuList, StyledFooter } from "./index.styles";
+import { AccentLongEmDash, ColoredText } from '../Shared'
+import {
+    AddressLineEmphasized,
+    CompanyIds,
+    ContactField,
+    Copyright,
+    FooterBottom,
+    FooterBottomGroup,
+    FooterHeading,
+    FooterLink,
+    FooterMenu,
+    FooterQuickNavigation,
+    FooterSeparatorAccent,
+    FooterSeparatorBase,
+    FooterTop,
+    FooterTopLeft,
+    Icon,
+    ListHeader,
+    Logo,
+    MailLink,
+    MenuHeader,
+    MenuItem,
+    MenuItems,
+    MenuList,
+    SocialMediaGroup,
+    StyledFooter
+} from './index.styles'
+import { Newsletter } from './Newsletter'
 
 export const Footer = () => {
-    return (  
+    return (
         <StyledFooter>
+            <FooterSeparatorBase />
+            <FooterSeparatorAccent />
+            <FooterHeading>
+                <Logo src="/assets/logo.svg" />
+                <SocialMediaGroup>
+                    <span>Our&nbsp;<ColoredText>social media</ColoredText></span>
+                    <Icon url={'facebook.svg'} />
+                    <Icon url={'instagram.svg'} />
+                    <Icon url={'linkedin.svg'} />
+                </SocialMediaGroup>
+            </FooterHeading>
+            <FooterQuickNavigation>
+                <p><ColoredText>Hash</ColoredText>Up.it</p>
+                <AccentLongEmDash />
+                <a href="#">Idź do strony głównej</a>
+            </FooterQuickNavigation>
             <FooterTop>
                 <FooterTopLeft>
-                    <Logo src="/assets/logo.svg"/><br/>
-                    HashUp P.S.A<br/>
-                    Al. Jana Pawła II 27<br/>
-                    00-867 Warszawa<br/>
-                    NIP: 5272974670<br/>
-                    KRS: 0000927509<br/>
+                    <ListHeader>Nasza siedziba</ListHeader>
+                    <ContactField>
+                        <AddressLineEmphasized>
+                            HashUp P.S.A
+                        </AddressLineEmphasized>
+                        Al. Jana Pawła II 27<br />
+                        00-867 Warszawa<br />
+                        <br />
+                        <MailLink href="mailto:hello@hashup.it">
+                            hello@hashup.it
+                        </MailLink>
+                        <br />
+                    </ContactField>
+                    <CompanyIds>
+                        NIP: 5272974670<br />
+                        KRS: 0000927509<br />
+                    </CompanyIds>
                 </FooterTopLeft>
                 <FooterMenu>
-                    <MenuLabel>
-                        Menu <ColoredLine/>
-                    </MenuLabel>
                     <MenuItems>
                         <MenuList>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
+                            <MenuHeader>HashUp</MenuHeader>
+                            <MenuItem>Team</MenuItem>
+                            <MenuItem>Media o nas</MenuItem>
+                            <MenuItem>Praca w #</MenuItem>
                         </MenuList>
                         <MenuList>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
+                            <MenuHeader>Support</MenuHeader>
+                            <MenuItem>FAQ</MenuItem>
+                            <MenuItem>Help center</MenuItem>
+                            <MenuItem>Support</MenuItem>
                         </MenuList>
                         <MenuList>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
-                        </MenuList>
-                        <MenuList>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
-                            <MenuItem>Dla kogo?</MenuItem>
-                            <MenuItem>Cennik</MenuItem>
-                            <MenuItem>Jak to działa?</MenuItem>
+                            <MenuHeader>For Creators</MenuHeader> 
+                            <MenuItem>Dokumentacja</MenuItem> {/* https://hashup-it.gitbook.io/hashup-it-1/ */}
+                            <MenuItem>Czym jest kartridż?</MenuItem>
+                            {/* <MenuItem>Cde</MenuItem> */}
                         </MenuList>
                     </MenuItems>
                 </FooterMenu>
+                <Newsletter />
             </FooterTop>
             <FooterBottom>
-                <Copyright>Copyright © by <ColoredText>HashUp</ColoredText>. All Rights Reserved.</Copyright>
+                <Copyright>Copyright © by HashUp. All Rights Reserved.</Copyright>
                 <FooterBottomGroup>
-                    <Icons>
-                        <Icon url={"facebook.svg"}></Icon>
-                        <Icon url={"instagram.svg"}></Icon>
-                        <Icon url={"linkedin.svg"}></Icon>
-                    </Icons>
-                    <FooterLink>Warunki korzystania</FooterLink>
-                    <FooterLink>Polityka prywatności</FooterLink>
+                    <FooterLink>Terms & Conditions</FooterLink>
+                    <FooterLink>Privacy Policy</FooterLink>
+                    <FooterLink>Cookies Policy</FooterLink>
                 </FooterBottomGroup>
             </FooterBottom>
         </StyledFooter>
-    );
+    )
 }

@@ -84,7 +84,6 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
                 : css`
                       border-right: ${Swatches.primary_color} 1px solid;
                       border-bottom: ${Swatches.primary_color} 1px solid;
-                      transform: rotate(-45deg);
                       animation: ${rotateAnim} 3s linear infinite;
                   `}
     }
