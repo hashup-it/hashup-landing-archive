@@ -17,17 +17,17 @@ export const Newsletter = () => {
 
     return (
         <NewsletterContainer>
-            <ListHeader>Subscribe to the newsletter</ListHeader>
+            <ListHeader>Zapisz się do newslettera</ListHeader>
             <StyledFormDescription>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Otrzymuj aktualności dotyczące naszej działalności.
             </StyledFormDescription>
             <FormContainer>
                 <StyledInput
                     type="email"
-                    placeholder="Your email address"
+                    placeholder="Twój adres mejlowy"
                     onChange={event => setMailAddress(event.target.value)}
                 />
-                <StyledSignUpButton onClick={signUp}>Sign up</StyledSignUpButton>
+                <StyledSignUpButton onClick={signUp}>Zapisz się</StyledSignUpButton>
             </FormContainer>
         </NewsletterContainer>
     )
