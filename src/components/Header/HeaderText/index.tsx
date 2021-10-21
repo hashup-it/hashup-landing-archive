@@ -10,7 +10,7 @@ export const HeaderText = () => {
                 <ColoredText>.</ColoredText>
             </Header>
             <SmallText>
-                DEFInitive edition of game license carrier
+                DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez pośredników. Z 0% prowizji. Skończymy monopol na rynku oprogramowania...
             </SmallText>
             <ButtonGroup>
                 <ButtonOutlined>Whitepaper</ButtonOutlined>

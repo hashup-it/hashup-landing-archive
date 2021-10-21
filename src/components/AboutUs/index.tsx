@@ -10,25 +10,25 @@ export const AboutUs = () => {
         <StyledAboutUs>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel>UWOLNIJ SIĘ</SectionLabel>
+                    <SectionLabel>Posiadaj gry</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>Wolny</ColoredText> rynek oprogramowania
+                        <ColoredText>Wolny</ColoredText> rynek gier i oprogramowania
                     </SectionHeader>
                     <SectionText>
-                    A free software market is a natural consequence of putting software in the hands of players. Trade in Games! A free software market will discover the true price of software.
+                    Wolny rynek gier jest naturalną konsekwencją oddania w ręce graczy gier które zakupili. Handluj grami! Wolny rynek gier odkryje prawdziwą cenę oprogramowania. 
                     </SectionText>
                 </LeftWrapper>
                 <RightWrapper>
                     <Cards>
                         <AboutCard>
                             <CardLine/>
-                            <CardHeader>We need capitalism</CardHeader>
+                            <CardHeader></CardHeader>
                             Did you know that centrally controlled prices as they are now <BoldText><GradientText>is socialism?</GradientText></BoldText> The game market needs some capitalism.
                         </AboutCard>
                         <AboutCard>
                             <CardParticles/>
                             <CardLine/>
-                            <CardHeader>Zapiekanki</CardHeader>
+                            <CardHeader>Monopol</CardHeader>
                             Did you know that centrally controlled prices as they are now is socialism? The game market needs some capitalism.
                         </AboutCard>
                     </Cards>

@@ -81,10 +81,10 @@ export const Footer = () => {
                             <MenuItem>Support</MenuItem>
                         </MenuList>
                         <MenuList>
-                            <MenuHeader>For Creators</MenuHeader>
-                            <MenuItem>Abc</MenuItem>
-                            <MenuItem>Bcd</MenuItem>
-                            <MenuItem>Cde</MenuItem>
+                            <MenuHeader>For Creators</MenuHeader> 
+                            <MenuItem>Dokumentacja</MenuItem> {/* https://hashup-it.gitbook.io/hashup-it-1/ */}
+                            <MenuItem>Czym jest kartridż?</MenuItem>
+                            {/* <MenuItem>Cde</MenuItem> */}
                         </MenuList>
                     </MenuItems>
                 </FooterMenu>

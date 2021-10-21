@@ -7,12 +7,12 @@ export const GameCap = () => {
         <StyledGameCap>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel>FREE MARKET SOFTWARE</SectionLabel>
+                    <SectionLabel>Listing cen kartridży</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>GameCap</ColoredText>.io - place that lists all free-market software<ColoredText>.</ColoredText>
+                        <ColoredText>GameCap</ColoredText>.io - miejsce, gdzie poznamy cenę oprogramowania<ColoredText>.</ColoredText>
                     </SectionHeader>
                     <SectionText>
-                    A free software market is a natural consequence of putting software in the hands of players. Trade in Games! A free software market will discover the true price of software.
+                    Konsekwencją oddania w ręce graczy pełnię praw nad cyfrowym nośnikiem licencji jest ich wolnorynkowa cena. Istnieje więc potrzeba na pojawienie się miejsca, które będzie indeksować wszystkie kartridże oraz zmiany ich cen w czasie. Chcąc jak najwierniej przenieść model powstawania kryptowalut do powstawania gier zdecydowaliśmy się, że zainspirujemy się CoinMarketCap’em, czyli platformą listującą wszystkie kryptowaluty.
                     </SectionText>
                     <ButtonOutlined>Go to gamecap.io</ButtonOutlined>
                 </LeftWrapper>

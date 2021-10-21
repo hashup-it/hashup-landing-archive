@@ -71,10 +71,10 @@ const Slider = () => {
 export const Roadmap = () => (
     <StyledRoadmap>
         <SectionLabel>
-            <ColoredText>roadmap</ColoredText>
+            <ColoredText>Roadmapa</ColoredText>
         </SectionLabel>
         <SectionHeader>
-            So, how are we <ColoredText>going to do all of this?</ColoredText>
+            Zobacz <ColoredText>kiedy zamierzamy to wszystko zrobić?</ColoredText>
         </SectionHeader>
         <Slider />
     </StyledRoadmap>
