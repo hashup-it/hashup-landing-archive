@@ -19,16 +19,18 @@ export const OurPartners = () => {
             </OurPartnersHeader>
             <ContentContainer>
                 <SponsorLogosContainer>
-                    <SponsorLogo src="/assets/icons/sponsor/uber.svg" />
-                    <SponsorLogo src="/assets/icons/sponsor/uber.svg" />
-                    <SponsorLogo src="/assets/icons/sponsor/uber.svg" />
-                    <SponsorLogo src="/assets/icons/sponsor/uber.svg" />
-                    <SponsorLogo src="/assets/icons/sponsor/uber.svg" />
-                    <SponsorLogo src="/assets/icons/sponsor/uber.svg" />
-                    <SponsorLogo src="/assets/icons/sponsor/uber.svg" />
+                    <a href="https://tubbly.webflow.io/">
+                        <SponsorLogo src="/assets/icons/sponsor/tubbly.png" />
+                    </a>
+                    <a href="https://www.blockalliance.io/">
+                        <SponsorLogo src="/assets/icons/sponsor/blockchain-alliance.png" />
+                    </a>
+                    <a href="https://unitedideas.co/">
+                        <SponsorLogo src="/assets/icons/sponsor/united-ideas.png" />
+                    </a>
                 </SponsorLogosContainer>
                 <QuoteTextContainer>
-                    Raised a <ColoredText>$22 milion</ColoredText> extension to its Series B round of funding
+                    Mowie wam, to bedzie warte <ColoredText>$100.000.000</ColoredText>
                 </QuoteTextContainer>
             </ContentContainer>
         </OurPartnersContainer>
