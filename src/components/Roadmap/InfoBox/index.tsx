@@ -11,7 +11,7 @@ const InfoBox: FC<Props> = ({ highlighted, label, bullets }) => (
         <StyledLabel>{label}</StyledLabel>
         <StyledBulletsList>
             {bullets.map(item => (
-                <StyledBullet isDone={item.isDone} bold={item.bold}>
+                <StyledBullet key={item.content} isDone={item.isDone} bold={item.bold}>
                     <div className="icon" />
                     <div className="content">{item.content}</div>
                 </StyledBullet>
