@@ -26,12 +26,13 @@ export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
                 position: absolute;
                 width: calc(100% - 2px);
                 height: calc(100%);
-                left: 2px;
-                top: 0px;
+                padding: 2px;
+                left: 0px;
+                top: -1px;
                 transform: translateZ(-1px);
-                border: 1px solid transparent;
+                border: 0px solid transparent;
                 border-radius: 40px;
-                background: linear-gradient(90deg, #000000 0%, ${Swatches.primary_color} 100%);
+                background: linear-gradient(90deg, #000000 30%, ${Swatches.primary_color} 100%);
             }
         `}
 `

@@ -2,6 +2,7 @@
 import React from "react";
 import { LandingContainer } from "./App.styles";
 import { AboutUs } from "./components/AboutUs";
+import Airdrop from "./components/Airdrop";
 import { Calculator } from "./components/Calculator";
 import Comparison from "./components/Comparison";
 import { Footer } from "./components/Footer";
@@ -18,6 +19,7 @@ export const App = () => (
     <AboutUs />
     <Comparison/>
     <Calculator />
+    <Airdrop/>
     <TestSpace />
     <GameCap />
     <Roadmap />
