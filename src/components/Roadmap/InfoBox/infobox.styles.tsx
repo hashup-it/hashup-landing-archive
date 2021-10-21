@@ -24,9 +24,9 @@ export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
                 content: "";
                 display: block;
                 position: absolute;
-                width: calc(100%);
+                width: calc(100% - 2px);
                 height: calc(100%);
-                left: 0px;
+                left: 2px;
                 top: 0px;
                 transform: translateZ(-1px);
                 border: 1px solid transparent;
