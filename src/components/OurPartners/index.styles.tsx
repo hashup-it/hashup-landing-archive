@@ -35,6 +35,7 @@ export const SponsorLogosContainer = styled.div`
         opacity: 1;
 
         cursor: pointer;
+        filter: invert() brightness(3);
 
         :hover {
             opacity: .5;
@@ -72,4 +73,6 @@ export const QuoteTextContainer = styled.div`
     }
 `
 
-export const SponsorLogo = styled.img``
+export const SponsorLogo = styled.img`
+    width: 8rem;
+`
