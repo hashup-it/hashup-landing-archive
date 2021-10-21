@@ -209,8 +209,6 @@ export const MenuHeader = styled(ListHeader)`
 `
 
 export const MenuItem = styled.li`
-    cursor: pointer;
-
     color: white;
 
     font-style: normal;
@@ -219,8 +217,8 @@ export const MenuItem = styled.li`
     line-height: 160%;
 
     display: flex;
-
-    :hover {
+    
+    > a:hover {
         text-decoration: underline;
     }
 `
