@@ -36,9 +36,9 @@ export const Footer = () => {
                 <Logo src="/assets/logo.svg" />
                 <SocialMediaGroup>
                     <span>Our&nbsp;<ColoredText>social media</ColoredText></span>
-                    <Icon url={'facebook.svg'} />
-                    <Icon url={'instagram.svg'} />
-                    <Icon url={'linkedin.svg'} />
+                    <a href="https://www.facebook.com/HashUpIt"><Icon url={'facebook.svg'} /></a>
+                    <a href="https://www.instagram.com/hashup.it/"><Icon url={'instagram.svg'} /></a>
+                    <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
                 </SocialMediaGroup>
             </FooterHeading>
             <FooterQuickNavigation>
@@ -81,7 +81,7 @@ export const Footer = () => {
                             <MenuItem>Support</MenuItem>
                         </MenuList>
                         <MenuList>
-                            <MenuHeader>For Creators</MenuHeader> 
+                            <MenuHeader>For Creators</MenuHeader>
                             <MenuItem>Dokumentacja</MenuItem> {/* https://hashup-it.gitbook.io/hashup-it-1/ */}
                             <MenuItem>Czym jest kartridż?</MenuItem>
                             {/* <MenuItem>Cde</MenuItem> */}

@@ -268,7 +268,6 @@ export const Icon = styled.div<({ url: string })>`
     border: 0.635381px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
 
-
     background: url(${props => '/assets/icons/' + props.url});
     background-repeat: no-repeat;
     background-position: center;
