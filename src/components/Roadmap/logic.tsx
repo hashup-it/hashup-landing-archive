@@ -11,7 +11,6 @@ interface useSliderInterface {
     sliderRef: React.RefObject<HTMLDivElement>
     sliderChildRef: React.RefObject<HTMLDivElement>
     readonly isGrabbed: boolean
-    readonly offsetX: number
     readonly selectedSlideId: number
     readonly onSliderMouseDown: () => void
     readonly onSliderMouseUp: () => void
@@ -112,7 +111,6 @@ const useSlider = (): useSliderInterface => {
         sliderRef,
         sliderChildRef,
         isGrabbed,
-        offsetX,
         onSliderMouseDown,
         onSliderMouseUp,
         selectedSlideId,
