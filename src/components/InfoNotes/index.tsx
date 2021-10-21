@@ -44,7 +44,7 @@ export const InfoNotes = () => (
                         <ColoredText>Decentralized</ColoredText> distributor
                     </>
                 }
-                content="Earn money by speculating with your own game."
+                content="Release games with a decentralized distributor."
             />
             <Note
                 label={
@@ -52,7 +52,7 @@ export const InfoNotes = () => (
                         Make yourself<ColoredText> independent</ColoredText>
                     </>
                 }
-                content="Earn money by speculating with your own game."
+                content="You will make more $ thanks to the free market."
             />
             <Note
                 label={
@@ -60,7 +60,7 @@ export const InfoNotes = () => (
                         <ColoredText>Decentralized</ColoredText> distributor
                     </>
                 }
-                content="Earn money by speculating with your own game."
+                content="Release games with a decentralized distributor."
             />
         </StyledNotesArea>
     </StyledInfoNotes>
