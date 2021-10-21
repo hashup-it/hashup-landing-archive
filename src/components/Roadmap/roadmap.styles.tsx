@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import { Swatches } from "../Swatches"
+import { mediaQuery } from "../MediaQuery"
 
 export const StyledRoadmap = styled.div`
     text-align: center;
@@ -26,7 +27,12 @@ export const StyledBoxesArea = styled.div`
     justify-content: center;
     flex: 1;
     justify-content: left;
+    margin-left: -90px;
     will-change: transform;
+
+    ${mediaQuery.laptop} {
+        margin-left: 0;
+    }
 `
 
 export const StyledSliderControls = styled.div`
