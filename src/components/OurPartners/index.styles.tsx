@@ -32,12 +32,12 @@ export const SponsorLogosContainer = styled.div`
     row-gap: 4rem;
     
     > * {
-        opacity: .2;
+        opacity: 1;
 
         cursor: pointer;
 
         :hover {
-            opacity: 1;
+            opacity: .5;
         }
     }
 `
