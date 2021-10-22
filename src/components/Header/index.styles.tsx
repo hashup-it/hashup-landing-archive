@@ -19,8 +19,8 @@ export const LandingHeaderContainer = styled.div`
         }
 
         > :nth-child(2) {
-            margin-top: -100px;
-            height: 100vh;
+            height: 40vh;
+            z-index: 2;
         }
     }
 `
