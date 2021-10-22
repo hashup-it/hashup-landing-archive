@@ -4,6 +4,7 @@ import { ButtonsMenu, HamburgerButton, Logo, LogoIcon, LogoWrapper, MobileHideWr
 import { MainMenu } from './MainMenu'
 import { MobileMenu } from './MobileMenu'
 import { SelectLanguage } from './SelectLanguage'
+import { Hyperlink } from '../Shared/sections.styles'
 
 export const NavBar = (
     {
@@ -14,14 +15,11 @@ export const NavBar = (
         shownAccount: string | null
     }
 ) => {
-
     const [isMobileMenuShown, setIsMobileMenuShown] = useState(false);
-
-
 
     return (
         <StyledNavBar>
-            <LogoWrapper>
+            <LogoWrapper href="/">
                 <LogoIcon src="/assets/icons/LogoIcon.svg"/>
                 <Logo src="/assets/icons/HashUp.svg" />
             </LogoWrapper>
