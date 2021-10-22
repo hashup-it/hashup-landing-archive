@@ -55,7 +55,7 @@ const Slider = () => {
             >
                 <StyledBoxesArea ref={sliderChildRef}>
                     {infoBoxesData.map((item, index) => (
-                        <InfoBox key={item.label} highlighted={index === highlightedId} {...item} />
+                        <InfoBox key={index} highlighted={index === highlightedId} {...item} />
                     ))}
                 </StyledBoxesArea>
             </StyledSlider>
