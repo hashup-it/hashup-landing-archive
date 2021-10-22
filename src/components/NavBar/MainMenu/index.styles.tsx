@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { mediaQuery } from "../../MediaQuery";
-import { Swatches } from "../../Swatches";
+import styled from 'styled-components'
+import { mediaQuery } from '../../MediaQuery'
+import { FooterBottomGroup, FooterTopLeft } from '../../Footer/index.styles'
 
 export const StyledMainMenu = styled.nav`
     display: flex;
@@ -13,8 +13,9 @@ export const StyledMainMenu = styled.nav`
         align-items: center;
         gap: 40px;
     }
-
-`;
+    
+    overflow-y: scroll;
+`
 
 export const MenuItem = styled.span`
 
@@ -24,5 +25,13 @@ export const MenuItem = styled.span`
     :hover {
         opacity: 0.9;
     }
-    
-`;
+
+`
+
+export const FooterTop = styled(FooterTopLeft)`
+    text-align: center;
+
+    * {
+        justify-content: center;
+    }
+`

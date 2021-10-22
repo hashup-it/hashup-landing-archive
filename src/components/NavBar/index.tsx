@@ -15,7 +15,7 @@ export const NavBar = (
     }
 ) => {
 
-    const [opened, setOpened] = useState(false);
+    const [isMobileMenuShown, setIsMobileMenuShown] = useState(false);
 
 
 
@@ -26,7 +26,7 @@ export const NavBar = (
                 <Logo src="/assets/icons/HashUp.svg" />
             </LogoWrapper>
             <MobileHideWrapper>
-                <MainMenu />
+                <MainMenu isMobileMenuShown={isMobileMenuShown} />
             </MobileHideWrapper>
             {<ButtonsMenu>
                 {false && <SelectLanguage /> }
@@ -37,10 +37,10 @@ export const NavBar = (
                 }
             </ButtonsMenu>}
             <HamburgerButton 
-                opened={opened}
-                onClick={() => setOpened(!opened)}
+                opened={isMobileMenuShown}
+                onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
             />
-            {opened && <MobileMenu opened={opened}/>}
+            {isMobileMenuShown && <MobileMenu opened={isMobileMenuShown}/>}
         </StyledNavBar>
     )
 }
