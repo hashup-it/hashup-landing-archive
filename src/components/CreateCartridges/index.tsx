@@ -7,7 +7,7 @@ export const CreateCartridges = () => {
         <StyledCreateCartridges>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel><ColoredText>CARTRIDGE</ColoredText>on blockchain</SectionLabel>
+                    <SectionLabel><ColoredText>CARTRIDGE</ColoredText> on blockchain</SectionLabel>
                     <SectionHeader>
                         Wróćmy do czasów przed <ColoredText>zniewoleniem
                             oprogramowania</ColoredText>.

@@ -120,6 +120,14 @@ export const FooterSeparatorAccent = styled.div`
     position: absolute;
     top: -50px;
     left: -93px;
+    
+    ${mediaQuery.tablet} {
+        left: -200px;
+    }
+
+    ${mediaQuery.mobileL} {
+        display: none;
+    }
 `
 
 export const FooterSeparatorBase = styled.div`
