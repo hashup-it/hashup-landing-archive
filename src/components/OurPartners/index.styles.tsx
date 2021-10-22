@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { SectionHeader } from '../Shared/sections.styles'
+import { mediaQuery } from '../MediaQuery'
 
 export const OurPartnersContainer = styled.div`
     display: flex;
@@ -41,6 +42,21 @@ export const SponsorLogosContainer = styled.div`
             opacity: .5;
         }
     }
+
+    ${mediaQuery.laptop} {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ${mediaQuery.mobileL} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 export const QuoteTextContainer = styled.div`
@@ -70,6 +86,10 @@ export const QuoteTextContainer = styled.div`
         line-height: 160%;
 
         color: #FF3F3F;
+    }
+
+    ${mediaQuery.tablet} {
+        display: none;
     }
 `
 
