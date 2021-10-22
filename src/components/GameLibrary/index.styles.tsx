@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { SectionHeader } from '../Shared/sections.styles'
+import { mediaQuery } from '../MediaQuery'
 
 export const GameLibraryContainer = styled.div`
     display: flex;
@@ -12,6 +13,10 @@ export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    ${mediaQuery.laptop} {
+        flex-direction: column;
+    }
 `
 
 export const GameLibraryHeader = styled(SectionHeader)`

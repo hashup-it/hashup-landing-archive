@@ -69,18 +69,18 @@ export const Footer = () => {
                 </FooterTopLeft>
                 <FooterMenu>
                     <MenuItems>
-                        <MenuList>
-                            <MenuHeader>HashUp</MenuHeader>
-                            <MenuItem>Team</MenuItem>
-                            <MenuItem>Media o nas</MenuItem>
-                            <MenuItem>Praca w #</MenuItem>
-                        </MenuList>
-                        <MenuList>
-                            <MenuHeader>Pomoc</MenuHeader>
-                            <MenuItem>FAQ</MenuItem>
-                            <MenuItem>Help center</MenuItem>
-                            <MenuItem>Support</MenuItem>
-                        </MenuList>
+                        {/*<MenuList>*/}
+                        {/*    <MenuHeader>HashUp</MenuHeader>*/}
+                        {/*    <MenuItem>Team</MenuItem>*/}
+                        {/*    <MenuItem>Media o nas</MenuItem>*/}
+                        {/*    <MenuItem>Praca w #</MenuItem>*/}
+                        {/*</MenuList>*/}
+                        {/*<MenuList>*/}
+                        {/*    <MenuHeader>Pomoc</MenuHeader>*/}
+                        {/*    <MenuItem>FAQ</MenuItem>*/}
+                        {/*    <MenuItem>Help center</MenuItem>*/}
+                        {/*    <MenuItem>Support</MenuItem>*/}
+                        {/*</MenuList>*/}
                         <MenuList>
                             <MenuHeader>Dla Twórców</MenuHeader>
                             <MenuItem>

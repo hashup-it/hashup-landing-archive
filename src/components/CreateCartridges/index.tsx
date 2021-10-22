@@ -1,10 +1,11 @@
 import { ButtonOutlined, ColoredText } from "../Shared"
 import { LeftWrapper, RightWrapper, SectionContainer, SectionHeader, SectionLabel, SectionText } from "../Shared/sections.styles"
-import { StyledCreateCartridges} from "./index.styles"
+import { EcosystemHook, StyledCreateCartridges } from './index.styles'
 
 export const CreateCartridges = () => {
     return (
         <StyledCreateCartridges>
+            <EcosystemHook id="ecosystem"/>
             <SectionContainer>
                 <LeftWrapper>
                     <SectionLabel>Listing cen kartridży</SectionLabel>
@@ -17,7 +18,7 @@ export const CreateCartridges = () => {
                     <ButtonOutlined>Go to gamecap.io</ButtonOutlined>
                 </LeftWrapper>
                 <RightWrapper>
-                   
+
                 </RightWrapper>
             </SectionContainer>
         </StyledCreateCartridges>
