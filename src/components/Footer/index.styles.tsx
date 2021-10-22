@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mediaQuery } from '../MediaQuery'
 import { Swatches } from '../Swatches'
 
 export const StyledFooter = styled.div`
@@ -10,6 +11,12 @@ export const FooterTop = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding-bottom: 50px;
+
+    ${mediaQuery.tablet} {
+        grid-template-columns: auto;
+       justify-content: center;
+
+    }
 `
 
 export const FooterTopLeft = styled.div`
@@ -18,11 +25,19 @@ export const FooterTopLeft = styled.div`
     line-height: 22px;
 `
 
+
 export const FooterBottom = styled.div`
     padding: 32px 0px 32px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    ${mediaQuery.tablet} {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
 `
 
 export const Copyright = styled.span`
@@ -45,11 +60,29 @@ export const FooterBottomGroup = styled.div`
     :last-child {
         margin-left: 0;
     }
+
+    ${mediaQuery.tablet} {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        > * {
+            margin: 0;
+            padding: 0;
+        }
+    }
 `
 
 export const FooterHeading = styled.div`
     display: flex;
     justify-content: space-between;
+
+    ${mediaQuery.tablet} {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+    }
 `
 
 export const FooterQuickNavigation = styled.div`
@@ -139,6 +172,12 @@ export const FooterLink = styled.div`
     :hover {
         color: white;
     }
+
+    ${mediaQuery.tablet} {
+        margin-left: 0;
+    }
+
+    
 `
 
 export const FooterMenu = styled.div`

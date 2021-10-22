@@ -24,11 +24,13 @@ export const GameLibraryHeader = styled(SectionHeader)`
 `
 
 export const NicknameInstructions = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+
 `
 
-export const NicknameInstructionsHeading = styled.p`
+export const NicknameInstructionsHeading = styled.span`
     color: white;
     padding: 0;
     

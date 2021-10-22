@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LandingContainer } from './App.styles'
 import { AboutUs } from './components/AboutUs'
 import { Calculator } from './components/Calculator'
@@ -15,24 +15,40 @@ import { CreateCartridges } from './components/CreateCartridges'
 import { GamExplorer } from './components/GamExplorer'
 import Comparison from './components/Comparison'
 import { GameLibrary } from './components/GameLibrary'
+import Web3 from 'web3'
 
-export const App = () => (
-    <LandingContainer>
-        <NavBar />
-        <LandingHeader />
-        <AboutUs />
-        <Comparison />
-        
-        <Airdrop />
-        <CreateCartridges />
-        <GameCap />
-        <GameContract />
-        <GamExplorer />
-        <InfoNotes />
-        <OurPartners />
-        <Roadmap />
-        <Footer />
-    </LandingContainer>
-)
+export const App = () => {
+    const [shownAccount, setShownAccount] = useState<string | null>(null)
+
+    const handleMetamaskConnection = async () => {
+        if ((window as any).ethereum) {
+            const accounts = await (
+                new Web3((window as any).ethereum).eth.requestAccounts()
+            )
+
+            setShownAccount(accounts[0])
+        }
+    }
+
+    return (
+        <LandingContainer>
+            <NavBar
+                handleMetamaskConnection={handleMetamaskConnection}
+                shownAccount={shownAccount}
+            />
+            <LandingHeader />
+            <AboutUs />
+            <GameLibrary />
+            <CreateCartridges />
+            <GameCap />
+            <GameContract />
+            <GamExplorer />
+            <InfoNotes />
+            <OurPartners />
+            <Roadmap />
+            <Footer />
+        </LandingContainer>
+    )
+}
 
 export default App

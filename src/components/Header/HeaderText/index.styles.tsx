@@ -19,6 +19,7 @@ export const StyledHeaderText = styled.div`
    ${mediaQuery.mobileL} {
        padding-left: 0px;
        padding: 0 0 0 0;
+       margin-bottom: 80px;
    }
 `;
 

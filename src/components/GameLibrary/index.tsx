@@ -7,18 +7,19 @@ import {
     NicknameInstructionsHeading,
     NicknameInstructionsList
 } from './index.styles'
-import { LeftWrapper, RightWrapper, SectionLabel } from '../Shared/sections.styles'
+import { LeftWrapper, RightWrapper, SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
 import { BoldText, ColoredText } from '../Shared'
 
 export const GameLibrary = () => {
     return (
         <GameLibraryContainer>
-            <SectionLabel>Game <ColoredText>Library</ColoredText></SectionLabel>
-            <ContentWrapper>
+ 
+            <SectionContainer>
                 <LeftWrapper>
-                    <GameLibraryHeader>
+                    <SectionLabel>Game <ColoredText>Library</ColoredText></SectionLabel>
+                    <SectionHeader>
                         Your new gamer profile with <ColoredText>Game</ColoredText>Xplorer. Showcase your library.
-                    </GameLibraryHeader>
+                    </SectionHeader>
                 </LeftWrapper>
                 <RightWrapper>
                     <NicknameInstructionsHeading>
@@ -30,7 +31,7 @@ export const GameLibrary = () => {
                         <li>trade games with friends</li>
                     </NicknameInstructionsList>
                 </RightWrapper>
-            </ContentWrapper>
+            </SectionContainer>
         </GameLibraryContainer>
     )
 }
