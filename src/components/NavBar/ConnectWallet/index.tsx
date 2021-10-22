@@ -1,10 +1,24 @@
-import { StyledConnectWallet, WalletIcon } from "./index.styles"
+import { StyledConnectWallet, WalletIcon } from './index.styles'
+import { useEffect, useState } from 'react'
+import { WalletSelector } from '../../WalletSelector'
 
-export const ConnectWallet = () => {
+export const ConnectWallet = ({handleMetamaskConnection} : {handleMetamaskConnection: Function}) => {
+    const [isWalletSelectorShown, setIsWalletSelectorShown] = useState(false)
+
     return (
-        <StyledConnectWallet>
-            Connect Wallet 
-            <WalletIcon src="/assets/icons/wallet.svg"/>
-        </StyledConnectWallet>
+        <>
+            <StyledConnectWallet onClick={() => setIsWalletSelectorShown(true)}>
+                Connect Wallet
+                <WalletIcon src="/assets/icons/wallet.svg" />
+            </StyledConnectWallet>
+            {
+                isWalletSelectorShown &&
+                <WalletSelector
+                    setIsWalletSelectorShown={setIsWalletSelectorShown}
+                    handleMetamaskConnection={handleMetamaskConnection}
+                />
+            }
+        </>
+
     )
 }
