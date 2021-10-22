@@ -31,7 +31,6 @@ export const InfoNotes = () => (
             <ColoredText>DEFInitywna</ColoredText>  forma dystrybucji cyfrowej.
         </SectionHeader>
         <StyledNotesArea>
-
                 <Note
                     label={
                         <>
@@ -49,7 +48,6 @@ export const InfoNotes = () => (
                     content="Wydawaj gry dzięki zdecentralizowanej dystrybucji."
                 />
 
-
                 <Note
                     label={
                         <>
@@ -59,7 +57,6 @@ export const InfoNotes = () => (
                     content="Zarabiaj więcej
                     dzięki wolnemu rynkowi."
                 />
-
         </StyledNotesArea>
     </StyledInfoNotes>
 )
