@@ -10,12 +10,12 @@ export const AboutUs = () => {
         <StyledAboutUs>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel>Posiadaj gry</SectionLabel>
+                    <SectionLabel><ColoredText>UWOLNIJ SIĘ</ColoredText></SectionLabel>
                     <SectionHeader>
                         <ColoredText>Wolny</ColoredText> rynek gier i&nbsp;oprogramowania
                     </SectionHeader>
                     <SectionText>
-                    Wolny rynek gier jest naturalną konsekwencją oddania w ręce graczy gier które zakupili. Handluj grami! Wolny rynek gier odkryje prawdziwą cenę oprogramowania. 
+                        Rynek wolnego oprogramowania jest naturalną konsekwencją oddania oprogramowania w ręce graczy. Handlujcie grami! Wolny rynek odkryje prawdziwą cenę oprogramowania.
                     </SectionText>
                 </LeftWrapper>
                 <RightWrapper>
@@ -23,15 +23,14 @@ export const AboutUs = () => {
                         <AboutCard>
                             <RadialGradient/>
                             <CardLine/>
-                            <CardHeader>Siemandero</CardHeader>
-                            Did you know that centrally controlled prices as they are now <BoldText><GradientText>is socialism?</GradientText></BoldText> The game market needs some capitalism.
+                            <CardHeader>Dystrybucja w Twoich rękach</CardHeader>
+                            Kontroluj cenę gry i liczbę wydanych licencji. Zarabiaj pieniądze na rynku wtórnym. Wszystko pod Twoją kontrolą.
                         </AboutCard>
                         <AboutCard>
                             <CardParticles/>
                             <CardLine/>
-                            <CardHeader>Monopol</CardHeader>
-                            Did you know that centrally controlled prices as they are now is socialism? The game market needs some capitalism.
-                        </AboutCard>
+                            <CardHeader>Brak prowizji</CardHeader>
+                            Jesteś jedynym wydawcą. Nie pozwól nikomu zarabiać na twojej ciężkiej pracy. Zarobisz w ten sposób więcej pieniędzy, czy obniżysz cenę gry, aby dotrzeć do większej liczby odbiorców? Decyzja należy do Ciebie!                        </AboutCard>
                     </Cards>
                 </RightWrapper>
             </SectionContainer>

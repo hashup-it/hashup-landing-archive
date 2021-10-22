@@ -1,4 +1,5 @@
 import { ButtonOutlined, ColoredText } from '../../Shared'
+import { Hyperlink } from '../../Shared/sections.styles'
 import {
     ButtonGroup,
     GradientText,
@@ -9,7 +10,6 @@ import {
     SmallText,
     StyledHeaderText
 } from './index.styles'
-
 
 export const HeaderText = () => {
     return (
@@ -27,8 +27,8 @@ export const HeaderText = () => {
                     Whitepaper
                 </ButtonOutlined>
                 <HeaderAirdropWrapper>
-                    <HeaderAirdropIcon></HeaderAirdropIcon>
-                    <HeaderGetAirdrop>Get your airdrop</HeaderGetAirdrop>
+                    <HeaderAirdropIcon />
+                    <HeaderGetAirdrop><Hyperlink href="/airdrop.html">Get your airdrop</Hyperlink></HeaderGetAirdrop>
                 </HeaderAirdropWrapper>
             </ButtonGroup>
         </StyledHeaderText>

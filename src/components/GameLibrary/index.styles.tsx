@@ -16,6 +16,7 @@ export const ContentWrapper = styled.div`
 
     ${mediaQuery.laptop} {
         flex-direction: column;
+        backogrund-color: red;
     }
 `
 
@@ -29,6 +30,17 @@ export const NicknameInstructions = styled.div`
     justify-content: flex-start;
 
 `
+
+export const RightWrapper = styled.div`
+    display: flex;
+        flex-direction: column;
+
+    ${mediaQuery.laptop} {
+
+        align-items: center;
+    }
+
+`;
 
 export const NicknameInstructionsHeading = styled.span`
     color: white;
@@ -62,4 +74,6 @@ export const NicknameInstructionsList = styled.ul`
         width: 6px;
         height: 6px;
     }
+
+    
 `

@@ -1,27 +1,26 @@
 import { ButtonOutlined, ColoredText } from "../Shared"
-import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionText } from "../Shared/sections.styles"
-import { StyledGameContract } from "./index.styles"
+import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionPhotoSimple, SectionText } from "../Shared/sections.styles"
+import { ReversedSectionContainer, StyledGameContract } from "./index.styles"
 
 const GameContract = () => {
     return (
         <StyledGameContract>
-            <SectionContainer>
+            <ReversedSectionContainer>
                 <RightWrapper>
-                    <SectionPhoto url="/assets/section-photos/photo1.png">
-                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
-                    </SectionPhoto>
+                    <SectionPhotoSimple src="/assets/section-photos/photo3.png">
+                       
+                    </SectionPhotoSimple>
                 </RightWrapper>
                 <LeftWrapper>
                     <SectionLabel>FREE MARKET SOFTWARE</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>GameCap</ColoredText>.io - place that lists all free-market software<ColoredText>.</ColoredText>
+                        Twórz <ColoredText>cartdrige</ColoredText> blockchain i publikuj swoje gry <ColoredText>bez pośredników</ColoredText>.
                     </SectionHeader>
                     <SectionText>
-                    A free software market is a natural consequence of putting software in the hands of players. Trade in Games! A free software market will discover the true price of software.
+                        Stwórz smart contract przy pomocy intuicyjnego edytora. Ustal metodę dystrybucji, zasady rynku wtórnego oraz połącz cartdrige z oprogramowaniem.                    
                     </SectionText>
-                    
                 </LeftWrapper>
-            </SectionContainer>
+            </ReversedSectionContainer>
         </StyledGameContract>
     )
 }

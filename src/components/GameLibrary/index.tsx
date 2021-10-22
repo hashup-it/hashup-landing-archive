@@ -5,10 +5,12 @@ import {
     GameLibraryHeader,
     NicknameInstructions,
     NicknameInstructionsHeading,
-    NicknameInstructionsList
+    NicknameInstructionsList,
+    RightWrapper
 } from './index.styles'
-import { LeftWrapper, RightWrapper, SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
+import { LeftWrapper,SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
 import { BoldText, ColoredText } from '../Shared'
+import { Color } from 'three'
 
 export const GameLibrary = () => {
     return (
@@ -18,17 +20,17 @@ export const GameLibrary = () => {
                 <LeftWrapper>
                     <SectionLabel>Game <ColoredText>Library</ColoredText></SectionLabel>
                     <SectionHeader>
-                        Your new gamer profile with <ColoredText>Game</ColoredText>Xplorer. Showcase your library.
+                        Całkiem nowy <ColoredText>profil gracza</ColoredText>  na <ColoredText>Game</ColoredText>Xplorer. Pochwal się <ColoredText>kolekcją</ColoredText>!
                     </SectionHeader>
                 </LeftWrapper>
                 <RightWrapper>
                     <NicknameInstructionsHeading>
-                        Claim your <BoldText>unique profile nickname</BoldText> now!
+                        Zarezerwuj swoją unikalną nazwę konta.
                     </NicknameInstructionsHeading>
                     <NicknameInstructionsList>
-                        <li>customise your profile to show your true gaming id</li>
-                        <li>showcase your games collection</li>
-                        <li>trade games with friends</li>
+                        <li>dowolnie dostosuj swój profil gracza</li>
+                        <li>chwal się katalogiem gier</li>
+                        <li>wymieniaj się grami ze znajomymi</li>
                     </NicknameInstructionsList>
                 </RightWrapper>
             </SectionContainer>
