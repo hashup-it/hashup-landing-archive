@@ -1,15 +1,15 @@
 import { ButtonOutlined, ColoredText } from "../Shared"
-import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionText } from "../Shared/sections.styles"
-import { StyledGameContract } from "./index.styles"
+import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionPhotoSimple, SectionText } from "../Shared/sections.styles"
+import { ReversedSectionContainer, StyledGameContract } from "./index.styles"
 
 const GameContract = () => {
     return (
         <StyledGameContract>
-            <SectionContainer>
+            <ReversedSectionContainer>
                 <RightWrapper>
-                    <SectionPhoto url="/assets/section-photos/photo1.png">
-                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
-                    </SectionPhoto>
+                    <SectionPhotoSimple src="/assets/section-photos/photo3.png">
+                       
+                    </SectionPhotoSimple>
                 </RightWrapper>
                 <LeftWrapper>
                     <SectionLabel>FREE MARKET SOFTWARE</SectionLabel>
@@ -21,7 +21,7 @@ const GameContract = () => {
                     </SectionText>
                     
                 </LeftWrapper>
-            </SectionContainer>
+            </ReversedSectionContainer>
         </StyledGameContract>
     )
 }

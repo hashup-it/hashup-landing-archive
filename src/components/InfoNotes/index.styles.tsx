@@ -29,6 +29,14 @@ export const StyledNote = styled.div`
     ${mediaQuery.laptopL} {
         margin: 20px 40px;
     }
+
+    ${mediaQuery.tablet} {
+        margin: 40px 0px;
+        text-align: center;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
 `
 
 export const NoteGroup = styled.div`
@@ -62,6 +70,13 @@ export const StyledNoteContent = styled.div`
     font-size: 18px;
     line-height: 160%;
     color: ${Swatches.text_tertiary};
+    position: relative;
+
+    ${mediaQuery.tablet} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     :before {
         margin-bottom: 12px;
@@ -70,5 +85,9 @@ export const StyledNoteContent = styled.div`
         background-color: ${Swatches.primary_color};
         width: 18px;
         height: 2px;
+
+        ${mediaQuery.tablet} {
+            width: 20vw;
+        }
     }
 `

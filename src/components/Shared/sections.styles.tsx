@@ -18,6 +18,8 @@ export const SectionContainer = styled.div`
 
     
 
+    
+
 `;
 
 export const LeftWrapper = styled.div`
@@ -60,14 +62,13 @@ export const SectionPhoto = styled.div<({url: string})>`
         height: 100%;
         filter: blur(20px);
 
+  
     }
     
 `;
 
 export const StyledStackingContext = styled.div`
     position: absolute;
-
-    
 `;
 
 
@@ -78,6 +79,22 @@ export const SectionBottomLeftPhoto = styled.img`
     left: -25%;
     bottom: -50px;
 
+    ${mediaQuery.tablet} {
+        display: none;
+    }
+
+`;
+
+export const SectionPhotoSimple = styled.img`
+    max-width: 450px;
+
+    ${mediaQuery.laptop} {
+        max-width: auto;
+    }
+
+    ${mediaQuery.mobileL} {
+        max-width: 100%;
+    }
 `;
 
 export const SectionLabel = styled.span`

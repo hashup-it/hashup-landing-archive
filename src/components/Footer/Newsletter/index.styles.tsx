@@ -48,6 +48,9 @@ export const StyledSignUpButton = styled.button`
     background: #FF3F3F;
     border: none;
 
+    filter: grayscale(100%);
+    pointer: none;
+
     border-radius: 4px;
 
     color: white;
@@ -55,9 +58,8 @@ export const StyledSignUpButton = styled.button`
     font-style: normal;
     font-weight: 600;
 
-    cursor: pointer;
     
     :hover {
-        opacity: .9;
+        opacity: 1;
     }
 `

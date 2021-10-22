@@ -1,5 +1,5 @@
 import { ButtonOutlined, ColoredText } from "../Shared"
-import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionText } from "../Shared/sections.styles"
+import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionPhotoSimple, SectionText } from "../Shared/sections.styles"
 import { StyledGameCap } from "./index.styles"
 
 export const GameCap = () => {
@@ -17,9 +17,7 @@ export const GameCap = () => {
                    
                 </LeftWrapper>
                 <RightWrapper>
-                    <SectionPhoto url="/assets/section-photos/photo1.png">
-                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
-                    </SectionPhoto>
+                    <SectionPhotoSimple src="/assets/section-photos/photo4.png"/>
                 </RightWrapper>
             </SectionContainer>
         </StyledGameCap>

@@ -31,7 +31,7 @@ export const InfoNotes = () => (
             <ColoredText>DEFInitife</ColoredText> edition of License Carrier
         </SectionHeader>
         <StyledNotesArea>
-            <NoteGroup>
+
                 <Note
                     label={
                         <>
@@ -48,8 +48,8 @@ export const InfoNotes = () => (
                     }
                     content="Release games with a decentralized distributor."
                 />
-            </NoteGroup>
-            <NoteGroup>
+
+
                 <Note
                     label={
                         <>
@@ -58,15 +58,7 @@ export const InfoNotes = () => (
                     }
                     content="You will make more $ thanks to the free market."
                 />
-                <Note
-                    label={
-                        <>
-                            <ColoredText>Decentralized</ColoredText> distributor
-                        </>
-                    }
-                    content="Release games with a decentralized distributor."
-            />
-            </NoteGroup>
+
         </StyledNotesArea>
     </StyledInfoNotes>
 )

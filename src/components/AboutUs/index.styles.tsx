@@ -21,6 +21,7 @@ export const SectionContainer = styled.div`
 
     ${mediaQuery.tablet} {
         gap: 0px;
+        margin-bottom: 0px
     }
 
     ${mediaQuery.laptop} {

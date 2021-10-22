@@ -5,9 +5,10 @@ import {
     GameLibraryHeader,
     NicknameInstructions,
     NicknameInstructionsHeading,
-    NicknameInstructionsList
+    NicknameInstructionsList,
+    RightWrapper
 } from './index.styles'
-import { LeftWrapper, RightWrapper, SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
+import { LeftWrapper,SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
 import { BoldText, ColoredText } from '../Shared'
 
 export const GameLibrary = () => {
