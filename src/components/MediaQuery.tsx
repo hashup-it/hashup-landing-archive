@@ -8,7 +8,7 @@ const size = {
     desktop: "2560px",
 }
 
-const minWidth = (width: string): string => `@media(min-width: ${width})`
+const minWidth = (width: string): string => `@media(max-width: ${width})`
 
 export const mediaQuery = {
     mobileS: minWidth(size.mobileS),

@@ -21,8 +21,9 @@ export const AboutUs = () => {
                 <RightWrapper>
                     <Cards>
                         <AboutCard>
+                            <RadialGradient/>
                             <CardLine/>
-                            <CardHeader></CardHeader>
+                            <CardHeader>Siemandero</CardHeader>
                             Did you know that centrally controlled prices as they are now <BoldText><GradientText>is socialism?</GradientText></BoldText> The game market needs some capitalism.
                         </AboutCard>
                         <AboutCard>
@@ -35,7 +36,7 @@ export const AboutUs = () => {
                 </RightWrapper>
             </SectionContainer>
             <BackgroundWorld/>
-            <RadialGradient/>
+
         </StyledAboutUs>
     )
 }

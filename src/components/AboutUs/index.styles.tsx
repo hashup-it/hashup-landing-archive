@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQuery } from "../MediaQuery";
 import { Swatches } from "../Swatches";
 
 export const StyledAboutUs = styled.div`
@@ -12,6 +13,23 @@ export const SectionContainer = styled.div`
     grid-template-columns: 3fr 3fr;
     gap: 200px;
     margin-bottom: 100px;
+
+    ${mediaQuery.laptopL} {
+        gap: 50px;
+        grid-template-columns: 2.5fr 3fr;
+    }
+
+    ${mediaQuery.tablet} {
+        gap: 0px;
+    }
+
+    ${mediaQuery.laptop} {
+
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+
 `;
 
 export const BackgroundWorld = styled.div`
@@ -36,7 +54,7 @@ export const RadialGradient = styled.div`
     width: 250px;
     height: 250px;
     top: -10vh;
-    right: 5vw;
+    right: -5vw;
     pointer-events: none;
     z-index: -1;
 `;
@@ -44,6 +62,18 @@ export const RadialGradient = styled.div`
 export const Cards = styled.div`
     display: flex;
     gap: 20px;
+    position: relative;
+
+    ${mediaQuery.laptopL} {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    ${mediaQuery.tablet} {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 `;
 
 export const AboutCard = styled.div`
@@ -60,8 +90,22 @@ export const AboutCard = styled.div`
     border-radius: 40px;
     position: relative;
 
+    ${mediaQuery.laptopL} {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    ${mediaQuery.tablet} {
+        padding: 43px;
+        border-radius: 20px;
+    }
+
     :nth-child(2) {
         margin-top: 80px;
+
+        ${mediaQuery.tablet} {
+            margin-top: 0px;
+        }
     }
 `;
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQuery } from "../MediaQuery";
 import { Swatches } from "../Swatches";
 
 export const SectionContainer = styled.div`
@@ -6,10 +7,31 @@ export const SectionContainer = styled.div`
     grid-template-columns: 3fr 3fr;
     gap: 200px;
     margin-bottom: 300px;
+
+    ${mediaQuery.laptop} {
+        gap: 100px;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        gap: 50px;
+        
+    }
+
+    
+
 `;
 
 export const LeftWrapper = styled.div`
+    ${mediaQuery.laptop} {
+        padding: 0px 10vw 0px 10vw;
+    }
 
+    ${mediaQuery.tablet} {
+        padding: 0px 5vw 0px 5vw;
+    }
+
+    ${mediaQuery.mobileL} {
+        padding: 0px 0px 0px 0px;
+    }
 `;
 export const RightWrapper = styled.div`
 
@@ -29,6 +51,10 @@ export const SectionHeader = styled.h2`
     color: white;
     font-weight: normal;
     margin-top: 10px;
+
+    ${mediaQuery.tablet} {
+        font-size: 30px;
+    }
 `;
 
 export const SectionText = styled.p`

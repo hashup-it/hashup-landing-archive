@@ -9,8 +9,9 @@ export const StyledInfoNotes = styled.div`
 
 export const StyledNotesArea = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     padding-top: 40px;
 `
 
@@ -24,6 +25,11 @@ export const StyledNote = styled.div`
         margin: 20px 40px;
     }
 `
+
+export const NoteGroup = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
 
 const rotateAnim = keyframes`
   from { transform: rotate(0deg); }

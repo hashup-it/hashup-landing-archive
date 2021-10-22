@@ -8,6 +8,7 @@ import {
     StyledNoteBubble,
     StyledNoteLabel,
     StyledNoteContent,
+    NoteGroup,
 } from "./index.styles"
 
 export const Note: FC<{ readonly label: JSX.Element; readonly content: string }> = ({
@@ -30,38 +31,42 @@ export const InfoNotes = () => (
             <ColoredText>DEFInitife</ColoredText> edition of License Carrier
         </SectionHeader>
         <StyledNotesArea>
-            <Note
-                label={
-                    <>
-                        <ColoredText>Earn liquidity</ColoredText> on your own game
-                    </>
-                }
-                content="Earn money by speculating with your own game."
+            <NoteGroup>
+                <Note
+                    label={
+                        <>
+                            <ColoredText>Earn liquidity</ColoredText> on your own game
+                        </>
+                    }
+                    content="Earn money by speculating with your own game."
+                />
+                <Note
+                    label={
+                        <>
+                            <ColoredText>Decentralized</ColoredText> distributor
+                        </>
+                    }
+                    content="Release games with a decentralized distributor."
+                />
+            </NoteGroup>
+            <NoteGroup>
+                <Note
+                    label={
+                        <>
+                            Make yourself<ColoredText> independent</ColoredText>
+                        </>
+                    }
+                    content="You will make more $ thanks to the free market."
+                />
+                <Note
+                    label={
+                        <>
+                            <ColoredText>Decentralized</ColoredText> distributor
+                        </>
+                    }
+                    content="Release games with a decentralized distributor."
             />
-            <Note
-                label={
-                    <>
-                        <ColoredText>Decentralized</ColoredText> distributor
-                    </>
-                }
-                content="Release games with a decentralized distributor."
-            />
-            <Note
-                label={
-                    <>
-                        Make yourself<ColoredText> independent</ColoredText>
-                    </>
-                }
-                content="You will make more $ thanks to the free market."
-            />
-            <Note
-                label={
-                    <>
-                        <ColoredText>Decentralized</ColoredText> distributor
-                    </>
-                }
-                content="Release games with a decentralized distributor."
-            />
+            </NoteGroup>
         </StyledNotesArea>
     </StyledInfoNotes>
 )
