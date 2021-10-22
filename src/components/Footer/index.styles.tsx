@@ -36,8 +36,10 @@ export const FooterBottom = styled.div`
         align-items: center;
         flex-direction: column;
         gap: 20px;
+        
+        padding: 0;
+        margin-bottom: 12em;
     }
-    
 `
 
 export const Copyright = styled.span`
@@ -70,6 +72,8 @@ export const FooterBottomGroup = styled.div`
             margin: 0;
             padding: 0;
         }
+        
+        flex-direction: row;
     }
 `
 
