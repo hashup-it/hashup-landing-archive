@@ -1,11 +1,11 @@
 import { ButtonOutlined, ColoredText } from "../Shared"
 import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionText } from "../Shared/sections.styles"
-import { StyledGamExplorer} from "./index.styles"
+import { GameExplorerContainer, StyledGamExplorer } from './index.styles'
 
 export const GamExplorer = () => {
     return (
         <StyledGamExplorer>
-            <SectionContainer>
+            <GameExplorerContainer>
                 <LeftWrapper>
                     <SectionLabel><ColoredText>game</ColoredText>xplorer.io</SectionLabel>
                     <SectionHeader>
@@ -18,14 +18,8 @@ export const GamExplorer = () => {
                    Jako deweloper, będziesz miał możliwość wydania kolekcjonerskiej
  wersji swojej gry, która na pewno wpadnie w oko kolekcjonerów. 
                    </SectionText>
-                    
                 </LeftWrapper>
-                <RightWrapper>
-                    <SectionPhoto url="/assets/section-photos/photo1.png">
-                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
-                    </SectionPhoto>
-                </RightWrapper>
-            </SectionContainer>
+            </GameExplorerContainer>
         </StyledGamExplorer>
     )
 }

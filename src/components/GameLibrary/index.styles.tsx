@@ -3,6 +3,8 @@ import { SectionHeader } from '../Shared/sections.styles'
 import { mediaQuery } from '../MediaQuery'
 
 export const GameLibraryContainer = styled.div`
+    position: relative;
+    
     display: flex;
     flex-direction: column;
     margin-top: 300px;

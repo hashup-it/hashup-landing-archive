@@ -31,7 +31,7 @@ export const Logo = styled.img`
    }
 `;
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled.a`
     cursor: pointer;
     margin-top: -9px;
     display: flex;

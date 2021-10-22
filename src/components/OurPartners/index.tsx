@@ -30,9 +30,8 @@ export const OurPartners = () => {
                     </a>
                 </SponsorLogosContainer>
                 <QuoteTextContainer>
-                    W pojedynkę możemy zrobić tak mało; razem możemy uczynić tak wiele."<br></br>        
+                    W pojedynkę możemy zrobić tak mało; razem możemy uczynić tak wiele.”<br />
                     <ColoredText>Hellen Keler</ColoredText>
-
                 </QuoteTextContainer>
             </ContentContainer>
         </OurPartnersContainer>

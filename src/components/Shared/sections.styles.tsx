@@ -15,11 +15,6 @@ export const SectionContainer = styled.div`
         gap: 50px;
         
     }
-
-    
-
-    
-
 `;
 
 export const LeftWrapper = styled.div`

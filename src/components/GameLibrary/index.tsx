@@ -11,12 +11,13 @@ import {
 import { LeftWrapper,SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
 import { BoldText, ColoredText } from '../Shared'
 import { Color } from 'three'
+import { EcosystemHook } from '../CreateCartridges/index.styles'
 
 export const GameLibrary = () => {
     return (
         <GameLibraryContainer>
- 
             <SectionContainer>
+                <EcosystemHook id="ecosystem"/>
                 <LeftWrapper>
                     <SectionLabel>Game <ColoredText>Library</ColoredText></SectionLabel>
                     <SectionHeader>
