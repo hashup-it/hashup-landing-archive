@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { RightWrapper, SectionHeader } from '../Shared/sections.styles'
+import { SectionHeader } from '../Shared/sections.styles'
 import { mediaQuery } from '../MediaQuery'
 
 export const GameLibraryContainer = styled.div`
