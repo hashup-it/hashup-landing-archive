@@ -14,12 +14,11 @@ const GameContract = () => {
                 <LeftWrapper>
                     <SectionLabel>FREE MARKET SOFTWARE</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>GameCap</ColoredText>.io - place that lists all free-market software<ColoredText>.</ColoredText>
+                        Twórz <ColoredText>cartdrige</ColoredText> blockchain i publikuj swoje gry <ColoredText>bez pośredników</ColoredText>.
                     </SectionHeader>
                     <SectionText>
-                    A free software market is a natural consequence of putting software in the hands of players. Trade in Games! A free software market will discover the true price of software.
+                        Stwórz smart contract przy pomocy intuicyjnego edytora. Ustal metodę dystrybucji, zasady rynku wtórnego oraz połącz cartdrige z oprogramowaniem.                    
                     </SectionText>
-                    
                 </LeftWrapper>
             </ReversedSectionContainer>
         </StyledGameContract>

@@ -7,13 +7,17 @@ export const GamExplorer = () => {
         <StyledGamExplorer>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel>Listing cen kartridży</SectionLabel>
+                    <SectionLabel><ColoredText>game</ColoredText>xplorer.io</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>GameCap</ColoredText>.io - miejsce, gdzie poznamy cenę oprogramowania<ColoredText>.</ColoredText>
+                        Spełnienie potrzeb <ColoredText>kolekcjonerów.</ColoredText>
                     </SectionHeader>
                     <SectionText>
-                    Konsekwencją oddania w ręce graczy pełnię praw nad cyfrowym nośnikiem licencji jest ich wolnorynkowa cena. Istnieje więc potrzeba na pojawienie się miejsca, które będzie indeksować wszystkie kartridże oraz zmiany ich cen w czasie. Chcąc jak najwierniej przenieść model powstawania kryptowalut do powstawania gier zdecydowaliśmy się, że zainspirujemy się CoinMarketCap’em, czyli platformą listującą wszystkie kryptowaluty.
-                    </SectionText>
+                    Gracze uwielbiają dbać o swoje biblioteki. GameXplorer pozwoli im zaprezentować swoje kolekcje w sposób lepszy niż kiedykolwiek.
+                   </SectionText>
+                   <SectionText>
+                   Jako deweloper, będziesz miał możliwość wydania kolekcjonerskiej
+ wersji swojej gry, która na pewno wpadnie w oko kolekcjonerów. 
+                   </SectionText>
                     
                 </LeftWrapper>
                 <RightWrapper>

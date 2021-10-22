@@ -28,35 +28,36 @@ export const InfoNotes = () => (
             <ColoredText>game</ColoredText>change.io
         </SectionLabel>
         <SectionHeader>
-            <ColoredText>DEFInitife</ColoredText> edition of License Carrier
+            <ColoredText>DEFInitywna</ColoredText>  forma dystrybucji cyfrowej.
         </SectionHeader>
         <StyledNotesArea>
 
                 <Note
                     label={
                         <>
-                            <ColoredText>Earn liquidity</ColoredText> on your own game
+                            <ColoredText>Zdobądź płynność</ColoredText> dzięki spekulacji
                         </>
                     }
-                    content="Earn money by speculating with your own game."
+                    content="Zarabiaj pieniądze spekulując swoją własną grą."
                 />
                 <Note
                     label={
                         <>
-                            <ColoredText>Decentralized</ColoredText> distributor
+                            <ColoredText>Zdecentralizowana</ColoredText> dystrybucja
                         </>
                     }
-                    content="Release games with a decentralized distributor."
+                    content="Wydawaj gry dzięki zdecentralizowanej dystrybucji."
                 />
 
 
                 <Note
                     label={
                         <>
-                            Make yourself<ColoredText> independent</ColoredText>
+                            Stań się<ColoredText> niezależny</ColoredText>
                         </>
                     }
-                    content="You will make more $ thanks to the free market."
+                    content="Zarabiaj więcej
+                    dzięki wolnemu rynkowi."
                 />
 
         </StyledNotesArea>

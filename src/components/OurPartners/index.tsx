@@ -13,9 +13,9 @@ import {
 export const OurPartners = () => {
     return (
         <OurPartnersContainer>
-            <SectionLabel>Who we work with</SectionLabel>
+            <SectionLabel>Razem zmienimy świat</SectionLabel>
             <OurPartnersHeader>
-                Our <ColoredText>Partners</ColoredText>
+                Nasi <ColoredText>Partnerzy</ColoredText>
             </OurPartnersHeader>
             <ContentContainer>
                 <SponsorLogosContainer>
@@ -30,7 +30,9 @@ export const OurPartners = () => {
                     </a>
                 </SponsorLogosContainer>
                 <QuoteTextContainer>
-                    Mowie wam, to bedzie warte <ColoredText>$100.000.000</ColoredText>
+                    W pojedynkę możemy zrobić tak mało; razem możemy uczynić tak wiele."<br></br>        
+                    <ColoredText>Hellen Keler</ColoredText>
+
                 </QuoteTextContainer>
             </ContentContainer>
         </OurPartnersContainer>

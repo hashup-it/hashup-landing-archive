@@ -7,12 +7,13 @@ export const CreateCartridges = () => {
         <StyledCreateCartridges>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel>Listing cen kartridży</SectionLabel>
+                    <SectionLabel><ColoredText>CARTRIDGE</ColoredText>on blockchain</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>GameCap</ColoredText>.io - miejsce, gdzie poznamy cenę oprogramowania<ColoredText>.</ColoredText>
+                        Wróćmy do czasów przed <ColoredText>zniewoleniem
+                            oprogramowania</ColoredText>.
                     </SectionHeader>
                     <SectionText>
-                    Konsekwencją oddania w ręce graczy pełnię praw nad cyfrowym nośnikiem licencji jest ich wolnorynkowa cena. Istnieje więc potrzeba na pojawienie się miejsca, które będzie indeksować wszystkie kartridże oraz zmiany ich cen w czasie. Chcąc jak najwierniej przenieść model powstawania kryptowalut do powstawania gier zdecydowaliśmy się, że zainspirujemy się CoinMarketCap’em, czyli platformą listującą wszystkie kryptowaluty.
+                    Tęsknimy za czasami, gdy kupując licencję na grę faktycznie stawaliśmy się jej właścicielem. Obecny model dystrybucji oprogramowania sprawia, że nabyte przez nas dobra cyfrowe tak naprawdę nie należą do nas. Nie wszystko jednak stracone! HashUp z pomocą cyfrowego cartdrige’a pozwoli Ci znowu cieszyć się pełną kontrolą. Handlujcie grami! W końcu są wasze!
                     </SectionText>
   
                 </LeftWrapper>
@@ -23,7 +24,6 @@ export const CreateCartridges = () => {
                         </StyledStackingContext>
                         <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
                     </SectionPhoto>
-                    
                 </RightWrapper>
             </SectionContainer>
         </StyledCreateCartridges>

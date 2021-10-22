@@ -7,12 +7,12 @@ export const GameCap = () => {
         <StyledGameCap>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel>Listing cen kartridży</SectionLabel>
+                    <SectionLabel><ColoredText>GAME</ColoredText>Cap.io</SectionLabel>
                     <SectionHeader>
-                        <ColoredText>GameCap</ColoredText>.io - miejsce, gdzie poznamy cenę oprogramowania<ColoredText>.</ColoredText>
+                    Wszystkie <ColoredText>cartdrige</ColoredText> w jednym miejscu.
                     </SectionHeader>
                     <SectionText>
-                    Konsekwencją oddania w ręce graczy pełnię praw nad cyfrowym nośnikiem licencji jest ich wolnorynkowa cena. Istnieje więc potrzeba na pojawienie się miejsca, które będzie indeksować wszystkie kartridże oraz zmiany ich cen w czasie. Chcąc jak najwierniej przenieść model powstawania kryptowalut do powstawania gier zdecydowaliśmy się, że zainspirujemy się CoinMarketCap’em, czyli platformą listującą wszystkie kryptowaluty.
+                    Kupuj oprogramowanie w prosty sposób. Na platformie znajdziesz wszystkie informacje na temat gry, którą chcesz nabyć. Śledź cenę oraz podaż. Obserwuj konkretne projekty. Bądź na bieżąco!
                     </SectionText>
                    
                 </LeftWrapper>
