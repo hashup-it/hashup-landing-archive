@@ -4,9 +4,10 @@ import {
     GameLibraryContainer,
     GameLibraryHeader,
     NicknameInstructions,
-    NicknameInstructionsHeading, NicknameInstructionsList
+    NicknameInstructionsHeading,
+    NicknameInstructionsList
 } from './index.styles'
-import { SectionLabel } from '../Shared/sections.styles'
+import { LeftWrapper, RightWrapper, SectionLabel } from '../Shared/sections.styles'
 import { BoldText, ColoredText } from '../Shared'
 
 export const GameLibrary = () => {
@@ -14,10 +15,12 @@ export const GameLibrary = () => {
         <GameLibraryContainer>
             <SectionLabel>Game <ColoredText>Library</ColoredText></SectionLabel>
             <ContentWrapper>
-                <GameLibraryHeader>
-                    Your new gamer profile with <ColoredText>Game</ColoredText>Xplorer. Showcase your library.
-                </GameLibraryHeader>
-                <NicknameInstructions>
+                <LeftWrapper>
+                    <GameLibraryHeader>
+                        Your new gamer profile with <ColoredText>Game</ColoredText>Xplorer. Showcase your library.
+                    </GameLibraryHeader>
+                </LeftWrapper>
+                <RightWrapper>
                     <NicknameInstructionsHeading>
                         Claim your <BoldText>unique profile nickname</BoldText> now!
                     </NicknameInstructionsHeading>
@@ -26,7 +29,7 @@ export const GameLibrary = () => {
                         <li>showcase your games collection</li>
                         <li>trade games with friends</li>
                     </NicknameInstructionsList>
-                </NicknameInstructions>
+                </RightWrapper>
             </ContentWrapper>
         </GameLibraryContainer>
     )

@@ -6,9 +6,9 @@ import { CartridgeScene } from './CartridgeScene'
 export const LandingHeader = () => {
     return (
         <LandingHeaderContainer>
-            <HeaderText/>
+            <HeaderText />
             <CartirdgeContainer>
-                <CartridgeScene/>
+                <CartridgeScene />
             </CartirdgeContainer>
         </LandingHeaderContainer>
     )
