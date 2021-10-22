@@ -23,7 +23,8 @@ export const LeftWrapper = styled.div`
     }
 
     ${mediaQuery.tablet} {
-        padding: 0px 5vw 0px 5vw;
+        padding: 0;
+        width: 100%;
     }
 
     ${mediaQuery.mobileL} {
