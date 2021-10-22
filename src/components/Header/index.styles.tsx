@@ -7,10 +7,10 @@ export const LandingHeaderContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     position: relative;
-    
+
     ${mediaQuery.laptop} {
-        grid-template-columns: unset;
-        
+        grid-template-columns: auto;
+        margin-top: 60px;
         height: auto;
         
         > :first-child {

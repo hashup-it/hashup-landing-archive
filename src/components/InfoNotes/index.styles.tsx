@@ -13,6 +13,11 @@ export const StyledNotesArea = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 40px;
+    ${mediaQuery.tablet} {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 export const StyledNote = styled.div`

@@ -1,5 +1,5 @@
 import { ButtonOutlined, ColoredText } from "../Shared"
-import { LeftWrapper, RightWrapper, SectionContainer, SectionHeader, SectionLabel, SectionText } from "../Shared/sections.styles"
+import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionText } from "../Shared/sections.styles"
 import { StyledGameContract } from "./index.styles"
 
 const GameContract = () => {
@@ -7,7 +7,9 @@ const GameContract = () => {
         <StyledGameContract>
             <SectionContainer>
                 <RightWrapper>
-                   
+                    <SectionPhoto url="/assets/section-photos/photo1.png">
+                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
+                    </SectionPhoto>
                 </RightWrapper>
                 <LeftWrapper>
                     <SectionLabel>FREE MARKET SOFTWARE</SectionLabel>
@@ -17,7 +19,7 @@ const GameContract = () => {
                     <SectionText>
                     A free software market is a natural consequence of putting software in the hands of players. Trade in Games! A free software market will discover the true price of software.
                     </SectionText>
-                    <ButtonOutlined>Go to gamecap.io</ButtonOutlined>
+                    
                 </LeftWrapper>
             </SectionContainer>
         </StyledGameContract>

@@ -34,6 +34,49 @@ export const LeftWrapper = styled.div`
     }
 `;
 export const RightWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const SectionPhoto = styled.div<({url: string})>`
+    width: 300px;
+    height: 400px;
+
+    background-image: url(${props => props.url});
+    position: relative;
+    transform-style: preserve-3d;
+
+
+    ::after {   
+        content: '';
+        transform: translateZ(-1px);
+        z-index: 0;
+        position: absolute;
+        background-image: url(${props => props.url});
+        width: 100%;
+        right: -60px;
+        top: -60px;
+        height: 100%;
+        filter: blur(20px);
+
+    }
+    
+`;
+
+export const StyledStackingContext = styled.div`
+    position: absolute;
+
+    
+`;
+
+
+export const SectionBottomLeftPhoto = styled.img`
+    width: 150px;
+    height: 260px;
+    position: absolute;
+    left: -25%;
+    bottom: -50px;
 
 `;
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQuery } from "../MediaQuery";
 import { Swatches } from "../Swatches";
 
 export const StyledAirdrop = styled.div`
@@ -10,8 +11,28 @@ export const StyledAirdrop = styled.div`
     grid-template-rows: auto auto;
     grid-template-areas: "header main" 
                          "info referral";
+
+    ${mediaQuery.laptop} {
+        grid-template-areas: "header info" 
+                             "main main"
+                             "referral referral";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    ${mediaQuery.tablet} {
+        grid-template-areas: "header header" 
+                             "info info"
+                             "main main"
+                             "referral referral";
+    }
+    column-gap: 45px;
     row-gap: 45px;
+
     margin-bottom: 25vh;
+
+    ${mediaQuery.tablet} {
+        row-gap: 20px;
+    }
     
 `;
 
@@ -24,6 +45,11 @@ export const StyledAirdropHeader = styled.h1`
     font-size: 32.2483px;
     max-width: 340px;
     line-height: 140%;
+
+    ${mediaQuery.laptop} {
+        text-align: center;
+        max-width: 100%;
+    }
 `;
 
 export const StyledAirdropMain = styled.div`
@@ -36,6 +62,14 @@ export const StyledMainHeader = styled.h3`
     line-height: 23px;
     margin-top: 15px;
     margin-bottom: 0;
+
+    ${mediaQuery.laptop} {
+        text-align: center;
+    }
+
+    ${mediaQuery.tablet} {
+        margin-bottom: 0px;
+    }
 `;
 
 export const StyledMainSmall = styled.p`
@@ -43,6 +77,10 @@ export const StyledMainSmall = styled.p`
     font-size: 12px;
     line-height: 15px;
     color: #646E83;
+
+    ${mediaQuery.laptop} {
+        text-align: center;
+    }
 `;
 
 
@@ -53,6 +91,10 @@ export const StyledInputWrapper = styled.div`
     width: 500px;
     grid-template-columns: ${inputHeight}px auto ${inputHeight}px;
     margin-top: 30px;
+
+    ${mediaQuery.laptop} {
+        width: auto;
+    }
 `;
 
 export const StyledInputIcon = styled.div`
@@ -119,6 +161,21 @@ export const StyledAirdropInfo = styled.div`
     grid-area: info;
     display: flex;
     gap: 60px;
+    justify-content: flex-start;
+
+    ${mediaQuery.laptopL} {
+        gap: 20px;
+    }
+
+    ${mediaQuery.laptop} {
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 14px;
+    }
+
+    ${mediaQuery.tablet} {
+        margin-top: 0;
+    }
 `;
 
 export const StyledAirdropReferral = styled.div`
@@ -140,6 +197,7 @@ export const StyledInfoLabel = styled.span`
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
+    
 `;
 
 export const StyledInfoValue = styled.span`
@@ -148,6 +206,9 @@ export const StyledInfoValue = styled.span`
     font-size: 18px;
     line-height: 23px;
     color: ${Swatches.primary_color};
+    ${mediaQuery.laptop} {
+        font-size: 16px;
+    }
 
     &::before {
         content: '';

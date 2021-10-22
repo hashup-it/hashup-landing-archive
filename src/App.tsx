@@ -22,8 +22,7 @@ export const App = () => (
         <LandingHeader />
         <AboutUs />
         <Comparison />
-        <Calculator />
-        <GameLibrary />
+        
         <Airdrop />
         <CreateCartridges />
         <GameCap />

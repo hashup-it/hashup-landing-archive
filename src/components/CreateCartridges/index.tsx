@@ -1,11 +1,10 @@
 import { ButtonOutlined, ColoredText } from "../Shared"
-import { LeftWrapper, RightWrapper, SectionContainer, SectionHeader, SectionLabel, SectionText } from "../Shared/sections.styles"
-import { EcosystemHook, StyledCreateCartridges } from './index.styles'
+import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionText, StyledStackingContext } from "../Shared/sections.styles"
+import { StyledCreateCartridges} from "./index.styles"
 
 export const CreateCartridges = () => {
     return (
         <StyledCreateCartridges>
-            <EcosystemHook id="ecosystem"/>
             <SectionContainer>
                 <LeftWrapper>
                     <SectionLabel>Listing cen kartridży</SectionLabel>
@@ -15,10 +14,16 @@ export const CreateCartridges = () => {
                     <SectionText>
                     Konsekwencją oddania w ręce graczy pełnię praw nad cyfrowym nośnikiem licencji jest ich wolnorynkowa cena. Istnieje więc potrzeba na pojawienie się miejsca, które będzie indeksować wszystkie kartridże oraz zmiany ich cen w czasie. Chcąc jak najwierniej przenieść model powstawania kryptowalut do powstawania gier zdecydowaliśmy się, że zainspirujemy się CoinMarketCap’em, czyli platformą listującą wszystkie kryptowaluty.
                     </SectionText>
-                    <ButtonOutlined>Go to gamecap.io</ButtonOutlined>
+  
                 </LeftWrapper>
                 <RightWrapper>
-
+                    <SectionPhoto url="/assets/section-photos/photo1.png">
+                        <StyledStackingContext>
+                            
+                        </StyledStackingContext>
+                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
+                    </SectionPhoto>
+                    
                 </RightWrapper>
             </SectionContainer>
         </StyledCreateCartridges>
