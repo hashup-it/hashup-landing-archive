@@ -8,7 +8,7 @@ const size = {
     desktop: "2560px",
 }
 
-const minWidth = (width: string): string => `@media(max-width: ${width})`
+const maxWidth = (width: string): string => `@media(max-width: ${width})`
 
 
 export const mediaQuery = {
