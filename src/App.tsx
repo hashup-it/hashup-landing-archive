@@ -38,6 +38,7 @@ export const App = () => {
             />
             <LandingHeader />
             <AboutUs />
+            <Comparison/>
             <GameLibrary />
             <CreateCartridges />
             <GameCap />

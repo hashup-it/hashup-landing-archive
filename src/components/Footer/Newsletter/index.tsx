@@ -27,7 +27,7 @@ export const Newsletter = () => {
                     placeholder="Twój adres mejlowy"
                     onChange={event => setMailAddress(event.target.value)}
                 />
-                <StyledSignUpButton onClick={signUp}>Juz niedługo</StyledSignUpButton>
+                <StyledSignUpButton onClick={signUp}>Już niedługo</StyledSignUpButton>
             </FormContainer>
         </NewsletterContainer>
     )

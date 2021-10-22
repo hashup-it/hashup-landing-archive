@@ -11,6 +11,15 @@ export const StyledComparison = styled.div`
     grid-template-rows: auto auto auto;
     grid-template-columns: repeat(3, 280px);
     z-index: initial;
+    overflow-x: auto;
+    margin-top: 150px;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 `;
 
 export const StyledComparisonText = styled.div`
@@ -25,6 +34,7 @@ export const ComparisonItem = styled.div<({outlineColor: string})>`
    padding: 1px;
    display: grid;
    border-radius: 13.0133px;
+   position: relative;
 `;
 
 export const ComparisonItemContent = styled.ul`
@@ -77,3 +87,26 @@ export const StyledCon = styled.li`
     }
 
 `
+
+export const LineText = styled.div<({color: string})>`
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -44px;
+    color: ${props => props.color};
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+
+    ::after {
+        content: '';
+        width: 80vw;
+        background-color: ${props => props.color};
+        opacity: 0.3;
+        height: 4px;
+        margin-left: 33px;
+    }
+`;

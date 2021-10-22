@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { ColoredText, StyledContainerOutline } from "../Shared";
 import { Swatches } from "../Swatches";
-import { ComparisonItem, ComparisonItemContent, StyledComparison, StyledComparisonText, StyledCon, StyledPro } from "./index.styles";
+import { ComparisonItem, ComparisonItemContent, LineText, StyledComparison, StyledComparisonText, StyledCon, StyledPro } from "./index.styles";
 
 interface ComparisonProps {
     
@@ -14,12 +14,14 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
             <StyledComparisonText>Dystrybucja cyfrowa</StyledComparisonText>
             <StyledComparisonText>Dystrybucja z <ColoredText>#</ColoredText></StyledComparisonText>
             <ComparisonItem outlineColor={Swatches.primary_color}>
+                <LineText color={Swatches.primary_color}>Gains</LineText>
                 <ComparisonItemContent>
                     <StyledPro>Rynek wtórny</StyledPro>
                     <StyledPro>Pełnia praw do produktu</StyledPro>
                 </ComparisonItemContent>
             </ComparisonItem>
             <ComparisonItem outlineColor={Swatches.primary_color}>
+                
                 <ComparisonItemContent>
                     <StyledPro>Wygoda</StyledPro>
                     <StyledPro>Brak nośnika</StyledPro>
@@ -32,6 +34,7 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
                 </ComparisonItemContent>
             </ComparisonItem>
             <ComparisonItem outlineColor={Swatches.text_secondary}>
+                <LineText color={Swatches.text_secondary}>Losses</LineText>
                 <ComparisonItemContent>
                     <StyledCon>Brak wygody</StyledCon>
                     <StyledCon>Zniszczalny nośnik</StyledCon>
