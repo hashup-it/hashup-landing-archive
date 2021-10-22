@@ -38,7 +38,7 @@ export const NavBar = (
                 opened={isMobileMenuShown}
                 onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
             />
-            {isMobileMenuShown && <MobileMenu opened={isMobileMenuShown}/>}
+            {isMobileMenuShown && <MobileMenu opened={isMobileMenuShown} setOpened={setIsMobileMenuShown}/>}
         </StyledNavBar>
     )
 }
