@@ -8,15 +8,15 @@ const size = {
     desktop: "2560px",
 }
 
-const minWidth = (width: string): string => `@media(min-width: ${width})`
+const maxWidth = (width: string): string => `@media(max-width: ${width})`
 
 export const mediaQuery = {
-    mobileS: minWidth(size.mobileS),
-    mobileM: minWidth(size.mobileM),
-    mobileL: minWidth(size.mobileL),
-    tablet: minWidth(size.tablet),
-    laptop: minWidth(size.laptop),
-    laptopL: minWidth(size.laptopL),
-    desktop: minWidth(size.desktop),
-    desktopL: minWidth(size.desktop),
+    mobileS: maxWidth(size.mobileS),
+    mobileM: maxWidth(size.mobileM),
+    mobileL: maxWidth(size.mobileL),
+    tablet: maxWidth(size.tablet),
+    laptop: maxWidth(size.laptop),
+    laptopL: maxWidth(size.laptopL),
+    desktop: maxWidth(size.desktop),
+    desktopL: maxWidth(size.desktop),
 }
