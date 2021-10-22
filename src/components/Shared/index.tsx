@@ -5,7 +5,9 @@ export const ColoredText = styled.span`
     color: ${Swatches.primary_color};
 `
 
-export const ButtonOutlined = styled.button`
+export const ButtonOutlined = styled.a`
+    text-decoration: none;
+    
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 15px;

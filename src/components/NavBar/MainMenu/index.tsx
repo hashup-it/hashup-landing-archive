@@ -65,9 +65,21 @@ export const MainMenu = (
                     </FooterTop>
                     <FooterBottom>
                         <FooterBottomGroup>
-                            <FooterLink>Terms & Conditions</FooterLink>
-                            <FooterLink>Privacy Policy</FooterLink>
-                            <FooterLink>Cookies Policy</FooterLink>
+                            <FooterLink>
+                                <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
+                                    Terms & Conditions
+                                </Hyperlink>
+                            </FooterLink>
+                            <FooterLink>
+                                <Hyperlink href="/documents/Data_Protection_Policy.pdf">
+                                    Privacy Policy
+                                </Hyperlink>
+                            </FooterLink>
+                            <FooterLink>
+                                <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
+                                    Airdrop Terms of Use
+                                </Hyperlink>
+                            </FooterLink>
                         </FooterBottomGroup>
                         <Copyright>Copyright © by HashUp. All Rights Reserved.</Copyright>
                     </FooterBottom>

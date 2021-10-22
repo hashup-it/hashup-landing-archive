@@ -1,5 +1,14 @@
-import { ButtonOutlined, ColoredText } from "../../Shared"
-import { ButtonGroup, GradientText, Header, HeaderAirdropIcon, HeaderAirdropWrapper, HeaderGetAirdrop, SmallText, StyledHeaderText } from "./index.styles"
+import { ButtonOutlined, ColoredText } from '../../Shared'
+import {
+    ButtonGroup,
+    GradientText,
+    Header,
+    HeaderAirdropIcon,
+    HeaderAirdropWrapper,
+    HeaderGetAirdrop,
+    SmallText,
+    StyledHeaderText
+} from './index.styles'
 
 
 export const HeaderText = () => {
@@ -10,10 +19,13 @@ export const HeaderText = () => {
                 <ColoredText>.</ColoredText>
             </Header>
             <SmallText>
-                DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez pośredników. Z&nbsp;0% prowizji. Skończymy monopol na rynku oprogramowania…
+                DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez
+                pośredników. Z&nbsp;0% prowizji. Skończymy monopol na rynku oprogramowania…
             </SmallText>
             <ButtonGroup>
-                <ButtonOutlined>Whitepaper</ButtonOutlined>
+                <ButtonOutlined href="/documents/Whitepaper.pdf">
+                    Whitepaper
+                </ButtonOutlined>
                 <HeaderAirdropWrapper>
                     <HeaderAirdropIcon></HeaderAirdropIcon>
                     <HeaderGetAirdrop>Get your airdrop</HeaderGetAirdrop>
