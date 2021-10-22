@@ -65,7 +65,6 @@ export const FooterBottomGroup = styled.div`
 
     ${mediaQuery.tablet} {
         align-items: center;
-        flex-direction: column;
         gap: 20px;
 
         > * {
@@ -73,7 +72,7 @@ export const FooterBottomGroup = styled.div`
             padding: 0;
         }
         
-        flex-direction: row;
+        flex-direction: column;
     }
 `
 

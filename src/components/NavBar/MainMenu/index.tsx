@@ -66,7 +66,7 @@ export const MainMenu = (
                     <FooterBottom>
                         <FooterBottomGroup>
                             <FooterLink>
-                                <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
+                                <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
                                     Terms & Conditions
                                 </Hyperlink>
                             </FooterLink>
@@ -76,7 +76,7 @@ export const MainMenu = (
                                 </Hyperlink>
                             </FooterLink>
                             <FooterLink>
-                                <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
+                                <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
                                     Airdrop Terms of Use
                                 </Hyperlink>
                             </FooterLink>
