@@ -1,20 +1,25 @@
-import styled from "styled-components";
-import { mediaQuery } from "./components/MediaQuery";
-import { Swatches } from "./components/Swatches";
+import styled from "styled-components"
+import { mediaQuery } from "./components/MediaQuery"
+import { Swatches } from "./components/Swatches"
+
+export const globalHorizontalPadding = {
+    [mediaQuery.desktop]: "93px",
+    [mediaQuery.laptop]: "30px",
+    [mediaQuery.mobileL]: "23px",
+}
 
 export const LandingContainer = styled.div`
     background-color: ${Swatches.background_main};
     min-height: 100vh;
-    padding: 0px 93px 0px 93px;
+    padding: 0px ${globalHorizontalPadding[mediaQuery.desktop]};
     color: white;
     overflow: hidden;
 
     ${mediaQuery.laptop} {
-        padding: 0px 30px 0px 30px;
+        padding: 0px ${globalHorizontalPadding[mediaQuery.laptop]};
     }
 
     ${mediaQuery.mobileL} {
-        padding: 0px 23px 0px 23px;
+        padding: 0px ${globalHorizontalPadding[mediaQuery.mobileL]};
     }
-`;
-
+`

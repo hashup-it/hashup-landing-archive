@@ -1,73 +1,65 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Swatches } from "../Swatches"
 import { mediaQuery } from "../MediaQuery"
+import { globalHorizontalPadding } from "../../App.styles"
 
 export const StyledRoadmap = styled.div`
     text-align: center;
     margin-top: 100px;
 `
 
-export const StyledSlider = styled.div<{ isGrabbed: boolean }>`
-    margin-top: 80px;
-    min-width: 100%;
-    max-width: 100%;
-    position: relative;
-
-    cursor: grab;
-
-    ${props =>
-        props.isGrabbed &&
-        css`
-            cursor: grabbing;
-        `}
-`
-
-export const StyledBoxesArea = styled.div`
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    justify-content: left;
-    margin-left: -90px;
-    will-change: transform;
+export const StyledCarousele = styled.div`
+    margin: 80px 0 140px;
+    width: 100vw;
+    margin-left: -${globalHorizontalPadding[mediaQuery.desktop]};
 
     ${mediaQuery.laptop} {
-        margin-left: 0;
+        margin-left: -${globalHorizontalPadding[mediaQuery.laptop]};
+        margin-top: 50px;
     }
-`
 
-export const StyledSliderControls = styled.div`
-    margin: 80px auto;
-    display: flex;
-    justify-content: center;
-`
+    ${mediaQuery.mobileL} {
+        margin-left: -${globalHorizontalPadding[mediaQuery.mobileL]};
+    }
 
-export const StyledSliderControl = styled.div<{ selected: boolean }>`
-    margin: 0 7px;
-    width: 25px;
-    height: 30px;
-    cursor: pointer;
-    transition: width 100ms;
+    .alice-carousel {
+        padding: 10px 0;
+    }
+    .alice-carousel__dots {
+        margin-top: 80px;
 
-    :before {
-        transition: width 100ms;
-        margin-top: 15px;
-        display: block;
-        content: "";
+        ${mediaQuery.tablet} {
+            margin-top: 50px;
+        }
+    }
+
+    .alice-carousel__dots-item {
+        background-color: transparent;
+        margin-right: 0 5px;
         width: 25px;
-        height: 2px;
-        background-color: ${Swatches.primary_color};
-    }
+        height: 30px;
 
-    ${props =>
-        props.selected &&
-        css`
-            transition: width 100ms;
+        :hover {
+            background-color: transparent;
+        }
+
+        :before {
+            margin-top: 15px;
+            display: block;
+            content: "";
+            width: 25px;
+            height: 2px;
+            background-color: ${Swatches.inactive};
+        }
+
+        &.__active {
+            background-color: transparent;
             width: 60px;
 
             :before {
-                transition: width 100ms;
+                background-color: ${Swatches.primary_color};
                 width: 60px;
             }
-        `}
+        }
+    }
 `

@@ -1,20 +1,37 @@
 import styled, { css, keyframes } from "styled-components"
 import { Swatches } from "../../Swatches"
 import doneSvg from "./icons/done.svg"
+import { mediaQuery } from "../../MediaQuery"
+
+export const StyledWrapper = styled.div`
+    cursor: grab;
+    padding: 4px 0;
+    flex-shrink: none;
+    width: 440px;
+
+    ${mediaQuery.mobileL} {
+        width: 100vw;
+    }
+`
 
 export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
+    margin: auto;
     box-sizing: border-box;
-    min-width: 367px;
-    max-width: 367px;
+    user-select: none;
+    width: 367px;
+    flex-shrink: none;
     height: 475px;
     padding: 40px 63px;
-    margin: 0 13px;
     text-align: left;
     position: relative;
     transform-style: preserve-3d;
-
     background: linear-gradient(180deg, #010101 0%, ${Swatches.background_main} 100%);
     border-radius: 40px;
+
+    ${mediaQuery.mobileL} {
+        padding: 35px 45px;
+        width: 350px;
+    }
 
     ${props =>
         props.highlighted &&

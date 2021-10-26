@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components"
 import { Swatches } from "../Swatches"
-import { mediaQuery } from '../MediaQuery'
+import { mediaQuery } from "../MediaQuery"
 
 export const StyledInfoNotes = styled.div`
     text-align: center;
@@ -12,6 +12,7 @@ export const StyledNotesArea = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 40px;
+
     ${mediaQuery.tablet} {
         flex-direction: column;
         justify-content: center;
@@ -33,29 +34,45 @@ export const StyledNote = styled.div`
         margin: 40px 0px;
         text-align: center;
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         align-items: center;
     }
 `
-
-export const NoteGroup = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`;
 
 const rotateAnim = keyframes`
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 `
 
-export const StyledNoteBubble = styled.div`
-    width: 98px;
-    height: 98px;
-    background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
-    border-bottom: red 1px solid;
-    border-right: red 1px solid;
-    border-radius: 100px;
-    animation: ${rotateAnim} 4s linear infinite;
+export const StyledNoteBubble = styled.div<{ icon: string; initRotateDelay: number }>`
+    position: relative;
+
+    .icon {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 97px;
+        height: 97px;
+        border-radius: 100px;
+        z-index: 100;
+        margin-bottom: -90px;
+        background: url(${props => props.icon});
+        background-position: center;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
+
+    .bubble {
+        width: 98px;
+        height: 98px;
+        border-radius: 100px;
+        border-bottom: red 1px solid;
+        border-right: red 1px solid;
+        background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
+        animation: ${rotateAnim} 5s linear infinite;
+        animation-delay: -${props => props.initRotateDelay}s;
+        z-index: 50;
+    }
 `
 
 export const StyledNoteLabel = styled.div`

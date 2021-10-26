@@ -1,72 +1,26 @@
-import { FC } from "react"
 import InfoBox from "./InfoBox"
 import { ColoredText } from "../Shared"
 import { SectionHeader, SectionLabel } from "../Shared/sections.styles"
-import {
-    StyledRoadmap,
-    StyledSlider,
-    StyledBoxesArea,
-    StyledSliderControls,
-    StyledSliderControl,
-} from "./roadmap.styles"
+import { StyledRoadmap, StyledCarousele } from "./roadmap.styles"
 import { infoBoxesData, highlightedId } from "./data"
-import useSlider from "./logic"
+import AliceCarousel from "react-alice-carousel"
+import "react-alice-carousel/lib/alice-carousel.css"
 
-interface SliderControlsProps {
-    readonly numberOfBoxes: number
-    readonly selectedSlideId: number
-    readonly jumpToSlide: (id: number) => void
-}
-const SliderControls: FC<SliderControlsProps> = ({
-    numberOfBoxes,
-    jumpToSlide,
-    selectedSlideId,
-}) => (
-    <StyledSliderControls>
-        {Array.from({ length: numberOfBoxes }, (_, k) => (
-            <StyledSliderControl
-                key={k}
-                selected={selectedSlideId === k}
-                onClick={() => jumpToSlide(k)}
-            />
-        ))}
-    </StyledSliderControls>
+const carouseleItems: JSX.Element[] = infoBoxesData.map((item, index) => (
+    <InfoBox key={index} highlighted={index === highlightedId} {...item} />
+))
+
+const Carousele = () => (
+    <StyledCarousele>
+        <AliceCarousel
+            items={carouseleItems}
+            controlsStrategy="alternate"
+            autoWidth
+            disableButtonsControls
+            mouseTracking
+        />
+    </StyledCarousele>
 )
-
-const Slider = () => {
-    const {
-        sliderRef,
-        sliderChildRef,
-        isGrabbed,
-        jumpToSlide,
-        selectedSlideId,
-        onSliderMouseDown,
-        onSliderMouseUp,
-        numberOfSlides
-    } = useSlider()
-
-    return (
-        <>
-            <StyledSlider
-                ref={sliderRef}
-                isGrabbed={isGrabbed}
-                onMouseDown={onSliderMouseDown}
-                onMouseUp={onSliderMouseUp}
-            >
-                <StyledBoxesArea ref={sliderChildRef}>
-                    {infoBoxesData.map((item, index) => (
-                        <InfoBox key={index} highlighted={index === highlightedId} {...item} />
-                    ))}
-                </StyledBoxesArea>
-            </StyledSlider>
-            <SliderControls
-                numberOfBoxes={numberOfSlides}
-                jumpToSlide={jumpToSlide}
-                selectedSlideId={selectedSlideId}
-            />
-        </>
-    )
-}
 
 export const Roadmap = () => (
     <StyledRoadmap>
@@ -76,6 +30,6 @@ export const Roadmap = () => (
         <SectionHeader>
             Zobacz, <ColoredText>kiedy zamierzamy to wszystko zrobić</ColoredText>
         </SectionHeader>
-        <Slider />
+        <Carousele />
     </StyledRoadmap>
 )
