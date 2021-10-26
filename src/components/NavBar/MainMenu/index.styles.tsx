@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { mediaQuery } from '../../MediaQuery'
-import { FooterBottomGroup, FooterTopLeft } from '../../Footer/index.styles'
+import { FooterTopLeft } from '../../Footer/index.styles'
 
 export const StyledMainMenu = styled.nav`
     display: flex;
@@ -13,8 +13,8 @@ export const StyledMainMenu = styled.nav`
         align-items: center;
         gap: 40px;
     }
-    
-    overflow-y: scroll;
+
+    overflow-y: auto;
 `
 
 export const MenuItem = styled.span`
@@ -24,7 +24,7 @@ export const MenuItem = styled.span`
     :hover {
         opacity: 0.9;
     }
-    
+
     > * {
         text-decoration: none;
         color: white;

@@ -57,8 +57,8 @@ export const App = () => {
                         <CartridgesTab />
                     </Route>
                 </Switch>
-            </Router>
             <Footer />
+            </Router>
         </LandingContainer>
     )
 }
