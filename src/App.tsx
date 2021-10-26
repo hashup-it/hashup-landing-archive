@@ -13,7 +13,6 @@ import { CreateCartridges } from './components/CreateCartridges'
 import { GamExplorer } from './components/GamExplorer'
 import Comparison from './components/Comparison'
 import { GameLibrary } from './components/GameLibrary'
-import Web3 from 'web3'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CartridgesTab } from './components/CartridgesTab'
 import ScrollToTop from './hook/scrollToTop'
@@ -23,10 +22,8 @@ export const App = () => {
 
     const handleMetamaskConnection = async () => {
         if ((window as any).ethereum) {
-            const accounts = await (
-                new Web3((window as any).ethereum).eth.requestAccounts()
-            )
 
+            const accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' })
             setShownAccount(accounts[0])
         }
     }
@@ -57,7 +54,7 @@ export const App = () => {
                         <CartridgesTab />
                     </Route>
                 </Switch>
-            <Footer />
+                <Footer />
             </Router>
         </LandingContainer>
     )

@@ -16,7 +16,6 @@ export const CartridgeDescriptionContainer = styled.div<({ leftBasedLayout: bool
             `
     };
     gap: 145px;
-    
     position: relative;
 
     ${mediaQuery.mobileL} {

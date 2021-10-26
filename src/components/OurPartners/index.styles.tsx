@@ -28,10 +28,10 @@ export const SponsorLogosContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-grow: 1;
-    
+
     column-gap: 1rem;
     row-gap: 4rem;
-    
+
     > * {
         opacity: 1;
 
@@ -68,7 +68,7 @@ export const QuoteTextContainer = styled.div`
     font-weight: normal;
     font-size: 25px;
     line-height: 140%;
-    
+
     margin-left: 3em;
 
     color: white;

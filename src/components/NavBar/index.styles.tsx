@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { mediaQuery } from "../MediaQuery";
-import { Swatches } from "../../__styles__/Swatches";
+import styled from 'styled-components'
+import { mediaQuery } from '../MediaQuery'
+import { Swatches } from '../../__styles__/Swatches'
 
 export const StyledNavBar = styled.div`
     position: fixed;
@@ -15,20 +15,21 @@ export const StyledNavBar = styled.div`
     font-weight: 700;
     align-items: flex-start;
     z-index: 999;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 
     ${mediaQuery.tablet} {
         grid-template-columns: 50px  1fr auto;
         align-items: center;
     }
-`;
+`
 
 export const Logo = styled.img`
     margin-top: 5px;
-   ${mediaQuery.tablet} {
-       display: none;
-   }
-`;
+
+    ${mediaQuery.tablet} {
+        display: none;
+    }
+`
 
 export const LogoWrapper = styled.div`
     cursor: pointer;
@@ -36,41 +37,42 @@ export const LogoWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 9px;
-`;
+`
 
-export const LogoIcon = styled.img``;
+export const LogoIcon = styled.img``
 
 export const ButtonsMenu = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     gap: 60px;
-    
+
     > * {
         cursor: pointer;
     }
-`;
+`
 
 export const Icon = styled.img`
     padding-top: 6px;
     padding-left: 9px;
-`;
+`
 
-export const HamburgerButton = styled.div<({opened: boolean})>`
+export const HamburgerButton = styled.div<({ opened: boolean })>`
     width: 30px;
     height: 30px;
     background-image: url(${props => props.opened ? '/assets/icons/x.svg' : '/assets/icons/hamburger.svg'});
-    background-position : center;
+    background-position: center;
     background-repeat: no-repeat;
     margin-left: 10px;
     display: none;
+
     ${mediaQuery.tablet} {
         display: initial;
     }
-`;
+`
 
 export const MobileHideWrapper = styled.div`
     ${mediaQuery.tablet} {
         display: none;
     }
-`;
+`

@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
     const { nodes, materials } = useGLTF('/assets/models/suzanne/suzanne.gltf')
     return (
         <group ref={group} {...props} dispose={null}>
-            <mesh geometry={nodes.Suzanne.geometry} material={nodes.Suzanne.material} position={[0, 0.19, -0.04]}/>
+            <mesh geometry={nodes.Suzanne.geometry} material={nodes.Suzanne.material} position={[0, 0.19, -0.04]} />
         </group>
     )
 }

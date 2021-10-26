@@ -4,7 +4,6 @@ import { Swatches } from '../../../__styles__/Swatches'
 import { StyledTabHeaderText } from '../../Shared/sections.styles'
 
 export const StyledLandingHeaderText = styled(StyledTabHeaderText)`
-    padding-left: 100px;
     gap: 40px;
 `
 

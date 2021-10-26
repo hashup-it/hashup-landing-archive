@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import { mediaQuery } from "../MediaQuery";
-import { Swatches } from "../../__styles__/Swatches";
+import styled from 'styled-components'
+import { mediaQuery } from '../MediaQuery'
+import { Swatches } from '../../__styles__/Swatches'
 
 export const StyledAboutUs = styled.div`
     position: relative;
     z-index: 0;
     margin-top: 10vh;
-`;
+`
 
 export const SectionContainer = styled.div`
     display: grid;
@@ -31,7 +31,7 @@ export const SectionContainer = styled.div`
     }
 
 
-`;
+`
 
 export const BackgroundWorld = styled.div`
     position: absolute;
@@ -44,7 +44,7 @@ export const BackgroundWorld = styled.div`
     left: 0;
     pointer-events: none;
     z-index: -1;
-`;
+`
 
 export const RadialGradient = styled.div`
     position: absolute;
@@ -58,7 +58,7 @@ export const RadialGradient = styled.div`
     right: -5vw;
     pointer-events: none;
     z-index: -1;
-`;
+`
 
 export const Cards = styled.div`
     display: flex;
@@ -75,7 +75,7 @@ export const Cards = styled.div`
         align-items: center;
         flex-direction: column;
     }
-`;
+`
 
 export const AboutCard = styled.div`
     background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
@@ -108,7 +108,7 @@ export const AboutCard = styled.div`
             margin-top: 0px;
         }
     }
-`;
+`
 
 export const CardHeader = styled.h3`
     font-family: Sora;
@@ -117,14 +117,14 @@ export const CardHeader = styled.h3`
     font-size: 24px;
     line-height: 140%;
     color: white;
-`;
+`
 
 export const CardLine = styled.div`
     width: 25px;
     height: 2px;
     background: ${Swatches.primary_color};
     margin-top: 20px;
-`;
+`
 
 export const CardParticles = styled.div`
     position: absolute;
@@ -136,4 +136,4 @@ export const CardParticles = styled.div`
     right: -40px;
     pointer-events: none;
     z-index: -1;
-`;
+`

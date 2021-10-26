@@ -1,14 +1,30 @@
-import { StyledConnectWallet, WalletHideWrapper, WalletIcon } from './index.styles'
-import { useEffect, useState } from 'react'
+import {
+    StyledAddress,
+    StyledConnectWallet,
+    StyledWalletTextWrapper,
+    StyledWrapper,
+    WalletHideWrapper,
+    WalletIcon
+} from './index.styles'
+import { FunctionComponent, useState } from 'react'
 import { WalletSelector } from '../../WalletSelector'
 
-export const ConnectWallet = ({handleMetamaskConnection} : {handleMetamaskConnection: Function}) => {
+interface ConnectWalletProps {
+    account: string | any,
+    handleMetamaskConnection: Function
+}
+
+export const ConnectWallet: FunctionComponent<ConnectWalletProps> = ({ handleMetamaskConnection, account }) => {
     const [isWalletSelectorShown, setIsWalletSelectorShown] = useState(false)
+
 
     return (
         <WalletHideWrapper>
             <StyledConnectWallet onClick={() => setIsWalletSelectorShown(true)}>
-                Connect Wallet
+                <StyledWalletTextWrapper>
+                    <StyledWrapper>{account ? 'Connected' : 'Connect Wallet'}</StyledWrapper>
+                    {account && <StyledAddress>{account.slice(0, 4) + '...' + account.slice(37, 42)}</StyledAddress>}
+                </StyledWalletTextWrapper>
                 <WalletIcon src="/assets/icons/wallet.svg" />
             </StyledConnectWallet>
             {

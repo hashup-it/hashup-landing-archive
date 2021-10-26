@@ -1,6 +1,16 @@
-import { ButtonOutlined, ColoredText } from "../Shared"
-import { LeftWrapper, RightWrapper, SectionBottomLeftPhoto, SectionContainer, SectionHeader, SectionLabel, SectionPhoto, SectionText, StyledStackingContext } from "../Shared/sections.styles"
-import { StyledCreateCartridges} from "./index.styles"
+import { ColoredText } from '../Shared'
+import {
+    LeftWrapper,
+    RightWrapper,
+    SectionBottomLeftPhoto,
+    SectionContainer,
+    SectionHeader,
+    SectionLabel,
+    SectionPhoto,
+    SectionText,
+    StyledStackingContext
+} from '../Shared/sections.styles'
+import { StyledCreateCartridges } from './index.styles'
 
 export const CreateCartridges = () => {
     return (
@@ -10,19 +20,22 @@ export const CreateCartridges = () => {
                     <SectionLabel><ColoredText>CARTRIDGE</ColoredText> on blockchain</SectionLabel>
                     <SectionHeader>
                         Wróćmy do czasów przed <ColoredText>zniewoleniem
-                            oprogramowania</ColoredText>.
+                        oprogramowania</ColoredText>.
                     </SectionHeader>
                     <SectionText>
-                    Tęsknimy za czasami, gdy kupując licencję na grę faktycznie stawaliśmy się jej właścicielem. Obecny model dystrybucji oprogramowania sprawia, że nabyte przez nas dobra cyfrowe tak naprawdę nie należą do nas. Nie wszystko jednak stracone! HashUp z pomocą cyfrowego cartdrige’a pozwoli Ci znowu cieszyć się pełną kontrolą. Handlujcie grami! W końcu są wasze!
+                        Tęsknimy za czasami, gdy kupując licencję na grę faktycznie stawaliśmy się jej właścicielem.
+                        Obecny model dystrybucji oprogramowania sprawia, że nabyte przez nas dobra cyfrowe tak naprawdę
+                        nie należą do nas. Nie wszystko jednak stracone! HashUp z pomocą cyfrowego cartdrige’a pozwoli
+                        Ci znowu cieszyć się pełną kontrolą. Handlujcie grami! W końcu są wasze!
                     </SectionText>
-  
+
                 </LeftWrapper>
                 <RightWrapper>
                     <SectionPhoto url="/assets/section-photos/photo1.png">
                         <StyledStackingContext>
-                            
+
                         </StyledStackingContext>
-                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png"/>
+                        <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png" />
                     </SectionPhoto>
                 </RightWrapper>
             </SectionContainer>

@@ -1,18 +1,7 @@
-import styled, { css, keyframes } from "styled-components"
-import { Swatches } from "../../../__styles__/Swatches"
-import doneSvg from "./icons/done.svg"
-import { mediaQuery } from "../../MediaQuery"
-
-export const StyledWrapper = styled.div`
-    cursor: grab;
-    padding: 4px 0;
-    flex-shrink: none;
-    width: 440px;
-
-    ${mediaQuery.mobileL} {
-        width: 100vw;
-    }
-`
+import styled, { css, keyframes } from 'styled-components'
+import { Swatches } from '__styles__/Swatches'
+import doneSvg from './icons/done.svg'
+import { mediaQuery } from '../../MediaQuery'
 
 export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
     margin: auto;
@@ -34,24 +23,24 @@ export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
     }
 
     ${props =>
-        props.highlighted &&
-        css`
-            // Outline
-            :before {
-                content: "";
-                display: block;
-                position: absolute;
-                width: calc(100% - 2px);
-                height: calc(100%);
-                padding: 2px;
-                left: 0px;
-                top: -1px;
-                transform: translateZ(-1px);
-                border: 0px solid transparent;
-                border-radius: 40px;
-                background: linear-gradient(90deg, #000000 30%, ${Swatches.primary_color} 100%);
-            }
-        `}
+            props.highlighted &&
+            css`
+                // Outline
+                :before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: calc(100% - 2px);
+                    height: calc(100%);
+                    padding: 2px;
+                    left: 0px;
+                    top: -1px;
+                    transform: translateZ(-1px);
+                    border: 0px solid transparent;
+                    border-radius: 40px;
+                    background: linear-gradient(90deg, #000000 30%, ${Swatches.primary_color} 100%);
+                }
+            `}
 `
 
 export const StyledLabel = styled.span`
@@ -75,8 +64,12 @@ export const StyledBulletsList = styled.ul`
 `
 
 const rotateAnim = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 `
 
 export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
@@ -90,20 +83,20 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
         margin-right: 18px;
 
         ${props =>
-            props.isDone
-                ? css`
-                      // Icon
-                      border: ${Swatches.primary_color} 1px solid;
-                      background-image: url(${doneSvg});
-                      background-repeat: no-repeat;
-                      background-size: 10px;
-                      background-position: center;
-                  `
-                : css`
-                      border-right: ${Swatches.primary_color} 1px solid;
-                      border-bottom: ${Swatches.primary_color} 1px solid;
-                      animation: ${rotateAnim} 3s linear infinite;
-                  `}
+                props.isDone
+                        ? css`
+                            // Icon
+                            border: ${Swatches.primary_color} 1px solid;
+                            background-image: url(${doneSvg});
+                            background-repeat: no-repeat;
+                            background-size: 10px;
+                            background-position: center;
+                        `
+                        : css`
+                            border-right: ${Swatches.primary_color} 1px solid;
+                            border-bottom: ${Swatches.primary_color} 1px solid;
+                            animation: ${rotateAnim} 3s linear infinite;
+                        `}
     }
 
     div.content {
@@ -113,9 +106,9 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
         line-height: 140%;
 
         ${props =>
-            props.bold &&
-            css`
-                font-weight: bold;
-            `}
+                props.bold &&
+                css`
+                    font-weight: bold;
+                `}
     }
 `

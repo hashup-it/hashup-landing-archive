@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { Swatches } from '../../__styles__/Swatches'
+import { Swatches } from '__styles__/Swatches'
+import { hexToRGB } from 'util/math'
 
-export const ColoredText = styled.span<({ color?: string})>`
+export const ColoredText = styled.span<({ color?: string })>`
     color: ${props => props.color ?? Swatches.primary_color};
 `
 
@@ -60,7 +61,7 @@ export const StyledContainerOutline = styled.div<({ outlineColor: string })>`
     top: -1px;
     left: -1px;
     background: rgb(22, 22, 22);
-    background: linear-gradient(90deg, rgba(22, 22, 22, 1) 43%, ${props => props.outlineColor} 100%);
+    background: linear-gradient(90deg, ${props => hexToRGB(props.outlineColor, 0.5)} 43%, ${props => props.outlineColor} 100%);
 `
 
 export const AccentLongEmDash = styled.span`
