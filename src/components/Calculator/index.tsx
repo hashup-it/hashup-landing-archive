@@ -1,5 +1,5 @@
 import { ColoredText } from "../Shared"
-import { Swatches } from "../Swatches"
+import { Swatches } from "../../__styles__/Swatches"
 import { CalculatorHeader, PercentBackground, StyledCalculator, StyledPriceLabel, StyledPriceLabelOutline, StyledResults, StyledResultsDescription, StyledResultsHeader, StyledResultsText, StyledResultWrapper, StyledSlidersContainer, StyledVersus, StyledVersusLine } from "./index.styles"
 import Slider from "./Slider"
 

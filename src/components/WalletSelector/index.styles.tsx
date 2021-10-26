@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { ButtonOutlined } from '../Shared'
 import { Hyperlink, SectionHeader, SectionText } from '../Shared/sections.styles'
-import { Swatches } from '../Swatches'
+import { Swatches } from '../../__styles__/Swatches'
 
 export const WalletSelectorContainer = styled.div`
     position: fixed;

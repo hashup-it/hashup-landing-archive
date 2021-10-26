@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Swatches } from "../../Swatches";
+import { Swatches } from "../../../__styles__/Swatches";
 
 export const StyledMobileMenu = styled.div<({opened : boolean})>`
     position: fixed;

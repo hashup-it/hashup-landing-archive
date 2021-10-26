@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { Swatches } from "../Swatches"
+import { Swatches } from "../../__styles__/Swatches"
 import { mediaQuery } from "../MediaQuery"
 
 export const StyledRoadmap = styled.div`
