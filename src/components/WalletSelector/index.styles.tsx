@@ -22,16 +22,16 @@ export const WalletSelectorContainer = styled.div`
 
 export const ContentWrapper = styled.div`
     position: relative;
-    
+
     background: rgba(22, 22, 22, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 13.0133px;
 
     background: #1B1B1B;
-    
+
     padding: 50px 68px 78px 68px;
     border: 1px solid ${Swatches.primary_color};
-    
+
     cursor: auto;
 `
 
@@ -55,7 +55,7 @@ export const ConnectionText = styled(SectionText)`
     line-height: 160%;
 
     text-align: center;
-    
+
     color: #CDCDCD;
 
 `

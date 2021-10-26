@@ -1,11 +1,11 @@
-import styled from "styled-components"
-import { mediaQuery } from "./components/MediaQuery"
-import { Swatches } from "./__styles__/Swatches";
+import styled from 'styled-components'
+import { mediaQuery } from './components/MediaQuery'
+import { Swatches } from './__styles__/Swatches'
 
 export const globalHorizontalPadding = {
-    [mediaQuery.desktop]: "93px",
-    [mediaQuery.laptop]: "30px",
-    [mediaQuery.mobileL]: "23px",
+    [mediaQuery.desktop]: '93px',
+    [mediaQuery.laptop]: '30px',
+    [mediaQuery.mobileL]: '23px'
 }
 
 export const LandingContainer = styled.div`
@@ -15,7 +15,11 @@ export const LandingContainer = styled.div`
     color: white;
     overflow: hidden;
 
-    ${mediaQuery.laptop} {
+    width: 1240px;
+    margin: 0 auto;
+
+    ${mediaQuery.laptopL} {
+        width: auto;
         padding: 0px ${globalHorizontalPadding[mediaQuery.laptop]};
     }
 

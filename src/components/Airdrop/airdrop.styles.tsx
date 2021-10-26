@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { mediaQuery } from "../MediaQuery";
-import { Swatches } from "../../__styles__/Swatches";
+import styled from 'styled-components'
+import { mediaQuery } from '../MediaQuery'
+import { Swatches } from '../../__styles__/Swatches'
 
 export const StyledAirdrop = styled.div`
 
@@ -25,6 +25,7 @@ export const StyledAirdrop = styled.div`
                              "main main"
                              "referral referral";
     }
+
     column-gap: 45px;
     row-gap: 45px;
 
@@ -33,8 +34,8 @@ export const StyledAirdrop = styled.div`
     ${mediaQuery.tablet} {
         row-gap: 20px;
     }
-    
-`;
+
+`
 
 export const StyledAirdropHeader = styled.h1`
     grid-area: header;
@@ -50,11 +51,11 @@ export const StyledAirdropHeader = styled.h1`
         text-align: center;
         max-width: 100%;
     }
-`;
+`
 
 export const StyledAirdropMain = styled.div`
     grid-area: main;
-`;
+`
 
 export const StyledMainHeader = styled.h3`
     font-weight: normal;
@@ -70,7 +71,7 @@ export const StyledMainHeader = styled.h3`
     ${mediaQuery.tablet} {
         margin-bottom: 0px;
     }
-`;
+`
 
 export const StyledMainSmall = styled.p`
     font-weight: normal;
@@ -81,10 +82,10 @@ export const StyledMainSmall = styled.p`
     ${mediaQuery.laptop} {
         text-align: center;
     }
-`;
+`
 
 
-const inputHeight = 63;
+const inputHeight = 63
 export const StyledInputWrapper = styled.div`
     height: ${inputHeight}px;
     display: grid;
@@ -95,7 +96,7 @@ export const StyledInputWrapper = styled.div`
     ${mediaQuery.laptop} {
         width: auto;
     }
-`;
+`
 
 export const StyledInputIcon = styled.div`
     background-color: #FFFFFF;
@@ -103,7 +104,7 @@ export const StyledInputIcon = styled.div`
     background-image: url("/assets/icons/user.svg");
     background-position: center;
     background-repeat: no-repeat;
-`;
+`
 
 export const StyledInput = styled.input`
     background-color: #FFFFFF;
@@ -117,19 +118,19 @@ export const StyledInput = styled.input`
     :focus {
         outline: none;
     }
-`;
+`
 
 export const StyledInputButton = styled.div`
     background: linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.primary_color} 100%);
     position: relative;
     border-radius: 0px 4px 4px 0px;
     cursor: pointer;
-    
+
     :hover {
         transition: 1s;
         background: linear-gradient(90deg, ${Swatches.background_main} 0%, ${Swatches.primary_color} 100%);
     }
-`;
+`
 
 export const StyledBeforeConnectWrapper = styled.div`
     color: ${Swatches.primary_color};
@@ -142,7 +143,7 @@ export const StyledBeforeConnectWrapper = styled.div`
     border: 1px dotted ${Swatches.primary_color};
     border-radius: 6px;
     cursor: pointer;
-`;
+`
 
 export const StyledInputButtonFill = styled.div`
     background-color: #010101;
@@ -155,7 +156,7 @@ export const StyledInputButtonFill = styled.div`
     top: 1px;
     left: 0;
     border-radius: inherit;
-`;
+`
 
 export const StyledAirdropInfo = styled.div`
     grid-area: info;
@@ -176,13 +177,13 @@ export const StyledAirdropInfo = styled.div`
     ${mediaQuery.tablet} {
         margin-top: 0;
     }
-`;
+`
 
 export const StyledAirdropReferral = styled.div`
     grid-area: referral;
     display: flex;
     justify-content: flex-start;
-`;
+`
 
 
 export const StyledInfoItem = styled.div`
@@ -190,15 +191,15 @@ export const StyledInfoItem = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
-`;
+`
 
 export const StyledInfoLabel = styled.span`
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
-    
-`;
+
+`
 
 export const StyledInfoValue = styled.span`
     position: relative;
@@ -206,6 +207,7 @@ export const StyledInfoValue = styled.span`
     font-size: 18px;
     line-height: 23px;
     color: ${Swatches.primary_color};
+
     ${mediaQuery.laptop} {
         font-size: 16px;
     }
@@ -219,5 +221,34 @@ export const StyledInfoValue = styled.span`
         height: 1px;
         background: ${Swatches.primary_color};
     }
-`;
+`
 
+export const StyledAfterConnectOptions = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 20px;
+`
+
+export const StyledCopyReferral = styled.div`
+    background: #FF3F3F;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 30px 15px 23px;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+
+`
+
+export const StyledCopyReferralIcon = styled.img``
+
+export const StyledReferralInfo = styled.span`
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 160%;
+    max-width: 200px;
+`

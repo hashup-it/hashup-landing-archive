@@ -17,6 +17,7 @@ export const WalletSelector = (
         handleMetamaskConnection
     }: { setIsWalletSelectorShown: Function, handleMetamaskConnection: Function }
 ) => {
+
     return (
         <WalletSelectorContainer>
             <ContentWrapper>
@@ -26,7 +27,10 @@ export const WalletSelector = (
 
                 <ButtonsContainer>
                     <ConnectionButton
-                        onClick={() => handleMetamaskConnection()}
+                        onClick={() => {
+                            handleMetamaskConnection()
+                            setIsWalletSelectorShown(false)
+                        }}
                     >MetaMask <img src="/assets/icons/button-metamask.svg" /></ConnectionButton>
                     <ConnectionButton>Coming soon<img
                         src="/assets/icons/button-wallet-connect.svg" /></ConnectionButton>

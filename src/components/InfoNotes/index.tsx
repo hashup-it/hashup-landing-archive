@@ -1,18 +1,18 @@
-import { FC } from "react"
-import { SectionHeader, SectionLabel } from "../Shared/sections.styles"
-import { ColoredText } from "../Shared"
-import { randomInt } from "util/math"
+import { FC } from 'react'
+import { SectionHeader, SectionLabel } from '../Shared/sections.styles'
+import { ColoredText } from '../Shared'
+import { randomInt } from 'util/math'
 import {
     StyledInfoNotes,
-    StyledNotesArea,
     StyledNote,
     StyledNoteBubble,
-    StyledNoteLabel,
     StyledNoteContent,
-} from "./index.styles"
-import svgBubble1 from "./icons/bubble-1.svg"
-import svgBubble2 from "./icons/bubble-2.svg"
-import svgBubble3 from "./icons/bubble-3.svg"
+    StyledNoteLabel,
+    StyledNotesArea
+} from './index.styles'
+import svgBubble1 from './icons/bubble-1.svg'
+import svgBubble2 from './icons/bubble-2.svg'
+import svgBubble3 from './icons/bubble-3.svg'
 
 interface NoteProps {
     readonly label: JSX.Element

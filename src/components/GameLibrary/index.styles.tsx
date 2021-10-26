@@ -35,14 +35,14 @@ export const NicknameInstructions = styled.div`
 
 export const RightWrapper = styled.div`
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 
     ${mediaQuery.laptop} {
 
         align-items: center;
     }
 
-`;
+`
 
 export const NicknameInstructionsHeading = styled.span`
     color: white;

@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import { SectionContainer } from '../Shared/sections.styles'
 
 export const StyledGamExplorer = styled.div`
     display: flex;
     justify-content: center;
-`;
+`
 
 export const GameExplorerContainer = styled(SectionContainer)`
     display: flex;
@@ -16,4 +16,4 @@ export const GameExplorerContainer = styled(SectionContainer)`
 
 export const Image = styled.img`
     
-`;
+`

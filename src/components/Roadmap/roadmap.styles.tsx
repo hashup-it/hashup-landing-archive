@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import { Swatches } from "../../__styles__/Swatches"
-import { mediaQuery } from "../MediaQuery"
-import { globalHorizontalPadding } from "../../App.styles"
+import styled from 'styled-components'
+import { Swatches } from '../../__styles__/Swatches'
+import { mediaQuery } from '../MediaQuery'
+import { globalHorizontalPadding } from '../../App.styles'
 
 export const StyledRoadmap = styled.div`
     text-align: center;
@@ -25,6 +25,7 @@ export const StyledCarousele = styled.div`
     .alice-carousel {
         padding: 10px 0;
     }
+
     .alice-carousel__dots {
         margin-top: 80px;
 
@@ -35,13 +36,14 @@ export const StyledCarousele = styled.div`
 
     .alice-carousel__dots-item {
         background-color: transparent;
-        margin-right: 0 5px;
+        margin: 0 5px;
         width: 25px;
         height: 30px;
 
         :hover {
             background-color: transparent;
         }
+
 
         :before {
             margin-top: 15px;
@@ -56,9 +58,12 @@ export const StyledCarousele = styled.div`
             background-color: transparent;
             width: 60px;
 
+
             :before {
                 background-color: ${Swatches.primary_color};
                 width: 60px;
+                background-color: ${Swatches.primary_color};
+                opacity: 1;
             }
         }
     }

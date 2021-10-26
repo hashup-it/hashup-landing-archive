@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components"
-import { Swatches } from "../../__styles__/Swatches"
+import styled, { keyframes } from 'styled-components'
+import { Swatches } from '../../__styles__/Swatches'
 import { mediaQuery } from '../MediaQuery'
 
 export const StyledInfoNotes = styled.div`
@@ -40,8 +40,12 @@ export const StyledNote = styled.div`
 `
 
 const rotateAnim = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 `
 
 export const StyledNoteBubble = styled.div<{ icon: string; initRotateDelay: number }>`

@@ -12,7 +12,7 @@ export const LandingHeaderContainer = styled.div`
         grid-template-columns: auto;
         margin-top: 60px;
         height: auto;
-        
+
         > :first-child {
             margin-top: 122px;
             z-index: 2;
@@ -23,7 +23,7 @@ export const LandingHeaderContainer = styled.div`
             z-index: 2;
         }
 
-        
+
     }
 
     ${mediaQuery.mobileM} {
@@ -32,3 +32,4 @@ export const LandingHeaderContainer = styled.div`
 `
 
 export const CartirdgeContainer = styled.div``
+
