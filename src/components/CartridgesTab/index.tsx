@@ -10,7 +10,6 @@ import {
 } from './index.styles'
 import { CartridgeDescription } from './CartridgeDescription'
 import { Swatches } from '../../__styles__/Swatches'
-import ScrollToTop from '../../hook/scrollToTop'
 
 export const CartridgesTab = () => {
     return (

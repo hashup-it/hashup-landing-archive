@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { ComparisonItem, ComparisonItemContent } from '../../Comparison/index.styles'
 import { SectionLabel, SectionList, SmallHeaderText } from '../../Shared/sections.styles'
+import { mediaQuery } from '../../MediaQuery'
 
 export const CartridgeDescriptionContainer = styled.div<({ leftBasedLayout: boolean })>`
     display: grid;
@@ -17,6 +18,12 @@ export const CartridgeDescriptionContainer = styled.div<({ leftBasedLayout: bool
     gap: 145px;
     
     position: relative;
+
+    ${mediaQuery.mobileL} {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
 `
 
 export const CartridgeDescriptionText = styled.div`
@@ -37,7 +44,7 @@ export const CartridgeDescriptionSmallText = styled(SmallHeaderText)`
 
 export const CartridgeDescriptionImage = styled.div`
     grid-area: image;
-    height: 32rem;
+    height: 100%;
 
     display: flex;
 `

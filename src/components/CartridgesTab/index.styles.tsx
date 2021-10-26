@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { SmallHeaderText, TabHeader } from '../Shared/sections.styles'
+import { mediaQuery } from '../MediaQuery'
 
 export const CartridgesTabContainer = styled.div`
     display: flex;
     flex-direction: column;
-    
+
     gap: 150px;
     padding-bottom: 150px;
 `
@@ -18,7 +19,9 @@ export const CartridgesHeaderContainer = styled.div`
     position: relative;
     gap: 40px;
 
-    padding: 0 145px;
+    ${mediaQuery.laptop} {
+        height: auto;
+    }
 `
 
 export const SmallCartridgeHeaderText = styled(SmallHeaderText)`
@@ -43,14 +46,31 @@ export const CartridgesTabHeader = styled(TabHeader)`
     line-height: 115%;
 
     text-align: center;
+
+    width: 16em;
+
+    ${mediaQuery.laptop} {
+        width: auto;
+        padding-top: 112px;
+    }
+
+    ${mediaQuery.mobileL} {
+        font-size: 48px;
+        width: 90%;
+    }
 `
 
 export const CartridgeThumbnailsContainer = styled.div`
     display: flex;
     gap: 25px;
+
+    ${mediaQuery.mobileL} {
+        flex-direction: column;
+        margin-top: 100px;
+    }
 `
 
-export const CartridgeThumbnail = styled.a<({source: string})>`
+export const CartridgeThumbnail = styled.a<({ source: string })>`
     cursor: pointer;
     background: url('${props => props.source}');
     width: 152px;

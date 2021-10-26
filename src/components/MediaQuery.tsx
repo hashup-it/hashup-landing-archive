@@ -10,7 +10,6 @@ const size = {
 
 const maxWidth = (width: string): string => `@media(max-width: ${width})`
 
-
 export const mediaQuery = {
     mobileS: maxWidth(size.mobileS),
     mobileM: maxWidth(size.mobileM),
