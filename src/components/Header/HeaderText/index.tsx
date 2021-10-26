@@ -1,27 +1,25 @@
 import { ButtonOutlined, ColoredText } from '../../Shared'
-import { Hyperlink } from '../../Shared/sections.styles'
+import { Hyperlink, SmallHeaderText, TabHeader } from '../../Shared/sections.styles'
 import {
     ButtonGroup,
     GradientText,
-    Header,
     HeaderAirdropIcon,
     HeaderAirdropWrapper,
     HeaderGetAirdrop,
-    SmallText,
-    StyledHeaderText
+    StyledLandingHeaderText
 } from './index.styles'
 
 export const HeaderText = () => {
     return (
-        <StyledHeaderText>
-            <Header>
+        <StyledLandingHeaderText>
+            <TabHeader>
                 The <GradientText>HashUp</GradientText> Cartridge
                 <ColoredText>.</ColoredText>
-            </Header>
-            <SmallText>
+            </TabHeader>
+            <SmallHeaderText>
                 DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez
                 pośredników. Z&nbsp;0% prowizji. Skończymy monopol na rynku oprogramowania…
-            </SmallText>
+            </SmallHeaderText>
             <ButtonGroup>
                 <ButtonOutlined href="/documents/Whitepaper.pdf">
                     Whitepaper
@@ -31,6 +29,6 @@ export const HeaderText = () => {
                     <HeaderGetAirdrop><Hyperlink href="/airdrop.html">Get your airdrop</Hyperlink></HeaderGetAirdrop>
                 </HeaderAirdropWrapper>
             </ButtonGroup>
-        </StyledHeaderText>
+        </StyledLandingHeaderText>
     )
 }

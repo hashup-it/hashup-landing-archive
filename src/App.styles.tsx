@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mediaQuery } from "./components/MediaQuery";
-import { Swatches } from "./components/Swatches";
+import { Swatches } from "./__styles__/Swatches";
 
 export const LandingContainer = styled.div`
     background-color: ${Swatches.background_main};

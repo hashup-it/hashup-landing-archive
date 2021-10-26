@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { ColoredText, StyledContainerOutline } from "../Shared";
-import { Swatches } from "../Swatches";
+import { Swatches } from "../../__styles__/Swatches";
 import { ComparisonItem, ComparisonItemContent, LineText, StyledComparison, StyledComparisonText, StyledCon, StyledPro } from "./index.styles";
 
 interface ComparisonProps {
