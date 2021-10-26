@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components"
-import { Swatches } from "../Swatches"
-import { mediaQuery } from "../MediaQuery"
+import { Swatches } from "../../__styles__/Swatches"
+import { mediaQuery } from '../MediaQuery'
 
 export const StyledInfoNotes = styled.div`
     text-align: center;

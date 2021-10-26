@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mediaQuery } from "../MediaQuery";
-import { Swatches } from "../Swatches";
+import { Swatches } from "../../__styles__/Swatches";
 
 export const StyledAirdrop = styled.div`
 

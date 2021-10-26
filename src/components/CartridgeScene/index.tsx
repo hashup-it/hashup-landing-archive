@@ -5,10 +5,21 @@ import { OrbitControls } from '@react-three/drei'
 
 extend({ OrbitControls })
 
-export const CartridgeScene = () => {
+export const CameraDistances = {
+    mainLanding: -6,
+    cartridgesListing: -3.75
+}
+
+export const CartridgeScene = (
+    {
+        cameraDistance
+    }: {
+        cameraDistance: number
+    }
+) => {
     return (
         <Canvas
-            camera={{ position: [-6, 0, 0], fov: 40 }}
+            camera={{ position: [cameraDistance, 0, 0], fov: 40 }}
             gl={{
                 antialias: true,
                 powerPreference: 'high-performance',

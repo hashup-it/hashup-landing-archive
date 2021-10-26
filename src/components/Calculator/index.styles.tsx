@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Swatches } from "../Swatches";
+import { Swatches } from "../../__styles__/Swatches";
 
 export const StyledCalculator = styled.div`
     min-height: 70vh;

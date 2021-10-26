@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { SectionHeader, SectionLabel } from "../Shared/sections.styles"
 import { ColoredText } from "../Shared"
-import { randomInt } from "../Shared/utils"
+import { randomInt } from "util/math"
 import {
     StyledInfoNotes,
     StyledNotesArea,

@@ -18,14 +18,17 @@ export const StyledMainMenu = styled.nav`
 `
 
 export const MenuItem = styled.span`
-
     display: flex;
     align-items: flex-start;
 
     :hover {
         opacity: 0.9;
     }
-
+    
+    > * {
+        text-decoration: none;
+        color: white;
+    }
 `
 
 export const FooterTop = styled(FooterTopLeft)`

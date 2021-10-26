@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { mediaQuery } from "../MediaQuery";
-import { Swatches } from "../Swatches";
+import { Swatches } from "../../__styles__/Swatches";
 
 export const StyledNavBar = styled.div`
     position: fixed;
@@ -20,7 +20,6 @@ export const StyledNavBar = styled.div`
     ${mediaQuery.tablet} {
         grid-template-columns: 50px  1fr auto;
         align-items: center;
-
     }
 `;
 

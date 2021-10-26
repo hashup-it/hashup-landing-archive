@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components"
-import { Swatches } from "../../Swatches"
+import { Swatches } from "../../../__styles__/Swatches"
 import doneSvg from "./icons/done.svg"
 import { mediaQuery } from "../../MediaQuery"
 
