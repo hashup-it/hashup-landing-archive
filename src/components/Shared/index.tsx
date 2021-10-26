@@ -47,7 +47,6 @@ export const StyledTopLine = styled.div`
     background: ${Swatches.primary_color};
 `
 
-
 /* to delete */
 export const StyledContainerOutline = styled.div<({ outlineColor: string })>`
     position: absolute;
@@ -64,9 +63,11 @@ export const StyledContainerOutline = styled.div<({ outlineColor: string })>`
     background: linear-gradient(90deg, rgba(22, 22, 22, 1) 43%, ${props => props.outlineColor} 100%);
 `
 
-export const AccentLongEmDash = styled.div`
+export const AccentLongEmDash = styled.span`
+    display: inline-block;
     background: url('assets/icons/accented-long-em-dash.svg');
     height: 2px;
     width: 18px;
-    margin: 0 1em;
+    margin: 1em;
+    margin-bottom: .25em;
 `

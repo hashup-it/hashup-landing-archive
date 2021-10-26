@@ -30,7 +30,7 @@ export const Logo = styled.img`
    }
 `;
 
-export const LogoWrapper = styled.a`
+export const LogoWrapper = styled.div`
     cursor: pointer;
     margin-top: -9px;
     display: flex;
