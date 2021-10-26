@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { mediaQuery } from "../MediaQuery";
-import { SectionContainer } from "../Shared/sections.styles";
+import styled from 'styled-components'
+import { mediaQuery } from '../MediaQuery'
+import { SectionContainer } from '../Shared/sections.styles'
 
 export const StyledGameContract = styled.div`
 
-`;
+`
 
 
 export const ReversedSectionContainer = styled(SectionContainer)`
@@ -16,7 +16,6 @@ export const ReversedSectionContainer = styled(SectionContainer)`
 `
 
 
-
 export const Image = styled.img`
     
-`;
+`

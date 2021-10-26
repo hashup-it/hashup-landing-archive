@@ -1,17 +1,18 @@
 import React from 'react'
 import { HeaderText } from './HeaderText'
 import { CartirdgeContainer, LandingHeaderContainer } from './index.styles'
-import { CartridgeScene } from './CartridgeScene'
+import { CameraDistances, CartridgeScene } from '../CartridgeScene'
 import HeaderBottom from './HeaderBottom'
+
 
 export const LandingHeader = () => {
     return (
         <LandingHeaderContainer>
             <HeaderText />
             <CartirdgeContainer>
-                <CartridgeScene />
+                <CartridgeScene cameraDistance={CameraDistances.mainLanding} />
             </CartirdgeContainer>
-            <HeaderBottom/>
+            <HeaderBottom />
         </LandingHeaderContainer>
     )
 }

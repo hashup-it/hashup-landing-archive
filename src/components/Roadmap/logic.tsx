@@ -1,7 +1,7 @@
-import { useState, useRef, useMemo, useEffect } from "react"
-import useMouse from "@react-hook/mouse-position"
-import { useWindowWidth } from "@react-hook/window-size"
-import { infoBoxesData } from "./data"
+import { useEffect, useMemo, useRef, useState } from 'react'
+import useMouse from '@react-hook/mouse-position'
+import { useWindowWidth } from '@react-hook/window-size'
+import { infoBoxesData } from './data'
 
 export const BOX_WIDTH: number = 367 + 2 * 13 // width + margin
 export const NUMBER_OF_BOXES = infoBoxesData.length
@@ -57,16 +57,15 @@ const useSlider = (): useSliderInterface => {
     const jumpToSlide = (slide: number): void => {
         // Smoothly jump to another slide
         const off = slide * boxesPerSlide * BOX_WIDTH
-        _updateStyle("transition", "transform 250ms ease-in-out")
+        _updateStyle('transition', 'transform 250ms ease-in-out')
         setTimeout(() => {
             setOffsetX(off)
             setTimeout(() => {
-                _updateStyle("transition", "none")
+                _updateStyle('transition', 'none')
             }, 200)
         }, 100)
     }
 
-   
 
     const selectSlideByOffsetX = (off: number): void => {
         const delta: number = off / (boxesPerSlide * BOX_WIDTH)
@@ -79,7 +78,7 @@ const useSlider = (): useSliderInterface => {
     }
 
     const _setTranslateStyle = (off: number): void => {
-        _updateStyle("transform", `translateX(-${off}px)`)
+        _updateStyle('transform', `translateX(-${off}px)`)
     }
 
     const setOffsetX = (off: number): void => {
@@ -122,7 +121,7 @@ const useSlider = (): useSliderInterface => {
 
     useEffect(() => {
         jumpToSlide(2)
-    }, []);
+    }, [])
 
     return {
         sliderRef,
@@ -132,9 +131,9 @@ const useSlider = (): useSliderInterface => {
         onSliderMouseUp,
         selectedSlideId,
         jumpToSlide,
-        numberOfSlides,
+        numberOfSlides
     }
-    
+
 }
 
 export default useSlider

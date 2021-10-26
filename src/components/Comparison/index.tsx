@@ -1,12 +1,22 @@
-import { FunctionComponent } from "react";
-import { ColoredText, StyledContainerOutline } from "../Shared";
-import { Swatches } from "../Swatches";
-import { ComparisonItem, ComparisonItemContent, LineText, StyledComparison, StyledComparisonText, StyledCon, StyledLineColumn, StyledPlus, StyledPro, StyledWrapper } from "./index.styles";
+import { FunctionComponent } from 'react'
+import { ColoredText } from '../Shared'
+import { Swatches } from '../../__styles__/Swatches'
+import {
+    ComparisonItem,
+    ComparisonItemContent,
+    LineText,
+    StyledComparison,
+    StyledComparisonText,
+    StyledCon,
+    StyledPlus,
+    StyledPro,
+    StyledWrapper
+} from './index.styles'
 
 interface ComparisonProps {
-    
+
 }
- 
+
 const Comparison: FunctionComponent<ComparisonProps> = () => {
     return (
         <StyledComparison>
@@ -17,7 +27,7 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
                 <LineText color={Swatches.primary_color}>Gains</LineText>
             </StyledWrapper>
 
-            <ComparisonItem outlineColor={Swatches.primary_color}>   
+            <ComparisonItem outlineColor={Swatches.primary_color}>
                 <ComparisonItemContent>
                     <StyledPro>Rynek wtórny</StyledPro>
                     <StyledPro>Pełnia praw do produktu</StyledPro>
@@ -39,7 +49,7 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
                 </ComparisonItemContent>
             </ComparisonItem>
             <StyledWrapper>
-                    <LineText color={Swatches.text_secondary}>Losses</LineText>
+                <LineText color={Swatches.text_secondary}>Losses</LineText>
             </StyledWrapper>
             <ComparisonItem outlineColor={Swatches.text_secondary}>
                 <ComparisonItemContent>
@@ -48,7 +58,7 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
                     <StyledCon>Wysokie prowizje</StyledCon>
                 </ComparisonItemContent>
             </ComparisonItem>
-         
+
             <ComparisonItem outlineColor={Swatches.text_secondary}>
                 <ComparisonItemContent>
                     <StyledCon>Brak pełnych praw</StyledCon>
@@ -57,7 +67,7 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
                 </ComparisonItemContent>
             </ComparisonItem>
         </StyledComparison>
-    );
+    )
 }
- 
-export default Comparison;
+
+export default Comparison

@@ -1,6 +1,6 @@
-import styled, { css, keyframes } from "styled-components"
-import { Swatches } from "../../Swatches"
-import doneSvg from "./icons/done.svg"
+import styled, { css, keyframes } from 'styled-components'
+import { Swatches } from '__styles__/Swatches'
+import doneSvg from './icons/done.svg'
 
 export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
     box-sizing: border-box;
@@ -12,13 +12,14 @@ export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
     text-align: left;
     position: relative;
     transform-style: preserve-3d;
+    
 
     background: linear-gradient(180deg, #010101 0%, ${Swatches.background_main} 100%);
     border-radius: 40px;
 
     ${props =>
-        props.highlighted &&
-        css`
+    props.highlighted &&
+    css`
             // Outline
             :before {
                 content: "";
@@ -73,8 +74,8 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
         margin-right: 18px;
 
         ${props =>
-            props.isDone
-                ? css`
+    props.isDone
+        ? css`
                       // Icon
                       border: ${Swatches.primary_color} 1px solid;
                       background-image: url(${doneSvg});
@@ -82,7 +83,7 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
                       background-size: 10px;
                       background-position: center;
                   `
-                : css`
+        : css`
                       border-right: ${Swatches.primary_color} 1px solid;
                       border-bottom: ${Swatches.primary_color} 1px solid;
                       animation: ${rotateAnim} 3s linear infinite;
@@ -96,8 +97,8 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
         line-height: 140%;
 
         ${props =>
-            props.bold &&
-            css`
+    props.bold &&
+    css`
                 font-weight: bold;
             `}
     }

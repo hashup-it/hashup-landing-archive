@@ -1,15 +1,15 @@
-import { FunctionComponent } from "react";
-import { StyledSlider, StyledSliderInput, StyledSliderLabel } from "./index.styles";
+import { FunctionComponent } from 'react'
+import { StyledSlider, StyledSliderInput, StyledSliderLabel } from './index.styles'
 
 interface SliderProps {
     label: string,
 
 }
- 
+
 const Slider: FunctionComponent<SliderProps> = ({
-    label
-}) => {
-    return (  
+                                                    label
+                                                }) => {
+    return (
         <StyledSlider>
             <StyledSliderLabel>
                 {label}
@@ -18,7 +18,7 @@ const Slider: FunctionComponent<SliderProps> = ({
                 type="range"
             />
         </StyledSlider>
-    );
+    )
 }
- 
-export default Slider;
+
+export default Slider

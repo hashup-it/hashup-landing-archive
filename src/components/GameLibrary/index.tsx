@@ -1,27 +1,24 @@
 import React from 'react'
 import {
-    ContentWrapper,
     GameLibraryContainer,
-    GameLibraryHeader,
-    NicknameInstructions,
     NicknameInstructionsHeading,
     NicknameInstructionsList,
     RightWrapper
 } from './index.styles'
-import { LeftWrapper,SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
-import { BoldText, ColoredText } from '../Shared'
-import { Color } from 'three'
+import { LeftWrapper, SectionContainer, SectionHeader, SectionLabel } from '../Shared/sections.styles'
+import { ColoredText } from '../Shared'
 import { EcosystemHook } from '../CreateCartridges/index.styles'
 
 export const GameLibrary = () => {
     return (
         <GameLibraryContainer>
             <SectionContainer>
-                <EcosystemHook id="ecosystem"/>
+                <EcosystemHook id="ecosystem" />
                 <LeftWrapper>
                     <SectionLabel>Game <ColoredText>Library</ColoredText></SectionLabel>
                     <SectionHeader>
-                        Całkiem nowy <ColoredText>profil gracza</ColoredText>  na <ColoredText>Game</ColoredText>Xplorer. Pochwal się <ColoredText>kolekcją</ColoredText>!
+                        Całkiem nowy <ColoredText>profil gracza</ColoredText> na <ColoredText>Game</ColoredText>Xplorer.
+                        Pochwal się <ColoredText>kolekcją</ColoredText>!
                     </SectionHeader>
                 </LeftWrapper>
                 <RightWrapper>

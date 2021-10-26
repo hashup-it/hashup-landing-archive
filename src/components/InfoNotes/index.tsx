@@ -1,22 +1,31 @@
-import { FC } from "react"
-import { SectionHeader, SectionLabel } from "../Shared/sections.styles"
-import { ColoredText } from "../Shared"
+import { FC } from 'react'
+import { SectionHeader, SectionLabel } from '../Shared/sections.styles'
+import { ColoredText } from '../Shared'
+import { randomInt } from 'util/math'
 import {
     StyledInfoNotes,
-    StyledNotesArea,
     StyledNote,
     StyledNoteBubble,
-    StyledNoteLabel,
     StyledNoteContent,
-    NoteGroup,
-} from "./index.styles"
+    StyledNoteLabel,
+    StyledNotesArea
+} from './index.styles'
+import svgBubble1 from './icons/bubble-1.svg'
+import svgBubble2 from './icons/bubble-2.svg'
+import svgBubble3 from './icons/bubble-3.svg'
 
-export const Note: FC<{ readonly label: JSX.Element; readonly content: string }> = ({
-    content,
-    label,
-}) => (
+interface NoteProps {
+    readonly label: JSX.Element
+    readonly content: string
+    readonly icon: string
+}
+
+export const Note: FC<NoteProps> = ({ content, label, icon }) => (
     <StyledNote>
-        <StyledNoteBubble />
+        <StyledNoteBubble icon={icon} initRotateDelay={randomInt(0, 100)}>
+            <div className="icon" />
+            <div className="bubble " />
+        </StyledNoteBubble>
         <StyledNoteLabel>{label}</StyledNoteLabel>
         <StyledNoteContent>{content}</StyledNoteContent>
     </StyledNote>
@@ -28,35 +37,38 @@ export const InfoNotes = () => (
             <ColoredText>game</ColoredText>change.io
         </SectionLabel>
         <SectionHeader>
-            <ColoredText>DEFInitywna</ColoredText>  forma dystrybucji cyfrowej.
+            <ColoredText>DEFInitywna</ColoredText> forma dystrybucji cyfrowej.
         </SectionHeader>
         <StyledNotesArea>
-                <Note
-                    label={
-                        <>
-                            <ColoredText>Zdobądź płynność</ColoredText> dzięki spekulacji
-                        </>
-                    }
-                    content="Zarabiaj pieniądze spekulując swoją własną grą."
-                />
-                <Note
-                    label={
-                        <>
-                            <ColoredText>Zdecentralizowana</ColoredText> dystrybucja
-                        </>
-                    }
-                    content="Wydawaj gry dzięki zdecentralizowanej dystrybucji."
-                />
+            <Note
+                icon={svgBubble1}
+                label={
+                    <>
+                        <ColoredText>Zdobądź płynność</ColoredText> dzięki spekulacji
+                    </>
+                }
+                content="Zarabiaj pieniądze spekulując swoją własną grą."
+            />
+            <Note
+                icon={svgBubble2}
+                label={
+                    <>
+                        <ColoredText>Zdecentralizowana</ColoredText> dystrybucja
+                    </>
+                }
+                content="Wydawaj gry dzięki zdecentralizowanej dystrybucji."
+            />
 
-                <Note
-                    label={
-                        <>
-                            Stań się<ColoredText> niezależny</ColoredText>
-                        </>
-                    }
-                    content="Zarabiaj więcej
+            <Note
+                icon={svgBubble3}
+                label={
+                    <>
+                        Stań się<ColoredText> niezależny</ColoredText>
+                    </>
+                }
+                content="Zarabiaj więcej
                     dzięki wolnemu rynkowi."
-                />
+            />
         </StyledNotesArea>
     </StyledInfoNotes>
 )

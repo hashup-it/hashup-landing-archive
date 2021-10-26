@@ -13,6 +13,7 @@ import {
     MailLink,
     SocialMediaGroup
 } from '../../Footer/index.styles'
+import { NavLink } from 'react-router-dom'
 
 export const MainMenu = (
     { isMobileMenuShown }:
@@ -21,10 +22,15 @@ export const MainMenu = (
     return (
         <StyledMainMenu>
             <MenuItem>
-                <Hyperlink href="#ecosystem">
+                <Hyperlink href="/#ecosystem">
                     Ecosystem
                 </Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
+            </MenuItem>
+            <MenuItem>
+                <NavLink to="/Cartridges">
+                    Cartridges
+                </NavLink>
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
@@ -66,7 +72,7 @@ export const MainMenu = (
                     <FooterBottom>
                         <FooterBottomGroup>
                             <FooterLink>
-                                <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
+                                <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
                                     Terms & Conditions
                                 </Hyperlink>
                             </FooterLink>
@@ -76,7 +82,7 @@ export const MainMenu = (
                                 </Hyperlink>
                             </FooterLink>
                             <FooterLink>
-                                <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
+                                <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
                                     Airdrop Terms of Use
                                 </Hyperlink>
                             </FooterLink>

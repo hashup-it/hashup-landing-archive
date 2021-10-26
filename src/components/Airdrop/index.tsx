@@ -1,21 +1,39 @@
-import { useState } from "react";
-import { FunctionComponent } from "react";
-import { BoldText, ColoredText } from "../Shared";
-import { StyledAfterConnectOptions, StyledAirdrop, StyledAirdropHeader, StyledAirdropInfo, StyledAirdropMain, StyledAirdropReferral, StyledBeforeConnectWrapper, StyledCopyReferral, StyledCopyReferralIcon, StyledInfoItem, StyledInfoLabel, StyledInfoValue, StyledInput, StyledInputButton, StyledInputButtonFill, StyledInputIcon, StyledInputWrapper, StyledMainHeader, StyledMainSmall, StyledReferralInfo } from "./airdrop.styles";
+import { FunctionComponent, useEffect, useState } from 'react'
+import { BoldText, ColoredText } from '../Shared'
+import {
+    StyledAfterConnectOptions,
+    StyledAirdrop,
+    StyledAirdropHeader,
+    StyledAirdropInfo,
+    StyledAirdropMain,
+    StyledAirdropReferral,
+    StyledBeforeConnectWrapper,
+    StyledCopyReferral,
+    StyledCopyReferralIcon,
+    StyledInfoItem,
+    StyledInfoLabel,
+    StyledInfoValue,
+    StyledInput,
+    StyledInputButton,
+    StyledInputButtonFill,
+    StyledInputIcon,
+    StyledInputWrapper,
+    StyledMainHeader,
+    StyledMainSmall,
+    StyledReferralInfo
+} from './airdrop.styles'
 import Web3 from 'web3'
-import { useEffect } from "react";
-import hashInfo from "./hash-info";
+import hashInfo from './hash-info'
 
 import { AbiItem } from 'web3-utils'
-import abi from './abi.json'
 
 interface AirdropProps {
-    account : string | any
+    account: string | any
 }
- 
+
 const Airdrop: FunctionComponent<AirdropProps> = ({
-    account
-}) => {
+                                                      account
+                                                  }) => {
 
     const [gamersCount, setGamersCount] = useState(1337)
     const [tokenLeft, setTokenLeft] = useState(1337)
@@ -24,71 +42,71 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
     const [nicknameInput, setNicknameInput] = useState('')
 
     let web3
-    let contract 
+    let contract
 
-    const blockchainProviderUrl = 'https://bsc-dataseed1.binance.org:443';
+    const blockchainProviderUrl = 'https://bsc-dataseed1.binance.org:443'
 
 
     useEffect(() => {
         (async () => {
-            if((window as any).ethereum) {
+            if ((window as any).ethereum) {
 
 
-              
                 web3 = new Web3(blockchainProviderUrl)
-                contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress);
-                
-                let gamersCountRes = await contract.methods.gamersCount().call();
-                let hashLeftRes = await contract.methods.HashLeft().call();
-                
+                contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress)
+
+                let gamersCountRes = await contract.methods.gamersCount().call()
+                let hashLeftRes = await contract.methods.HashLeft().call()
+
                 setGamersCount(gamersCountRes)
 
-                let hashFromWei = Number(web3.utils.fromWei(hashLeftRes));
+                let hashFromWei = Number(web3.utils.fromWei(hashLeftRes))
                 setTokenLeft(hashFromWei)
 
-                let hashForRef = await contract.methods.getHashForLogin().call();
-                setHashForRef(hashForRef/10);
+                let hashForRef = await contract.methods.getHashForLogin().call()
+                setHashForRef(hashForRef / 10)
             }
         })()
     })
 
-    const handleNicknameInput = (e : any) => {
-        setNicknameInput(e.target.value);
-        
+    const handleNicknameInput = (e: any) => {
+        setNicknameInput(e.target.value)
+
     }
 
     const handleLoginButton = async () => {
-        if(account) {
-            await (window as any).ethereum.enable();
+        if (account) {
+            await (window as any).ethereum.enable()
 
-            let accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
+            let accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' })
 
             web3 = await new Web3(blockchainProviderUrl)
-            contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress);
+            contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress)
             alert(account)
-            let res = await contract.methods.loginToTheHashUp("xDD").send({from: account});
-            alert(res)                
+            let res = await contract.methods.loginToTheHashUp('xDD').send({ from: account })
+            alert(res)
         } else {
-            alert("nie essa")
+            alert('nie essa')
         }
     }
 
-    return ( 
+    return (
         <StyledAirdrop>
             <StyledAirdropHeader>
-                Join the <BoldText>Big <ColoredText>Airdrop</ColoredText></BoldText> from <BoldText><ColoredText>#</ColoredText>HashUp</BoldText>
+                Join
+                the <BoldText>Big <ColoredText>Airdrop</ColoredText></BoldText> from <BoldText><ColoredText>#</ColoredText>HashUp</BoldText>
             </StyledAirdropHeader>
             <StyledAirdropMain>
                 <StyledMainHeader>Zarezerwuj swój unikalny Nick aby otrzymać Airdrop</StyledMainHeader>
                 <StyledMainSmall>Twój nick będzie reprezentować Twoją obecność na platformie HashUp</StyledMainSmall>
                 <StyledInputWrapper>
-                    <StyledInputIcon/>
-                    <StyledInput 
+                    <StyledInputIcon />
+                    <StyledInput
                         placeholder="Enter your new HashUp nickname"
                         onChange={handleNicknameInput}
                     />
                     <StyledInputButton onClick={() => handleLoginButton()}>
-                        <StyledInputButtonFill/>
+                        <StyledInputButtonFill />
                     </StyledInputButton>
                 </StyledInputWrapper>
             </StyledAirdropMain>
@@ -107,23 +125,23 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
                 </StyledInfoItem>
             </StyledAirdropInfo>
             <StyledAirdropReferral>
-                { !account && <StyledBeforeConnectWrapper>
+                {!account && <StyledBeforeConnectWrapper>
                     Connect to metamask first to&nbsp;<BoldText> access referral options</BoldText>
-                </StyledBeforeConnectWrapper> }
-                { account && 
+                </StyledBeforeConnectWrapper>}
+                {account &&
                     <StyledAfterConnectOptions>
                         <StyledCopyReferral>
                             Copy your referral
-                            <StyledCopyReferralIcon src="/assets/icons/copy.svg"/>
+                            <StyledCopyReferralIcon src="/assets/icons/copy.svg" />
                         </StyledCopyReferral>
                         <StyledReferralInfo>
-                            Send a referral to friend<br/> and get {hashForRef}# for his login!
+                            Send a referral to friend<br /> and get {hashForRef}# for his login!
                         </StyledReferralInfo>
                     </StyledAfterConnectOptions>
                 }
             </StyledAirdropReferral>
         </StyledAirdrop>
-    );
+    )
 }
- 
-export default Airdrop;
+
+export default Airdrop

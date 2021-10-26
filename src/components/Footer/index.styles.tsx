@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { mediaQuery } from '../MediaQuery'
-import { Swatches } from '../Swatches'
+import { Swatches } from '../../__styles__/Swatches'
 
 export const StyledFooter = styled.div`
     position: relative;
+    margin-top: 50px;
 `
 
 export const FooterTop = styled.div`
@@ -14,8 +15,7 @@ export const FooterTop = styled.div`
 
     ${mediaQuery.tablet} {
         grid-template-columns: auto;
-       justify-content: center;
-
+        justify-content: center;
     }
 `
 
@@ -36,7 +36,7 @@ export const FooterBottom = styled.div`
         align-items: center;
         flex-direction: column;
         gap: 20px;
-        
+
         padding: 0;
         margin-bottom: 12em;
     }
@@ -65,15 +65,14 @@ export const FooterBottomGroup = styled.div`
 
     ${mediaQuery.tablet} {
         align-items: center;
-        flex-direction: column;
         gap: 20px;
 
         > * {
             margin: 0;
             padding: 0;
         }
-        
-        flex-direction: row;
+
+        flex-direction: column;
     }
 `
 
@@ -120,7 +119,7 @@ export const FooterSeparatorAccent = styled.div`
     position: absolute;
     top: -50px;
     left: -93px;
-    
+
     ${mediaQuery.tablet} {
         left: -200px;
     }
@@ -189,7 +188,7 @@ export const FooterLink = styled.div`
         margin-left: 0;
     }
 
-    
+
 `
 
 export const FooterMenu = styled.div`
@@ -268,7 +267,7 @@ export const MenuItem = styled.li`
     line-height: 160%;
 
     display: flex;
-    
+
     > a:hover {
         text-decoration: underline;
     }

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Swatches } from "../../Swatches";
+import styled from 'styled-components'
+import { Swatches } from '__styles__/Swatches'
 
 export const StyledHeaderBottom = styled.div`
     position: absolute;
@@ -10,7 +10,7 @@ export const StyledHeaderBottom = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-`;
+`
 
 export const StyledScrollDown = styled.div`
 
@@ -21,38 +21,38 @@ export const StyledScrollDown = styled.div`
 
     display: flex;
     align-items: center;
-`;
+`
 
 export const StyledMouseIcon = styled.img`
     margin-right: 13px;
-`;
+`
 
 export const StyledBottomGroup = styled.div`
     display: flex;
     gap: 35px;
-`;
+`
 
 export const StyledTokenInfo = styled.div`
     display: flex;
     gap: 44px;
     align-items: center;
-`;
+`
 
 export const StyledSocialMedia = styled.div`
    
     display: flex;
     justify-content: center;
     gap: 26px;
-`;
+`
 
 export const SocialIcon = styled.img`
     cursor: pointer;
-`;
+`
 
 export const StyledLine = styled.div`
     border: 1px solid ${Swatches.primary_color};
     height: 17px;
-`;
+`
 
 export const StyledTokenInfoItem = styled.div`
     font-weight: normal;
@@ -61,9 +61,9 @@ export const StyledTokenInfoItem = styled.div`
     display: flex;
     align-items: center;
     gap: 7px;
-`;
+`
 
-export const StyledTokenIcon = styled.div<({icon : string})>`
+export const StyledTokenIcon = styled.div<({ icon: string })>`
     width: 15px;
     height: 15px;
     background: url(${props => props.icon});
@@ -78,7 +78,7 @@ export const StyledTokenIcon = styled.div<({icon : string})>`
             display: flex;
         }
     }
-`;
+`
 
 export const StyledCopyGroup = styled.div`
     display: flex;
@@ -96,7 +96,7 @@ export const StyledCopyGroup = styled.div`
             display: flex;
         }
     }
-`;
+`
 
 
 export const Tooltip = styled.span`
@@ -115,4 +115,4 @@ export const Tooltip = styled.span`
     justify-content: center;
     border-radius: 6px;
     background-color: #222;
-`;
+`

@@ -27,6 +27,7 @@ import {
 } from './index.styles'
 import { Newsletter } from './Newsletter'
 import { Hyperlink } from '../Shared/sections.styles'
+import { NavLink } from 'react-router-dom'
 
 export const Footer = () => {
     return (
@@ -43,9 +44,11 @@ export const Footer = () => {
                 </SocialMediaGroup>
             </FooterHeading>
             <FooterQuickNavigation>
-                <p><ColoredText>Hash</ColoredText>Up.it</p>
-                <AccentLongEmDash />
-                <a href="#">Idź do strony głównej</a>
+                <NavLink to="/">
+                    <span><ColoredText>Hash</ColoredText>Up.it</span>
+                    <AccentLongEmDash />
+                    Idź do strony głównej
+                </NavLink>
             </FooterQuickNavigation>
             <FooterTop>
                 <FooterTopLeft>
@@ -102,7 +105,7 @@ export const Footer = () => {
                 <Copyright>Copyright © by HashUp. All Rights Reserved.</Copyright>
                 <FooterBottomGroup>
                     <FooterLink>
-                        <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
+                        <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
                             Terms & Conditions
                         </Hyperlink>
                     </FooterLink>
@@ -112,8 +115,8 @@ export const Footer = () => {
                         </Hyperlink>
                     </FooterLink>
                     <FooterLink>
-                        <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
-                            Terms of Use
+                        <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
+                            Airdrop Terms of Use
                         </Hyperlink>
                     </FooterLink>
                 </FooterBottomGroup>

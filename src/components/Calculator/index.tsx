@@ -1,23 +1,38 @@
-import { ColoredText } from "../Shared"
-import { Swatches } from "../Swatches"
-import { CalculatorHeader, PercentBackground, StyledCalculator, StyledPriceLabel, StyledPriceLabelOutline, StyledResults, StyledResultsDescription, StyledResultsHeader, StyledResultsText, StyledResultWrapper, StyledSlidersContainer, StyledVersus, StyledVersusLine } from "./index.styles"
-import Slider from "./Slider"
+import { ColoredText } from '../Shared'
+import { Swatches } from '../../__styles__/Swatches'
+import {
+    CalculatorHeader,
+    PercentBackground,
+    StyledCalculator,
+    StyledPriceLabel,
+    StyledPriceLabelOutline,
+    StyledResults,
+    StyledResultsDescription,
+    StyledResultsHeader,
+    StyledResultsText,
+    StyledResultWrapper,
+    StyledSlidersContainer,
+    StyledVersus,
+    StyledVersusLine
+} from './index.styles'
+import Slider from './Slider'
 
 export const Calculator = () => {
     return (
         <StyledCalculator>
- 
+
             <CalculatorHeader>
-                Sprawdź ile <ColoredText>tracisz na prowizjach</ColoredText>, które pobierają popularne platformy wydawnicze
+                Sprawdź ile <ColoredText>tracisz na prowizjach</ColoredText>, które pobierają popularne platformy
+                wydawnicze
             </CalculatorHeader>
             <StyledSlidersContainer>
-                <Slider 
+                <Slider
                     label="Ilość sprz. kopii"
                 />
-                <Slider 
+                <Slider
                     label="Początkowa cena twojej gry"
                 />
-            </StyledSlidersContainer>  
+            </StyledSlidersContainer>
             <StyledResults>
                 <StyledResultsDescription>
                     <StyledResultsHeader>
@@ -34,9 +49,9 @@ export const Calculator = () => {
                     />
                 </StyledPriceLabel>
                 <StyledVersus>
-                    <StyledVersusLine/>
-                        VS
-                    <StyledVersusLine/>
+                    <StyledVersusLine />
+                    VS
+                    <StyledVersusLine />
                 </StyledVersus>
                 <StyledResultWrapper>
                     <StyledPriceLabel>
@@ -61,7 +76,7 @@ export const Calculator = () => {
                     </StyledResultsText>
                 </StyledResultWrapper>
             </StyledResults>
-            <PercentBackground src="/assets/percent.png"/>
+            <PercentBackground src="/assets/percent.png" />
         </StyledCalculator>
     )
 }

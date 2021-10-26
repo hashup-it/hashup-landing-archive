@@ -1,9 +1,8 @@
-import styled from "styled-components";
-import { hexToRGB } from "../Shared/utils";
-import { Swatches } from "../Swatches";
+import styled from 'styled-components'
+import { Swatches } from '../../__styles__/Swatches'
+import { hexToRGB } from '../../util/math'
 
-
-const comparisonItemWidth = 240;
+const comparisonItemWidth = 240
 
 export const StyledComparison = styled.div`
     margin-top: 0px;
@@ -22,9 +21,9 @@ export const StyledComparison = styled.div`
         display: none;
     }
 
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-`;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+`
 
 export const StyledComparisonText = styled.div`
     font-weight: normal;
@@ -32,16 +31,16 @@ export const StyledComparisonText = styled.div`
     line-height: 25px;
     color: white;
     padding-bottom: 40px;
-`;
+`
 
-export const ComparisonItem = styled.div<({outlineColor: string})>`
-   background: linear-gradient(90deg, ${props => hexToRGB(props.outlineColor, 0)} 35%, ${props => props.outlineColor} 100%);
-   padding: 1px;
-   display: grid;
-   border-radius: 13.0133px;
-   position: relative;
+export const ComparisonItem = styled.div<({ outlineColor: string })>`
+    background: linear-gradient(90deg, ${props => hexToRGB(props.outlineColor, 0)} 35%, ${props => props.outlineColor} 100%);
+    padding: 1px;
+    display: grid;
+    border-radius: 13.0133px;
+    position: relative;
 
-`;
+`
 
 export const ComparisonItemContent = styled.ul`
     margin: 0;
@@ -55,12 +54,12 @@ export const ComparisonItemContent = styled.ul`
     list-style-type: none;
     font-size: 14px;
     line-height: 180%;
-`;
+`
 
 export const StyledLineColumn = styled.div`
     background-color: blue;
     grid-row: span 3;
-`;
+`
 
 export const StyledPro = styled.li`
     font-style: normal;
@@ -68,7 +67,7 @@ export const StyledPro = styled.li`
     font-size: 14px;
     line-height: 180%;
     margin-top: 4.5px;
-    
+
     &::before {
         content: '#';
         color: ${Swatches.primary_color};
@@ -86,8 +85,8 @@ export const StyledCon = styled.li`
     margin-top: 4.5px;
 
     color: #CDCDCD;
- 
-    
+
+
     &::before {
         content: '';
         display: inline-block;
@@ -114,9 +113,9 @@ export const StyledPlus = styled.div`
     bottom: 0;
     margin: auto;
 
-`;
+`
 
-export const LineText = styled.div<({color: string})>`
+export const LineText = styled.div<({ color: string })>`
 
     display: flex;
     align-items: center;
@@ -139,10 +138,10 @@ export const LineText = styled.div<({color: string})>`
         height: 4px;
         margin-left: 33px;
     }
-`;
+`
 
 export const StyledWrapper = styled.div`
     display: flex;
     justify-content: flex-start;
     grid-column: span 3;
-`;
+`

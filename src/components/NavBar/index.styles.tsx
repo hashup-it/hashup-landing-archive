@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { mediaQuery } from "../MediaQuery";
-import { Swatches } from "../Swatches";
+import styled from 'styled-components'
+import { mediaQuery } from '../MediaQuery'
+import { Swatches } from '../../__styles__/Swatches'
 
 export const StyledNavBar = styled.div`
     position: fixed;
@@ -20,26 +20,25 @@ export const StyledNavBar = styled.div`
     ${mediaQuery.tablet} {
         grid-template-columns: 50px  1fr auto;
         align-items: center;
-
     }
-`;
+`
 
 export const Logo = styled.img`
     margin-top: 5px;
    ${mediaQuery.tablet} {
        display: none;
    }
-`;
+`
 
-export const LogoWrapper = styled.a`
+export const LogoWrapper = styled.div`
     cursor: pointer;
     margin-top: -9px;
     display: flex;
     align-items: center;
     gap: 9px;
-`;
+`
 
-export const LogoIcon = styled.img``;
+export const LogoIcon = styled.img``
 
 export const ButtonsMenu = styled.div`
     display: flex;
@@ -50,14 +49,14 @@ export const ButtonsMenu = styled.div`
     > * {
         cursor: pointer;
     }
-`;
+`
 
 export const Icon = styled.img`
     padding-top: 6px;
     padding-left: 9px;
-`;
+`
 
-export const HamburgerButton = styled.div<({opened: boolean})>`
+export const HamburgerButton = styled.div<({ opened: boolean })>`
     width: 30px;
     height: 30px;
     background-image: url(${props => props.opened ? '/assets/icons/x.svg' : '/assets/icons/hamburger.svg'});
@@ -68,10 +67,10 @@ export const HamburgerButton = styled.div<({opened: boolean})>`
     ${mediaQuery.tablet} {
         display: initial;
     }
-`;
+`
 
 export const MobileHideWrapper = styled.div`
     ${mediaQuery.tablet} {
         display: none;
     }
-`;
+`

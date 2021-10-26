@@ -1,22 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-const makeLongShadow = (color : string, size : string) => {
-    let i = 18;
-    let shadow = `${i}px 0 0 ${size} ${color}`;
-  
+const makeLongShadow = (color: string, size: string) => {
+    let i = 18
+    let shadow = `${i}px 0 0 ${size} ${color}`
+
     for (; i < 706; i++) {
-      shadow = `${shadow}, ${i}px 0 0 ${size} ${color}`;
+        shadow = `${shadow}, ${i}px 0 0 ${size} ${color}`
     }
-  
-    return shadow;
-  };
+
+    return shadow
+}
 
 export const StyledSlider = styled.div`
     display: grid;
     grid-template-columns: 200px auto;
     gap: 20px;
     align-items: center;
-`;
+`
 
 export const StyledSliderLabel = styled.span`
     font-size: 0.929rem;
@@ -25,7 +25,7 @@ export const StyledSliderLabel = styled.span`
     font-weight: normal;
     text-transform: uppercase;
     color: white;
-`;
+`
 
 export const StyledSliderInput = styled.input`
     display: block;
@@ -55,8 +55,8 @@ export const StyledSliderInput = styled.input`
         transform: translateY(-50%);
         transform: scale(3);
 
-        box-shadow: ${makeLongShadow("red", "-10px")};
+        box-shadow: ${makeLongShadow('red', '-10px')};
         transition: background-color 150ms;
     }
     
-`;
+`
