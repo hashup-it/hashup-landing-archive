@@ -39,7 +39,7 @@ const Slider = () => {
         sliderChildRef,
         isGrabbed,
         jumpToSlide,
-        selectedSlideId,
+        selectedSlideId = 6,
         onSliderMouseDown,
         onSliderMouseUp,
         numberOfSlides

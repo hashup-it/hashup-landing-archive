@@ -1,5 +1,9 @@
 import styled from "styled-components";
+import { hexToRGB } from "../Shared/utils";
 import { Swatches } from "../Swatches";
+
+
+const comparisonItemWidth = 240;
 
 export const StyledComparison = styled.div`
     margin-top: 0px;
@@ -7,9 +11,9 @@ export const StyledComparison = styled.div`
     position: relative;
     display: grid;
     column-gap: 140px;
-    row-gap: 88px;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: repeat(3, 280px);
+    row-gap: 28px;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 280px 280px 280px;
     z-index: initial;
     overflow-x: auto;
     margin-top: 150px;
@@ -27,14 +31,16 @@ export const StyledComparisonText = styled.div`
     font-size: 20px;
     line-height: 25px;
     color: white;
+    padding-bottom: 40px;
 `;
 
 export const ComparisonItem = styled.div<({outlineColor: string})>`
-   background: linear-gradient(90deg, ${Swatches.background_main} 35%, ${props => props.outlineColor} 100%);
+   background: linear-gradient(90deg, ${props => hexToRGB(props.outlineColor, 0)} 35%, ${props => props.outlineColor} 100%);
    padding: 1px;
    display: grid;
    border-radius: 13.0133px;
    position: relative;
+
 `;
 
 export const ComparisonItemContent = styled.ul`
@@ -51,17 +57,23 @@ export const ComparisonItemContent = styled.ul`
     line-height: 180%;
 `;
 
+export const StyledLineColumn = styled.div`
+    background-color: blue;
+    grid-row: span 3;
+`;
+
 export const StyledPro = styled.li`
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 180%;
- 
+    margin-top: 4.5px;
     
     &::before {
         content: '#';
         color: ${Swatches.primary_color};
-        margin-right: 20px;
+        margin-right: 27px;
+        font-size: 17px;
     }
 
 `
@@ -71,7 +83,7 @@ export const StyledCon = styled.li`
     font-weight: bold;
     font-style: normal;
     font-weight: normal;
-
+    margin-top: 4.5px;
 
     color: #CDCDCD;
  
@@ -83,30 +95,54 @@ export const StyledCon = styled.li`
         width: 5px;
         margin-bottom: 1.5px;
         background-color: #CDCDCD;
-        margin-right: 20px;
+        margin-right: 27px;
     }
 
 `
+
+export const StyledPlus = styled.div`
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    left: -70px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    margin: auto;
+
+`;
 
 export const LineText = styled.div<({color: string})>`
 
     display: flex;
     align-items: center;
-    position: absolute;
-    top: -44px;
+    grid-column: span 3;
+    left: 0;
     color: ${props => props.color};
     font-weight: bold;
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.5em;
+
     text-transform: uppercase;
+    position: sticky;
+
 
     ::after {
         content: '';
-        width: 80vw;
-        background-color: ${props => props.color};
-        opacity: 0.3;
+        width: 60vw;
+        background: linear-gradient(90deg, ${props => hexToRGB(props.color, 0.3)} 50%, ${props => hexToRGB(props.color, 0)} 100%);
         height: 4px;
         margin-left: 33px;
     }
+`;
+
+export const StyledWrapper = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    grid-column: span 3;
 `;

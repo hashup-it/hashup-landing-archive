@@ -28,11 +28,9 @@ export const NavBar = (
             </MobileHideWrapper>
             {<ButtonsMenu>
                 {false && <SelectLanguage /> }
-                {
-                    !shownAccount ?
-                        <ConnectWallet handleMetamaskConnection={handleMetamaskConnection} /> :
-                        `${shownAccount.slice(0, 6)}…${shownAccount.slice(36, 42)}`
-                }
+
+                    <ConnectWallet account={shownAccount} handleMetamaskConnection={handleMetamaskConnection} />
+
             </ButtonsMenu>}
             <HamburgerButton 
                 opened={isMobileMenuShown}

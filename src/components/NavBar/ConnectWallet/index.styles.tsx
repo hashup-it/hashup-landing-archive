@@ -9,6 +9,21 @@ export const StyledConnectWallet = styled.div`
 
 `;
 
+export const StyledWalletTextWrapper = styled.div`
+    display: grid;
+    align-items: flex-start;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+`;
+
+export const StyledWrapper = styled.div``;
+
+export const StyledAddress = styled.div`
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+`;
+
 export const WalletHideWrapper = styled.div`
     ${mediaQuery.mobileM} {
         display: none;

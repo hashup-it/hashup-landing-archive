@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Swatches } from '../Swatches'
+import { hexToRGB } from './utils'
 
 export const ColoredText = styled.span`
     color: ${Swatches.primary_color};
@@ -61,7 +62,7 @@ export const StyledContainerOutline = styled.div<({outlineColor : string})>`
     top: -1px;
     left: -1px;
     background: rgb(22,22,22);
-    background: linear-gradient(90deg, rgba(22,22,22,1) 43%, ${props => props.outlineColor} 100%);
+    background: linear-gradient(90deg, "#ff0000" 43%, ${props => props.outlineColor} 100%);
 `;
 
 

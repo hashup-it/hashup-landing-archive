@@ -23,7 +23,7 @@ const useSlider = (): useSliderInterface => {
     const sliderRef = useRef<HTMLDivElement>(null)
     const sliderChildRef = useRef<HTMLDivElement>(null)
     const mouse = useMouse(sliderRef, { fps: 90, enterDelay: 50 })
-    const [selectedSlideId, selectSlideById] = useState<number>(0)
+    const [selectedSlideId, selectSlideById] = useState<number>(2)
     const [isGrabbed, setIsGrabbed] = useState<boolean>(false)
     const [initMouseX, setInitMouseX] = useState<number>(0)
     const [initOffsetX, setInitOffsetX] = useState<number>(0)
@@ -65,6 +65,8 @@ const useSlider = (): useSliderInterface => {
             }, 200)
         }, 100)
     }
+
+   
 
     const selectSlideByOffsetX = (off: number): void => {
         const delta: number = off / (boxesPerSlide * BOX_WIDTH)
@@ -118,6 +120,10 @@ const useSlider = (): useSliderInterface => {
         }
     }, [isGrabbed, mouse.x])
 
+    useEffect(() => {
+        jumpToSlide(2)
+    }, []);
+
     return {
         sliderRef,
         sliderChildRef,
@@ -128,6 +134,7 @@ const useSlider = (): useSliderInterface => {
         jumpToSlide,
         numberOfSlides,
     }
+    
 }
 
 export default useSlider

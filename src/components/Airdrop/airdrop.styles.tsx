@@ -221,3 +221,32 @@ export const StyledInfoValue = styled.span`
     }
 `;
 
+export const StyledAfterConnectOptions = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 20px;
+`;
+
+export const StyledCopyReferral = styled.div`
+    background: #FF3F3F;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 30px 15px 23px;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+ 
+`;
+
+export const StyledCopyReferralIcon = styled.img``;
+
+export const StyledReferralInfo = styled.span`
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 160%;
+    max-width: 200px;
+`;

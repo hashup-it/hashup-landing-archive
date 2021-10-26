@@ -22,10 +22,8 @@ export const App = () => {
 
     const handleMetamaskConnection = async () => {
         if ((window as any).ethereum) {
-            const accounts = await (
-                new Web3((window as any).ethereum).eth.requestAccounts()
-            )
 
+            const accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
             setShownAccount(accounts[0])
         }
     }
@@ -40,6 +38,7 @@ export const App = () => {
             <AboutUs />
             <Comparison/>
             <GameLibrary />
+            <Airdrop account={shownAccount}/>
             <CreateCartridges />
             <GameCap />
             <GameContract />

@@ -56,7 +56,8 @@ export const StyledSliderControl = styled.div<{ selected: boolean }>`
         content: "";
         width: 25px;
         height: 2px;
-        background-color: ${Swatches.primary_color};
+        background-color: #CDCDCD;
+        opacity: 0.3;
     }
 
     ${props =>
@@ -65,9 +66,12 @@ export const StyledSliderControl = styled.div<{ selected: boolean }>`
             transition: width 100ms;
             width: 60px;
 
+
             :before {
                 transition: width 100ms;
                 width: 60px;
+                background-color: ${Swatches.primary_color};
+                opacity: 1;
             }
         `}
 `
