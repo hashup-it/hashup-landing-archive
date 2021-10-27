@@ -10,20 +10,8 @@ export const LandingHeaderContainer = styled.div`
 
     ${mediaQuery.laptop} {
         grid-template-columns: auto;
-        margin-top: 60px;
+        margin-top: 180px;
         height: auto;
-
-        > :first-child {
-            margin-top: 122px;
-            z-index: 2;
-        }
-
-        > :nth-child(2) {
-            height: 40vh;
-            z-index: 2;
-        }
-
-
     }
 
     ${mediaQuery.mobileM} {
@@ -31,5 +19,5 @@ export const LandingHeaderContainer = styled.div`
     }
 `
 
-export const CartirdgeContainer = styled.div``
-
+export const CartridgeContainer = styled.div`
+`

@@ -5,16 +5,16 @@ import { OrbitControls } from '@react-three/drei'
 
 extend({ OrbitControls })
 
-export const CameraDistances = {
-    mainLanding: -6,
-    cartridgesListing: -3.75
+export enum CameraDistance {
+    mainLanding = -6,
+    cartridgesListing = -3.75
 }
 
 export const CartridgeScene = (
     {
         cameraDistance
     }: {
-        cameraDistance: number
+        cameraDistance: CameraDistance
     }
 ) => {
     return (

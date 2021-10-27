@@ -3,7 +3,7 @@ import React from 'react'
 import { SectionHeader } from '../../Shared/sections.styles'
 import { ColoredText } from '../../Shared'
 import { Swatches } from '../../../__styles__/Swatches'
-import { CameraDistances, CartridgeScene } from '../../CartridgeScene'
+import { CameraDistance, CartridgeScene } from '../../CartridgeScene'
 import {
     CartridgeDescriptionContainer,
     CartridgeDescriptionImage,
@@ -57,7 +57,7 @@ export const CartridgeDescription = (
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
             <CartridgeDescriptionImage>
-                <CartridgeScene cameraDistance={CameraDistances.cartridgesListing} />
+                <CartridgeScene cameraDistance={CameraDistance.cartridgesListing} />
             </CartridgeDescriptionImage>
         </CartridgeDescriptionContainer>
     )
