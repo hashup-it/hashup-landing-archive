@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { SmallHeaderText, TabHeader } from '../Shared/sections.styles'
 import { mediaQuery } from '../MediaQuery'
+import { ColoredText } from '../Shared'
 
 export const CartridgesTabContainer = styled.div`
     display: flex;
@@ -70,9 +71,12 @@ export const CartridgeThumbnailsContainer = styled.div`
     }
 `
 
-export const CartridgeThumbnail = styled.a<({ source: string })>`
-    cursor: pointer;
-    background: url('${props => props.source}');
-    width: 152px;
-    height: 103px;
+export const CartridgeThumbnailColoredText = styled(ColoredText)`
+    font-family: Sora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
 `

@@ -46,9 +46,11 @@ export const MainMenu = (
             {
                 isMobileMenuShown && <>
                     <SocialMediaGroup>
+                        <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
+                        <a href="https://t.me/HashUpAnnouncements"><Icon url={'telegram.svg'} /></a>
+                        <a href="https://twitter.com/HashUp_it"><Icon url={'twitter.svg'} /></a>
                         <a href="https://www.facebook.com/HashUpIt"><Icon url={'facebook.svg'} /></a>
                         <a href="https://www.instagram.com/hashup.it/"><Icon url={'instagram.svg'} /></a>
-                        <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
                     </SocialMediaGroup>
                     <FooterTop>
                         <ListHeader>Nasza siedziba</ListHeader>
