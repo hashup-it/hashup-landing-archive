@@ -43,7 +43,7 @@ export const CartridgesTab = () => {
                 color={Swatches.green_cartridge_color}
                 headerCartridgeTypeText="Green"
                 descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Dla zajebistego wymiatacza"
+                targetText="Test target description"
                 descriptionListContents={[
                     'Lorem ipslum dolores',
                     'Menespeh amet dis dolor',
@@ -57,7 +57,7 @@ export const CartridgesTab = () => {
                 color={Swatches.gold_cartridge_color}
                 headerCartridgeTypeText="Gold"
                 descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Dla zajebistego wymiatacza"
+                targetText="Test target description"
                 descriptionListContents={[
                     'Lorem ipslum dolores',
                     'Menespeh amet dis dolor'
@@ -68,7 +68,7 @@ export const CartridgesTab = () => {
                 color={Swatches.read_cartridge_color}
                 headerCartridgeTypeText="Red"
                 descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Dla zajebistego wymiatacza"
+                targetText="Test target description"
                 descriptionListContents={[
                     'Lorem ipslum dolores'
                 ]}
