@@ -5,20 +5,28 @@ import { mediaQuery } from '../../MediaQuery'
 export const StyledHeaderBottom = styled.div`
     position: absolute;
     bottom: 0;
-    height: 80px;
+    margin-bottom: 1em;
     width: 100%;
+    z-index: 3;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-    ${mediaQuery.mobileL} {
+    ${mediaQuery.tablet} {
         flex-direction: column;
+        
+        position: relative;
+        
+        gap: 35px;
+    }
+
+    ${mediaQuery.mobileM} {
+        margin-bottom: 2rem;
     }
 `
 
 export const StyledScrollDown = styled.div`
-
     font-weight: normal;
     font-size: 14px;
     line-height: 160%;
@@ -26,6 +34,10 @@ export const StyledScrollDown = styled.div`
 
     display: flex;
     align-items: center;
+    
+    ${mediaQuery.tablet} {
+        display: none;
+    }
 `
 
 export const StyledMouseIcon = styled.img`
@@ -35,16 +47,24 @@ export const StyledMouseIcon = styled.img`
 export const StyledBottomGroup = styled.div`
     display: flex;
     gap: 35px;
+    
+    ${mediaQuery.tablet} {
+        flex-direction: column;
+    }
 `
 
 export const StyledTokenInfo = styled.div`
     display: flex;
     gap: 44px;
     align-items: center;
+
+    ${mediaQuery.mobileL} {
+        flex-direction: column;
+        gap: 1em;
+    }
 `
 
 export const StyledSocialMedia = styled.div`
-
     display: flex;
     justify-content: center;
     gap: 26px;
@@ -57,6 +77,10 @@ export const SocialIcon = styled.img`
 export const StyledLine = styled.div`
     border: 1px solid ${Swatches.primary_color};
     height: 17px;
+
+    ${mediaQuery.tablet} {
+        display: none;
+    }
 `
 
 export const StyledTokenInfoItem = styled.div`
