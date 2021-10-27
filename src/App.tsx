@@ -16,9 +16,11 @@ import { GameLibrary } from './components/GameLibrary'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CartridgesTab } from './components/CartridgesTab'
 import ScrollToTop from './hook/scrollToTop'
+import Airdrop from './components/Airdrop'
 
 export const App = () => {
     const [shownAccount, setShownAccount] = useState<string | null>(null)
+    const [isWalletSelectorShown, setIsWalletSelectorShown] = useState(false)
 
     const handleMetamaskConnection = async () => {
         if ((window as any).ethereum) {
@@ -34,6 +36,8 @@ export const App = () => {
                 <NavBar
                     handleMetamaskConnection={handleMetamaskConnection}
                     shownAccount={shownAccount}
+                    isWalletSelectorShown={isWalletSelectorShown}
+                    setIsWalletSelectorShown={setIsWalletSelectorShown}
                 />
                 <ScrollToTop />
                 <Switch>
@@ -42,6 +46,11 @@ export const App = () => {
                         <AboutUs />
                         <Comparison />
                         <GameLibrary />
+                        <Airdrop
+                            account={null}
+                            isWalletSelectorShown={isWalletSelectorShown}
+                            setIsWalletSelectorShown={setIsWalletSelectorShown}
+                        />
                         <CreateCartridges />
                         <GameCap />
                         <GameContract />

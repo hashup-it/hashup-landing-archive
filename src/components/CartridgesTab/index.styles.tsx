@@ -11,6 +11,18 @@ export const CartridgesTabContainer = styled.div`
     padding-bottom: 150px;
 `
 
+export const BackgroundShade = styled.div`
+    position: absolute;
+    width: 1036.27px;
+    height: 1036.27px;
+    left: 227px;
+    top: -508px;
+
+    background: #D70000;
+    opacity: 0.1;
+    filter: blur(520px);
+`
+
 export const CartridgesHeaderContainer = styled.div`
     height: 100vh;
     display: flex;

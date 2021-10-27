@@ -1,6 +1,8 @@
 import React from 'react'
 import { ColoredText } from '../Shared'
 import {
+    BackgroundShade,
+    BackgroundShadeBottom,
     CartridgesHeaderContainer,
     CartridgesTabContainer,
     CartridgesTabHeader,
@@ -8,7 +10,6 @@ import {
     SmallCartridgeHeaderText
 } from './index.styles'
 import { CartridgeDescription } from './CartridgeDescription'
-import { Swatches } from '../../__styles__/Swatches'
 import { CartridgeThumbnail } from './CartridgeThumbnail'
 
 export enum CartridgeColor {
@@ -22,6 +23,7 @@ export enum CartridgeColor {
 export const CartridgesTab = () => {
     return (
         <CartridgesTabContainer>
+            <BackgroundShade />
             <CartridgesHeaderContainer>
                 <CartridgesTabHeader>
                     A cartridge with the game and a floppy disk with software on the

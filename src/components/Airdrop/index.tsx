@@ -28,12 +28,18 @@ import hashInfo from './hash-info'
 import { AbiItem } from 'web3-utils'
 
 interface AirdropProps {
-    account: string | any
+    account: string | any,
+    isWalletSelectorShown: boolean,
+    setIsWalletSelectorShown: Function
 }
 
-const Airdrop: FunctionComponent<AirdropProps> = ({
-                                                      account
-                                                  }) => {
+const Airdrop: FunctionComponent<AirdropProps> = (
+    {
+        account,
+        isWalletSelectorShown,
+        setIsWalletSelectorShown
+    }
+) => {
 
     const [gamersCount, setGamersCount] = useState(1337)
     const [tokenLeft, setTokenLeft] = useState(1337)
@@ -125,10 +131,17 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
                 </StyledInfoItem>
             </StyledAirdropInfo>
             <StyledAirdropReferral>
-                {!account && <StyledBeforeConnectWrapper>
-                    Connect to metamask first to&nbsp;<BoldText> access referral options</BoldText>
-                </StyledBeforeConnectWrapper>}
-                {account &&
+                {
+                    !account &&
+                    <StyledBeforeConnectWrapper onClick={
+                        () => setIsWalletSelectorShown(true)
+                    }>
+                        Connect to metamask first to&nbsp;
+                        <BoldText> access referral options</BoldText>
+                    </StyledBeforeConnectWrapper>
+                }
+                {
+                    account &&
                     <StyledAfterConnectOptions>
                         <StyledCopyReferral>
                             Copy your referral

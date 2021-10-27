@@ -17,10 +17,14 @@ import { SelectLanguage } from './SelectLanguage'
 export const NavBar = (
     {
         handleMetamaskConnection,
-        shownAccount
+        shownAccount,
+        isWalletSelectorShown,
+        setIsWalletSelectorShown
     }: {
         handleMetamaskConnection: Function,
-        shownAccount: string | null
+        shownAccount: string | null,
+        isWalletSelectorShown: boolean,
+        setIsWalletSelectorShown: Function
     }
 ) => {
     const [isMobileMenuShown, setIsMobileMenuShown] = useState(false)
@@ -38,7 +42,12 @@ export const NavBar = (
             </MobileHideWrapper>
             {<ButtonsMenu>
                 {false && <SelectLanguage />}
-                <ConnectWallet account={shownAccount} handleMetamaskConnection={handleMetamaskConnection} />
+                <ConnectWallet
+                    account={shownAccount}
+                    handleMetamaskConnection={handleMetamaskConnection}
+                    isWalletSelectorShown={isWalletSelectorShown}
+                    setIsWalletSelectorShown={setIsWalletSelectorShown}
+                />
             </ButtonsMenu>}
             <HamburgerButton
                 opened={isMobileMenuShown}
