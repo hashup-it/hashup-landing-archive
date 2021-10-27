@@ -11,12 +11,9 @@ export const CartridgesTabContainer = styled.div`
     padding-bottom: 150px;
 `
 
-export const BackgroundShade = styled.div`
+export const BackgroundShade = styled.img`
     position: absolute;
-    width: 1036.27px;
-    height: 1036.27px;
-    left: 227px;
-    top: -508px;
+    width: 100%;
 
     background: #D70000;
     opacity: 0.1;
@@ -31,7 +28,7 @@ export const CartridgesHeaderContainer = styled.div`
     align-items: center;
     position: relative;
     gap: 40px;
-
+    
     ${mediaQuery.laptop} {
         height: auto;
     }
