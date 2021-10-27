@@ -2,7 +2,6 @@ import React from 'react'
 import { ColoredText } from '../Shared'
 import {
     BackgroundShade,
-    BackgroundShadeBottom,
     CartridgesHeaderContainer,
     CartridgesTabContainer,
     CartridgesTabHeader,
