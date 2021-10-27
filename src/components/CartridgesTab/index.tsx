@@ -22,7 +22,7 @@ export enum CartridgeColor {
 export const CartridgesTab = () => {
     return (
         <CartridgesTabContainer>
-            <BackgroundShade />
+            <BackgroundShade src="/assets/sphere-shade.svg" />
             <CartridgesHeaderContainer>
                 <CartridgesTabHeader>
                     A cartridge with the game and a floppy disk with software on the
