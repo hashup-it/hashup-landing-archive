@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Swatches } from '__styles__/Swatches'
+import { mediaQuery } from '../../MediaQuery'
 
 export const StyledHeaderBottom = styled.div`
     position: absolute;
@@ -10,6 +11,10 @@ export const StyledHeaderBottom = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    ${mediaQuery.mobileL} {
+        flex-direction: column;
+    }
 `
 
 export const StyledScrollDown = styled.div`
