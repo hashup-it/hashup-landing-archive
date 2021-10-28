@@ -27,6 +27,8 @@ export const FooterTopLeft = styled.div`
 
 
 export const FooterBottom = styled.div`
+    position: relative;
+    
     padding: 32px 0px 32px 0px;
     display: flex;
     justify-content: space-between;
@@ -138,6 +140,10 @@ export const FooterSeparatorBase = styled.div`
     position: absolute;
     top: -50px;
     left: -93px;
+`
+
+export const FooterMetaSeparator = styled(FooterSeparatorBase)`
+    top: 0;
 `
 
 export const SocialMediaGroup = styled.div`

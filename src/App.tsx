@@ -20,6 +20,7 @@ import Airdrop from 'components/Airdrop'
 
 export const App = () => {
     const [shownAccount, setShownAccount] = useState<string | null>(null)
+    const [isWalletSelectorShown, setIsWalletSelectorShown] = useState(false)
 
     const handleMetamaskConnection = async () => {
         if ((window as any).ethereum) {
@@ -39,6 +40,8 @@ export const App = () => {
                 <NavBar
                     handleMetamaskConnection={handleMetamaskConnection}
                     shownAccount={shownAccount}
+                    isWalletSelectorShown={isWalletSelectorShown}
+                    setIsWalletSelectorShown={setIsWalletSelectorShown}
                 />
                 <ScrollToTop />
                 <Switch>
@@ -47,7 +50,11 @@ export const App = () => {
                         <AboutUs />
                         <Comparison />
                         <GameLibrary />
-                        <Airdrop account={shownAccount}/>
+                        <Airdrop
+                            account={null}
+                            isWalletSelectorShown={isWalletSelectorShown}
+                            setIsWalletSelectorShown={setIsWalletSelectorShown}
+                        />
                         <CreateCartridges />
                         <GameCap />
                         <GameContract />

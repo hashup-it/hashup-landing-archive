@@ -9,6 +9,7 @@ import {
     FooterHeading,
     FooterLink,
     FooterMenu,
+    FooterMetaSeparator,
     FooterQuickNavigation,
     FooterSeparatorAccent,
     FooterSeparatorBase,
@@ -35,12 +36,16 @@ export const Footer = () => {
             <FooterSeparatorBase />
             <FooterSeparatorAccent />
             <FooterHeading>
-                <Logo src="/assets/logo.svg" />
+                <NavLink to="/">
+                    <Logo src="/assets/logo.svg" />
+                </NavLink>
                 <SocialMediaGroup>
                     <span>Our&nbsp;<ColoredText>social media</ColoredText></span>
+                    <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
+                    <a href="https://t.me/HashUpAnnouncements"><Icon url={'telegram.svg'} /></a>
+                    <a href="https://twitter.com/HashUp_it"><Icon url={'twitter.svg'} /></a>
                     <a href="https://www.facebook.com/HashUpIt"><Icon url={'facebook.svg'} /></a>
                     <a href="https://www.instagram.com/hashup.it/"><Icon url={'instagram.svg'} /></a>
-                    <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
                 </SocialMediaGroup>
             </FooterHeading>
             <FooterQuickNavigation>
@@ -102,6 +107,7 @@ export const Footer = () => {
                 <Newsletter />
             </FooterTop>
             <FooterBottom>
+                <FooterMetaSeparator />
                 <Copyright>Copyright © by HashUp. All Rights Reserved.</Copyright>
                 <FooterBottomGroup>
                     <FooterLink>

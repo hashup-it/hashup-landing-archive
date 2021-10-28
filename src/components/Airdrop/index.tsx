@@ -36,19 +36,26 @@ const queryString = require('query-string');
 
 
 interface AirdropProps {
-    account: string | any
+    account: string | any,
+    isWalletSelectorShown: boolean,
+    setIsWalletSelectorShown: Function
 }
 
-const Airdrop: FunctionComponent<AirdropProps> = ({
-    account
-}) => {
+
+const Airdrop: FunctionComponent<AirdropProps> = (
+    {
+        account,
+        isWalletSelectorShown,
+        setIsWalletSelectorShown
+    }
+) => {
 
     const [gamersCount, setGamersCount] = useState(1337)
     const [tokenLeft, setTokenLeft] = useState(1337)
     const [hashForRef, setHashForRef] = useState(1337)
 
     const [nicknameInput, setNicknameInput] = useState('')
-    const [popupOpened, setPopupOpened] = useState(true)
+    const [popupOpened, setPopupOpened] = useState(false)
 
     const inputElement = useRef(null);
 
@@ -195,10 +202,17 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
                 </StyledInfoItem>
             </StyledAirdropInfo>
             <StyledAirdropReferral>
-                {!account && <StyledBeforeConnectWrapper>
-                    Connect to metamask first to&nbsp;<BoldText> access referral options</BoldText>
-                </StyledBeforeConnectWrapper>}
-                {account &&
+                {
+                    !account &&
+                    <StyledBeforeConnectWrapper onClick={
+                        () => setIsWalletSelectorShown(true)
+                    }>
+                        Connect to metamask first to&nbsp;
+                        <BoldText> access referral options</BoldText>
+                    </StyledBeforeConnectWrapper>
+                }
+                {
+                    account &&
                     <StyledAfterConnectOptions>
                         <StyledCopyReferral onClick={() => handleCopyReferral()}>
                             Copy your referral

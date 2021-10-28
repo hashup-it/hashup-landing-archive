@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { SmallHeaderText, TabHeader } from '../Shared/sections.styles'
 import { mediaQuery } from '../MediaQuery'
+import { ColoredText } from '../Shared'
 
 export const CartridgesTabContainer = styled.div`
     display: flex;
@@ -8,6 +9,15 @@ export const CartridgesTabContainer = styled.div`
 
     gap: 150px;
     padding-bottom: 150px;
+`
+
+export const BackgroundShade = styled.img`
+    position: absolute;
+    width: 100%;
+
+    background: #D70000;
+    opacity: 0.1;
+    filter: blur(520px);
 `
 
 export const CartridgesHeaderContainer = styled.div`
@@ -18,7 +28,7 @@ export const CartridgesHeaderContainer = styled.div`
     align-items: center;
     position: relative;
     gap: 40px;
-
+    
     ${mediaQuery.laptop} {
         height: auto;
     }
@@ -70,9 +80,12 @@ export const CartridgeThumbnailsContainer = styled.div`
     }
 `
 
-export const CartridgeThumbnail = styled.a<({ source: string })>`
-    cursor: pointer;
-    background: url('${props => props.source}');
-    width: 152px;
-    height: 103px;
+export const CartridgeThumbnailColoredText = styled(ColoredText)`
+    font-family: Sora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
 `
