@@ -1,82 +1,51 @@
-import { ColoredText } from '../Shared'
-import { Swatches } from '../../__styles__/Swatches'
+import { useState } from "react"
+import { ColoredText } from "../Shared"
+import Slider from "./Slider"
+import Results from "./Results"
+import numeral from "numeral"
 import {
-    CalculatorHeader,
-    PercentBackground,
+    StyledHeader,
+    StyledBackgroundImg,
     StyledCalculator,
-    StyledPriceLabel,
-    StyledPriceLabelOutline,
-    StyledResults,
-    StyledResultsDescription,
-    StyledResultsHeader,
-    StyledResultsText,
-    StyledResultWrapper,
     StyledSlidersContainer,
-    StyledVersus,
-    StyledVersusLine
-} from './index.styles'
-import Slider from './Slider'
+} from "./index.styles"
 
-export const Calculator = () => {
+const Calculator = () => {
+    const [price, setPrice] = useState<number>(0)
+    const [soldItems, setSoldItems] = useState<number>(0)
+
     return (
         <StyledCalculator>
-
-            <CalculatorHeader>
-                Sprawdź ile <ColoredText>tracisz na prowizjach</ColoredText>, które pobierają popularne platformy
-                wydawnicze
-            </CalculatorHeader>
+            <StyledHeader>
+                Sprawdź ile <ColoredText>tracisz na prowizjach</ColoredText>, które pobierają
+                popularne platformy wydawnicze
+            </StyledHeader>
             <StyledSlidersContainer>
                 <Slider
+                    min={10000}
+                    max={1000000}
+                    step={10000}
+                    displayValue={numeral(soldItems).format("0a")}
+                    setValue={setSoldItems}
                     label="Ilość sprz. kopii"
+                    dotsValues={["10k", "250k", "500k", "750k", "1m"]}
+                    defaultValue={50000}
                 />
                 <Slider
-                    label="Początkowa cena twojej gry"
+                    min={1}
+                    max={100}
+                    step={1}
+                    displayValue={`${price}$`}
+                    setValue={setPrice}
+                    label="Cena"
+                    dotsValues={["1$", "25$", "50$", "75$", "100$"]}
+                    defaultValue={56}
                 />
             </StyledSlidersContainer>
-            <StyledResults>
-                <StyledResultsDescription>
-                    <StyledResultsHeader>
-                        HashUp
-                    </StyledResultsHeader>
-                    <StyledResultsText>
-                        Z nami tyle trafia do Ciebie
-                    </StyledResultsText>
-                </StyledResultsDescription>
-                <StyledPriceLabel>
-                    xD
-                    <StyledPriceLabelOutline
-                        outlineColor={Swatches.primary_darker}
-                    />
-                </StyledPriceLabel>
-                <StyledVersus>
-                    <StyledVersusLine />
-                    VS
-                    <StyledVersusLine />
-                </StyledVersus>
-                <StyledResultWrapper>
-                    <StyledPriceLabel>
-                        xD
-                        <StyledPriceLabelOutline
-                            outlineColor={Swatches.text_secondary}
-                        />
-                    </StyledPriceLabel>
-                    <StyledResultsText>
-                        Tyle teraz dostajesz
-                    </StyledResultsText>
-                </StyledResultWrapper>
-                <StyledResultWrapper>
-                    <StyledPriceLabel>
-                        xD
-                        <StyledPriceLabelOutline
-                            outlineColor={Swatches.text_secondary}
-                        />
-                    </StyledPriceLabel>
-                    <StyledResultsText>
-                        Tyle tracisz na prowizjach
-                    </StyledResultsText>
-                </StyledResultWrapper>
-            </StyledResults>
-            <PercentBackground src="/assets/percent.png" />
+            <Results soldItems={soldItems} price={price} />
+            <StyledBackgroundImg src="/assets/percent.png" />
         </StyledCalculator>
     )
 }
+
+export default Calculator
