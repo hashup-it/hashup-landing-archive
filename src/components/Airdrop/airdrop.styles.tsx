@@ -5,7 +5,7 @@ import { Swatches } from '../../__styles__/Swatches'
 export const StyledAirdrop = styled.div`
 
     border-top: 4px solid ${Swatches.primary_color};
-    padding-top: 52px;
+    padding: 52px 6.25%;
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     grid-template-rows: auto auto;
@@ -140,7 +140,7 @@ export const StyledBeforeConnectWrapper = styled.div`
     padding: 25px;
     align-items: center;
     display: flex;
-    border: 1px dotted ${Swatches.primary_color};
+    border: 1px dashed ${Swatches.primary_color};
     border-radius: 6px;
     cursor: pointer;
 `
@@ -235,7 +235,7 @@ export const StyledCopyReferral = styled.div`
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    padding: 15px 30px 15px 23px;
+    padding: 18px 30px 18px 23px;
     color: white;
     cursor: pointer;
     align-items: center;

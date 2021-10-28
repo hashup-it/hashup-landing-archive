@@ -1,19 +1,28 @@
 import React from 'react'
 import { ColoredText } from '../Shared'
 import {
+    BackgroundShade,
     CartridgesHeaderContainer,
     CartridgesTabContainer,
     CartridgesTabHeader,
-    CartridgeThumbnail,
     CartridgeThumbnailsContainer,
     SmallCartridgeHeaderText
 } from './index.styles'
 import { CartridgeDescription } from './CartridgeDescription'
-import { Swatches } from '../../__styles__/Swatches'
+import { CartridgeThumbnail } from './CartridgeThumbnail'
+
+export enum CartridgeColor {
+    Green = '#6AAD38',
+    Gold = '#BEA379',
+    Blue = '#468CF4',
+    Gray = '#9D9D9D',
+    Red = '#FF3F3F'
+}
 
 export const CartridgesTab = () => {
     return (
         <CartridgesTabContainer>
+            <BackgroundShade src="/assets/sphere-shade.svg" />
             <CartridgesHeaderContainer>
                 <CartridgesTabHeader>
                     A cartridge with the game and a floppy disk with software on the
@@ -25,25 +34,38 @@ export const CartridgesTab = () => {
                 </SmallCartridgeHeaderText>
                 <CartridgeThumbnailsContainer>
                     <CartridgeThumbnail
-                        source="/assets/icons/cartridge-thumbnail-green.svg"
-                        href="#green"
+                        cartridgeType="Green"
+                        cartridgeColor={CartridgeColor.Green}
+                        cartridgeLink="#green"
                     />
                     <CartridgeThumbnail
-                        source="/assets/icons/cartridge-thumbnail-gold.svg"
-                        href="#gold"
+                        cartridgeType="Gold"
+                        cartridgeColor={CartridgeColor.Gold}
+                        cartridgeLink="#gold"
                     />
                     <CartridgeThumbnail
-                        source="/assets/icons/cartridge-thumbnail-red.svg"
-                        href="#red"
+                        cartridgeType="Blue"
+                        cartridgeColor={CartridgeColor.Blue}
+                        cartridgeLink="#blue"
+                    />
+                    <CartridgeThumbnail
+                        cartridgeType="Gray"
+                        cartridgeColor={CartridgeColor.Gray}
+                        cartridgeLink="#gray"
+                    />
+                    <CartridgeThumbnail
+                        cartridgeType="Red"
+                        cartridgeColor={CartridgeColor.Red}
+                        cartridgeLink="#red"
                     />
                 </CartridgeThumbnailsContainer>
             </CartridgesHeaderContainer>
             <CartridgeDescription
                 leftBasedLayout={true}
-                color={Swatches.green_cartridge_color}
+                color={CartridgeColor.Green}
                 headerCartridgeTypeText="Green"
                 descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Dla zajebistego wymiatacza"
+                targetText="Test target description"
                 descriptionListContents={[
                     'Lorem ipslum dolores',
                     'Menespeh amet dis dolor',
@@ -54,10 +76,10 @@ export const CartridgesTab = () => {
             />
             <CartridgeDescription
                 leftBasedLayout={false}
-                color={Swatches.gold_cartridge_color}
+                color={CartridgeColor.Gold}
                 headerCartridgeTypeText="Gold"
                 descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Dla zajebistego wymiatacza"
+                targetText="Test target description"
                 descriptionListContents={[
                     'Lorem ipslum dolores',
                     'Menespeh amet dis dolor'
@@ -65,10 +87,35 @@ export const CartridgesTab = () => {
             />
             <CartridgeDescription
                 leftBasedLayout={true}
-                color={Swatches.read_cartridge_color}
+                color={CartridgeColor.Blue}
+                headerCartridgeTypeText="Blue"
+                descriptionText="A free software market is a natural consequence of putting software in the hands of players."
+                targetText="Test target description"
+                descriptionListContents={[
+                    'Lorem ipslum dolores',
+                    'Menespeh amet dis dolor',
+                    'Lorem ipslum dolores',
+                    'Lorem ipslum dolores'
+                ]}
+            />
+            <CartridgeDescription
+                leftBasedLayout={false}
+                color={CartridgeColor.Gray}
+                headerCartridgeTypeText="Gray"
+                descriptionText="A free software market is a natural consequence of putting software in the hands of players."
+                targetText="Test target description"
+                descriptionListContents={[
+                    'Lorem ipslum dolores',
+                    'Menespeh amet dis dolor',
+                    'Lorem ipslum dolores'
+                ]}
+            />
+            <CartridgeDescription
+                leftBasedLayout={true}
+                color={CartridgeColor.Red}
                 headerCartridgeTypeText="Red"
                 descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Dla zajebistego wymiatacza"
+                targetText="Test target description"
                 descriptionListContents={[
                     'Lorem ipslum dolores'
                 ]}

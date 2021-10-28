@@ -26,7 +26,8 @@ export const CopyAdress = () => {
 
             <StyledTokenIcon icon="/assets/icons/LogoIcon.svg" />
             0x2ce.....BA9f
-            <StyledTokenIcon icon={!showAnimation ? '/assets/icons/copy-red.svg' : '/assets/icons/copy.svg'}>
+            <StyledTokenIcon icon={!showAnimation ? '/assets/icons/copy-red.svg' : '/assets/icons/copy-confirm.svg'}>
+
                 <Tooltip>{tooltipText}</Tooltip>
             </StyledTokenIcon>
 

@@ -9,9 +9,15 @@ export const LandingHeaderContainer = styled.div`
     position: relative;
 
     ${mediaQuery.laptop} {
-        grid-template-columns: auto;
-        margin-top: 180px;
         height: auto;
+        margin-top: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ${mediaQuery.mobileL} {
+        margin-top: 120px;
     }
 
     ${mediaQuery.mobileM} {
@@ -20,4 +26,23 @@ export const LandingHeaderContainer = styled.div`
 `
 
 export const CartridgeContainer = styled.div`
+    display: flex;
+    z-index: 2;
+
+    ${mediaQuery.laptop} {
+        height: 50vh;
+        width: 50vw;
+        margin-bottom: 2em;
+    }
+
+    ${mediaQuery.tablet} {
+        height: 50vw;
+        width: 50vw;
+        
+        margin-bottom: 0;
+    }
+
+    ${mediaQuery.mobileL} {
+        height: 50vh;
+    }
 `

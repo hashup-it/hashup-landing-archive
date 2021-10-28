@@ -19,7 +19,7 @@ export const ButtonGroup = styled.div`
     ${mediaQuery.tablet} {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: auto atuo;
+        grid-template-rows: auto auto;
     }
 `
 
@@ -37,8 +37,6 @@ export const HeaderAirdropWrapper = styled.div`
     :hover {
         opacity: 0.9;
     }
-
-
 `
 
 export const HeaderAirdropIcon = styled.div`
