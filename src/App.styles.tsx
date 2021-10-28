@@ -4,7 +4,7 @@ import { Swatches } from './__styles__/Swatches'
 
 export const globalHorizontalPadding = {
     [mediaQuery.desktop]: '93px',
-    [mediaQuery.laptop]: '30px',
+    [mediaQuery.tablet]: '45px',
     [mediaQuery.mobileL]: '23px'
 }
 
@@ -20,8 +20,9 @@ export const LandingContainer = styled.div`
 
     ${mediaQuery.laptopL} {
         width: auto;
-        padding: 0px ${globalHorizontalPadding[mediaQuery.laptop]};
+        padding: 0px ${globalHorizontalPadding[mediaQuery.tablet]};
     }
+
 
     ${mediaQuery.mobileL} {
         padding: 0px ${globalHorizontalPadding[mediaQuery.mobileL]};

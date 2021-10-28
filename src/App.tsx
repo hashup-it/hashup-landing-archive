@@ -16,6 +16,7 @@ import { GameLibrary } from './components/GameLibrary'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CartridgesTab } from './components/CartridgesTab'
 import ScrollToTop from './hook/scrollToTop'
+import Airdrop from 'components/Airdrop'
 
 export const App = () => {
     const [shownAccount, setShownAccount] = useState<string | null>(null)
@@ -24,7 +25,11 @@ export const App = () => {
         if ((window as any).ethereum) {
 
             const accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' })
-            setShownAccount(accounts[0])
+            setShownAccount(accounts[0]);
+
+            (window as any).ethereum.on('accountsChanged', function (accounts : any) {
+                setShownAccount(accounts[0])
+            })
         }
     }
 
@@ -42,6 +47,7 @@ export const App = () => {
                         <AboutUs />
                         <Comparison />
                         <GameLibrary />
+                        <Airdrop account={shownAccount}/>
                         <CreateCartridges />
                         <GameCap />
                         <GameContract />
