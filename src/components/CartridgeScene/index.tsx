@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas, extend } from '@react-three/fiber'
-import Model from './Three/Scene'
+import Model from './Three/Cartridge'
 import { OrbitControls } from '@react-three/drei'
 
 extend({ OrbitControls })
@@ -42,10 +42,6 @@ export const CartridgeScene = (
             <pointLight position={[-200, 10, -200]} intensity={15} />
             <pointLight position={[400, 10, 400]} intensity={.5} />
             <OrbitControls
-                enableZoom={false}
-                enablePan={false}
-                autoRotate
-                autoRotateSpeed={-2}
             />
             <Model />
         </Suspense>
