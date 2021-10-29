@@ -1,13 +1,13 @@
 import React, { Suspense } from 'react'
 import { Canvas, extend } from '@react-three/fiber'
-import Model from './Three/Gold'
+import Model from './Three/Scene'
 import { OrbitControls } from '@react-three/drei'
 
 extend({ OrbitControls })
 
 export enum CameraDistance {
-    mainLanding = -20,
-    cartridgesListing = -18
+    mainLanding = -7,
+    cartridgesListing = -3.75
 }
 
 export const CartridgeScene = (
