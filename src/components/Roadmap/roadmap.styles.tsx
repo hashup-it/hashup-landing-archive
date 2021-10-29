@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { Swatches } from '../../__styles__/Swatches'
-import { mediaQuery } from '../MediaQuery'
-import { globalHorizontalPadding } from '../../App.styles'
+import styled from "styled-components"
+import { Swatches } from "../../__styles__/Swatches"
+import { mediaQuery } from "../MediaQuery"
+import { globalHorizontalPadding } from "App.styles"
 
 export const StyledRoadmap = styled.div`
     text-align: center;
@@ -10,15 +10,17 @@ export const StyledRoadmap = styled.div`
 
 export const StyledCarousele = styled.div`
     margin: 80px 0 140px;
-    width: 100vw;
+    width: calc(100% + ${globalHorizontalPadding[mediaQuery.desktop]} * 2);
     margin-left: -${globalHorizontalPadding[mediaQuery.desktop]};
 
-    ${mediaQuery.laptop} {
-        margin-left: -${globalHorizontalPadding[mediaQuery.laptop]};
+    ${mediaQuery.laptopL} {
+        width: calc(100% + ${globalHorizontalPadding[mediaQuery.laptopL]} * 2);
+        margin-left: -${globalHorizontalPadding[mediaQuery.laptopL]};
         margin-top: 50px;
     }
 
     ${mediaQuery.mobileL} {
+        width: calc(100% + ${globalHorizontalPadding[mediaQuery.mobileL]} * 2);
         margin-left: -${globalHorizontalPadding[mediaQuery.mobileL]};
     }
 
@@ -44,7 +46,6 @@ export const StyledCarousele = styled.div`
             background-color: transparent;
         }
 
-
         :before {
             margin-top: 15px;
             display: block;
@@ -57,7 +58,6 @@ export const StyledCarousele = styled.div`
         &.__active {
             background-color: transparent;
             width: 60px;
-
 
             :before {
                 background-color: ${Swatches.primary_color};

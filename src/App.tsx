@@ -24,12 +24,13 @@ export const App = () => {
     const [isWalletSelectorShown, setIsWalletSelectorShown] = useState(false)
 
     const handleMetamaskConnection = async () => {
-        if ((window as any).ethereum) {
-
-            const accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' })
+        const w = window as any
+        
+        if (w.ethereum) {
+            const accounts = await w.ethereum.request({ method: 'eth_requestAccounts' })
             setShownAccount(accounts[0]);
 
-            (window as any).ethereum.on('accountsChanged', function (accounts : any) {
+            w.ethereum.on('accountsChanged', function (accounts : any) {
                 setShownAccount(accounts[0])
             })
         }
