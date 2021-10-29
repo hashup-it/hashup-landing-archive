@@ -74,7 +74,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
         (async () => {
             if ((window as any).ethereum) {
 
-                web3 = new Web3(blockchainProviderUrl)
+                web3 = new Web3("https://bsc-dataseed.binance.org")
                 contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress)
 
                 updateHashInfo(web3, contract)

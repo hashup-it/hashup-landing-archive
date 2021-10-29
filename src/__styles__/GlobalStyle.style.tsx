@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: 'Sora', normal;
-        background-color: black;
+        background-color: #0A0A08;
         overflow-x: hidden;
     }
 `

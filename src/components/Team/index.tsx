@@ -21,7 +21,7 @@ export const Team = () => {
                     imageAsset={'/assets/avatars/szymon_jankowski.png'}
                     title="ceo"
                     name="Szymon Jankowski"
-                    description="Ekonomista, od młodego wieku widział potencjał w web3.
+                    description="Pasjonuje się ekonomią, informatyką i praktycznymi zastosowaniami blockchain.
                     "
                     socials={<>
                         <Hyperlink href="https://www.linkedin.com/in/jankowskiszymon/">
@@ -36,7 +36,7 @@ export const Team = () => {
                     name="Filip Szydłowski"
                     description="Prawnik i sympatyk kryptowalut, obyty w pracy w kancelariach i startupach.                    "
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                        <Hyperlink href="https://www.linkedin.com/in/rafal-bielenia-b87ab935/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
@@ -48,7 +48,7 @@ export const Team = () => {
                     name="Rafał Bielenia"
                     description="Ma bogate doświadczenie w dziedzinie software'u i algorytmiki, pracował w Google i Microsoft."
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/in/rafal-bielenia-b87ab935/">
+                        <Hyperlink href="https://www.linkedin.com/in/filip-szydlowski/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
@@ -60,7 +60,7 @@ export const Team = () => {
                     name="Cezary Dobrowolski"
                     description="Entuzjasta marketingu nadającego wartość. Uwielbia budować relację między klientami a marką."
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/in/jankowskiszymon/">
+                        <Hyperlink href="https://www.linkedin.com/in/cezary-krzysztof-dobrowolski-b0a2001a5/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
@@ -76,7 +76,7 @@ export const Team = () => {
                     title="head of design"
                     name="Tomasz Fiema"
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                        <Hyperlink href="https://www.linkedin.com/in/tomaszfiema/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
@@ -86,7 +86,7 @@ export const Team = () => {
                     title="Blockchain Dev"
                     name="Damian Sarnecki"
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                        <Hyperlink href="https://www.linkedin.com/in/damian-sarnecki/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
@@ -96,7 +96,7 @@ export const Team = () => {
                     title="Blockchain Dev"
                     name="Robert Dziubek"
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                        <Hyperlink href="https://www.linkedin.com/in/rdziubek">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
@@ -106,7 +106,7 @@ export const Team = () => {
                     title="CMO assistant"
                     name="Jakub Jaworski"
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                        <Hyperlink href="https://www.linkedin.com/in/jakub-jaworski-1189961aa">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}

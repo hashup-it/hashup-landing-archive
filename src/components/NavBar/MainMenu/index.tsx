@@ -23,14 +23,9 @@ export const MainMenu = (
         <StyledMainMenu>
             <MenuItem>
                 <Hyperlink href="/#ecosystem">
-                    Ecosystem
+                    Ekosystem
                 </Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
-            </MenuItem>
-            <MenuItem>
-                <NavLink to="/Cartridges">
-                    Cartridges
-                </NavLink>
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
@@ -39,7 +34,7 @@ export const MainMenu = (
             {/*<MenuItem>Investment</MenuItem>*/}
             <MenuItem>
                 <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
-                    Docs
+                    Dokumentacja
                 </Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
