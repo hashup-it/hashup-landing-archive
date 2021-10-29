@@ -17,6 +17,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CartridgesTab } from './components/CartridgesTab'
 import ScrollToTop from './hook/scrollToTop'
 import Airdrop from 'components/Airdrop'
+import Calculator from 'components/Calculator'
 
 export const App = () => {
     const [shownAccount, setShownAccount] = useState<string | null>(null)
@@ -49,6 +50,7 @@ export const App = () => {
                         <LandingHeader />
                         <AboutUs />
                         <Comparison />
+                        <Calculator />
                         <GameLibrary />
                         <Airdrop
                             account={shownAccount}

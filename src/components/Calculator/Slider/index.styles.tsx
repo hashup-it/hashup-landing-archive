@@ -1,61 +1,144 @@
-import styled from 'styled-components'
+import styled, { css } from "styled-components"
+import { Swatches } from "__styles__/Swatches"
+import dollarIcon from "./icons/dollar.svg"
 
-const makeLongShadow = (color: string, size: string) => {
-    let i = 18
-    let shadow = `${i}px 0 0 ${size} ${color}`
-
-    for (; i < 706; i++) {
-        shadow = `${shadow}, ${i}px 0 0 ${size} ${color}`
-    }
-
-    return shadow
-}
+export const DISPLAY_VALUE_ATTRIBUTE = "data-display-value"
 
 export const StyledSlider = styled.div`
     display: grid;
     grid-template-columns: 200px auto;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
 `
 
 export const StyledSliderLabel = styled.span`
-    font-size: 0.929rem;
-    letter-spacing: 0.11rem;
+    font-size: 13px;
+    letter-spacing: 0.11em;
     line-height: 120%;
     font-weight: normal;
     text-transform: uppercase;
     color: white;
 `
 
-export const StyledSliderInput = styled.input`
-    display: block;
-    -webkit-appearance: none;
-    background-color: transparent;
-    height: 11px;
-    width: 500px;
+export const StyledSliderWrapper = styled.div<{ dotsValues: string[] }>`
+    width: 570px;
 
-    &::-webkit-slider-runnable-track {
-        background-color: #262228;
+    .rc-slider-rail,
+    .rc-slider-track,
+    .rc-slider-step {
+        height: 12px;
         border-radius: 35px;
-
     }
 
-    &::-webkit-slider-thumb {
-        position: relative;
-        appearance: none;
-        height: 11px;
-        width: 7px;
-        background: white;
-        border-radius: 1px;
+    .rc-slider-rail {
+        background-color: #262228;
+        padding-right: 10px;
+
+        :after {
+            // Make slider-rail longer at the end on the right side
+            // because of last dot
+            background-color: red;
+            display: block;
+            content: "";
+            width: 30px;
+            height: 12px;
+            right: -10px;
+            background-color: #262228;
+            position: absolute;
+            border-bottom-right-radius: 35px;
+            border-top-right-radius: 35px;
+        }
+    }
+
+    .rc-slider-track {
+        background-color: ${Swatches.primary_color};
+    }
+
+    .rc-slider-handle {
+        height: 32px;
+        width: 25px;
+        border-radius: 5px;
+        background-color: ${Swatches.text_main};
+        background-image: url(${dollarIcon});
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 0 solid;
+        box-shadow: 0px 4.7px 4.7px rgba(0, 0, 0, 0.25);
+        margin-top: -10px; // Center vertically on track
+        transform-style: preserve-3d;
+
+        :before {
+            // Preview (display) value above slider-handle
+            // Content is dynamically passed by HTML attribute
+            content: attr(${DISPLAY_VALUE_ATTRIBUTE});
+            height: 32px;
+            display: block;
+            margin-top: -24px;
+            width: 46px;
+            margin-left: -10px;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            transform: translateZ(-1px);
+            background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.5) 15%,
+                rgba(0, 0, 0, 0.5) 85%,
+                rgba(0, 0, 0, 0) 100%
+            );
+        }
+    }
+
+    .rc-slider-dot {
+        display: none;
+    }
+
+    .rc-slider-dot:nth-child(25n),
+    .rc-slider-dot:nth-child(1) {
+        display: inline-block;
+        width: 2.5px;
+        height: 7px;
+        border-radius: 15px;
+        background-color: ${Swatches.primary_color};
         border: 0;
-        cursor: pointer;
+        transform: translate(5px, -4px);
 
-
-        transform: translateY(-50%);
-        transform: scale(3);
-
-        box-shadow: ${makeLongShadow('red', '-10px')};
-        transition: background-color 150ms;
+        :before {
+            display: block;
+            margin-top: -22px;
+            font-size: 12px;
+            width: 60px;
+            text-align: center;
+            transform: translateX(-50%);
+            color: #646e83;
+        }
     }
 
+    // Write apropriate value above dots
+    ${props => {
+        let dots: any[] = []
+
+        // First dot
+        dots.push(css`
+            .rc-slider-dot:nth-child(1) {
+                :before {
+                    content: "${props.dotsValues[0]}";
+                }
+            }
+        `)
+
+        // Next 4 dots
+        for (let i = 1; i <= 4; i++) {
+            dots.push(css`
+                .rc-slider-dot:nth-child(${25 * i}n) {
+                    :before {
+                        content: "${props.dotsValues[i]}";
+                    }
+                }
+            `)
+        }
+
+        return dots
+    }}
 `
