@@ -23,9 +23,10 @@ import {
     StyledReferralInfo
 } from './airdrop.styles'
 import Web3 from 'web3'
+import { AbiItem } from 'web3-utils'
 import hashInfo from './hash-info'
 
-import { AbiItem } from 'web3-utils'
+
 import { useLocation } from 'react-router-dom'
 import { AnyStyledComponent } from 'styled-components'
 import { AirdropPopup } from './AirdropPopup'
@@ -55,7 +56,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
     const [hashForRef, setHashForRef] = useState(1337)
 
     const [nicknameInput, setNicknameInput] = useState('')
-    const [popupOpened, setPopupOpened] = useState(true)
+    const [popupOpened, setPopupOpened] = useState(false)
 
     const inputElement = useRef(null);
 
@@ -65,7 +66,6 @@ const Airdrop: FunctionComponent<AirdropProps> = (
 
     const parsed = queryString.parse(window.location.search);
     const buddy = parsed.buddy;
-    console.log(buddy)
     const [userNickname, setUserNickname] = useState('');
     const [airdropDisabled, setAirdropDisabled] = useState(false)
     
@@ -141,6 +141,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
             contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress)
 
             if(await isNicknameTaken(nicknameInput, web3, contract)) {
+                alert('Nick jest zajęty')
                 return;
             }
             
@@ -165,7 +166,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
            
 
         } else {
-            alert('Login first!')
+            alert('Zaloguj się')
         }
     }
 

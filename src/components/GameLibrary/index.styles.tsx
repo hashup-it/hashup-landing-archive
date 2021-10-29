@@ -18,7 +18,6 @@ export const ContentWrapper = styled.div`
 
     ${mediaQuery.laptop} {
         flex-direction: column;
-
     }
 `
 

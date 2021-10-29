@@ -1,5 +1,5 @@
 const hashInfo = {
-    contractAddress: '0x81732cceC32d7f99c1babd4bDC56bc8fe59670e3',
+    contractAddress: '0xae07D165dE52A1d74171beC437f632fC102d1961',
     abi: [{
         'inputs': [],
         'name': 'HashLeft',
