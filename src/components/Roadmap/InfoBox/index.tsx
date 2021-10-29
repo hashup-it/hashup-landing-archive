@@ -3,11 +3,11 @@ import { InfoBoxInterface } from './interfaces'
 import { StyledBullet, StyledBulletsList, StyledInfoBox, StyledLabel } from './infobox.styles'
 import { StyledWrapper } from './infobox.styles'
 
-interface Props extends InfoBoxInterface {
+interface InfoBoxProps extends InfoBoxInterface {
     readonly highlighted: boolean
 }
 
-const InfoBox: FC<Props> = ({ highlighted, label, bullets }) => (
+const InfoBox: FC<InfoBoxProps> = ({ highlighted, label, bullets }) => (
     <StyledWrapper>
         <StyledInfoBox highlighted={highlighted}>
             <StyledLabel>{label}</StyledLabel>
