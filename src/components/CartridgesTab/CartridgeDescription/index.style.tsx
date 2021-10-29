@@ -48,10 +48,11 @@ export const CartridgeDescriptionImage = styled.div<({ cartridgeModel: any })>`
     display: flex;
     
     align-items: center;
+    justify-content: center;
     
     > * {
         position: absolute;
-        width: 42vw;
+        width: calc(50%);
         height: auto;
         clip: auto;
     }
