@@ -1,5 +1,5 @@
 import React from 'react'
-import { AdvisorsContainer, CorePeopleContainer, Header, TeamContainer, TeamPeopleContainer } from './index.style'
+import { CorePeopleContainer, Header, TeamContainer, TeamPeopleContainer } from './index.style'
 import { Hyperlink, SectionLabel } from '../Shared/sections.styles'
 import { ColoredText } from '../Shared'
 import { Person } from './Person'
@@ -105,53 +105,6 @@ export const Team = () => {
                     imageAsset={'/assets/avatars/jakub_jaworski.png'}
                     title="CMO assistant"
                     name="Jakub Jaworski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                
-                
-            </TeamPeopleContainer>
-            <Header>
-                Advisors
-            </Header>
-            <TeamPeopleContainer>
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
                     socials={<>
                         <Hyperlink href="https://www.linkedin.com/company/hashupit">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
