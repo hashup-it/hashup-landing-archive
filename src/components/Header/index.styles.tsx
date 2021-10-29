@@ -37,7 +37,7 @@ export const CartridgeContainer = styled.div`
 
     ${mediaQuery.tablet} {
         height: 50vw;
-        width: 50vw;
+        width: 80vw;
         
         margin-bottom: 0;
     }

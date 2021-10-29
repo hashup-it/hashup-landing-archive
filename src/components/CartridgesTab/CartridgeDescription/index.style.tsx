@@ -41,11 +41,20 @@ export const CartridgeDescriptionSmallText = styled(SmallHeaderText)`
 
     color: #CDCDCD;`
 
-export const CartridgeDescriptionImage = styled.div`
+export const CartridgeDescriptionImage = styled.div<({ cartridgeModel: any })>`
     grid-area: image;
     height: 100%;
 
     display: flex;
+    
+    align-items: center;
+    
+    > * {
+        position: absolute;
+        width: 42vw;
+        height: auto;
+        clip: auto;
+    }
 `
 
 export const CartridgeTargetItem = styled(ComparisonItem)`
