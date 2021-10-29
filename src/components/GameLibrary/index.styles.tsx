@@ -7,7 +7,7 @@ export const GameLibraryContainer = styled.div`
     
     display: flex;
     flex-direction: column;
-    margin-top: 300px;
+    margin-top: 150px;
     margin-bottom: 90px;
 `
 
@@ -47,8 +47,10 @@ export const RightWrapper = styled.div`
 export const NicknameInstructionsHeading = styled.span`
     color: white;
     padding: 0;
-    
+    margin-top: 45px;
     margin-bottom: 33px;
 `
 
-export const NicknameInstructionsList = styled(SectionList)``
+export const NicknameInstructionsList = styled(SectionList)`
+
+`

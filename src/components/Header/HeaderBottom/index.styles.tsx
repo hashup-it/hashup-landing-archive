@@ -35,7 +35,7 @@ export const StyledScrollDown = styled.div`
     display: flex;
     align-items: center;
     
-    ${mediaQuery.tablet} {
+    ${mediaQuery.laptop} {
         display: none;
     }
 `
@@ -47,6 +47,10 @@ export const StyledMouseIcon = styled.img`
 export const StyledBottomGroup = styled.div`
     display: flex;
     gap: 35px;
+
+    ${mediaQuery.laptop} {
+        justify-content: center;
+    }
     
     ${mediaQuery.tablet} {
         flex-direction: column;

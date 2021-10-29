@@ -65,6 +65,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
 
     const parsed = queryString.parse(window.location.search);
     const buddy = parsed.buddy;
+    console.log(buddy)
     const [userNickname, setUserNickname] = useState('');
     const [airdropDisabled, setAirdropDisabled] = useState(false)
     
@@ -79,6 +80,10 @@ const Airdrop: FunctionComponent<AirdropProps> = (
                 updateHashInfo(web3, contract)
             }
         })()
+    }, [])
+
+    useEffect(() => {
+        
     }, [])
 
     useEffect(() => {

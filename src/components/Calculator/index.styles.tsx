@@ -1,3 +1,4 @@
+import { mediaQuery } from "components/MediaQuery"
 import styled from "styled-components"
 import { Swatches } from "__styles__/Swatches"
 
@@ -6,7 +7,15 @@ export const StyledCalculator = styled.div`
     position: relative;
     margin-top: 76px;
     padding: 0px 117px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
+
+    ${mediaQuery.laptop} {
+        padding: 0px 0px;
+    }
+
+    ${mediaQuery.laptop} {
+        display: none;
+    }
 `
 
 export const StyledBackgroundImg = styled.img`

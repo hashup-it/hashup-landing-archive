@@ -155,6 +155,8 @@ export const SocialMediaGroup = styled.div`
         margin-left: 0;
     }
 
+
+
     > span {
         text-transform: uppercase;
 
@@ -167,6 +169,10 @@ export const SocialMediaGroup = styled.div`
         display: flex;
         align-items: center;
         letter-spacing: 0.08em;
+
+        ${mediaQuery.mobileL} {
+            display: none;
+        }
 
     }
 `
@@ -312,6 +318,8 @@ export const CompanyIds = styled.div`
     display: flex;
     align-items: center;
 
+
+
     color: #6D6D6D;
 `
 
@@ -325,6 +333,8 @@ export const Icon = styled.div<({ url: string })>`
     background: url(${props => '/assets/icons/' + props.url});
     background-repeat: no-repeat;
     background-position: center;
+
+
 
     :hover {
         border-color: white;

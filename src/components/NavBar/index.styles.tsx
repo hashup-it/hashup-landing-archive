@@ -7,9 +7,9 @@ export const StyledNavBar = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    display: grid;
+    
     padding: 40px;
-    grid-template-columns: 1fr auto 1fr;
+    
     font-size: 16px;
     color: ${Swatches.text_main};
     font-weight: 700;
@@ -17,11 +17,29 @@ export const StyledNavBar = styled.div`
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.8);
 
+
+
+
+    
+`
+
+export const MenuWrapper = styled.div`
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 1240px;
+    margin: 0 auto;
+
+    ${mediaQuery.laptopL} {
+        width: auto;
+        margin: 0;
+    }
+    
+
     ${mediaQuery.tablet} {
         grid-template-columns: 50px  1fr auto;
         align-items: center;
     }
-`
+`;
 
 export const Logo = styled.img`
     margin-top: 5px;
@@ -46,6 +64,8 @@ export const ButtonsMenu = styled.div`
     justify-content: flex-end;
     align-items: flex-start;
     gap: 60px;
+
+   
 
     > * {
         cursor: pointer;

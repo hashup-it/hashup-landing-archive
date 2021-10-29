@@ -4,6 +4,7 @@ const size = {
     mobileL: '425px',
     tablet: '768px',
     laptop: '1024px',
+    laptopM: '1320px',
     laptopL: '1440px',
     desktop: '2560px'
 }
@@ -16,6 +17,7 @@ export const mediaQuery = {
     mobileL: maxWidth(size.mobileL),
     tablet: maxWidth(size.tablet),
     laptop: maxWidth(size.laptop),
+    laptopM: maxWidth(size.laptopM),
     laptopL: maxWidth(size.laptopL),
     desktop: maxWidth(size.desktop),
     desktopL: maxWidth(size.desktop)

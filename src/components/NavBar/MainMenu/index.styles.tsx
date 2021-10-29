@@ -8,10 +8,15 @@ export const StyledMainMenu = styled.nav`
     gap: 50px;
     justify-content: center;
 
+    ${mediaQuery.laptop} {
+        gap: 20px;
+        font-size: 13px;
+    }
+
     ${mediaQuery.tablet} {
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 35px;
     }
 
     overflow-y: auto;

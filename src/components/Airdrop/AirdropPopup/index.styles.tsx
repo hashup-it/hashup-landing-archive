@@ -1,3 +1,4 @@
+import { mediaQuery } from "components/MediaQuery";
 import styled from "styled-components";
 import { hexToRGB } from "util/math";
 import { Swatches } from "__styles__/Swatches";
@@ -25,6 +26,10 @@ export const StyledPopupWindowWrapper = styled.div`
     position: relative;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 13.0133px;
+
+    ${mediaQuery.tablet} {
+        margin: 10px;
+    }
 `
 
 export const StyledPopupWindow = styled.div`
@@ -33,6 +38,10 @@ export const StyledPopupWindow = styled.div`
     padding: 28px 36px;
     color: white;
     position: relative;
+
+
+
+    
 `;
 
 export const StyledPopupHeader = styled.div`
@@ -62,6 +71,12 @@ export const StyledTelegramContainer = styled.div`
 
     align-items: center;
     justify-content: flex-start;
+
+    ${mediaQuery.tablet} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const StyledTelegramHeader = styled.h4`
