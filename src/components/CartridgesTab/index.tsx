@@ -11,6 +11,12 @@ import {
 import { CartridgeDescription } from './CartridgeDescription'
 import { CartridgeThumbnail } from './CartridgeThumbnail'
 
+import ModelRed from 'models/red.png'
+import ModelBlue from 'models/blue.png'
+import ModelGray from 'models/gray.png'
+import ModelGreen from 'models/green.png'
+import ModelGold from 'models/gold.png'
+
 export enum CartridgeColor {
     Green = '#6AAD38',
     Gold = '#BEA379',
@@ -73,6 +79,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Lorem ipslum dolores'
                 ]}
+                cartridgeModel={<img src={ModelGreen} />}
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -84,6 +91,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Menespeh amet dis dolor'
                 ]}
+                cartridgeModel={<img src={ModelGold} />}
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -97,6 +105,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Lorem ipslum dolores'
                 ]}
+                cartridgeModel={<img src={ModelBlue} />}
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -109,6 +118,7 @@ export const CartridgesTab = () => {
                     'Menespeh amet dis dolor',
                     'Lorem ipslum dolores'
                 ]}
+                cartridgeModel={<img src={ModelGray} />}
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -119,6 +129,7 @@ export const CartridgesTab = () => {
                 descriptionListContents={[
                     'Lorem ipslum dolores'
                 ]}
+                cartridgeModel={<img src={ModelRed} />}
             />
         </CartridgesTabContainer>
     )
