@@ -17,6 +17,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CartridgesTab } from './components/CartridgesTab'
 import ScrollToTop from './hook/scrollToTop'
 import Airdrop from 'components/Airdrop'
+import { Team } from './components/Team'
 
 export const App = () => {
     const [shownAccount, setShownAccount] = useState<string | null>(null)
@@ -61,6 +62,7 @@ export const App = () => {
                         <GamExplorer />
                         <InfoNotes />
                         <OurPartners />
+                        <Team />
                         <Roadmap />
                     </Route>
                     <Route exact path="/Cartridges">
