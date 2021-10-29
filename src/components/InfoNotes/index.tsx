@@ -44,7 +44,7 @@ export const InfoNotes = () => (
                 icon={svgBubble1}
                 label={
                     <>
-                        <ColoredText>Zdobądź płynność</ColoredText> dzięki spekulacji
+                        <ColoredText>Inwestuj</ColoredText> w&nbsp;gry
                     </>
                 }
                 content="Zarabiaj pieniądze spekulując swoją własną grą."

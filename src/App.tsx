@@ -51,7 +51,7 @@ export const App = () => {
                         <Comparison />
                         <GameLibrary />
                         <Airdrop
-                            account={null}
+                            account={shownAccount}
                             isWalletSelectorShown={isWalletSelectorShown}
                             setIsWalletSelectorShown={setIsWalletSelectorShown}
                         />

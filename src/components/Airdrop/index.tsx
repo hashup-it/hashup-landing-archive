@@ -55,7 +55,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
     const [hashForRef, setHashForRef] = useState(1337)
 
     const [nicknameInput, setNicknameInput] = useState('')
-    const [popupOpened, setPopupOpened] = useState(false)
+    const [popupOpened, setPopupOpened] = useState(true)
 
     const inputElement = useRef(null);
 
@@ -165,8 +165,8 @@ const Airdrop: FunctionComponent<AirdropProps> = (
     }
 
     return (
-        <StyledAirdrop>
-            <StyledAirdropHeader>
+        <StyledAirdrop id="airdrop">
+            <StyledAirdropHeader >
                 Join
                 the <BoldText>Big <ColoredText>Airdrop</ColoredText></BoldText> from <BoldText><ColoredText>#</ColoredText>HashUp</BoldText>
             </StyledAirdropHeader>
@@ -180,10 +180,9 @@ const Airdrop: FunctionComponent<AirdropProps> = (
                         onChange={handleNicknameInput}
                         disabled={airdropDisabled}
                         ref={inputElement}
-
                     />
-                    <StyledInputButton onClick={() => handleLoginButton()}>
-                        <StyledInputButtonFill />
+                    <StyledInputButton isDisabled={airdropDisabled} onClick={() => handleLoginButton()}>
+                        <StyledInputButtonFill isDisabled={airdropDisabled}/>
                     </StyledInputButton>
                 </StyledInputWrapper>
             </StyledAirdropMain>
@@ -198,7 +197,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
                 </StyledInfoItem>
                 <StyledInfoItem>
                     <StyledInfoLabel>Price <ColoredText>#</ColoredText></StyledInfoLabel>
-                    <StyledInfoValue>0.0075 $</StyledInfoValue>
+                    <StyledInfoValue>0.02 $</StyledInfoValue>
                 </StyledInfoItem>
             </StyledAirdropInfo>
             <StyledAirdropReferral>

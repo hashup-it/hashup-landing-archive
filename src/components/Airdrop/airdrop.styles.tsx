@@ -120,16 +120,12 @@ export const StyledInput = styled.input`
     }
 `
 
-export const StyledInputButton = styled.div`
-    background: linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.primary_color} 100%);
+export const StyledInputButton = styled.div<({ isDisabled : boolean })>`
+    background: ${props => props.isDisabled ? `linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.text_secondary} 100%)` : `linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.primary_color} 100%)`};
     position: relative;
     border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
+    cursor: ${props => props.isDisabled ? 'cursor' : 'pointer'};
 
-    :hover {
-        transition: 1s;
-        background: linear-gradient(90deg, ${Swatches.background_main} 0%, ${Swatches.primary_color} 100%);
-    }
 `
 
 export const StyledBeforeConnectWrapper = styled.div`
@@ -145,9 +141,9 @@ export const StyledBeforeConnectWrapper = styled.div`
     cursor: pointer;
 `
 
-export const StyledInputButtonFill = styled.div`
+export const StyledInputButtonFill = styled.div<({isDisabled: boolean})>`
     background-color: #010101;
-    background-image: url("/assets/icons/save.svg");
+    background-image: url(${props => props.isDisabled ? "/assets/icons/check.svg" : "/assets/icons/save.svg"});
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -156,6 +152,10 @@ export const StyledInputButtonFill = styled.div`
     top: 1px;
     left: 0;
     border-radius: inherit;
+
+    :hover {
+        background-image: url("/assets/icons/check.svg");
+    }
 `
 
 export const StyledAirdropInfo = styled.div`
