@@ -7,7 +7,7 @@ export const StyledCalculator = styled.div`
     position: relative;
     margin-top: 76px;
     padding: 0px 117px;
-    margin-bottom: 0px;
+    margin-bottom: 80px;
 
     ${mediaQuery.laptop} {
         padding: 0px 0px;

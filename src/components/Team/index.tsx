@@ -21,34 +21,20 @@ export const Team = () => {
                     imageAsset={'/assets/avatars/szymon_jankowski.png'}
                     title="ceo"
                     name="Szymon Jankowski"
-                    description="You are the only publisher. Don't let anyone make money off your hard work."
+                    description="Ekonomista, od młodego wieku widział potencjał w web3.
+                    "
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                        <Hyperlink href="https://twitter.com/HashUp_it">
-                            <SocialIcon src="/assets/icons/twitter.svg" />
-                        </Hyperlink>
-                    </>}
-                    outline={true}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    description="You are the only publisher. Don't let anyone make money off your hard work."
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                        <Hyperlink href="https://www.linkedin.com/in/jankowskiszymon/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
                     outline={true}
                 />
                 <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
+                    imageAsset={'/assets/avatars/filip_szydlowski.png'}
+                    title="cfo"
                     name="Filip Szydłowski"
-                    description="You are the only publisher. Don't let anyone make money off your hard work."
+                    description="Prawnik i sympatyk kryptowalut, obyty w pracy w kancelariach i startupach.                    "
                     socials={<>
                         <Hyperlink href="https://www.linkedin.com/company/hashupit">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
@@ -57,12 +43,24 @@ export const Team = () => {
                     outline={true}
                 />
                 <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    description="You are the only publisher. Don't let anyone make money off your hard work."
+                    imageAsset={'/assets/avatars/rafal_bielenia.png'}
+                    title="tech lead"
+                    name="Rafał Bielenia"
+                    description="Ma bogate doświadczenie w dziedzinie software'u i algorytmiki, pracował w Google i Microsoft."
                     socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                        <Hyperlink href="https://www.linkedin.com/in/rafal-bielenia-b87ab935/">
+                            <SocialIcon src="/assets/icons/linkedin.svg" />
+                        </Hyperlink>
+                    </>}
+                    outline={true}
+                />
+                <Person
+                    imageAsset={'/assets/avatars/cezary_dobrowolski.png'}
+                    title="cmo"
+                    name="Cezary Dobrowolski"
+                    description="Entuzjasta marketingu nadającego wartość. Uwielbia budować relację między klientami a marką."
+                    socials={<>
+                        <Hyperlink href="https://www.linkedin.com/in/jankowskiszymon/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
                     </>}
@@ -71,6 +69,53 @@ export const Team = () => {
             </CorePeopleContainer>
             <Header>
                 Team
+            </Header>
+            <TeamPeopleContainer>
+                <Person
+                    imageAsset={'/assets/avatars/tomasz_fiema.png'}
+                    title="head of design"
+                    name="Tomasz Fiema"
+                    socials={<>
+                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                            <SocialIcon src="/assets/icons/linkedin.svg" />
+                        </Hyperlink>
+                    </>}
+                />
+                <Person
+                    imageAsset={'/assets/avatars/damian_sarnecki.png'}
+                    title="Blockchain Dev"
+                    name="Damian Sarnecki"
+                    socials={<>
+                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                            <SocialIcon src="/assets/icons/linkedin.svg" />
+                        </Hyperlink>
+                    </>}
+                />
+                <Person
+                    imageAsset={'/assets/avatars/robert_dziubek.png'}
+                    title="Blockchain Dev"
+                    name="Robert Dziubek"
+                    socials={<>
+                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                            <SocialIcon src="/assets/icons/linkedin.svg" />
+                        </Hyperlink>
+                    </>}
+                />
+                <Person
+                    imageAsset={'/assets/avatars/jakub_jaworski.png'}
+                    title="CMO assistant"
+                    name="Jakub Jaworski"
+                    socials={<>
+                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                            <SocialIcon src="/assets/icons/linkedin.svg" />
+                        </Hyperlink>
+                    </>}
+                />
+                
+                
+            </TeamPeopleContainer>
+            <Header>
+                Advisors
             </Header>
             <TeamPeopleContainer>
                 <Person
@@ -113,72 +158,7 @@ export const Team = () => {
                         </Hyperlink>
                     </>}
                 />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
             </TeamPeopleContainer>
-            <Header>
-                Advisors
-            </Header>
-            <AdvisorsContainer>
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-                <Person
-                    imageAsset={'https://via.placeholder.com/150'}
-                    title="cto/cfo"
-                    name="Filip Szydłowski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                            <SocialIcon src="/assets/icons/linkedin.svg" />
-                        </Hyperlink>
-                    </>}
-                />
-            </AdvisorsContainer>
         </TeamContainer>
     )
 }

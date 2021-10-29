@@ -7,8 +7,8 @@ export const GameLibraryContainer = styled.div`
     
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
-    margin-bottom: 90px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 `
 
 export const ContentWrapper = styled.div`
@@ -18,7 +18,7 @@ export const ContentWrapper = styled.div`
 
     ${mediaQuery.laptop} {
         flex-direction: column;
-        backogrund-color: red;
+
     }
 `
 

@@ -5,7 +5,7 @@ import { globalHorizontalPadding } from "App.styles"
 
 export const StyledRoadmap = styled.div`
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0px;
 `
 
 export const StyledCarousele = styled.div`

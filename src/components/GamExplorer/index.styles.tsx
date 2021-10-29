@@ -4,6 +4,8 @@ import { SectionContainer } from '../Shared/sections.styles'
 export const StyledGamExplorer = styled.div`
     display: flex;
     justify-content: center;
+    margin-top: 100px;
+
 `
 
 export const GameExplorerContainer = styled(SectionContainer)`

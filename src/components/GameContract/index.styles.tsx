@@ -13,6 +13,8 @@ export const ReversedSectionContainer = styled(SectionContainer)`
         flex-direction: column-reverse;
 
     }
+
+    margin-bottom: 60px;
 `
 
 

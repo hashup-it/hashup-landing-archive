@@ -6,13 +6,14 @@ export const SectionContainer = styled.div`
     display: grid;
     grid-template-columns: 3fr 3fr;
     gap: 200px;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
 
     ${mediaQuery.laptop} {
         gap: 100px;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
         gap: 50px;
+        margin-bottom: 100px;
 
     }
 `

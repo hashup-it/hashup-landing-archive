@@ -20,7 +20,7 @@ export const Avatar = styled.img`
 `
 
 export const PersonDescription = styled.div<({ outline: boolean | undefined })>`
-    background: ${props => props.outline ? `linear-gradient(${Swatches.primary_color}, transparent)` : 'auto'};
+    background: ${props => props.outline ? `linear-gradient(${Swatches.primary_color} 0%, transparent 40%)` : 'auto'};
     padding: 1px;
     border-radius: 40px;
     position: relative;
