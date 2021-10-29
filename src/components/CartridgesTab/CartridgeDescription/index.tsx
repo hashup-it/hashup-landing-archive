@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
 import { SectionHeader } from '../../Shared/sections.styles'
 import { ColoredText } from '../../Shared'
@@ -24,14 +24,16 @@ export const CartridgeDescription = (
         headerCartridgeTypeText,
         descriptionText,
         targetText,
-        descriptionListContents
+        descriptionListContents,
+        cartridgeModel
     }: {
         leftBasedLayout: boolean,
         color: string,
         headerCartridgeTypeText: string,
         descriptionText: string,
         targetText: string,
-        descriptionListContents: string[]
+        descriptionListContents: string[],
+        cartridgeModel: any
     }
 ) => {
     return (
@@ -57,7 +59,10 @@ export const CartridgeDescription = (
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
             <CartridgeDescriptionImage>
-                <CartridgeScene cameraDistance={CameraDistance.cartridgesListing} />
+                <CartridgeScene
+                    cameraDistance={CameraDistance.cartridgesListing}
+                    cartridgeModel={cartridgeModel}
+                />
             </CartridgeDescriptionImage>
         </CartridgeDescriptionContainer>
     )
