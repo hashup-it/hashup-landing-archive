@@ -3,6 +3,18 @@ import { Swatches } from '__styles__/Swatches'
 import doneSvg from './icons/done.svg'
 import { mediaQuery } from '../../MediaQuery'
 
+export const StyledWrapper = styled.div`
+    cursor: grab;
+    padding: 4px 0;
+    flex-shrink: none;
+    width: 440px;
+    border: 1px solid black;
+
+    ${mediaQuery.mobileL} {
+        width: 100vw;
+    }
+`
+
 export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
     margin: auto;
     box-sizing: border-box;

@@ -17,6 +17,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { CartridgesTab } from './components/CartridgesTab'
 import ScrollToTop from './hook/scrollToTop'
 import Airdrop from 'components/Airdrop'
+import Calculator from 'components/Calculator'
 import { Team } from './components/Team'
 
 export const App = () => {
@@ -24,12 +25,13 @@ export const App = () => {
     const [isWalletSelectorShown, setIsWalletSelectorShown] = useState(false)
 
     const handleMetamaskConnection = async () => {
-        if ((window as any).ethereum) {
+        const w = window as any
 
-            const accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' })
-            setShownAccount(accounts[0]);
+        if (w.ethereum) {
+            const accounts = await w.ethereum.request({ method: 'eth_requestAccounts' })
+            setShownAccount(accounts[0])
 
-            (window as any).ethereum.on('accountsChanged', function (accounts : any) {
+            w.ethereum.on('accountsChanged', function (accounts: any) {
                 setShownAccount(accounts[0])
             })
         }
@@ -50,6 +52,7 @@ export const App = () => {
                         <LandingHeader />
                         <AboutUs />
                         <Comparison />
+                        <Calculator />
                         <GameLibrary />
                         <Airdrop
                             account={null}
