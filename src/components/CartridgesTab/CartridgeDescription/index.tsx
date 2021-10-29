@@ -58,7 +58,7 @@ export const CartridgeDescription = (
                     }
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
-            <CartridgeDescriptionImage>
+            <CartridgeDescriptionImage cartridgeModel={cartridgeModel}>
                 <CartridgeScene
                     cameraDistance={CameraDistance.cartridgesListing}
                     cartridgeModel={cartridgeModel}

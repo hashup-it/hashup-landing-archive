@@ -11,11 +11,11 @@ import {
 import { CartridgeDescription } from './CartridgeDescription'
 import { CartridgeThumbnail } from './CartridgeThumbnail'
 
-import ModelRed from '../CartridgeScene/Three/Red'
-import ModelBlue from '../CartridgeScene/Three/Blue'
-import ModelGray from '../CartridgeScene/Three/Gray'
-import ModelGreen from '../CartridgeScene/Three/Green'
-import ModelGold from '../CartridgeScene/Three/Gold'
+import ModelRed from 'models/red.png'
+import ModelBlue from 'models/blue.png'
+import ModelGray from 'models/gray.png'
+import ModelGreen from 'models/green.png'
+import ModelGold from 'models/gold.png'
 
 export enum CartridgeColor {
     Green = '#6AAD38',
@@ -79,7 +79,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<ModelGreen />}
+                cartridgeModel={<img src={ModelGreen} />}
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -91,7 +91,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Menespeh amet dis dolor'
                 ]}
-                cartridgeModel={<ModelGold />}
+                cartridgeModel={<img src={ModelGold} />}
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -105,7 +105,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<ModelBlue />}
+                cartridgeModel={<img src={ModelBlue} />}
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -118,7 +118,7 @@ export const CartridgesTab = () => {
                     'Menespeh amet dis dolor',
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<ModelGray />}
+                cartridgeModel={<img src={ModelGray} />}
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -129,7 +129,7 @@ export const CartridgesTab = () => {
                 descriptionListContents={[
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<ModelRed />}
+                cartridgeModel={<img src={ModelRed} />}
             />
         </CartridgesTabContainer>
     )
