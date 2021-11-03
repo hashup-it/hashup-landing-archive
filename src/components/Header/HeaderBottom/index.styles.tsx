@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Swatches } from '__styles__/Swatches'
-import { mediaQuery } from '../../MediaQuery'
+import styled from "styled-components"
+import { Swatches } from "__styles__/Swatches"
+import { mediaQuery } from "../../MediaQuery"
 
 export const StyledHeaderBottom = styled.div`
     position: absolute;
@@ -12,12 +12,12 @@ export const StyledHeaderBottom = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     ${mediaQuery.tablet} {
         flex-direction: column;
-        
+
         position: relative;
-        
+
         gap: 35px;
     }
 
@@ -34,7 +34,7 @@ export const StyledScrollDown = styled.div`
 
     display: flex;
     align-items: center;
-    
+
     ${mediaQuery.laptop} {
         display: none;
     }
@@ -51,7 +51,7 @@ export const StyledBottomGroup = styled.div`
     ${mediaQuery.laptop} {
         justify-content: center;
     }
-    
+
     ${mediaQuery.tablet} {
         flex-direction: column;
     }
@@ -96,7 +96,7 @@ export const StyledTokenInfoItem = styled.div`
     gap: 7px;
 `
 
-export const StyledTokenIcon = styled.div<({ icon: string })>`
+export const StyledTokenIcon = styled.div<{ icon: string }>`
     width: 15px;
     height: 15px;
     background: url(${props => props.icon});
@@ -130,7 +130,6 @@ export const StyledCopyGroup = styled.div`
         }
     }
 `
-
 
 export const Tooltip = styled.span`
     display: none;

@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../MediaQuery'
-import { Swatches } from '../../__styles__/Swatches'
+import styled from "styled-components"
+import { mediaQuery } from "../MediaQuery"
+import { Swatches } from "../../__styles__/Swatches"
 
 export const StyledAboutUs = styled.div`
     position: relative;
@@ -21,21 +21,18 @@ export const SectionContainer = styled.div`
 
     ${mediaQuery.tablet} {
         gap: 0px;
-        margin-bottom: 0px
+        margin-bottom: 0px;
     }
 
     ${mediaQuery.laptop} {
-
         grid-template-columns: auto;
         grid-template-rows: auto auto;
     }
-
-
 `
 
 export const BackgroundWorld = styled.div`
     position: absolute;
-    background-image: url('/assets/background-world.png');
+    background-image: url("/assets/background-world.png");
     width: 100vw;
     height: 200vh;
     background-size: 80vw;
@@ -48,7 +45,7 @@ export const BackgroundWorld = styled.div`
 
 export const RadialGradient = styled.div`
     position: absolute;
-    background: #C4C4C4;
+    background: #c4c4c4;
     opacity: 0.2;
     filter: blur(122px);
     border-radius: 326px;
@@ -128,9 +125,9 @@ export const CardLine = styled.div`
 
 export const CardParticles = styled.div`
     position: absolute;
-    background: url('/assets/card-particles.png');
-    width : 300px;
-    height :300px;
+    background: url("/assets/card-particles.png");
+    width: 300px;
+    height: 300px;
     background-repeat: none;
     top: -40px;
     right: -40px;

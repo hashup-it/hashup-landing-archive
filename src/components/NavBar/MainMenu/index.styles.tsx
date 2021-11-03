@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../../MediaQuery'
-import { FooterTopLeft } from '../../Footer/index.styles'
+import styled from "styled-components"
+import { mediaQuery } from "../../MediaQuery"
+import { FooterTopLeft } from "../../Footer/index.styles"
 
 export const StyledMainMenu = styled.nav`
     display: flex;

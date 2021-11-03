@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import { SectionHeader } from '../Shared/sections.styles'
-import { mediaQuery } from '../MediaQuery'
+import styled from "styled-components"
+import { SectionHeader } from "../Shared/sections.styles"
+import { mediaQuery } from "../MediaQuery"
 
 export const OurPartnersContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    
+
     margin-top: 124px;
     margin-bottom: 230px;
 `
@@ -39,7 +39,7 @@ export const SponsorLogosContainer = styled.div`
         filter: invert() brightness(3);
 
         :hover {
-            opacity: .5;
+            opacity: 0.5;
         }
     }
 
@@ -74,7 +74,7 @@ export const QuoteTextContainer = styled.div`
     color: white;
 
     :before {
-        content: '“';
+        content: "“";
         position: absolute;
         top: -1em;
         left: -1em;
@@ -85,7 +85,7 @@ export const QuoteTextContainer = styled.div`
         font-size: 38px;
         line-height: 160%;
 
-        color: #FF3F3F;
+        color: #ff3f3f;
     }
 
     ${mediaQuery.tablet} {

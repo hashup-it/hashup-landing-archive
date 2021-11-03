@@ -1,5 +1,5 @@
-import { FooterTop, MenuItem, StyledMainMenu } from './index.styles'
-import { Hyperlink } from '../../Shared/sections.styles'
+import { FooterTop, MenuItem, StyledMainMenu } from "./index.styles"
+import { Hyperlink } from "../../Shared/sections.styles"
 import {
     AddressLineEmphasized,
     CompanyIds,
@@ -11,26 +11,19 @@ import {
     Icon,
     ListHeader,
     MailLink,
-    SocialMediaGroup
-} from '../../Footer/index.styles'
-import { NavLink } from 'react-router-dom'
+    SocialMediaGroup,
+} from "../../Footer/index.styles"
+import { NavLink } from "react-router-dom"
 
-export const MainMenu = (
-    { isMobileMenuShown }:
-        { isMobileMenuShown: boolean }
-) => {
+export const MainMenu = ({ isMobileMenuShown }: { isMobileMenuShown: boolean }) => {
     return (
         <StyledMainMenu>
             <MenuItem>
-                <Hyperlink href="/#ecosystem">
-                    Ecosystem
-                </Hyperlink>
+                <Hyperlink href="/#ecosystem">Ecosystem</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             <MenuItem>
-                <NavLink to="/Cartridges">
-                    Cartridges
-                </NavLink>
+                <NavLink to="/Cartridges">Cartridges</NavLink>
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
@@ -38,37 +31,45 @@ export const MainMenu = (
             </MenuItem>
             {/*<MenuItem>Investment</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
-                    Docs
-                </Hyperlink>
+                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">Docs</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
-            {
-                isMobileMenuShown && <>
+            {isMobileMenuShown && (
+                <>
                     <SocialMediaGroup>
-                        <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
-                        <a href="https://t.me/HashUpAnnouncements"><Icon url={'telegram.svg'} /></a>
-                        <a href="https://twitter.com/HashUp_it"><Icon url={'twitter.svg'} /></a>
-                        <a href="https://www.facebook.com/HashUpIt"><Icon url={'facebook.svg'} /></a>
-                        <a href="https://www.instagram.com/hashup.it/"><Icon url={'instagram.svg'} /></a>
+                        <a href="https://www.linkedin.com/company/hashupit">
+                            <Icon url={"linkedin.svg"} />
+                        </a>
+                        <a href="https://t.me/HashUpAnnouncements">
+                            <Icon url={"telegram.svg"} />
+                        </a>
+                        <a href="https://twitter.com/HashUp_it">
+                            <Icon url={"twitter.svg"} />
+                        </a>
+                        <a href="https://www.facebook.com/HashUpIt">
+                            <Icon url={"facebook.svg"} />
+                        </a>
+                        <a href="https://www.instagram.com/hashup.it/">
+                            <Icon url={"instagram.svg"} />
+                        </a>
                     </SocialMediaGroup>
                     <FooterTop>
                         <ListHeader>Nasza siedziba</ListHeader>
                         <ContactField>
-                            <AddressLineEmphasized>
-                                HashUp P.S.A.
-                            </AddressLineEmphasized>
-                            Al. Jana Pawła II 27<br />
-                            00-867 Warszawa<br />
+                            <AddressLineEmphasized>HashUp P.S.A.</AddressLineEmphasized>
+                            Al. Jana Pawła II 27
                             <br />
-                            <MailLink href="mailto:hello@hashup.it">
-                                hello@hashup.it
-                            </MailLink>
+                            00-867 Warszawa
+                            <br />
+                            <br />
+                            <MailLink href="mailto:hello@hashup.it">hello@hashup.it</MailLink>
                             <br />
                         </ContactField>
                         <CompanyIds>
-                            NIP: 5272974670<br />
-                            KRS: 0000927509<br />
+                            NIP: 5272974670
+                            <br />
+                            KRS: 0000927509
+                            <br />
                         </CompanyIds>
                     </FooterTop>
                     <FooterBottom>
@@ -92,7 +93,7 @@ export const MainMenu = (
                         <Copyright>Copyright © by HashUp. All Rights Reserved.</Copyright>
                     </FooterBottom>
                 </>
-            }
+            )}
         </StyledMainMenu>
     )
 }

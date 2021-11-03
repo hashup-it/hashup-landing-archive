@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import {
     FormContainer,
     NewsletterContainer,
     StyledFormDescription,
     StyledInput,
-    StyledSignUpButton
-} from './index.styles'
-import { ListHeader } from '../index.styles'
+    StyledSignUpButton,
+} from "./index.styles"
+import { ListHeader } from "../index.styles"
 
 export const Newsletter = () => {
-    const [mailAddress, setMailAddress] = useState('')
+    const [mailAddress, setMailAddress] = useState("")
 
     const signUp = async () => {
         console.log(mailAddress)

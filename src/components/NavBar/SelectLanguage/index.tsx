@@ -1,4 +1,4 @@
-import { StyledSelectLanguage } from './index.styles'
+import { StyledSelectLanguage } from "./index.styles"
 
 export const SelectLanguage = () => {
     return (

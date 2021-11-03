@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useRef, useState } from "react"
+import { FC, useEffect, useMemo, useRef } from "react"
 import {
     StyledSlider,
     StyledSliderWrapper,
@@ -34,11 +34,11 @@ const Slider: FC<SliderProps> = ({
         if (sliderRef.current) {
             return sliderRef.current.querySelector(".rc-slider-handle")
         }
-    }, [sliderRef.current])
+    }, [sliderRef])
 
     useEffect(() => {
         setValue(defaultValue)
-    }, [])
+    }, [defaultValue, setValue])
 
     useEffect(() => {
         if (sliderHandle) {
@@ -48,7 +48,7 @@ const Slider: FC<SliderProps> = ({
             // so we have to manipulate DOM directly (to use HTML attribute)
             sliderHandle.setAttribute(DISPLAY_VALUE_ATTRIBUTE, displayValue)
         }
-    }, [sliderRef.current, displayValue, sliderHandle])
+    }, [sliderRef, displayValue, sliderHandle])
 
     return (
         <StyledSlider>

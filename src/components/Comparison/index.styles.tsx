@@ -1,8 +1,7 @@
-import styled from 'styled-components'
-import { Swatches } from '../../__styles__/Swatches'
-import { hexToRGB } from '../../util/math'
+import styled from "styled-components"
+import { Swatches } from "../../__styles__/Swatches"
+import { hexToRGB } from "../../util/math"
 
-const comparisonItemWidth = 240
 export const StyledComparison = styled.div`
     margin-top: 0px;
     margin-bottom: 250px;
@@ -32,13 +31,16 @@ export const StyledComparisonText = styled.div`
     padding-bottom: 40px;
 `
 
-export const ComparisonItem = styled.div<({ outlineColor: string })>`
-    background: linear-gradient(90deg, ${props => hexToRGB(props.outlineColor, 0)} 35%, ${props => props.outlineColor} 100%);
+export const ComparisonItem = styled.div<{ outlineColor: string }>`
+    background: linear-gradient(
+        90deg,
+        ${props => hexToRGB(props.outlineColor, 0)} 35%,
+        ${props => props.outlineColor} 100%
+    );
     padding: 1px;
     display: grid;
     border-radius: 13.0133px;
     position: relative;
-
 `
 
 export const ComparisonItemContent = styled.ul`
@@ -68,12 +70,11 @@ export const StyledPro = styled.li`
     margin-top: 4.5px;
 
     &::before {
-        content: '#';
+        content: "#";
         color: ${Swatches.primary_color};
         margin-right: 27px;
         font-size: 17px;
     }
-
 `
 
 export const StyledCon = styled.li`
@@ -83,19 +84,17 @@ export const StyledCon = styled.li`
     font-weight: normal;
     margin-top: 4.5px;
 
-    color: #CDCDCD;
-
+    color: #cdcdcd;
 
     &::before {
-        content: '';
+        content: "";
         display: inline-block;
         height: 5px;
         width: 5px;
         margin-bottom: 1.5px;
-        background-color: #CDCDCD;
+        background-color: #cdcdcd;
         margin-right: 27px;
     }
-
 `
 
 export const StyledPlus = styled.div`
@@ -111,11 +110,9 @@ export const StyledPlus = styled.div`
     align-items: center;
     bottom: 0;
     margin: auto;
-
 `
 
-export const LineText = styled.div<({ color: string })>`
-
+export const LineText = styled.div<{ color: string }>`
     display: flex;
     align-items: center;
     grid-column: span 3;
@@ -129,11 +126,14 @@ export const LineText = styled.div<({ color: string })>`
     text-transform: uppercase;
     position: sticky;
 
-
     ::after {
-        content: '';
+        content: "";
         width: 60vw;
-        background: linear-gradient(90deg, ${props => hexToRGB(props.color, 0.3)} 50%, ${props => hexToRGB(props.color, 0)} 100%);
+        background: linear-gradient(
+            90deg,
+            ${props => hexToRGB(props.color, 0.3)} 50%,
+            ${props => hexToRGB(props.color, 0)} 100%
+        );
         height: 4px;
         margin-left: 33px;
     }

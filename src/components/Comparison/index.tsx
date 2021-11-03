@@ -1,6 +1,6 @@
-import { FunctionComponent } from 'react'
-import { ColoredText } from '../Shared'
-import { Swatches } from '../../__styles__/Swatches'
+import { FunctionComponent } from "react"
+import { ColoredText } from "../Shared"
+import { Swatches } from "../../__styles__/Swatches"
 import {
     ComparisonItem,
     ComparisonItemContent,
@@ -10,19 +10,19 @@ import {
     StyledCon,
     StyledPlus,
     StyledPro,
-    StyledWrapper
-} from './index.styles'
+    StyledWrapper,
+} from "./index.styles"
 
-interface ComparisonProps {
-
-}
+interface ComparisonProps {}
 
 const Comparison: FunctionComponent<ComparisonProps> = () => {
     return (
         <StyledComparison>
             <StyledComparisonText>Dystrybucja tradycyjna</StyledComparisonText>
             <StyledComparisonText>Dystrybucja cyfrowa</StyledComparisonText>
-            <StyledComparisonText>Dystrybucja z <ColoredText>#</ColoredText></StyledComparisonText>
+            <StyledComparisonText>
+                Dystrybucja z <ColoredText>#</ColoredText>
+            </StyledComparisonText>
             <StyledWrapper>
                 <LineText color={Swatches.primary_color}>Gains</LineText>
             </StyledWrapper>
