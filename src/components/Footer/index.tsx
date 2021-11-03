@@ -40,7 +40,7 @@ export const Footer = () => {
                     <Logo src="/assets/logo.svg" />
                 </NavLink>
                 <SocialMediaGroup>
-                    <span>Our&nbsp;<ColoredText>social media</ColoredText></span>
+                    <span>Nasze&nbsp;<ColoredText>social media</ColoredText></span>
                     <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
                     <a href="https://t.me/HashUpAnnouncements"><Icon url={'telegram.svg'} /></a>
                     <a href="https://twitter.com/HashUp_it"><Icon url={'twitter.svg'} /></a>

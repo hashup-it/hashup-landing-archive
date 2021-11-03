@@ -182,7 +182,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
                 <StyledInputWrapper>
                     <StyledInputIcon />
                     <StyledInput
-                        placeholder="Enter your new HashUp nickname"
+                        placeholder="Wpisz swój nowy nick HashUp"
                         onChange={handleNicknameInput}
                         disabled={airdropDisabled}
                         ref={inputElement}
@@ -194,15 +194,15 @@ const Airdrop: FunctionComponent<AirdropProps> = (
             </StyledAirdropMain>
             <StyledAirdropInfo>
                 <StyledInfoItem>
-                    <StyledInfoLabel>Token left:</StyledInfoLabel>
+                    <StyledInfoLabel>Pozostało #:</StyledInfoLabel>
                     <StyledInfoValue>{tokenLeft}</StyledInfoValue>
                 </StyledInfoItem>
                 <StyledInfoItem>
-                    <StyledInfoLabel>Gamers count:</StyledInfoLabel>
+                    <StyledInfoLabel>Liczba graczy:</StyledInfoLabel>
                     <StyledInfoValue>{gamersCount}</StyledInfoValue>
                 </StyledInfoItem>
                 <StyledInfoItem>
-                    <StyledInfoLabel>Price <ColoredText>#</ColoredText></StyledInfoLabel>
+                    <StyledInfoLabel>Cena <ColoredText>#</ColoredText></StyledInfoLabel>
                     <StyledInfoValue>0.02 $</StyledInfoValue>
                 </StyledInfoItem>
             </StyledAirdropInfo>
@@ -212,8 +212,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
                     <StyledBeforeConnectWrapper onClick={
                         () => setIsWalletSelectorShown(true)
                     }>
-                        Connect to metamask first to&nbsp;
-                        <BoldText> access referral options</BoldText>
+                        Połącz się z Metamask by skopiować reflink
                     </StyledBeforeConnectWrapper>
                 }
                 {

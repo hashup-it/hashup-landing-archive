@@ -16,16 +16,16 @@ export const AirdropPopup :FC<AidropPopupProps> = ({
             <StyledPopupWindowWrapper>
                 <StyledPopupWindow>
                     <StyledClose onClick={() => setPopupOpened(false)} src="/assets/icons/x-circle.svg"/>
-                    <StyledPopupHeader>Success</StyledPopupHeader>
+                    <StyledPopupHeader>Udało się!</StyledPopupHeader>
                     <StyledPopupText>
-                        We have just sent your first <ColoredText>#Hash</ColoredText> to your wallet.
+                        Właśnie wysłaliśmy twoje pierwsze <ColoredText>#Hash</ColoredText> na twój adres.
                     </StyledPopupText>
                     <StyledAddToMetamaskGroup>
-                        Add Hash to metamask &gt; <AddToMetamask/>
+                        Dodaj Hash do Metamaska &gt; <AddToMetamask/>
                     </StyledAddToMetamaskGroup>
                     <StyledTelegramContainer>
                         <StyledTelegramHeader>
-                            Be sure to <ColoredText>join</ColoredText><br/> our social media
+                             <ColoredText>Obserwuj</ColoredText><br/> nasze social media
                         </StyledTelegramHeader>
                         <StyledTelegramLink>
                             <Hyperlink href="https://t.me/HashUpAnnouncements">
@@ -34,7 +34,7 @@ export const AirdropPopup :FC<AidropPopupProps> = ({
                                 </StyledTelegramIconWrapper>
                             </Hyperlink>
                             <StyledTelegramText>
-                                <ColoredText>Announcement</ColoredText><br/>Twitter
+                                Twitter
                             </StyledTelegramText>
                         </StyledTelegramLink>
                         <StyledTelegramLink>
@@ -44,7 +44,7 @@ export const AirdropPopup :FC<AidropPopupProps> = ({
                                 </StyledTelegramIconWrapper>
                             </Hyperlink>
                             <StyledTelegramText>
-                                <ColoredText>Announcement</ColoredText><br/>Telegram
+                                Telegram
                             </StyledTelegramText>
                         </StyledTelegramLink>
                     </StyledTelegramContainer>
