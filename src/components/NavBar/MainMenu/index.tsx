@@ -14,6 +14,7 @@ import {
     SocialMediaGroup,
 } from "../../Footer/index.styles"
 import { NavLink } from "react-router-dom"
+import { SelectLanguage } from "../SelectLanguage"
 
 export const MainMenu = ({ isMobileMenuShown }: { isMobileMenuShown: boolean }) => {
     return (
@@ -35,6 +36,7 @@ export const MainMenu = ({ isMobileMenuShown }: { isMobileMenuShown: boolean }) 
                 </Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
+            <SelectLanguage/>
             {isMobileMenuShown && (
                 <>
                     <SocialMediaGroup>
