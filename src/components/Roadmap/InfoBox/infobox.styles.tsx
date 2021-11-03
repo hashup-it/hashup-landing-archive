@@ -8,7 +8,6 @@ export const StyledWrapper = styled.div`
     padding: 4px 0;
     flex-shrink: none;
     width: 440px;
-    border: 1px solid black;
 
     ${mediaQuery.mobileL} {
         width: 100vw;
