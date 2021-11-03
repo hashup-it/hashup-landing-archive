@@ -1,9 +1,9 @@
-import React from 'react'
-import { CorePeopleContainer, Header, TeamContainer, TeamPeopleContainer } from './index.style'
-import { Hyperlink, SectionLabel } from '../Shared/sections.styles'
-import { ColoredText } from '../Shared'
-import { Person } from './Person'
-import { SocialIcon } from '../Header/HeaderBottom/index.styles'
+import { CorePeopleContainer, Header, TeamContainer, TeamPeopleContainer } from "./index.style"
+import { Hyperlink, SectionLabel } from "../Shared/sections.styles"
+import { ColoredText } from "../Shared"
+import { Person } from "./Person"
+import { SocialIcon } from "../Header/HeaderBottom/index.styles"
+
 
 export const Team = () => {
     return (
@@ -21,9 +21,9 @@ export const Team = () => {
                     imageAsset={'/assets/avatars/szymon_jankowski.png'}
                     title="ceo"
                     name="Szymon Jankowski"
-                    description="Pasjonuje się ekonomią, informatyką i praktycznymi zastosowaniami blockchain.
-                    "
-                    socials={<>
+                    description="Pasjonuje się ekonomią, informatyką i praktycznymi zastosowaniami blockchain."
+                socials={
+                    <>
                         <Hyperlink href="https://www.linkedin.com/in/jankowskiszymon/">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
@@ -104,14 +104,19 @@ export const Team = () => {
                 <Person
                     imageAsset={'/assets/avatars/jakub_jaworski.png'}
                     title="CMO assistant"
-                    name="Jakub Jaworski"
-                    socials={<>
-                        <Hyperlink href="https://www.linkedin.com/in/jakub-jaworski-1189961aa">
+                  
+                name="Jakub Jaworski"
+                socials={
+                    <>
+                        <Hyperlink href="https://www.linkedin.com/company/hashupit">
                             <SocialIcon src="/assets/icons/linkedin.svg" />
                         </Hyperlink>
-                    </>}
-                />
-            </TeamPeopleContainer>
-        </TeamContainer>
-    )
+                    </>
+                }
+            />
+        </TeamPeopleContainer>
+    </TeamContainer>
+)
 }
+
+export default Team

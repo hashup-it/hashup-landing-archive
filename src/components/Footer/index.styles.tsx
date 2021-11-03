@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../MediaQuery'
-import { Swatches } from '../../__styles__/Swatches'
+import styled from "styled-components"
+import { mediaQuery } from "../MediaQuery"
+import { Swatches } from "../../__styles__/Swatches"
 
 export const StyledFooter = styled.div`
     position: relative;
@@ -25,10 +25,9 @@ export const FooterTopLeft = styled.div`
     line-height: 22px;
 `
 
-
 export const FooterBottom = styled.div`
     position: relative;
-    
+
     padding: 32px 0px 32px 0px;
     display: flex;
     justify-content: space-between;
@@ -54,7 +53,7 @@ export const Copyright = styled.span`
     display: flex;
     align-items: center;
 
-    color: #8A8F98;
+    color: #8a8f98;
 `
 
 export const FooterBottomGroup = styled.div`
@@ -86,7 +85,6 @@ export const FooterHeading = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 40px;
-
     }
 `
 
@@ -113,7 +111,7 @@ export const FooterQuickNavigation = styled.div`
 `
 
 export const FooterSeparatorAccent = styled.div`
-    background: url('assets/icons/footer-separator-accent.svg');
+    background: url("assets/icons/footer-separator-accent.svg");
 
     width: 280px;
     height: 2px;
@@ -132,7 +130,7 @@ export const FooterSeparatorAccent = styled.div`
 `
 
 export const FooterSeparatorBase = styled.div`
-    background: url('assets/icons/footer-separator-base.svg');
+    background: url("assets/icons/footer-separator-base.svg");
 
     width: 1440px;
     height: 2px;
@@ -155,8 +153,6 @@ export const SocialMediaGroup = styled.div`
         margin-left: 0;
     }
 
-
-
     > span {
         text-transform: uppercase;
 
@@ -173,7 +169,6 @@ export const SocialMediaGroup = styled.div`
         ${mediaQuery.mobileL} {
             display: none;
         }
-
     }
 `
 
@@ -187,7 +182,7 @@ export const FooterLink = styled.div`
     display: flex;
     align-items: center;
 
-    color: #8A8F98;
+    color: #8a8f98;
 
     margin-left: 33px;
     cursor: pointer;
@@ -199,12 +194,9 @@ export const FooterLink = styled.div`
     ${mediaQuery.tablet} {
         margin-left: 0;
     }
-
-
 `
 
-export const FooterMenu = styled.div`
-`
+export const FooterMenu = styled.div``
 
 export const MenuLabel = styled.span`
     color: ${Swatches.primary_color};
@@ -241,7 +233,7 @@ export const MenuList = styled.ul`
     list-style-type: none;
 
     padding: 0;
-    color: #8A8F98;
+    color: #8a8f98;
     font-weight: normal;
     font-size: 14px;
 
@@ -262,13 +254,12 @@ export const ListHeader = styled.div`
     align-items: center;
     letter-spacing: 0.08em;
 
-    color: #6D6D6D;
+    color: #6d6d6d;
 
     margin-bottom: 10px;
 `
 
-export const MenuHeader = styled(ListHeader)`
-`
+export const MenuHeader = styled(ListHeader)``
 
 export const MenuItem = styled.li`
     color: white;
@@ -318,23 +309,19 @@ export const CompanyIds = styled.div`
     display: flex;
     align-items: center;
 
-
-
-    color: #6D6D6D;
+    color: #6d6d6d;
 `
 
-export const Icon = styled.div<({ url: string })>`
+export const Icon = styled.div<{ url: string }>`
     width: 33px;
     height: 33px;
     border-radius: 50%;
     border: 0.635381px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
 
-    background: url(${props => '/assets/icons/' + props.url});
+    background: url(${props => "/assets/icons/" + props.url});
     background-repeat: no-repeat;
     background-position: center;
-
-
 
     :hover {
         border-color: white;

@@ -1,18 +1,18 @@
-import { FC } from 'react'
-import { SectionHeader, SectionLabel } from '../Shared/sections.styles'
-import { ColoredText } from '../Shared'
-import { randomInt } from 'util/math'
+import { FC } from "react"
+import { SectionHeader, SectionLabel } from "../Shared/sections.styles"
+import { ColoredText } from "../Shared"
+import { randomInt } from "util/math"
 import {
     StyledInfoNotes,
     StyledNote,
     StyledNoteBubble,
     StyledNoteContent,
     StyledNoteLabel,
-    StyledNotesArea
-} from './index.styles'
-import svgBubble1 from './icons/bubble-1.svg'
-import svgBubble2 from './icons/bubble-2.svg'
-import svgBubble3 from './icons/bubble-3.svg'
+    StyledNotesArea,
+} from "./index.styles"
+import svgBubble1 from "./icons/bubble-1.svg"
+import svgBubble2 from "./icons/bubble-2.svg"
+import svgBubble3 from "./icons/bubble-3.svg"
 
 interface NoteProps {
     readonly label: JSX.Element
@@ -31,7 +31,7 @@ export const Note: FC<NoteProps> = ({ content, label, icon }) => (
     </StyledNote>
 )
 
-export const InfoNotes = () => (
+const InfoNotes = () => (
     <StyledInfoNotes>
         <SectionLabel>
             <ColoredText>game</ColoredText>change.io
@@ -72,3 +72,5 @@ export const InfoNotes = () => (
         </StyledNotesArea>
     </StyledInfoNotes>
 )
+
+export default InfoNotes

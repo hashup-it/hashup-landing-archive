@@ -1,15 +1,15 @@
-import styled from 'styled-components'
-import { Swatches } from '__styles__/Swatches'
-import { hexToRGB } from 'util/math'
+import styled from "styled-components"
+import { Swatches } from "__styles__/Swatches"
+import { hexToRGB } from "util/math"
 
-export const ColoredText = styled.span<({ color?: string })>`
+export const ColoredText = styled.span<{ color?: string }>`
     color: ${props => props.color ?? Swatches.primary_color};
 `
 
 export const ButtonOutlined = styled.a`
     text-decoration: none;
 
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     box-sizing: border-box;
     border-radius: 15px;
     background: none;
@@ -49,7 +49,7 @@ export const StyledTopLine = styled.div`
 `
 
 /* to delete */
-export const StyledContainerOutline = styled.div<({ outlineColor: string })>`
+export const StyledContainerOutline = styled.div<{ outlineColor: string }>`
     position: absolute;
     width: 100%;
     height: 100%;
@@ -61,14 +61,18 @@ export const StyledContainerOutline = styled.div<({ outlineColor: string })>`
     top: -1px;
     left: -1px;
     background: rgb(22, 22, 22);
-    background: linear-gradient(90deg, ${props => hexToRGB(props.outlineColor, 0.5)} 43%, ${props => props.outlineColor} 100%);
+    background: linear-gradient(
+        90deg,
+        ${props => hexToRGB(props.outlineColor, 0.5)} 43%,
+        ${props => props.outlineColor} 100%
+    );
 `
 
 export const AccentLongEmDash = styled.span`
     display: inline-block;
-    background: url('assets/icons/accented-long-em-dash.svg');
+    background: url("assets/icons/accented-long-em-dash.svg");
     height: 2px;
     width: 18px;
     margin: 1em;
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
 `

@@ -1,10 +1,10 @@
-import hashInfo from 'components/Airdrop/hash-info'
-import { useEffect, useState } from 'react'
-import { FunctionComponent } from 'react'
-import { BoldText, ColoredText } from '../../Shared'
-import { Hyperlink } from '../../Shared/sections.styles'
-import { AddToMetamask } from './AddToMetamask'
-import { CopyAdress } from './CopyAdress'
+import hashInfo from "components/Airdrop/hash-info"
+import { useEffect, useState } from "react"
+import { FunctionComponent } from "react"
+import { BoldText, ColoredText } from "../../Shared"
+import { Hyperlink } from "../../Shared/sections.styles"
+import { AddToMetamask } from "./AddToMetamask"
+import { CopyAdress } from "./CopyAdress"
 import {
     SocialIcon,
     StyledBottomGroup,
@@ -14,24 +14,24 @@ import {
     StyledScrollDown,
     StyledSocialMedia,
     StyledTokenInfo,
-    StyledTokenInfoItem
-} from './index.styles'
+    StyledTokenInfoItem,
+} from "./index.styles"
 
-import Web3 from 'web3'
-import { AbiItem } from 'web3-utils'
+import Web3 from "web3"
+import { AbiItem } from "web3-utils"
 
-interface HeaderBottomProps {
-
-}
+interface HeaderBottomProps {}
 
 const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
-
     const [gamersCount, setGamersCount] = useState(1337)
 
     useEffect(() => {
-        (async () => {
+        ;(async () => {
             const web3 = new Web3("https://bsc-dataseed.binance.org/")
-            const contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress)
+            const contract = await new web3.eth.Contract(
+                hashInfo.abi as AbiItem[],
+                hashInfo.contractAddress
+            )
             let gamersCountRes = await contract.methods.gamersCount().call()
             setGamersCount(gamersCountRes)
         })()

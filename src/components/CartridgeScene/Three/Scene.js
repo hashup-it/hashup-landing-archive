@@ -6,13 +6,13 @@ source: https://sketchfab.com/3d-models/hashupcartdridge-gold-6c8fa82a761a4392a1
 title: HashUpCartdridge_Gold
 */
 
-import React, { useEffect, useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useEffect, useRef } from "react"
+import { useGLTF } from "@react-three/drei"
 
 export default function Model({ ...props }) {
     const group = useRef()
     const mesh = useRef()
-    const { nodes, materials } = useGLTF('/assets/models/scene/scene.gltf')
+    const { nodes, materials } = useGLTF("/assets/models/scene/scene.gltf")
 
     useEffect(() => {
         mesh.current.geometry.center()
@@ -21,7 +21,7 @@ export default function Model({ ...props }) {
     return (
         <group ref={group} {...props} dispose={null}>
             <group rotation={[-Math.PI / 2, 0, 0]}>
-                <group rotation={[Math.PI / 2, -Math.PI / 2, 0]} scale={.15}>
+                <group rotation={[Math.PI / 2, -Math.PI / 2, 0]} scale={0.15}>
                     <mesh
                         geometry={nodes.NESCartridge_low_NESCartridge_0.geometry}
                         material={materials.NESCartridge}
@@ -34,4 +34,4 @@ export default function Model({ ...props }) {
     )
 }
 
-useGLTF.preload('/assets/models/scene/scene.gltf')
+useGLTF.preload("/assets/models/scene/scene.gltf")

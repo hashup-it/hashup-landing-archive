@@ -1,12 +1,11 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../../MediaQuery'
+import styled from "styled-components"
+import { mediaQuery } from "../../MediaQuery"
 
 export const StyledConnectWallet = styled.div`
     display: flex;
     align-items: flex-start;
     gap: 12px;
     margin-right: 10px;
-
 `
 
 export const StyledWalletTextWrapper = styled.div`
@@ -31,6 +30,5 @@ export const WalletHideWrapper = styled.div`
 `
 
 export const WalletIcon = styled.img`
-
     margin-top: -3px;
 `

@@ -1,11 +1,11 @@
-import { mediaQuery } from 'components/MediaQuery'
-import styled from 'styled-components'
-import { SectionHeader } from '../Shared/sections.styles'
+import { mediaQuery } from "components/MediaQuery"
+import styled from "styled-components"
+import { SectionHeader } from "../Shared/sections.styles"
 
 export const TeamContainer = styled.div`
     display: flex;
     flex-direction: column;
-    
+
     margin-bottom: 0px;
 `
 
@@ -24,8 +24,6 @@ export const CorePeopleContainer = styled.div`
         flex-wrap: wrap;
         gap: 20px;
     }
-
-
 `
 
 export const TeamPeopleContainer = styled.div`
@@ -41,7 +39,6 @@ export const AdvisorsContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-
 
     margin-bottom: 80px;
     padding-top: 40px;

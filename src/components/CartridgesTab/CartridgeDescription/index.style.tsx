@@ -1,20 +1,20 @@
-import styled, { css } from 'styled-components'
-import { ComparisonItem, ComparisonItemContent } from '../../Comparison/index.styles'
-import { SectionLabel, SectionList, SmallHeaderText } from '../../Shared/sections.styles'
-import { mediaQuery } from '../../MediaQuery'
+import styled, { css } from "styled-components"
+import { ComparisonItem, ComparisonItemContent } from "../../Comparison/index.styles"
+import { SectionLabel, SectionList, SmallHeaderText } from "../../Shared/sections.styles"
+import { mediaQuery } from "../../MediaQuery"
 
-export const CartridgeDescriptionContainer = styled.div<({ leftBasedLayout: boolean })>`
+export const CartridgeDescriptionContainer = styled.div<{ leftBasedLayout: boolean }>`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    ${props => props.leftBasedLayout ?
-            css`
-                grid-template-areas: 'text image';
-            ` :
-            css`
-                grid-template-areas: 'image text';
-            `
-    };
+    ${props =>
+        props.leftBasedLayout
+            ? css`
+                  grid-template-areas: "text image";
+              `
+            : css`
+                  grid-template-areas: "image text";
+              `};
     gap: 145px;
     position: relative;
 
@@ -39,17 +39,18 @@ export const CartridgeDescriptionSmallText = styled(SmallHeaderText)`
     font-size: 18px;
     line-height: 160%;
 
-    color: #CDCDCD;`
+    color: #cdcdcd;
+`
 
-export const CartridgeDescriptionImage = styled.div<({ cartridgeModel: any })>`
+export const CartridgeDescriptionImage = styled.div<{ cartridgeModel: any }>`
     grid-area: image;
     height: 100%;
 
     display: flex;
-    
+
     align-items: center;
     justify-content: center;
-    
+
     > * {
         position: absolute;
         width: calc(50%);
@@ -76,7 +77,7 @@ export const CartridgeTargetLabel = styled(SectionLabel)`
 
     letter-spacing: 0.11em;
 
-    color: #9D9D9D;
+    color: #9d9d9d;
 `
 
 export const CartridgeTargetContent = styled.div`
@@ -86,7 +87,7 @@ export const CartridgeTargetContent = styled.div`
     font-size: 18px;
     line-height: 160%;
 
-    color: #FFFFFF;
+    color: #ffffff;
 `
 
 export const CartridgeDescriptionList = styled(SectionList)`

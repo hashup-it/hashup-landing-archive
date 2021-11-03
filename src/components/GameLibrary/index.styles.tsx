@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import { SectionHeader, SectionList } from '../Shared/sections.styles'
-import { mediaQuery } from '../MediaQuery'
+import styled from "styled-components"
+import { SectionHeader, SectionList } from "../Shared/sections.styles"
+import { mediaQuery } from "../MediaQuery"
 
 export const GameLibraryContainer = styled.div`
     position: relative;
-    
+
     display: flex;
     flex-direction: column;
     margin-top: 0px;
@@ -29,7 +29,6 @@ export const NicknameInstructions = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     justify-content: flex-start;
-
 `
 
 export const RightWrapper = styled.div`
@@ -37,10 +36,8 @@ export const RightWrapper = styled.div`
     flex-direction: column;
 
     ${mediaQuery.laptop} {
-
         align-items: center;
     }
-
 `
 
 export const NicknameInstructionsHeading = styled.span`
@@ -50,6 +47,4 @@ export const NicknameInstructionsHeading = styled.span`
     margin-bottom: 33px;
 `
 
-export const NicknameInstructionsList = styled(SectionList)`
-
-`
+export const NicknameInstructionsList = styled(SectionList)``

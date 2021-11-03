@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../../MediaQuery'
-import { Swatches } from '../../../__styles__/Swatches'
-import { StyledTabHeaderText } from '../../Shared/sections.styles'
+import styled from "styled-components"
+import { mediaQuery } from "../../MediaQuery"
+import { Swatches } from "../../../__styles__/Swatches"
+import { StyledTabHeaderText } from "../../Shared/sections.styles"
 
 export const StyledLandingHeaderText = styled(StyledTabHeaderText)`
     gap: 40px;
@@ -40,9 +40,9 @@ export const HeaderAirdropWrapper = styled.div`
 `
 
 export const HeaderAirdropIcon = styled.div`
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 15px 0px 0px 15px;
-    background-image: url('/assets/icons/bolt.svg');
+    background-image: url("/assets/icons/bolt.svg");
     background-position: center;
     background-repeat: no-repeat;
     aspect-ratio: 1;

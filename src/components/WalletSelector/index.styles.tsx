@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { ButtonOutlined } from '../Shared'
-import { Hyperlink, SectionHeader, SectionText } from '../Shared/sections.styles'
-import { Swatches } from '../../__styles__/Swatches'
+import styled from "styled-components"
+import { ButtonOutlined } from "../Shared"
+import { Hyperlink, SectionHeader, SectionText } from "../Shared/sections.styles"
+import { Swatches } from "../../__styles__/Swatches"
 
 export const WalletSelectorContainer = styled.div`
     position: fixed;
@@ -10,13 +10,13 @@ export const WalletSelectorContainer = styled.div`
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.75);
-    
+
     cursor: auto;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     flex-direction: column;
 `
 
@@ -27,7 +27,7 @@ export const ContentWrapper = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 13.0133px;
 
-    background: #1B1B1B;
+    background: #1b1b1b;
 
     padding: 50px 68px 78px 68px;
     border: 1px solid ${Swatches.primary_color};
@@ -44,7 +44,7 @@ export const ConnectionHeader = styled(SectionHeader)`
 
     text-align: center;
 
-    color: #FFFFFF;
+    color: #ffffff;
 `
 
 export const ConnectionText = styled(SectionText)`
@@ -56,23 +56,22 @@ export const ConnectionText = styled(SectionText)`
 
     text-align: center;
 
-    color: #CDCDCD;
-
+    color: #cdcdcd;
 `
 
 export const ConnectionButton = styled(ButtonOutlined)`
     text-transform: none;
-    
+
     display: flex;
     justify-content: space-between;
 
     align-items: center;
 
     width: 70%;
-    
+
     :nth-child(2) {
         filter: grayscale(100%);
-        opacity: .5;
+        opacity: 0.5;
         cursor: auto;
     }
 `
@@ -80,9 +79,9 @@ export const ConnectionButton = styled(ButtonOutlined)`
 export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
-    
+
     gap: 10px;
 `
 
@@ -96,8 +95,8 @@ export const ButtonClose = styled.div`
     position: absolute;
     right: 22px;
     top: 22px;
-    
-    background: url('/assets/icons/button-close.svg');
+
+    background: url("/assets/icons/button-close.svg");
     width: 22px;
     height: 22px;
 
