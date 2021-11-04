@@ -17,27 +17,36 @@ import {
     StyledTelegramLink,
     StyledTelegramText,
 } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
 interface AidropPopupProps {
     setPopupOpened: Function
 }
 
 export const AirdropPopup: FC<AidropPopupProps> = ({ setPopupOpened }) => {
+    const { t } = useTranslation()
+
     return (
         <StyledAirdropPopupWrapper>
             <StyledPopupWindowWrapper>
                 <StyledPopupWindow>
-                    <StyledClose onClick={() => setPopupOpened(false)} src="/assets/icons/x-circle.svg"/>
-                    <StyledPopupHeader>Udało się!</StyledPopupHeader>
+                    <StyledClose
+                        onClick={() => setPopupOpened(false)}
+                        src="/assets/icons/x-circle.svg"
+                    />
+                    <StyledPopupHeader>{t("airdroppopup-header")}</StyledPopupHeader>
                     <StyledPopupText>
-                        Właśnie wysłaliśmy twoje pierwsze <ColoredText>#Hash</ColoredText> na twój adres.
+                        {t("airdroppopup-text1")}
+                        <ColoredText>#Hash</ColoredText>
+                        {t("airdroppopup-text2")}
                     </StyledPopupText>
                     <StyledAddToMetamaskGroup>
-                        Dodaj Hash do Metamaska &gt; <AddToMetamask/>
+                        {t("airdroppopup-metamask")} &gt; <AddToMetamask />
                     </StyledAddToMetamaskGroup>
                     <StyledTelegramContainer>
                         <StyledTelegramHeader>
-                             <ColoredText>Obserwuj</ColoredText><br/> nasze social media
+                            <ColoredText>Obserwuj</ColoredText>
+                            <br /> nasze social media
                         </StyledTelegramHeader>
                         <StyledTelegramLink>
                             <Hyperlink href="https://t.me/HashUpAnnouncements">

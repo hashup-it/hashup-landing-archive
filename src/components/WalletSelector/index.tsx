@@ -9,6 +9,7 @@ import {
     WalletSelectorContainer,
 } from "./index.styles"
 import { ColoredText } from "../Shared"
+import { useTranslation } from "react-i18next"
 
 export const WalletSelector = ({
     setIsWalletSelectorShown,
@@ -17,14 +18,16 @@ export const WalletSelector = ({
     setIsWalletSelectorShown: Function
     handleMetamaskConnection: Function
 }) => {
+    const { t } = useTranslation()
     return (
         <WalletSelectorContainer>
             <ContentWrapper>
                 <ButtonClose onClick={() => setIsWalletSelectorShown(false)} />
                 <ConnectionHeader>
-                    Access <ColoredText>your Wallet</ColoredText>
+                    {t("walletselector-header1")}
+                    <ColoredText>{t("walletselector-header2")}</ColoredText>
                 </ConnectionHeader>
-                <ConnectionText>Choose how you wish to access your wallet.</ConnectionText>
+                <ConnectionText>{t("walletselector-text")}</ConnectionText>
 
                 <ButtonsContainer>
                     <ConnectionButton
@@ -36,14 +39,16 @@ export const WalletSelector = ({
                         MetaMask <img src="/assets/icons/button-metamask.svg" alt="" />
                     </ConnectionButton>
                     <ConnectionButton>
-                        Coming soon
+                        {t("newsletter-comingsoon")}
                         <img src="/assets/icons/button-wallet-connect.svg" alt="connect" />
                     </ConnectionButton>
                 </ButtonsContainer>
             </ContentWrapper>
             <ConnectionText>
-                Don’t have a wallet?{" "}
-                <PermanentHyperlink href="https://metamask.io/">Create one</PermanentHyperlink>
+                {t("walletselector-nowallet")}
+                <PermanentHyperlink href="https://metamask.io/">
+                    {t("walletselector-create")}
+                </PermanentHyperlink>
             </ConnectionText>
         </WalletSelectorContainer>
     )

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { isTypeAliasDeclaration } from "typescript";
+import { isTypeAliasDeclaration } from "typescript"
 
 export const StyledSelectLanguage = styled.div`
     display: flex;
@@ -7,9 +7,10 @@ export const StyledSelectLanguage = styled.div`
     gap: 10px;
 `
 
-export const StyledLanguageIcon = styled.img``;
+export const StyledLanguageIcon = styled.img``
 
 export const StyledLanguageList = styled.select`
+    appearance: none;
     border: none;
     color: white;
     background-color: transparent;
@@ -23,9 +24,18 @@ export const StyledLanguageList = styled.select`
 
     :focus {
         outline: none;
+        border: none;
     }
-`;
+
+    :after {
+        content: "";
+        width: 0.8em;
+        height: 0.5em;
+        background-color: var(--select-arrow);
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+`
 
 export const StyledLanguageOption = styled.option`
-
-`;
+    background-color: black;
+`

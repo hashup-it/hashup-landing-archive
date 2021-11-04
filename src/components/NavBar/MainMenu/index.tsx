@@ -15,28 +15,27 @@ import {
 } from "../../Footer/index.styles"
 import { NavLink } from "react-router-dom"
 import { SelectLanguage } from "../SelectLanguage"
+import { useTranslation } from "react-i18next"
 
 export const MainMenu = ({ isMobileMenuShown }: { isMobileMenuShown: boolean }) => {
+    const { t } = useTranslation()
+
     return (
         <StyledMainMenu>
             <MenuItem>
-                <Hyperlink href="/#ecosystem">
-                    Ekosystem
-                </Hyperlink>
+                <Hyperlink href="/#ecosystem">{t("ecosystem")}</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://www.linkedin.com/company/hashupit">Media</Hyperlink>
+                <Hyperlink href="https://www.linkedin.com/company/hashupit">{t("media")}</Hyperlink>
             </MenuItem>
             {/*<MenuItem>Investment</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
-                    Dokumentacja
-                </Hyperlink>
+                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">{t("doc")}</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
-            <SelectLanguage/>
+            <SelectLanguage />
             {isMobileMenuShown && (
                 <>
                     <SocialMediaGroup>
@@ -57,12 +56,12 @@ export const MainMenu = ({ isMobileMenuShown }: { isMobileMenuShown: boolean }) 
                         </a>
                     </SocialMediaGroup>
                     <FooterTop>
-                        <ListHeader>Nasza siedziba</ListHeader>
+                        <ListHeader>{t("headquarters")}</ListHeader>
                         <ContactField>
                             <AddressLineEmphasized>HashUp P.S.A.</AddressLineEmphasized>
                             Al. Jana Pawła II 27
                             <br />
-                            00-867 Warszawa
+                            00-867 {t("warsaw")}
                             <br />
                             <br />
                             <MailLink href="mailto:hello@hashup.it">hello@hashup.it</MailLink>

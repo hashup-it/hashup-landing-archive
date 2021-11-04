@@ -1,6 +1,9 @@
 import { StyledTokenIcon, Tooltip } from "../index.styles"
+import { useTranslation } from "react-i18next"
 
 export const AddToMetamask = () => {
+    const { t } = useTranslation()
+
     const handleAddToMetamask = async () => {
         const tokenAddress = "0x2ce9daaaecf41914504d60ea9c7c8df1dc44ba9f"
         const tokenSymbol = "Hash"
@@ -34,7 +37,7 @@ export const AddToMetamask = () => {
 
     return (
         <StyledTokenIcon icon="/assets/icons/metamask.svg" onClick={() => handleAddToMetamask()}>
-            <Tooltip>Add # to metamask</Tooltip>
+            <Tooltip>{t("add#")}</Tooltip>
         </StyledTokenIcon>
     )
 }

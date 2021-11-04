@@ -19,11 +19,14 @@ import {
 
 import Web3 from "web3"
 import { AbiItem } from "web3-utils"
+import { useTranslation } from "react-i18next"
 
 interface HeaderBottomProps {}
 
 const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
     const [gamersCount, setGamersCount] = useState(1337)
+
+    const { t } = useTranslation()
 
     useEffect(() => {
         ;(async () => {
@@ -41,16 +44,16 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
         <StyledHeaderBottom>
             <StyledScrollDown>
                 <StyledMouseIcon src="/assets/icons/mouse.svg" />
-                Scroll to learn more
+                {t("scroll")}
             </StyledScrollDown>
             <StyledBottomGroup>
                 <StyledTokenInfo>
                     <StyledTokenInfoItem>
-                        <BoldText>All gamers: </BoldText>
+                        <BoldText>{t("all-gamers")}</BoldText>
                         <ColoredText>{gamersCount}</ColoredText>
                     </StyledTokenInfoItem>
                     <StyledTokenInfoItem>
-                        <BoldText>Contract: </BoldText>
+                        <BoldText>{t("contract")}</BoldText>
                         <CopyAdress />
                         <AddToMetamask />
                     </StyledTokenInfoItem>

@@ -1,4 +1,5 @@
 import { InfoBoxInterface } from "./InfoBox/interfaces"
+import { useTranslation } from "react-i18next"
 
 export const highlightedId: number = 2
 

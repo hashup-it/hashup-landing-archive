@@ -17,45 +17,44 @@ import {
     SectionContainer,
     StyledAboutUs,
 } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
-const AboutUs = () => (
-    <StyledAboutUs>
-        <SectionContainer>
-            <LeftWrapper>
-                <SectionLabel>
-                    <ColoredText>UWOLNIJ SIĘ</ColoredText>
-                </SectionLabel>
-                <SectionHeader>
-                    <ColoredText>Wolny</ColoredText> rynek gier i&nbsp;oprogramowania
-                </SectionHeader>
-                <SectionText>
-                    Rynek wolnego oprogramowania jest naturalną konsekwencją oddania oprogramowania
-                    w ręce graczy. Handlujcie grami! Wolny rynek odkryje prawdziwą cenę
-                    oprogramowania.
-                </SectionText>
-            </LeftWrapper>
-            <RightWrapper>
-                <Cards>
-                    <AboutCard>
-                        <RadialGradient />
-                        <CardLine />
-                        <CardHeader>Dystrybucja w Twoich rękach</CardHeader>
-                        Kontroluj cenę gry i liczbę wydanych licencji. Zarabiaj pieniądze na rynku
-                        wtórnym. Wszystko pod Twoją kontrolą.
-                    </AboutCard>
-                    <AboutCard>
-                        <CardParticles />
-                        <CardLine />
-                        <CardHeader>Brak prowizji</CardHeader>
-                        Jesteś jedynym wydawcą. Nie pozwól nikomu zarabiać na twojej ciężkiej pracy.
-                        Zarobisz w ten sposób więcej pieniędzy, czy obniżysz cenę gry, aby dotrzeć
-                        do większej liczby odbiorców? Decyzja należy do Ciebie!{" "}
-                    </AboutCard>
-                </Cards>
-            </RightWrapper>
-        </SectionContainer>
-        <BackgroundWorld />
-    </StyledAboutUs>
-)
+const AboutUs = () => {
+    const { t } = useTranslation()
+
+    return (
+        <StyledAboutUs>
+            <SectionContainer>
+                <LeftWrapper>
+                    <SectionLabel>
+                        <ColoredText>{t("free-yourself")}</ColoredText>
+                    </SectionLabel>
+                    <SectionHeader>
+                        <ColoredText>{t("about-us-header1")}</ColoredText>
+                        {t("about-us-header2")}
+                    </SectionHeader>
+                    <SectionText>{t("about-us-section-text")}</SectionText>
+                </LeftWrapper>
+                <RightWrapper>
+                    <Cards>
+                        <AboutCard>
+                            <RadialGradient />
+                            <CardLine />
+                            <CardHeader>{t("about-us-distribution-header")}</CardHeader>
+                            {t("about-us-distribution")}
+                        </AboutCard>
+                        <AboutCard>
+                            <CardParticles />
+                            <CardLine />
+                            <CardHeader>{t("about-us-provision-header")}</CardHeader>
+                            {t("about-us-provision")}{" "}
+                        </AboutCard>
+                    </Cards>
+                </RightWrapper>
+            </SectionContainer>
+            <BackgroundWorld />
+        </StyledAboutUs>
+    )
+}
 
 export default AboutUs

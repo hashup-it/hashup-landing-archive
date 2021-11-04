@@ -10,6 +10,7 @@ import {
     StyledValueBox,
     StyledVersus,
 } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
 interface ValueBoxProps {
     readonly value: number
@@ -33,22 +34,24 @@ const Results: FC<{ readonly soldItems: number; readonly price: number }> = ({
     const othersProfit = calcOthersProfit(soldItems, price)
     const ourProfit = calcOurProfit(soldItems, price)
 
+    const { t } = useTranslation()
+
     return (
         <StyledResults>
             <StyledResultsDescription>
                 <StyledResultsHeader>HashUp</StyledResultsHeader>
-                <StyledResultsText>Z nami tyle trafia do Ciebie</StyledResultsText>
+                <StyledResultsText>{t("calc-result")}</StyledResultsText>
             </StyledResultsDescription>
             <ValueBox value={ourProfit} outlineColor={Swatches.primary_color} shadow />
             <StyledVersus>VS</StyledVersus>
             <ValueBox
                 value={othersProfit}
-                label="Tyle teraz dostajesz"
+                label={t("calc-result-label1")}
                 outlineColor={Swatches.text_secondary}
             />
             <ValueBox
                 value={ourProfit - othersProfit}
-                label="Tyle tracisz na prowizjach"
+                label={t("calc-result-label2")}
                 outlineColor={Swatches.text_secondary}
             />
         </StyledResults>

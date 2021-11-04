@@ -30,6 +30,7 @@ import { useLocation } from "react-router-dom"
 import { AnyStyledComponent } from "styled-components"
 import { AirdropPopup } from "./AirdropPopup"
 import { useRef } from "react"
+import { useTranslation } from "react-i18next"
 const queryString = require("query-string")
 
 interface AirdropProps {
@@ -65,7 +66,10 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
         ;(async () => {
             if ((window as any).ethereum) {
                 web3 = new Web3("https://bsc-dataseed.binance.org")
-                contract = await new web3.eth.Contract(hashInfo.abi as AbiItem[], hashInfo.contractAddress)
+                contract = await new web3.eth.Contract(
+                    hashInfo.abi as AbiItem[],
+                    hashInfo.contractAddress
+                )
                 updateHashInfo(web3, contract)
             }
         })()
@@ -166,6 +170,8 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
         }
     }
 
+    const { t } = useTranslation()
+
     return (
         <StyledAirdrop id="airdrop">
             <StyledAirdropHeader>
@@ -179,16 +185,12 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
                 </BoldText>
             </StyledAirdropHeader>
             <StyledAirdropMain>
-                <StyledMainHeader>
-                    Zarezerwuj swój unikalny Nick aby otrzymać Airdrop
-                </StyledMainHeader>
-                <StyledMainSmall>
-                    Twój nick będzie reprezentować Twoją obecność na platformie HashUp
-                </StyledMainSmall>
+                <StyledMainHeader>{t("airdrop-reserve")}</StyledMainHeader>
+                <StyledMainSmall>{t("airdrop-nick")}</StyledMainSmall>
                 <StyledInputWrapper>
                     <StyledInputIcon />
                     <StyledInput
-                        placeholder="Wpisz swój nowy nick HashUp"
+                        placeholder={t("airdrop-nick-input")}
                         onChange={handleNicknameInput}
                         disabled={airdropDisabled}
                         ref={inputElement}
@@ -203,26 +205,24 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
             </StyledAirdropMain>
             <StyledAirdropInfo>
                 <StyledInfoItem>
-                    <StyledInfoLabel>Pozostało #:</StyledInfoLabel>
+                    <StyledInfoLabel>{t("airdrop-#left")}</StyledInfoLabel>
                     <StyledInfoValue>{tokenLeft}</StyledInfoValue>
                 </StyledInfoItem>
                 <StyledInfoItem>
-                    <StyledInfoLabel>Liczba graczy:</StyledInfoLabel>
+                    <StyledInfoLabel>{t("airdrop-players")}</StyledInfoLabel>
                     <StyledInfoValue>{gamersCount}</StyledInfoValue>
                 </StyledInfoItem>
                 <StyledInfoItem>
+                    <StyledInfoLabel>{t("airdrop-price")}</StyledInfoLabel>
                     <StyledInfoValue>0.02 $</StyledInfoValue>
                 </StyledInfoItem>
             </StyledAirdropInfo>
             <StyledAirdropReferral>
-                {
-                    !account &&
-                    <StyledBeforeConnectWrapper onClick={
-                        () => setIsWalletSelectorShown(true)
-                    }>
-                        Połącz się z Metamask by skopiować reflink
+                {!account && (
+                    <StyledBeforeConnectWrapper onClick={() => setIsWalletSelectorShown(true)}>
+                        {t("airdrop-connect")}
                     </StyledBeforeConnectWrapper>
-                }
+                )}
                 {account && (
                     <StyledAfterConnectOptions>
                         <StyledCopyReferral onClick={() => handleCopyReferral()}>

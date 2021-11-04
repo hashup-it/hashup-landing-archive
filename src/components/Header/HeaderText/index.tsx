@@ -8,24 +8,25 @@ import {
     HeaderGetAirdrop,
     StyledLandingHeaderText,
 } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
 export const HeaderText = () => {
+    const { t } = useTranslation()
+
     return (
         <StyledLandingHeaderText>
             <TabHeader>
                 The <GradientText>HashUp</GradientText> Cartridge
                 <ColoredText>.</ColoredText>
             </TabHeader>
-            <SmallHeaderText>
-                DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż
-                na blockchain. Bez pośredników. Z&nbsp;0% prowizji. Skończymy monopol na rynku
-                oprogramowania…
-            </SmallHeaderText>
+            <SmallHeaderText>{t("header-par")}</SmallHeaderText>
             <ButtonGroup>
                 <ButtonOutlined href="/documents/Whitepaper.pdf">Whitepaper</ButtonOutlined>
                 <HeaderAirdropWrapper>
                     <HeaderAirdropIcon />
-                    <HeaderGetAirdrop><Hyperlink href="/airdrop.html">Odbierz swój Airdrop</Hyperlink></HeaderGetAirdrop>
+                    <HeaderGetAirdrop>
+                        <Hyperlink href="/airdrop.html">{t("header-airdrop")}</Hyperlink>
+                    </HeaderGetAirdrop>
                 </HeaderAirdropWrapper>
             </ButtonGroup>
         </StyledLandingHeaderText>

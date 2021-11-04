@@ -9,16 +9,20 @@ import {
     StyledCalculator,
     StyledSlidersContainer,
 } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
 const Calculator = () => {
     const [price, setPrice] = useState<number>(0)
     const [soldItems, setSoldItems] = useState<number>(0)
 
+    const { t } = useTranslation()
+
     return (
         <StyledCalculator>
             <StyledHeader>
-                Sprawdź ile <ColoredText>tracisz na prowizjach</ColoredText>, które pobierają
-                popularne platformy wydawnicze
+                {t("calc-check1")}
+                <ColoredText>{t("calc-check2")}</ColoredText>
+                {t("calc-check3")}
             </StyledHeader>
             <StyledSlidersContainer>
                 <Slider
@@ -27,7 +31,7 @@ const Calculator = () => {
                     step={10000}
                     displayValue={numeral(soldItems).format("0a")}
                     setValue={setSoldItems}
-                    label="Ilość sprz. kopii"
+                    label={t("calc-slider-label")}
                     dotsValues={["10k", "250k", "500k", "750k", "1m"]}
                     defaultValue={50000}
                 />
@@ -37,7 +41,7 @@ const Calculator = () => {
                     step={1}
                     displayValue={`${price}$`}
                     setValue={setPrice}
-                    label="Cena"
+                    label={t("calc-price")}
                     dotsValues={["1$", "25$", "50$", "75$", "100$"]}
                     defaultValue={56}
                 />

@@ -1,22 +1,24 @@
-import { useEffect } from "react"
-import { useState } from "react"
-import { StyledLanguageIcon, StyledLanguageList, StyledLanguageOption, StyledSelectLanguage } from "./index.styles"
+import {
+    StyledLanguageIcon,
+    StyledLanguageList,
+    StyledLanguageOption,
+    StyledSelectLanguage,
+} from "./index.styles"
+import i18n from "i18n"
 
 export const SelectLanguage = () => {
-
-    const [language, setLanguage] = useState('PL')
-
-    const handleLanguageChange = (e : any) => {
-        setLanguage(e.target.value);
+    const handleLanguageChange = (e: any) => {
+        i18n.changeLanguage(e.target.value)
     }
-    
+
     return (
         <StyledSelectLanguage>
-            <StyledLanguageIcon src="/assets/icons/globe.svg"/>           
+            <StyledLanguageIcon src="/assets/icons/globe.svg" />
             <StyledLanguageList onChange={handleLanguageChange}>
-                <StyledLanguageOption value="PL">PL</StyledLanguageOption>
-                <StyledLanguageOption value="EN">EN</StyledLanguageOption>
+                <StyledLanguageOption value="pl">PL</StyledLanguageOption>
+                <StyledLanguageOption value="en">EN</StyledLanguageOption>
             </StyledLanguageList>
+            <StyledLanguageIcon src="/assets/icons/chevron-down.svg" />
         </StyledSelectLanguage>
     )
 }
