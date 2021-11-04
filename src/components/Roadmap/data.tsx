@@ -1,224 +1,223 @@
 import { InfoBoxInterface } from "./InfoBox/interfaces"
-import { useTranslation } from "react-i18next"
 
 export const highlightedId: number = 2
 
 export const infoBoxesData: InfoBoxInterface[] = [
     {
-        label: "Q3 2021",
+        labelLocale: "roadmap-box-1-label",
         bullets: [
             {
-                content: "Whitepaper v1",
+                contentLocale: "roadmap-box-1-bullet-1",
                 isDone: true,
                 bold: true,
             },
             {
-                content: "Kształtowanie pomysłu",
+                contentLocale: "roadmap-box-1-bullet-2",
                 isDone: true,
                 bold: false,
             },
             {
-                content: "150k pln seed funding",
+                contentLocale: "roadmap-box-1-bullet-3",
                 isDone: true,
                 bold: false,
             },
             {
-                content: "Emisja tokenu #",
+                contentLocale: "roadmap-box-1-bullet-4",
                 isDone: true,
                 bold: false,
             },
             {
-                content: "Rozpoczęcie prac na HashUp",
+                contentLocale: "roadmap-box-1-bullet-5",
                 isDone: true,
                 bold: true,
             },
         ],
     },
     {
-        label: "Q4 2021",
+        labelLocale: "roadmap-box-2-label",
         bullets: [
             {
-                content: "Pierwsze partnerstwo z Twórcami oprogramowania. (sekret)",
+                contentLocale: "roadmap-box-2-bullet-1",
                 isDone: true,
                 bold: false,
             },
             {
-                content: "Stworzenie HashUp nicknames",
+                contentLocale: "roadmap-box-2-bullet-2",
                 isDone: true,
                 bold: false,
             },
             {
-                content: "Publikacja HashUp pierwszego airdropa",
+                contentLocale: "roadmap-box-2-bullet-3",
                 isDone: true,
                 bold: false,
             },
             {
-                content: "1-1.6mln pln runda prywatna",
+                contentLocale: "roadmap-box-2-bullet-4",
                 isDone: false,
                 bold: true,
             },
             {
-                content: "Rozwój GameCap, Gamexplorer, GameContract.io",
+                contentLocale: "roadmap-box-2-bullet-5",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Stworzenie zielonego i czerwonego kartridża",
+                contentLocale: "roadmap-box-2-bullet-6",
                 isDone: true,
                 bold: false,
             },
             {
-                content: "HashUp zatrudnia 10 osób",
+                contentLocale: "roadmap-box-2-bullet-7",
                 isDone: true,
                 bold: false,
             },
         ],
     },
     {
-        label: "Q4 2021",
+        labelLocale: "roadmap-box-3-label",
         bullets: [
             {
-                content: "$ 4mln Initial Coin Offering",
+                contentLocale: "roadmap-box-3-bullet-1",
                 isDone: false,
                 bold: true,
             },
             {
-                content: "Listing DEX",
+                contentLocale: "roadmap-box-3-bullet-2",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Stworzenie niebieskiego, złotego i szarego kartridża",
+                contentLocale: "roadmap-box-3-bullet-3",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Finalizacja prac nad dokumentacją",
+                contentLocale: "roadmap-box-3-bullet-4",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Publikacja GameContract, GameCap i Gamexplorer",
+                contentLocale: "roadmap-box-3-bullet-5",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Listing pierwszej wolnorynkowej gry na GameCap",
+                contentLocale: "roadmap-box-3-bullet-6",
                 isDone: false,
                 bold: true,
             },
             {
-                content: "Możliwość wydawania gier HTML5 na kartridżach HashUp",
+                contentLocale: "roadmap-box-3-bullet-7",
                 isDone: false,
                 bold: true,
             },
         ],
     },
     {
-        label: "Q1 2022",
+        labelLocale: "roadmap-box-4-label",
         bullets: [
             {
-                content: "Listing pierwszych 10 gier",
+                contentLocale: "roadmap-box-4-bullet-1",
                 isDone: false,
                 bold: true,
             },
             {
-                content: "Budowa zespołu pomagającego wydawać gry na Blockchain",
+                contentLocale: "roadmap-box-4-bullet-2",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Darmowe i proste airdropy pierwszych gier",
+                contentLocale: "roadmap-box-4-bullet-3",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Wydanie HashWallet, umoliwiającego wydawanie gier PC",
+                contentLocale: "roadmap-box-4-bullet-4",
                 isDone: false,
                 bold: true,
             },
             {
-                content: "Pierwsze partnerstwa z dużymi wydawcami gier i oprogramowania.",
+                contentLocale: "roadmap-box-4-bullet-5",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Pierwszy CEX listing",
+                contentLocale: "roadmap-box-4-bullet-6",
                 isDone: false,
                 bold: false,
             },
         ],
     },
     {
-        label: "Q2-Q3 2022",
+        labelLocale: "roadmap-box-5-label",
         bullets: [
             {
-                content: "Listing pierwszej gry PC",
+                contentLocale: "roadmap-box-5-bullet-1",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Organizacja pierwszego wydarzenia HashUp w Polsce dla Twórców gier.",
+                contentLocale: "roadmap-box-5-bullet-2",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "HashUp zatrudnia 35 osób",
+                contentLocale: "roadmap-box-5-bullet-3",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Listing pierwszych 100 gier",
+                contentLocale: "roadmap-box-5-bullet-4",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Start prac nad Gamexchange i GamePaper",
+                contentLocale: "roadmap-box-5-bullet-5",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Publikacja HashWallet na Android i IOS",
+                contentLocale: "roadmap-box-5-bullet-6",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Otwarcie bramki płatności FIAT -> # i # -> FIAT",
+                contentLocale: "roadmap-box-5-bullet-7",
                 isDone: false,
                 bold: true,
             },
         ],
     },
     {
-        label: "Q4 2022",
+        labelLocale: "roadmap-box-6-label",
         bullets: [
             {
-                content: "Pierwsza gra AAA PC",
+                contentLocale: "roadmap-box-6-bullet-1",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "1 mld $ obrotu # i kartridżami na platformie",
+                contentLocale: "roadmap-box-6-bullet-2",
                 isDone: false,
                 bold: false,
             },
             {
-                content: "Publikacja Gamexchange, DEX z AMM i Order Bookiem",
+                contentLocale: "roadmap-box-6-bullet-3",
                 isDone: false,
                 bold: true,
             },
             {
-                content: "Możliwość zbiórek za pomocą kartridży",
+                contentLocale: "roadmap-box-6-bullet-4",
                 isDone: false,
                 bold: true,
             },
         ],
     },
     {
-        label: "Q1 2023+",
+        labelLocale: "roadmap-box-7-label",
         bullets: [
             {
-                content: "To dopiero początek...",
+                contentLocale: "roadmap-box-7-bullet-1",
                 isDone: false,
                 bold: false,
             },

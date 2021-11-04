@@ -38,7 +38,6 @@ export const StyledPriceLabelOutline = styled.div<{ outlineColor: string }>`
 
     border-radius: inherit;
     padding: 1px;
-    z-index: -1;
     top: -1px;
     left: -1px;
     background: rgb(22, 22, 22);

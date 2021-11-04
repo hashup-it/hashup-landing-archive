@@ -126,7 +126,7 @@ export const Footer = () => {
             </FooterTop>
             <FooterBottom>
                 <FooterMetaSeparator />
-                <Copyright>Copyright © by HashUp. All Rights Reserved.</Copyright>
+                <Copyright>Copyright © {new Date().getFullYear()} by HashUp. All Rights Reserved.</Copyright>
                 <FooterBottomGroup>
                     <FooterLink>
                         <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">

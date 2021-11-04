@@ -110,10 +110,14 @@ export const SectionHeader = styled.h2`
 export const TabHeader = styled.h1`
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 70px;
     line-height: 115%;
     padding: 0;
     margin: 0;
+
+    ${mediaQuery.laptop} {
+        font-size: 60px;
+    }
 
     ${mediaQuery.laptop} {
         font-size: 50px;
@@ -122,6 +126,7 @@ export const TabHeader = styled.h1`
 
 export const SmallHeaderText = styled.p`
     color: ${Swatches.text_secondary};
+    line-height: 160%;
     padding: 0;
     margin: 0;
 `

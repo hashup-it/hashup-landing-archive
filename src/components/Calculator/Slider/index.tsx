@@ -34,7 +34,7 @@ const Slider: FC<SliderProps> = ({
         if (sliderRef.current) {
             return sliderRef.current.querySelector(".rc-slider-handle")
         }
-    }, [sliderRef])
+    }, [sliderRef.current])
 
     useEffect(() => {
         setValue(defaultValue)
@@ -48,7 +48,7 @@ const Slider: FC<SliderProps> = ({
             // so we have to manipulate DOM directly (to use HTML attribute)
             sliderHandle.setAttribute(DISPLAY_VALUE_ATTRIBUTE, displayValue)
         }
-    }, [sliderRef, displayValue, sliderHandle])
+    }, [sliderRef.current, displayValue, sliderHandle])
 
     return (
         <StyledSlider>
