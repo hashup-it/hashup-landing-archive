@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { ColoredText } from "../Shared"
 import Slider from "./Slider"
 import Results from "./Results"
@@ -8,14 +8,17 @@ import {
     StyledBackgroundImg,
     StyledCalculator,
     StyledSlidersContainer,
+    StyledBackgroundFlare
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
+import { randomInt } from "util/math"
 
 const Calculator = () => {
     const [price, setPrice] = useState<number>(0)
     const [soldItems, setSoldItems] = useState<number>(0)
-
     const { t } = useTranslation()
+    const initPrice = useMemo(() => randomInt(40, 80) * 10000, [])
+    const initSoldItems = useMemo(() => randomInt(15, 80), [])
 
     return (
         <StyledCalculator>
@@ -33,7 +36,7 @@ const Calculator = () => {
                     setValue={setSoldItems}
                     label={t("calc-slider-label")}
                     dotsValues={["10k", "250k", "500k", "750k", "1m"]}
-                    defaultValue={50000}
+                    defaultValue={initPrice}
                 />
                 <Slider
                     min={1}
@@ -43,11 +46,12 @@ const Calculator = () => {
                     setValue={setPrice}
                     label={t("calc-price")}
                     dotsValues={["1$", "25$", "50$", "75$", "100$"]}
-                    defaultValue={56}
+                    defaultValue={initSoldItems}
                 />
             </StyledSlidersContainer>
             <Results soldItems={soldItems} price={price} />
-            <StyledBackgroundImg src="/assets/percent.png" />
+            <StyledBackgroundImg />
+            <StyledBackgroundFlare />
         </StyledCalculator>
     )
 }

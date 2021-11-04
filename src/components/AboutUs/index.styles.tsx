@@ -33,14 +33,28 @@ export const SectionContainer = styled.div`
 export const BackgroundWorld = styled.div`
     position: absolute;
     background-image: url("/assets/background-world.png");
-    width: 100vw;
-    height: 200vh;
+    width: 800px;
+    height: 600px;
     background-size: 80vw;
     background-repeat: no-repeat;
-    top: -50vh;
-    left: 0;
+    background-position: center;
+    top: -100px;
+    left: 30px;
     pointer-events: none;
     z-index: -1;
+
+    ${mediaQuery.laptopL} {
+        top: -220px;
+        left: -50px;
+    }
+
+    ${mediaQuery.tablet} {
+        width: 350px;
+        height: 400px;
+        background-size: 300%;
+        top: -55px;
+        left: 30px;
+    }
 `
 
 export const RadialGradient = styled.div`
@@ -76,7 +90,7 @@ export const Cards = styled.div`
 
 export const AboutCard = styled.div`
     background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
-    z-index: 9990;
+    z-index: 99;
     width: 210px;
     padding: 43px;
     color: ${Swatches.text_secondary};
@@ -99,10 +113,10 @@ export const AboutCard = styled.div`
     }
 
     :nth-child(2) {
-        margin-top: 80px;
+        margin-top: 130px;
 
         ${mediaQuery.tablet} {
-            margin-top: 0px;
+            margin-top: 20px;
         }
     }
 `

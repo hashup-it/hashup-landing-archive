@@ -4,11 +4,20 @@ import { Swatches } from "../../../__styles__/Swatches"
 import { StyledTabHeaderText } from "../../Shared/sections.styles"
 
 export const StyledLandingHeaderText = styled(StyledTabHeaderText)`
-    gap: 40px;
+    gap: 80px;
+
+    ${mediaQuery.laptopL} {
+        padding-left: 100px;
+        gap: 40px;
+    }
+
+    ${mediaQuery.tablet} {
+        padding-left: 0;
+    }
 `
 
 export const GradientText = styled.span`
-    background: linear-gradient(90deg, #000000 0%, rgba(255, 0, 0, 0.5) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 0, 0, 0.5) 100%);
     padding-right: 10px;
 `
 
@@ -43,11 +52,12 @@ export const HeaderAirdropIcon = styled.div`
     background-color: #ffffff;
     border-radius: 15px 0px 0px 15px;
     background-image: url("/assets/icons/bolt.svg");
-    background-position: center;
+    background-position: 20px;
     background-repeat: no-repeat;
-    aspect-ratio: 1;
+    background-size: 18;
+    width: 52px;
 
-    ${mediaQuery.tablet} {
+    ${mediaQuery.mobileL} {
         display: none;
     }
 `

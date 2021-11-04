@@ -13,7 +13,6 @@ import {
     MailLink,
     SocialMediaGroup,
 } from "../../Footer/index.styles"
-import { NavLink } from "react-router-dom"
 import { SelectLanguage } from "../SelectLanguage"
 import { useTranslation } from "react-i18next"
 

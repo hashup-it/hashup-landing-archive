@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { mediaQuery } from "../MediaQuery"
-import { Swatches } from "../../__styles__/Swatches"
+import { Swatches } from "__styles__/Swatches"
 
 export const StyledNavBar = styled.div`
     position: fixed;
@@ -8,7 +8,7 @@ export const StyledNavBar = styled.div`
     left: 0;
     right: 0;
 
-    padding: 40px;
+    padding: 25px;
 
     font-size: 16px;
     color: ${Swatches.text_main};
@@ -24,9 +24,12 @@ export const MenuWrapper = styled.div`
     width: 1240px;
     margin: 0 auto;
 
+    ${mediaQuery.desktopL} {
+        width: 1380px;
+    }
+
     ${mediaQuery.laptopL} {
         width: auto;
-        margin: 0;
     }
 
     ${mediaQuery.tablet} {
@@ -72,8 +75,7 @@ export const Icon = styled.img`
 export const HamburgerButton = styled.div<{ opened: boolean }>`
     width: 30px;
     height: 30px;
-    background-image: url(${props =>
-        props.opened ? "/assets/icons/x.svg" : "/assets/icons/hamburger.svg"});
+    background-image: url(${props => props.opened ? "/assets/icons/x.svg" : "/assets/icons/hamburger.svg"});
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 10px;

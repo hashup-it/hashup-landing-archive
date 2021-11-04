@@ -18,11 +18,31 @@ export const StyledCalculator = styled.div`
     }
 `
 
-export const StyledBackgroundImg = styled.img`
+export const StyledBackgroundImg = styled.div`
     position: absolute;
     pointer-events: none;
     top: -10vh;
-    right: 0px;
+    right: -30px;
+    background-image: url('/assets/percent.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 350px;
+    transform-style: preserve-3d;
+`
+
+export const StyledBackgroundFlare = styled.div`
+    position: absolute;
+    pointer-events: none;
+    top: -10vh;
+    right: -120px;
+    width: 400px;
+    height: 700px;
+    background-color: red;
+    opacity: 0.03;
+    border-radius: 600px;
+    filter: blur(120px);
+    transform: rotate(30deg) translateZ(-100px);
 `
 
 export const StyledHeader = styled.h2`
