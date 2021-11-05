@@ -1,5 +1,5 @@
+import { mediaQuery } from "components/MediaQuery"
 import styled from "styled-components"
-import { isTypeAliasDeclaration } from "typescript"
 import { Swatches } from "../../../__styles__/Swatches"
 
 export const StyledSelectLanguage = styled.div`
@@ -8,6 +8,18 @@ export const StyledSelectLanguage = styled.div`
     justify-content: space-around;
     align-items: center;
     position: relatve;
+
+    :before {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background-color: ${Swatches.primary_color};
+        margin-right: 15px;
+
+        ${mediaQuery.laptopM} {
+            margin-right: 8px;
+        }
+    }
 `
 
 export const StyledLanguageIcon = styled.img`

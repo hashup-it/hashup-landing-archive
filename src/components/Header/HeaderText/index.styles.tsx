@@ -34,13 +34,7 @@ export const ButtonGroup = styled.div`
 
 export const HeaderAirdropWrapper = styled.div`
     display: flex;
-    justify-content: flex-start;
-
-    ${mediaQuery.tablet} {
-        display: grid;
-        justify-content: initial;
-    }
-
+    justify-content: center;
     cursor: pointer;
 
     :hover {
@@ -56,10 +50,6 @@ export const HeaderAirdropIcon = styled.div`
     background-repeat: no-repeat;
     background-size: 18;
     width: 52px;
-
-    ${mediaQuery.mobileL} {
-        display: none;
-    }
 `
 
 export const HeaderGetAirdrop = styled.div`
@@ -72,9 +62,9 @@ export const HeaderGetAirdrop = styled.div`
     font-size: 16px;
     text-transform: uppercase;
     white-space: nowrap;
+    text-align: center;
 
     ${mediaQuery.tablet} {
-        text-align: center;
-        border-radius: 15px;
+        flex: 1;
     }
 `

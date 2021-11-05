@@ -15,7 +15,7 @@ export const StyledNavBar = styled.div`
     font-weight: 700;
     align-items: flex-start;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 `
 
 export const MenuWrapper = styled.div`
@@ -25,7 +25,7 @@ export const MenuWrapper = styled.div`
     margin: 0 auto;
 
     ${mediaQuery.desktopL} {
-        width: 1380px;
+        width: 1400px;
     }
 
     ${mediaQuery.laptopL} {
