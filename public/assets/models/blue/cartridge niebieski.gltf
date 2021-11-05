@@ -1,0 +1,274 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_transmission"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "cartridge",
+            "rotation" : [
+                0.7071066498756409,
+                0,
+                0,
+                0.70710688829422
+            ],
+            "translation" : [
+                -0.41463688015937805,
+                1.6365184783935547,
+                -0.028615832328796387
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                1,
+                1,
+                1
+            ],
+            "emissiveTexture" : {
+                "index" : 0
+            },
+            "name" : "cartridge mat",
+            "normalTexture" : {
+                "index" : 1
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 2
+                },
+                "metallicRoughnessTexture" : {
+                    "index" : 3
+                }
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_transmission" : {
+                    "transmissionFactor" : 0.718181848526001
+                }
+            },
+            "name" : "cartridge szklo",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.30454546213150024
+                ],
+                "metallicRoughnessTexture" : {
+                    "index" : 4
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "cartridge",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        },
+        {
+            "sampler" : 0,
+            "source" : 3
+        },
+        {
+            "sampler" : 0,
+            "source" : 3
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "niebieski_Emissive",
+            "uri" : "niebieski_Emissive.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Normal_OpenGL",
+            "uri" : "Normal_OpenGL.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "niebieski_BaseColor",
+            "uri" : "niebieski_BaseColor.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Metallic-Roughness",
+            "uri" : "Metallic-Roughness.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 3614,
+            "max" : [
+                5.453543663024902,
+                0.26877129077911377,
+                4.365889549255371
+            ],
+            "min" : [
+                -5.479259014129639,
+                -0.6714704036712646,
+                -2.624147415161133
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 3614,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 3614,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 6510,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 188,
+            "max" : [
+                5.390945911407471,
+                0.22949254512786865,
+                3.6477487087249756
+            ],
+            "min" : [
+                -5.044016361236572,
+                -0.6683630347251892,
+                -2.561479330062866
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 188,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 188,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 354,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 43368,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 43368,
+            "byteOffset" : 43368
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 28912,
+            "byteOffset" : 86736
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13020,
+            "byteOffset" : 115648
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2256,
+            "byteOffset" : 128668
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2256,
+            "byteOffset" : 130924
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1504,
+            "byteOffset" : 133180
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 708,
+            "byteOffset" : 134684
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 135392,
+            "uri" : "cartridge niebieski.bin"
+        }
+    ]
+}

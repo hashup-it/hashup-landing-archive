@@ -11,11 +11,11 @@ import {
 import { CartridgeDescription } from './CartridgeDescription'
 import { CartridgeThumbnail } from './CartridgeThumbnail'
 
-import ModelRed from 'models/red.png'
-import ModelBlue from 'models/blue.png'
-import ModelGray from 'models/gray.png'
-import ModelGreen from 'models/green.png'
-import ModelGold from 'models/gold.png'
+import ModelRed from '../../components/CartridgeScene/Three/ModelRed'
+import ModelBlue from '../../components/CartridgeScene/Three/ModelBlue'
+import ModelGray from '../../components/CartridgeScene/Three/ModelGray'
+import ModelGreen from '../../components/CartridgeScene/Three/ModelGreen'
+import ModelGold from '../../components/CartridgeScene/Three/ModelGold'
 
 export enum CartridgeColor {
     Green = '#6AAD38',
@@ -79,7 +79,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<img src={ModelGreen} />}
+                cartridgeModel={<ModelGreen rotation={[0, -2, Math.PI / 128]} />}
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -91,7 +91,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Menespeh amet dis dolor'
                 ]}
-                cartridgeModel={<img src={ModelGold} />}
+                cartridgeModel={<ModelGold rotation={[0, -2, Math.PI / 128]} />}
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -105,7 +105,7 @@ export const CartridgesTab = () => {
                     'Lorem ipslum dolores',
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<img src={ModelBlue} />}
+                cartridgeModel={<ModelBlue rotation={[0, -2, Math.PI / 128]} />}
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -118,7 +118,7 @@ export const CartridgesTab = () => {
                     'Menespeh amet dis dolor',
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<img src={ModelGray} />}
+                cartridgeModel={<ModelGray rotation={[0, -2, Math.PI / 128]} />}
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -129,7 +129,7 @@ export const CartridgesTab = () => {
                 descriptionListContents={[
                     'Lorem ipslum dolores'
                 ]}
-                cartridgeModel={<img src={ModelRed} />}
+                cartridgeModel={<ModelRed rotation={[0, -2, Math.PI / 128]} />}
             />
         </CartridgesTabContainer>
     )

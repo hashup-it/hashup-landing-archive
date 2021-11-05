@@ -33,7 +33,7 @@ export const CartridgeDescription = (
         descriptionText: string,
         targetText: string,
         descriptionListContents: string[],
-        cartridgeModel: any
+        cartridgeModel: ReactElement
     }
 ) => {
     return (
@@ -58,7 +58,7 @@ export const CartridgeDescription = (
                     }
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
-            <CartridgeDescriptionImage cartridgeModel={cartridgeModel}>
+            <CartridgeDescriptionImage>
                 <CartridgeScene
                     cameraDistance={CameraDistance.cartridgesListing}
                     cartridgeModel={cartridgeModel}

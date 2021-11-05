@@ -1,13 +1,13 @@
-import React, { Suspense } from 'react'
+import React, { ReactElement, Suspense } from 'react'
 import { Canvas, extend } from '@react-three/fiber'
-import Model from './Three/Scene'
+import Model from './Three/ModelBlack'
 import { OrbitControls } from '@react-three/drei'
 
 extend({ OrbitControls })
 
 export enum CameraDistance {
-    mainLanding = -7,
-    cartridgesListing = -3.75
+    mainLanding = -23,
+    cartridgesListing = -20
 }
 
 export const CartridgeScene = (
@@ -16,42 +16,36 @@ export const CartridgeScene = (
         cartridgeModel
     }: {
         cameraDistance: CameraDistance,
-        cartridgeModel?: any
+        cartridgeModel?: ReactElement
     }
-) => {
-    return !cartridgeModel ?
-        <Canvas
-            camera={{ position: [cameraDistance, 0, 0], fov: 40 }}
-            gl={{
-                antialias: true,
-                powerPreference: 'high-performance',
-                precision: 'highp'
-            }}
-        >
-            <Suspense fallback={null}>
-                <ambientLight intensity={.4} />
-                <directionalLight
-                    castShadow
-                    position={[-8, 16, -8]}
-                    intensity={0}
-                    shadowMapWidth={1024}
-                    shadowMapHeight={1024}
-                    shadowCameraFar={50}
-                    shadowCameraLeft={-10}
-                    shadowCameraRight={10}
-                    shadowCameraTop={10}
-                    shadowCameraBottom={-10}
-                />
-                <pointLight position={[-200, 10, -200]} intensity={15} />
-                <pointLight position={[400, 10, 400]} intensity={.5} />
-                <OrbitControls
-                    enableZoom={false}
-                    enablePan={false}
-                    autoRotate
-                    autoRotateSpeed={-.5}
-                />
-                <Model />
-            </Suspense>
-        </Canvas> :
-        cartridgeModel
-}
+) => <Canvas
+    camera={{ position: [cameraDistance, 0, 0], fov: 40 }}
+    gl={{
+        antialias: true,
+        powerPreference: 'high-performance'
+    }}
+>
+    <Suspense fallback={null}>
+        <directionalLight
+            castShadow
+            position={[-40, 0, -80]}
+            intensity={.4}
+            shadowMapWidth={1024}
+            shadowMapHeight={1024}
+            shadowCameraFar={50}
+            shadowCameraLeft={-10}
+            shadowCameraRight={10}
+            shadowCameraTop={10}
+            shadowCameraBottom={-10}
+        />
+        <pointLight position={[0, 1000, 4000]} intensity={1} />
+        <pointLight position={[1000, -20000, 5000]} intensity={.5} />
+        <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            autoRotate
+            autoRotateSpeed={-.5}
+        />
+        {cartridgeModel ?? <Model rotation={[0, -2, Math.PI / 128]} />}
+    </Suspense>
+</Canvas>

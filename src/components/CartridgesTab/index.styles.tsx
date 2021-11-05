@@ -18,6 +18,10 @@ export const BackgroundShade = styled.img`
     background: #D70000;
     opacity: 0.1;
     filter: blur(520px);
+
+    ${mediaQuery.tablet} {
+        display: none;
+    }
 `
 
 export const CartridgesHeaderContainer = styled.div`
@@ -73,11 +77,9 @@ export const CartridgesTabHeader = styled(TabHeader)`
 export const CartridgeThumbnailsContainer = styled.div`
     display: flex;
     gap: 25px;
-
-    ${mediaQuery.mobileL} {
-        flex-direction: column;
-        margin-top: 100px;
-    }
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 `
 
 export const CartridgeThumbnailColoredText = styled(ColoredText)`
