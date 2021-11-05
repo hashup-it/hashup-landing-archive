@@ -55,7 +55,7 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
 
     let web3, contract
 
-    const blockchainProviderUrl = Web3.givenProvider
+    const blockchainProviderUrl = "https://bsc-dataseed.binance.org"
 
     const parsed = queryString.parse(window.location.search)
     const buddy = parsed.buddy
@@ -130,7 +130,7 @@ const Airdrop: FunctionComponent<AirdropProps> = ({
             if (userNickname != "") return
 
             await (window as any).ethereum.enable()
-            web3 = await new Web3(Web3.givenProvider)
+            web3 = await new Web3("https://bsc-dataseed.binance.org")
             contract = await new web3.eth.Contract(
                 hashInfo.abi as AbiItem[],
                 hashInfo.contractAddress
