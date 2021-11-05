@@ -15,7 +15,7 @@ export const StyledNavBar = styled.div`
     font-weight: 700;
     align-items: flex-start;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 `
 
 export const MenuWrapper = styled.div`
