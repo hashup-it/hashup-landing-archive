@@ -32,7 +32,7 @@ export const ConnectWallet: FunctionComponent<ConnectWalletProps> = ({
                     <StyledWrapper>{account ? t("wallet-c") : t("wallet-n")}</StyledWrapper>
                     {account && (
                         <StyledAddress>
-                            {account.slice(0, 4) + "..." + account.slice(37, 42)}
+                            {account.slice(0, 4) + "…" + account.slice(37, 42)}
                         </StyledAddress>
                     )}
                 </StyledWalletTextWrapper>

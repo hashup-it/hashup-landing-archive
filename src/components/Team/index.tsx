@@ -30,12 +30,12 @@ export const Team = () => {
                 />
                 <Person
                     imageAsset={"/assets/avatars/filip_szydlowski.png"}
-                    title="cfo"
+                    title="CLO"
                     name="Filip Szydłowski"
                     description={t("filip-szydlowski")}
                     socials={
                         <>
-                            <Hyperlink href="https://www.linkedin.com/in/rafal-bielenia-b87ab935/">
+                            <Hyperlink href="https://www.linkedin.com/in/filip-szydlowski/">
                                 <SocialIcon src="/assets/icons/linkedin.svg" />
                             </Hyperlink>
                         </>
@@ -49,21 +49,20 @@ export const Team = () => {
                     description={t("rafal-bielenia")}
                     socials={
                         <>
-                            <Hyperlink href="https://www.linkedin.com/in/filip-szydlowski/">
+                            <Hyperlink href="https://www.linkedin.com/in/rafal-bielenia-b87ab935/">
                                 <SocialIcon src="/assets/icons/linkedin.svg" />
                             </Hyperlink>
                         </>
                     }
                     outline={true}
                 />
-                <Person
-                    imageAsset={"/assets/avatars/cezary_dobrowolski.png"}
-                    title="cmo"
-                    name="Cezary Dobrowolski"
-                    description={t("cezary-dobrowolski")}
+                 <Person
+                    imageAsset={"/assets/avatars/tomasz_fiema.png"}
+                    title="head of design"
+                    name="Tomasz Fiema"
                     socials={
                         <>
-                            <Hyperlink href="https://www.linkedin.com/in/cezary-krzysztof-dobrowolski-b0a2001a5/">
+                            <Hyperlink href="https://www.linkedin.com/in/tomaszfiema/">
                                 <SocialIcon src="/assets/icons/linkedin.svg" />
                             </Hyperlink>
                         </>
@@ -74,12 +73,12 @@ export const Team = () => {
             <Header>{t("team")}</Header>
             <TeamPeopleContainer>
                 <Person
-                    imageAsset={"/assets/avatars/tomasz_fiema.png"}
-                    title="head of design"
-                    name="Tomasz Fiema"
+                    imageAsset={"/assets/avatars/cezary_dobrowolski.png"}
+                    title="cmo"
+                    name="Cezary Dobrowolski"
                     socials={
                         <>
-                            <Hyperlink href="https://www.linkedin.com/in/tomaszfiema/">
+                            <Hyperlink href="https://www.linkedin.com/in/cezary-krzysztof-dobrowolski-b0a2001a5/">
                                 <SocialIcon src="/assets/icons/linkedin.svg" />
                             </Hyperlink>
                         </>
@@ -115,7 +114,52 @@ export const Team = () => {
                     name="Jakub Jaworski"
                     socials={
                         <>
-                            <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                            <Hyperlink href="https://www.linkedin.com/in/jakub-jaworski-1189961aa/">
+                                <SocialIcon src="/assets/icons/linkedin.svg" />
+                            </Hyperlink>
+                        </>
+                    }
+                />
+            </TeamPeopleContainer>
+            <Header>{t("advisors")}</Header>
+            <TeamPeopleContainer>
+                <Person
+                    imageAsset={"/assets/avatars/tomasz_smus.png"}
+                    title="Advisor"
+                    name="dr Tomasz R. Smus"
+                    description={"Doktor Prawa i Ekonomii. Przyniósł Bitcoin'a do polskiego świata "}
+                    socials={
+                        <>
+                            <Hyperlink href="https://www.linkedin.com/in/trsmus/">
+                                <SocialIcon src="/assets/icons/linkedin.svg" />
+                            </Hyperlink>
+                        </>
+                    }
+                />
+                <Person
+                    imageAsset={"/assets/avatars/krzysztof_piech.png"}
+                    title="Advisor"
+                    name="prof Krzysztof Piech"
+                    description="Jeden z pierwszych pionierów Bitcoin w Polskim świecie akademickim."
+                    socials={
+                        <>
+                            <Hyperlink href="https://www.linkedin.com/in/kpiech/">
+                                <SocialIcon src="/assets/icons/linkedin.svg" />
+                            </Hyperlink>
+                            <Hyperlink href="https://pl.wikipedia.org/wiki/Krzysztof_Piech">
+                                W
+                            </Hyperlink>
+                        </>
+                    }
+                />
+                <Person
+                    imageAsset={"/assets/avatars/krzysztof_chmielewski.png"}
+                    title="Advisor"
+                    name="Krzysztof Chmielewski"
+                    description="Starszy wykładowca badania i projektowania gier Uniwersytetu Kazimierza Wielkiego. Kierownik produkcji we Flybridge Studio."
+                    socials={
+                        <>
+                            <Hyperlink href="https://www.linkedin.com/in/krzysztof-chmielewski-a87b5a8a/">
                                 <SocialIcon src="/assets/icons/linkedin.svg" />
                             </Hyperlink>
                         </>

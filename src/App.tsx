@@ -16,7 +16,7 @@ import CreateCartridges from "./components/CreateCartridges"
 import GamExplorer from "./components/GamExplorer"
 import Comparison from "./components/Comparison"
 import GameLibrary from "./components/GameLibrary"
-import CartridgesTab from "./components/CartridgesTab"
+import { CartridgesTab } from "./components/CartridgesTab"
 import ScrollToTop from "./hook/scrollToTop"
 import Airdrop from "components/Airdrop"
 import Calculator from "components/Calculator"
@@ -56,10 +56,11 @@ const App = () => {
                         <Comparison />
                         <Calculator />
                         <GameLibrary />
-                        <Airdrop
+                        <Airdrop 
                             account={shownAccount}
                             isWalletSelectorShown={isWalletSelectorShown}
                             setIsWalletSelectorShown={setIsWalletSelectorShown}
+                            
                         />
                         <CreateCartridges />
                         <GameCap />

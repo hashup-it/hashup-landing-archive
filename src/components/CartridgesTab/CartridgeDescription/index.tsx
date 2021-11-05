@@ -14,24 +14,27 @@ import {
     CartridgeTargetItemContent,
     CartridgeTargetLabel,
 } from "./index.style"
+import { ReactElement } from 'react'
 
-export const CartridgeDescription = ({
-    leftBasedLayout,
-    color,
-    headerCartridgeTypeText,
-    descriptionText,
-    targetText,
-    descriptionListContents,
-    cartridgeModel,
-}: {
-    leftBasedLayout: boolean
-    color: string
-    headerCartridgeTypeText: string
-    descriptionText: string
-    targetText: string
-    descriptionListContents: string[]
-    cartridgeModel: any
-}) => {
+export const CartridgeDescription = (
+    {
+        leftBasedLayout,
+        color,
+        headerCartridgeTypeText,
+        descriptionText,
+        targetText,
+        descriptionListContents,
+        cartridgeModel
+    }: {
+        leftBasedLayout: boolean,
+        color: string,
+        headerCartridgeTypeText: string,
+        descriptionText: string,
+        targetText: string,
+        descriptionListContents: string[],
+        cartridgeModel: ReactElement
+    }
+) => {
     return (
         <CartridgeDescriptionContainer leftBasedLayout={leftBasedLayout}>
             <CartridgeHook id={headerCartridgeTypeText.toLowerCase()} />
@@ -52,7 +55,7 @@ export const CartridgeDescription = ({
                     ))}
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
-            <CartridgeDescriptionImage cartridgeModel={cartridgeModel}>
+            <CartridgeDescriptionImage>
                 <CartridgeScene
                     cameraDistance={CameraDistance.cartridgesListing}
                     cartridgeModel={cartridgeModel}

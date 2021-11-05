@@ -18,7 +18,7 @@ export const CartridgeDescriptionContainer = styled.div<{ leftBasedLayout: boole
     gap: 145px;
     position: relative;
 
-    ${mediaQuery.mobileL} {
+    ${mediaQuery.tablet} {
         display: flex;
         flex-direction: column;
         gap: 0;
@@ -42,9 +42,9 @@ export const CartridgeDescriptionSmallText = styled(SmallHeaderText)`
     color: #cdcdcd;
 `
 
-export const CartridgeDescriptionImage = styled.div<{ cartridgeModel: any }>`
+export const CartridgeDescriptionImage = styled.div`
     grid-area: image;
-    height: 100%;
+    height: 32em;
 
     display: flex;
 
@@ -56,6 +56,12 @@ export const CartridgeDescriptionImage = styled.div<{ cartridgeModel: any }>`
         width: calc(50%);
         height: auto;
         clip: auto;
+    }
+
+    ${mediaQuery.laptop} {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 `
 

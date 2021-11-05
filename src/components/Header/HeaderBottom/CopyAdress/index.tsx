@@ -22,7 +22,7 @@ export const CopyAdress = () => {
     return (
         <StyledCopyGroup onClick={() => handleClick()}>
             <StyledTokenIcon icon="/assets/icons/LogoIcon.svg" />
-            0x2ce.....BA9f
+            0x2ce…BA9f
             <StyledTokenIcon
                 icon={
                     !showAnimation ? "/assets/icons/copy-red.svg" : "/assets/icons/copy-confirm.svg"
