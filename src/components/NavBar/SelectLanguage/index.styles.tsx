@@ -2,36 +2,6 @@ import styled from "styled-components"
 import { isTypeAliasDeclaration } from "typescript"
 import { Swatches } from "../../../__styles__/Swatches"
 
-/*export const StyledLanguageList = styled.select`
-    appearance: none;
-    border: none;
-    color: white;
-    background-color: transparent;
-    font-family: Sora, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    cursor: pointer;
-
-    :focus {
-        outline: none;
-        border: none;
-    }
-
-    :after {
-        content: "";
-        width: 0.8em;
-        height: 0.5em;
-        background-color: var(--select-arrow);
-        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    }
-`
-
-export const StyledLanguageOption = styled.option`
-    background-color: black;
-`*/
-
 export const StyledSelectLanguage = styled.div`
     display: flex;
     gap: 10px;
