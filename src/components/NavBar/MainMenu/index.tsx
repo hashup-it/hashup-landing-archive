@@ -11,10 +11,11 @@ import {
     Icon,
     ListHeader,
     MailLink,
-    SocialMediaGroup,
-} from "../../Footer/index.styles"
-import { SelectLanguage } from "../SelectLanguage"
-import { useTranslation } from "react-i18next"
+    SocialMediaGroup
+} from '../../Footer/index.styles'
+import { NavLink } from 'react-router-dom'
+import { SelectLanguage } from '../SelectLanguage'
+import { useTranslation } from 'react-i18next'
 
 export const MainMenu = (
     {
@@ -27,14 +28,26 @@ export const MainMenu = (
 ) => {
     const { t } = useTranslation()
 
+    const handleCloseAction = () => {
+        setIsMobileMenuShown ? setIsMobileMenuShown(false) : new Function()
+    }
+
     return (
         <StyledMainMenu>
             <MenuItem>
                 <Hyperlink
                     href="/#ecosystem"
-                    onClick={() => setIsMobileMenuShown ? setIsMobileMenuShown(false) : new Function()}
+                    onClick={handleCloseAction}
                 >{t('ecosystem')}</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
+            </MenuItem>
+            <MenuItem>
+                <NavLink
+                    to="/Cartridges"
+                    onClick={handleCloseAction}
+                >
+                    Cartridges
+                </NavLink>
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
