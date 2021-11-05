@@ -119,5 +119,6 @@
     "walletselector-header2": " twojego portfela",
     "walletselector-text": "Wybierz, w jaki sposób chcesz uzyskać dostęp do swojego portfela.",
     "walletselector-nowallet": "Nie masz portfela? ",
-    "walletselector-create": "Stwórz go"
+    "walletselector-create": "Stwórz go",
+    "advisors": "Advisorzy"
 }

@@ -117,5 +117,6 @@
     "walletselector-header2": " your Wallet",
     "walletselector-text": "Choose how you wish to access your wallet.",
     "walletselector-nowallet": "Don't have a wallet? ",
-    "walletselector-create": "Create one"
+    "walletselector-create": "Create one",
+    "advisors": "Advisors"
 }

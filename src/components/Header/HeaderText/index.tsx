@@ -25,7 +25,7 @@ export const HeaderText = () => {
                 <HeaderAirdropWrapper>
                     <HeaderAirdropIcon />
                     <HeaderGetAirdrop>
-                        <Hyperlink href="/airdrop.html">{t("header-airdrop")}</Hyperlink>
+                        <Hyperlink href="/#airdrop">{t("header-airdrop")}</Hyperlink>
                     </HeaderGetAirdrop>
                 </HeaderAirdropWrapper>
             </ButtonGroup>

@@ -56,10 +56,11 @@ const App = () => {
                         <Comparison />
                         <Calculator />
                         <GameLibrary />
-                        <Airdrop
+                        <Airdrop 
                             account={shownAccount}
                             isWalletSelectorShown={isWalletSelectorShown}
                             setIsWalletSelectorShown={setIsWalletSelectorShown}
+                            
                         />
                         <CreateCartridges />
                         <GameCap />
