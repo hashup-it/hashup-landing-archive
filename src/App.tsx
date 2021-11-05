@@ -24,7 +24,7 @@ import Team from "./components/Team"
 
 const App = () => {
     const [shownAccount, setShownAccount] = useState<string | null>(null)
-    const [isWalletSelectorShown, setIsWalletSelectorShown] = useState(false)
+    const [isWalletSelectorShown, setIsWalletSelectorShown] = useState<boolean>(false)
 
     const handleMetamaskConnection = async () => {
         const w = window as any

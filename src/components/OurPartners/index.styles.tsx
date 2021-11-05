@@ -9,6 +9,10 @@ export const OurPartnersContainer = styled.div`
 
     margin-top: 124px;
     margin-bottom: 230px;
+
+    ${mediaQuery.laptop} {
+        margin-bottom: 80px;
+    }
 `
 
 export const OurPartnersHeader = styled(SectionHeader)`
@@ -34,12 +38,16 @@ export const SponsorLogosContainer = styled.div`
 
     > * {
         opacity: 1;
+        user-select: none;
 
         cursor: pointer;
         filter: invert() brightness(3);
+        opacity: 0.5;
+        transition: opacity 100ms ease;
 
         :hover {
-            opacity: 0.5;
+            transition: opacity 120ms ease;
+            opacity: 1;
         }
     }
 

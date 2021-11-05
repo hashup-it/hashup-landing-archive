@@ -22,14 +22,24 @@ const OurPartners = () => {
             </OurPartnersHeader>
             <ContentContainer>
                 <SponsorLogosContainer>
-                    <a href="https://tubbly.webflow.io/">
-                        <SponsorLogo src="/assets/icons/sponsor/tubbly.png" />
+                    <a href="https://tubbly.webflow.io/" className="tubbly" title="Tubbly">
+                        <SponsorLogo src="/assets/icons/sponsor/tubbly.png" alt="Tubbly" />
                     </a>
-                    <a href="https://www.blockalliance.io/">
-                        <SponsorLogo src="/assets/icons/sponsor/blockchain-alliance.png" />
+                    <a
+                        href="https://www.blockalliance.io/"
+                        className="blockchain-alliance"
+                        title="Blockchain Alliance"
+                    >
+                        <SponsorLogo
+                            src="/assets/icons/sponsor/blockchain-alliance.png"
+                            alt="Blockchain Alliance"
+                        />
                     </a>
-                    <a href="https://unitedideas.co/">
-                        <SponsorLogo src="/assets/icons/sponsor/united-ideas.png" />
+                    <a href="https://unitedideas.co/" className="united-ideas" title="United Ideas">
+                        <SponsorLogo
+                            src="/assets/icons/sponsor/united-ideas.png"
+                            alt="United Ideas"
+                        />
                     </a>
                 </SponsorLogosContainer>
                 <QuoteTextContainer>

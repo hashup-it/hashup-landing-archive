@@ -33,7 +33,6 @@ const Results: FC<{ readonly soldItems: number; readonly price: number }> = ({
 }) => {
     const othersProfit = calcOthersProfit(soldItems, price)
     const ourProfit = calcOurProfit(soldItems, price)
-
     const { t } = useTranslation()
 
     return (

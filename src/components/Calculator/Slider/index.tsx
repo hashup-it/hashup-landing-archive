@@ -34,7 +34,9 @@ const Slider: FC<SliderProps> = ({
         if (sliderRef.current) {
             return sliderRef.current.querySelector(".rc-slider-handle")
         }
-    }, [sliderRef])
+        // It should be sliderRef.current otherwise it doesn't work
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [sliderRef.current])
 
     useEffect(() => {
         setValue(defaultValue)
@@ -48,7 +50,9 @@ const Slider: FC<SliderProps> = ({
             // so we have to manipulate DOM directly (to use HTML attribute)
             sliderHandle.setAttribute(DISPLAY_VALUE_ATTRIBUTE, displayValue)
         }
-    }, [sliderRef, displayValue, sliderHandle])
+        // It should be sliderRef.current otherwise it doesn't work
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [sliderRef.current, displayValue, sliderHandle])
 
     return (
         <StyledSlider>

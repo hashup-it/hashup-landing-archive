@@ -11,10 +11,10 @@ import {
     Icon,
     ListHeader,
     MailLink,
-    SocialMediaGroup
-} from '../../Footer/index.styles'
-import { SelectLanguage } from '../SelectLanguage'
-import { useTranslation } from 'react-i18next'
+    SocialMediaGroup,
+} from "../../Footer/index.styles"
+import { SelectLanguage } from "../SelectLanguage"
+import { useTranslation } from "react-i18next"
 
 export const MainMenu = (
     {

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { SectionContainer } from "../Shared/sections.styles"
+import { mediaQuery } from "components/MediaQuery"
 
 export const StyledGamExplorer = styled.div`
     display: flex;
@@ -12,6 +13,8 @@ export const GameExplorerContainer = styled(SectionContainer)`
     width: 30em;
 
     text-align: center;
-`
 
-export const Image = styled.img``
+    ${mediaQuery.laptop} {
+        margin-bottom: 65px;
+    }
+`

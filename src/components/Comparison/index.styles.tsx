@@ -1,9 +1,11 @@
 import styled from "styled-components"
-import { Swatches } from "../../__styles__/Swatches"
+import { Swatches } from "__styles__/Swatches"
 import { hexToRGB } from "../../util/math"
+import { mediaQuery } from "components/MediaQuery"
+import { globalHorizontalPadding } from "App.styles"
 
 export const StyledComparison = styled.div`
-    margin-top: 0px;
+    margin-top: 150px;
     margin-bottom: 250px;
     position: relative;
     display: grid;
@@ -13,7 +15,7 @@ export const StyledComparison = styled.div`
     grid-template-columns: 280px 280px 280px;
     z-index: initial;
     overflow-x: auto;
-    margin-top: 150px;
+    overflow-y: hidden;
 
     ::-webkit-scrollbar {
         display: none;
@@ -21,6 +23,15 @@ export const StyledComparison = styled.div`
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+
+    ${mediaQuery.mobileL} {
+        column-gap: 25px;
+        row-gap: 22px;
+        width: 100vw;
+        padding-left: 20px;
+        margin-left: -${globalHorizontalPadding[mediaQuery.mobileL]};
+        margin-bottom: 80px;
+    }
 `
 
 export const StyledComparisonText = styled.div`
@@ -39,8 +50,13 @@ export const ComparisonItem = styled.div<{ outlineColor: string }>`
     );
     padding: 1px;
     display: grid;
-    border-radius: 13.0133px;
+    border-radius: 13px;
     position: relative;
+    width: 290px;
+
+    ${mediaQuery.tablet} {
+        width: 232px;
+    }
 `
 
 export const ComparisonItemContent = styled.ul`
@@ -57,23 +73,22 @@ export const ComparisonItemContent = styled.ul`
     line-height: 180%;
 `
 
-export const StyledLineColumn = styled.div`
-    background-color: blue;
-    grid-row: span 3;
-`
-
 export const StyledPro = styled.li`
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 180%;
     margin-top: 4.5px;
+    position: relative;
+    padding-left: 30px;
 
-    &::before {
+    :before {
         content: "#";
+        position: absolute;
         color: ${Swatches.primary_color};
         margin-right: 27px;
         font-size: 17px;
+        margin-left: -26px;
     }
 `
 
@@ -83,17 +98,19 @@ export const StyledCon = styled.li`
     font-style: normal;
     font-weight: normal;
     margin-top: 4.5px;
-
+    position: relative;
+    padding-left: 30px;
     color: #cdcdcd;
 
-    &::before {
+    :before {
         content: "";
-        display: inline-block;
+        position: absolute;
         height: 5px;
         width: 5px;
         margin-bottom: 1.5px;
         background-color: #cdcdcd;
-        margin-right: 27px;
+        margin-left: -24px;
+        margin-top: 10px;
     }
 `
 
@@ -104,38 +121,44 @@ export const StyledPlus = styled.div`
     line-height: 25px;
     color: white;
     position: absolute;
-    left: -70px;
+    left: -60px;
     top: 0;
     display: flex;
     align-items: center;
     bottom: 0;
     margin: auto;
+
+    ${mediaQuery.mobileL} {
+        left: -30px;
+    }
 `
 
 export const LineText = styled.div<{ color: string }>`
     display: flex;
     align-items: center;
-    grid-column: span 3;
-    left: 0;
+    grid-column: 3;
     color: ${props => props.color};
     font-weight: bold;
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.5em;
-
+    width: 100%;
+    /* background-color: red; */
     text-transform: uppercase;
-    position: sticky;
+    position: relative;
 
-    ::after {
+    :after {
         content: "";
-        width: 60vw;
+        position: absolute;
+        width: calc(100% - 80px);
         background: linear-gradient(
             90deg,
             ${props => hexToRGB(props.color, 0.3)} 50%,
             ${props => hexToRGB(props.color, 0)} 100%
         );
-        height: 4px;
-        margin-left: 33px;
+        height: 3px;
+        display: block;
+        left: 110px;
     }
 `
 

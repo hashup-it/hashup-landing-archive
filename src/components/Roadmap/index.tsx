@@ -25,6 +25,7 @@ const Carousele = () => (
 
 const Roadmap = () => {
     const { t } = useTranslation()
+
     return (
         <StyledRoadmap>
             <SectionLabel>
