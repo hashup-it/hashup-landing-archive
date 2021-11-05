@@ -25,7 +25,7 @@ export const MenuWrapper = styled.div`
     margin: 0 auto;
 
     ${mediaQuery.desktopL} {
-        width: 1380px;
+        width: 1400px;
     }
 
     ${mediaQuery.laptopL} {

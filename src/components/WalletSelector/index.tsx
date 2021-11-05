@@ -19,6 +19,7 @@ export const WalletSelector = ({
     handleMetamaskConnection: Function
 }) => {
     const { t } = useTranslation()
+    
     return (
         <WalletSelectorContainer>
             <ContentWrapper>

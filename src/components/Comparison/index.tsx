@@ -41,7 +41,6 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
                 <ComparisonItemContent>
                     <StyledPro>{t("comp-comfort")}</StyledPro>
                     <StyledPro>{t("comp-carrier")}</StyledPro>
-                    <StyledPlus>+</StyledPlus>
                 </ComparisonItemContent>
                 <StyledPlus>+</StyledPlus>
             </ComparisonItem>

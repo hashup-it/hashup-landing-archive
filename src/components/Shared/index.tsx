@@ -23,8 +23,10 @@ export const ButtonOutlined = styled.a`
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    transition: background 100ms ease;
 
     :hover {
+        transition: background 100ms ease;
         background-color: white;
         color: ${Swatches.background_main};
     }
