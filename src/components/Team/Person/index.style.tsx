@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { ComparisonItemContent } from '../../Comparison/index.styles'
-import { StyledSocialMedia } from '../../Header/HeaderBottom/index.styles'
-import { Swatches } from '../../../__styles__/Swatches'
+import styled from "styled-components"
+import { ComparisonItemContent } from "../../Comparison/index.styles"
+import { StyledSocialMedia } from "../../Header/HeaderBottom/index.styles"
+import { Swatches } from "../../../__styles__/Swatches"
 
 export const PersonContainer = styled.div`
     display: flex;
@@ -19,8 +19,9 @@ export const Avatar = styled.img`
     right: 40px;
 `
 
-export const PersonDescription = styled.div<({ outline: boolean | undefined })>`
-    background: ${props => props.outline ? `linear-gradient(${Swatches.primary_color} 0%, transparent 40%)` : 'auto'};
+export const PersonDescription = styled.div<{ outline: boolean | undefined }>`
+    background: ${props =>
+        props.outline ? `linear-gradient(${Swatches.primary_color} 0%, transparent 40%)` : "auto"};
     padding: 1px;
     border-radius: 40px;
     position: relative;
@@ -66,11 +67,11 @@ export const Description = styled.div`
     letter-spacing: 0em;
     text-align: left;
 
-    color: #B7B7B7;
+    color: #b7b7b7;
 `
 
 export const Separator = styled.div`
-    background: url('/assets/icons/separator.svg');
+    background: url("/assets/icons/separator.svg");
     width: 25px;
     height: 2px;
     margin: 30px 0;
@@ -79,5 +80,3 @@ export const Separator = styled.div`
 export const SocialMedia = styled(StyledSocialMedia)`
     justify-content: start;
 `
-
-

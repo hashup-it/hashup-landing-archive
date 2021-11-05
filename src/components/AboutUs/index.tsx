@@ -1,5 +1,11 @@
-import { ColoredText } from '../Shared'
-import { LeftWrapper, RightWrapper, SectionHeader, SectionLabel, SectionText } from '../Shared/sections.styles'
+import { ColoredText } from "../Shared"
+import {
+    LeftWrapper,
+    RightWrapper,
+    SectionHeader,
+    SectionLabel,
+    SectionText,
+} from "../Shared/sections.styles"
 import {
     AboutCard,
     BackgroundWorld,
@@ -9,46 +15,46 @@ import {
     Cards,
     RadialGradient,
     SectionContainer,
-    StyledAboutUs
-} from './index.styles'
+    StyledAboutUs,
+} from "./index.styles"
+import { useTranslation } from "react-i18next"
 
-export const AboutUs = () => {
-
+const AboutUs = () => {
+    const { t } = useTranslation()
 
     return (
         <StyledAboutUs>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel><ColoredText>UWOLNIJ SIĘ</ColoredText></SectionLabel>
+                    <SectionLabel>
+                        <ColoredText>{t("free-yourself")}</ColoredText>
+                    </SectionLabel>
                     <SectionHeader>
-                        <ColoredText>Wolny</ColoredText> rynek gier i&nbsp;oprogramowania
+                        <ColoredText>{t("about-us-header1")}</ColoredText>
+                        {t("about-us-header2")}
                     </SectionHeader>
-                    <SectionText>
-                        Rynek wolnego oprogramowania jest naturalną konsekwencją oddania oprogramowania w ręce graczy.
-                        Handlujcie grami! Wolny rynek odkryje prawdziwą cenę oprogramowania.
-                    </SectionText>
+                    <SectionText>{t("about-us-section-text")}</SectionText>
                 </LeftWrapper>
                 <RightWrapper>
                     <Cards>
                         <AboutCard>
                             <RadialGradient />
                             <CardLine />
-                            <CardHeader>Dystrybucja w Twoich rękach</CardHeader>
-                            Kontroluj cenę gry i liczbę wydanych licencji. Zarabiaj pieniądze na rynku wtórnym. Wszystko
-                            pod Twoją kontrolą.
+                            <CardHeader>{t("about-us-distribution-header")}</CardHeader>
+                            {t("about-us-distribution")}
                         </AboutCard>
                         <AboutCard>
                             <CardParticles />
                             <CardLine />
-                            <CardHeader>Brak prowizji</CardHeader>
-                            Jesteś jedynym wydawcą. Nie pozwól nikomu zarabiać na twojej ciężkiej pracy. Zarobisz w ten
-                            sposób więcej pieniędzy, czy obniżysz cenę gry, aby dotrzeć do większej liczby odbiorców?
-                            Decyzja należy do Ciebie! </AboutCard>
+                            <CardHeader>{t("about-us-provision-header")}</CardHeader>
+                            {t("about-us-provision")}{" "}
+                        </AboutCard>
                     </Cards>
                 </RightWrapper>
             </SectionContainer>
             <BackgroundWorld />
-
         </StyledAboutUs>
     )
 }
+
+export default AboutUs

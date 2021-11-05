@@ -1,21 +1,24 @@
-import React from 'react'
-import { SectionLabel } from '../Shared/sections.styles'
-import { ColoredText } from '../Shared'
+import { SectionLabel } from "../Shared/sections.styles"
+import { ColoredText } from "../Shared"
 import {
     ContentContainer,
     OurPartnersContainer,
     OurPartnersHeader,
     QuoteTextContainer,
     SponsorLogo,
-    SponsorLogosContainer
-} from './index.styles'
+    SponsorLogosContainer,
+} from "./index.styles"
+import { useTranslation } from "react-i18next"
 
-export const OurPartners = () => {
+const OurPartners = () => {
+    const { t } = useTranslation()
+
     return (
         <OurPartnersContainer>
-            <SectionLabel>Razem zmienimy świat</SectionLabel>
+            <SectionLabel>{t("partners-label")}</SectionLabel>
             <OurPartnersHeader>
-                Nasi <ColoredText>Partnerzy</ColoredText>
+                {t("partners-header1")}
+                <ColoredText>{t("partners-header2")}</ColoredText>
             </OurPartnersHeader>
             <ContentContainer>
                 <SponsorLogosContainer>
@@ -30,10 +33,13 @@ export const OurPartners = () => {
                     </a>
                 </SponsorLogosContainer>
                 <QuoteTextContainer>
-                    W pojedynkę możemy zrobić tak mało; razem możemy uczynić tak wiele.”<br />
+                    {t("partners-text")}
+                    <br />
                     <ColoredText>Hellen Keler</ColoredText>
                 </QuoteTextContainer>
             </ContentContainer>
         </OurPartnersContainer>
     )
 }
+
+export default OurPartners

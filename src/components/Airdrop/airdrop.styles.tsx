@@ -1,29 +1,31 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../MediaQuery'
-import { Swatches } from '../../__styles__/Swatches'
+import styled from "styled-components"
+import { mediaQuery } from "../MediaQuery"
+import { Swatches } from "../../__styles__/Swatches"
 
 export const StyledAirdrop = styled.div`
-
     border-top: 4px solid ${Swatches.primary_color};
     padding: 52px 6.25%;
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "header main" 
-                         "info referral";
+    grid-template-areas:
+        "header main"
+        "info referral";
 
     ${mediaQuery.laptop} {
-        grid-template-areas: "header info" 
-                             "main main"
-                             "referral referral";
+        grid-template-areas:
+            "header info"
+            "main main"
+            "referral referral";
         grid-template-columns: 1fr 1fr;
     }
 
     ${mediaQuery.tablet} {
-        grid-template-areas: "header header" 
-                             "info info"
-                             "main main"
-                             "referral referral";
+        grid-template-areas:
+            "header header"
+            "info info"
+            "main main"
+            "referral referral";
     }
 
     column-gap: 45px;
@@ -34,7 +36,6 @@ export const StyledAirdrop = styled.div`
     ${mediaQuery.tablet} {
         row-gap: 20px;
     }
-
 `
 
 export const StyledAirdropHeader = styled.h1`
@@ -77,13 +78,12 @@ export const StyledMainSmall = styled.p`
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
-    color: #646E83;
+    color: #646e83;
 
     ${mediaQuery.laptop} {
         text-align: center;
     }
 `
-
 
 const inputHeight = 63
 export const StyledInputWrapper = styled.div`
@@ -99,7 +99,7 @@ export const StyledInputWrapper = styled.div`
 `
 
 export const StyledInputIcon = styled.div`
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 24px 0px 0px 4px;
     background-image: url("/assets/icons/user.svg");
     background-position: center;
@@ -107,25 +107,26 @@ export const StyledInputIcon = styled.div`
 `
 
 export const StyledInput = styled.input`
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: none;
     font-weight: normal;
     font-size: 0.9rem;
     line-height: 18px;
     color: #222;
 
-
     :focus {
         outline: none;
     }
 `
 
-export const StyledInputButton = styled.div<({ isDisabled : boolean })>`
-    background: ${props => props.isDisabled ? `linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.text_secondary} 100%)` : `linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.primary_color} 100%)`};
+export const StyledInputButton = styled.div<{ isDisabled: boolean }>`
+    background: ${props =>
+        props.isDisabled
+            ? `linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.text_secondary} 100%)`
+            : `linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.primary_color} 100%)`};
     position: relative;
     border-radius: 0px 4px 4px 0px;
-    cursor: ${props => props.isDisabled ? 'cursor' : 'pointer'};
-
+    cursor: ${props => (props.isDisabled ? "cursor" : "pointer")};
 `
 
 export const StyledBeforeConnectWrapper = styled.div`
@@ -141,9 +142,10 @@ export const StyledBeforeConnectWrapper = styled.div`
     cursor: pointer;
 `
 
-export const StyledInputButtonFill = styled.div<({isDisabled: boolean})>`
+export const StyledInputButtonFill = styled.div<{ isDisabled: boolean }>`
     background-color: #010101;
-    background-image: url(${props => props.isDisabled ? "/assets/icons/check.svg" : "/assets/icons/save.svg"});
+    background-image: url(${props =>
+        props.isDisabled ? "/assets/icons/check.svg" : "/assets/icons/save.svg"});
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -185,9 +187,7 @@ export const StyledAirdropReferral = styled.div`
     justify-content: flex-start;
 `
 
-
 export const StyledInfoItem = styled.div`
-
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -198,7 +198,6 @@ export const StyledInfoLabel = styled.span`
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
-
 `
 
 export const StyledInfoValue = styled.span`
@@ -213,7 +212,7 @@ export const StyledInfoValue = styled.span`
     }
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -7px;
         left: 0;
@@ -230,7 +229,7 @@ export const StyledAfterConnectOptions = styled.div`
 `
 
 export const StyledCopyReferral = styled.div`
-    background: #FF3F3F;
+    background: #ff3f3f;
     border-radius: 15px;
     font-style: normal;
     font-weight: bold;
@@ -241,7 +240,6 @@ export const StyledCopyReferral = styled.div`
     align-items: center;
     display: flex;
     gap: 20px;
-
 `
 
 export const StyledCopyReferralIcon = styled.img``

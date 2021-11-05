@@ -1,50 +1,75 @@
-import { AddToMetamask } from "components/Header/HeaderBottom/AddToMetamask";
-import { ColoredText } from "components/Shared";
-import { Hyperlink } from "components/Shared/sections.styles";
-import { FC } from "react";
-import { StyledAddToMetamaskGroup, StyledAirdropPopupWrapper, StyledClose, StyledMediaIcon, StyledPopupHeader, StyledPopupText, StyledPopupWindow, StyledPopupWindowWrapper, StyledTelegramContainer, StyledTelegramHeader, StyledTelegramIconWrapper, StyledTelegramLink, StyledTelegramText} from "./index.styles";
+import { AddToMetamask } from "components/Header/HeaderBottom/AddToMetamask"
+import { ColoredText } from "components/Shared"
+import { Hyperlink } from "components/Shared/sections.styles"
+import { FC } from "react"
+import {
+    StyledAddToMetamaskGroup,
+    StyledAirdropPopupWrapper,
+    StyledClose,
+    StyledMediaIcon,
+    StyledPopupHeader,
+    StyledPopupText,
+    StyledPopupWindow,
+    StyledPopupWindowWrapper,
+    StyledTelegramContainer,
+    StyledTelegramHeader,
+    StyledTelegramIconWrapper,
+    StyledTelegramLink,
+    StyledTelegramText,
+} from "./index.styles"
+import { useTranslation } from "react-i18next"
 
 interface AidropPopupProps {
-    setPopupOpened: Function;
+    setPopupOpened: Function
 }
 
-export const AirdropPopup :FC<AidropPopupProps> = ({
-    setPopupOpened
-}) => {
+export const AirdropPopup: FC<AidropPopupProps> = ({ setPopupOpened }) => {
+    const { t } = useTranslation()
+
     return (
         <StyledAirdropPopupWrapper>
             <StyledPopupWindowWrapper>
                 <StyledPopupWindow>
-                    <StyledClose onClick={() => setPopupOpened(false)} src="/assets/icons/x-circle.svg"/>
-                    <StyledPopupHeader>Success</StyledPopupHeader>
+                    <StyledClose
+                        onClick={() => setPopupOpened(false)}
+                        src="/assets/icons/x-circle.svg"
+                    />
+                    <StyledPopupHeader>{t("airdroppopup-header")}</StyledPopupHeader>
                     <StyledPopupText>
-                        We have just sent your first <ColoredText>#Hash</ColoredText> to your wallet.
+                        {t("airdroppopup-text1")}
+                        <ColoredText>#Hash</ColoredText>
+                        {t("airdroppopup-text2")}
                     </StyledPopupText>
                     <StyledAddToMetamaskGroup>
-                        Add Hash to metamask &gt; <AddToMetamask/>
+                        {t("airdroppopup-metamask")} &gt; <AddToMetamask />
                     </StyledAddToMetamaskGroup>
                     <StyledTelegramContainer>
                         <StyledTelegramHeader>
-                            Be sure to <ColoredText>join</ColoredText><br/> our social media
+                            <ColoredText>Obserwuj</ColoredText>
+                            <br /> nasze social media
                         </StyledTelegramHeader>
                         <StyledTelegramLink>
                             <Hyperlink href="https://t.me/HashUpAnnouncements">
                                 <StyledTelegramIconWrapper>
-                                    <StyledMediaIcon src="/assets/icons/twitter.svg"/>
+                                    <StyledMediaIcon src="/assets/icons/twitter.svg" />
                                 </StyledTelegramIconWrapper>
                             </Hyperlink>
                             <StyledTelegramText>
-                                <ColoredText>Announcement</ColoredText><br/>Twitter
+                                <ColoredText>Announcement</ColoredText>
+                                <br />
+                                Twitter
                             </StyledTelegramText>
                         </StyledTelegramLink>
                         <StyledTelegramLink>
                             <Hyperlink href="https://t.me/HashUpAnnouncements">
                                 <StyledTelegramIconWrapper>
-                                    <StyledMediaIcon src="/assets/icons/telegram.svg"/>
+                                    <StyledMediaIcon src="/assets/icons/telegram.svg" />
                                 </StyledTelegramIconWrapper>
                             </Hyperlink>
                             <StyledTelegramText>
-                                <ColoredText>Announcement</ColoredText><br/>Telegram
+                                <ColoredText>Announcement</ColoredText>
+                                <br />
+                                Telegram
                             </StyledTelegramText>
                         </StyledTelegramLink>
                     </StyledTelegramContainer>
@@ -52,5 +77,4 @@ export const AirdropPopup :FC<AidropPopupProps> = ({
             </StyledPopupWindowWrapper>
         </StyledAirdropPopupWrapper>
     )
-
 }

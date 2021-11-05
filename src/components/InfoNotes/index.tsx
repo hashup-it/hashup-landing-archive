@@ -1,18 +1,19 @@
-import { FC } from 'react'
-import { SectionHeader, SectionLabel } from '../Shared/sections.styles'
-import { ColoredText } from '../Shared'
-import { randomInt } from 'util/math'
+import { FC } from "react"
+import { SectionHeader, SectionLabel } from "../Shared/sections.styles"
+import { ColoredText } from "../Shared"
+import { randomInt } from "util/math"
 import {
     StyledInfoNotes,
     StyledNote,
     StyledNoteBubble,
     StyledNoteContent,
     StyledNoteLabel,
-    StyledNotesArea
-} from './index.styles'
-import svgBubble1 from './icons/bubble-1.svg'
-import svgBubble2 from './icons/bubble-2.svg'
-import svgBubble3 from './icons/bubble-3.svg'
+    StyledNotesArea,
+} from "./index.styles"
+import svgBubble1 from "./icons/bubble-1.svg"
+import svgBubble2 from "./icons/bubble-2.svg"
+import svgBubble3 from "./icons/bubble-3.svg"
+import { useTranslation } from "react-i18next"
 
 interface NoteProps {
     readonly label: JSX.Element
@@ -31,44 +32,53 @@ export const Note: FC<NoteProps> = ({ content, label, icon }) => (
     </StyledNote>
 )
 
-export const InfoNotes = () => (
-    <StyledInfoNotes>
-        <SectionLabel>
-            <ColoredText>game</ColoredText>change.io
-        </SectionLabel>
-        <SectionHeader>
-            <ColoredText>DEFInitywna</ColoredText> forma dystrybucji cyfrowej.
-        </SectionHeader>
-        <StyledNotesArea>
-            <Note
-                icon={svgBubble1}
-                label={
-                    <>
-                        <ColoredText>Inwestuj</ColoredText> w&nbsp;gry
-                    </>
-                }
-                content="Zarabiaj pieniądze spekulując swoją własną grą."
-            />
-            <Note
-                icon={svgBubble2}
-                label={
-                    <>
-                        <ColoredText>Zdecentralizowana</ColoredText> dystrybucja
-                    </>
-                }
-                content="Wydawaj gry dzięki zdecentralizowanej dystrybucji."
-            />
+const InfoNotes = () => {
+    const { t } = useTranslation()
 
-            <Note
-                icon={svgBubble3}
-                label={
-                    <>
-                        Stań się<ColoredText> niezależny</ColoredText>
-                    </>
-                }
-                content="Zarabiaj więcej
-                    dzięki wolnemu rynkowi."
-            />
-        </StyledNotesArea>
-    </StyledInfoNotes>
-)
+    return (
+        <StyledInfoNotes>
+            <SectionLabel>
+                <ColoredText>game</ColoredText>change.io
+            </SectionLabel>
+            <SectionHeader>
+                <ColoredText>{t("infonotes-header1")}</ColoredText>
+                {t("infonotes-header2")}
+            </SectionHeader>
+            <StyledNotesArea>
+                <Note
+                    icon={svgBubble1}
+                    label={
+                        <>
+                            <ColoredText>{t("infonotes-note11")}</ColoredText>
+                            {t("infonotes-note12")}
+                        </>
+                    }
+                    content={t("infonotes-note1-content")}
+                />
+                <Note
+                    icon={svgBubble2}
+                    label={
+                        <>
+                            <ColoredText>{t("infonotes-note21")}</ColoredText>
+                            {t("infonotes-note22")}
+                        </>
+                    }
+                    content={t("infonotes-note2-content")}
+                />
+
+                <Note
+                    icon={svgBubble3}
+                    label={
+                        <>
+                            {t("infonotes-note31")}
+                            <ColoredText>{t("infonotes-note32")}</ColoredText>
+                        </>
+                    }
+                    content={t("infonotes-note3-content")}
+                />
+            </StyledNotesArea>
+        </StyledInfoNotes>
+    )
+}
+
+export default InfoNotes

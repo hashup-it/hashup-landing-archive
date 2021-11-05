@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const NewsletterContainer = styled.div`
     display: flex;
@@ -14,7 +14,7 @@ export const NewsletterContainer = styled.div`
 
 export const FormContainer = styled.div`
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
 `
 
 export const StyledFormDescription = styled.div`
@@ -22,7 +22,7 @@ export const StyledFormDescription = styled.div`
 `
 
 export const StyledInput = styled.input`
-    flex-grow: .75;
+    flex-grow: 0.75;
 
     font-family: Sora;
     font-style: normal;
@@ -31,21 +31,21 @@ export const StyledInput = styled.input`
     line-height: 15px;
     padding: 16px;
 
-    background: #FFFFFF;
+    background: #ffffff;
     border: none;
     border-radius: 4px;
 
     outline: none;
 
     ::placeholder {
-        color: #CDCDCD;
+        color: #cdcdcd;
     }
 `
 
 export const StyledSignUpButton = styled.button`
-    flex-grow: .25;
+    flex-grow: 0.25;
 
-    background: #FF3F3F;
+    background: #ff3f3f;
     border: none;
 
     filter: grayscale(100%);
@@ -58,7 +58,6 @@ export const StyledSignUpButton = styled.button`
     font-style: normal;
     font-weight: 600;
 
-    
     :hover {
         opacity: 1;
     }

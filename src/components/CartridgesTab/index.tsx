@@ -1,15 +1,14 @@
-import React from 'react'
-import { ColoredText } from '../Shared'
+import { ColoredText } from "../Shared"
 import {
     BackgroundShade,
     CartridgesHeaderContainer,
     CartridgesTabContainer,
     CartridgesTabHeader,
     CartridgeThumbnailsContainer,
-    SmallCartridgeHeaderText
-} from './index.styles'
-import { CartridgeDescription } from './CartridgeDescription'
-import { CartridgeThumbnail } from './CartridgeThumbnail'
+    SmallCartridgeHeaderText,
+} from "./index.styles"
+import { CartridgeDescription } from "./CartridgeDescription"
+import { CartridgeThumbnail } from "./CartridgeThumbnail"
 
 import ModelRed from '../../components/CartridgeScene/Three/ModelRed'
 import ModelBlue from '../../components/CartridgeScene/Three/ModelBlue'
@@ -18,11 +17,11 @@ import ModelGreen from '../../components/CartridgeScene/Three/ModelGreen'
 import ModelGold from '../../components/CartridgeScene/Three/ModelGold'
 
 export enum CartridgeColor {
-    Green = '#6AAD38',
-    Gold = '#BEA379',
-    Blue = '#468CF4',
-    Gray = '#9D9D9D',
-    Red = '#FF3F3F'
+    Green = "#6AAD38",
+    Gold = "#BEA379",
+    Blue = "#468CF4",
+    Gray = "#9D9D9D",
+    Red = "#FF3F3F",
 }
 
 export const CartridgesTab = () => {

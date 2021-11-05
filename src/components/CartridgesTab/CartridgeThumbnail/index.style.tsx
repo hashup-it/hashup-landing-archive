@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { CartridgeColor } from '../index'
+import styled from "styled-components"
+import { CartridgeColor } from "../index"
 
-export const CartridgeThumbnailContainer = styled.a<({ highlightColor: CartridgeColor })>`
+export const CartridgeThumbnailContainer = styled.a<{ highlightColor: CartridgeColor }>`
     position: relative;
 
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -23,12 +23,12 @@ export const CartridgeThumbnailContainer = styled.a<({ highlightColor: Cartridge
     line-height: 18px;
     letter-spacing: 0.2em;
 
-    padding: .75em 2.5em 1em;
+    padding: 0.75em 2.5em 1em;
 
     :after {
-        content: '';
+        content: "";
         position: absolute;
-        bottom: -.5px;
+        bottom: -0.5px;
         left: calc(50% - 25px);
         border: 1px solid ${props => props.highlightColor};
         width: 50px;

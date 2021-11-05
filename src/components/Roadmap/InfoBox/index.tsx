@@ -1,7 +1,7 @@
-import { FC } from 'react'
-import { InfoBoxInterface } from './interfaces'
-import { StyledBullet, StyledBulletsList, StyledInfoBox, StyledLabel } from './infobox.styles'
-import { StyledWrapper } from './infobox.styles'
+import { FC } from "react"
+import { InfoBoxInterface } from "./interfaces"
+import { StyledBullet, StyledBulletsList, StyledInfoBox, StyledLabel } from "./infobox.styles"
+import { StyledWrapper } from "./infobox.styles"
 
 interface InfoBoxProps extends InfoBoxInterface {
     readonly highlighted: boolean

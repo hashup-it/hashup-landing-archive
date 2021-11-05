@@ -1,8 +1,5 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledGameCap = styled.div``
 
-
-export const Image = styled.img`
-    
-`
+export const Image = styled.img``

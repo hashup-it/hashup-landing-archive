@@ -1,7 +1,7 @@
 import React, { ReactElement, Suspense } from 'react'
-import { Canvas, extend } from '@react-three/fiber'
-import Model from './Three/ModelBlack'
-import { OrbitControls } from '@react-three/drei'
+import { Canvas, extend } from "@react-three/fiber"
+import Model from "./Three/ModelBlack"
+import { OrbitControls } from "@react-three/drei"
 
 extend({ OrbitControls })
 

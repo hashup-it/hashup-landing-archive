@@ -1,9 +1,7 @@
-import React, { ReactElement } from 'react'
-
-import { SectionHeader } from '../../Shared/sections.styles'
-import { ColoredText } from '../../Shared'
-import { Swatches } from '../../../__styles__/Swatches'
-import { CameraDistance, CartridgeScene } from '../../CartridgeScene'
+import { SectionHeader } from "../../Shared/sections.styles"
+import { ColoredText } from "../../Shared"
+import { Swatches } from "../../../__styles__/Swatches"
+import { CameraDistance, CartridgeScene } from "../../CartridgeScene"
 import {
     CartridgeDescriptionContainer,
     CartridgeDescriptionImage,
@@ -14,8 +12,9 @@ import {
     CartridgeTargetContent,
     CartridgeTargetItem,
     CartridgeTargetItemContent,
-    CartridgeTargetLabel
-} from './index.style'
+    CartridgeTargetLabel,
+} from "./index.style"
+import { ReactElement } from 'react'
 
 export const CartridgeDescription = (
     {
@@ -43,9 +42,7 @@ export const CartridgeDescription = (
                 <SectionHeader>
                     <ColoredText color={color}>{headerCartridgeTypeText}</ColoredText> Cartridge
                 </SectionHeader>
-                <CartridgeDescriptionSmallText>
-                    {descriptionText}
-                </CartridgeDescriptionSmallText>
+                <CartridgeDescriptionSmallText>{descriptionText}</CartridgeDescriptionSmallText>
                 <CartridgeTargetItem outlineColor={Swatches.cartridge_target_outline_color}>
                     <CartridgeTargetItemContent>
                         <CartridgeTargetLabel>Cartridge for</CartridgeTargetLabel>
@@ -53,9 +50,9 @@ export const CartridgeDescription = (
                     </CartridgeTargetItemContent>
                 </CartridgeTargetItem>
                 <CartridgeDescriptionList markerResource="/assets/icons/check-green.svg">
-                    {
-                        descriptionListContents.map(content => <li>{content}</li>)
-                    }
+                    {descriptionListContents.map(content => (
+                        <li>{content}</li>
+                    ))}
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
             <CartridgeDescriptionImage>

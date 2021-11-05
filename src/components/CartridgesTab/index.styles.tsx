@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { SmallHeaderText, TabHeader } from '../Shared/sections.styles'
-import { mediaQuery } from '../MediaQuery'
-import { ColoredText } from '../Shared'
+import styled from "styled-components"
+import { SmallHeaderText, TabHeader } from "../Shared/sections.styles"
+import { mediaQuery } from "../MediaQuery"
+import { ColoredText } from "../Shared"
 
 export const CartridgesTabContainer = styled.div`
     display: flex;
@@ -15,7 +15,7 @@ export const BackgroundShade = styled.img`
     position: absolute;
     width: 100%;
 
-    background: #D70000;
+    background: #d70000;
     opacity: 0.1;
     filter: blur(520px);
 
@@ -32,7 +32,7 @@ export const CartridgesHeaderContainer = styled.div`
     align-items: center;
     position: relative;
     gap: 40px;
-    
+
     ${mediaQuery.laptop} {
         height: auto;
     }
@@ -49,7 +49,7 @@ export const SmallCartridgeHeaderText = styled(SmallHeaderText)`
 
     text-align: center;
 
-    color: #E0E0E0;
+    color: #e0e0e0;
 `
 
 export const CartridgesTabHeader = styled(TabHeader)`

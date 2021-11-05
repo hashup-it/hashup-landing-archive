@@ -1,4 +1,4 @@
-import { ColoredText } from '../Shared'
+import { ColoredText } from "../Shared"
 import {
     LeftWrapper,
     RightWrapper,
@@ -6,24 +6,26 @@ import {
     SectionHeader,
     SectionLabel,
     SectionPhotoSimple,
-    SectionText
-} from '../Shared/sections.styles'
-import { StyledGameCap } from './index.styles'
+    SectionText,
+} from "../Shared/sections.styles"
+import { StyledGameCap } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
-export const GameCap = () => {
+const GameCap = () => {
+    const { t } = useTranslation()
     return (
         <StyledGameCap>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel><ColoredText>GAME</ColoredText>Cap.io</SectionLabel>
+                    <SectionLabel>
+                        <ColoredText>GAME</ColoredText>Cap.io
+                    </SectionLabel>
                     <SectionHeader>
-                        Wszystkie <ColoredText>cartdrige</ColoredText> w jednym miejscu.
+                        {t("gamecap-header1")}
+                        <ColoredText>{t("gamecap-header2")}</ColoredText>
+                        {t("gamecap-header3")}
                     </SectionHeader>
-                    <SectionText>
-                        Kupuj oprogramowanie w prosty sposób. Na platformie znajdziesz wszystkie informacje na temat
-                        gry, którą chcesz nabyć. Śledź cenę oraz podaż. Obserwuj konkretne projekty. Bądź na bieżąco!
-                    </SectionText>
-
+                    <SectionText>{t("gamecap-text")}</SectionText>
                 </LeftWrapper>
                 <RightWrapper>
                     <SectionPhotoSimple src="/assets/section-photos/photo4.png" />
@@ -32,3 +34,5 @@ export const GameCap = () => {
         </StyledGameCap>
     )
 }
+
+export default GameCap

@@ -1,4 +1,4 @@
-import { AccentLongEmDash, ColoredText } from '../Shared'
+import { AccentLongEmDash, ColoredText } from "../Shared"
 import {
     AddressLineEmphasized,
     CompanyIds,
@@ -24,13 +24,16 @@ import {
     MenuItems,
     MenuList,
     SocialMediaGroup,
-    StyledFooter
-} from './index.styles'
-import { Newsletter } from './Newsletter'
-import { Hyperlink } from '../Shared/sections.styles'
-import { NavLink } from 'react-router-dom'
+    StyledFooter,
+} from "./index.styles"
+import { Newsletter } from "./Newsletter"
+import { Hyperlink } from "../Shared/sections.styles"
+import { NavLink } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 export const Footer = () => {
+    const { t } = useTranslation()
+
     return (
         <StyledFooter>
             <FooterSeparatorBase />
@@ -40,39 +43,54 @@ export const Footer = () => {
                     <Logo src="/assets/logo.svg" />
                 </NavLink>
                 <SocialMediaGroup>
-                    <span>Our&nbsp;<ColoredText>social media</ColoredText></span>
-                    <a href="https://www.linkedin.com/company/hashupit"><Icon url={'linkedin.svg'} /></a>
-                    <a href="https://t.me/HashUpAnnouncements"><Icon url={'telegram.svg'} /></a>
-                    <a href="https://twitter.com/HashUp_it"><Icon url={'twitter.svg'} /></a>
-                    <a href="https://www.facebook.com/HashUpIt"><Icon url={'facebook.svg'} /></a>
-                    <a href="https://www.instagram.com/hashup.it/"><Icon url={'instagram.svg'} /></a>
+                    <span>
+                        {t("footer-span")}
+                        <ColoredText>social media</ColoredText>
+                    </span>
+                    <a href="https://www.linkedin.com/company/hashupit">
+                        <Icon url={"linkedin.svg"} />
+                    </a>
+                    <a href="https://t.me/HashUpAnnouncements">
+                        <Icon url={"telegram.svg"} />
+                    </a>
+                    <a href="https://twitter.com/HashUp_it">
+                        <Icon url={"twitter.svg"} />
+                    </a>
+                    <a href="https://www.facebook.com/HashUpIt">
+                        <Icon url={"facebook.svg"} />
+                    </a>
+                    <a href="https://www.instagram.com/hashup.it/">
+                        <Icon url={"instagram.svg"} />
+                    </a>
                 </SocialMediaGroup>
             </FooterHeading>
             <FooterQuickNavigation>
                 <NavLink to="/">
-                    <span><ColoredText>Hash</ColoredText>Up.it</span>
+                    <span>
+                        <ColoredText>Hash</ColoredText>Up.it
+                    </span>
                     <AccentLongEmDash />
-                    Idź do strony głównej
+                    {t("footer-home")}
                 </NavLink>
             </FooterQuickNavigation>
             <FooterTop>
                 <FooterTopLeft>
-                    <ListHeader>Nasza siedziba</ListHeader>
+                    <ListHeader>{t("footer-headquarters")}</ListHeader>
                     <ContactField>
-                        <AddressLineEmphasized>
-                            HashUp P.S.A.
-                        </AddressLineEmphasized>
-                        Al. Jana Pawła II 27<br />
-                        00-867 Warszawa<br />
+                        <AddressLineEmphasized>HashUp P.S.A.</AddressLineEmphasized>
+                        Al. Jana Pawła II 27
                         <br />
-                        <MailLink href="mailto:hello@hashup.it">
-                            hello@hashup.it
-                        </MailLink>
+                        00-867 {t("footer-warsaw")}
+                        <br />
+                        <br />
+                        <MailLink href="mailto:hello@hashup.it">hello@hashup.it</MailLink>
                         <br />
                     </ContactField>
                     <CompanyIds>
-                        NIP: 5272974670<br />
-                        KRS: 0000927509<br />
+                        NIP: 5272974670
+                        <br />
+                        KRS: 0000927509
+                        <br />
                     </CompanyIds>
                 </FooterTopLeft>
                 <FooterMenu>
@@ -90,15 +108,15 @@ export const Footer = () => {
                         {/*    <MenuItem>Support</MenuItem>*/}
                         {/*</MenuList>*/}
                         <MenuList>
-                            <MenuHeader>Dla Twórców</MenuHeader>
+                            <MenuHeader>{t("footer-creators")}</MenuHeader>
                             <MenuItem>
                                 <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
-                                    Dokumentacja
+                                    {t("doc")}
                                 </Hyperlink>
                             </MenuItem>
                             <MenuItem>
                                 <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/hashup-basics/cartridge">
-                                    Czym jest kartridż?
+                                    {t("footer-cartridge")}
                                 </Hyperlink>
                             </MenuItem>
                         </MenuList>
@@ -130,3 +148,5 @@ export const Footer = () => {
         </StyledFooter>
     )
 }
+
+export default Footer

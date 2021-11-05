@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../MediaQuery'
+import styled from "styled-components"
+import { mediaQuery } from "../MediaQuery"
 
 export const LandingHeaderContainer = styled.div`
     height: 100vh;
@@ -38,7 +38,7 @@ export const CartridgeContainer = styled.div`
     ${mediaQuery.tablet} {
         height: 50vw;
         width: 80vw;
-        
+
         margin-bottom: 0;
     }
 

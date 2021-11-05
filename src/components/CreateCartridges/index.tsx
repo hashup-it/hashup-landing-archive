@@ -1,4 +1,4 @@
-import { ColoredText } from '../Shared'
+import { ColoredText } from "../Shared"
 import {
     LeftWrapper,
     RightWrapper,
@@ -8,33 +8,29 @@ import {
     SectionLabel,
     SectionPhoto,
     SectionText,
-    StyledStackingContext
-} from '../Shared/sections.styles'
-import { StyledCreateCartridges } from './index.styles'
+    StyledStackingContext,
+} from "../Shared/sections.styles"
+import { StyledCreateCartridges } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
-export const CreateCartridges = () => {
+const CreateCartridges = () => {
+    const { t } = useTranslation()
     return (
         <StyledCreateCartridges>
             <SectionContainer>
                 <LeftWrapper>
-                    <SectionLabel><ColoredText>CARTRIDGE</ColoredText> on blockchain</SectionLabel>
+                    <SectionLabel>
+                        <ColoredText>CARTRIDGE</ColoredText> on blockchain
+                    </SectionLabel>
                     <SectionHeader>
-                        Wróćmy do czasów przed <ColoredText>zniewoleniem
-                        oprogramowania</ColoredText>.
+                        {t("crt-crtdg-header1")}
+                        <ColoredText>{t("crt-crtdg-header2")}</ColoredText>.
                     </SectionHeader>
-                    <SectionText>
-                        Tęsknimy za czasami, gdy kupując licencję na grę faktycznie stawaliśmy się jej właścicielem.
-                        Obecny model dystrybucji oprogramowania sprawia, że nabyte przez nas dobra cyfrowe tak naprawdę
-                        nie należą do nas. Nie wszystko jednak stracone! HashUp z pomocą cyfrowego cartdrige’a pozwoli
-                        Ci znowu cieszyć się pełną kontrolą. Handlujcie grami! W końcu są wasze!
-                    </SectionText>
-
+                    <SectionText>{t("crt-crtdg-text")}</SectionText>
                 </LeftWrapper>
                 <RightWrapper>
                     <SectionPhoto url="/assets/section-photos/photo1.png">
-                        <StyledStackingContext>
-
-                        </StyledStackingContext>
+                        <StyledStackingContext></StyledStackingContext>
                         <SectionBottomLeftPhoto src="/assets/section-photos/photo2.png" />
                     </SectionPhoto>
                 </RightWrapper>
@@ -42,3 +38,5 @@ export const CreateCartridges = () => {
         </StyledCreateCartridges>
     )
 }
+
+export default CreateCartridges

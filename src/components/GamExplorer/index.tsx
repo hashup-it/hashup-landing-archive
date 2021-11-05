@@ -1,26 +1,28 @@
-import { ColoredText } from '../Shared'
-import { LeftWrapper, SectionHeader, SectionLabel, SectionText } from '../Shared/sections.styles'
-import { GameExplorerContainer, StyledGamExplorer } from './index.styles'
+import { ColoredText } from "../Shared"
+import { LeftWrapper, SectionHeader, SectionLabel, SectionText } from "../Shared/sections.styles"
+import { GameExplorerContainer, StyledGamExplorer } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
-export const GamExplorer = () => {
+const GamExplorer = () => {
+    const { t } = useTranslation()
+
     return (
         <StyledGamExplorer>
             <GameExplorerContainer>
                 <LeftWrapper>
-                    <SectionLabel><ColoredText>game</ColoredText>xplorer.io</SectionLabel>
+                    <SectionLabel>
+                        <ColoredText>game</ColoredText>xplorer.io
+                    </SectionLabel>
                     <SectionHeader>
-                        Spełnienie potrzeb <ColoredText>kolekcjonerów.</ColoredText>
+                        {t("gamexplorer-header1")}
+                        <ColoredText>{t("gamexplorer-header2")}</ColoredText>
                     </SectionHeader>
-                    <SectionText>
-                        Gracze uwielbiają dbać o swoje biblioteki. GameXplorer pozwoli im zaprezentować swoje kolekcje w
-                        sposób lepszy niż kiedykolwiek.
-                    </SectionText>
-                    <SectionText>
-                        Jako deweloper, będziesz miał możliwość wydania kolekcjonerskiej
-                        wersji swojej gry, która na pewno wpadnie w oko kolekcjonerów.
-                    </SectionText>
+                    <SectionText>{t("gamexplorer-text1")}</SectionText>
+                    <SectionText>{t("gamexplorer-text2")}</SectionText>
                 </LeftWrapper>
             </GameExplorerContainer>
         </StyledGamExplorer>
     )
 }
+
+export default GamExplorer

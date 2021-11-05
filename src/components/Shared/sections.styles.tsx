@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { mediaQuery } from '../MediaQuery'
-import { Swatches } from '../../__styles__/Swatches'
+import styled from "styled-components"
+import { mediaQuery } from "../MediaQuery"
+import { Swatches } from "../../__styles__/Swatches"
 
 export const SectionContainer = styled.div`
     display: grid;
@@ -14,7 +14,6 @@ export const SectionContainer = styled.div`
         grid-template-rows: auto auto;
         gap: 50px;
         margin-bottom: 100px;
-
     }
 `
 
@@ -38,7 +37,7 @@ export const RightWrapper = styled.div`
     justify-content: center;
 `
 
-export const SectionPhoto = styled.div<({ url: string })>`
+export const SectionPhoto = styled.div<{ url: string }>`
     width: 300px;
     height: 400px;
 
@@ -46,9 +45,8 @@ export const SectionPhoto = styled.div<({ url: string })>`
     position: relative;
     transform-style: preserve-3d;
 
-
     ::after {
-        content: '';
+        content: "";
         transform: translateZ(-1px);
         z-index: 0;
         position: absolute;
@@ -58,16 +56,12 @@ export const SectionPhoto = styled.div<({ url: string })>`
         top: -60px;
         height: 100%;
         filter: blur(20px);
-
-
     }
-
 `
 
 export const StyledStackingContext = styled.div`
     position: absolute;
 `
-
 
 export const SectionBottomLeftPhoto = styled.img`
     width: 150px;
@@ -79,7 +73,6 @@ export const SectionBottomLeftPhoto = styled.img`
     ${mediaQuery.tablet} {
         display: none;
     }
-
 `
 
 export const SectionPhotoSimple = styled.img`
@@ -97,7 +90,7 @@ export const SectionPhotoSimple = styled.img`
 export const SectionLabel = styled.span`
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #646E83;
+    color: #646e83;
     font-weight: normal;
     font-size: 12px;
 `
@@ -164,7 +157,7 @@ export const Hyperlink = styled.a`
     color: inherit;
 `
 
-export const SectionList = styled.ul<({ markerResource?: string })>`
+export const SectionList = styled.ul<{ markerResource?: string }>`
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -178,14 +171,14 @@ export const SectionList = styled.ul<({ markerResource?: string })>`
     font-size: 14px;
     line-height: 160%;
 
-    color: #CDCDCD;
+    color: #cdcdcd;
 
     li {
         padding-left: 19px;
     }
 
     li::marker {
-        content: url(${props => props.markerResource ?? '/assets/icons/list-marker-default.svg'});
+        content: url(${props => props.markerResource ?? "/assets/icons/list-marker-default.svg"});
         width: 6px;
         height: 6px;
     }

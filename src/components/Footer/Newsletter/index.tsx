@@ -1,33 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import {
     FormContainer,
     NewsletterContainer,
     StyledFormDescription,
     StyledInput,
-    StyledSignUpButton
-} from './index.styles'
-import { ListHeader } from '../index.styles'
+    StyledSignUpButton,
+} from "./index.styles"
+import { ListHeader } from "../index.styles"
+import { useTranslation } from "react-i18next"
 
 export const Newsletter = () => {
-    const [mailAddress, setMailAddress] = useState('')
+    const [mailAddress, setMailAddress] = useState("")
 
     const signUp = async () => {
         console.log(mailAddress)
     }
 
+    const { t } = useTranslation()
+
     return (
         <NewsletterContainer>
-            <ListHeader>Zapisz się do newslettera</ListHeader>
-            <StyledFormDescription>
-                Otrzymuj aktualności dotyczące naszej działalności.
-            </StyledFormDescription>
+            <ListHeader>{t("newsletter-header")}</ListHeader>
+            <StyledFormDescription>{t("newsletter-description")}</StyledFormDescription>
             <FormContainer>
                 <StyledInput
                     type="email"
-                    placeholder="Twój adres mejlowy"
+                    placeholder={t("newsletter-placeholder")}
                     onChange={event => setMailAddress(event.target.value)}
                 />
-                <StyledSignUpButton onClick={signUp}>Już niedługo</StyledSignUpButton>
+                <StyledSignUpButton onClick={signUp}>
+                    {t("newsletter-comingsoon")}
+                </StyledSignUpButton>
             </FormContainer>
         </NewsletterContainer>
     )
