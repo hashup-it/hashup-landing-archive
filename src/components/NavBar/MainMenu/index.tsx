@@ -41,14 +41,14 @@ export const MainMenu = (
                 >{t('ecosystem')}</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
-            <MenuItem>
-                <NavLink
-                    to="/Cartridges"
-                    onClick={handleCloseAction}
-                >
-                    Cartridges
-                </NavLink>
-            </MenuItem>
+            {/*<MenuItem>*/}
+            {/*    <NavLink*/}
+            {/*        to="/Cartridges"*/}
+            {/*        onClick={handleCloseAction}*/}
+            {/*    >*/}
+            {/*        {t('cartridges')}*/}
+            {/*    </NavLink>*/}
+            {/*</MenuItem>*/}
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
                 <Hyperlink href="https://www.linkedin.com/company/hashupit">{t('media')}</Hyperlink>
