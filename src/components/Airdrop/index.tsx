@@ -105,7 +105,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
             if (userNickname != '') return
 
             await (window as any).ethereum.enable()
-            const web3 = await new Web3(BLOCKCHAIN_PROVIDER_URI)
+            const web3 = await new Web3(Web3.givenProvider)
             const contract = await new web3.eth.Contract(
                 hashInfo.abi as AbiItem[],
                 hashInfo.contractAddress
