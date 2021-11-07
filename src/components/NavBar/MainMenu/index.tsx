@@ -49,7 +49,7 @@ export const MainMenu = (
                     {t('cartridges')}
                 </NavLink>
             </MenuItem>
-            <MenuItem>Team</MenuItem>
+            {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
                 <Hyperlink href="https://www.linkedin.com/company/hashupit">{t('media')}</Hyperlink>
             </MenuItem>

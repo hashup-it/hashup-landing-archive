@@ -1,7 +1,7 @@
-import { SectionHeader } from "../../Shared/sections.styles"
-import { ColoredText } from "../../Shared"
-import { Swatches } from "../../../__styles__/Swatches"
-import { CameraDistance, CartridgeScene } from "../../CartridgeScene"
+import { SectionHeader } from '../../Shared/sections.styles'
+import { ColoredText } from '../../Shared'
+import { Swatches } from '../../../__styles__/Swatches'
+import { CameraDistance, CartridgeScene } from '../../CartridgeScene'
 import {
     CartridgeDescriptionContainer,
     CartridgeDescriptionImage,
@@ -12,9 +12,10 @@ import {
     CartridgeTargetContent,
     CartridgeTargetItem,
     CartridgeTargetItemContent,
-    CartridgeTargetLabel,
-} from "./index.style"
+    CartridgeTargetLabel
+} from './index.style'
 import { ReactElement } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const CartridgeDescription = (
     {
@@ -35,6 +36,8 @@ export const CartridgeDescription = (
         cartridgeModel: ReactElement
     }
 ) => {
+    const { t } = useTranslation()
+
     return (
         <CartridgeDescriptionContainer leftBasedLayout={leftBasedLayout}>
             <CartridgeHook id={headerCartridgeTypeText.toLowerCase()} />
@@ -45,7 +48,7 @@ export const CartridgeDescription = (
                 <CartridgeDescriptionSmallText>{descriptionText}</CartridgeDescriptionSmallText>
                 <CartridgeTargetItem outlineColor={Swatches.cartridge_target_outline_color}>
                     <CartridgeTargetItemContent>
-                        <CartridgeTargetLabel>Cartridge for</CartridgeTargetLabel>
+                        <CartridgeTargetLabel>{t('cartridges-tab-cartridge-for')}</CartridgeTargetLabel>
                         <CartridgeTargetContent>{targetText}</CartridgeTargetContent>
                     </CartridgeTargetItemContent>
                 </CartridgeTargetItem>

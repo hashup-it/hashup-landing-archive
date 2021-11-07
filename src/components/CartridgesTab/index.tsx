@@ -15,6 +15,7 @@ import ModelBlue from '../../components/CartridgeScene/Three/ModelBlue'
 import ModelGray from '../../components/CartridgeScene/Three/ModelGray'
 import ModelGreen from '../../components/CartridgeScene/Three/ModelGreen'
 import ModelGold from '../../components/CartridgeScene/Three/ModelGold'
+import { useTranslation } from 'react-i18next'
 
 export enum CartridgeColor {
     Green = "#6AAD38",
@@ -25,17 +26,18 @@ export enum CartridgeColor {
 }
 
 export const CartridgesTab = () => {
+    const { t } = useTranslation()
+
     return (
         <CartridgesTabContainer>
             <BackgroundShade src="/assets/sphere-shade.svg" />
             <CartridgesHeaderContainer>
                 <CartridgesTabHeader>
-                    A cartridge with the game and a floppy disk with software on the
-                    blockchain<ColoredText>.</ColoredText>
+                    {t('cartridges-tab-header')}<ColoredText>.</ColoredText>
                 </CartridgesTabHeader>
                 <SmallCartridgeHeaderText>
-                    You will eventually become the owner of the software you purchased.<br />
-                    Send the game to a buddy, why does anyone prevent you from doing that?
+                    {t('cartridges-tab-header-small-1')}<br />
+                    {t('cartridges-tab-header-small-2')}
                 </SmallCartridgeHeaderText>
                 <CartridgeThumbnailsContainer>
                     <CartridgeThumbnail
@@ -69,14 +71,13 @@ export const CartridgesTab = () => {
                 leftBasedLayout={true}
                 color={CartridgeColor.Green}
                 headerCartridgeTypeText="Green"
-                descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Test target description"
+                descriptionText={t('cartridges-tab-green-description')}
+                targetText={t('cartridges-tab-green-target')}
                 descriptionListContents={[
-                    'Lorem ipslum dolores',
-                    'Menespeh amet dis dolor',
-                    'Lorem ipslum dolores',
-                    'Lorem ipslum dolores',
-                    'Lorem ipslum dolores'
+                    t('cartridges-tab-green-bullet-1'),
+                    t('cartridges-tab-green-bullet-2'),
+                    t('cartridges-tab-green-bullet-3'),
+                    t('cartridges-tab-green-bullet-4')
                 ]}
                 cartridgeModel={<ModelGreen rotation={[0, -2, Math.PI / 128]} />}
             />
@@ -84,11 +85,13 @@ export const CartridgesTab = () => {
                 leftBasedLayout={false}
                 color={CartridgeColor.Gold}
                 headerCartridgeTypeText="Gold"
-                descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Test target description"
+                descriptionText={t('cartridges-tab-gold-description')}
+                targetText={t('cartridges-tab-gold-target')}
                 descriptionListContents={[
-                    'Lorem ipslum dolores',
-                    'Menespeh amet dis dolor'
+                    t('cartridges-tab-gold-bullet-1'),
+                    t('cartridges-tab-gold-bullet-2'),
+                    t('cartridges-tab-gold-bullet-3'),
+                    t('cartridges-tab-gold-bullet-4')
                 ]}
                 cartridgeModel={<ModelGold rotation={[0, -2, Math.PI / 128]} />}
             />
@@ -96,13 +99,13 @@ export const CartridgesTab = () => {
                 leftBasedLayout={true}
                 color={CartridgeColor.Blue}
                 headerCartridgeTypeText="Blue"
-                descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Test target description"
+                descriptionText={t('cartridges-tab-blue-description')}
+                targetText={t('cartridges-tab-blue-target')}
                 descriptionListContents={[
-                    'Lorem ipslum dolores',
-                    'Menespeh amet dis dolor',
-                    'Lorem ipslum dolores',
-                    'Lorem ipslum dolores'
+                    t('cartridges-tab-blue-bullet-1'),
+                    t('cartridges-tab-blue-bullet-2'),
+                    t('cartridges-tab-blue-bullet-3'),
+                    t('cartridges-tab-blue-bullet-4')
                 ]}
                 cartridgeModel={<ModelBlue rotation={[0, -2, Math.PI / 128]} />}
             />
@@ -110,12 +113,13 @@ export const CartridgesTab = () => {
                 leftBasedLayout={false}
                 color={CartridgeColor.Gray}
                 headerCartridgeTypeText="Gray"
-                descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Test target description"
+                descriptionText={t('cartridges-tab-gray-description')}
+                targetText={t('cartridges-tab-gray-target')}
                 descriptionListContents={[
-                    'Lorem ipslum dolores',
-                    'Menespeh amet dis dolor',
-                    'Lorem ipslum dolores'
+                    t('cartridges-tab-gray-bullet-1'),
+                    t('cartridges-tab-gray-bullet-2'),
+                    t('cartridges-tab-gray-bullet-3'),
+                    t('cartridges-tab-gray-bullet-4')
                 ]}
                 cartridgeModel={<ModelGray rotation={[0, -2, Math.PI / 128]} />}
             />
@@ -123,10 +127,10 @@ export const CartridgesTab = () => {
                 leftBasedLayout={true}
                 color={CartridgeColor.Red}
                 headerCartridgeTypeText="Red"
-                descriptionText="A free software market is a natural consequence of putting software in the hands of players."
-                targetText="Test target description"
+                descriptionText={t('cartridges-tab-red-description')}
+                targetText={t('cartridges-tab-red-target')}
                 descriptionListContents={[
-                    'Lorem ipslum dolores'
+                    t('cartridges-tab-red-bullet-1')
                 ]}
                 cartridgeModel={<ModelRed rotation={[0, -2, Math.PI / 128]} />}
             />
