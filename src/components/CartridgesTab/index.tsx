@@ -80,6 +80,7 @@ export const CartridgesTab = () => {
                     t('cartridges-tab-green-bullet-4')
                 ]}
                 cartridgeModel={<ModelGreen rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModelMobileUri="/assets/models/mobile/green.png"
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -94,6 +95,7 @@ export const CartridgesTab = () => {
                     t('cartridges-tab-gold-bullet-4')
                 ]}
                 cartridgeModel={<ModelGold rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModelMobileUri="/assets/models/mobile/gold.png"
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -108,6 +110,7 @@ export const CartridgesTab = () => {
                     t('cartridges-tab-blue-bullet-4')
                 ]}
                 cartridgeModel={<ModelBlue rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModelMobileUri="/assets/models/mobile/blue.png"
             />
             <CartridgeDescription
                 leftBasedLayout={false}
@@ -122,6 +125,7 @@ export const CartridgesTab = () => {
                     t('cartridges-tab-gray-bullet-4')
                 ]}
                 cartridgeModel={<ModelGray rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModelMobileUri="/assets/models/mobile/gray.png"
             />
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -133,6 +137,7 @@ export const CartridgesTab = () => {
                     t('cartridges-tab-red-bullet-1')
                 ]}
                 cartridgeModel={<ModelRed rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModelMobileUri="/assets/models/mobile/red.png"
             />
         </CartridgesTabContainer>
     )

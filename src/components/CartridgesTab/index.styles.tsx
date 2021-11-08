@@ -19,7 +19,7 @@ export const BackgroundShade = styled.img`
     opacity: 0.1;
     filter: blur(520px);
 
-    ${mediaQuery.tablet} {
+    ${mediaQuery.laptop} {
         display: none;
     }
 `

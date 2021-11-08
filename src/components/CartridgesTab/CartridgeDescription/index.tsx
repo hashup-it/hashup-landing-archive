@@ -25,7 +25,8 @@ export const CartridgeDescription = (
         descriptionText,
         targetText,
         descriptionListContents,
-        cartridgeModel
+        cartridgeModel,
+        cartridgeModelMobileUri
     }: {
         leftBasedLayout: boolean,
         color: string,
@@ -33,7 +34,8 @@ export const CartridgeDescription = (
         descriptionText: string,
         targetText: string,
         descriptionListContents: string[],
-        cartridgeModel: ReactElement
+        cartridgeModel: ReactElement,
+        cartridgeModelMobileUri: string
     }
 ) => {
     const { t } = useTranslation()
@@ -58,7 +60,7 @@ export const CartridgeDescription = (
                     ))}
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
-            <CartridgeDescriptionImage>
+            <CartridgeDescriptionImage mobileImageUri={cartridgeModelMobileUri}>
                 <CartridgeScene
                     cameraDistance={CameraDistance.cartridgesListing}
                     cartridgeModel={cartridgeModel}
