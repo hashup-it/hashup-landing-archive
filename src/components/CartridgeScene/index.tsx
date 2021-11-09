@@ -1,9 +1,32 @@
 import React, { ReactElement, Suspense } from 'react'
-import { Canvas, extend } from "@react-three/fiber"
-import Model from "./Three/ModelBlack"
-import { OrbitControls } from "@react-three/drei"
+import { Canvas, extend, useLoader, useThree } from '@react-three/fiber'
+import Model from './Three/ModelGold'
+import { OrbitControls } from '@react-three/drei'
+import { Bloom, EffectComposer, SSAO } from '@react-three/postprocessing'
+
+// @ts-ignore
+import { BlendFunction } from 'postprocessing'
+
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader'
+
+const THREE = require('three')
 
 extend({ OrbitControls })
+
+const useEquirectangularHDR = (url: string) => {
+    const { gl } = useThree()
+    const pmremGenerator = new THREE.PMREMGenerator(gl)
+    pmremGenerator.compileEquirectangularShader()
+
+    // @ts-ignore
+    const hdrEquirect = useLoader(RGBELoader, url)
+
+    const hdrCubeRenderTarget = pmremGenerator.fromEquirectangular(hdrEquirect)
+    hdrEquirect.dispose()
+    pmremGenerator.dispose()
+
+    return hdrCubeRenderTarget.texture
+}
 
 export enum CameraDistance {
     mainLanding = -23,
@@ -26,20 +49,26 @@ export const CartridgeScene = (
     }}
 >
     <Suspense fallback={null}>
-        <directionalLight
-            castShadow
-            position={[-40, 0, -80]}
-            intensity={.4}
-            shadowMapWidth={1024}
-            shadowMapHeight={1024}
-            shadowCameraFar={50}
-            shadowCameraLeft={-10}
-            shadowCameraRight={10}
-            shadowCameraTop={10}
-            shadowCameraBottom={-10}
-        />
-        <pointLight position={[0, 1000, 4000]} intensity={1} />
-        <pointLight position={[1000, -20000, 5000]} intensity={.5} />
+        <EffectComposer>
+            <Bloom
+                intensity={1.0}
+                luminanceThreshold={0.9}
+                luminanceSmoothing={0.7}
+            />
+            <SSAO
+                blendFunction={BlendFunction.MULTIPLY}
+                samples={30}
+                rings={4}
+                distanceThreshold={1.0}
+                distanceFalloff={0.0}
+                rangeThreshold={0.5}
+                rangeFalloff={0.1}
+                luminanceInfluence={0.9}
+                radius={20}
+                scale={0.5}
+                bias={0.5}
+            />
+        </EffectComposer>
         <OrbitControls
             enableZoom={false}
             enablePan={false}

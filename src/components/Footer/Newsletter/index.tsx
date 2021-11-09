@@ -1,16 +1,10 @@
-import React, { useState } from "react"
-import {
-    FormContainer,
-    NewsletterContainer,
-    StyledFormDescription,
-    StyledInput,
-    StyledSignUpButton,
-} from "./index.styles"
-import { ListHeader } from "../index.styles"
-import { useTranslation } from "react-i18next"
+import React, { useState } from 'react'
+import { FormContainer, NewsletterContainer, StyledFormDescription, StyledInputContainer } from './index.styles'
+import { ListHeader } from '../index.styles'
+import { useTranslation } from 'react-i18next'
 
 export const Newsletter = () => {
-    const [mailAddress, setMailAddress] = useState("")
+    const [mailAddress, setMailAddress] = useState('')
 
     const signUp = async () => {
         console.log(mailAddress)
@@ -20,17 +14,16 @@ export const Newsletter = () => {
 
     return (
         <NewsletterContainer>
-            <ListHeader>{t("newsletter-header")}</ListHeader>
-            <StyledFormDescription>{t("newsletter-description")}</StyledFormDescription>
+            <ListHeader>{t('newsletter-header')}</ListHeader>
+            <StyledFormDescription>{t('newsletter-description')}</StyledFormDescription>
             <FormContainer>
-                <StyledInput
-                    type="email"
-                    placeholder={t("newsletter-placeholder")}
-                    onChange={event => setMailAddress(event.target.value)}
-                />
-                <StyledSignUpButton onClick={signUp}>
-                    {t("newsletter-comingsoon")}
-                </StyledSignUpButton>
+                <StyledInputContainer>
+                    <div
+                        className="ml-form-embed"
+                        data-account="3556595:b7a5n7e8w5"
+                        data-form="4955744:x2o8o0"
+                    />
+                </StyledInputContainer>
             </FormContainer>
         </NewsletterContainer>
     )

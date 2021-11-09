@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const NewsletterContainer = styled.div`
     display: flex;
@@ -21,44 +21,50 @@ export const StyledFormDescription = styled.div`
     margin-bottom: 10px;
 `
 
-export const StyledInput = styled.input`
-    flex-grow: 0.75;
+export const StyledInputContainer = styled.div`
+    width: 100%;
 
-    font-family: Sora;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    padding: 16px;
-
-    background: #ffffff;
-    border: none;
-    border-radius: 4px;
-
-    outline: none;
-
-    ::placeholder {
-        color: #cdcdcd;
+    .row-form {
+        background: yellow;
+        padding: 0 !important;
+        width: 100% !important;
     }
-`
 
-export const StyledSignUpButton = styled.button`
-    flex-grow: 0.25;
+    .horozintalForm, .ml-form-horizontalRow, .ml-input-horizontal, .ml-button-horizontal {
+        width: auto !important;
+        background: black !important;
+    }
 
-    background: #ff3f3f;
-    border: none;
+    .horozintalForm {
+        width: 100% !important;
+    }
 
-    filter: grayscale(100%);
-    pointer: none;
+    .horizontal-fields {
+        display: flex !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
 
-    border-radius: 4px;
+    // mailerlite.com form container
+    .ml-form-horizontalRow {
+        display: flex !important;
+        gap: 10px;
+        width: 100% !important;
+    }
 
-    color: white;
-    font-family: Sora;
-    font-style: normal;
-    font-weight: 600;
+    // mailerlite.com input field container
+    .ml-input-horizontal {
+        width: 100% !important;
 
-    :hover {
-        opacity: 1;
+        * {
+            width: 100% !important;
+        }
+    }
+
+    // mailerlite.com submit button
+    button[type='submit'] {
+        background-color: #FF3F3F !important;
+        content: 'test' !important;
     }
 `
