@@ -56,7 +56,7 @@ export const CartridgeDescription = (
                 </CartridgeTargetItem>
                 <CartridgeDescriptionList markerResource="/assets/icons/check-green.svg">
                     {descriptionListContents.map(content => (
-                        <li>{content}</li>
+                        <li key={content}>{content}</li>
                     ))}
                 </CartridgeDescriptionList>
             </CartridgeDescriptionText>
