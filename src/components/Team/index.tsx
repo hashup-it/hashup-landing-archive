@@ -56,7 +56,7 @@ export const Team = () => {
                     }
                     outline={true}
                 />
-                 <Person
+                <Person
                     imageAsset={"/assets/avatars/tomasz_fiema.png"}
                     title="head of design"
                     name="Tomasz Fiema"
@@ -125,9 +125,9 @@ export const Team = () => {
             <TeamPeopleContainer>
                 <Person
                     imageAsset={"/assets/avatars/tomasz_smus.png"}
-                    title="Advisor"
+                    title={t("advisor")}
                     name="dr Tomasz R. Smus"
-                    description={"Doktor Prawa i Ekonomii. Przyniósł Bitcoin'a do polskiego świata "}
+                    description={t("tomaszsmus")}
                     socials={
                         <>
                             <Hyperlink href="https://www.linkedin.com/in/trsmus/">
@@ -138,9 +138,9 @@ export const Team = () => {
                 />
                 <Person
                     imageAsset={"/assets/avatars/krzysztof_piech.png"}
-                    title="Advisor"
+                    title={t("advisor")}
                     name="prof Krzysztof Piech"
-                    description="Jeden z pierwszych pionierów Bitcoin w Polskim świecie akademickim."
+                    description={t("krzysztofpiech")}
                     socials={
                         <>
                             <Hyperlink href="https://www.linkedin.com/in/kpiech/">
@@ -154,9 +154,9 @@ export const Team = () => {
                 />
                 <Person
                     imageAsset={"/assets/avatars/krzysztof_chmielewski.png"}
-                    title="Advisor"
+                    title={t("advisor")}
                     name="Krzysztof Chmielewski"
-                    description="Starszy wykładowca badania i projektowania gier Uniwersytetu Kazimierza Wielkiego. Kierownik produkcji we Flybridge Studio."
+                    description={t("krzysztofchmielewski")}
                     socials={
                         <>
                             <Hyperlink href="https://www.linkedin.com/in/krzysztof-chmielewski-a87b5a8a/">
