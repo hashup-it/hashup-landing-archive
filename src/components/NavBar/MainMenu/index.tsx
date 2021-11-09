@@ -42,12 +42,12 @@ export const MainMenu = (
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             <MenuItem>
-                <NavLink
-                    to="/Cartridges"
+                <Hyperlink
+                    href="/Cartridges"
                     onClick={handleCloseAction}
                 >
                     {t('cartridges')}
-                </NavLink>
+                </Hyperlink>
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
