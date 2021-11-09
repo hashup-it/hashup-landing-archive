@@ -1,20 +1,20 @@
-import styled, { css } from "styled-components"
-import { ComparisonItem, ComparisonItemContent } from "../../Comparison/index.styles"
-import { SectionLabel, SectionList, SmallHeaderText } from "../../Shared/sections.styles"
-import { mediaQuery } from "../../MediaQuery"
+import styled, { css } from 'styled-components'
+import { ComparisonItem, ComparisonItemContent } from '../../Comparison/index.styles'
+import { SectionLabel, SectionList, SmallHeaderText } from '../../Shared/sections.styles'
+import { mediaQuery } from '../../MediaQuery'
 
 export const CartridgeDescriptionContainer = styled.div<{ leftBasedLayout: boolean }>`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     ${props =>
-        props.leftBasedLayout
-            ? css`
-                  grid-template-areas: "text image";
-              `
-            : css`
-                  grid-template-areas: "image text";
-              `};
+            props.leftBasedLayout
+                    ? css`
+                        grid-template-areas: "text image";
+                    `
+                    : css`
+                        grid-template-areas: "image text";
+                    `};
     gap: 145px;
     position: relative;
 
@@ -42,7 +42,7 @@ export const CartridgeDescriptionSmallText = styled(SmallHeaderText)`
     color: #cdcdcd;
 `
 
-export const CartridgeDescriptionImage = styled.div`
+export const CartridgeDescriptionImage = styled.div<({ mobileImageUri: string })>`
     grid-area: image;
     height: 32em;
 
@@ -62,6 +62,17 @@ export const CartridgeDescriptionImage = styled.div`
         display: flex;
         flex-direction: column;
         gap: 0;
+    }
+
+    ${mediaQuery.tablet} {
+        > * {
+            display: none;
+        }
+
+        content: url(${props => props.mobileImageUri});
+        width: 80%;
+        height: auto;
+        margin-top: -10%;
     }
 `
 

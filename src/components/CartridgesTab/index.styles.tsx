@@ -19,7 +19,7 @@ export const BackgroundShade = styled.img`
     opacity: 0.1;
     filter: blur(520px);
 
-    ${mediaQuery.tablet} {
+    ${mediaQuery.laptop} {
         display: none;
     }
 `
@@ -69,8 +69,9 @@ export const CartridgesTabHeader = styled(TabHeader)`
     }
 
     ${mediaQuery.mobileL} {
-        font-size: 48px;
-        width: 90%;
+        font-size: 45px;
+        width: 100%;
+        word-break: break-word;
     }
 `
 
