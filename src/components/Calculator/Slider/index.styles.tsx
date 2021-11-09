@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components"
 import { Swatches } from "__styles__/Swatches"
-import dollarIcon from "./icons/dollar.svg"
 
 export const DISPLAY_VALUE_ATTRIBUTE = "data-display-value"
 
@@ -59,7 +58,7 @@ export const StyledSliderWrapper = styled.div<{ dotsValues: string[] }>`
         width: 25px;
         border-radius: 5px;
         background-color: ${Swatches.text_main};
-        background-image: url(${dollarIcon});
+        background-image: url('assets/icons/calculator-dollar.svg');
         background-repeat: no-repeat;
         background-position: center;
         border: 0 solid;

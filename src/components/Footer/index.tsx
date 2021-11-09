@@ -28,8 +28,10 @@ import {
 } from "./index.styles"
 import { Newsletter } from "./Newsletter"
 import { Hyperlink } from "../Shared/sections.styles"
-import { NavLink } from "react-router-dom"
+import Link from "next/link"
 import { useTranslation } from "react-i18next"
+
+const CURRENT_YEAR = new Date().getFullYear()
 
 export const Footer = () => {
     const { t } = useTranslation()
@@ -39,9 +41,9 @@ export const Footer = () => {
             <FooterSeparatorBase />
             <FooterSeparatorAccent />
             <FooterHeading>
-                <NavLink to="/">
+                <Link href="/" passHref>
                     <Logo src="/assets/logo.svg" />
-                </NavLink>
+                </Link>
                 <SocialMediaGroup>
                     <span>
                         {t("footer-span")}
@@ -65,13 +67,11 @@ export const Footer = () => {
                 </SocialMediaGroup>
             </FooterHeading>
             <FooterQuickNavigation>
-                <NavLink to="/">
-                    <span>
-                        <ColoredText>Hash</ColoredText>Up.it
-                    </span>
-                    <AccentLongEmDash />
-                    {t("footer-home")}
-                </NavLink>
+                <span>
+                    <ColoredText>Hash</ColoredText>Up.it
+                </span>
+                <AccentLongEmDash />
+                <Link href="/">{t("footer-home")}</Link>
             </FooterQuickNavigation>
             <FooterTop>
                 <FooterTopLeft>
@@ -126,7 +126,7 @@ export const Footer = () => {
             </FooterTop>
             <FooterBottom>
                 <FooterMetaSeparator />
-                <Copyright>Copyright © {new Date().getFullYear()} by HashUp. All Rights Reserved.</Copyright>
+                <Copyright>Copyright © {CURRENT_YEAR} by HashUp. All Rights Reserved.</Copyright>
                 <FooterBottomGroup>
                     <FooterLink>
                         <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">

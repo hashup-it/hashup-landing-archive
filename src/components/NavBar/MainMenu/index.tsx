@@ -1,5 +1,5 @@
-import { FooterTop, MenuItem, StyledMainMenu } from './index.styles'
-import { Hyperlink } from '../../Shared/sections.styles'
+import { FooterTop, MenuItem, StyledMainMenu } from "./index.styles"
+import { Hyperlink } from "../../Shared/sections.styles"
 import {
     AddressLineEmphasized,
     CompanyIds,
@@ -11,21 +11,19 @@ import {
     Icon,
     ListHeader,
     MailLink,
-    SocialMediaGroup
-} from '../../Footer/index.styles'
-import { NavLink } from 'react-router-dom'
-import { SelectLanguage } from '../SelectLanguage'
-import { useTranslation } from 'react-i18next'
+    SocialMediaGroup,
+} from "../../Footer/index.styles"
+import { SelectLanguage } from "../SelectLanguage"
+import { useTranslation } from "react-i18next"
+import Link from "next/link"
 
-export const MainMenu = (
-    {
-        isMobileMenuShown,
-        setIsMobileMenuShown
-    }: {
-        isMobileMenuShown: boolean,
-        setIsMobileMenuShown?: Function
-    }
-) => {
+export const MainMenu = ({
+    isMobileMenuShown,
+    setIsMobileMenuShown,
+}: {
+    isMobileMenuShown: boolean
+    setIsMobileMenuShown?: Function
+}) => {
     const { t } = useTranslation()
 
     const handleCloseAction = () => {
@@ -35,27 +33,23 @@ export const MainMenu = (
     return (
         <StyledMainMenu>
             <MenuItem>
-                <Hyperlink
-                    href="/#ecosystem"
-                    onClick={handleCloseAction}
-                >{t('ecosystem')}</Hyperlink>
+                <Link href="/#ecosystem" passHref>
+                    <Hyperlink onClick={handleCloseAction}>{t("ecosystem")}</Hyperlink>
+                </Link>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             <MenuItem>
-                <Hyperlink
-                    href="/Cartridges"
-                    onClick={handleCloseAction}
-                >
-                    {t('cartridges')}
-                </Hyperlink>
+                <Link href="/cartridges" passHref>
+                    <Hyperlink onClick={handleCloseAction}>{t("cartridges")}</Hyperlink>
+                </Link>
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://www.linkedin.com/company/hashupit">{t('media')}</Hyperlink>
+                <Hyperlink href="https://www.linkedin.com/company/hashupit">{t("media")}</Hyperlink>
             </MenuItem>
             {/*<MenuItem>Investment</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">{t('doc')}</Hyperlink>
+                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">{t("doc")}</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             <SelectLanguage />
@@ -63,28 +57,28 @@ export const MainMenu = (
                 <>
                     <SocialMediaGroup>
                         <a href="https://www.linkedin.com/company/hashupit">
-                            <Icon url={'linkedin.svg'} />
+                            <Icon url={"linkedin.svg"} />
                         </a>
                         <a href="https://t.me/HashUpAnnouncements">
-                            <Icon url={'telegram.svg'} />
+                            <Icon url={"telegram.svg"} />
                         </a>
                         <a href="https://twitter.com/HashUp_it">
-                            <Icon url={'twitter.svg'} />
+                            <Icon url={"twitter.svg"} />
                         </a>
                         <a href="https://www.facebook.com/HashUpIt">
-                            <Icon url={'facebook.svg'} />
+                            <Icon url={"facebook.svg"} />
                         </a>
                         <a href="https://www.instagram.com/hashup.it/">
-                            <Icon url={'instagram.svg'} />
+                            <Icon url={"instagram.svg"} />
                         </a>
                     </SocialMediaGroup>
                     <FooterTop>
-                        <ListHeader>{t('headquarters')}</ListHeader>
+                        <ListHeader>{t("headquarters")}</ListHeader>
                         <ContactField>
                             <AddressLineEmphasized>HashUp P.S.A.</AddressLineEmphasized>
                             Al. Jana Pawła II 27
                             <br />
-                            00-867 {t('warsaw')}
+                            00-867 {t("warsaw")}
                             <br />
                             <br />
                             <MailLink href="mailto:hello@hashup.it">hello@hashup.it</MailLink>

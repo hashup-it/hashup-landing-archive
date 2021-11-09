@@ -16,7 +16,7 @@ export const StyledResultsDescription = styled.div`
 
 export const StyledResultsHeader = styled.h4`
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
     line-height: 25px;
     padding: 0;

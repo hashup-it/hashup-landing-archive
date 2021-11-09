@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
+import Link from "next/link"
 import { ConnectWallet } from "./ConnectWallet"
 import {
     ButtonsMenu,
@@ -15,40 +15,25 @@ import { MainMenu } from "./MainMenu"
 import { MobileMenu } from "./MobileMenu"
 import { SelectLanguage } from "./SelectLanguage"
 
-const NavBar = ({
-    handleMetamaskConnection,
-    shownAccount,
-    isWalletSelectorShown,
-    setIsWalletSelectorShown,
-}: {
-    handleMetamaskConnection: Function
-    shownAccount: string | null
-    isWalletSelectorShown: boolean
-    setIsWalletSelectorShown: Function
-}) => {
+const NavBar = () => {
     const [isMobileMenuShown, setIsMobileMenuShown] = useState<boolean>(false)
 
     return (
         <StyledNavBar>
             <MenuWrapper>
-                <NavLink to="/">
+                <Link href="/">
                     <LogoWrapper>
                         <LogoIcon src="/assets/icons/LogoIcon.svg" />
                         <Logo src="/assets/icons/HashUp.svg" />
                     </LogoWrapper>
-                </NavLink>
+                </Link>
                 <MobileHideWrapper>
                     <MainMenu isMobileMenuShown={isMobileMenuShown} />
                 </MobileHideWrapper>
                 {
                     <ButtonsMenu>
                         {false && <SelectLanguage />}
-                        <ConnectWallet
-                            account={shownAccount}
-                            handleMetamaskConnection={handleMetamaskConnection}
-                            isWalletSelectorShown={isWalletSelectorShown}
-                            setIsWalletSelectorShown={setIsWalletSelectorShown}
-                        />
+                        <ConnectWallet />
                     </ButtonsMenu>
                 }
                 <HamburgerButton

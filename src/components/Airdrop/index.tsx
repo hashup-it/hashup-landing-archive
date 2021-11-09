@@ -1,5 +1,5 @@
-import { FunctionComponent, useEffect, useRef, useState } from 'react'
-import { BoldText, ColoredText } from '../Shared'
+import { useEffect, useRef, useState } from "react"
+import { BoldText, ColoredText } from "../Shared"
 import {
     StyledAfterConnectOptions,
     StyledAirdrop,
@@ -20,46 +20,42 @@ import {
     StyledInputWrapper,
     StyledMainHeader,
     StyledMainSmall,
-    StyledReferralInfo
-} from './airdrop.styles'
-import Web3 from 'web3'
-import { AbiItem } from 'web3-utils'
-import hashInfo from './hash-info'
-import { AirdropPopup } from './AirdropPopup'
-import { useTranslation } from 'react-i18next'
+    StyledReferralInfo,
+} from "./airdrop.styles"
+import Web3 from "web3"
+import { AbiItem } from "web3-utils"
+import hashInfo from "./hash-info"
+import { AirdropPopup } from "./AirdropPopup"
+import { useTranslation } from "react-i18next"
+import { useAccountContext } from "context/account"
 
-const queryString = require('query-string')
+const queryString = require("query-string")
+const BLOCKCHAIN_PROVIDER_URI = "https://bsc-dataseed.binance.org"
 
-interface AirdropProps {
-    account: string | any
-    isWalletSelectorShown: boolean
-    setIsWalletSelectorShown: Function
-}
+const Airdrop = () => {
+    const [buddy, setBuddy] = useState<string | null>(null)
+    const { account, showWalletSelector } = useAccountContext()
+    const { t } = useTranslation()
 
-const Airdrop: FunctionComponent<AirdropProps> = (
-    {
-        account,
-        isWalletSelectorShown,
-        setIsWalletSelectorShown
+    if (typeof window !== 'undefined') {
+        
     }
-) => {
-    const BLOCKCHAIN_PROVIDER_URI = 'https://bsc-dataseed.binance.org'
 
-    const parsed = queryString.parse(window.location.search)
-    const buddy = parsed.buddy
+    useEffect(() => {
+        const parsed = queryString.parse(window.location.search)
+        setBuddy(parsed.buddy)
+    }, [])
 
     const inputElement = useRef<any>(null)
-
-    const { t } = useTranslation()
 
     const [gamersCount, setGamersCount] = useState(1337)
     const [tokenLeft, setTokenLeft] = useState(1337)
     const [hashForRef, setHashForRef] = useState(1337)
 
-    const [nicknameInput, setNicknameInput] = useState('')
+    const [nicknameInput, setNicknameInput] = useState("")
     const [popupOpened, setPopupOpened] = useState(false)
 
-    const [userNickname, setUserNickname] = useState('')
+    const [userNickname, setUserNickname] = useState("")
     const [airdropDisabled, setAirdropDisabled] = useState(false)
 
     const updateHashInfo = async (web3: Web3, contract: any) => {
@@ -78,7 +74,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
         let nickname = await contract.methods.getNickname(account).call()
 
         setUserNickname(nickname)
-        setAirdropDisabled(nickname != '')
+        setAirdropDisabled(nickname != "")
 
         inputElement.current.value = nickname
     }
@@ -97,12 +93,12 @@ const Airdrop: FunctionComponent<AirdropProps> = (
 
     const isNicknameTaken = async (name: string, web3: Web3, contract: any) => {
         let addressForNickname = await contract.methods.getAddress(name).call()
-        return addressForNickname != '0x0000000000000000000000000000000000000000'
+        return addressForNickname != "0x0000000000000000000000000000000000000000"
     }
 
     const handleLoginButton = async () => {
         if (account) {
-            if (userNickname != '') return
+            if (userNickname != "") return
 
             await (window as any).ethereum.enable()
             const web3 = await new Web3(Web3.givenProvider)
@@ -112,7 +108,7 @@ const Airdrop: FunctionComponent<AirdropProps> = (
             )
 
             if (await isNicknameTaken(nicknameInput, web3, contract)) {
-                alert('Nick jest zajęty')
+                alert("Nick jest zajęty")
                 return
             }
 
@@ -141,12 +137,12 @@ const Airdrop: FunctionComponent<AirdropProps> = (
                 setPopupOpened(true)
             }
         } else {
-            alert('Zaloguj się')
+            alert("Zaloguj się")
         }
     }
 
     useEffect(() => {
-        (async () => {
+        ;(async () => {
             const web3 = new Web3(BLOCKCHAIN_PROVIDER_URI)
             const contract = await new web3.eth.Contract(
                 hashInfo.abi as AbiItem[],
@@ -163,22 +159,22 @@ const Airdrop: FunctionComponent<AirdropProps> = (
     return (
         <StyledAirdrop id="airdrop">
             <StyledAirdropHeader>
-                Join the{' '}
+                Join the{" "}
                 <BoldText>
                     Big <ColoredText>Airdrop</ColoredText>
-                </BoldText>{' '}
-                from{' '}
+                </BoldText>{" "}
+                from{" "}
                 <BoldText>
                     <ColoredText>#</ColoredText>HashUp
                 </BoldText>
             </StyledAirdropHeader>
             <StyledAirdropMain>
-                <StyledMainHeader>{t('airdrop-reserve')}</StyledMainHeader>
-                <StyledMainSmall>{t('airdrop-nick')}</StyledMainSmall>
+                <StyledMainHeader>{t("airdrop-reserve")}</StyledMainHeader>
+                <StyledMainSmall>{t("airdrop-nick")}</StyledMainSmall>
                 <StyledInputWrapper>
                     <StyledInputIcon />
                     <StyledInput
-                        placeholder={t('airdrop-nick-input')}
+                        placeholder={t("airdrop-nick-input")}
                         onChange={handleNicknameInput}
                         disabled={airdropDisabled}
                         ref={inputElement}
@@ -193,45 +189,38 @@ const Airdrop: FunctionComponent<AirdropProps> = (
             </StyledAirdropMain>
             <StyledAirdropInfo>
                 <StyledInfoItem>
-                    <StyledInfoLabel>{t('airdrop-#left')}</StyledInfoLabel>
+                    <StyledInfoLabel>{t("airdrop-#left")}</StyledInfoLabel>
                     <StyledInfoValue>{tokenLeft}</StyledInfoValue>
                 </StyledInfoItem>
                 <StyledInfoItem>
-                    <StyledInfoLabel>{t('airdrop-players')}</StyledInfoLabel>
+                    <StyledInfoLabel>{t("airdrop-players")}</StyledInfoLabel>
                     <StyledInfoValue>{gamersCount}</StyledInfoValue>
                 </StyledInfoItem>
                 <StyledInfoItem>
-                    <StyledInfoLabel>{t('airdrop-price')}</StyledInfoLabel>
+                    <StyledInfoLabel>{t("airdrop-price")}</StyledInfoLabel>
                     <StyledInfoValue>0.02 $</StyledInfoValue>
                 </StyledInfoItem>
             </StyledAirdropInfo>
             <StyledAirdropReferral>
-                {
-                    !account && (
-                        <StyledBeforeConnectWrapper onClick={() => setIsWalletSelectorShown(true)}>
-                            {t('airdrop-connect')}
-                        </StyledBeforeConnectWrapper>
-                    )
-                }
-                {
-                    account && (
-                        <StyledAfterConnectOptions>
-                            <StyledCopyReferral onClick={handleCopyReferral}>
-                                Copy your referral
-                                <StyledCopyReferralIcon src="/assets/icons/copy.svg" />
-                            </StyledCopyReferral>
-                            <StyledReferralInfo>
-                                Send a referral to friend
-                                <br /> and get {hashForRef}# for his login!
-                            </StyledReferralInfo>
-                        </StyledAfterConnectOptions>
-                    )
-                }
+                {!account && (
+                    <StyledBeforeConnectWrapper onClick={showWalletSelector}>
+                        {t("airdrop-connect")}
+                    </StyledBeforeConnectWrapper>
+                )}
+                {account && (
+                    <StyledAfterConnectOptions>
+                        <StyledCopyReferral onClick={handleCopyReferral}>
+                            Copy your referral
+                            <StyledCopyReferralIcon src="/assets/icons/copy.svg" />
+                        </StyledCopyReferral>
+                        <StyledReferralInfo>
+                            Send a referral to friend
+                            <br /> and get {hashForRef}# for his login!
+                        </StyledReferralInfo>
+                    </StyledAfterConnectOptions>
+                )}
             </StyledAirdropReferral>
-            {
-                popupOpened &&
-                <AirdropPopup setPopupOpened={setPopupOpened} />
-            }
+            {popupOpened && <AirdropPopup setPopupOpened={setPopupOpened} />}
         </StyledAirdrop>
     )
 }

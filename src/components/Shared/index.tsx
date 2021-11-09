@@ -75,6 +75,5 @@ export const AccentLongEmDash = styled.span`
     background: url("assets/icons/accented-long-em-dash.svg");
     height: 2px;
     width: 18px;
-    margin: 1em;
-    margin-bottom: 0.25em;
+    margin: 0 17px;
 `

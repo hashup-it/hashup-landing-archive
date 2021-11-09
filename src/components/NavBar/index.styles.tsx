@@ -12,7 +12,7 @@ export const StyledNavBar = styled.div`
 
     font-size: 16px;
     color: ${Swatches.text_main};
-    font-weight: 700;
+    font-weight: 600;
     align-items: flex-start;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.9);

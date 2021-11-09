@@ -10,9 +10,6 @@ import {
     StyledNoteLabel,
     StyledNotesArea,
 } from "./index.styles"
-import svgBubble1 from "./icons/bubble-1.svg"
-import svgBubble2 from "./icons/bubble-2.svg"
-import svgBubble3 from "./icons/bubble-3.svg"
 import { useTranslation } from "react-i18next"
 
 interface NoteProps {
@@ -46,7 +43,7 @@ const InfoNotes = () => {
             </SectionHeader>
             <StyledNotesArea>
                 <Note
-                    icon={svgBubble1}
+                    icon={'assets/icons/info-bubble-1.svg'}
                     label={
                         <>
                             <ColoredText>{t("infonotes-note11")}</ColoredText>
@@ -56,7 +53,7 @@ const InfoNotes = () => {
                     content={t("infonotes-note1-content")}
                 />
                 <Note
-                    icon={svgBubble2}
+                    icon={'assets/icons/info-bubble-2.svg'}
                     label={
                         <>
                             <ColoredText>{t("infonotes-note21")}</ColoredText>
@@ -67,7 +64,7 @@ const InfoNotes = () => {
                 />
 
                 <Note
-                    icon={svgBubble3}
+                    icon={'assets/icons/info-bubble-3.svg'}
                     label={
                         <>
                             {t("infonotes-note31")}

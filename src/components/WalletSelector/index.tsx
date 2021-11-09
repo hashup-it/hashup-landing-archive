@@ -10,20 +10,16 @@ import {
 } from "./index.styles"
 import { ColoredText } from "../Shared"
 import { useTranslation } from "react-i18next"
+import { useAccountContext } from "context/account"
 
-export const WalletSelector = ({
-    setIsWalletSelectorShown,
-    handleMetamaskConnection,
-}: {
-    setIsWalletSelectorShown: Function
-    handleMetamaskConnection: Function
-}) => {
+export const WalletSelector = () => {
     const { t } = useTranslation()
-    
+    const { hideWalletSelector, handleMetamaskConnection } = useAccountContext()
+
     return (
         <WalletSelectorContainer>
             <ContentWrapper>
-                <ButtonClose onClick={() => setIsWalletSelectorShown(false)} />
+                <ButtonClose onClick={hideWalletSelector} />
                 <ConnectionHeader>
                     {t("walletselector-header1")}
                     <ColoredText>{t("walletselector-header2")}</ColoredText>
@@ -34,10 +30,11 @@ export const WalletSelector = ({
                     <ConnectionButton
                         onClick={() => {
                             handleMetamaskConnection()
-                            setIsWalletSelectorShown(false)
+                            hideWalletSelector()
                         }}
                     >
-                        MetaMask <img src="/assets/icons/button-metamask.svg" alt="" />
+                        MetaMask
+                        <img src="/assets/icons/button-metamask.svg" alt="" />
                     </ConnectionButton>
                     <ConnectionButton>
                         {t("newsletter-comingsoon")}

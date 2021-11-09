@@ -1,6 +1,5 @@
 import styled, { css, keyframes } from "styled-components"
 import { Swatches } from "__styles__/Swatches"
-import doneSvg from "./icons/done.svg"
 import { mediaQuery } from "../../MediaQuery"
 
 export const StyledWrapper = styled.div`
@@ -98,7 +97,7 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
                 ? css`
                       // Icon
                       border: ${Swatches.primary_color} 1px solid;
-                      background-image: url(${doneSvg});
+                      background-image: url('assets/icons/done.svg');
                       background-repeat: no-repeat;
                       background-size: 10px;
                       background-position: center;

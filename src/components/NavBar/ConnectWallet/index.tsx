@@ -6,28 +6,18 @@ import {
     WalletHideWrapper,
     WalletIcon,
 } from "./index.styles"
-import { FunctionComponent } from "react"
 import { WalletSelector } from "../../WalletSelector"
 import { useTranslation } from "react-i18next"
+import { useAccountContext } from "context/account"
 
-interface ConnectWalletProps {
-    account: string | any
-    handleMetamaskConnection: Function
-    isWalletSelectorShown: boolean
-    setIsWalletSelectorShown: Function
-}
 
-export const ConnectWallet: FunctionComponent<ConnectWalletProps> = ({
-    handleMetamaskConnection,
-    account,
-    isWalletSelectorShown,
-    setIsWalletSelectorShown,
-}) => {
+export const ConnectWallet = () => {
+    const { isWalletSelectorShown, showWalletSelector, account } = useAccountContext()
     const { t } = useTranslation()
 
     return (
         <WalletHideWrapper>
-            <StyledConnectWallet onClick={() => setIsWalletSelectorShown(true)}>
+            <StyledConnectWallet onClick={showWalletSelector}>
                 <StyledWalletTextWrapper>
                     <StyledWrapper>{account ? t("wallet-c") : t("wallet-n")}</StyledWrapper>
                     {account && (
@@ -39,10 +29,7 @@ export const ConnectWallet: FunctionComponent<ConnectWalletProps> = ({
                 <WalletIcon src="/assets/icons/wallet.svg" />
             </StyledConnectWallet>
             {isWalletSelectorShown && (
-                <WalletSelector
-                    setIsWalletSelectorShown={setIsWalletSelectorShown}
-                    handleMetamaskConnection={handleMetamaskConnection}
-                />
+                <WalletSelector />
             )}
         </WalletHideWrapper>
     )
