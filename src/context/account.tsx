@@ -5,7 +5,6 @@ type AccountContextType = {
     isWalletSelectorShown: boolean
 
     handleMetamaskConnection: () => void
-
     showWalletSelector: () => void
     hideWalletSelector: () => void
 }
