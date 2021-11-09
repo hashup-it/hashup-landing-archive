@@ -45,7 +45,7 @@ export const Footer = () => {
                 <SocialMediaGroup>
                     <span>
                         {t("footer-span")}
-                        <ColoredText>social media</ColoredText>
+                        <ColoredText>&nbsp;social media</ColoredText>
                     </span>
                     <a href="https://www.linkedin.com/company/hashupit">
                         <Icon url={"linkedin.svg"} />
