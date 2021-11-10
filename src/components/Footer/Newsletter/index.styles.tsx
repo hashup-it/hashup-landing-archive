@@ -69,4 +69,10 @@ export const StyledInputContainer = styled.div`
         background-color: #FF3F3F !important;
         content: 'test' !important;
     }
+
+    .ml-form-successBody {
+        background: white;
+        border-radius: 4px;
+        padding-bottom: .5rem !important;
+    }
 `
