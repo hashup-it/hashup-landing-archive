@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document"
-import { ServerStyleSheet } from "styled-components"
+import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 class MyDocument extends Document {
 
@@ -11,7 +11,7 @@ class MyDocument extends Document {
         try {
             ctx.renderPage = () =>
                 originalRenderPage({
-                    enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+                    enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
                 })
 
             const initialProps = await Document.getInitialProps(ctx)
@@ -22,7 +22,7 @@ class MyDocument extends Document {
                         {initialProps.styles}
                         {sheet.getStyleElement()}
                     </>
-                ),
+                )
             }
         } finally {
             sheet.seal()
@@ -46,10 +46,12 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
                         rel="stylesheet"
                     />
+
+                    <script src="vendor/mailerlite-universal.js" />
                 </Head>
                 <body>
-                    <Main />
-                    <NextScript />
+                <Main />
+                <NextScript />
                 </body>
             </Html>
         )
