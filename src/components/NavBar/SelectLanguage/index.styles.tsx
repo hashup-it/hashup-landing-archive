@@ -1,6 +1,6 @@
-import { mediaQuery } from "components/MediaQuery"
-import styled from "styled-components"
-import { Swatches } from "../../../__styles__/Swatches"
+import { mediaQuery } from 'components/MediaQuery'
+import styled from 'styled-components'
+import { Swatches } from '../../../__styles__/Swatches'
 
 export const StyledSelectLanguage = styled.div`
     display: flex;
@@ -29,9 +29,11 @@ export const StyledLanguageIcon = styled.img`
 export const StyledLanguage = styled.div`
     cursor: pointer;
     text-transform: uppercase;
+
     :hover {
         opacity: 0.9;
     }
+
     display: flex;
     gap: 10px;
 `
@@ -40,7 +42,8 @@ export const StyledLanguageList = styled.ul`
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin-top: 6rem;
+    margin-top: 8rem;
+    gap: .5em;
     position: absolute;
     margin-right: 2rem;
 `
