@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Swatches } from '../../../__styles__/Swatches'
 
 export const NewsletterContainer = styled.div`
     display: flex;
@@ -25,14 +26,15 @@ export const StyledInputContainer = styled.div`
     width: 100%;
 
     .row-form {
-        background: yellow;
+        background: ${Swatches.background_main} !important;
+
         padding: 0 !important;
         width: 100% !important;
     }
 
     .horozintalForm, .ml-form-horizontalRow, .ml-input-horizontal, .ml-button-horizontal {
         width: auto !important;
-        background: black !important;
+        background: ${Swatches.background_main} !important;
     }
 
     .horozintalForm {

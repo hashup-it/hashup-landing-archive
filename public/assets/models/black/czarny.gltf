@@ -3,9 +3,6 @@
         "generator" : "Khronos glTF Blender I/O v1.6.16",
         "version" : "2.0"
     },
-    "extensionsUsed" : [
-        "KHR_materials_transmission"
-    ],
     "scene" : 0,
     "scenes" : [
         {
@@ -43,7 +40,7 @@
             "emissiveTexture" : {
                 "index" : 0
             },
-            "name" : "cartridge mat",
+            "name" : "cartridge_mat",
             "normalTexture" : {
                 "index" : 1
             },
@@ -58,19 +55,13 @@
         },
         {
             "alphaMode" : "BLEND",
-            "doubleSided" : true,
-            "extensions" : {
-                "KHR_materials_transmission" : {
-                    "transmissionFactor" : 0.718181848526001
-                }
-            },
-            "name" : "cartridge szklo",
+            "name" : "cartridge_szklo",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     0.800000011920929,
                     0.800000011920929,
                     0.800000011920929,
-                    0.30454546213150024
+                    0.2590909004211426
                 ],
                 "metallicRoughnessTexture" : {
                     "index" : 4
@@ -128,8 +119,8 @@
     "images" : [
         {
             "mimeType" : "image/jpeg",
-            "name" : "czerwony_Emissive",
-            "uri" : "czerwony_Emissive.jpg"
+            "name" : "czarny_Emissive",
+            "uri" : "czarny_Emissive.jpg"
         },
         {
             "mimeType" : "image/jpeg",
@@ -138,8 +129,8 @@
         },
         {
             "mimeType" : "image/jpeg",
-            "name" : "czerwony_BaseColor",
-            "uri" : "czerwony_BaseColor.jpg"
+            "name" : "czarny_BaseColor",
+            "uri" : "czarny_BaseColor.jpg"
         },
         {
             "mimeType" : "image/jpeg",
@@ -268,7 +259,7 @@
     "buffers" : [
         {
             "byteLength" : 135392,
-            "uri" : "cartridge czerwony.bin"
+            "uri" : "czarny.bin"
         }
     ]
 }

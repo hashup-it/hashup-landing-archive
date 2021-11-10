@@ -25,15 +25,15 @@ export default function Model({ ...props }) {
     }, [scene, loader, pmremGenerator])
 
     const group = useRef()
-    const { nodes, materials } = useGLTF('/assets/models/gray/cartridge szary.gltf')
+    const { nodes, materials } = useGLTF('/assets/models/gray/szary.gltf')
     return (
         <group ref={group} {...props} dispose={null}>
             <group position={[-0.41, 1.64, -0.03]} rotation={[Math.PI / 2, 0, 0]}>
-                <mesh geometry={nodes.cartridge_1.geometry} material={materials['cartridge mat']} />
-                <mesh geometry={nodes.cartridge_2.geometry} material={materials['cartridge szklo']} />
+                <mesh geometry={nodes.cartridge_1.geometry} material={materials.cartridge_mat} />
+                <mesh geometry={nodes.cartridge_2.geometry} material={materials.cartridge_szklo} />
             </group>
         </group>
     )
 }
 
-useGLTF.preload('/assets/models/gray/cartridge szary.gltf')
+useGLTF.preload('/assets/models/gray/szary.gltf')
