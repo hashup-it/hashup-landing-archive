@@ -30,8 +30,8 @@ const AboutUs = () => {
                         <ColoredText>{t("free-yourself")}</ColoredText>
                     </SectionLabel>
                     <SectionHeader>
-                        <ColoredText>{t("about-us-header1")}</ColoredText>
-                        {t("about-us-header2")}
+                        <ColoredText>{t("about-us-header-free")}</ColoredText>
+                        {t("about-us-header-market")}
                     </SectionHeader>
                     <SectionText>{t("about-us-section-text")}</SectionText>
                 </LeftWrapper>

@@ -38,37 +38,37 @@ const InfoNotes = () => {
                 <ColoredText>game</ColoredText>change.io
             </SectionLabel>
             <SectionHeader>
-                <ColoredText>{t("infonotes-header1")}</ColoredText>
-                {t("infonotes-header2")}
+                <ColoredText>{t("infonotes-header-def")}</ColoredText>
+                {t("infonotes-header-form")}
             </SectionHeader>
             <StyledNotesArea>
                 <Note
-                    icon={'assets/icons/info-bubble-1.svg'}
+                    icon={"assets/icons/info-bubble-1.svg"}
                     label={
                         <>
-                            <ColoredText>{t("infonotes-note11")}</ColoredText>
-                            {t("infonotes-note12")}
+                            <ColoredText>{t("infonotes-note1-invest")}</ColoredText>
+                            {t("infonotes-note1-games")}
                         </>
                     }
                     content={t("infonotes-note1-content")}
                 />
                 <Note
-                    icon={'assets/icons/info-bubble-2.svg'}
+                    icon={"assets/icons/info-bubble-2.svg"}
                     label={
                         <>
-                            <ColoredText>{t("infonotes-note21")}</ColoredText>
-                            {t("infonotes-note22")}
+                            <ColoredText>{t("infonotes-note2-decentralised")}</ColoredText>
+                            {t("infonotes-note2-distribution")}
                         </>
                     }
                     content={t("infonotes-note2-content")}
                 />
 
                 <Note
-                    icon={'assets/icons/info-bubble-3.svg'}
+                    icon={"assets/icons/info-bubble-3.svg"}
                     label={
                         <>
-                            {t("infonotes-note31")}
-                            <ColoredText>{t("infonotes-note32")}</ColoredText>
+                            {t("infonotes-note3-become")}
+                            <ColoredText>{t("infonotes-note3-independent")}</ColoredText>
                         </>
                     }
                     content={t("infonotes-note3-content")}

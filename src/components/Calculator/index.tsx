@@ -8,7 +8,7 @@ import {
     StyledBackgroundImg,
     StyledCalculator,
     StyledSlidersContainer,
-    StyledBackgroundFlare
+    StyledBackgroundFlare,
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
 import { randomInt } from "util/math"
@@ -23,9 +23,9 @@ const Calculator = () => {
     return (
         <StyledCalculator>
             <StyledHeader>
-                {t("calc-check1")}
-                <ColoredText>{t("calc-check2")}</ColoredText>
-                {t("calc-check3")}
+                {t("calc-check-how")}
+                <ColoredText>{t("calc-check-losing")}</ColoredText>
+                {t("calc-check-charged")}
             </StyledHeader>
             <StyledSlidersContainer>
                 <Slider

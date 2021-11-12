@@ -17,8 +17,8 @@ const OurPartners = () => {
         <OurPartnersContainer>
             <SectionLabel>{t("partners-label")}</SectionLabel>
             <OurPartnersHeader>
-                {t("partners-header1")}
-                <ColoredText>{t("partners-header2")}</ColoredText>
+                {t("partners-header-our")}
+                <ColoredText>{t("partners-header-partners")}</ColoredText>
             </OurPartnersHeader>
             <ContentContainer>
                 <SponsorLogosContainer>

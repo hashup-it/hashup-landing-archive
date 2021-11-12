@@ -19,12 +19,12 @@ const GameContract = () => {
                     <SectionPhotoSimple src="/assets/section-photos/photo3.png"></SectionPhotoSimple>
                 </RightWrapper>
                 <LeftWrapper>
-                    <SectionLabel>FREE MARKET SOFTWARE</SectionLabel>
+                    <SectionLabel>{t("gamecontract-label")}</SectionLabel>
                     <SectionHeader>
-                        {t("gamecontract-header1")}
-                        <ColoredText>{t("gamecontract-header2")}</ColoredText>
-                        {t("gamecontract-header3")}
-                        <ColoredText>{t("gamecontract-header4")}</ColoredText>.
+                        {t("gamecontract-header-create")}
+                        <ColoredText>{t("gamecontract-header-cartridges")}</ColoredText>
+                        {t("gamecontract-header-publish")}
+                        <ColoredText>{t("gamecontract-header-brokerless")}</ColoredText>.
                     </SectionHeader>
                     <SectionText>{t("gamecontract-text")}</SectionText>
                 </LeftWrapper>

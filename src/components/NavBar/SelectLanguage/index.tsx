@@ -22,6 +22,8 @@ export const SelectLanguage = () => {
     const [language, setLanguage] = useState("pl")
     const [isClicked, setIsClicked] = useState(false)
 
+    const Languages = ["pl", "en"]
+
     return (
         <>
             {isClicked ? (
@@ -32,12 +34,17 @@ export const SelectLanguage = () => {
                         <StyledLanguageIcon src="/assets/icons/chevron-down.svg" />
                     </StyledLanguage>
                     <StyledLanguageList>
-                        <StyledLanguageOption value="pl" onClick={handleLanguageChange}>
-                            PL
-                        </StyledLanguageOption>
-                        <StyledLanguageOption value="en" onClick={handleLanguageChange}>
-                            EN
-                        </StyledLanguageOption>
+                        {Languages.map((lng, id) => {
+                            return (
+                                <StyledLanguageOption
+                                    value={lng}
+                                    key={id}
+                                    onClick={handleLanguageChange}
+                                >
+                                    {lng}
+                                </StyledLanguageOption>
+                            )
+                        })}
                     </StyledLanguageList>
                 </StyledSelectLanguage>
             ) : (

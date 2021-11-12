@@ -26,12 +26,12 @@ const GameLibrary = () => {
                         Game <ColoredText>Library</ColoredText>
                     </SectionLabel>
                     <SectionHeader>
-                        {t("gamelibrary-header1")}
-                        <ColoredText>{t("gamelibrary-header2")}</ColoredText>
-                        {t("gamelibrary-header3")}
+                        {t("gamelibrary-header-new")}
+                        <ColoredText>{t("gamelibrary-header-profile")}</ColoredText>
+                        {t("gamelibrary-header-on")}
                         <ColoredText>Game</ColoredText>
-                        {t("gamelibrary-header4")}
-                        <ColoredText>{t("gamelibrary-header5")}</ColoredText>!
+                        {t("gamelibrary-header-xplorer")}
+                        <ColoredText>{t("gamelibrary-header-collection")}</ColoredText>!
                     </SectionHeader>
                 </LeftWrapper>
                 <RightWrapper>
@@ -39,9 +39,9 @@ const GameLibrary = () => {
                         {t("gamelibrary-nick-header")}
                     </NicknameInstructionsHeading>
                     <NicknameInstructionsList>
-                        <li>{t("gamelibrary-nick1")}</li>
-                        <li>{t("gamelibrary-nick2")}</li>
-                        <li>{t("gamelibrary-nick3")}</li>
+                        <li>{t("gamelibrary-nick-customize")}</li>
+                        <li>{t("gamelibrary-nick-brag")}</li>
+                        <li>{t("gamelibrary-nick-swap")}</li>
                     </NicknameInstructionsList>
                 </RightWrapper>
             </SectionContainer>

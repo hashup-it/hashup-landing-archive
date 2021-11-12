@@ -1,16 +1,16 @@
-import { mediaQuery } from 'components/MediaQuery'
-import styled from 'styled-components'
-import { Swatches } from '../../../__styles__/Swatches'
+import { mediaQuery } from "components/MediaQuery"
+import styled from "styled-components"
+import { Swatches } from "../../../__styles__/Swatches"
 
 export const StyledSelectLanguage = styled.div`
     display: flex;
     gap: 10px;
     justify-content: space-around;
     align-items: center;
-    position: relatve;
+    //position: relative;
 
     :before {
-        content: '';
+        content: "";
         width: 1px;
         height: 100%;
         background-color: ${Swatches.primary_color};
@@ -43,7 +43,7 @@ export const StyledLanguageList = styled.ul`
     flex-direction: column;
     list-style: none;
     margin-top: 8rem;
-    gap: .5em;
+    gap: 0.5em;
     position: absolute;
     margin-right: 2rem;
 `
@@ -53,6 +53,7 @@ export const StyledLanguageOption = styled.button`
     font-family: Sora, sans-serif;
     font-style: normal;
     font-weight: bold;
+    text-transform: uppercase;
     font-size: 16px;
     background-color: black;
     color: white;

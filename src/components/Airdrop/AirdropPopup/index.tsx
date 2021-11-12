@@ -36,9 +36,9 @@ export const AirdropPopup: FC<AidropPopupProps> = ({ setPopupOpened }) => {
                     />
                     <StyledPopupHeader>{t("airdroppopup-header")}</StyledPopupHeader>
                     <StyledPopupText>
-                        {t("airdroppopup-text1")}
+                        {t("airdroppopup-text-sent")}
                         <ColoredText>#Hash</ColoredText>
-                        {t("airdroppopup-text2")}
+                        {t("airdroppopup-text-address")}
                     </StyledPopupText>
                     <StyledAddToMetamaskGroup>
                         {t("airdroppopup-metamask")} &gt; <AddToMetamask />

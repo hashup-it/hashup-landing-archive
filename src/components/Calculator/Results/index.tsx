@@ -45,12 +45,12 @@ const Results: FC<{ readonly soldItems: number; readonly price: number }> = ({
             <StyledVersus>VS</StyledVersus>
             <ValueBox
                 value={othersProfit}
-                label={t("calc-result-label1")}
+                label={t("calc-result-label-get")}
                 outlineColor={Swatches.text_secondary}
             />
             <ValueBox
                 value={ourProfit - othersProfit}
-                label={t("calc-result-label2")}
+                label={t("calc-result-label-lose")}
                 outlineColor={Swatches.text_secondary}
             />
         </StyledResults>
