@@ -42,10 +42,10 @@ export const StyledLanguageList = styled.ul`
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin-top: 8rem;
-    gap: 0.5em;
     position: absolute;
-    margin-right: 2rem;
+    margin-top: 10rem;
+    gap: 0.3em;
+    margin-right: 1.25rem;
 `
 
 export const StyledLanguageOption = styled.button`

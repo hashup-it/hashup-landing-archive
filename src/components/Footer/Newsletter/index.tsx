@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
-import { FormContainer, NewsletterContainer, StyledFormDescription, StyledInputContainer } from './index.styles'
-import { ListHeader } from '../index.styles'
-import { useTranslation } from 'react-i18next'
+import React, { useState } from "react"
+import {
+    FormContainer,
+    NewsletterContainer,
+    StyledFormDescription,
+    StyledInputContainer,
+} from "./index.styles"
+import { ListHeader } from "../index.styles"
+import { useTranslation } from "react-i18next"
 
 export const Newsletter = () => {
-    const [mailAddress, setMailAddress] = useState('')
+    const [mailAddress, setMailAddress] = useState("")
 
     const signUp = async () => {
         console.log(mailAddress)
@@ -14,8 +19,8 @@ export const Newsletter = () => {
 
     return (
         <NewsletterContainer>
-            <ListHeader>{t('newsletter-header')}</ListHeader>
-            <StyledFormDescription>{t('newsletter-description')}</StyledFormDescription>
+            <ListHeader>{t("newsletter-header")}</ListHeader>
+            <StyledFormDescription>{t("newsletter-description")}</StyledFormDescription>
             <FormContainer>
                 <StyledInputContainer>
                     <div

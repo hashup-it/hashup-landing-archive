@@ -22,7 +22,7 @@ export const SelectLanguage = () => {
     const [language, setLanguage] = useState("pl")
     const [isClicked, setIsClicked] = useState(false)
 
-    const Languages = ["pl", "en"]
+    const Languages = ["pl", "en", "de"]
 
     return (
         <>
