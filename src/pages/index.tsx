@@ -12,6 +12,7 @@ import GameLibrary from "components/GameLibrary"
 import Airdrop from "components/Airdrop"
 import Calculator from "components/Calculator"
 import Team from "components/Team"
+import TechStack from 'components/TechStack'
 
 const LandingPage = () => (
         <>
@@ -27,6 +28,7 @@ const LandingPage = () => (
             <GamExplorer />
             <InfoNotes />
             <OurPartners />
+            {/* <TechStack /> */}
             <Team />
             <Roadmap />
         </>

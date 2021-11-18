@@ -1,172 +1,52 @@
-import { CorePeopleContainer, Header, TeamContainer, TeamPeopleContainer } from "./index.style"
-import { Hyperlink, SectionLabel } from "../Shared/sections.styles"
+import { FC } from "react"
+import { StyledPeopleContainer, StyledHeader, StyledSectionContainer } from "./index.style"
+import { SectionLabel } from "../Shared/sections.styles"
 import { ColoredText } from "../Shared"
-import { Person } from "./Person"
-import { SocialIcon } from "../Header/HeaderBottom/index.styles"
 import { useTranslation } from "react-i18next"
+import Person from "./PersonBox"
+import { coreTeam, advisors, team } from "./data"
+import { PersonInterface } from "./PersonBox/interfaces"
+
+interface PeopleProps {
+    readonly teamLocale: string
+    readonly outline?: boolean
+    readonly data: PersonInterface[]
+}
+
+const People: FC<PeopleProps> = ({ data, outline, teamLocale }) => {
+    const { t } = useTranslation()
+
+    return (
+        <>
+            <StyledHeader>{t(teamLocale)}</StyledHeader>
+            <StyledPeopleContainer>
+                {data.map((item, index) => (
+                    <Person
+                        key={index}
+                        avatarFilename={item.avatarFilename}
+                        name={item.name}
+                        localeKey={item.localeKey}
+                        socialMedia={item.socialMedia}
+                        outline={outline}
+                    />
+                ))}
+            </StyledPeopleContainer>
+        </>
+    )
+}
 
 export const Team = () => {
     const { t } = useTranslation()
     return (
-        <TeamContainer>
+        <StyledSectionContainer>
             <SectionLabel>
                 <ColoredText>{t("ourteam")}</ColoredText>
             </SectionLabel>
-            <Header>{t("coreteam")}</Header>
-            <CorePeopleContainer>
-                <Person
-                    imageAsset={"/assets/avatars/szymon_jankowski.png"}
-                    title="ceo"
-                    name="Szymon Jankowski"
-                    description={t("szymon-jankowski")}
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/jankowskiszymon/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                    outline={true}
-                />
-                <Person
-                    imageAsset={"/assets/avatars/filip_szydlowski.png"}
-                    title="CLO"
-                    name="Filip Szydłowski"
-                    description={t("filip-szydlowski")}
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/filip-szydlowski/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                    outline={true}
-                />
-                <Person
-                    imageAsset={"/assets/avatars/rafal_bielenia.png"}
-                    title="tech lead"
-                    name="Rafał Bielenia"
-                    description={t("rafal-bielenia")}
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/rafal-bielenia-b87ab935/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                    outline={true}
-                />
-                <Person
-                    imageAsset={"/assets/avatars/tomasz_fiema.png"}
-                    title="head of design"
-                    name="Tomasz Fiema"
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/tomaszfiema/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                    outline={true}
-                />
-            </CorePeopleContainer>
-            <Header>{t("team")}</Header>
-            <TeamPeopleContainer>
-                <Person
-                    imageAsset={"/assets/avatars/cezary_dobrowolski.png"}
-                    title="cmo"
-                    name="Cezary Dobrowolski"
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/cezary-krzysztof-dobrowolski-b0a2001a5/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                />
-                <Person
-                    imageAsset={"/assets/avatars/damian_sarnecki.png"}
-                    title="Blockchain Dev"
-                    name="Damian Sarnecki"
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/damian-sarnecki/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                />
-                <Person
-                    imageAsset={"/assets/avatars/robert_dziubek.png"}
-                    title="Blockchain Dev"
-                    name="Robert Dziubek"
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/rdziubek">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                />
-                <Person
-                    imageAsset={"/assets/avatars/jakub_jaworski.png"}
-                    title="CMO assistant"
-                    name="Jakub Jaworski"
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/jakub-jaworski-1189961aa/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                />
-            </TeamPeopleContainer>
-            <Header>{t("advisors")}</Header>
-            <TeamPeopleContainer>
-                <Person
-                    imageAsset={"/assets/avatars/tomasz_smus.png"}
-                    title={t("advisor")}
-                    name="dr Tomasz R. Smus"
-                    description={t("tomaszsmus")}
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/trsmus/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                />
-                <Person
-                    imageAsset={"/assets/avatars/krzysztof_piech.png"}
-                    title={t("advisor")}
-                    name="prof Krzysztof Piech"
-                    description={t("krzysztofpiech")}
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/kpiech/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                            <Hyperlink href="https://pl.wikipedia.org/wiki/Krzysztof_Piech">
-                                W
-                            </Hyperlink>
-                        </>
-                    }
-                />
-                <Person
-                    imageAsset={"/assets/avatars/krzysztof_chmielewski.png"}
-                    title={t("advisor")}
-                    name="Krzysztof Chmielewski"
-                    description={t("krzysztofchmielewski")}
-                    socials={
-                        <>
-                            <Hyperlink href="https://www.linkedin.com/in/krzysztof-chmielewski-a87b5a8a/">
-                                <SocialIcon src="/assets/icons/linkedin.svg" />
-                            </Hyperlink>
-                        </>
-                    }
-                />
-            </TeamPeopleContainer>
-        </TeamContainer>
+
+            <People data={coreTeam} teamLocale="coreteam" outline />
+            <People data={team} teamLocale="team" />
+            <People data={advisors} teamLocale="advisors" />
+        </StyledSectionContainer>
     )
 }
 

@@ -3,18 +3,14 @@ import styled from "styled-components"
 import { Swatches } from "__styles__/Swatches"
 
 export const StyledCalculator = styled.div`
-    min-height: 70vh;
     position: relative;
     margin-top: 76px;
+    margin-bottom: 150px;
     padding: 0px 117px;
-    margin-bottom: 80px;
 
     ${mediaQuery.laptop} {
-        padding: 0px 0px;
-    }
-
-    ${mediaQuery.laptop} {
-        display: none;
+        padding: 0;
+        margin-bottom: 80px;
     }
 `
 
@@ -23,12 +19,16 @@ export const StyledBackgroundImg = styled.div`
     pointer-events: none;
     top: -10vh;
     right: -30px;
-    background-image: url('/assets/percent.png');
+    background-image: url("/assets/percent.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 400px;
     height: 350px;
     transform-style: preserve-3d;
+
+    ${mediaQuery.laptop} {
+        display: none;
+    }
 `
 
 export const StyledBackgroundFlare = styled.div`
@@ -61,6 +61,14 @@ export const StyledHeader = styled.h2`
         height: 4px;
         background-color: ${Swatches.primary_color};
     }
+
+    ${mediaQuery.laptop} {
+        max-width: 100%;
+        
+        :before {
+            display: none;
+        }
+    }
 `
 
 export const StyledSlidersContainer = styled.div`
@@ -68,4 +76,14 @@ export const StyledSlidersContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 90px;
+
+    ${mediaQuery.laptop} {
+        margin: 60px 0px;
+        gap: 50px 0;
+    }
+
+    ${mediaQuery.tablet} {
+        margin: 60px 0px;
+        gap: 30px 0;
+    }
 `

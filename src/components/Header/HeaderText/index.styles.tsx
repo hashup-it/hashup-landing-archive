@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { mediaQuery } from "../../MediaQuery"
-import { Swatches } from "../../../__styles__/Swatches"
+import { mediaQuery } from "components/MediaQuery"
+import { Swatches } from "__styles__/Swatches"
 import { StyledTabHeaderText } from "../../Shared/sections.styles"
 
 export const StyledLandingHeaderText = styled(StyledTabHeaderText)`

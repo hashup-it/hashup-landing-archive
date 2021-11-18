@@ -4,6 +4,8 @@ import { LandingContainer } from "App.styles"
 import Footer from "components/Footer"
 import NavBar from "components/NavBar"
 import { GlobalStyle } from "__styles__/GlobalStyle.style"
+import i18n from "i18n"
+
 
 const App = ({ Component, pageProps }) => {
     return (

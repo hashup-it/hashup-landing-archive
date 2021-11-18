@@ -9,12 +9,6 @@ import { ListHeader } from "../index.styles"
 import { useTranslation } from "react-i18next"
 
 export const Newsletter = () => {
-    const [mailAddress, setMailAddress] = useState("")
-
-    const signUp = async () => {
-        console.log(mailAddress)
-    }
-
     const { t } = useTranslation()
 
     return (

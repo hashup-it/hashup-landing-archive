@@ -29,7 +29,7 @@ const useEquirectangularHDR = (url: string) => {
 }
 
 export enum CameraDistance {
-    mainLanding = -23,
+    mainLanding = -28,
     cartridgesListing = -20
 }
 

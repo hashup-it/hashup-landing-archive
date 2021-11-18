@@ -16,6 +16,7 @@ import {
 import { SelectLanguage } from "../SelectLanguage"
 import { useTranslation } from "react-i18next"
 import Link from "next/link"
+import { SocialMediaUrlsEnum } from "config"
 
 export const MainMenu = ({
     isMobileMenuShown,
@@ -56,19 +57,19 @@ export const MainMenu = ({
             {isMobileMenuShown && (
                 <>
                     <SocialMediaGroup>
-                        <a href="https://www.linkedin.com/company/hashupit">
+                        <a href={SocialMediaUrlsEnum.linkedIn}>
                             <Icon url={"linkedin.svg"} />
                         </a>
-                        <a href="https://t.me/HashUpAnnouncements">
+                        <a href={SocialMediaUrlsEnum.telegram}>
                             <Icon url={"telegram.svg"} />
                         </a>
-                        <a href="https://twitter.com/HashUp_it">
+                        <a href={SocialMediaUrlsEnum.twitter}>
                             <Icon url={"twitter.svg"} />
                         </a>
-                        <a href="https://www.facebook.com/HashUpIt">
+                        <a href={SocialMediaUrlsEnum.facebook}>
                             <Icon url={"facebook.svg"} />
                         </a>
-                        <a href="https://www.instagram.com/hashup.it/">
+                        <a href={SocialMediaUrlsEnum.instagram}>
                             <Icon url={"instagram.svg"} />
                         </a>
                     </SocialMediaGroup>

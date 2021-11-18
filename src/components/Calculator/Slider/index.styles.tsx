@@ -1,3 +1,4 @@
+import { mediaQuery } from "components/MediaQuery"
 import styled, { css } from "styled-components"
 import { Swatches } from "__styles__/Swatches"
 
@@ -8,6 +9,11 @@ export const StyledSlider = styled.div`
     grid-template-columns: 200px auto;
     gap: 30px;
     align-items: center;
+
+    ${mediaQuery.laptop} {
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
 `
 
 export const StyledSliderLabel = styled.span`
@@ -58,7 +64,7 @@ export const StyledSliderWrapper = styled.div<{ dotsValues: string[] }>`
         width: 25px;
         border-radius: 5px;
         background-color: ${Swatches.text_main};
-        background-image: url('assets/icons/calculator-dollar.svg');
+        background-image: url("assets/icons/calculator-dollar.svg");
         background-repeat: no-repeat;
         background-position: center;
         border: 0 solid;
@@ -114,7 +120,7 @@ export const StyledSliderWrapper = styled.div<{ dotsValues: string[] }>`
         }
     }
 
-    // Write apropriate value above dots
+    // Write apropriate values above dots
     ${props => {
         let dots: any[] = []
 
@@ -130,7 +136,7 @@ export const StyledSliderWrapper = styled.div<{ dotsValues: string[] }>`
         // Next 4 dots
         for (let i = 1; i <= 4; i++) {
             dots.push(css`
-                .rc-slider-dot:nth-child(${25 * i}n) {
+                .rc-slider-dot:nth-child(${25 * i}) {
                     :before {
                         content: "${props.dotsValues[i]}";
                     }
@@ -140,4 +146,18 @@ export const StyledSliderWrapper = styled.div<{ dotsValues: string[] }>`
 
         return dots
     }}
+
+    ${mediaQuery.laptop} {
+        width: 100%;
+    }
+
+    ${mediaQuery.mobileL} {
+        .rc-slider-dot:nth-child(${25 * 1}),
+        .rc-slider-dot:nth-child(${25 * 2}),
+        .rc-slider-dot:nth-child(${25 * 3}) {
+            :before {
+                display: none;
+            }
+        }
+    }
 `

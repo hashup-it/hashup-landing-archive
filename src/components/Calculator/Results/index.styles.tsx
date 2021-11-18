@@ -1,3 +1,4 @@
+import { mediaQuery } from "components/MediaQuery"
 import styled, { css } from "styled-components"
 import { Swatches } from "__styles__/Swatches"
 
@@ -5,6 +6,29 @@ export const StyledResults = styled.div`
     display: flex;
     gap: 30px;
     align-items: center;
+
+    ${mediaQuery.tablet} {
+        flex-direction: column;
+        gap: 25px 0;
+    }
+`
+
+export const StyledResultSection = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+
+    ${mediaQuery.laptopL} {
+        gap: 0 15px;
+    }
+
+    ${mediaQuery.tablet} {
+        gap: 0 80px;
+    }
+
+    ${mediaQuery.mobileL} {
+        gap: 0 30px;
+    }
 `
 
 export const StyledResultsDescription = styled.div`
@@ -12,6 +36,10 @@ export const StyledResultsDescription = styled.div`
     flex-direction: column;
     gap: 10px;
     max-width: 120px;
+
+    ${mediaQuery.tablet} {
+        max-width: auto;
+    }
 `
 
 export const StyledResultsHeader = styled.h4`
@@ -35,7 +63,6 @@ export const StyledPriceLabelOutline = styled.div<{ outlineColor: string }>`
     position: absolute;
     width: 100%;
     height: 100%;
-
     border-radius: inherit;
     padding: 1px;
     top: -1px;
@@ -95,12 +122,25 @@ export const StyledValueBox = styled.div<{ outlineColor: string; shadow?: boolea
         line-height: 140%;
         max-width: 120px;
     }
+
+    ${mediaQuery.laptopL} {
+        gap: 12px;
+    }
+
+    ${mediaQuery.tablet} {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 12px;
+
+        .label {
+            max-width: 140px;
+        }
+    }
 `
 
 export const StyledVersus = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
     font-size: 13px;
     line-height: 15px;
     align-items: center;
@@ -112,5 +152,44 @@ export const StyledVersus = styled.div`
         background: ${Swatches.primary_color};
         width: 1.3px;
         height: 32px;
+    }
+
+    ${mediaQuery.tablet} {
+        position: relative;
+        font-size: 15px;
+
+        :before,
+        :after {
+            display: block;
+            content: "";
+            background: ${Swatches.primary_color};
+            width: 180px;
+            height: 1px;
+            position: absolute;
+            top: 6px;
+        }
+
+        :before {
+            left: -200px;
+        }
+
+        :after {
+            right: -200px;
+        }
+    }
+
+    ${mediaQuery.mobileL} {
+        :before,
+        :after {
+            width: 130px;
+        }
+
+        :before {
+            left: -140px;
+        }
+
+        :after {
+            right: -140px;
+        }
     }
 `

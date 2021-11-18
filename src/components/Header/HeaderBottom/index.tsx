@@ -16,7 +16,7 @@ import {
     StyledTokenInfo,
     StyledTokenInfoItem,
 } from "./index.styles"
-
+import { SocialMediaUrlsEnum } from "config"
 import Web3 from "web3"
 import { AbiItem } from "web3-utils"
 import { useTranslation } from "react-i18next"
@@ -60,19 +60,19 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
                 </StyledTokenInfo>
                 <StyledLine />
                 <StyledSocialMedia>
-                    <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                    <Hyperlink href={SocialMediaUrlsEnum.linkedIn}>
                         <SocialIcon src="/assets/icons/linkedin.svg" />
                     </Hyperlink>
-                    <Hyperlink href="https://t.me/HashUpAnnouncements">
+                    <Hyperlink href={SocialMediaUrlsEnum.telegram}>
                         <SocialIcon src="/assets/icons/telegram.svg" />
                     </Hyperlink>
-                    <Hyperlink href="https://twitter.com/HashUp_it">
+                    <Hyperlink href={SocialMediaUrlsEnum.twitter}>
                         <SocialIcon src="/assets/icons/twitter.svg" />
                     </Hyperlink>
-                    <Hyperlink href="https://www.facebook.com/HashUpIt">
+                    <Hyperlink href={SocialMediaUrlsEnum.facebook}>
                         <SocialIcon src="/assets/icons/facebook.svg" />
                     </Hyperlink>
-                    <Hyperlink href="https://www.instagram.com/hashup.it/">
+                    <Hyperlink href={SocialMediaUrlsEnum.instagram}>
                         <SocialIcon src="/assets/icons/instagram.svg" />
                     </Hyperlink>
                 </StyledSocialMedia>

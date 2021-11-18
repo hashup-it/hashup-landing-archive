@@ -1,19 +1,14 @@
 import styled from "styled-components"
 import { ComparisonItemContent } from "../../Comparison/index.styles"
 import { StyledSocialMedia } from "../../Header/HeaderBottom/index.styles"
-import { Swatches } from "../../../__styles__/Swatches"
+import { Swatches } from "__styles__/Swatches"
 
 export const PersonContainer = styled.div`
-    display: flex;
-    position: relative;
-
-    width: 18em;
 `
 
 export const Avatar = styled.img`
     border-radius: 50%;
     width: 120px;
-
     position: absolute;
     top: -60px;
     right: 40px;
@@ -25,12 +20,12 @@ export const PersonDescription = styled.div<{ outline: boolean | undefined }>`
     padding: 1px;
     border-radius: 40px;
     position: relative;
-
     margin-top: 2rem;
 `
 
 export const PersonDescriptionContent = styled(ComparisonItemContent)`
     padding: 60px 32px;
+    min-height: 300px;
 `
 
 export const Function = styled.div`
@@ -41,7 +36,6 @@ export const Function = styled.div`
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
-
     margin-bottom: 6px;
     margin-top: 10px;
 `
@@ -54,7 +48,6 @@ export const Name = styled.div`
     line-height: 34px;
     letter-spacing: 0em;
     text-align: left;
-
     margin-bottom: 24px;
 `
 
@@ -66,7 +59,6 @@ export const Description = styled.div`
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
-
     color: #b7b7b7;
 `
 
@@ -79,4 +71,18 @@ export const Separator = styled.div`
 
 export const SocialMedia = styled(StyledSocialMedia)`
     justify-content: start;
+`
+
+export const StyledIconA = styled.a`
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    display: block;
+    opacity: 0.8;
+    transition: opacity 100ms ease;
+
+    :hover {
+        transition: opacity 100ms ease;
+        opacity: 1;
+    }
 `

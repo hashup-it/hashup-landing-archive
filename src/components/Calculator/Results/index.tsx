@@ -9,6 +9,7 @@ import {
     StyledResultsText,
     StyledValueBox,
     StyledVersus,
+    StyledResultSection,
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
 
@@ -21,7 +22,6 @@ interface ValueBoxProps {
 
 const ValueBox: FC<ValueBoxProps> = ({ value, label, outlineColor, shadow }) => (
     <StyledValueBox outlineColor={outlineColor} shadow={shadow}>
-        {/* <div className="outline" /> */}
         <div className="value">{numeral(value).format("0,0.[0]a")}</div>
         {label && <div className="label">{label}</div>}
     </StyledValueBox>
@@ -37,22 +37,26 @@ const Results: FC<{ readonly soldItems: number; readonly price: number }> = ({
 
     return (
         <StyledResults>
-            <StyledResultsDescription>
-                <StyledResultsHeader>HashUp</StyledResultsHeader>
-                <StyledResultsText>{t("calc-result")}</StyledResultsText>
-            </StyledResultsDescription>
-            <ValueBox value={ourProfit} outlineColor={Swatches.primary_color} shadow />
+            <StyledResultSection>
+                <StyledResultsDescription>
+                    <StyledResultsHeader>HashUp</StyledResultsHeader>
+                    <StyledResultsText>{t("calc-result")}</StyledResultsText>
+                </StyledResultsDescription>
+                <ValueBox value={ourProfit} outlineColor={Swatches.primary_color} shadow />
+            </StyledResultSection>
             <StyledVersus>VS</StyledVersus>
-            <ValueBox
-                value={othersProfit}
-                label={t("calc-result-label-get")}
-                outlineColor={Swatches.text_secondary}
-            />
-            <ValueBox
-                value={ourProfit - othersProfit}
-                label={t("calc-result-label-lose")}
-                outlineColor={Swatches.text_secondary}
-            />
+            <StyledResultSection>
+                <ValueBox
+                    value={othersProfit}
+                    label={t("calc-result-label-get")}
+                    outlineColor={Swatches.text_secondary}
+                />
+                <ValueBox
+                    value={ourProfit - othersProfit}
+                    label={t("calc-result-label-lose")}
+                    outlineColor={Swatches.text_secondary}
+                />
+            </StyledResultSection>
         </StyledResults>
     )
 }
