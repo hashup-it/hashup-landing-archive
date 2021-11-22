@@ -3,6 +3,12 @@ export enum SocialMediaEnum {
     wikipedia
 }
 
+export enum RoleEnum {
+    coreTeam,
+    team,
+    advisor,
+} 
+
 export interface SocialMediaInterface {
     readonly type: SocialMediaEnum
     readonly url: string

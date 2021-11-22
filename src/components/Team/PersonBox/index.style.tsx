@@ -2,8 +2,25 @@ import styled from "styled-components"
 import { ComparisonItemContent } from "../../Comparison/index.styles"
 import { StyledSocialMedia } from "../../Header/HeaderBottom/index.styles"
 import { Swatches } from "__styles__/Swatches"
+import { RoleEnum } from "./interfaces"
 
-export const PersonContainer = styled.div`
+export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
+    .outline {
+        background: ${props => {
+            switch (props.personRole) {
+                case RoleEnum.coreTeam:
+                    return `linear-gradient(${Swatches.primary_color} 0%, transparent 80%)`
+                case RoleEnum.team:
+                    return `linear-gradient(#2e2e2d 0%, transparent 80%)`
+                default:
+                    return "auto"
+            }
+        }};
+        padding: 1px;
+        border-radius: 40px;
+        position: relative;
+        margin-top: 2rem;
+    }
 `
 
 export const Avatar = styled.img`
@@ -14,18 +31,10 @@ export const Avatar = styled.img`
     right: 40px;
 `
 
-export const PersonDescription = styled.div<{ outline: boolean | undefined }>`
-    background: ${props =>
-        props.outline ? `linear-gradient(${Swatches.primary_color} 0%, transparent 40%)` : "auto"};
-    padding: 1px;
-    border-radius: 40px;
-    position: relative;
-    margin-top: 2rem;
-`
-
-export const PersonDescriptionContent = styled(ComparisonItemContent)`
+export const StyledContent = styled(ComparisonItemContent)`
     padding: 60px 32px;
-    min-height: 300px;
+    min-height: 260px;
+    position: relative;
 `
 
 export const Function = styled.div`
@@ -40,7 +49,7 @@ export const Function = styled.div`
     margin-top: 10px;
 `
 
-export const Name = styled.div`
+export const StyledName = styled.div`
     font-family: Sora;
     font-size: 24px;
     font-style: normal;
@@ -49,9 +58,10 @@ export const Name = styled.div`
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 24px;
+    min-height: 68px;
 `
 
-export const Description = styled.div`
+export const StyledDescription = styled.div`
     font-family: Sora;
     font-size: 13px;
     font-style: normal;
@@ -62,15 +72,20 @@ export const Description = styled.div`
     color: #b7b7b7;
 `
 
-export const Separator = styled.div`
-    background: url("/assets/icons/separator.svg");
-    width: 25px;
-    height: 2px;
-    margin: 30px 0;
-`
-
-export const SocialMedia = styled(StyledSocialMedia)`
+export const StyledSocialMediaBox = styled(StyledSocialMedia)`
+    position: absolute;
+    bottom: 35px;
     justify-content: start;
+
+    :before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 2px;
+        position: absolute;
+        top: -30px;
+        background-color: ${Swatches.primary_color};
+    }
 `
 
 export const StyledIconA = styled.a`

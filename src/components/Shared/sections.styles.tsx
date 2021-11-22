@@ -107,44 +107,11 @@ export const SectionHeader = styled.h2`
     }
 `
 
-export const TabHeader = styled.h1`
-    font-style: normal;
-    font-weight: bold;
-    font-size: 70px;
-    line-height: 115%;
-    padding: 0;
-    margin: 0;
-
-    ${mediaQuery.laptop} {
-        font-size: 60px;
-    }
-
-    ${mediaQuery.laptop} {
-        font-size: 50px;
-    }
-`
-
 export const SmallHeaderText = styled.p`
     color: ${Swatches.text_secondary};
     line-height: 160%;
     padding: 0;
     margin: 0;
-`
-
-export const StyledTabHeaderText = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    ${mediaQuery.laptop} {
-        padding-left: 0px;
-        padding: 0 10vw 0 10vw;
-    }
-
-    ${mediaQuery.mobileL} {
-        padding-left: 0px;
-        padding: 0 0 0 0;
-    }
 `
 
 export const SectionText = styled.p`

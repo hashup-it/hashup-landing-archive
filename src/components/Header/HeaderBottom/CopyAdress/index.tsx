@@ -2,8 +2,8 @@ import { useState } from "react"
 import { StyledCopyGroup, StyledTokenIcon, Tooltip } from "../index.styles"
 
 export const CopyAdress = () => {
-    const [showAnimation, setShowAnimation] = useState(false)
-    const [tooltipText, setTooltipText] = useState("Copy address")
+    const [showAnimation, setShowAnimation] = useState<boolean>(false)
+    const [tooltipText, setTooltipText] = useState<string>("Copy address")
 
     const fireAnimation = (time: number) => {
         setShowAnimation(true)

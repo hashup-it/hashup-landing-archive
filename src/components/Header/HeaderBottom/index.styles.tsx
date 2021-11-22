@@ -44,8 +44,9 @@ export const StyledMouseIcon = styled.img`
     margin-right: 13px;
 `
 
-export const StyledBottomGroup = styled.div`
+export const StyledDataGroup = styled.div`
     display: flex;
+    align-items: center;
     gap: 35px;
 
     ${mediaQuery.laptop} {
@@ -70,12 +71,22 @@ export const StyledTokenInfo = styled.div`
 
 export const StyledSocialMedia = styled.div`
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 26px;
+    gap: 15px;
 `
 
 export const SocialIcon = styled.img`
     cursor: pointer;
+    transition: opacity 100ms ease;
+    padding: 5px;
+    height: 15px;
+    margin-bottom: -4px; // Better align
+
+    :hover {
+        opacity: 0.7;
+        transition: opacity 100ms ease;
+    }
 `
 
 export const StyledLine = styled.div`

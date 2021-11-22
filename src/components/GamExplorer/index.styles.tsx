@@ -8,10 +8,9 @@ export const StyledGamExplorer = styled.div`
     margin-top: 100px;
 `
 
-export const GameExplorerContainer = styled(SectionContainer)`
+export const StyledGameExplorerContainer = styled(SectionContainer)`
     display: flex;
     width: 30em;
-
     text-align: center;
 
     ${mediaQuery.laptop} {

@@ -15,7 +15,7 @@
     "about-us-distribution": "Control the price of the game and the number of licenses issued. Earn money in the secondary market. Everything under your control.",
     "about-us-provision-header": "No commission",
     "about-us-provision": "You are the only publisher. Don't let anyone else make money off your hard work. Will you make more money this way or will you lower the price of the game to reach a larger audience? The decision is yours!",
-    "header-par": "DEFInitial game license media editing. P2P game exchange between players. Cartridge on blockchain. Without intermediaries. 0% commission. End the monopoly in the software market…",
+    "header-par": "DEFInitial game license media editing. P2P game exchange between players. Cartridge on blockchain. Without intermediaries. 0% commission.",
     "header-airdrop": "Claim your Airdrop",
     "scroll": "Scroll to learn more",
     "all-gamers": "All gamers: ",
@@ -101,8 +101,7 @@
     "roadmap-header-look": "Look, ",
     "roadmap-header-when": "when are we going to do all this",
     "ourteam": "Our team",
-    "coreteam": "Core team",
-    "team": "Team",
+    "team": "Meet our team",
     "szymon-jankowski": "He is passionate about economics, computer science and practical applications of blockchain.",
     "filip-szydlowski": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups.",
     "rafal-bielenia": "He has an extensive background in software and algorithmics, having worked at Google and Microsoft.",
@@ -221,5 +220,7 @@
     "krzysztof-piech-title": "Advisor",
     "krzysztof-chmielewski-title": "Advisor",
     "marcin-wenus": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor.",
-    "marcin-wenus-title": "Advisor"
+    "marcin-wenus-title": "Advisor",
+    "ico-signup": "Subscribe to ICO whitelist",
+    "add-hash-wallet": "Add # to your wallet"
 }

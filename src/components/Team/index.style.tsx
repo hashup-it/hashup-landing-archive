@@ -12,7 +12,7 @@ export const StyledPeopleContainer = styled.div`
     margin-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0px 20px;
+    gap: 30px 20px;
 
     ${mediaQuery.laptopM} {
         grid-template-columns: 1fr 1fr 1fr;

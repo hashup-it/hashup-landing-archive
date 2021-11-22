@@ -1,12 +1,16 @@
 import { ButtonOutlined, ColoredText } from "../../Shared"
-import { Hyperlink, SmallHeaderText, TabHeader } from "../../Shared/sections.styles"
+import { Hyperlink } from "../../Shared/sections.styles"
 import {
-    ButtonGroup,
+    StyledButtonsBox,
     GradientText,
     HeaderAirdropIcon,
     HeaderAirdropWrapper,
     HeaderGetAirdrop,
     StyledLandingHeaderText,
+    StyledParagraph,
+    StyledForm,
+    StyledNewsletterBox,
+    StyledTitle,
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
 
@@ -15,12 +19,12 @@ export const HeaderText = () => {
 
     return (
         <StyledLandingHeaderText>
-            <TabHeader>
+            <StyledTitle>
                 The <GradientText>HashUp</GradientText> Cartridge
                 <ColoredText>.</ColoredText>
-            </TabHeader>
-            <SmallHeaderText>{t("header-par")}</SmallHeaderText>
-            <ButtonGroup>
+            </StyledTitle>
+            <StyledParagraph>{t("header-par")}</StyledParagraph>
+            <StyledButtonsBox>
                 <ButtonOutlined href="/documents/Whitepaper.pdf">Whitepaper</ButtonOutlined>
                 <HeaderAirdropWrapper>
                     <HeaderAirdropIcon />
@@ -28,7 +32,17 @@ export const HeaderText = () => {
                         <Hyperlink href="/#airdrop">{t("header-airdrop")}</Hyperlink>
                     </HeaderGetAirdrop>
                 </HeaderAirdropWrapper>
-            </ButtonGroup>
+            </StyledButtonsBox>
+            <StyledNewsletterBox>
+                <span className="title">{t("ico-signup")}</span>
+                <StyledForm>
+                    <div
+                        className="ml-form-embed"
+                        data-account="3556595:b7a5n7e8w5"
+                        data-form="4955744:x2o8o0"
+                    />
+                </StyledForm>
+            </StyledNewsletterBox>
         </StyledLandingHeaderText>
     )
 }

@@ -1,16 +1,17 @@
 import { HeaderText } from "./HeaderText"
-import { CartridgeContainer, LandingHeaderContainer } from "./index.styles"
+import { StyledCartridgeContainer, StyledHeaderContainer, StyledBackgroundFlare } from "./index.styles"
 import { CameraDistance, CartridgeScene } from "../CartridgeScene"
 import HeaderBottom from "./HeaderBottom"
 
 const LandingHeader = () => (
-    <LandingHeaderContainer>
+    <StyledHeaderContainer>
         <HeaderText />
-        <CartridgeContainer>
+        <StyledCartridgeContainer>
             <CartridgeScene cameraDistance={CameraDistance.mainLanding} />
-        </CartridgeContainer>
+        </StyledCartridgeContainer>
+        <StyledBackgroundFlare />
         <HeaderBottom />
-    </LandingHeaderContainer>
+    </StyledHeaderContainer>
 )
 
 export default LandingHeader

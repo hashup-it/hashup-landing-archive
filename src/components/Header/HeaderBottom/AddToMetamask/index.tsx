@@ -1,5 +1,6 @@
 import { StyledTokenIcon, Tooltip } from "../index.styles"
 import { useTranslation } from "react-i18next"
+import { StyledMetamaskButton } from "./index.styles"
 
 export const AddToMetamask = () => {
     const { t } = useTranslation()
@@ -11,8 +12,7 @@ export const AddToMetamask = () => {
         const tokenImage = "https://i.ibb.co/QrPpyW3/icon-metamask.png"
 
         try {
-            // wasAdded is a boolean. Like any RPC method, an error may be thrown.
-            const wasAdded = await (window as any).ethereum.request({
+            const wasAdded: boolean = await (window as any).ethereum.request({
                 method: "wallet_watchAsset",
                 params: {
                     type: "ERC20", // Initially only supports ERC20, but eventually more!
@@ -36,8 +36,9 @@ export const AddToMetamask = () => {
     }
 
     return (
-        <StyledTokenIcon icon="/assets/icons/metamask.svg" onClick={() => handleAddToMetamask()}>
-            <Tooltip>{t("add#")}</Tooltip>
-        </StyledTokenIcon>
+        <StyledMetamaskButton onClick={handleAddToMetamask}>
+            <StyledTokenIcon icon="/assets/icons/metamask.svg" />
+            <span className="text">{t("add-hash-wallet")}</span>
+        </StyledMetamaskButton>
     )
 }

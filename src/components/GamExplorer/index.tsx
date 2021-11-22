@@ -1,6 +1,6 @@
 import { ColoredText } from "../Shared"
 import { LeftWrapper, SectionHeader, SectionLabel, SectionText } from "../Shared/sections.styles"
-import { GameExplorerContainer, StyledGamExplorer } from "./index.styles"
+import { StyledGameExplorerContainer, StyledGamExplorer } from "./index.styles"
 import { useTranslation } from "react-i18next"
 
 const GamExplorer = () => {
@@ -8,7 +8,7 @@ const GamExplorer = () => {
 
     return (
         <StyledGamExplorer>
-            <GameExplorerContainer>
+            <StyledGameExplorerContainer>
                 <LeftWrapper>
                     <SectionLabel>
                         <ColoredText>game</ColoredText>xplorer.io
@@ -20,7 +20,7 @@ const GamExplorer = () => {
                     <SectionText>{t("gamexplorer-text-gamers")}</SectionText>
                     <SectionText>{t("gamexplorer-text-dev")}</SectionText>
                 </LeftWrapper>
-            </GameExplorerContainer>
+            </StyledGameExplorerContainer>
         </StyledGamExplorer>
     )
 }

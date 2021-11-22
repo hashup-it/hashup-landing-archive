@@ -7,7 +7,7 @@ import { AddToMetamask } from "./AddToMetamask"
 import { CopyAdress } from "./CopyAdress"
 import {
     SocialIcon,
-    StyledBottomGroup,
+    StyledDataGroup,
     StyledHeaderBottom,
     StyledLine,
     StyledMouseIcon,
@@ -25,7 +25,6 @@ interface HeaderBottomProps {}
 
 const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
     const [gamersCount, setGamersCount] = useState(1337)
-
     const { t } = useTranslation()
 
     useEffect(() => {
@@ -46,7 +45,7 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
                 <StyledMouseIcon src="/assets/icons/mouse.svg" />
                 {t("scroll")}
             </StyledScrollDown>
-            <StyledBottomGroup>
+            <StyledDataGroup>
                 <StyledTokenInfo>
                     <StyledTokenInfoItem>
                         <BoldText>{t("all-gamers")}</BoldText>
@@ -76,7 +75,7 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
                         <SocialIcon src="/assets/icons/instagram.svg" />
                     </Hyperlink>
                 </StyledSocialMedia>
-            </StyledBottomGroup>
+            </StyledDataGroup>
         </StyledHeaderBottom>
     )
 }

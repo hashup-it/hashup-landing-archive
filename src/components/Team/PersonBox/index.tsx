@@ -1,17 +1,15 @@
 import { FC } from "react"
 import {
     Avatar,
-    Description,
+    StyledDescription,
     Function,
-    Name,
-    PersonContainer,
-    PersonDescription,
-    PersonDescriptionContent,
-    Separator,
-    SocialMedia,
+    StyledName,
+    StyledPersonContainer,
+    StyledContent,
+    StyledSocialMediaBox,
     StyledIconA,
 } from "./index.style"
-import { SocialMediaEnum, PersonInterface } from "./interfaces"
+import { SocialMediaEnum, PersonInterface, RoleEnum } from "./interfaces"
 import { ColoredText } from "../../Shared"
 import { useTranslation } from "react-i18next"
 import NextImage from "next/image"
@@ -30,7 +28,13 @@ const SocialMediaIcon: FC<SocialMediaIconProps> = ({ name, type, url }) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <NextImage width={20} height={20} quality={20} src={`/assets/icons/${icon}`} alt={`${title} - ${name}`} />
+            <NextImage
+                width={20}
+                height={20}
+                quality={20}
+                src={`/assets/icons/${icon}`}
+                alt={`${title} - ${name}`}
+            />
         </StyledIconA>
     )
 
@@ -45,24 +49,23 @@ const SocialMediaIcon: FC<SocialMediaIconProps> = ({ name, type, url }) => {
 }
 
 interface PersonProps extends PersonInterface {
-    readonly outline?: boolean
+    readonly role: RoleEnum
 }
 
-const PersonBox: FC<PersonProps> = ({ avatarFilename, localeKey, name, socialMedia, outline }) => {
+const PersonBox: FC<PersonProps> = ({ avatarFilename, localeKey, name, socialMedia, role }) => {
     const { t } = useTranslation()
 
     return (
-        <PersonContainer>
-            <PersonDescription outline={outline}>
-                <PersonDescriptionContent>
+        <StyledPersonContainer personRole={role}>
+            <div className="outline">
+                <StyledContent>
                     <Avatar src={`assets/team-avatars/${avatarFilename}`} />
                     <Function>
                         <ColoredText>{t(`${localeKey}-title`).toUpperCase()}</ColoredText>
                     </Function>
-                    <Name>{name}</Name>
-                    <Description>{t(localeKey)}</Description>
-                    <Separator />
-                    <SocialMedia>
+                    <StyledName>{name}</StyledName>
+                    <StyledDescription>{t(localeKey)}</StyledDescription>
+                    <StyledSocialMediaBox>
                         {socialMedia.map((item, index) => (
                             <SocialMediaIcon
                                 key={index}
@@ -71,10 +74,10 @@ const PersonBox: FC<PersonProps> = ({ avatarFilename, localeKey, name, socialMed
                                 type={item.type}
                             />
                         ))}
-                    </SocialMedia>
-                </PersonDescriptionContent>
-            </PersonDescription>
-        </PersonContainer>
+                    </StyledSocialMediaBox>
+                </StyledContent>
+            </div>
+        </StyledPersonContainer>
     )
 }
 

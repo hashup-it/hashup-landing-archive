@@ -15,9 +15,9 @@
     "about-us-distribution": "Kontroluj cenę gry i liczbę wydanych licencji. Zarabiaj pieniądze na  rynku wtórnym. Wszystko pod Twoją kontrolą.",
     "about-us-provision-header": "Bez prowizji",
     "about-us-provision": "Jesteś jedynym wydawcą. Nie pozwól nikomu zarabiać na twojej ciężkiej pracy. Zarobisz w ten sposób więcej pieniędzy, czy obniżysz cenę gry, aby dotrzeć do większej liczby odbiorców? Decyzja należy do Ciebie!",
-    "header-par": "DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez pośredników. 0% prowizji. Skończymy monopol na rynku oprogramowania…",
+    "header-par": "DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez pośredników. 0% prowizji.",
     "header-airdrop": "Odbierz swój Airdrop",
-    "scroll": "Przewiń w dół by dowiedzieć się więcej",
+    "scroll": "Przewiń, aby dowiedzieć się więcej",
     "all-gamers": "Wszystkich graczy: ",
     "contract": "Kontrakt: ",
     "add#": "Dodaj # do Metamask",
@@ -101,8 +101,7 @@
     "roadmap-header-look": "Zobacz, ",
     "roadmap-header-when": "kiedy zamierzamy to wszystko zrobić",
     "ourteam": "Nasz zespół",
-    "coreteam": "Główny zespół",
-    "team": "Zespół",
+    "team": "Poznaj nasz zespół",
     "szymon-jankowski": "Pasjonuje się ekonomią, informatyką i praktycznymi zastosowaniami blockchain.",
     "szymon-jankowski-title": "CEO",
     "filip-szydlowski": "Prawnik i sympatyk kryptowalut, obyty w pracy w kancelariach i startupach.",
@@ -225,5 +224,7 @@
     "tech-stack-header-1": "Stos",
     "tech-stack-header-2": "technologiczny",
     "marcin-wenus": "Założyciel Comparic.pl, Comparic24.tv oraz Fundacji Invest Cuffs. Prezes Studia Gameparic. Inwestor.",
-    "marcin-wenus-title": "Doradca"
+    "marcin-wenus-title": "Doradca",
+    "ico-signup": "Zapisz się na ICO whitelist",
+    "add-hash-wallet": "Dodaj # do portfela"
 }

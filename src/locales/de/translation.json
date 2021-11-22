@@ -15,7 +15,7 @@
     "about-us-distribution": "Kontrollieren Sie den Preis des Spiels und die Anzahl der ausgestellten Lizenzen. Verdienen Sie Geld auf dem Sekundärmarkt. Alles unter Ihrer Kontrolle.",
     "about-us-provision-header": "Keine Provision",
     "about-us-provision": "Sie sind der einzige Verleger. Lassen Sie nicht zu, dass jemand anderes mit Ihrer harten Arbeit Geld verdient. Werden Sie auf diese Weise mehr Geld verdienen oder werden Sie den Preis des Spiels senken, um ein größeres Publikum zu erreichen? Die Entscheidung liegt bei Ihnen!",
-    "header-par": "DEFInitiv game license media editing. P2P-Spieleaustausch zwischen Spielern. Kassette auf Blockchain. Ohne Mittelsmänner. 0% Provision. Beenden Sie das Monopol auf dem Software-Markt...",
+    "header-par": "DEFInitiv game license media editing. P2P-Spieleaustausch zwischen Spielern. Kassette auf Blockchain. Ohne Mittelsmänner. 0% Provision.",
     "header-airdrop": "Airdrop beantragen",
     "scroll": "Scrollen, um mehr zu erfahren",
     "all-gamers": "Alle gamer: ",
@@ -101,8 +101,7 @@
     "roadmap-header-look": "Hören Sie, ",
     "roadmap-header-when": "wann werden wir all dies tun.",
     "ourteam": "unser Team ",
-    "coreteam": "Kernteam",
-    "team": "Team",
+    "team": "Treffen Sie unser Team",
     "szymon-jankowski": "Seine Leidenschaft gilt der Wirtschaft, der Informatik und den praktischen Anwendungen der Blockchain.",
     "filip-szydlowski": "Jurist und Anhänger von Kryptowährungen, vertraut mit der Arbeit in Anwaltskanzleien und Start-ups.",
     "rafal-bielenia": "Er verfügt über einen umfangreichen Hintergrund in den Bereichen Software und Algorithmik und hat bei Google und Microsoft gearbeitet.",
@@ -222,5 +221,7 @@
     "krzysztof-piech-title": "Berater",
     "krzysztof-chmielewski-title": "Berater",
     "marcin-wenus": "Gründerin von Comparic.pl, Comparic24.tv und der Invest Cuffs Foundation. Präsident von Gameparic Studio. Investor.",
-    "marcin-wenus-title": "Berater"
+    "marcin-wenus-title": "Berater",
+    "ico-signup": "Abonnieren Sie die ICO-Whitelist",
+    "add-hash-wallet": "# in die Brieftasche stecken"
 }
