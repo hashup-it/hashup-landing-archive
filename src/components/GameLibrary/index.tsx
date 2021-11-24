@@ -43,6 +43,7 @@ const GameLibrary = () => {
                         <li>{t("gamelibrary-nick-brag")}</li>
                         <li>{t("gamelibrary-nick-swap")}</li>
                     </NicknameInstructionsList>
+                    <div id="airdrop" /> {/* Anchor only */}
                 </RightWrapper>
             </SectionContainer>
         </GameLibraryContainer>

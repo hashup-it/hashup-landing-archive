@@ -1,21 +1,52 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { mediaQuery } from "../MediaQuery"
 import { Swatches } from "__styles__/Swatches"
+import { NavBarStateEnum } from "./logic"
 
-export const StyledNavBar = styled.div`
+export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-
     padding: 25px;
-
     font-size: 16px;
     color: ${Swatches.text_main};
     font-weight: 600;
     align-items: flex-start;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.93);
+
+    ${props => {
+        switch (props.state) {
+            case NavBarStateEnum.stickyHidden:
+                return css`
+                    transform: translateY(-100px);
+                    transition: transform 250ms ease;
+                `
+            case NavBarStateEnum.stickyHiddenAfterTop:
+                return css`
+                    transform: translateY(-100px);
+                `
+            case NavBarStateEnum.top:
+                return css`
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, 0);
+                    transform: none;
+                    transition: background-color 250ms ease;
+                `
+            default:
+                return css`
+                    transition: transform 250ms ease;
+                `
+        }
+    }}
+
+    ${mediaQuery.laptop} {
+        position: fixed;
+        transform: none;
+        transition: none;
+        background-color: rgba(0, 0, 0, 0.93);
+    }
 `
 
 export const MenuWrapper = styled.div`
@@ -75,7 +106,8 @@ export const Icon = styled.img`
 export const HamburgerButton = styled.div<{ opened: boolean }>`
     width: 30px;
     height: 30px;
-    background-image: url(${props => props.opened ? "/assets/icons/x.svg" : "/assets/icons/hamburger.svg"});
+    background-image: url(${props =>
+        props.opened ? "/assets/icons/x.svg" : "/assets/icons/hamburger.svg"});
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 10px;

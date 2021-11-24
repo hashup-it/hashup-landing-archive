@@ -140,6 +140,19 @@ export const StyledBeforeConnectWrapper = styled.div`
     border: 1px dashed ${Swatches.primary_color};
     border-radius: 6px;
     cursor: pointer;
+    width: 500px;
+    box-sizing: border-box;
+
+    :after {
+        content: "";
+        width: 20px;
+        margin-left: 12px;
+        height: 15px;
+        display: inline-block;
+        background-image: url("/assets/icons/metamask.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 `
 
 export const StyledInputButtonFill = styled.div<{ isDisabled: boolean }>`
@@ -182,7 +195,6 @@ export const StyledAirdropInfo = styled.div`
 `
 
 export const StyledAirdropReferral = styled.div`
-    grid-area: referral;
     display: flex;
     justify-content: flex-start;
 `

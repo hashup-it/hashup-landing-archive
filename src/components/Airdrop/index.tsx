@@ -21,7 +21,7 @@ import {
     StyledMainHeader,
     StyledMainSmall,
     StyledReferralInfo,
-} from "./airdrop.styles"
+} from "./index.styles"
 import Web3 from "web3"
 import { AbiItem } from "web3-utils"
 import hashInfo from "./hash-info"
@@ -157,7 +157,7 @@ const Airdrop = () => {
     }, [account, userNickname])
 
     return (
-        <StyledAirdrop id="airdrop">
+        <StyledAirdrop>
             <StyledAirdropHeader>
                 Join the{" "}
                 <BoldText>
@@ -204,7 +204,7 @@ const Airdrop = () => {
             <StyledAirdropReferral>
                 {!account && (
                     <StyledBeforeConnectWrapper onClick={showWalletSelector}>
-                        {t("airdrop-connect")}
+                    {t("airdrop-connect")}
                     </StyledBeforeConnectWrapper>
                 )}
                 {account && (

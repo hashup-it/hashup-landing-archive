@@ -27,6 +27,10 @@ export const WalletHideWrapper = styled.div`
     ${mediaQuery.mobileM} {
         display: none;
     }
+
+    :hover {
+        opacity: 0.9;
+    }
 `
 
 export const WalletIcon = styled.img`

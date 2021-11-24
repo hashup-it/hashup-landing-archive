@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { SmallHeaderText, TabHeader } from "../Shared/sections.styles"
+import { SmallHeaderText } from "../Shared/sections.styles"
 import { mediaQuery } from "../MediaQuery"
 import { ColoredText } from "../Shared"
 
@@ -52,12 +52,13 @@ export const SmallCartridgeHeaderText = styled(SmallHeaderText)`
     color: #e0e0e0;
 `
 
-export const CartridgesTabHeader = styled(TabHeader)`
-    font-family: Sora;
+export const CartridgesTabHeader = styled.h1`
     font-style: normal;
-    font-weight: 600;
-    font-size: 59px;
+    font-weight: bold;
+    font-size: 70px;
     line-height: 115%;
+    padding: 0;
+    margin: 0;
 
     text-align: center;
 
@@ -66,6 +67,7 @@ export const CartridgesTabHeader = styled(TabHeader)`
     ${mediaQuery.laptop} {
         width: auto;
         padding-top: 112px;
+        font-size: 50px;
     }
 
     ${mediaQuery.mobileL} {
