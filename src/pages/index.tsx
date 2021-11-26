@@ -2,7 +2,7 @@ import AboutUs from "components/AboutUs"
 import GameCap from "components/GameCap"
 import LandingHeader from "components/Header"
 import Roadmap from "components/Roadmap"
-import OurPartners from "components/OurPartners"
+import Partners from "components/Partners"
 import InfoNotes from "components/InfoNotes"
 import GameContract from "components/GameContract"
 import CreateCartridges from "components/CreateCartridges"
@@ -27,8 +27,8 @@ const LandingPage = () => (
             <GameContract />
             <GamExplorer />
             <InfoNotes />
-            <OurPartners />
-            {/* <TechStack /> */}
+            <Partners />
+            <TechStack />
             <Team />
             <Roadmap />
         </>

@@ -13,6 +13,7 @@ import { SocialMediaEnum, PersonInterface, RoleEnum } from "./interfaces"
 import { ColoredText } from "../../Shared"
 import { useTranslation } from "react-i18next"
 import NextImage from "next/image"
+import { assetsUrl } from "config"
 
 interface SocialMediaIconProps {
     readonly type: SocialMediaEnum
@@ -28,13 +29,7 @@ const SocialMediaIcon: FC<SocialMediaIconProps> = ({ name, type, url }) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <NextImage
-                width={20}
-                height={20}
-                quality={20}
-                src={`/assets/icons/${icon}`}
-                alt={`${title} - ${name}`}
-            />
+            <img src={assetsUrl(`icons/${icon}`)} alt={`${title} - ${name}`} />
         </StyledIconA>
     )
 
@@ -43,6 +38,12 @@ const SocialMediaIcon: FC<SocialMediaIconProps> = ({ name, type, url }) => {
             return <Icon title="Wikipedia" icon="wikipedia.ico" />
         case SocialMediaEnum.linkedIn:
             return <Icon title="LinkedIn" icon="linkedin.svg" />
+        case SocialMediaEnum.twitter:
+            return <Icon title="Twitter" icon="twitter.svg" />
+        case SocialMediaEnum.github:
+            return <Icon title="Github" icon="github.svg" />
+        case SocialMediaEnum.dribble:
+            return <Icon title="Dribble" icon="dribble.svg" />
         default:
             return <></>
     }
@@ -59,12 +60,16 @@ const PersonBox: FC<PersonProps> = ({ avatarFilename, localeKey, name, socialMed
         <StyledPersonContainer personRole={role}>
             <div className="outline">
                 <StyledContent>
-                    <Avatar src={`assets/team-avatars/${avatarFilename}`} />
+                    <Avatar src={assetsUrl(`team-avatars/${avatarFilename}`)} />
                     <Function>
-                        <ColoredText>{t(`${localeKey}-title`).toUpperCase()}</ColoredText>
+                        <ColoredText>
+                            {t(`team-members.${localeKey}.role`).toUpperCase()}
+                        </ColoredText>
                     </Function>
                     <StyledName>{name}</StyledName>
-                    <StyledDescription>{t(localeKey)}</StyledDescription>
+                    <StyledDescription>
+                        {t(`team-members.${localeKey}.description`)}
+                    </StyledDescription>
                     <StyledSocialMediaBox>
                         {socialMedia.map((item, index) => (
                             <SocialMediaIcon

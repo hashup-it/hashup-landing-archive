@@ -83,7 +83,7 @@ export const StyledSocialMediaBox = styled(StyledSocialMedia)`
         width: 25px;
         height: 2px;
         position: absolute;
-        top: -30px;
+        top: -25px;
         background-color: ${Swatches.primary_color};
     }
 `
@@ -99,5 +99,9 @@ export const StyledIconA = styled.a`
     :hover {
         transition: opacity 100ms ease;
         opacity: 1;
+    }
+
+    img {
+        width: 16px;
     }
 `

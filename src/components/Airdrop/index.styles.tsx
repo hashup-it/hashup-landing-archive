@@ -1,8 +1,31 @@
 import styled from "styled-components"
 import { mediaQuery } from "../MediaQuery"
-import { Swatches } from "../../__styles__/Swatches"
+import { Swatches } from "__styles__/Swatches"
+import { assetsUrl } from "config"
 
-export const StyledAirdrop = styled.div`
+export const StyledAirdropSection = styled.div`
+    position: relative;
+`
+
+export const StyledBackgroundFlare = styled.div`
+    position: absolute;
+    pointer-events: none;
+    top: -130px;
+    left: 70px;
+    width: 600px;
+    height: 750px;
+    background-color: red;
+    opacity: 0.12;
+    border-radius: 600px;
+    filter: blur(120px);
+    transform: rotate(-25deg) translateZ(-100px);
+    z-index: 0;
+`
+
+export const StyledAirdropBox = styled.div`
+    position: relative;
+    z-index: 9;
+    background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
     border-top: 4px solid ${Swatches.primary_color};
     padding: 52px 6.25%;
     display: grid;
@@ -11,6 +34,9 @@ export const StyledAirdrop = styled.div`
     grid-template-areas:
         "header main"
         "info referral";
+    column-gap: 45px;
+    row-gap: 45px;
+    margin-bottom: 25vh;
 
     ${mediaQuery.laptop} {
         grid-template-areas:
@@ -26,15 +52,8 @@ export const StyledAirdrop = styled.div`
             "info info"
             "main main"
             "referral referral";
-    }
-
-    column-gap: 45px;
-    row-gap: 45px;
-
-    margin-bottom: 25vh;
-
-    ${mediaQuery.tablet} {
         row-gap: 20px;
+        padding: 52px 0;
     }
 `
 
@@ -101,7 +120,7 @@ export const StyledInputWrapper = styled.div`
 export const StyledInputIcon = styled.div`
     background-color: #ffffff;
     border-radius: 24px 0px 0px 4px;
-    background-image: url("/assets/icons/user.svg");
+    background-image: url(${() => assetsUrl("icons/user.svg")});
     background-position: center;
     background-repeat: no-repeat;
 `
@@ -149,16 +168,20 @@ export const StyledBeforeConnectWrapper = styled.div`
         margin-left: 12px;
         height: 15px;
         display: inline-block;
-        background-image: url("/assets/icons/metamask.svg");
+        background-image: url(${() => assetsUrl("icons/metamask.svg")});
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    ${mediaQuery.tablet} {
+        width: 300px;
     }
 `
 
 export const StyledInputButtonFill = styled.div<{ isDisabled: boolean }>`
     background-color: #010101;
     background-image: url(${props =>
-        props.isDisabled ? "/assets/icons/check.svg" : "/assets/icons/save.svg"});
+        assetsUrl(`icons/${props.isDisabled ? "check.svg" : "save.svg"}`)});
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -169,7 +192,7 @@ export const StyledInputButtonFill = styled.div<{ isDisabled: boolean }>`
     border-radius: inherit;
 
     :hover {
-        background-image: url("/assets/icons/check.svg");
+        background-image: url(${() => assetsUrl("icons/check.svg")});
     }
 `
 

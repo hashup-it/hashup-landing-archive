@@ -26,12 +26,12 @@ export const HeaderText = () => {
             <StyledParagraph>{t("header-par")}</StyledParagraph>
             <StyledButtonsBox>
                 <ButtonOutlined href="/documents/Whitepaper.pdf">Whitepaper</ButtonOutlined>
-                <HeaderAirdropWrapper>
-                    <HeaderAirdropIcon />
-                    <HeaderGetAirdrop>
-                        <Hyperlink href="/#airdrop">{t("header-airdrop")}</Hyperlink>
-                    </HeaderGetAirdrop>
-                </HeaderAirdropWrapper>
+                <Hyperlink href="/#airdrop">
+                    <HeaderAirdropWrapper>
+                        <HeaderAirdropIcon />
+                        <HeaderGetAirdrop>{t("header-airdrop")}</HeaderGetAirdrop>
+                    </HeaderAirdropWrapper>
+                </Hyperlink>
             </StyledButtonsBox>
             <StyledNewsletterBox>
                 <span className="title">{t("ico-signup")}</span>

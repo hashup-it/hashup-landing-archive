@@ -7,7 +7,6 @@ export const StyledSelectLanguage = styled.div`
     gap: 10px;
     justify-content: space-around;
     align-items: center;
-    //position: relative;
 
     :before {
         content: "";
@@ -26,7 +25,7 @@ export const StyledLanguageIcon = styled.img`
     display: flex;
 `
 
-export const StyledLanguage = styled.div`
+export const StyledSelectedLanguage = styled.div`
     cursor: pointer;
     text-transform: uppercase;
 
@@ -44,7 +43,6 @@ export const StyledLanguageList = styled.ul`
     list-style: none;
     position: absolute;
     margin-top: 10rem;
-    gap: 0.3em;
     margin-right: 1.25rem;
 `
 
@@ -55,15 +53,15 @@ export const StyledLanguageOption = styled.button`
     font-weight: bold;
     text-transform: uppercase;
     font-size: 16px;
-    background-color: black;
-    color: white;
-    padding: 0.2rem;
-    margin-top: 0.1rem;
-    border: solid 1.5px ${Swatches.primary_color};
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 1);
+    padding: 8px 5px;
+    border: none;
     width: 150%;
+    transition: color 100ms ease;
 
     :hover {
-        opacity: 0.9;
+        color: rgba(255, 255, 255, 0.8);
+        transition: color 100ms ease;
     }
 `

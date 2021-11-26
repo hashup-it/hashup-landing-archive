@@ -4,9 +4,10 @@ import {
     StyledLanguageList,
     StyledLanguageOption,
     StyledSelectLanguage,
-    StyledLanguage,
+    StyledSelectedLanguage,
 } from "./index.styles"
 import i18n from "i18n"
+import { assetsUrl } from "config"
 
 const Languages: string[] = ["pl", "en", "de"]
 
@@ -26,15 +27,19 @@ export const SelectLanguage = () => {
 
     return (
         <StyledSelectLanguage>
-            <StyledLanguageIcon src="/assets/icons/globe.svg" />
-            <StyledLanguage onClick={handleClick}>
+            <StyledLanguageIcon src={assetsUrl("icons/globe.svg")} />
+            <StyledSelectedLanguage onClick={handleClick}>
                 {language}
-                <StyledLanguageIcon src="/assets/icons/chevron-down.svg" />
-            </StyledLanguage>
+                <StyledLanguageIcon src={assetsUrl("icons/chevron-down.svg")} />
+            </StyledSelectedLanguage>
             {isClicked && (
                 <StyledLanguageList>
-                    {Languages.map((lng, id) => (
-                        <StyledLanguageOption value={lng} key={id} onClick={handleLanguageChange}>
+                    {Languages.map((lng, index) => (
+                        <StyledLanguageOption
+                            value={lng}
+                            key={index}
+                            onClick={handleLanguageChange}
+                        >
                             {lng}
                         </StyledLanguageOption>
                     ))}

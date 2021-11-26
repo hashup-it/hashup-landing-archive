@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react"
 import { BoldText, ColoredText } from "../Shared"
 import {
     StyledAfterConnectOptions,
-    StyledAirdrop,
+    StyledAirdropSection,
+    StyledAirdropBox,
     StyledAirdropHeader,
     StyledAirdropInfo,
     StyledAirdropMain,
@@ -21,6 +22,7 @@ import {
     StyledMainHeader,
     StyledMainSmall,
     StyledReferralInfo,
+    StyledBackgroundFlare,
 } from "./index.styles"
 import Web3 from "web3"
 import { AbiItem } from "web3-utils"
@@ -28,6 +30,7 @@ import hashInfo from "./hash-info"
 import { AirdropPopup } from "./AirdropPopup"
 import { useTranslation } from "react-i18next"
 import { useAccountContext } from "context/account"
+import { assetsUrl } from "config"
 
 const queryString = require("query-string")
 const BLOCKCHAIN_PROVIDER_URI = "https://bsc-dataseed.binance.org"
@@ -37,8 +40,7 @@ const Airdrop = () => {
     const { account, showWalletSelector } = useAccountContext()
     const { t } = useTranslation()
 
-    if (typeof window !== 'undefined') {
-        
+    if (typeof window !== "undefined") {
     }
 
     useEffect(() => {
@@ -157,71 +159,74 @@ const Airdrop = () => {
     }, [account, userNickname])
 
     return (
-        <StyledAirdrop>
-            <StyledAirdropHeader>
-                Join the{" "}
-                <BoldText>
-                    Big <ColoredText>Airdrop</ColoredText>
-                </BoldText>{" "}
-                from{" "}
-                <BoldText>
-                    <ColoredText>#</ColoredText>HashUp
-                </BoldText>
-            </StyledAirdropHeader>
-            <StyledAirdropMain>
-                <StyledMainHeader>{t("airdrop-reserve")}</StyledMainHeader>
-                <StyledMainSmall>{t("airdrop-nick")}</StyledMainSmall>
-                <StyledInputWrapper>
-                    <StyledInputIcon />
-                    <StyledInput
-                        placeholder={t("airdrop-nick-input")}
-                        onChange={handleNicknameInput}
-                        disabled={airdropDisabled}
-                        ref={inputElement}
-                    />
-                    <StyledInputButton
-                        isDisabled={airdropDisabled}
-                        onClick={() => handleLoginButton()}
-                    >
-                        <StyledInputButtonFill isDisabled={airdropDisabled} />
-                    </StyledInputButton>
-                </StyledInputWrapper>
-            </StyledAirdropMain>
-            <StyledAirdropInfo>
-                <StyledInfoItem>
-                    <StyledInfoLabel>{t("airdrop-#left")}</StyledInfoLabel>
-                    <StyledInfoValue>{tokenLeft}</StyledInfoValue>
-                </StyledInfoItem>
-                <StyledInfoItem>
-                    <StyledInfoLabel>{t("airdrop-players")}</StyledInfoLabel>
-                    <StyledInfoValue>{gamersCount}</StyledInfoValue>
-                </StyledInfoItem>
-                <StyledInfoItem>
-                    <StyledInfoLabel>{t("airdrop-price")}</StyledInfoLabel>
-                    <StyledInfoValue>0.02 $</StyledInfoValue>
-                </StyledInfoItem>
-            </StyledAirdropInfo>
-            <StyledAirdropReferral>
-                {!account && (
-                    <StyledBeforeConnectWrapper onClick={showWalletSelector}>
-                    {t("airdrop-connect")}
-                    </StyledBeforeConnectWrapper>
-                )}
-                {account && (
-                    <StyledAfterConnectOptions>
-                        <StyledCopyReferral onClick={handleCopyReferral}>
-                            Copy your referral
-                            <StyledCopyReferralIcon src="/assets/icons/copy.svg" />
-                        </StyledCopyReferral>
-                        <StyledReferralInfo>
-                            Send a referral to friend
-                            <br /> and get {hashForRef}# for his login!
-                        </StyledReferralInfo>
-                    </StyledAfterConnectOptions>
-                )}
-            </StyledAirdropReferral>
-            {popupOpened && <AirdropPopup setPopupOpened={setPopupOpened} />}
-        </StyledAirdrop>
+        <StyledAirdropSection>
+            <StyledBackgroundFlare />
+            <StyledAirdropBox>
+                <StyledAirdropHeader>
+                    Join the{" "}
+                    <BoldText>
+                        Big <ColoredText>Airdrop</ColoredText>
+                    </BoldText>{" "}
+                    from{" "}
+                    <BoldText>
+                        <ColoredText>#</ColoredText>HashUp
+                    </BoldText>
+                </StyledAirdropHeader>
+                <StyledAirdropMain>
+                    <StyledMainHeader>{t("airdrop-reserve")}</StyledMainHeader>
+                    <StyledMainSmall>{t("airdrop-nick")}</StyledMainSmall>
+                    <StyledInputWrapper>
+                        <StyledInputIcon />
+                        <StyledInput
+                            placeholder={t("airdrop-nick-input")}
+                            onChange={handleNicknameInput}
+                            disabled={airdropDisabled}
+                            ref={inputElement}
+                        />
+                        <StyledInputButton
+                            isDisabled={airdropDisabled}
+                            onClick={() => handleLoginButton()}
+                        >
+                            <StyledInputButtonFill isDisabled={airdropDisabled} />
+                        </StyledInputButton>
+                    </StyledInputWrapper>
+                </StyledAirdropMain>
+                <StyledAirdropInfo>
+                    <StyledInfoItem>
+                        <StyledInfoLabel>{t("airdrop-#left")}</StyledInfoLabel>
+                        <StyledInfoValue>{tokenLeft}</StyledInfoValue>
+                    </StyledInfoItem>
+                    <StyledInfoItem>
+                        <StyledInfoLabel>{t("airdrop-players")}</StyledInfoLabel>
+                        <StyledInfoValue>{gamersCount}</StyledInfoValue>
+                    </StyledInfoItem>
+                    <StyledInfoItem>
+                        <StyledInfoLabel>{t("airdrop-price")}</StyledInfoLabel>
+                        <StyledInfoValue>0.02 $</StyledInfoValue>
+                    </StyledInfoItem>
+                </StyledAirdropInfo>
+                <StyledAirdropReferral>
+                    {!account && (
+                        <StyledBeforeConnectWrapper onClick={showWalletSelector}>
+                            {t("airdrop-connect")}
+                        </StyledBeforeConnectWrapper>
+                    )}
+                    {account && (
+                        <StyledAfterConnectOptions>
+                            <StyledCopyReferral onClick={handleCopyReferral}>
+                                Copy your referral
+                                <StyledCopyReferralIcon src={assetsUrl("icons/copy.svg")} />
+                            </StyledCopyReferral>
+                            <StyledReferralInfo>
+                                Send a referral to friend
+                                <br /> and get {hashForRef}# for his login!
+                            </StyledReferralInfo>
+                        </StyledAfterConnectOptions>
+                    )}
+                </StyledAirdropReferral>
+                {popupOpened && <AirdropPopup setPopupOpened={setPopupOpened} />}
+            </StyledAirdropBox>
+        </StyledAirdropSection>
     )
 }
 

@@ -1,69 +1,73 @@
+import { assetsUrl } from "config"
+
 interface LogoInterface {
     readonly className: string
     readonly href: string
-    readonly logoFilename: string
+    readonly logoPath: string
     readonly logoAlt: string
 }
+
+const techLogoUrl = (filename: string): string => assetsUrl(`tech-stack/${filename}`)
 
 export const techStackData: LogoInterface[] = [
     {
         className: "nest-js",
         href: "https://nestjs.com/",
-        logoFilename: "nest-js.png",
+        logoPath: techLogoUrl("nest-js.png"),
         logoAlt: "NestJS",
     },
     {
-        className: 'amazon-aws',
+        className: "amazon-aws",
         href: "https://aws.amazon.com/",
-        logoFilename: 'aws.png',
-        logoAlt: 'Amazon AWS'
+        logoPath: techLogoUrl("aws.png"),
+        logoAlt: "Amazon AWS",
     },
     {
-        className: 'binance-smart-chain',
-        href: 'https://www.binance.org/en/smartChain',
-        logoFilename: 'binance-smart-chain.png',
-        logoAlt: 'Binance Smart Chain'
+        className: "binance-smart-chain",
+        href: "https://www.binance.org/en/smartChain",
+        logoPath: techLogoUrl("binance-smart-chain.png"),
+        logoAlt: "Binance Smart Chain",
     },
     {
-        className: 'ethereum',
+        className: "ethereum",
         href: "https://ethereum.org/en/",
-        logoFilename: 'ethereum.png',
-        logoAlt: 'Ethereum'
+        logoPath: techLogoUrl("ethereum.png"),
+        logoAlt: "Ethereum",
     },
     {
-        className: 'etherscan',
+        className: "etherscan",
         href: "https://etherscan.io/",
-        logoFilename: 'etherscan.webp',
-        logoAlt: 'Etherscan'
+        logoPath: techLogoUrl("etherscan.png"),
+        logoAlt: "Etherscan",
     },
     {
-        className: 'flutter',
+        className: "flutter",
         href: "https://flutter.dev/",
-        logoFilename: 'flutter.png',
-        logoAlt: 'Flutter'
+        logoPath: techLogoUrl("flutter.png"),
+        logoAlt: "Flutter",
     },
     {
-        className: 'next-js',
+        className: "next-js",
         href: "https://nextjs.org/",
-        logoFilename: 'next-js.png',
-        logoAlt: 'NextJS'
+        logoPath: techLogoUrl("next-js.png"),
+        logoAlt: "NextJS",
     },
     {
-        className: 'polygon',
+        className: "polygon",
         href: "https://polygon.technology/",
-        logoFilename: 'polygon.png',
-        logoAlt: 'Polygon'
+        logoPath: techLogoUrl("polygon.png"),
+        logoAlt: "Polygon",
     },
     {
-        className: 'metamask',
+        className: "metamask",
         href: "https://metamask.io/",
-        logoFilename: 'metamask.webp',
-        logoAlt: 'Metamask'
+        logoPath: techLogoUrl("metamask.png"),
+        logoAlt: "Metamask",
     },
     {
-        className: 'arweave',
+        className: "arweave",
         href: "https://www.arweave.org/",
-        logoFilename: 'arweave.png',
-        logoAlt: 'Arweave'
+        logoPath: techLogoUrl("arweave.png"),
+        logoAlt: "Arweave",
     },
 ]

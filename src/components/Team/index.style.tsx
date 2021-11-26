@@ -6,10 +6,17 @@ export const StyledHeader = styled(SectionHeader)`
     margin-bottom: 80px;
 `
 
-export const StyledSectionContainer = styled.div``
+export const StyledSectionContainer = styled.div`
+    margin-bottom: 140px;
+
+    ${mediaQuery.laptop} {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 80px;
+    }
+`
 
 export const StyledPeopleContainer = styled.div`
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px 20px;

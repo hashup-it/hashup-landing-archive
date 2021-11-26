@@ -102,11 +102,6 @@
     "roadmap-header-when": "wann werden wir all dies tun.",
     "ourteam": "unser Team ",
     "team": "Treffen Sie unser Team",
-    "szymon-jankowski": "Seine Leidenschaft gilt der Wirtschaft, der Informatik und den praktischen Anwendungen der Blockchain.",
-    "filip-szydlowski": "Jurist und Anhänger von Kryptowährungen, vertraut mit der Arbeit in Anwaltskanzleien und Start-ups.",
-    "rafal-bielenia": "Er verfügt über einen umfangreichen Hintergrund in den Bereichen Software und Algorithmik und hat bei Google und Microsoft gearbeitet.",
-    "cezary-dobrowolski": "Enthusiastin des wertschöpfenden Marketings. Liebt es, eine Beziehung zwischen Kunden und der Marke aufzubauen.",
-    "cezary-dobrowolski-title": "CMO",
     "footer-span": "Unser ",
     "footer-home": "Zur Hauptseite gehen",
     "footer-headquarters": "Unser Hauptsitz",
@@ -202,26 +197,80 @@
     "cartridges-tab-red-bullet-4": "Farbe: Rot - Achtung!",
     "advisors": "Berater",
     "advisor": "Berater",
-    "tomasz-smus": "Doktor der Rechts- und Wirtschaftswissenschaften. Er brachte Bitcoin in die polnische Welt.",
-    "krzysztof-piech": "Einer der ersten Bitcoin-Pioniere in der polnischen akademischen Welt.",
-    "krzysztof-chmielewski": "Dozent für Spieleforschung und -design an der Kazimierz Wielki Universität. Produktionsleiter bei Flybridge Studio.",
     "error-404-description": "Seite nicht gefunden.",
-    "damian-sarnecki": "",
-    "damian-sarnecki-title": "BlockChain Dev",
-    "robert-dziubek": "",
-    "robert-dziubek-title": "BlockChain Dev",
-    "jakub-jaworski": "",
-    "jakub-jaworski-title": "CMO Assistant",
-    "tomasz-fiema": "",
-    "tomasz-fiema-title": "Head of Design",
-    "szymon-jankowski-title": "CEO",
-    "filip-szydlowski-title": "CLO",
-    "rafal-bielenia-title": "Tech Lead",
-    "tomasz-smus-title": "Berater",
-    "krzysztof-piech-title": "Berater",
-    "krzysztof-chmielewski-title": "Berater",
-    "marcin-wenus": "Gründerin von Comparic.pl, Comparic24.tv und der Invest Cuffs Foundation. Präsident von Gameparic Studio. Investor.",
-    "marcin-wenus-title": "Berater",
     "ico-signup": "Abonnieren Sie die ICO-Whitelist",
-    "add-hash-wallet": "# in die Brieftasche stecken"
+    "add-hash-wallet": "# in die Brieftasche stecken",
+    "tech-stack-label": "Modernste Technologie",
+    "tech-stack-header-1": "Technologie",
+    "tech-stack-header-2": "Stack",
+    "team-members": {
+        "szymon-jankowski": {
+            "role": "CEO",
+            "description": "Seine Leidenschaft gilt der Wirtschaft, der Informatik und den praktischen Anwendungen der Blockchain."
+        },
+        "filip-szydlowski": {
+            "role": "CLO",
+            "description": "Jurist und Anhänger von Kryptowährungen, vertraut mit der Arbeit in Anwaltskanzleien und Start-ups."
+        },
+        "rafal-bielenia": {
+            "role": "Teach Lead",
+            "description": "Er verfügt über einen umfangreichen Hintergrund in den Bereichen Software und Algorithmik und hat bei Google und Microsoft gearbeitet."
+        },
+        "cezary-dobrowolski": {
+            "role": "CMO",
+            "description": "Enthusiastin des wertschöpfenden Marketings. Liebt es, eine Beziehung zwischen Kunden und der Marke aufzubauen."
+        },
+        "marcin-wenus": {
+            "role": "Berater",
+            "description": "Gründerin von Comparic.pl, Comparic24.tv und der Invest Cuffs Foundation. Präsident von Gameparic Studio. Investor."
+        },
+        "tomasz-smus": {
+            "role": "Berater",
+            "description": "Doktor der Rechts- und Wirtschaftswissenschaften. Er brachte Bitcoin in die polnische Welt."
+        },
+        "krzysztof-piech": {
+            "role": "Berater",
+            "description": "Einer der ersten Bitcoin-Pioniere in der polnischen akademischen Welt."
+        },
+        "krzysztof-chmielewski": {
+            "role": "Berater",
+            "description": "Dozent für Spieleforschung und -design an der Kazimierz Wielki Universität. Produktionsleiter bei Flybridge Studio."
+        },
+        "damian-sarnecki": {
+            "role": "Blockchain Dev",
+            "description": ""
+        },
+        "robert-dziubek": {
+            "role": "Blockchain Dev",
+            "description": ""
+        },
+        "jakub-jaworski": {
+            "role": "CMO Assistant",
+            "description": ""
+        },
+        "tomasz-fiema": {
+            "role": "Head of Design",
+            "description": ""
+        },
+        "szymon-fialkowski": {
+            "role": "CTO",
+            "description": ""
+        },
+        "jakub-stebel": {
+            "role": "Business analyst",
+            "description": ""
+        },
+        "patryk-rossa": {
+            "role": "Front-end dev",
+            "description": ""
+        },
+        "kamil-kaminski": {
+            "role": "3D Artist",
+            "description": ""
+        },
+        "pawel-laskarzewski": {
+            "role": "Berater",
+            "description": ""
+        }
+    }
 }

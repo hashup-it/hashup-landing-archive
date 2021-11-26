@@ -4,28 +4,26 @@ import { mediaQuery } from "../MediaQuery"
 
 export const StyledInfoNotes = styled.div`
     text-align: center;
+    margin-bottom: 180px;
+
+    ${mediaQuery.laptop} {
+        margin-bottom: 80px;;
+    }
 `
 
 export const StyledNotesArea = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 90px;
 
     ${mediaQuery.tablet} {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;
     }
 `
 
 export const StyledNote = styled.div`
     width: 220px;
-    flex-shrink: 0;
     text-align: left;
-    margin: 30px 20px;
+    margin: 0 auto;
 
     ${mediaQuery.laptopL} {
         margin: 20px 40px;
@@ -71,9 +69,9 @@ export const StyledNoteBubble = styled.div<{ icon: string; initRotateDelay: numb
         width: 98px;
         height: 98px;
         border-radius: 100px;
-        border-bottom: red 1px solid;
-        border-right: red 1px solid;
-        background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
+        border-bottom: ${Swatches.primary_color} 1px solid;
+        border-right: ${Swatches.primary_color} 1px solid;
+        background: linear-gradient(180deg, ${Swatches.background_main} 0%, rgba(1, 1, 1, 0) 100%);
         animation: ${rotateAnim} 5s linear infinite;
         animation-delay: -${props => props.initRotateDelay}s;
         z-index: 50;

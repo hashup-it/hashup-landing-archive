@@ -84,8 +84,8 @@
     "gamexplorer-text-dev": "Jako deweloper, będziesz miał możliwość wydania kolekcjonerskiej wersji swojej gry, która na pewno wpadnie w oko kolekcjonerów.",
     "infonotes-header-def": "DEFInitywna",
     "infonotes-header-form": " forma dystrybucji cyfrowej.",
-    "infonotes-note1-invest": "Inwestuj",
-    "infonotes-note1-games": " w gry",
+    "infonotes-note1-invest": "Zarabiaj",
+    "infonotes-note1-games": " na własnej grze",
     "infonotes-note1-content": "Zarabiaj pieniądze spekulując swoją własną grą.",
     "infonotes-note2-decentralised": "Zdecentralizowana",
     "infonotes-note2-distribution": " dystrybucja",
@@ -102,14 +102,6 @@
     "roadmap-header-when": "kiedy zamierzamy to wszystko zrobić",
     "ourteam": "Nasz zespół",
     "team": "Poznaj nasz zespół",
-    "szymon-jankowski": "Pasjonuje się ekonomią, informatyką i praktycznymi zastosowaniami blockchain.",
-    "szymon-jankowski-title": "CEO",
-    "filip-szydlowski": "Prawnik i sympatyk kryptowalut, obyty w pracy w kancelariach i startupach.",
-    "filip-szydlowski-title": "CLO",
-    "rafal-bielenia": "Ma bogate doświadczenie w dziedzinie software'u i algorytmiki, pracował w Google i Microsoft.",
-    "rafal-bielenia-title": "Tech Lead",
-    "cezary-dobrowolski": "Entuzjasta marketingu nadającego wartość. Uwielbia budować relację między klientami a marką.",
-    "cezary-dobrowolski-title": "CMO",
     "footer-span": "Nasze",
     "footer-home": "Idź do strony głównej",
     "footer-headquarters": "Nasza siedziba",
@@ -205,26 +197,80 @@
     "cartridges-tab-red-bullet-4": "Kolor: Czerwony - uważaj!",
     "advisors": "Doradcy",
     "advisor": "Doradca",
-    "tomasz-smus": "Doktor Prawa i Ekonomii. Przyniósł Bitcoin'a do polskiego świata",
-    "tomasz-smus-title": "Doradca",
-    "krzysztof-piech": "Jeden z pierwszych pionierów Bitcoin w polskim świecie akademickim.",
-    "krzysztof-piech-title": "Doradca",
-    "krzysztof-chmielewski": "Starszy wykładowca badania i projektowania gier Uniwersytetu Kazimierza Wielkiego. Kierownik produkcji we Flybridge Studio.",
-    "krzysztof-chmielewski-title": "Doradca",
-    "damian-sarnecki": "",
-    "damian-sarnecki-title": "BlockChain Dev",
-    "robert-dziubek": "",
-    "robert-dziubek-title": "BlockChain Dev",
-    "jakub-jaworski": "",
-    "jakub-jaworski-title": "CMO Assistant",
-    "tomasz-fiema": "",
-    "tomasz-fiema-title": "Head of Design",
     "error-404-description": "Nie znaleziono strony.",
     "tech-stack-label": "Najnowocześniejsze technologie",
     "tech-stack-header-1": "Stos",
     "tech-stack-header-2": "technologiczny",
-    "marcin-wenus": "Założyciel Comparic.pl, Comparic24.tv oraz Fundacji Invest Cuffs. Prezes Studia Gameparic. Inwestor.",
-    "marcin-wenus-title": "Doradca",
     "ico-signup": "Zapisz się na ICO whitelist",
-    "add-hash-wallet": "Dodaj # do portfela"
+    "add-hash-wallet": "Dodaj # do portfela",
+    "team-members": {
+        "szymon-jankowski": {
+            "role": "CEO",
+            "description": "Pasjonuje się ekonomią, informatyką i praktycznymi zastosowaniami blockchain."
+        },
+        "filip-szydlowski": {
+            "role": "CLO",
+            "description": "Prawnik i sympatyk kryptowalut, obyty w pracy w kancelariach i startupach."
+        },
+        "rafal-bielenia": {
+            "role": "Teach Lead",
+            "description": "Ma bogate doświadczenie w dziedzinie software'u i algorytmiki, pracował w Google i Microsoft."
+        },
+        "cezary-dobrowolski": {
+            "role": "CMO",
+            "description": "Entuzjasta marketingu nadającego wartość. Uwielbia budować relację między klientami a marką."
+        },
+        "marcin-wenus": {
+            "role": "Doradca",
+            "description": "Założyciel Comparic.pl, Comparic24.tv oraz Fundacji Invest Cuffs. Prezes Studia Gameparic. Inwestor."
+        },
+        "tomasz-smus": {
+            "role": "Doradca",
+            "description": "Doktor Prawa i Ekonomii. Przyniósł Bitcoin'a do polskiego świata"
+        },
+        "krzysztof-piech": {
+            "role": "Doradca",
+            "description": "Jeden z pierwszych pionierów Bitcoin w polskim świecie akademickim."
+        },
+        "krzysztof-chmielewski": {
+            "role": "Doradca",
+            "description": "Starszy wykładowca badania i projektowania gier Uniwersytetu Kazimierza Wielkiego. Kierownik produkcji we Flybridge Studio."
+        },
+        "damian-sarnecki": {
+            "role": "Blockchain Dev",
+            "description": ""
+        },
+        "robert-dziubek": {
+            "role": "Blockchain Dev",
+            "description": ""
+        },
+        "jakub-jaworski": {
+            "role": "CMO Assistant",
+            "description": ""
+        },
+        "tomasz-fiema": {
+            "role": "Head of Design",
+            "description": ""
+        },
+        "szymon-fialkowski": {
+            "role": "CTO",
+            "description": ""
+        },
+        "jakub-stebel": {
+            "role": "Analityk biznesowy",
+            "description": ""
+        },
+        "patryk-rossa": {
+            "role": "Front-end dev",
+            "description": ""
+        },
+        "kamil-kaminski": {
+            "role": "Grafik 3D",
+            "description": ""
+        },
+        "pawel-laskarzewski": {
+            "role": "Doradca",
+            "description": ""
+        }
+    }
 }

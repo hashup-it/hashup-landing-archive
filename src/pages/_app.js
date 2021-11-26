@@ -4,8 +4,8 @@ import { LandingContainer } from "App.styles"
 import Footer from "components/Footer"
 import NavBar from "components/NavBar"
 import { GlobalStyle } from "__styles__/GlobalStyle.style"
-import i18n from "i18n"
-
+import Script from "next/script"
+import { scriptsUrl } from "config"
 
 const App = ({ Component, pageProps }) => {
     return (
@@ -25,6 +25,7 @@ const App = ({ Component, pageProps }) => {
                     <Footer />
                 </LandingContainer>
             </AccountContextProvider>
+            <Script src={scriptsUrl("mailerlite-universal.js")} />
         </>
     )
 }

@@ -1,5 +1,5 @@
 import { ColoredText } from "../Shared"
-import { techStackData } from "./data"
+import { partnersData } from "./data"
 import { useTranslation } from "react-i18next"
 import LogosContainer from "components/LogosContainer"
 
@@ -8,12 +8,12 @@ const TechStack = () => {
 
     return (
         <LogosContainer
-            data={techStackData}
-            label={t("tech-stack-label")}
+            data={partnersData}
+            label={t("partners-label")}
             header={
                 <>
-                    {t("tech-stack-header-1")}
-                    <ColoredText> {t("tech-stack-header-2")}</ColoredText>
+                    {t("partners-header-our")}
+                    <ColoredText>{t("partners-header-partners")}</ColoredText>
                 </>
             }
         />

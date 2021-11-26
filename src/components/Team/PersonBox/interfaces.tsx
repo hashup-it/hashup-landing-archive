@@ -1,6 +1,9 @@
 export enum SocialMediaEnum {
     linkedIn,
-    wikipedia
+    wikipedia,
+    dribble,
+    twitter,
+    github
 }
 
 export enum RoleEnum {

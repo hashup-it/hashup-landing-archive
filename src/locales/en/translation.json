@@ -84,8 +84,8 @@
     "gamexplorer-text-dev": "As a developer, you will have the opportunity to release a collector's edition of your game that is sure to catch the eye of collectors.",
     "infonotes-header-def": "DEFInitive",
     "infonotes-header-form": " form of digital distribution.",
-    "infonotes-note1-invest": "Invest",
-    "infonotes-note1-games": " in games",
+    "infonotes-note1-invest": "Earn",
+    "infonotes-note1-games": " money on your own game",
     "infonotes-note1-content": "Make money speculating with your own game.",
     "infonotes-note2-decentralised": "Decentralised",
     "infonotes-note2-distribution": " distribution",
@@ -102,10 +102,6 @@
     "roadmap-header-when": "when are we going to do all this",
     "ourteam": "Our team",
     "team": "Meet our team",
-    "szymon-jankowski": "He is passionate about economics, computer science and practical applications of blockchain.",
-    "filip-szydlowski": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups.",
-    "rafal-bielenia": "He has an extensive background in software and algorithmics, having worked at Google and Microsoft.",
-    "cezary-dobrowolski": "Enthusiast of value giving marketing. Loves to build a relationship between customers and the brand.",
     "footer-span": "Our ",
     "footer-home": "Go to home page",
     "footer-headquarters": "Our headquarters",
@@ -201,26 +197,82 @@
     "cartridges-tab-red-bullet-4": "Color: Red - watch out!",
     "advisors": "Advisors",
     "advisor": "Advisor",
-    "tomasz-smus": "Doctor of Law and Economics. He brought Bitcoin to the Polish world.",
-    "krzysztof-piech": "One of the first Bitcoin pioneers in the Polish academic world.",
-    "krzysztof-chmielewski": "Senior lecturer in game research and design at Kazimierz Wielki University. Production manager at Flybridge Studio.",
     "error-404-description": "Page not found.",
-    "damian-sarnecki": "",
-    "damian-sarnecki-title": "BlockChain Dev",
-    "robert-dziubek": "",
-    "robert-dziubek-title": "BlockChain Dev",
-    "jakub-jaworski": "",
-    "jakub-jaworski-title": "CMO Assistant",
-    "tomasz-fiema": "",
-    "tomasz-fiema-title": "Head of Design",
-    "szymon-jankowski-title": "CEO",
-    "filip-szydlowski-title": "CLO",
-    "rafal-bielenia-title": "Tech Lead",
-    "tomasz-smus-title": "Advisor",
-    "krzysztof-piech-title": "Advisor",
-    "krzysztof-chmielewski-title": "Advisor",
     "marcin-wenus": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor.",
     "marcin-wenus-title": "Advisor",
     "ico-signup": "Subscribe to ICO whitelist",
-    "add-hash-wallet": "Add # to your wallet"
+    "add-hash-wallet": "Add # to your wallet",
+    "tech-stack-label": "Cutting-edge technologies",
+    "tech-stack-header-1": "Tech",
+    "tech-stack-header-2": "stack",
+    "team-members": {
+        "szymon-jankowski": {
+            "role": "CEO",
+            "description": "He is passionate about economics, computer science and practical applications of blockchain."
+        },
+        "filip-szydlowski": {
+            "role": "CLO",
+            "description": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups."
+        },
+        "rafal-bielenia": {
+            "role": "Teach Lead",
+            "description": "He has an extensive background in software and algorithmics, having worked at Google and Microsoft."
+        },
+        "cezary-dobrowolski": {
+            "role": "CMO",
+            "description": "Enthusiast of value giving marketing. Loves to build a relationship between customers and the brand."
+        },
+        "marcin-wenus": {
+            "role": "Advisor",
+            "description": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor."
+        },
+        "tomasz-smus": {
+            "role": "Advisor",
+            "description": "Doctor of Law and Economics. He brought Bitcoin to the Polish world."
+        },
+        "krzysztof-piech": {
+            "role": "Advisor",
+            "description": "One of the first Bitcoin pioneers in the Polish academic world."
+        },
+        "krzysztof-chmielewski": {
+            "role": "Advisor",
+            "description": "Senior lecturer in game research and design at Kazimierz Wielki University. Production manager at Flybridge Studio."
+        },
+        "damian-sarnecki": {
+            "role": "Blockchain Dev",
+            "description": ""
+        },
+        "robert-dziubek": {
+            "role": "Blockchain Dev",
+            "description": ""
+        },
+        "jakub-jaworski": {
+            "role": "CMO Assistant",
+            "description": ""
+        },
+        "tomasz-fiema": {
+            "role": "Head of Design",
+            "description": ""
+        },
+        "szymon-fialkowski": {
+            "role": "CTO",
+            "description": ""
+        },
+        "jakub-stebel": {
+            "role": "Business analyst",
+            "description": ""
+        },
+        "patryk-rossa": {
+            "role": "Front-end dev",
+            "description": ""
+        },
+        "kamil-kaminski": {
+            "role": "3D Artist",
+            "description": ""
+        },
+        "pawel-laskarzewski": {
+            "role": "Advisor",
+            "description": ""
+        }
+    }
 }

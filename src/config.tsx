@@ -7,7 +7,11 @@ export enum SocialMediaUrlsEnum {
 }
 
 export enum LanguagesEnum {
-    en = 'en',
-    pl = 'pl',
-    de = 'de'
+    en = "en",
+    pl = "pl",
+    de = "de",
 }
+
+export const assetsUrl = (path: string): string => `/assets/${path}`
+
+export const scriptsUrl = (path: string): string => `/scripts/${path}`
