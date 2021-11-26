@@ -15,7 +15,7 @@ export const StyledBackgroundFlare = styled.div`
     width: 600px;
     height: 750px;
     background-color: red;
-    opacity: 0.12;
+    opacity: 0.08;
     border-radius: 600px;
     filter: blur(120px);
     transform: rotate(-25deg) translateZ(-100px);
