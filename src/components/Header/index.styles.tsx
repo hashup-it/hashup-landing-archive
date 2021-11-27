@@ -34,7 +34,7 @@ export const StyledBackgroundFlare = styled.div`
     width: 700px;
     height: 900px;
     background-color: ${Swatches.primary_color};
-    opacity: 0.1;
+    opacity: 0.08;
     border-radius: 600px;
     filter: blur(130px);
     transform: rotate(30deg) translateZ(-100px);
