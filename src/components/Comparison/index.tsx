@@ -21,52 +21,52 @@ const Comparison: FunctionComponent<ComparisonProps> = () => {
 
     return (
         <StyledComparison>
-            <StyledComparisonText>{t("comp-traditional")}</StyledComparisonText>
-            <StyledComparisonText>{t("comp-digital")}</StyledComparisonText>
+            <StyledComparisonText>{t("comparison.traditional")}</StyledComparisonText>
+            <StyledComparisonText>{t("comparison.digital")}</StyledComparisonText>
             <StyledComparisonText>
-                {t("comp-distribution-with")}
+                {t("comparison.distribution-with")}
                 <ColoredText>#</ColoredText>
             </StyledComparisonText>
             <StyledWrapper>
-                <LineText color={Swatches.primary_color}>{t("comp-gains")}</LineText>
+                <LineText color={Swatches.primary_color}>{t("comparison.gains")}</LineText>
             </StyledWrapper>
 
             <ComparisonItem outlineColor={Swatches.primary_color}>
                 <ComparisonItemContent>
-                    <StyledPro>{t("comp-aftermarket")}</StyledPro>
-                    <StyledPro>{t("comp-rights")}</StyledPro>
+                    <StyledPro>{t("comparison.aftermarket")}</StyledPro>
+                    <StyledPro>{t("comparison.rights")}</StyledPro>
                 </ComparisonItemContent>
             </ComparisonItem>
             <ComparisonItem outlineColor={Swatches.primary_color}>
                 <ComparisonItemContent>
-                    <StyledPro>{t("comp-comfort")}</StyledPro>
-                    <StyledPro>{t("comp-carrier")}</StyledPro>
+                    <StyledPro>{t("comparison.comfort")}</StyledPro>
+                    <StyledPro>{t("comparison.carrier")}</StyledPro>
                 </ComparisonItemContent>
                 <StyledPlus>+</StyledPlus>
             </ComparisonItem>
             <ComparisonItem outlineColor={Swatches.primary_color}>
                 <ComparisonItemContent>
-                    <StyledPro>{t("comp-intermediaries")}</StyledPro>
-                    <StyledPro>{t("comp-freemarket")}</StyledPro>
+                    <StyledPro>{t("comparison.intermediaries")}</StyledPro>
+                    <StyledPro>{t("comparison.freemarket")}</StyledPro>
                     <StyledPlus>+</StyledPlus>
                 </ComparisonItemContent>
             </ComparisonItem>
             <StyledWrapper>
-                <LineText color={Swatches.text_secondary}>{t("comp-losses")}</LineText>
+                <LineText color={Swatches.text_secondary}>{t("comparison.losses")}</LineText>
             </StyledWrapper>
             <ComparisonItem outlineColor={Swatches.text_secondary}>
                 <ComparisonItemContent>
-                    <StyledCon>{t("comp-ncomfort")}</StyledCon>
-                    <StyledCon>{t("comp-ncarrier")}</StyledCon>
-                    <StyledCon>{t("comp-commisions")}</StyledCon>
+                    <StyledCon>{t("comparison.ncomfort")}</StyledCon>
+                    <StyledCon>{t("comparison.ncarrier")}</StyledCon>
+                    <StyledCon>{t("comparison.commisions")}</StyledCon>
                 </ComparisonItemContent>
             </ComparisonItem>
 
             <ComparisonItem outlineColor={Swatches.text_secondary}>
                 <ComparisonItemContent>
-                    <StyledCon>{t("comp-nrights")}</StyledCon>
-                    <StyledCon>{t("comp-naftermarket")}</StyledCon>
-                    <StyledCon>{t("comp-commisions")}</StyledCon>
+                    <StyledCon>{t("comparison.nrights")}</StyledCon>
+                    <StyledCon>{t("comparison.naftermarket")}</StyledCon>
+                    <StyledCon>{t("comparison.commisions")}</StyledCon>
                 </ComparisonItemContent>
             </ComparisonItem>
         </StyledComparison>

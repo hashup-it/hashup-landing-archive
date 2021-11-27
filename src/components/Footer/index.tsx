@@ -47,7 +47,7 @@ export const Footer = () => {
                 </Link>
                 <SocialMediaGroup>
                     <span>
-                        {t("footer-span")}
+                        {t("footer.span")}
                         <ColoredText>&nbsp;social media</ColoredText>
                     </span>
                     <a href={SocialMediaUrlsEnum.linkedIn}>
@@ -72,16 +72,16 @@ export const Footer = () => {
                     <ColoredText>Hash</ColoredText>Up.it
                 </span>
                 <AccentLongEmDash />
-                <Link href="/">{t("footer-home")}</Link>
+                <Link href="/">{t("footer.home")}</Link>
             </FooterQuickNavigation>
             <FooterTop>
                 <FooterTopLeft>
-                    <ListHeader>{t("footer-headquarters")}</ListHeader>
+                    <ListHeader>{t("footer.headquarters")}</ListHeader>
                     <ContactField>
                         <AddressLineEmphasized>HashUp P.S.A.</AddressLineEmphasized>
                         Al. Jana Pawła II 27
                         <br />
-                        00-867 {t("footer-warsaw")}
+                        00-867 {t("footer.warsaw")}
                         <br />
                         <br />
                         <MailLink href="mailto:hello@hashup.it">hello@hashup.it</MailLink>
@@ -109,15 +109,15 @@ export const Footer = () => {
                         {/*    <MenuItem>Support</MenuItem>*/}
                         {/*</MenuList>*/}
                         <MenuList>
-                            <MenuHeader>{t("footer-creators")}</MenuHeader>
+                            <MenuHeader>{t("footer.creators")}</MenuHeader>
                             <MenuItem>
                                 <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
-                                    {t("doc")}
+                                    {t("menu.doc")}
                                 </Hyperlink>
                             </MenuItem>
                             <MenuItem>
                                 <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/hashup-basics/cartridge">
-                                    {t("footer-cartridge")}
+                                    {t("footer.cartridge")}
                                 </Hyperlink>
                             </MenuItem>
                         </MenuList>

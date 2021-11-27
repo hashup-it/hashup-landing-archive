@@ -19,14 +19,14 @@ const GameContract = () => {
                     <SectionPhotoSimple src="/assets/section-photos/photo3.png"></SectionPhotoSimple>
                 </RightWrapper>
                 <LeftWrapper>
-                    <SectionLabel>{t("gamecontract-label")}</SectionLabel>
+                    <SectionLabel>{t("game-contract.label")}</SectionLabel>
                     <SectionHeader>
-                        {t("gamecontract-header-create")}
-                        <ColoredText>{t("gamecontract-header-cartridges")}</ColoredText>
-                        {t("gamecontract-header-publish")}
-                        <ColoredText>{t("gamecontract-header-brokerless")}</ColoredText>.
+                        {t("game-contract.header-create")}
+                        <ColoredText>{t("game-contract.header-cartridges")}</ColoredText>
+                        {t("game-contract.header-publish")}
+                        <ColoredText>{t("game-contract.header-brokerless")}</ColoredText>.
                     </SectionHeader>
-                    <SectionText>{t("gamecontract-text")}</SectionText>
+                    <SectionText>{t("game-contract.text")}</SectionText>
                 </LeftWrapper>
             </ReversedSectionContainer>
         </StyledGameContract>

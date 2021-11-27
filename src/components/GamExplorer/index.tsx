@@ -14,11 +14,11 @@ const GamExplorer = () => {
                         <ColoredText>game</ColoredText>xplorer.io
                     </SectionLabel>
                     <SectionHeader>
-                        {t("gamexplorer-header-meeting")}
-                        <ColoredText>{t("gamexplorer-header-collectors")}</ColoredText>
+                        {t("game-explorer.header-meeting")}
+                        <ColoredText>{t("game-explorer.header-collectors")}</ColoredText>
                     </SectionHeader>
-                    <SectionText>{t("gamexplorer-text-gamers")}</SectionText>
-                    <SectionText>{t("gamexplorer-text-dev")}</SectionText>
+                    <SectionText>{t("game-explorer.text-gamers")}</SectionText>
+                    <SectionText>{t("game-explorer.text-dev")}</SectionText>
                 </LeftWrapper>
             </StyledGameExplorerContainer>
         </StyledGamExplorer>

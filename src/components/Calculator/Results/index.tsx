@@ -40,7 +40,7 @@ const Results: FC<{ readonly soldItems: number; readonly price: number }> = ({
             <StyledResultSection>
                 <StyledResultsDescription>
                     <StyledResultsHeader>HashUp</StyledResultsHeader>
-                    <StyledResultsText>{t("calc-result")}</StyledResultsText>
+                    <StyledResultsText>{t("calc.result")}</StyledResultsText>
                 </StyledResultsDescription>
                 <ValueBox value={ourProfit} outlineColor={Swatches.primary_color} shadow />
             </StyledResultSection>
@@ -48,12 +48,12 @@ const Results: FC<{ readonly soldItems: number; readonly price: number }> = ({
             <StyledResultSection>
                 <ValueBox
                     value={othersProfit}
-                    label={t("calc-result-label-get")}
+                    label={t("calc.result-label-get")}
                     outlineColor={Swatches.text_secondary}
                 />
                 <ValueBox
                     value={ourProfit - othersProfit}
-                    label={t("calc-result-label-lose")}
+                    label={t("calc.result-label-lose")}
                     outlineColor={Swatches.text_secondary}
                 />
             </StyledResultSection>

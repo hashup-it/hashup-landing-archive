@@ -43,16 +43,16 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
         <StyledHeaderBottom>
             <StyledScrollDown>
                 <StyledMouseIcon src="/assets/icons/mouse.svg" />
-                {t("scroll")}
+                {t("header.scroll")}
             </StyledScrollDown>
             <StyledDataGroup>
                 <StyledTokenInfo>
                     <StyledTokenInfoItem>
-                        <BoldText>{t("all-gamers")}</BoldText>
+                        <BoldText>{t("header.all-gamers")}</BoldText>
                         <ColoredText>{gamersCount}</ColoredText>
                     </StyledTokenInfoItem>
                     <StyledTokenInfoItem>
-                        <BoldText>{t("contract")}</BoldText>
+                        <BoldText>{t("header.contract")}</BoldText>
                         <CopyAdress />
                         <AddToMetamask />
                     </StyledTokenInfoItem>

@@ -26,22 +26,22 @@ const GameLibrary = () => {
                         Game <ColoredText>Library</ColoredText>
                     </SectionLabel>
                     <SectionHeader>
-                        {t("gamelibrary-header-new")}
-                        <ColoredText>{t("gamelibrary-header-profile")}</ColoredText>
-                        {t("gamelibrary-header-on")}
+                        {t("game-library.header-new")}
+                        <ColoredText>{t("game-library.header-profile")}</ColoredText>
+                        {t("game-library.header-on")}
                         <ColoredText>Game</ColoredText>
-                        {t("gamelibrary-header-xplorer")}
-                        <ColoredText>{t("gamelibrary-header-collection")}</ColoredText>!
+                        {t("game-library.header-xplorer")}
+                        <ColoredText>{t("game-library.header-collection")}</ColoredText>!
                     </SectionHeader>
                 </LeftWrapper>
                 <RightWrapper>
                     <NicknameInstructionsHeading>
-                        {t("gamelibrary-nick-header")}
+                        {t("game-library.nick-header")}
                     </NicknameInstructionsHeading>
                     <NicknameInstructionsList>
-                        <li>{t("gamelibrary-nick-customize")}</li>
-                        <li>{t("gamelibrary-nick-brag")}</li>
-                        <li>{t("gamelibrary-nick-swap")}</li>
+                        <li>{t("game-library.nick-customize")}</li>
+                        <li>{t("game-library.nick-brag")}</li>
+                        <li>{t("game-library.nick-swap")}</li>
                     </NicknameInstructionsList>
                     <div id="airdrop" /> {/* Anchor only */}
                 </RightWrapper>

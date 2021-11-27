@@ -21,11 +21,11 @@ const GameCap = () => {
                         <ColoredText>GAME</ColoredText>Cap.io
                     </SectionLabel>
                     <SectionHeader>
-                        {t("gamecap-header-all")}
-                        <ColoredText>{t("gamecap-header-cartridges")}</ColoredText>
-                        {t("gamecap-header-place")}
+                        {t("game-cap.header-all")}
+                        <ColoredText>{t("game-cap.header-cartridges")}</ColoredText>
+                        {t("game-cap.header-place")}
                     </SectionHeader>
-                    <SectionText>{t("gamecap-text")}</SectionText>
+                    <SectionText>{t("game-cap.text")}</SectionText>
                 </LeftWrapper>
                 <RightWrapper>
                     <SectionPhotoSimple src="/assets/section-photos/photo4.png" />

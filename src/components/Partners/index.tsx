@@ -9,11 +9,11 @@ const TechStack = () => {
     return (
         <LogosContainer
             data={partnersData}
-            label={t("partners-label")}
+            label={t("partners.label")}
             header={
                 <>
-                    {t("partners-header-our")}
-                    <ColoredText>{t("partners-header-partners")}</ColoredText>
+                    {t("partners.header-our")}
+                    <ColoredText>{t("partners.header-partners")}</ColoredText>
                 </>
             }
         />

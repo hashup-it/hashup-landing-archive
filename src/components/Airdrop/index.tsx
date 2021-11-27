@@ -173,12 +173,12 @@ const Airdrop = () => {
                     </BoldText>
                 </StyledAirdropHeader>
                 <StyledAirdropMain>
-                    <StyledMainHeader>{t("airdrop-reserve")}</StyledMainHeader>
-                    <StyledMainSmall>{t("airdrop-nick")}</StyledMainSmall>
+                    <StyledMainHeader>{t("airdrop.reserve")}</StyledMainHeader>
+                    <StyledMainSmall>{t("airdrop.nick")}</StyledMainSmall>
                     <StyledInputWrapper>
                         <StyledInputIcon />
                         <StyledInput
-                            placeholder={t("airdrop-nick-input")}
+                            placeholder={t("airdrop.nick-input")}
                             onChange={handleNicknameInput}
                             disabled={airdropDisabled}
                             ref={inputElement}
@@ -193,22 +193,22 @@ const Airdrop = () => {
                 </StyledAirdropMain>
                 <StyledAirdropInfo>
                     <StyledInfoItem>
-                        <StyledInfoLabel>{t("airdrop-#left")}</StyledInfoLabel>
+                        <StyledInfoLabel>{t("airdrop.hash-left")}</StyledInfoLabel>
                         <StyledInfoValue>{tokenLeft}</StyledInfoValue>
                     </StyledInfoItem>
                     <StyledInfoItem>
-                        <StyledInfoLabel>{t("airdrop-players")}</StyledInfoLabel>
+                        <StyledInfoLabel>{t("airdrop.players")}</StyledInfoLabel>
                         <StyledInfoValue>{gamersCount}</StyledInfoValue>
                     </StyledInfoItem>
                     <StyledInfoItem>
-                        <StyledInfoLabel>{t("airdrop-price")}</StyledInfoLabel>
+                        <StyledInfoLabel>{t("airdrop.price")}</StyledInfoLabel>
                         <StyledInfoValue>0.02 $</StyledInfoValue>
                     </StyledInfoItem>
                 </StyledAirdropInfo>
                 <StyledAirdropReferral>
                     {!account && (
                         <StyledBeforeConnectWrapper onClick={showWalletSelector}>
-                            {t("airdrop-connect")}
+                            {t("airdrop.connect")}
                         </StyledBeforeConnectWrapper>
                     )}
                     {account && (

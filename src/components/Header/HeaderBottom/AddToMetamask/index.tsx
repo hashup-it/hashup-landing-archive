@@ -38,7 +38,7 @@ export const AddToMetamask = () => {
     return (
         <StyledMetamaskButton onClick={handleAddToMetamask}>
             <StyledTokenIcon icon="/assets/icons/metamask.svg" />
-            <span className="text">{t("add-hash-wallet")}</span>
+            <span className="text">{t("header.add-hash-wallet")}</span>
         </StyledMetamaskButton>
     )
 }

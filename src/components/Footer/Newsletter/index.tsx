@@ -13,8 +13,8 @@ export const Newsletter = () => {
 
     return (
         <NewsletterContainer>
-            <ListHeader>{t("newsletter-header")}</ListHeader>
-            <StyledFormDescription>{t("newsletter-description")}</StyledFormDescription>
+            <ListHeader>{t("newsletter.header")}</ListHeader>
+            <StyledFormDescription>{t("newsletter.description")}</StyledFormDescription>
             <FormContainer>
                 <StyledInputContainer>
                     <div

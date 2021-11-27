@@ -23,10 +23,10 @@ const CreateCartridges = () => {
                         <ColoredText>CARTRIDGE</ColoredText> on blockchain
                     </SectionLabel>
                     <SectionHeader>
-                        {t("crt-crtdg-header-go")}
-                        <ColoredText>{t("crt-crtdg-header-enslavement")}</ColoredText>.
+                        {t("create-cartridge.header-go")}
+                        <ColoredText>{t("create-cartridge.header-enslavement")}</ColoredText>.
                     </SectionHeader>
-                    <SectionText>{t("crt-crtdg-text")}</SectionText>
+                    <SectionText>{t("create-cartridge.text")}</SectionText>
                 </LeftWrapper>
                 <RightWrapper>
                     <SectionPhoto url="/assets/section-photos/photo1.png">

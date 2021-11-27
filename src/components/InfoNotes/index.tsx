@@ -38,40 +38,40 @@ const InfoNotes = () => {
                 <ColoredText>game</ColoredText>change.io
             </SectionLabel>
             <SectionHeader>
-                <ColoredText>{t("infonotes-header-def")}</ColoredText>
-                {t("infonotes-header-form")}
+                <ColoredText>{t("info-notes.header-def")}</ColoredText>
+                {t("info-notes.header-form")}
             </SectionHeader>
             <StyledNotesArea>
                 <Note
                     icon={"assets/icons/info-bubble-1.svg"}
                     label={
                         <>
-                            <ColoredText>{t("infonotes-note1-invest")}</ColoredText>
-                            {t("infonotes-note1-games")}
+                            <ColoredText>{t("info-notes.note1-invest")}</ColoredText>
+                            {t("info-notes.note1-games")}
                         </>
                     }
-                    content={t("infonotes-note1-content")}
+                    content={t("info-notes.note1-content")}
                 />
                 <Note
                     icon={"assets/icons/info-bubble-2.svg"}
                     label={
                         <>
-                            <ColoredText>{t("infonotes-note2-decentralised")}</ColoredText>
-                            {t("infonotes-note2-distribution")}
+                            <ColoredText>{t("info-notes.note2-decentralised")}</ColoredText>
+                            {t("info-notes.note2-distribution")}
                         </>
                     }
-                    content={t("infonotes-note2-content")}
+                    content={t("info-notes.note2-content")}
                 />
 
                 <Note
                     icon={"assets/icons/info-bubble-3.svg"}
                     label={
                         <>
-                            {t("infonotes-note3-become")}
-                            <ColoredText>{t("infonotes-note3-independent")}</ColoredText>
+                            {t("info-notes.note3-become")}
+                            <ColoredText>{t("info-notes.note3-independent")}</ColoredText>
                         </>
                     }
-                    content={t("infonotes-note3-content")}
+                    content={t("info-notes.note3-content")}
                 />
             </StyledNotesArea>
         </StyledInfoNotes>

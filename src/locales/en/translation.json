@@ -1,278 +1,340 @@
 {
-    "ecosystem": "Ecosystem",
-    "media": "Media",
-    "doc": "Docs",
-    "cartridges": "Cartridges",
-    "wallet-n": "Connect Wallet",
-    "wallet-c": "Connected",
-    "headquarters": "Our headquarters",
-    "warsaw": "Warsaw",
-    "free-yourself": "FREE YOURSELF",
-    "about-us-header-free": "Free ",
-    "about-us-header-market": "games and software market",
-    "about-us-section-text": "The free software market is a natural consequence of putting software in the hands of players. Trade games! The free market will discover the true price of the software.",
-    "about-us-distribution-header": "Distribution in your hands",
-    "about-us-distribution": "Control the price of the game and the number of licenses issued. Earn money in the secondary market. Everything under your control.",
-    "about-us-provision-header": "No commission",
-    "about-us-provision": "You are the only publisher. Don't let anyone else make money off your hard work. Will you make more money this way or will you lower the price of the game to reach a larger audience? The decision is yours!",
-    "header-par": "DEFInitial game license media editing. P2P game exchange between players. Cartridge on blockchain. Without intermediaries. 0% commission.",
-    "header-airdrop": "Claim your Airdrop",
-    "scroll": "Scroll to learn more",
-    "all-gamers": "All gamers: ",
-    "contract": "Contract: ",
-    "add#": "Add # to Metamask",
-    "airdrop-reserve": "Reserve your unique Nickname to receive the Airdrop",
-    "airdrop-nick": "Your nickname will represent your presence on the HashUp platform",
-    "airdrop-#left": "Left #:",
-    "airdrop-players": "Number of players:",
-    "airdrop-price": "Price #:",
-    "airdrop-connect": "Connect to Metamask to copy your reflink",
-    "airdrop-nick-input": "Enter your new HashUp nickname",
-    "airdroppopup-header": "Success!",
-    "airdroppopup-text-sent": "We just sent your first ",
-    "airdroppopup-text-address": " to your address.",
-    "airdroppopup-metamask": "Add Hash to the Metamask",
-    "calc-check-how": "Check how much ",
-    "calc-check-losing": "you are losing on commissions",
-    "calc-check-charged": " charged by popular publishing platforms",
-    "calc-price": "Price",
-    "calc-slider-label": "Copies sold:",
-    "calc-result": "With us, so much goes to you",
-    "calc-result-label-get": "That's what you get now",
-    "calc-result-label-lose": "You lose so much on commissions",
-    "comp-traditional": "Traditional distribution",
-    "comp-digital": "Digital distribution",
-    "comp-distribution-with": "Distribution with ",
-    "comp-gains": "Gains",
-    "comp-aftermarket": "Aftermarket",
-    "comp-rights": "Full product rights",
-    "comp-comfort": "Comfort",
-    "comp-carrier": "No carrier",
-    "comp-intermediaries": "No intermediaries",
-    "comp-freemarket": "Free market price",
-    "comp-losses": "Losses",
-    "comp-ncomfort": "Lack of comfort",
-    "comp-ncarrier": "Destructible carrier",
-    "comp-commisions": "High commissions",
-    "comp-nrights": "Lack of full rights",
-    "comp-naftermarket": "Lack of aftermarket",
-    "crt-crtdg-header-go": "Let's go back to the days before",
-    "crt-crtdg-header-enslavement": " software enslavement",
-    "crt-crtdg-text": "We long for the times when by purchasing a game license we actually became its owner. The current software distribution model means that the digital goods we purchase do not really belong to us. But all is not lost! HashUp with the help of a digital cartridge will allow you to enjoy full control again. Trade in your games! After all, they are yours!",
-    "gamecap-header-all": "All ",
-    "gamecap-header-cartridges": "cartridges ",
-    "gamecap-header-place": "in one place.",
-    "gamecap-text": "Buy software the easy way. On the platform, you will find all information about the game you want to buy. Track the price and supply. Follow specific projects. Stay up to date!",
-    "gamecontract-label": "FREE MARKET SOFTWARE",
-    "gamecontract-header-create": "Create blockchain ",
-    "gamecontract-header-cartridges": "cartridges ",
-    "gamecontract-header-publish": "and publish your games ",
-    "gamecontract-header-brokerless": "brokerless",
-    "gamecontract-text": "Create a smart contract using an intuitive editor. Determine the distribution method, aftermarket rules, and link the cartridge to the software.",
-    "gamelibrary-header-new": "Completely new ",
-    "gamelibrary-header-profile": "player profile ",
-    "gamelibrary-header-on": "on ",
-    "gamelibrary-header-xplorer": "Xplorer. Show off ",
-    "gamelibrary-header-collection": "your collection",
-    "gamelibrary-nick-header": "Reserve your unique account name.",
-    "gamelibrary-nick-customize": "customize your player profile as you wish",
-    "gamelibrary-nick-brag": "brag about your game catalog",
-    "gamelibrary-nick-swap": "swap games with friends",
-    "gamexplorer-header-meeting": "Meeting the needs of ",
-    "gamexplorer-header-collectors": "collectors",
-    "gamexplorer-text-gamers": "Gamers love to take care of their libraries. GameXplorer will allow them to showcase their collections in a better way than ever.",
-    "gamexplorer-text-dev": "As a developer, you will have the opportunity to release a collector's edition of your game that is sure to catch the eye of collectors.",
-    "infonotes-header-def": "DEFInitive",
-    "infonotes-header-form": " form of digital distribution.",
-    "infonotes-note1-invest": "Earn",
-    "infonotes-note1-games": " money on your own game",
-    "infonotes-note1-content": "Make money speculating with your own game.",
-    "infonotes-note2-decentralised": "Decentralised",
-    "infonotes-note2-distribution": " distribution",
-    "infonotes-note2-content": "Publish games through decentralized distribution.",
-    "infonotes-note3-become": "Become",
-    "infonotes-note3-independent": " independent",
-    "infonotes-note3-content": "Earn more through the free market.",
-    "partners-label": "Together we will change the world",
-    "partners-header-our": "Our ",
-    "partners-header-partners": " partners",
-    "partners-text": "Alone we can do so little; together we can do so much.",
-    "roadmap": "Roadmap",
-    "roadmap-header-look": "Look, ",
-    "roadmap-header-when": "when are we going to do all this",
-    "ourteam": "Our team",
-    "team": "Meet our team",
-    "footer-span": "Our ",
-    "footer-home": "Go to home page",
-    "footer-headquarters": "Our headquarters",
-    "footer-warsaw": "Warsaw",
-    "footer-creators": "For creators",
-    "footer-cartridge": "What is a cartridge?",
-    "newsletter-header": "Subscribe to our newsletter",
-    "newsletter-description": "Receive updates on our activities.",
-    "newsletter-placeholder": "Your e-mail address",
-    "newsletter-comingsoon": "Coming soon",
-    "walletselector-header1": "Access",
-    "walletselector-header2": " your Wallet",
-    "walletselector-text": "Choose how you wish to access your wallet.",
-    "walletselector-nowallet": "Don't have a wallet? ",
-    "walletselector-create": "Create one",
-    "roadmap-box-1-label": "Q3 2021",
-    "roadmap-box-1-bullet-1": "Whitepaper v1",
-    "roadmap-box-1-bullet-2": "Shaping the idea",
-    "roadmap-box-1-bullet-3": "150k pln seed funding",
-    "roadmap-box-1-bullet-4": "# Token Issue",
-    "roadmap-box-1-bullet-5": "Start of work on HashUp",
-    "roadmap-box-2-label": "Q4 2021",
-    "roadmap-box-2-bullet-1": "First partnership with Software Developers. (secret)",
-    "roadmap-box-2-bullet-2": "Creating HashUp nicknames",
-    "roadmap-box-2-bullet-3": "Publication of HashUp first airdrop",
-    "roadmap-box-2-bullet-4": "1-1.6mln pln private round",
-    "roadmap-box-2-bullet-5": "GameCap, GameXplorer, GameContract.io development",
-    "roadmap-box-2-bullet-6": "Development of green and red cartridge",
-    "roadmap-box-2-bullet-7": "HashUp employs 10 people",
-    "roadmap-box-3-label": "Q4 2021",
-    "roadmap-box-3-bullet-1": "$4m Initial Coin Offering",
-    "roadmap-box-3-bullet-2": "DEX Listing",
-    "roadmap-box-3-bullet-3": "Creation of blue, gold and grey cartridge",
-    "roadmap-box-3-bullet-4": "Finalise documentation work",
-    "roadmap-box-3-bullet-5": "Publication of GameContract, GameCap and GameXplorer",
-    "roadmap-box-3-bullet-6": "Listing of the first free market game on GameCap",
-    "roadmap-box-3-bullet-7": "Ability to release HTML5 games on HashUp cartridges",
-    "roadmap-box-4-label": "Q1 2022",
-    "roadmap-box-4-bullet-1": "Listing of first 10 games",
-    "roadmap-box-4-bullet-2": "Building a team to help publish games on Blockchain",
-    "roadmap-box-4-bullet-3": "Free and easy airdrops of first games",
-    "roadmap-box-4-bullet-4": "Release of HashWallet, enabling release of PC games",
-    "roadmap-box-4-bullet-5": "First partnerships with major game and software publishers.",
-    "roadmap-box-4-bullet-6": "First CEX listing",
-    "roadmap-box-5-label": "Q2-Q3 2022",
-    "roadmap-box-5-bullet-1": "Listing of first PC game",
-    "roadmap-box-5-bullet-2": "Organisation of the first HashUp event in Poland for Game Developers.",
-    "roadmap-box-5-bullet-3": "HashUp employs 35 people",
-    "roadmap-box-5-bullet-4": "Listing of first 100 games",
-    "roadmap-box-5-bullet-5": "Start of work on GameXchange and GamePaper",
-    "roadmap-box-5-bullet-6": "Publication of HashWallet on Android and IOS",
-    "roadmap-box-5-bullet-7": "Opening of FIAT payment gateway -> # and # -> FIAT",
-    "roadmap-box-6-label": "Q4 2022",
-    "roadmap-box-6-bullet-1": "First AAA PC game",
-    "roadmap-box-6-bullet-2": "$1 billion # turnover and cartridges on the platform",
-    "roadmap-box-6-bullet-3": "Publication of GameXchange, DEX with AMM and Order Book",
-    "roadmap-box-6-bullet-4": "Possibility of collections via cartridges",
-    "roadmap-box-7-label": "Q1 2023+",
-    "roadmap-box-7-bullet-1": "This is just the beginning…",
-    "cartridges-tab-header": "Buy the game. Play. Sell. Cartridge on blockchain. The HashUp Cartridge!",
-    "cartridges-tab-header-small-1": "We've created entirely new game carriers. On the blockchain. P2P.",
-    "cartridges-tab-header-small-2": "Your game will finally be yours. You need us because you can't lend your game to a friend.",
-    "cartridges-tab-cartridge-for": "Cartridge for",
-    "cartridges-tab-green-description": "The free market. And that's it!",
-    "cartridges-tab-green-target": "Everyone!",
-    "cartridges-tab-green-bullet-1": "Supply: 0 - 100mln",
-    "cartridges-tab-green-bullet-2": "Fee for exchange: 0%!",
-    "cartridges-tab-green-bullet-3": "Price: The free market 100%!",
-    "cartridges-tab-green-bullet-4": "Color: Green as a green candle!",
-    "cartridges-tab-gold-description": "Gold. I want it!",
-    "cartridges-tab-gold-target": "Collectors",
-    "cartridges-tab-gold-bullet-1": "Supply: 0 - 133 700. (maximally)",
-    "cartridges-tab-gold-bullet-2": "Fee for exchange: 0-10%",
-    "cartridges-tab-gold-bullet-3": "Price: Potentially infinite!",
-    "cartridges-tab-gold-bullet-4": "Color: Gold refers to uniqueness.",
-    "cartridges-tab-gray-description": "The HashUp Cartridge Standart. Own the game.",
-    "cartridges-tab-gray-target": "Gamers!",
-    "cartridges-tab-gray-bullet-1": "Supply: 0-100mln",
-    "cartridges-tab-gray-bullet-2": "Fee for exchange: 0-20%",
-    "cartridges-tab-gray-bullet-3": "Price: Defined by free market!",
-    "cartridges-tab-gray-bullet-4": "Color:Gray as neutral",
-    "cartridges-tab-blue-description": "Full control for the creator.",
-    "cartridges-tab-blue-target": "Creators who want to have everything under control.",
-    "cartridges-tab-blue-bullet-1": "Supply: 0 - Editable!",
-    "cartridges-tab-blue-bullet-2": "Fee for exchange: Editable!",
-    "cartridges-tab-blue-bullet-3": "Price: defined by free market, but Creators can controll exchange fee's.",
-    "cartridges-tab-blue-bullet-4": "Color: Blue as the sky!",
-    "cartridges-tab-red-description": "No exchange between players. What it is now. Only the Creator can send the game between addresses!",
-    "cartridges-tab-red-target": "Creators who are afraid of the free market!",
-    "cartridges-tab-red-bullet-1": "Supply: 0-100mln",
-    "cartridges-tab-red-bullet-2": "Free for exchange: No exchange!",
-    "cartridges-tab-red-bullet-3": "Price: Editable!",
-    "cartridges-tab-red-bullet-4": "Color: Red - watch out!",
-    "advisors": "Advisors",
-    "advisor": "Advisor",
-    "error-404-description": "Page not found.",
-    "marcin-wenus": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor.",
-    "marcin-wenus-title": "Advisor",
-    "ico-signup": "Subscribe to ICO whitelist",
-    "add-hash-wallet": "Add # to your wallet",
-    "tech-stack-label": "Cutting-edge technologies",
-    "tech-stack-header-1": "Tech",
-    "tech-stack-header-2": "stack",
-    "team-members": {
-        "szymon-jankowski": {
-            "role": "CEO",
-            "description": "He is passionate about economics, computer science and practical applications of blockchain."
-        },
-        "filip-szydlowski": {
-            "role": "CLO",
-            "description": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups."
-        },
-        "rafal-bielenia": {
-            "role": "Teach Lead",
-            "description": "He has an extensive background in software and algorithmics, having worked at Google and Microsoft."
-        },
-        "cezary-dobrowolski": {
-            "role": "CMO",
-            "description": "Enthusiast of value giving marketing. Loves to build a relationship between customers and the brand."
-        },
-        "marcin-wenus": {
-            "role": "Advisor",
-            "description": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor."
-        },
-        "tomasz-smus": {
-            "role": "Advisor",
-            "description": "Doctor of Law and Economics. He brought Bitcoin to the Polish world."
-        },
-        "krzysztof-piech": {
-            "role": "Advisor",
-            "description": "One of the first Bitcoin pioneers in the Polish academic world."
-        },
-        "krzysztof-chmielewski": {
-            "role": "Advisor",
-            "description": "Senior lecturer in game research and design at Kazimierz Wielki University. Production manager at Flybridge Studio."
-        },
-        "damian-sarnecki": {
-            "role": "Blockchain Dev",
-            "description": ""
-        },
-        "robert-dziubek": {
-            "role": "Blockchain Dev",
-            "description": ""
-        },
-        "jakub-jaworski": {
-            "role": "CMO Assistant",
-            "description": ""
-        },
-        "tomasz-fiema": {
-            "role": "Head of Design",
-            "description": ""
-        },
-        "szymon-fialkowski": {
-            "role": "CTO",
-            "description": ""
-        },
-        "jakub-stebel": {
-            "role": "Business analyst",
-            "description": ""
-        },
-        "patryk-rossa": {
-            "role": "Front-end dev",
-            "description": ""
-        },
-        "kamil-kaminski": {
-            "role": "3D Artist",
-            "description": ""
-        },
-        "pawel-laskarzewski": {
-            "role": "Advisor",
-            "description": ""
+    "menu": {
+        "ecosystem": "Ecosystem",
+        "media": "Media",
+        "doc": "Docs",
+        "cartridges": "Cartridges",
+        "wallet-not-connected": "Connect Wallet",
+        "wallet-connected": "Connected"
+    },
+    "about-us": {
+        "free-yourself": "FREE YOURSELF",
+        "header-free": "Free ",
+        "header-market": "games and software market",
+        "section-text": "The free software market is a natural consequence of putting software in the hands of players. Trade games! The free market will discover the true price of the software.",
+        "distribution-header": "Distribution in your hands",
+        "distribution": "Control the price of the game and the number of licenses issued. Earn money in the secondary market. Everything under your control.",
+        "provision-header": "No commission",
+        "provision": "You are the only publisher. Don't let anyone else make money off your hard work. Will you make more money this way or will you lower the price of the game to reach a larger audience? The decision is yours!"
+    },
+    "header": {
+        "description": "DEFInitial game license media editing. P2P game exchange between players. Cartridge on blockchain. Without intermediaries. 0% commission.",
+        "airdrop": "Claim your Airdrop",
+        "scroll": "Scroll to learn more",
+        "ico-signup": "Subscribe to ICO whitelist",
+        "add-hash-wallet": "Add # to your wallet",
+        "all-gamers": "All gamers: ",
+        "contract": "Contract: ",
+        "add#": "Add # to Metamask"
+    },
+    "airdrop": {
+        "reserve": "Reserve your unique Nickname to receive the Airdrop",
+        "nick": "Your nickname will represent your presence on the HashUp platform",
+        "hash-left": "Left #:",
+        "players": "Number of players:",
+        "price": "Price #:",
+        "connect": "Connect to Metamask to copy your reflink",
+        "nick-input": "Enter your new HashUp nickname",
+        "popup": {
+            "header": "Success!",
+            "text-sent": "We just sent your first ",
+            "text-address": " to your address.",
+            "metamask": "Add Hash to the Metamask"
         }
+    },
+    "calc": {
+        "check-how": "Check how much ",
+        "check-losing": "you are losing on commissions",
+        "check-charged": " charged by popular publishing platforms",
+        "price": "Price",
+        "slider-label": "Copies sold:",
+        "result": "With us, so much goes to you",
+        "result-label-get": "That's what you get now",
+        "result-label-lose": "You lose so much on commissions"
+    },
+    "comparison": {
+        "traditional": "Traditional distribution",
+        "digital": "Digital distribution",
+        "distribution-with": "Distribution with ",
+        "gains": "Gains",
+        "aftermarket": "Aftermarket",
+        "rights": "Full product rights",
+        "comfort": "Comfort",
+        "carrier": "No carrier",
+        "intermediaries": "No intermediaries",
+        "freemarket": "Free market price",
+        "losses": "Losses",
+        "ncomfort": "Lack of comfort",
+        "ncarrier": "Destructible carrier",
+        "commisions": "High commissions",
+        "nrights": "Lack of full rights",
+        "naftermarket": "Lack of aftermarket"
+    },
+    "create-cartridge": {
+        "header-go": "Let's go back to the days before",
+        "header-enslavement": " software enslavement",
+        "text": "We long for the times when by purchasing a game license we actually became its owner. The current software distribution model means that the digital goods we purchase do not really belong to us. But all is not lost! HashUp with the help of a digital cartridge will allow you to enjoy full control again. Trade in your games! After all, they are yours!"
+    },
+    "game-cap": {
+        "header-all": "All ",
+        "header-cartridges": "cartridges ",
+        "header-place": "in one place.",
+        "text": "Buy software the easy way. On the platform, you will find all information about the game you want to buy. Track the price and supply. Follow specific projects. Stay up to date!"
+    },
+    "game-contract": {
+        "label": "FREE MARKET SOFTWARE",
+        "header-create": "Create blockchain ",
+        "header-cartridges": "cartridges ",
+        "header-publish": "and publish your games ",
+        "header-brokerless": "brokerless",
+        "text": "Create a smart contract using an intuitive editor. Determine the distribution method, aftermarket rules, and link the cartridge to the software."
+    },
+    "game-library": {
+        "header-new": "Completely new ",
+        "header-profile": "player profile ",
+        "header-on": "on ",
+        "header-xplorer": "Xplorer. Show off ",
+        "header-collection": "your collection",
+        "nick-header": "Reserve your unique account name.",
+        "nick-customize": "customize your player profile as you wish",
+        "nick-brag": "brag about your game catalog",
+        "nick-swap": "swap games with friends"
+    },
+    "game-explorer": {
+        "header-meeting": "Meeting the needs of ",
+        "header-collectors": "collectors",
+        "text-gamers": "Gamers love to take care of their libraries. GameXplorer will allow them to showcase their collections in a better way than ever.",
+        "text-dev": "As a developer, you will have the opportunity to release a collector's edition of your game that is sure to catch the eye of collectors."
+    },
+    "info-notes": {
+        "header-def": "DEFInitive",
+        "header-form": " form of digital distribution.",
+        "note1-invest": "Earn",
+        "note1-games": " money on your own game",
+        "note1-content": "Make money speculating with your own game.",
+        "note2-decentralised": "Decentralised",
+        "note2-distribution": " distribution",
+        "note2-content": "Publish games through decentralized distribution.",
+        "note3-become": "Become",
+        "note3-independent": " independent",
+        "note3-content": "Earn more through the free market."
+    },
+    "partners": {
+        "label": "Together we will change the world",
+        "header-our": "Our ",
+        "header-partners": " partners",
+        "text": "Alone we can do so little; together we can do so much."
+    },
+    "roadmap": {
+        "roadmap": "Roadmap",
+        "header-look": "Look, ",
+        "header-when": "when are we going to do all this",
+        "box-1": {
+            "label": "Q3 2021",
+            "bullet-1": "Whitepaper v1",
+            "bullet-2": "Shaping the idea",
+            "bullet-3": "150k pln seed funding",
+            "bullet-4": "# Token Issue",
+            "bullet-5": "Start of work on HashUp"
+        },
+        "box-2": {
+            "label": "Q4 2021",
+            "bullet-1": "First partnership with Software Developers. (secret)",
+            "bullet-2": "Creating HashUp nicknames",
+            "bullet-3": "Publication of HashUp first airdrop",
+            "bullet-4": "1-1.6mln pln private round",
+            "bullet-5": "GameCap, GameXplorer, GameContract.io development",
+            "bullet-6": "Development of green and red cartridge",
+            "bullet-7": "HashUp employs 10 people"
+        },
+        "box-3": {
+            "label": "Q4 2021",
+            "bullet-1": "$4m Initial Coin Offering",
+            "bullet-2": "DEX Listing",
+            "bullet-3": "Creation of blue, gold and grey cartridge",
+            "bullet-4": "Finalise documentation work",
+            "bullet-5": "Publication of GameContract, GameCap and GameXplorer",
+            "bullet-6": "Listing of the first free market game on GameCap",
+            "bullet-7": "Ability to release HTML5 games on HashUp cartridges"
+        },
+        "box-4": {
+            "label": "Q1 2022",
+            "bullet-1": "Listing of first 10 games",
+            "bullet-2": "Building a team to help publish games on Blockchain",
+            "bullet-3": "Free and easy airdrops of first games",
+            "bullet-4": "Release of HashWallet, enabling release of PC games",
+            "bullet-5": "First partnerships with major game and software publishers.",
+            "bullet-6": "First CEX listing"
+        },
+        "box-5": {
+            "label": "Q2-Q3 2022",
+            "bullet-1": "Listing of first PC game",
+            "bullet-2": "Organisation of the first HashUp event in Poland for Game Developers.",
+            "bullet-3": "HashUp employs 35 people",
+            "bullet-4": "Listing of first 100 games",
+            "bullet-5": "Start of work on GameXchange and GamePaper",
+            "bullet-6": "Publication of HashWallet on Android and IOS",
+            "bullet-7": "Opening of FIAT payment gateway -> # and # -> FIAT"
+        },
+        "box-6": {
+            "label": "Q4 2022",
+            "bullet-1": "First AAA PC game",
+            "bullet-2": "$1 billion # turnover and cartridges on the platform",
+            "bullet-3": "Publication of GameXchange, DEX with AMM and Order Book",
+            "bullet-4": "Possibility of collections via cartridges"
+        },
+        "box-7": {
+            "box-7-label": "Q1 2023+",
+            "box-7-bullet-1": "This is just the beginning…"
+        }
+    },
+    "team": {
+        "ourteam": "Our team",
+        "team": "Meet our team",
+        "team-members": {
+            "szymon-jankowski": {
+                "role": "CEO",
+                "description": "He believes that technology will enable the rise of crypto-anarchism in the future."
+            },
+            "filip-szydlowski": {
+                "role": "CLO",
+                "description": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups."
+            },
+            "rafal-bielenia": {
+                "role": "Teach Lead",
+                "description": "He has an extensive background in software and algorithmics, having worked at Google and Microsoft."
+            },
+            "cezary-dobrowolski": {
+                "role": "CMO",
+                "description": "Marketing should develop the product."
+            },
+            "marcin-wenus": {
+                "role": "Advisor",
+                "description": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor."
+            },
+            "tomasz-smus": {
+                "role": "Advisor",
+                "description": "Doctor of Law and Economics. He brought Bitcoin to the Polish world."
+            },
+            "krzysztof-piech": {
+                "role": "Advisor",
+                "description": "One of the first Bitcoin pioneers in the Polish academic world."
+            },
+            "krzysztof-chmielewski": {
+                "role": "Advisor",
+                "description": "Senior lecturer in game research and design at Kazimierz Wielki University. Production manager at Flybridge Studio."
+            },
+            "damian-sarnecki": {
+                "role": "Blockchain Dev",
+                "description": "A programmer fascinated by the world of blockchain from the technological side."
+            },
+            "robert-dziubek": {
+                "role": "Blockchain Dev",
+                "description": "Formulates solutions that integrate blockchain technology applications."
+            },
+            "jakub-jaworski": {
+                "role": "CMO Assistant",
+                "description": "I've blown so much on crypto that I'm working so I can spend the night in the office."
+            },
+            "tomasz-fiema": {
+                "role": "Head of Design",
+                "description": "Designer minimalist. Hobbistically interested in gamedev."
+            },
+            "szymon-fialkowski": {
+                "role": "CTO",
+                "description": "For years developing scalable applications on AWS, focused on migration to Web 3.0."
+            },
+            "jakub-stebel": {
+                "role": "Business analyst",
+                "description": "He is passionate about investing and economic analysis"
+            },
+            "patryk-rossa": {
+                "role": "Front-end dev",
+                "description": "Computer science student, passionate about new technologies."
+            },
+            "kamil-kaminski": {
+                "role": "3D Artist",
+                "description": "A budding 3D generalist with a passion for cryptocurrencies."
+            },
+            "pawel-laskarzewski": {
+                "role": "Advisor",
+                "description": ""
+            }
+        },
+        "advisors": "Advisors",
+        "advisor": "Advisor"
+    },
+    "footer": {
+        "span": "Our ",
+        "home": "Go to home page",
+        "headquarters": "Our headquarters",
+        "warsaw": "Warsaw",
+        "creators": "For creators",
+        "cartridge": "What is a cartridge?"
+    },
+    "newsletter": {
+        "header": "Subscribe to our newsletter",
+        "description": "Receive updates on our activities.",
+        "placeholder": "Your e-mail address",
+        "coming-soon": "Coming soon!"
+    },
+    "wallet-selector": {
+        "header-1": "Access",
+        "header-2": " your Wallet",
+        "text": "Choose how you wish to access your wallet.",
+        "nowallet": "Don't have a wallet? ",
+        "create": "Create one"
+    },
+    "cartridges-tab": {
+        "header": "Buy the game. Play. Sell. Cartridge on blockchain. The HashUp Cartridge!",
+        "header-small-1": "We've created entirely new game carriers. On the blockchain. P2P.",
+        "header-small-2": "Your game will finally be yours. You need us because you can't lend your game to a friend.",
+        "cartridge-for": "Cartridge for",
+        "description": "The free market. And that's it!",
+        "green": {
+            "target": "Everyone!",
+            "bullet-1": "Supply: 0 - 100mln",
+            "bullet-2": "Fee for exchange: 0%!",
+            "bullet-3": "Price: The free market 100%!",
+            "bullet-4": "Color: Green as a green candle!"
+        },
+        "gold": {
+            "description": "Gold. I want it!",
+            "target": "Collectors",
+            "bullet-1": "Supply: 0 - 133 700. (maximally)",
+            "bullet-2": "Fee for exchange: 0-10%",
+            "bullet-3": "Price: Potentially infinite!",
+            "bullet-4": "Color: Gold refers to uniqueness."
+        },
+        "gray": {
+            "description": "The HashUp Cartridge Standart. Own the game.",
+            "target": "Gamers!",
+            "bullet-1": "Supply: 0-100mln",
+            "bullet-2": "Fee for exchange: 0-20%",
+            "bullet-3": "Price: Defined by free market!",
+            "bullet-4": "Color:Gray as neutral"
+        },
+        "blue": {
+            "description": "Full control for the creator.",
+            "target": "Creators who want to have everything under control.",
+            "bullet-1": "Supply: 0 - Editable!",
+            "bullet-2": "Fee for exchange: Editable!",
+            "bullet-3": "Price: defined by free market, but Creators can controll exchange fee's.",
+            "bullet-4": "Color: Blue as the sky!"
+        },
+        "red": {
+            "red-description": "No exchange between players. What it is now. Only the Creator can send the game between addresses!",
+            "red-target": "Creators who are afraid of the free market!",
+            "red-bullet-1": "Supply: 0-100mln",
+            "red-bullet-2": "Free for exchange: No exchange!",
+            "red-bullet-3": "Price: Editable!",
+            "red-bullet-4": "Color: Red - watch out!"
+        }
+    },
+    "error-404-description": "Page not found.",
+    "tech-stack": {
+        "label": "Cutting-edge technologies",
+        "header-1": "Tech",
+        "header-2": "stack"
     }
 }

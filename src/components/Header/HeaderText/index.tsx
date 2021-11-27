@@ -23,18 +23,18 @@ export const HeaderText = () => {
                 The <GradientText>HashUp</GradientText> Cartridge
                 <ColoredText>.</ColoredText>
             </StyledTitle>
-            <StyledParagraph>{t("header-par")}</StyledParagraph>
+            <StyledParagraph>{t("header.description")}</StyledParagraph>
             <StyledButtonsBox>
                 <ButtonOutlined href="/documents/Whitepaper.pdf">Whitepaper</ButtonOutlined>
                 <Hyperlink href="/#airdrop">
                     <HeaderAirdropWrapper>
                         <HeaderAirdropIcon />
-                        <HeaderGetAirdrop>{t("header-airdrop")}</HeaderGetAirdrop>
+                        <HeaderGetAirdrop>{t("header.airdrop")}</HeaderGetAirdrop>
                     </HeaderAirdropWrapper>
                 </Hyperlink>
             </StyledButtonsBox>
             <StyledNewsletterBox>
-                <span className="title">{t("ico-signup")}</span>
+                <span className="title">{t("header.ico-signup")}</span>
                 <StyledForm>
                     <div
                         className="ml-form-embed"

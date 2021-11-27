@@ -21,10 +21,10 @@ export const WalletSelector = () => {
             <ContentWrapper>
                 <ButtonClose onClick={hideWalletSelector} />
                 <ConnectionHeader>
-                    {t("walletselector-header1")}
-                    <ColoredText>{t("walletselector-header2")}</ColoredText>
+                    {t("wallet-selector.header-1")}
+                    <ColoredText>{t("wallet-selector.header-2")}</ColoredText>
                 </ConnectionHeader>
-                <ConnectionText>{t("walletselector-text")}</ConnectionText>
+                <ConnectionText>{t("wallet-selector.text")}</ConnectionText>
 
                 <ButtonsContainer>
                     <ConnectionButton
@@ -37,15 +37,15 @@ export const WalletSelector = () => {
                         <img src="/assets/icons/button-metamask.svg" alt="" />
                     </ConnectionButton>
                     <ConnectionButton>
-                        {t("newsletter-comingsoon")}
+                        {t("newsletter.coming-soon")}
                         <img src="/assets/icons/button-wallet-connect.svg" alt="connect" />
                     </ConnectionButton>
                 </ButtonsContainer>
             </ContentWrapper>
             <ConnectionText>
-                {t("walletselector-nowallet")}
+                {t("wallet-selector.nowallet")}
                 <PermanentHyperlink href="https://metamask.io/">
-                    {t("walletselector-create")}
+                    {t("wallet-selector.create")}
                 </PermanentHyperlink>
             </ConnectionText>
         </WalletSelectorContainer>

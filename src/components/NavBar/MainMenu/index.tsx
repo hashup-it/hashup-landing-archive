@@ -35,22 +35,26 @@ export const MainMenu = ({
         <StyledMainMenu>
             <MenuItem>
                 <Link href="/#ecosystem" passHref>
-                    <Hyperlink onClick={handleCloseAction}>{t("ecosystem")}</Hyperlink>
+                    <Hyperlink onClick={handleCloseAction}>{t("menu.ecosystem")}</Hyperlink>
                 </Link>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             <MenuItem>
                 <Link href="/cartridges" passHref>
-                    <Hyperlink onClick={handleCloseAction}>{t("cartridges")}</Hyperlink>
+                    <Hyperlink onClick={handleCloseAction}>{t("menu.cartridges")}</Hyperlink>
                 </Link>
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://www.linkedin.com/company/hashupit">{t("media")}</Hyperlink>
+                <Hyperlink href="https://www.linkedin.com/company/hashupit">
+                    {t("menu.media")}
+                </Hyperlink>
             </MenuItem>
             {/*<MenuItem>Investment</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">{t("doc")}</Hyperlink>
+                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
+                    {t("menu.doc")}
+                </Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             <SelectLanguage />
@@ -74,12 +78,12 @@ export const MainMenu = ({
                         </a>
                     </SocialMediaGroup>
                     <FooterTop>
-                        <ListHeader>{t("headquarters")}</ListHeader>
+                        <ListHeader>{t("footer.headquarters")}</ListHeader>
                         <ContactField>
                             <AddressLineEmphasized>HashUp P.S.A.</AddressLineEmphasized>
                             Al. Jana Pawła II 27
                             <br />
-                            00-867 {t("warsaw")}
+                            00-867 {t("footer.warsaw")}
                             <br />
                             <br />
                             <MailLink href="mailto:hello@hashup.it">hello@hashup.it</MailLink>

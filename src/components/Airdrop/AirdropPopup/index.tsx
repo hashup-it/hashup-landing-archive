@@ -34,14 +34,14 @@ export const AirdropPopup: FC<AidropPopupProps> = ({ setPopupOpened }) => {
                         onClick={() => setPopupOpened(false)}
                         src="/assets/icons/x-circle.svg"
                     />
-                    <StyledPopupHeader>{t("airdroppopup-header")}</StyledPopupHeader>
+                    <StyledPopupHeader>{t("airdrop.popup.header")}</StyledPopupHeader>
                     <StyledPopupText>
-                        {t("airdroppopup-text-sent")}
+                        {t("airdrop.popup.text-sent")}
                         <ColoredText>#Hash</ColoredText>
-                        {t("airdroppopup-text-address")}
+                        {t("airdrop.popup.text-address")}
                     </StyledPopupText>
                     <StyledAddToMetamaskGroup>
-                        {t("airdroppopup-metamask")} &gt; <AddToMetamask />
+                        {t("airdrop.popup.metamask")} &gt; <AddToMetamask />
                     </StyledAddToMetamaskGroup>
                     <StyledTelegramContainer>
                         <StyledTelegramHeader>

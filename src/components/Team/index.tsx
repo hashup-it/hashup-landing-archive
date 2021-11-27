@@ -12,10 +12,10 @@ export const Team = () => {
     return (
         <StyledSectionContainer>
             <SectionLabel>
-                <ColoredText>{t("ourteam")}</ColoredText>
+                <ColoredText>{t("team.ourteam")}</ColoredText>
             </SectionLabel>
 
-            <StyledHeader>{t("team")}</StyledHeader>
+            <StyledHeader>{t("team.team")}</StyledHeader>
             <StyledPeopleContainer>
                 <>
                     {coreTeam.map((item, index) => (
@@ -42,7 +42,7 @@ export const Team = () => {
                 </>
             </StyledPeopleContainer>
 
-            <StyledHeader>{t("advisors")}</StyledHeader>
+            <StyledHeader>{t("team.advisors")}</StyledHeader>
             <StyledPeopleContainer>
                 {advisors.map((item, index) => (
                     <Person

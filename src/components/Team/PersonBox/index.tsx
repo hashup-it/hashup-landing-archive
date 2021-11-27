@@ -63,12 +63,12 @@ const PersonBox: FC<PersonProps> = ({ avatarFilename, localeKey, name, socialMed
                     <Avatar src={assetsUrl(`team-avatars/${avatarFilename}`)} />
                     <Function>
                         <ColoredText>
-                            {t(`team-members.${localeKey}.role`).toUpperCase()}
+                            {t(`team.team-members.${localeKey}.role`).toUpperCase()}
                         </ColoredText>
                     </Function>
                     <StyledName>{name}</StyledName>
                     <StyledDescription>
-                        {t(`team-members.${localeKey}.description`)}
+                        {t(`team.team-members.${localeKey}.description`)}
                     </StyledDescription>
                     <StyledSocialMediaBox>
                         {socialMedia.map((item, index) => (

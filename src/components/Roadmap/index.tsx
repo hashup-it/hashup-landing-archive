@@ -29,11 +29,11 @@ const Roadmap = () => {
     return (
         <StyledRoadmap>
             <SectionLabel>
-                <ColoredText>{t("roadmap")}</ColoredText>
+                <ColoredText>{t("roadmap.roadmap")}</ColoredText>
             </SectionLabel>
             <SectionHeader>
-                {t("roadmap-header-look")}
-                <ColoredText>{t("roadmap-header-when")}</ColoredText>
+                {t("roadmap.header-look")}
+                <ColoredText>{t("roadmap.header-when")}</ColoredText>
             </SectionHeader>
             <Carousele />
         </StyledRoadmap>

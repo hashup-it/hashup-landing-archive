@@ -23,9 +23,9 @@ const Calculator = () => {
     return (
         <StyledCalculator>
             <StyledHeader>
-                {t("calc-check-how")}
-                <ColoredText>{t("calc-check-losing")}</ColoredText>
-                {t("calc-check-charged")}
+                {t("calc.check-how")}
+                <ColoredText>{t("calc.check-losing")}</ColoredText>
+                {t("calc.check-charged")}
             </StyledHeader>
             <StyledSlidersContainer>
                 <Slider
@@ -34,7 +34,7 @@ const Calculator = () => {
                     step={10000}
                     displayValue={numeral(soldItems).format("0a")}
                     setValue={setSoldItems}
-                    label={t("calc-slider-label")}
+                    label={t("calc.slider-label")}
                     dotsValues={["10k", "250k", "500k", "750k", "1m"]}
                     defaultValue={initPrice}
                 />
@@ -44,7 +44,7 @@ const Calculator = () => {
                     step={1}
                     displayValue={`${price}$`}
                     setValue={setPrice}
-                    label={t("calc-price")}
+                    label={t("calc.price")}
                     dotsValues={["1$", "25$", "50$", "75$", "100$"]}
                     defaultValue={initSoldItems}
                 />
