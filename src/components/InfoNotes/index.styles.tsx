@@ -16,7 +16,13 @@ export const StyledNotesArea = styled.div`
     grid-template-columns: repeat(3, 1fr);
     padding-top: 90px;
 
+    ${mediaQuery.laptop} {
+        gap: 30px;
+    }
+
     ${mediaQuery.tablet} {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 65px;
     }
 `
 
@@ -25,12 +31,7 @@ export const StyledNote = styled.div`
     text-align: left;
     margin: 0 auto;
 
-    ${mediaQuery.laptopL} {
-        margin: 20px 40px;
-    }
-
     ${mediaQuery.tablet} {
-        margin: 40px 0px;
         text-align: center;
         display: flex;
         flex-direction: column;
