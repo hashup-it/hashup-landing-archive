@@ -323,12 +323,12 @@
             "bullet-4": "Color: Blue as the sky!"
         },
         "red": {
-            "red-description": "No exchange between players. What it is now. Only the Creator can send the game between addresses!",
-            "red-target": "Creators who are afraid of the free market!",
-            "red-bullet-1": "Supply: 0-100mln",
-            "red-bullet-2": "Free for exchange: No exchange!",
-            "red-bullet-3": "Price: Editable!",
-            "red-bullet-4": "Color: Red - watch out!"
+            "description": "No exchange between players. What it is now. Only the Creator can send the game between addresses!",
+            "target": "Creators who are afraid of the free market!",
+            "bullet-1": "Supply: 0-100mln",
+            "bullet-2": "Free for exchange: No exchange!",
+            "bullet-3": "Price: Editable!",
+            "bullet-4": "Color: Red - watch out!"
         }
     },
     "error-404-description": "Page not found.",
