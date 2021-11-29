@@ -31,6 +31,7 @@ import { AirdropPopup } from "./AirdropPopup"
 import { useTranslation } from "react-i18next"
 import { useAccountContext } from "context/account"
 import { assetsUrl } from "config"
+import { parse } from "query-string"
 
 const queryString = require("query-string")
 const BLOCKCHAIN_PROVIDER_URI = "https://bsc-dataseed.binance.org"
@@ -40,13 +41,22 @@ const Airdrop = () => {
     const { account, showWalletSelector } = useAccountContext()
     const { t } = useTranslation()
 
+
+
     if (typeof window !== "undefined") {
     }
 
     useEffect(() => {
         const parsed = queryString.parse(window.location.search)
-        setBuddy(parsed.buddy)
+        
+        if(parsed.buddy) 
+        {
+            localStorage.setItem('buddy', parsed.buddy);
+        }
+
+        setBuddy(localStorage.getItem('buddy'))
     }, [])
+
 
     const inputElement = useRef<any>(null)
 
@@ -88,6 +98,7 @@ const Airdrop = () => {
     }
 
     const handleNicknameInput = (event: any) => {
+
         if (!airdropDisabled) {
             setNicknameInput(event.target.value)
         }
@@ -99,6 +110,7 @@ const Airdrop = () => {
     }
 
     const handleLoginButton = async () => {
+
         if (account) {
             if (userNickname != "") return
 

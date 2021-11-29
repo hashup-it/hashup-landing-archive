@@ -180,8 +180,7 @@ export const StyledBeforeConnectWrapper = styled.div`
 
 export const StyledInputButtonFill = styled.div<{ isDisabled: boolean }>`
     background-color: #010101;
-    background-image: url(${props =>
-        assetsUrl(`icons/${props.isDisabled ? "check.svg" : "save.svg"}`)});
+    background-image: url(${props =>assetsUrl(`icons/${props.isDisabled ? "check.svg" : "save.svg"}`)});
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
