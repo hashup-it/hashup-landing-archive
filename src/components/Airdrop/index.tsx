@@ -83,7 +83,7 @@ const Airdrop = () => {
 
     const handleCopyReferral = async () => {
         await navigator.clipboard.writeText(
-            `${window.location.protocol}//${window.location.host}/?buddy=${account}`
+            `${window.location.protocol}//${window.location.host}/?buddy=${account}#airdrop`
         )
     }
 
