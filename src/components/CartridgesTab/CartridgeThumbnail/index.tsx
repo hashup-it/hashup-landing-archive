@@ -1,21 +1,18 @@
+import { FC } from "react"
 import { CartridgeThumbnailContainer } from "./index.style"
 import { CartridgeThumbnailColoredText } from "../index.styles"
-import { CartridgeColor } from "../index"
+import { CartridgeThumbnailInterface, CartridgeTypeEnum } from "../index"
 
-export const CartridgeThumbnail = ({
-    cartridgeType,
-    cartridgeColor,
-    cartridgeLink,
-}: {
-    cartridgeType: string
-    cartridgeColor: CartridgeColor
-    cartridgeLink: string
-}) => (
-    <CartridgeThumbnailContainer href={cartridgeLink} highlightColor={cartridgeColor}>
-        <CartridgeThumbnailColoredText color={cartridgeColor}>
-            {cartridgeType}
-        </CartridgeThumbnailColoredText>
-        <br />
-        Cartridge
-    </CartridgeThumbnailContainer>
-)
+const CartridgeThumbnail: FC<CartridgeThumbnailInterface> = ({ type, color }) => {
+    const anchor: string = CartridgeTypeEnum[type]
+
+    return (
+        <CartridgeThumbnailContainer href={`#${anchor}`} highlightColor={color}>
+            <CartridgeThumbnailColoredText color={color}>{anchor}</CartridgeThumbnailColoredText>
+            <br />
+            Cartridge
+        </CartridgeThumbnailContainer>
+    )
+}
+
+export default CartridgeThumbnail

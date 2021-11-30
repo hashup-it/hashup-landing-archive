@@ -37,16 +37,15 @@ export const useNavBarScrollEffect = (): { navBarState: NavBarStateEnum } => {
     const [state, setState] = useState<NavBarStateEnum>(initState())
 
     useEffect(() => {
-        let _lastY: number = 0
         let lastPositionY: number = window.scrollY
 
         const handleScroll = throttle(() => {
             if (window.scrollY <= 3) {
+                // Absolute top of the page
                 setState(NavBarStateEnum.top)
             } else {
                 if (window.scrollY <= START_COUNTING_AFTER) {
                     // First area, nav-bar is 'top' or still 'stickyShown'
-
                     if (state === NavBarStateEnum.top && window.scrollY > NAV_VISIBLE_AREA_HEIGHT) {
                         setState(NavBarStateEnum.stickyHiddenAfterTop)
                     } else if (
@@ -69,7 +68,6 @@ export const useNavBarScrollEffect = (): { navBarState: NavBarStateEnum } => {
                     }
                 }
             }
-            _lastY = window.scrollY
         }, 10)
 
         window.addEventListener("scroll", handleScroll)

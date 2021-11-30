@@ -1,3 +1,4 @@
+import { assetsUrl } from "config"
 import Document, { Head, Html, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
@@ -45,8 +46,19 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
                         rel="stylesheet"
                     />
+                    <script src={assetsUrl("scripts/google-analitics.js")} async />
                 </Head>
                 <body>
+                    {/* Google analitics */}
+                    <noscript>
+                        <iframe
+                            src="https://www.googletagmanager.com/ns.html?id=GTM-PHHQ3TR"
+                            height="0"
+                            width="0"
+                            style={{ display: "none", visibility: "hidden" }}
+                        ></iframe>
+                    </noscript>
+
                     <Main />
                     <NextScript />
                 </body>

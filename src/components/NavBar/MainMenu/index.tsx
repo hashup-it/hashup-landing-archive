@@ -16,7 +16,7 @@ import {
 import { SelectLanguage } from "../SelectLanguage"
 import { useTranslation } from "react-i18next"
 import Link from "next/link"
-import { SocialMediaUrlsEnum } from "config"
+import { SocialMediaIcons, SocialMediaUrls, SocialMediaUrlsEnum } from "config"
 
 export const MainMenu = ({
     isMobileMenuShown,
@@ -46,35 +46,31 @@ export const MainMenu = ({
             </MenuItem>
             {/*<MenuItem>Team</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://www.linkedin.com/company/hashupit">
-                    {t("menu.media")}
-                </Hyperlink>
+                <Hyperlink href={SocialMediaUrls.linkedIn}>{t("menu.media")}</Hyperlink>
             </MenuItem>
             {/*<MenuItem>Investment</MenuItem>*/}
             <MenuItem>
-                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
-                    {t("menu.doc")}
-                </Hyperlink>
+                <Hyperlink href={SocialMediaUrls.gitbook}>{t("menu.doc")}</Hyperlink>
                 {/*<Icon src='/assets/icons/chevron-down.svg'/>*/}
             </MenuItem>
             <SelectLanguage />
             {isMobileMenuShown && (
                 <>
                     <SocialMediaGroup>
-                        <a href={SocialMediaUrlsEnum.linkedIn}>
-                            <Icon url={"linkedin.svg"} />
+                        <a href={SocialMediaUrls.linkedIn}>
+                            <Icon url={SocialMediaIcons.linkedin} />
                         </a>
-                        <a href={SocialMediaUrlsEnum.telegram}>
-                            <Icon url={"telegram.svg"} />
+                        <a href={SocialMediaUrls.telegram}>
+                            <Icon url={SocialMediaIcons.telegram} />
                         </a>
-                        <a href={SocialMediaUrlsEnum.twitter}>
-                            <Icon url={"twitter.svg"} />
+                        <a href={SocialMediaUrls.twitter}>
+                            <Icon url={SocialMediaIcons.twitter} />
                         </a>
-                        <a href={SocialMediaUrlsEnum.facebook}>
-                            <Icon url={"facebook.svg"} />
+                        <a href={SocialMediaUrls.facebook}>
+                            <Icon url={SocialMediaIcons.facebook} />
                         </a>
-                        <a href={SocialMediaUrlsEnum.instagram}>
-                            <Icon url={"instagram.svg"} />
+                        <a href={SocialMediaUrls.instagram}>
+                            <Icon url={SocialMediaIcons.instagram} />
                         </a>
                     </SocialMediaGroup>
                     <FooterTop>

@@ -30,7 +30,7 @@ import { Newsletter } from "./Newsletter"
 import { Hyperlink } from "../Shared/sections.styles"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
-import { SocialMediaUrlsEnum } from "config"
+import { assetsUrl, SocialMediaUrls, SocialMediaIcons, BrandAssets } from "config"
 
 const CURRENT_YEAR = new Date().getFullYear()
 
@@ -43,27 +43,27 @@ export const Footer = () => {
             <FooterSeparatorAccent />
             <FooterHeading>
                 <Link href="/" passHref>
-                    <Logo src="/assets/logo.svg" />
+                    <Logo src={BrandAssets.logo} />
                 </Link>
                 <SocialMediaGroup>
                     <span>
                         {t("footer.span")}
                         <ColoredText>&nbsp;social media</ColoredText>
                     </span>
-                    <a href={SocialMediaUrlsEnum.linkedIn}>
-                        <Icon url={"linkedin.svg"} />
+                    <a href={SocialMediaUrls.linkedIn}>
+                        <Icon url={SocialMediaIcons.linkedin} />
                     </a>
-                    <a href={SocialMediaUrlsEnum.telegram}>
-                        <Icon url={"telegram.svg"} />
+                    <a href={SocialMediaUrls.telegram}>
+                        <Icon url={SocialMediaIcons.telegram} />
                     </a>
-                    <a href={SocialMediaUrlsEnum.twitter}>
-                        <Icon url={"twitter.svg"} />
+                    <a href={SocialMediaUrls.twitter}>
+                        <Icon url={SocialMediaIcons.twitter} />
                     </a>
-                    <a href={SocialMediaUrlsEnum.facebook}>
-                        <Icon url={"facebook.svg"} />
+                    <a href={SocialMediaUrls.facebook}>
+                        <Icon url={SocialMediaIcons.facebook} />
                     </a>
-                    <a href={SocialMediaUrlsEnum.instagram}>
-                        <Icon url={"instagram.svg"} />
+                    <a href={SocialMediaUrls.instagram}>
+                        <Icon url={SocialMediaIcons.instagram} />
                     </a>
                 </SocialMediaGroup>
             </FooterHeading>

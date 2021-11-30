@@ -11,6 +11,7 @@ import {
 import { ColoredText } from "../Shared"
 import { useTranslation } from "react-i18next"
 import { useAccountContext } from "context/account"
+import { assetsUrl } from "config"
 
 export const WalletSelector = () => {
     const { t } = useTranslation()
@@ -34,11 +35,14 @@ export const WalletSelector = () => {
                         }}
                     >
                         MetaMask
-                        <img src="/assets/icons/button-metamask.svg" alt="" />
+                        <img src={assetsUrl("icons/button-metamask.svg")} alt="Metamask" />
                     </ConnectionButton>
                     <ConnectionButton>
                         {t("newsletter.coming-soon")}
-                        <img src="/assets/icons/button-wallet-connect.svg" alt="connect" />
+                        <img
+                            src={assetsUrl("icons/button-wallet-connect.svg")}
+                            alt="Connect to Metamask"
+                        />
                     </ConnectionButton>
                 </ButtonsContainer>
             </ContentWrapper>

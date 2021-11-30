@@ -2,6 +2,7 @@ import styled, { css } from "styled-components"
 import { mediaQuery } from "../MediaQuery"
 import { Swatches } from "__styles__/Swatches"
 import { NavBarStateEnum } from "./logic"
+import { assetsUrl } from "config"
 
 export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     position: fixed;
@@ -12,10 +13,10 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     font-size: 16px;
     color: ${Swatches.text_main};
     font-weight: 600;
-    align-items: flex-start;
     z-index: 99999;
     background-color: rgba(0, 0, 0, 0.93);
 
+    // Interactive hide-show menu on scroll action
     ${props => {
         switch (props.state) {
             case NavBarStateEnum.stickyHidden:
@@ -47,6 +48,10 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
         transition: none;
         background-color: rgba(0, 0, 0, 0.93);
     }
+
+    ${mediaQuery.tablet} {
+        padding: 25px 18px;
+    }
 `
 
 export const MenuWrapper = styled.div`
@@ -66,18 +71,21 @@ export const MenuWrapper = styled.div`
     ${mediaQuery.tablet} {
         grid-template-columns: 50px 1fr auto;
         align-items: center;
+        align-items: center;
     }
 `
 
-export const Logo = styled.img`
-    margin-top: 5px;
+export const StyledFullLogo = styled.img`
+    width: 150px;
+    position: absolute;
+    top: 18px;
 
     ${mediaQuery.tablet} {
         display: none;
     }
 `
 
-export const LogoWrapper = styled.div`
+export const StyledLogoWrapper = styled.div`
     cursor: pointer;
     margin-top: -9px;
     display: flex;
@@ -85,7 +93,16 @@ export const LogoWrapper = styled.div`
     gap: 9px;
 `
 
-export const LogoIcon = styled.img``
+export const StyledLogoIcon = styled.img`
+    display: none;
+
+    ${mediaQuery.tablet} {
+        width: 35px;
+        position: absolute;
+        top: 22px;
+        display: block;
+    }
+`
 
 export const ButtonsMenu = styled.div`
     display: flex;
@@ -98,16 +115,11 @@ export const ButtonsMenu = styled.div`
     }
 `
 
-export const Icon = styled.img`
-    padding-top: 6px;
-    padding-left: 9px;
-`
-
 export const HamburgerButton = styled.div<{ opened: boolean }>`
     width: 30px;
     height: 30px;
     background-image: url(${props =>
-        props.opened ? "/assets/icons/x.svg" : "/assets/icons/hamburger.svg"});
+        assetsUrl(props.opened ? "icons/x.svg" : "icons/hamburger.svg")});
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 10px;

@@ -15,6 +15,7 @@ const App = ({ Component, pageProps }) => {
                 <meta name="description" content="HashUp.it – We will free the game market." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
+            <Script src={scriptsUrl("mailerlite-universal.js")} />
             <AccountContextProvider>
                 <GlobalStyle />
                 <LandingContainer>
@@ -25,7 +26,6 @@ const App = ({ Component, pageProps }) => {
                     <Footer />
                 </LandingContainer>
             </AccountContextProvider>
-            <Script src={scriptsUrl("mailerlite-universal.js")} />
         </>
     )
 }

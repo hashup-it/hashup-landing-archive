@@ -9,6 +9,7 @@ import {
 import { WalletSelector } from "../../WalletSelector"
 import { useTranslation } from "react-i18next"
 import { useAccountContext } from "context/account"
+import { assetsUrl } from "config"
 
 export const ConnectWallet = () => {
     const { isWalletSelectorShown, showWalletSelector, account } = useAccountContext()
@@ -27,7 +28,7 @@ export const ConnectWallet = () => {
                         </StyledAddress>
                     )}
                 </StyledWalletTextWrapper>
-                <WalletIcon src="/assets/icons/wallet.svg" />
+                <WalletIcon src={assetsUrl("icons/wallet.svg")} />
             </StyledConnectWallet>
             {isWalletSelectorShown && <WalletSelector />}
         </WalletHideWrapper>

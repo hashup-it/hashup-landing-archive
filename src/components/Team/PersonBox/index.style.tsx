@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { ComparisonItemContent } from "../../Comparison/index.styles"
-import { StyledSocialMedia } from "../../Header/HeaderBottom/index.styles"
+import { StyledSocialMedia } from "../../Header/HeaderBottomNav/index.styles"
 import { Swatches } from "__styles__/Swatches"
 import { RoleEnum } from "./interfaces"
 
@@ -72,22 +72,6 @@ export const StyledDescription = styled.div`
     color: #b7b7b7;
 `
 
-export const StyledSocialMediaBox = styled(StyledSocialMedia)`
-    position: absolute;
-    bottom: 35px;
-    justify-content: start;
-
-    :before {
-        content: "";
-        display: block;
-        width: 25px;
-        height: 2px;
-        position: absolute;
-        top: -25px;
-        background-color: ${Swatches.primary_color};
-    }
-`
-
 export const StyledIconA = styled.a`
     text-decoration: none;
     width: 20px;
@@ -103,5 +87,25 @@ export const StyledIconA = styled.a`
 
     img {
         width: 16px;
+    }
+`
+
+export const StyledSocialMediaBox = styled.div`
+    position: absolute;
+    bottom: 35px;
+    display: flex;
+
+    ${StyledIconA} {
+        margin-right: 12px;
+    }
+
+    :before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 2px;
+        position: absolute;
+        top: -25px;
+        background-color: ${Swatches.primary_color};
     }
 `

@@ -4,9 +4,9 @@ import { ConnectWallet } from "./ConnectWallet"
 import {
     ButtonsMenu,
     HamburgerButton,
-    Logo,
-    LogoIcon,
-    LogoWrapper,
+    StyledFullLogo,
+    StyledLogoIcon,
+    StyledLogoWrapper,
     MenuWrapper,
     MobileHideWrapper,
     StyledNavBar,
@@ -14,20 +14,21 @@ import {
 import { MainMenu } from "./MainMenu"
 import { MobileMenu } from "./MobileMenu"
 import { useNavBarScrollEffect } from "./logic"
+import { assetsUrl, BrandAssets } from "config"
 
 const NavBar = () => {
     const [isMobileMenuShown, setIsMobileMenuShown] = useState<boolean>(false)
-    const { navBarState } = useNavBarScrollEffect() // Only for desktop
+    const { navBarState } = useNavBarScrollEffect() // For desktop only
 
     return (
         <StyledNavBar state={navBarState}>
             <MenuWrapper>
                 <Link href="/" passHref>
                     <a>
-                        <LogoWrapper>
-                            <LogoIcon src="/assets/icons/LogoIcon.svg" />
-                            <Logo src="/assets/icons/HashUp.svg" />
-                        </LogoWrapper>
+                        <StyledLogoWrapper>
+                            <StyledLogoIcon src={BrandAssets.logoIcon} />
+                            <StyledFullLogo src={BrandAssets.logo} />
+                        </StyledLogoWrapper>
                     </a>
                 </Link>
                 <MobileHideWrapper>

@@ -1,12 +1,13 @@
 import styled from "styled-components"
 import { mediaQuery } from "../MediaQuery"
 import { Swatches } from "../../__styles__/Swatches"
+import { assetsUrl } from "config"
 
 export const SectionContainer = styled.div`
     display: grid;
     grid-template-columns: 3fr 3fr;
     gap: 200px;
-    margin-bottom: 150px;
+    margin-bottom: 180px;
 
     ${mediaQuery.laptop} {
         gap: 100px;
@@ -150,7 +151,8 @@ export const SectionList = styled.ul<{ markerResource?: string }>`
     }
 
     li::marker {
-        content: url(${props => props.markerResource ?? "/assets/icons/list-marker-default.svg"});
+        content: url(${props =>
+            props.markerResource ?? assetsUrl("icons/list-marker-default.svg")});
         width: 6px;
         height: 6px;
     }

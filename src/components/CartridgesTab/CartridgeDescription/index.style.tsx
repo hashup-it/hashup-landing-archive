@@ -1,21 +1,21 @@
-import styled, { css } from 'styled-components'
-import { ComparisonItem, ComparisonItemContent } from '../../Comparison/index.styles'
-import { SectionLabel, SectionList, SmallHeaderText } from '../../Shared/sections.styles'
-import { mediaQuery } from '../../MediaQuery'
+import styled, { css } from "styled-components"
+import { ComparisonItem, ComparisonItemContent } from "../../Comparison/index.styles"
+import { SectionLabel, SectionList, SmallHeaderText } from "../../Shared/sections.styles"
+import { mediaQuery } from "../../MediaQuery"
 
 export const CartridgeDescriptionContainer = styled.div<{ leftBasedLayout: boolean }>`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     ${props =>
-            props.leftBasedLayout
-                    ? css`
-                        grid-template-areas: "text image";
-                    `
-                    : css`
-                        grid-template-areas: "image text";
-                    `};
-    gap: 145px;
+        props.leftBasedLayout
+            ? css`
+                  grid-template-areas: "text image";
+              `
+            : css`
+                  grid-template-areas: "image text";
+              `};
+    gap: 0px;
     position: relative;
 
     ${mediaQuery.tablet} {
@@ -25,14 +25,31 @@ export const CartridgeDescriptionContainer = styled.div<{ leftBasedLayout: boole
     }
 `
 
-export const CartridgeDescriptionText = styled.div`
+export const StyledDescriptionArea = styled.div`
     grid-area: text;
-
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    background-color: white;
+    height: 100%;
 `
 
-export const CartridgeDescriptionSmallText = styled(SmallHeaderText)`
+export const StyledDescriptionBox = styled.div<{ leftBasedLayout: boolean }>`
+    position: absolute;
+    grid-area: text;
+    background-color: blue;
+    top: 0;
+    display: inline-block;
+
+    ${props =>
+        props.leftBasedLayout
+            ? css`
+                  right: 0;
+              `
+            : css`
+                  left: 0;
+              `}
+`
+
+export const StyledLabel = styled(SmallHeaderText)`
     font-family: Sora;
     font-style: normal;
     font-weight: normal;
@@ -42,14 +59,13 @@ export const CartridgeDescriptionSmallText = styled(SmallHeaderText)`
     color: #cdcdcd;
 `
 
-export const CartridgeDescriptionImage = styled.div<({ mobileImageUri: string })>`
+export const StyledImageBox = styled.div<{ mobileImageUri: string }>`
     grid-area: image;
     height: 32em;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
+    background-color: red;
 
     > * {
         position: absolute;
@@ -77,7 +93,7 @@ export const CartridgeDescriptionImage = styled.div<({ mobileImageUri: string })
 `
 
 export const CartridgeTargetItem = styled(ComparisonItem)`
-    margin-top: 2rem;
+    margin-top: 30px;
 `
 
 export const CartridgeTargetItemContent = styled(ComparisonItemContent)`
@@ -107,13 +123,11 @@ export const CartridgeTargetContent = styled.div`
     color: #ffffff;
 `
 
-export const CartridgeDescriptionList = styled(SectionList)`
-    margin-left: 20px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+export const StyledBulletList = styled(SectionList)`
+    margin: 25px 0 25px 25px;
 `
 
-export const CartridgeHook = styled.div`
+export const StyledHook = styled.div`
     position: absolute;
     top: -112px;
 `

@@ -3,6 +3,7 @@ import { ButtonOutlined } from "../Shared"
 import { Hyperlink, SectionHeader, SectionText } from "../Shared/sections.styles"
 import { Swatches } from "__styles__/Swatches"
 import { mediaQuery } from "components/MediaQuery"
+import { assetsUrl } from "config"
 
 export const WalletSelectorContainer = styled.div`
     position: fixed;
@@ -101,7 +102,7 @@ export const ButtonClose = styled.div`
     position: absolute;
     right: 22px;
     top: 22px;
-    background: url("/assets/icons/button-close.svg");
+    background: url(${() => assetsUrl("icons/button-close.svg")});
     width: 22px;
     height: 22px;
     cursor: pointer;

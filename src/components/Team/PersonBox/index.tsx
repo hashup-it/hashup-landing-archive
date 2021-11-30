@@ -13,7 +13,7 @@ import { SocialMediaEnum, PersonInterface, RoleEnum } from "./interfaces"
 import { ColoredText } from "../../Shared"
 import { useTranslation } from "react-i18next"
 import NextImage from "next/image"
-import { assetsUrl } from "config"
+import { assetsUrl, SocialMediaIcons } from "config"
 
 interface SocialMediaIconProps {
     readonly type: SocialMediaEnum
@@ -22,28 +22,28 @@ interface SocialMediaIconProps {
 }
 
 const SocialMediaIcon: FC<SocialMediaIconProps> = ({ name, type, url }) => {
-    const Icon: FC<{ icon: string; title: string }> = ({ icon, title }) => (
+    const Icon: FC<{ src: string; title: string }> = ({ src, title }) => (
         <StyledIconA
             href={url}
             title={`${title} - ${name}`}
             target="_blank"
             rel="noopener noreferrer"
         >
-            <img src={assetsUrl(`icons/${icon}`)} alt={`${title} - ${name}`} />
+            <img src={src} alt={`${title} - ${name}`} />
         </StyledIconA>
     )
 
     switch (type) {
         case SocialMediaEnum.wikipedia:
-            return <Icon title="Wikipedia" icon="wikipedia.ico" />
+            return <Icon title="Wikipedia" src={SocialMediaIcons.wikipedia} />
         case SocialMediaEnum.linkedIn:
-            return <Icon title="LinkedIn" icon="linkedin.svg" />
+            return <Icon title="LinkedIn" src={SocialMediaIcons.linkedin} />
         case SocialMediaEnum.twitter:
-            return <Icon title="Twitter" icon="twitter.svg" />
+            return <Icon title="Twitter" src={SocialMediaIcons.twitter} />
         case SocialMediaEnum.github:
-            return <Icon title="Github" icon="github.svg" />
+            return <Icon title="Github" src={SocialMediaIcons.github} />
         case SocialMediaEnum.dribble:
-            return <Icon title="Dribble" icon="dribble.svg" />
+            return <Icon title="Dribble" src={SocialMediaIcons.dribble} />
         default:
             return <></>
     }

@@ -1,9 +1,13 @@
 import { FC } from "react"
 import { InfoBoxInterface } from "./interfaces"
 import { useTranslation } from "react-i18next"
-import { StyledBullet, StyledBulletsList, StyledInfoBox, StyledLabel } from "./infobox.styles"
-import { StyledWrapper } from './infobox.styles'
-
+import {
+    StyledBullet,
+    StyledBulletsList,
+    StyledInfoBox,
+    StyledLabel,
+    StyledWrapper,
+} from "./index.styles"
 
 interface InfoBoxProps extends InfoBoxInterface {
     readonly highlighted: boolean
@@ -18,7 +22,11 @@ const InfoBox: FC<InfoBoxProps> = ({ highlighted, labelLocale, bullets }) => {
                 <StyledLabel>{t(labelLocale)}</StyledLabel>
                 <StyledBulletsList>
                     {bullets.map(item => (
-                        <StyledBullet key={item.contentLocale} isDone={item.isDone} bold={item.bold}>
+                        <StyledBullet
+                            key={item.contentLocale}
+                            isDone={item.isDone}
+                            bold={item.bold}
+                        >
                             <div className="icon" />
                             <div className="content">{t(item.contentLocale)}</div>
                         </StyledBullet>

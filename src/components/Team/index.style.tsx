@@ -19,7 +19,7 @@ export const StyledPeopleContainer = styled.div`
     margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px 20px;
+    gap: 60px 20px;
 
     ${mediaQuery.laptopM} {
         grid-template-columns: 1fr 1fr 1fr;

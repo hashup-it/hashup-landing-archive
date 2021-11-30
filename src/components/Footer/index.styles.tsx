@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { mediaQuery } from "../MediaQuery"
 import { Swatches } from "../../__styles__/Swatches"
+import { assetsUrl } from "config"
 
 export const StyledFooter = styled.div`
     position: relative;
@@ -16,6 +17,7 @@ export const FooterTop = styled.div`
     ${mediaQuery.tablet} {
         grid-template-columns: auto;
         justify-content: center;
+        text-align: center;
     }
 `
 
@@ -224,22 +226,22 @@ export const MenuItems = styled.nav`
 export const MenuList = styled.ul`
     width: 150px;
     box-sizing: border-box;
-
     flex-grow: 1;
     flex-shrink: 1;
-
     margin: 0;
     margin-bottom: 46px;
     list-style-type: none;
-
     padding: 0;
     color: #8a8f98;
     font-weight: normal;
     font-size: 14px;
-
     display: flex;
     flex-direction: column;
     gap: 9px;
+
+    ${mediaQuery.tablet} {
+        justify-content: center;
+    }
 `
 
 export const ListHeader = styled.div`
@@ -257,22 +259,28 @@ export const ListHeader = styled.div`
     color: #6d6d6d;
 
     margin-bottom: 10px;
+
+    ${mediaQuery.tablet} {
+        justify-content: center;
+    }
 `
 
 export const MenuHeader = styled(ListHeader)``
 
 export const MenuItem = styled.li`
     color: white;
-
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 160%;
-
     display: flex;
 
     > a:hover {
         text-decoration: underline;
+    }
+
+    ${mediaQuery.tablet} {
+        justify-content: center;
     }
 `
 
@@ -305,21 +313,23 @@ export const CompanyIds = styled.div`
     font-weight: normal;
     font-size: 14px;
     line-height: 180%;
-
     display: flex;
     align-items: center;
-
     color: #6d6d6d;
+
+    ${mediaQuery.tablet} {
+        justify-content: center;
+    }
 `
 
 export const Icon = styled.div<{ url: string }>`
     width: 33px;
     height: 33px;
     border-radius: 50%;
-    border: 0.635381px solid rgba(255, 255, 255, 0.1);
+    border: 0.63px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
 
-    background: url(${props => "/assets/icons/" + props.url});
+    background: url(${props => props.url});
     background-repeat: no-repeat;
     background-position: center;
 

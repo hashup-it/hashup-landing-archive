@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next"
 import { ColoredText } from "../Shared"
 import {
-    BackgroundShade,
+    StyledBackgroundFlare,
     CartridgesHeaderContainer,
     CartridgesTabContainer,
-    CartridgesTabHeader,
-    CartridgeThumbnailsContainer,
+    StyledTabTitle,
+    StyledCartridgeThumbnailsBox,
     SmallCartridgeHeaderText,
 } from "./index.styles"
-import { CartridgeDescription } from "./CartridgeDescription"
-import { CartridgeThumbnail } from "./CartridgeThumbnail"
+import CartridgeDescription from "./CartridgeDescription"
+import CartridgeThumbnail from "./CartridgeThumbnail"
 
 import ModelRed from "../../components/CartridgeScene/Three/ModelRed"
 import ModelBlue from "../../components/CartridgeScene/Three/ModelBlue"
@@ -25,49 +25,65 @@ export enum CartridgeColor {
     Red = "#FF3F3F",
 }
 
+const ROTATION: number[] = [0, -2, Math.PI / 128]
+
+export enum CartridgeTypeEnum {
+    green,
+    gold,
+    blue,
+    gray,
+    red,
+}
+
+export interface CartridgeThumbnailInterface {
+    readonly type: CartridgeTypeEnum
+    readonly color: CartridgeColor
+}
+
+const cartridgesThumbnails: CartridgeThumbnailInterface[] = [
+    {
+        type: CartridgeTypeEnum.green,
+        color: CartridgeColor.Green,
+    },
+    {
+        type: CartridgeTypeEnum.gold,
+        color: CartridgeColor.Gold,
+    },
+    {
+        type: CartridgeTypeEnum.blue,
+        color: CartridgeColor.Blue,
+    },
+    {
+        type: CartridgeTypeEnum.gray,
+        color: CartridgeColor.Gray,
+    },
+    {
+        type: CartridgeTypeEnum.red,
+        color: CartridgeColor.Red,
+    },
+]
+
 export const CartridgesTab = () => {
     const { t } = useTranslation()
 
     return (
         <CartridgesTabContainer>
-            <BackgroundShade src="/assets/sphere-shade.svg" />
+            <StyledBackgroundFlare />
             <CartridgesHeaderContainer>
-                <CartridgesTabHeader>
+                <StyledTabTitle>
                     {t("cartridges-tab.header")}
                     <ColoredText>.</ColoredText>
-                </CartridgesTabHeader>
+                </StyledTabTitle>
                 <SmallCartridgeHeaderText>
                     {t("cartridges-tab.header-small-1")}
                     <br />
                     {t("cartridges-tab.header-small-2")}
                 </SmallCartridgeHeaderText>
-                <CartridgeThumbnailsContainer>
-                    <CartridgeThumbnail
-                        cartridgeType="Green"
-                        cartridgeColor={CartridgeColor.Green}
-                        cartridgeLink="#green"
-                    />
-                    <CartridgeThumbnail
-                        cartridgeType="Gold"
-                        cartridgeColor={CartridgeColor.Gold}
-                        cartridgeLink="#gold"
-                    />
-                    <CartridgeThumbnail
-                        cartridgeType="Blue"
-                        cartridgeColor={CartridgeColor.Blue}
-                        cartridgeLink="#blue"
-                    />
-                    <CartridgeThumbnail
-                        cartridgeType="Gray"
-                        cartridgeColor={CartridgeColor.Gray}
-                        cartridgeLink="#gray"
-                    />
-                    <CartridgeThumbnail
-                        cartridgeType="Red"
-                        cartridgeColor={CartridgeColor.Red}
-                        cartridgeLink="#red"
-                    />
-                </CartridgeThumbnailsContainer>
+                <StyledCartridgeThumbnailsBox>
+                    {cartridgesThumbnails.map((item, index) => (
+                        <CartridgeThumbnail key={index} type={item.type} color={item.color} />
+                    ))}
+                </StyledCartridgeThumbnailsBox>
             </CartridgesHeaderContainer>
             <CartridgeDescription
                 leftBasedLayout={true}
@@ -81,7 +97,7 @@ export const CartridgesTab = () => {
                     t("cartridges-tab.green.bullet-3"),
                     t("cartridges-tab.green.bullet-4"),
                 ]}
-                cartridgeModel={<ModelGreen rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModel={<ModelGreen rotation={ROTATION} />}
                 cartridgeModelMobileUri="/assets/models/mobile/green.png"
             />
             <CartridgeDescription
@@ -96,7 +112,7 @@ export const CartridgesTab = () => {
                     t("cartridges-tab.gold.bullet-3"),
                     t("cartridges-tab.gold.bullet-4"),
                 ]}
-                cartridgeModel={<ModelGold rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModel={<ModelGold rotation={ROTATION} />}
                 cartridgeModelMobileUri="/assets/models/mobile/gold.png"
             />
             <CartridgeDescription
@@ -111,7 +127,7 @@ export const CartridgesTab = () => {
                     t("cartridges-tab.blue.bullet-3"),
                     t("cartridges-tab.blue.bullet-4"),
                 ]}
-                cartridgeModel={<ModelBlue rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModel={<ModelBlue rotation={ROTATION} />}
                 cartridgeModelMobileUri="/assets/models/mobile/blue.png"
             />
             <CartridgeDescription
@@ -126,7 +142,7 @@ export const CartridgesTab = () => {
                     t("cartridges-tab.gray.bullet-3"),
                     t("cartridges-tab.gray.bullet-4"),
                 ]}
-                cartridgeModel={<ModelGray rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModel={<ModelGray rotation={ROTATION} />}
                 cartridgeModelMobileUri="/assets/models/mobile/gray.png"
             />
             <CartridgeDescription
@@ -136,7 +152,7 @@ export const CartridgesTab = () => {
                 descriptionText={t("cartridges-tab.red.description")}
                 targetText={t("cartridges-tab.red.target")}
                 descriptionListContents={[t("cartridges-tab.red.bullet-1")]}
-                cartridgeModel={<ModelRed rotation={[0, -2, Math.PI / 128]} />}
+                cartridgeModel={<ModelRed rotation={ROTATION} />}
                 cartridgeModelMobileUri="/assets/models/mobile/red.png"
             />
         </CartridgesTabContainer>

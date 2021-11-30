@@ -6,22 +6,21 @@ import { ColoredText } from "../Shared"
 export const CartridgesTabContainer = styled.div`
     display: flex;
     flex-direction: column;
-
     gap: 150px;
     padding-bottom: 150px;
 `
 
-export const BackgroundShade = styled.img`
+export const StyledBackgroundFlare = styled.div`
     position: absolute;
-    width: 100%;
-
+    top: -500px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 80%;
     background: #d70000;
     opacity: 0.1;
+    border-radius: 80%;
     filter: blur(520px);
-
-    ${mediaQuery.laptop} {
-        display: none;
-    }
 `
 
 export const CartridgesHeaderContainer = styled.div`
@@ -46,22 +45,21 @@ export const SmallCartridgeHeaderText = styled(SmallHeaderText)`
     font-weight: normal;
     font-size: 18px;
     line-height: 160%;
+    padding-bottom: 30px;
 
     text-align: center;
 
     color: #e0e0e0;
 `
 
-export const CartridgesTabHeader = styled.h1`
+export const StyledTabTitle = styled.h1`
     font-style: normal;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 115%;
     padding: 0;
     margin: 0;
-
     text-align: center;
-
     width: 16em;
 
     ${mediaQuery.laptop} {
@@ -77,7 +75,7 @@ export const CartridgesTabHeader = styled.h1`
     }
 `
 
-export const CartridgeThumbnailsContainer = styled.div`
+export const StyledCartridgeThumbnailsBox = styled.div`
     display: flex;
     gap: 25px;
     flex-wrap: wrap;

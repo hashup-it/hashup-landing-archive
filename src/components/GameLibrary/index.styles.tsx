@@ -45,6 +45,10 @@ export const NicknameInstructionsHeading = styled.span`
     padding: 0;
     margin-top: 45px;
     margin-bottom: 33px;
+
+    ${mediaQuery.tablet} {
+        margin-top: -20px;
+    }
 `
 
 export const NicknameInstructionsList = styled(SectionList)``

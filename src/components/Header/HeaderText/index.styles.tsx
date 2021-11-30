@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { mediaQuery } from "components/MediaQuery"
 import { Swatches } from "__styles__/Swatches"
+import { assetsUrl } from "config"
 
 export const StyledLandingHeaderText = styled.div`
     gap: 20px;
@@ -34,11 +35,11 @@ export const StyledParagraph = styled.p`
     font-size: 18px;
     padding-right: 100px;
     line-height: 28px;
-    
+
     ${mediaQuery.laptopL} {
         padding-right: 30px;
     }
-    
+
     ${mediaQuery.tablet} {
         font-size: 17px;
     }
@@ -73,7 +74,7 @@ export const HeaderAirdropWrapper = styled.div`
 export const HeaderAirdropIcon = styled.div`
     background-color: #ffffff;
     border-radius: 15px 0px 0px 15px;
-    background-image: url("/assets/icons/bolt.svg");
+    background-image: url(${() => assetsUrl("icons/bolt.svg")});
     background-position: 20px;
     background-repeat: no-repeat;
     background-size: 18;
@@ -165,7 +166,6 @@ export const StyledForm = styled.div`
 
     button[type="submit"] {
         background-color: ${Swatches.primary_color} !important;
-
     }
 
     .ml-form-successBody {

@@ -10,6 +10,7 @@ import {
 } from "../Shared/sections.styles"
 import { StyledGameCap } from "./index.styles"
 import { useTranslation } from "react-i18next"
+import { assetsUrl } from "config"
 
 const GameCap = () => {
     const { t } = useTranslation()
@@ -28,7 +29,7 @@ const GameCap = () => {
                     <SectionText>{t("game-cap.text")}</SectionText>
                 </LeftWrapper>
                 <RightWrapper>
-                    <SectionPhotoSimple src="/assets/section-photos/photo4.png" />
+                    <SectionPhotoSimple src={assetsUrl("section-photos/photo4.png")} />
                 </RightWrapper>
             </SectionContainer>
         </StyledGameCap>
