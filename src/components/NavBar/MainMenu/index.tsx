@@ -16,7 +16,7 @@ import {
 import { SelectLanguage } from "../SelectLanguage"
 import { useTranslation } from "react-i18next"
 import Link from "next/link"
-import { SocialMediaIcons, SocialMediaUrls, SocialMediaUrlsEnum } from "config"
+import { SocialMediaIcons, SocialMediaUrls } from "config"
 
 export const MainMenu = ({
     isMobileMenuShown,

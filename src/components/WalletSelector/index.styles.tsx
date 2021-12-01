@@ -22,7 +22,7 @@ export const WalletSelectorContainer = styled.div`
 export const ContentWrapper = styled.div`
     position: relative;
     background: rgba(22, 22, 22, 0.25);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.85);
     border-radius: 13px;
     background: #1b1b1b;
     padding: 50px 68px 78px 68px;
@@ -51,9 +51,7 @@ export const ConnectionHeader = styled(SectionHeader)`
     font-weight: normal;
     font-size: 30px;
     line-height: 140%;
-
     text-align: center;
-
     color: #ffffff;
 `
 

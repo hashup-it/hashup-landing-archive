@@ -1,4 +1,3 @@
-import { assetsUrl } from "config"
 import Document, { Head, Html, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
@@ -46,7 +45,6 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
                         rel="stylesheet"
                     />
-                    <script src={assetsUrl("scripts/google-analitics.js")} async />
                 </Head>
                 <body>
                     {/* Google analitics */}

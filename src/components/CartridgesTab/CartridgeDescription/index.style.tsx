@@ -2,6 +2,7 @@ import styled, { css } from "styled-components"
 import { ComparisonItem, ComparisonItemContent } from "../../Comparison/index.styles"
 import { SectionLabel, SectionList, SmallHeaderText } from "../../Shared/sections.styles"
 import { mediaQuery } from "../../MediaQuery"
+import { CartridgeColor } from "../interfaces"
 
 export const CartridgeDescriptionContainer = styled.div<{ leftBasedLayout: boolean }>`
     display: grid;
@@ -18,26 +19,31 @@ export const CartridgeDescriptionContainer = styled.div<{ leftBasedLayout: boole
     gap: 0px;
     position: relative;
 
+    ${mediaQuery.laptop} {
+        display: flex;
+        flex-direction: column;
+    }
+
     ${mediaQuery.tablet} {
         display: flex;
         flex-direction: column;
-        gap: 0;
     }
 `
 
 export const StyledDescriptionArea = styled.div`
     grid-area: text;
     position: relative;
-    background-color: white;
     height: 100%;
 `
 
 export const StyledDescriptionBox = styled.div<{ leftBasedLayout: boolean }>`
     position: absolute;
     grid-area: text;
-    background-color: blue;
     top: 0;
     display: inline-block;
+    width: 480px;
+    padding: 0 20px;
+    box-sizing: border-box;
 
     ${props =>
         props.leftBasedLayout
@@ -47,6 +53,25 @@ export const StyledDescriptionBox = styled.div<{ leftBasedLayout: boolean }>`
             : css`
                   left: 0;
               `}
+
+    ${mediaQuery.laptopM} {
+        width: 400px;
+        padding: 0;
+        ${props =>
+            props.leftBasedLayout
+                ? css`
+                      right: -50px;
+                  `
+                : css`
+                      left: -50px;
+                  `}
+    }
+
+    ${mediaQuery.laptop} {
+        position: static;
+        width: 100%;
+        padding: 0;
+    }
 `
 
 export const StyledLabel = styled(SmallHeaderText)`
@@ -59,13 +84,12 @@ export const StyledLabel = styled(SmallHeaderText)`
     color: #cdcdcd;
 `
 
-export const StyledImageBox = styled.div<{ mobileImageUri: string }>`
+export const StyledImageBox = styled.div<{ mobileImageUrl: string }>`
     grid-area: image;
     height: 32em;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
 
     > * {
         position: absolute;
@@ -85,15 +109,16 @@ export const StyledImageBox = styled.div<{ mobileImageUri: string }>`
             display: none;
         }
 
-        content: url(${props => props.mobileImageUri});
+        content: url(${props => props.mobileImageUrl});
         width: 80%;
         height: auto;
-        margin-top: -10%;
+        margin-top: -20px;
     }
 `
 
-export const CartridgeTargetItem = styled(ComparisonItem)`
+export const CartridgeInfoBox = styled(ComparisonItem)`
     margin-top: 30px;
+    width: 100%;
 `
 
 export const CartridgeTargetItemContent = styled(ComparisonItemContent)`
@@ -107,9 +132,7 @@ export const CartridgeTargetLabel = styled(SectionLabel)`
     font-weight: normal;
     font-size: 12px;
     line-height: 160%;
-
     letter-spacing: 0.11em;
-
     color: #9d9d9d;
 `
 
@@ -119,7 +142,6 @@ export const CartridgeTargetContent = styled.div`
     font-weight: normal;
     font-size: 18px;
     line-height: 160%;
-
     color: #ffffff;
 `
 
@@ -130,4 +152,13 @@ export const StyledBulletList = styled(SectionList)`
 export const StyledHook = styled.div`
     position: absolute;
     top: -112px;
+`
+
+export const StyledFlare = styled.div<{ color: CartridgeColor }>`
+    background-color: ${props => props.color};
+    width: 600px;
+    height: 540px;
+    opacity: 0.2;
+    border-radius: 100%;
+    filter: blur(520px);
 `

@@ -3,14 +3,14 @@ export enum SocialMediaEnum {
     wikipedia,
     dribble,
     twitter,
-    github
+    github,
 }
 
 export enum RoleEnum {
     coreTeam,
     team,
     advisor,
-} 
+}
 
 export interface SocialMediaInterface {
     readonly type: SocialMediaEnum
@@ -22,4 +22,8 @@ export interface PersonInterface {
     readonly localeKey: string
     readonly socialMedia: SocialMediaInterface[]
     readonly avatarFilename: string
+
+    // Use when 'name' field is more than 2 words long
+    // It's number of words (in 'name' field) before break line
+    readonly wordsBeforeNameBreak?: number 
 }

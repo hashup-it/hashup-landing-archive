@@ -13,12 +13,18 @@ export const StyledHeaderBottom = styled.div`
     justify-content: space-between;
     align-items: center;
 
+    ${mediaQuery.laptop} {
+        position: relative;
+        margin-top: 75px;
+        margin-bottom: 45px;
+    }
+
     ${mediaQuery.tablet} {
         flex-direction: column;
-
         position: relative;
-
         gap: 35px;
+        margin-top: 160px;
+        margin-bottom: 80px;
     }
 
     ${mediaQuery.mobileM} {

@@ -10,12 +10,13 @@ import { scriptsUrl } from "config"
 const App = ({ Component, pageProps }) => {
     return (
         <>
+            <Script src={scriptsUrl("google-analitics.js")} strategy="beforeInteractive" />
+            <Script src={scriptsUrl("mailerlite-universal.js")} />
             <Head>
                 <title>The HashUp Cartridge</title>
                 <meta name="description" content="HashUp.it – We will free the game market." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            <Script src={scriptsUrl("mailerlite-universal.js")} />
             <AccountContextProvider>
                 <GlobalStyle />
                 <LandingContainer>

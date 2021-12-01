@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { CartridgeColor } from "../index"
+import { CartridgeColor } from "../interfaces"
 
 export const CartridgeThumbnailContainer = styled.a<{ highlightColor: CartridgeColor }>`
     position: relative;

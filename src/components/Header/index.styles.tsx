@@ -48,6 +48,7 @@ export const StyledCartridgeContainer = styled.div`
         height: 50vh;
         width: 50vw;
         margin-bottom: 2em;
+        display: none;
     }
 
     ${mediaQuery.tablet} {

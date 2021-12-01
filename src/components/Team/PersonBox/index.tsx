@@ -3,7 +3,7 @@ import {
     Avatar,
     StyledDescription,
     Function,
-    StyledName,
+    StyledNameBox,
     StyledPersonContainer,
     StyledContent,
     StyledSocialMediaBox,
@@ -12,8 +12,8 @@ import {
 import { SocialMediaEnum, PersonInterface, RoleEnum } from "./interfaces"
 import { ColoredText } from "../../Shared"
 import { useTranslation } from "react-i18next"
-import NextImage from "next/image"
 import { assetsUrl, SocialMediaIcons } from "config"
+import { useSplitText } from "./logic"
 
 interface SocialMediaIconProps {
     readonly type: SocialMediaEnum
@@ -53,8 +53,19 @@ interface PersonProps extends PersonInterface {
     readonly role: RoleEnum
 }
 
-const PersonBox: FC<PersonProps> = ({ avatarFilename, localeKey, name, socialMedia, role }) => {
+const PersonBox: FC<PersonProps> = ({
+    avatarFilename,
+    localeKey,
+    name,
+    socialMedia,
+    role,
+    wordsBeforeNameBreak,
+}) => {
     const { t } = useTranslation()
+    const { firstLine, secondLine } = useSplitText(
+        name,
+        wordsBeforeNameBreak ? wordsBeforeNameBreak : 1
+    )
 
     return (
         <StyledPersonContainer personRole={role}>
@@ -66,7 +77,10 @@ const PersonBox: FC<PersonProps> = ({ avatarFilename, localeKey, name, socialMed
                             {t(`team.team-members.${localeKey}.role`).toUpperCase()}
                         </ColoredText>
                     </Function>
-                    <StyledName>{name}</StyledName>
+                    <StyledNameBox>
+                        <div className="line">{firstLine}</div>
+                        <div className="line">{secondLine}</div>
+                    </StyledNameBox>
                     <StyledDescription>
                         {t(`team.team-members.${localeKey}.description`)}
                     </StyledDescription>

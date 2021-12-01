@@ -14,7 +14,7 @@ import {
 import { MainMenu } from "./MainMenu"
 import { MobileMenu } from "./MobileMenu"
 import { useNavBarScrollEffect } from "./logic"
-import { assetsUrl, BrandAssets } from "config"
+import { BrandAssets } from "config"
 
 const NavBar = () => {
     const [isMobileMenuShown, setIsMobileMenuShown] = useState<boolean>(false)

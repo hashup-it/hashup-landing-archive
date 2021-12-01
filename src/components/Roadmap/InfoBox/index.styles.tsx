@@ -21,7 +21,7 @@ export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
     width: 367px;
     flex-shrink: none;
     height: 475px;
-    padding: 40px 63px;
+    padding: 40px 40px;
     text-align: left;
     position: relative;
     transform-style: preserve-3d;
@@ -118,7 +118,8 @@ export const StyledBullet = styled.li<{ isDone: boolean; bold: boolean }>`
         padding-top: 4px; // To center vertically with icon
         flex: 1;
         font-size: 13px;
-        line-height: 140%;
+        line-height: 130%;
+        font-weight: 300;
 
         ${props =>
             props.bold &&

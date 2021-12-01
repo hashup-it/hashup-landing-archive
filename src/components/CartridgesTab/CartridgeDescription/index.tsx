@@ -11,66 +11,65 @@ import {
     StyledDescriptionBox,
     StyledHook,
     CartridgeTargetContent,
-    CartridgeTargetItem,
+    CartridgeInfoBox,
     CartridgeTargetItemContent,
     CartridgeTargetLabel,
-    StyledDescriptionArea
+    StyledDescriptionArea,
+    StyledFlare
 } from "./index.style"
-import { ReactElement } from "react"
 import { useTranslation } from "react-i18next"
 import { assetsUrl } from "config"
+import { CartridgeInterface, CartridgeType } from "../interfaces"
+import { capitalizeFirstLetter } from "util/string"
 
-interface CartridgeDescriptionProps {
+interface Props extends CartridgeInterface {
     readonly leftBasedLayout: boolean
-    readonly color: string
-    readonly headerCartridgeTypeText: string
-    readonly descriptionText: string
-    readonly targetText: string
-    readonly descriptionListContents: string[]
-    readonly cartridgeModel: ReactElement
-    readonly cartridgeModelMobileUri: string
 }
 
-const CartridgeDescription: FC<CartridgeDescriptionProps> = ({
+const CartridgeDescription: FC<Props> = ({
     leftBasedLayout,
+    type,
     color,
-    headerCartridgeTypeText,
-    descriptionText,
-    targetText,
-    descriptionListContents,
-    cartridgeModel,
-    cartridgeModelMobileUri,
+    numberOfBullets,
+    model3d,
 }) => {
     const { t } = useTranslation()
+    const colorText: string = CartridgeType[type]
 
     return (
         <CartridgeDescriptionContainer leftBasedLayout={leftBasedLayout}>
-            <StyledHook id={headerCartridgeTypeText.toLowerCase()} />
+            <StyledHook id={colorText} />
             <StyledDescriptionArea>
                 <StyledDescriptionBox leftBasedLayout={leftBasedLayout}>
                     <SectionHeader>
-                        <ColoredText color={color}>{headerCartridgeTypeText}</ColoredText> Cartridge
+                        <ColoredText color={color}>{capitalizeFirstLetter(colorText)}</ColoredText>{" "}
+                        Cartridge
                     </SectionHeader>
-                    <StyledLabel>{descriptionText}</StyledLabel>
-                    <CartridgeTargetItem outlineColor={Swatches.cartridge_target_outline_color}>
+                    <StyledLabel>{t(`cartridges-tab.${colorText}.description`)}</StyledLabel>
+                    <CartridgeInfoBox outlineColor={Swatches.cartridge_target_outline_color}>
                         <CartridgeTargetItemContent>
                             <CartridgeTargetLabel>
-                                {t("cartridges-tab-cartridge-for")}
+                                {t("cartridges-tab.cartridge-for")}
                             </CartridgeTargetLabel>
-                            <CartridgeTargetContent>{targetText}</CartridgeTargetContent>
+                            <CartridgeTargetContent>
+                                {t(`cartridges-tab.${colorText}.target`)}
+                            </CartridgeTargetContent>
                         </CartridgeTargetItemContent>
-                    </CartridgeTargetItem>
-                    <StyledBulletList markerResource={assetsUrl("icons/check-green.svg")}>
-                        {descriptionListContents.map(content => (
-                            <li key={content}>{content}</li>
+                    </CartridgeInfoBox>
+                    <StyledBulletList markerResource={assetsUrl(`icons/check-${colorText}.svg`)}>
+                        {Array.from(Array(numberOfBullets).keys()).map((_, index) => (
+                            <li key={index}>
+                                {t(`cartridges-tab.${colorText}.bullet-${index + 1}`)}
+                            </li>
                         ))}
                     </StyledBulletList>
                 </StyledDescriptionBox>
             </StyledDescriptionArea>
-            <StyledImageBox mobileImageUri={cartridgeModelMobileUri}>
+            <StyledImageBox mobileImageUrl={assetsUrl(`models/2d/${colorText}.png`)}>
+                <StyledFlare color={color} />
                 <CartridgeScene
                     cameraDistance={CameraDistance.cartridgesListing}
-                    cartridgeModel={cartridgeModel}
+                    cartridgeModel={model3d}
                 />
             </StyledImageBox>
         </CartridgeDescriptionContainer>

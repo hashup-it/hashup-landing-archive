@@ -119,8 +119,8 @@ export const team: PersonInterface[] = [
             },
             {
                 type: SocialMediaEnum.twitter,
-                url: "https://twitter.com/Kuba_Jaworski"
-            }
+                url: "https://twitter.com/Kuba_Jaworski",
+            },
         ],
     },
     {
@@ -161,6 +161,7 @@ export const team: PersonInterface[] = [
 export const advisors: PersonInterface[] = [
     {
         name: "dr Tomasz R. Smus",
+        wordsBeforeNameBreak: 3,
         localeKey: "tomasz-smus",
         avatarFilename: "tomasz_smus.png",
         socialMedia: [
@@ -172,6 +173,7 @@ export const advisors: PersonInterface[] = [
     },
     {
         name: "prof. Krzysztof Piech",
+        wordsBeforeNameBreak: 2,
         localeKey: "krzysztof-piech",
         avatarFilename: "krzysztof_piech.png",
         socialMedia: [
@@ -196,9 +198,9 @@ export const advisors: PersonInterface[] = [
             },
             {
                 type: SocialMediaEnum.twitter,
-                url: "https://twitter.com/PawelSynapse"
-            }
-        ]
+                url: "https://twitter.com/PawelSynapse",
+            },
+        ],
     },
     {
         name: "Marcin Wenus",

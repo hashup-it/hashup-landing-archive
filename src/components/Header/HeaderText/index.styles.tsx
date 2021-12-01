@@ -102,7 +102,7 @@ export const StyledNewsletterBox = styled.div`
     padding-top: 60px;
 
     ${mediaQuery.tablet} {
-        padding-top: 30px;
+        padding-top: 75px;
     }
 
     .title {

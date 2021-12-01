@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { ComparisonItemContent } from "../../Comparison/index.styles"
-import { StyledSocialMedia } from "../../Header/HeaderBottomNav/index.styles"
 import { Swatches } from "__styles__/Swatches"
 import { RoleEnum } from "./interfaces"
 
@@ -49,7 +48,7 @@ export const Function = styled.div`
     margin-top: 10px;
 `
 
-export const StyledName = styled.div`
+export const StyledNameBox = styled.div`
     font-family: Sora;
     font-size: 24px;
     font-style: normal;
