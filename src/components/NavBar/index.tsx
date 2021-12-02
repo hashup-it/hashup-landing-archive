@@ -2,7 +2,6 @@ import { useState } from "react"
 import Link from "next/link"
 import { ConnectWallet } from "./ConnectWallet"
 import {
-    ButtonsMenu,
     HamburgerButton,
     StyledFullLogo,
     StyledLogoIcon,
@@ -34,9 +33,7 @@ const NavBar = () => {
                 <MobileHideWrapper>
                     <MainMenu isMobileMenuShown={isMobileMenuShown} />
                 </MobileHideWrapper>
-                <ButtonsMenu>
-                    <ConnectWallet />
-                </ButtonsMenu>
+                <ConnectWallet />
                 <HamburgerButton
                     opened={isMobileMenuShown}
                     onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}

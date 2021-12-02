@@ -2,15 +2,16 @@ import styled from "styled-components"
 import { ComparisonItemContent } from "../../Comparison/index.styles"
 import { Swatches } from "__styles__/Swatches"
 import { RoleEnum } from "./interfaces"
+import { mediaQuery } from "components/MediaQuery"
 
 export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
     .outline {
         background: ${props => {
             switch (props.personRole) {
                 case RoleEnum.coreTeam:
-                    return `linear-gradient(${Swatches.primary_color} 0%, transparent 80%)`
+                    return `linear-gradient(${Swatches.primary_color} 0%, ${Swatches.background_main} 80%)`
                 case RoleEnum.team:
-                    return `linear-gradient(#2e2e2d 0%, transparent 80%)`
+                    return `linear-gradient(#2e2e2d 0%, ${Swatches.background_main} 80%)`
                 default:
                     return "auto"
             }
@@ -18,7 +19,16 @@ export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
         padding: 1px;
         border-radius: 40px;
         position: relative;
-        margin-top: 2rem;
+
+        ${mediaQuery.tablet} {
+            width: 290px;
+            margin: auto;
+        }
+    }
+
+    ${mediaQuery.tablet} {
+        margin-top: 60px; //On carousel space for header-avatar
+        width: 320px; // There is some margin added
     }
 `
 
@@ -34,6 +44,8 @@ export const StyledContent = styled(ComparisonItemContent)`
     padding: 60px 32px;
     min-height: 260px;
     position: relative;
+    background: linear-gradient(180deg, #010101 0%, ${Swatches.background_main} 100%);
+    border-radius: 40px;
 `
 
 export const Function = styled.div`

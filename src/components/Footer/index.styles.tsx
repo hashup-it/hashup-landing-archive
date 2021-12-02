@@ -29,7 +29,6 @@ export const FooterTopLeft = styled.div`
 
 export const FooterBottom = styled.div`
     position: relative;
-
     padding: 32px 0px 32px 0px;
     display: flex;
     justify-content: space-between;
@@ -51,10 +50,8 @@ export const Copyright = styled.span`
     font-weight: normal;
     font-size: 14px;
     line-height: 160%;
-
     display: flex;
     align-items: center;
-
     color: #8a8f98;
 `
 
@@ -113,11 +110,9 @@ export const FooterQuickNavigation = styled.div`
 `
 
 export const FooterSeparatorAccent = styled.div`
-    background: url("assets/icons/footer-separator-accent.svg");
-
+    background: url(${() => assetsUrl("icons/footer-separator-accent.svg")});
     width: 280px;
     height: 2px;
-
     position: absolute;
     top: -50px;
     left: -93px;
@@ -128,15 +123,13 @@ export const FooterSeparatorAccent = styled.div`
 
     ${mediaQuery.mobileL} {
         display: none;
-    }
+    };
 `
 
 export const FooterSeparatorBase = styled.div`
-    background: url("assets/icons/footer-separator-base.svg");
-
+    background: url(${() => assetsUrl("icons/footer-separator-base.svg")});
     width: 1440px;
     height: 2px;
-
     position: absolute;
     top: -50px;
     left: -93px;
@@ -157,13 +150,11 @@ export const SocialMediaGroup = styled.div`
 
     > span {
         text-transform: uppercase;
-
         font-family: Sora;
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
         line-height: 100%;
-
         display: flex;
         align-items: center;
         letter-spacing: 0.08em;
@@ -180,12 +171,9 @@ export const FooterLink = styled.div`
     font-weight: normal;
     font-size: 14px;
     line-height: 160%;
-
     display: flex;
     align-items: center;
-
     color: #8a8f98;
-
     margin-left: 33px;
     cursor: pointer;
 
@@ -246,18 +234,14 @@ export const MenuList = styled.ul`
 
 export const ListHeader = styled.div`
     text-transform: uppercase;
-
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 100%;
-
     display: flex;
     align-items: center;
     letter-spacing: 0.08em;
-
     color: #6d6d6d;
-
     margin-bottom: 10px;
 
     ${mediaQuery.tablet} {
@@ -288,12 +272,9 @@ export const ContactField = styled.div`
     font-style: normal;
     font-size: 14px;
     line-height: 180%;
-
     display: flex;
     flex-direction: column;
-
     color: white;
-
     margin-top: 19px;
     margin-bottom: 7.2px;
 `
@@ -328,7 +309,6 @@ export const Icon = styled.div<{ url: string }>`
     border-radius: 50%;
     border: 0.63px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
-
     background: url(${props => props.url});
     background-repeat: no-repeat;
     background-position: center;

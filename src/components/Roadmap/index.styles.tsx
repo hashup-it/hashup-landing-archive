@@ -9,14 +9,17 @@ export const StyledRoadmap = styled.div`
 `
 
 export const StyledCarousele = styled.div`
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
     margin: 80px 0 140px;
-    width: calc(100% + ${globalHorizontalPadding[mediaQuery.desktop]} * 2);
-    margin-left: -${globalHorizontalPadding[mediaQuery.desktop]};
 
     ${mediaQuery.laptopL} {
+        position: static;
         width: calc(100% + ${globalHorizontalPadding[mediaQuery.laptopL]} * 2);
         margin-left: -${globalHorizontalPadding[mediaQuery.laptopL]};
         margin-top: 50px;
+        left: 0;
     }
 
     ${mediaQuery.mobileL} {
@@ -24,10 +27,7 @@ export const StyledCarousele = styled.div`
         margin-left: -${globalHorizontalPadding[mediaQuery.mobileL]};
     }
 
-    .alice-carousel {
-        padding: 10px 0;
-    }
-
+    /* =========== CAROUSEL BOTTOM BUTTONS STYLES ========== */
     .alice-carousel__dots {
         margin-top: 80px;
 
@@ -59,11 +59,15 @@ export const StyledCarousele = styled.div`
             background-color: transparent;
             width: 60px;
 
+            ${mediaQuery.tablet} {
+                width: 38px;
+            }
+
             :before {
                 background-color: ${Swatches.primary_color};
-                width: 60px;
                 background-color: ${Swatches.primary_color};
                 opacity: 1;
+                width: 100%;
             }
         }
     }

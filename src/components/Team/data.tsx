@@ -1,4 +1,5 @@
-import { SocialMediaEnum, PersonInterface } from "./PersonBox/interfaces"
+import { SocialMediaEnum, PersonInterface, RoleEnum } from "./PersonBox/interfaces"
+import PersonBox from "./PersonBox"
 
 export const coreTeam: PersonInterface[] = [
     {
@@ -224,4 +225,43 @@ export const advisors: PersonInterface[] = [
             },
         ],
     },
+]
+
+export const teamItems: JSX.Element[] = [
+    ...coreTeam.map((item, index) => (
+        <PersonBox
+            key={index}
+            avatarFilename={item.avatarFilename}
+            name={item.name}
+            localeKey={item.localeKey}
+            socialMedia={item.socialMedia}
+            role={RoleEnum.coreTeam}
+            wordsBeforeNameBreak={item.wordsBeforeNameBreak}
+        />
+    )),
+    ...team.map((item, index) => (
+        <PersonBox
+            key={index}
+            avatarFilename={item.avatarFilename}
+            name={item.name}
+            localeKey={item.localeKey}
+            socialMedia={item.socialMedia}
+            role={RoleEnum.team}
+            wordsBeforeNameBreak={item.wordsBeforeNameBreak}
+        />
+    )),
+]
+
+export const advisorsItems: JSX.Element[] = [
+    ...advisors.map((item, index) => (
+        <PersonBox
+            key={index}
+            avatarFilename={item.avatarFilename}
+            name={item.name}
+            localeKey={item.localeKey}
+            socialMedia={item.socialMedia}
+            role={RoleEnum.advisor}
+            wordsBeforeNameBreak={item.wordsBeforeNameBreak}
+        />
+    )),
 ]

@@ -6,22 +6,24 @@ export const globalHorizontalPadding = {
     [mediaQuery.desktop]: "93px",
     [mediaQuery.laptop]: "45px",
     [mediaQuery.laptopL]: "60px",
+    [mediaQuery.tablet]: "60px",
     [mediaQuery.mobileL]: "23px",
 }
 
-export const LandingContainer = styled.div`
+export const StyledLandingContainer = styled.div`
     background-color: ${Swatches.background_main};
     min-height: 100vh;
-    padding: 0px ${globalHorizontalPadding[mediaQuery.desktop]};
     color: white;
-    overflow: hidden;
-
-    width: 1240px;
     margin: 0 auto;
+
+    overflow: visible;
+    width: 1240px;
+    padding: 0px ${globalHorizontalPadding[mediaQuery.desktop]};
 
     ${mediaQuery.laptop} {
         width: auto;
         padding: 0px ${globalHorizontalPadding[mediaQuery.laptop]};
+        overflow: hidden;
     }
 
     ${mediaQuery.laptopL} {

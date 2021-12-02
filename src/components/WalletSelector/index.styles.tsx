@@ -72,10 +72,8 @@ export const ConnectionButton = styled(ButtonOutlined)`
     align-items: center;
     width: 50%;
 
-    :nth-child(2) {
-        filter: grayscale(100%);
-        opacity: 0.5;
-        cursor: auto;
+    img {
+        width: 30px;
     }
 
     ${mediaQuery.tablet} {

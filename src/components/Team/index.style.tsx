@@ -1,9 +1,40 @@
 import { mediaQuery } from "components/MediaQuery"
 import styled from "styled-components"
 import { SectionHeader } from "../Shared/sections.styles"
+import { globalHorizontalPadding } from "App.styles"
 
 export const StyledHeader = styled(SectionHeader)`
-    margin-bottom: 80px;
+    margin-bottom: 120px;
+
+    ${mediaQuery.tablet} {
+        margin-bottom: 60px;
+    }
+`
+
+export const StyledTeamDesktopWrapper = styled.div`
+    ${mediaQuery.tablet} {
+        display: none;
+    }
+`
+
+export const StyledTeamMobileWrapper = styled.div`
+    // Mobile only
+    display: none;
+
+    ${mediaQuery.tablet} {
+        display: block;
+    }
+`
+
+export const StyledCarousel = styled.div`
+    margin: 45px 0;
+    width: calc(100% + ${globalHorizontalPadding[mediaQuery.tablet]} * 2);
+    margin-left: -${globalHorizontalPadding[mediaQuery.tablet]};
+
+    ${mediaQuery.mobileL} {
+        width: calc(100% + ${globalHorizontalPadding[mediaQuery.mobileL]} * 2);
+        margin-left: -${globalHorizontalPadding[mediaQuery.mobileL]};
+    }
 `
 
 export const StyledSectionContainer = styled.div`
@@ -28,9 +59,4 @@ export const StyledPeopleContainer = styled.div`
     ${mediaQuery.laptop} {
         grid-template-columns: 1fr 1fr;
     }
-
-    ${mediaQuery.tablet} {
-        grid-template-columns: 1fr;
-    }
-
 `

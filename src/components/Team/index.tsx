@@ -1,12 +1,63 @@
-import { StyledPeopleContainer, StyledHeader, StyledSectionContainer } from "./index.style"
+import { FC } from "react"
+import {
+    StyledPeopleContainer,
+    StyledHeader,
+    StyledSectionContainer,
+    StyledCarousel,
+    StyledTeamMobileWrapper,
+    StyledTeamDesktopWrapper,
+} from "./index.style"
 import { SectionLabel } from "../Shared/sections.styles"
 import { ColoredText } from "../Shared"
 import { useTranslation } from "react-i18next"
-import Person from "./PersonBox"
-import { coreTeam, advisors, team } from "./data"
-import { RoleEnum } from "./PersonBox/interfaces"
+import { teamItems, advisorsItems } from "./data"
+import AliceCarousel from "react-alice-carousel"
+import "react-alice-carousel/lib/alice-carousel.css"
 
-export const Team = () => {
+const Carousel: FC<{ readonly items: JSX.Element[] }> = ({ items }) => (
+    <StyledCarousel>
+        <AliceCarousel
+            items={items}
+            controlsStrategy="alternate"
+            autoWidth
+            disableButtonsControls
+            disableDotsControls
+            mouseTracking
+        />
+    </StyledCarousel>
+)
+
+const TeamMobile = () => {
+    // Mobile version of team boxes with carousel (horizontal scrolling)
+    const { t } = useTranslation()
+
+    return (
+        <StyledTeamMobileWrapper>
+            <StyledHeader>{t("team.team")}</StyledHeader>
+            <Carousel items={teamItems} />
+
+            <StyledHeader>{t("team.advisors")}</StyledHeader>
+            <Carousel items={advisorsItems} />
+        </StyledTeamMobileWrapper>
+    )
+}
+
+const TeamDesktop = () => {
+    // Desktop version of static team boxes
+    const { t } = useTranslation()
+
+    return (
+        <StyledTeamDesktopWrapper>
+            <StyledHeader>{t("team.team")}</StyledHeader>
+            <StyledPeopleContainer>{teamItems}</StyledPeopleContainer>
+
+            <StyledHeader>{t("team.advisors")}</StyledHeader>
+            <StyledPeopleContainer>{advisorsItems}</StyledPeopleContainer>
+        </StyledTeamDesktopWrapper>
+    )
+}
+
+export const TeamSection = () => {
     const { t } = useTranslation()
 
     return (
@@ -15,51 +66,10 @@ export const Team = () => {
                 <ColoredText>{t("team.ourteam")}</ColoredText>
             </SectionLabel>
 
-            <StyledHeader>{t("team.team")}</StyledHeader>
-            <StyledPeopleContainer>
-                <>
-                    {coreTeam.map((item, index) => (
-                        <Person
-                            key={index}
-                            avatarFilename={item.avatarFilename}
-                            name={item.name}
-                            localeKey={item.localeKey}
-                            socialMedia={item.socialMedia}
-                            role={RoleEnum.coreTeam}
-                            wordsBeforeNameBreak={item.wordsBeforeNameBreak}
-                        />
-                    ))}
-
-                    {team.map((item, index) => (
-                        <Person
-                            key={index}
-                            avatarFilename={item.avatarFilename}
-                            name={item.name}
-                            localeKey={item.localeKey}
-                            socialMedia={item.socialMedia}
-                            role={RoleEnum.team}
-                            wordsBeforeNameBreak={item.wordsBeforeNameBreak}
-                        />
-                    ))}
-                </>
-            </StyledPeopleContainer>
-
-            <StyledHeader>{t("team.advisors")}</StyledHeader>
-            <StyledPeopleContainer>
-                {advisors.map((item, index) => (
-                    <Person
-                        key={index}
-                        avatarFilename={item.avatarFilename}
-                        name={item.name}
-                        localeKey={item.localeKey}
-                        socialMedia={item.socialMedia}
-                        role={RoleEnum.advisor}
-                        wordsBeforeNameBreak={item.wordsBeforeNameBreak}
-                    />
-                ))}
-            </StyledPeopleContainer>
+            <TeamDesktop />
+            <TeamMobile />
         </StyledSectionContainer>
     )
 }
 
-export default Team
+export default TeamSection

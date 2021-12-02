@@ -6,6 +6,7 @@ export const StyledConnectWallet = styled.div`
     align-items: flex-start;
     gap: 12px;
     margin-right: 10px;
+    justify-content: right;
 `
 
 export const StyledWalletTextWrapper = styled.div`
@@ -21,16 +22,6 @@ export const StyledAddress = styled.div`
     font-weight: normal;
     font-size: 12px;
     line-height: 20px;
-`
-
-export const WalletHideWrapper = styled.div`
-    ${mediaQuery.mobileM} {
-        display: none;
-    }
-
-    :hover {
-        opacity: 0.9;
-    }
 `
 
 export const WalletIcon = styled.img`

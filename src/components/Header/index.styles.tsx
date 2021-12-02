@@ -45,20 +45,6 @@ export const StyledCartridgeContainer = styled.div`
     z-index: 2;
 
     ${mediaQuery.laptop} {
-        height: 50vh;
-        width: 50vw;
-        margin-bottom: 2em;
         display: none;
-    }
-
-    ${mediaQuery.tablet} {
-        height: 50vw;
-        width: 80vw;
-
-        margin-bottom: 0;
-    }
-
-    ${mediaQuery.mobileL} {
-        height: 50vh;
     }
 `

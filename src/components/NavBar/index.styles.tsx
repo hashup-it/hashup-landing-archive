@@ -71,7 +71,7 @@ export const MenuWrapper = styled.div`
     ${mediaQuery.tablet} {
         grid-template-columns: 50px 1fr auto;
         align-items: center;
-        align-items: center;
+        width: 100%;
     }
 `
 
@@ -101,17 +101,6 @@ export const StyledLogoIcon = styled.img`
         position: absolute;
         top: 22px;
         display: block;
-    }
-`
-
-export const ButtonsMenu = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 60px;
-
-    > * {
-        cursor: pointer;
     }
 `
 

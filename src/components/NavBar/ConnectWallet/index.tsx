@@ -3,7 +3,6 @@ import {
     StyledConnectWallet,
     StyledWalletTextWrapper,
     StyledWrapper,
-    WalletHideWrapper,
     WalletIcon,
 } from "./index.styles"
 import { WalletSelector } from "../../WalletSelector"
@@ -16,7 +15,7 @@ export const ConnectWallet = () => {
     const { t } = useTranslation()
 
     return (
-        <WalletHideWrapper>
+        <>
             <StyledConnectWallet onClick={showWalletSelector}>
                 <StyledWalletTextWrapper>
                     <StyledWrapper>
@@ -31,6 +30,6 @@ export const ConnectWallet = () => {
                 <WalletIcon src={assetsUrl("icons/wallet.svg")} />
             </StyledConnectWallet>
             {isWalletSelectorShown && <WalletSelector />}
-        </WalletHideWrapper>
+        </>
     )
 }

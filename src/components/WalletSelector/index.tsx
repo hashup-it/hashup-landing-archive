@@ -37,11 +37,16 @@ export const WalletSelector = () => {
                         MetaMask
                         <img src={assetsUrl("icons/button-metamask.svg")} alt="Metamask" />
                     </ConnectionButton>
-                    <ConnectionButton>
-                        {t("newsletter.coming-soon")}
+                    <ConnectionButton
+                        onClick={() => {
+                            handleMetamaskConnection()
+                            hideWalletSelector()
+                        }}
+                    >
+                        TrustWallet
                         <img
-                            src={assetsUrl("icons/button-wallet-connect.svg")}
-                            alt="Connect to Metamask"
+                            src={assetsUrl("social-media-icons/trust-wallet.svg")}
+                            alt="Connect to TrustWallet"
                         />
                     </ConnectionButton>
                 </ButtonsContainer>

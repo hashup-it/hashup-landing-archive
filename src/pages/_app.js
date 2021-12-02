@@ -1,6 +1,6 @@
 import { AccountContextProvider } from "context/account"
 import Head from "next/head"
-import { LandingContainer } from "App.styles"
+import { StyledLandingContainer } from "App.styles"
 import Footer from "components/Footer"
 import NavBar from "components/NavBar"
 import { GlobalStyle } from "__styles__/GlobalStyle.style"
@@ -19,13 +19,13 @@ const App = ({ Component, pageProps }) => {
             </Head>
             <AccountContextProvider>
                 <GlobalStyle />
-                <LandingContainer>
+                <StyledLandingContainer>
                     <NavBar />
 
                     <Component {...pageProps} />
 
                     <Footer />
-                </LandingContainer>
+                </StyledLandingContainer>
             </AccountContextProvider>
         </>
     )

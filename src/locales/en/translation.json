@@ -292,6 +292,7 @@
         "cartridge-for": "Cartridge for",
         "description": "The free market. And that's it!",
         "green": {
+            "description": "The free market. It's simple.",
             "target": "Everyone!",
             "bullet-1": "Supply: 0 - 100mln",
             "bullet-2": "Fee for exchange: 0%!",

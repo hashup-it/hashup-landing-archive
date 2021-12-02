@@ -9,8 +9,8 @@ export const StyledWrapper = styled.div`
     flex-shrink: none;
     width: 440px;
 
-    ${mediaQuery.mobileL} {
-        width: 100vw;
+    ${mediaQuery.tablet} {
+        width: 330px;
     }
 `
 
@@ -28,9 +28,9 @@ export const StyledInfoBox = styled.div<{ highlighted: boolean }>`
     background: linear-gradient(180deg, #010101 0%, ${Swatches.background_main} 100%);
     border-radius: 40px;
 
-    ${mediaQuery.mobileL} {
-        padding: 35px 45px;
-        width: 350px;
+    ${mediaQuery.tablet} {
+        padding: 35px 25px;
+        width: calc(100% - 20px); // Make some margin
     }
 
     ${props =>
