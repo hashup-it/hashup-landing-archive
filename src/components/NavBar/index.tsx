@@ -20,29 +20,31 @@ const NavBar = () => {
     const { navBarState } = useNavBarScrollEffect() // For desktop only
 
     return (
-        <StyledNavBar state={navBarState}>
-            <MenuWrapper>
-                <Link href="/" passHref>
-                    <a>
-                        <StyledLogoWrapper>
-                            <StyledLogoIcon src={BrandAssets.logoIcon} />
-                            <StyledFullLogo src={BrandAssets.logo} />
-                        </StyledLogoWrapper>
-                    </a>
-                </Link>
-                <MobileHideWrapper>
-                    <MainMenu isMobileMenuShown={isMobileMenuShown} />
-                </MobileHideWrapper>
-                <ConnectWallet />
-                <HamburgerButton
-                    opened={isMobileMenuShown}
-                    onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
-                />
-                {isMobileMenuShown && (
-                    <MobileMenu opened={isMobileMenuShown} setOpened={setIsMobileMenuShown} />
-                )}
-            </MenuWrapper>
-        </StyledNavBar>
+        <>
+            <StyledNavBar state={navBarState}>
+                <MenuWrapper>
+                    <Link href="/" passHref>
+                        <a>
+                            <StyledLogoWrapper>
+                                <StyledLogoIcon src={BrandAssets.logoIcon} />
+                                <StyledFullLogo src={BrandAssets.logo} />
+                            </StyledLogoWrapper>
+                        </a>
+                    </Link>
+                    <MobileHideWrapper>
+                        <MainMenu isMobileMenuShown={isMobileMenuShown} />
+                    </MobileHideWrapper>
+                    <ConnectWallet />
+                    <HamburgerButton
+                        opened={isMobileMenuShown}
+                        onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
+                    />
+                </MenuWrapper>
+            </StyledNavBar>
+            {isMobileMenuShown && (
+                <MobileMenu opened={isMobileMenuShown} setOpened={setIsMobileMenuShown} />
+            )}
+        </>
     )
 }
 

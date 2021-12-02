@@ -7,7 +7,7 @@ export const StyledMobileMenu = styled.div<{ opened: boolean }>`
     background-color: ${Swatches.background_main};
     height: 100vh;
     width: 100vw;
-    z-index: -1;
+    z-index: 9999;
     left: 0;
     top: 0;
     padding-top: 140px;

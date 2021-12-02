@@ -7,6 +7,8 @@ export const StyledMainMenu = styled.nav`
     list-style-type: none;
     gap: 50px;
     justify-content: center;
+    overflow-y: auto;
+    position: relative;
 
     ${mediaQuery.laptop} {
         gap: 20px;
@@ -18,8 +20,6 @@ export const StyledMainMenu = styled.nav`
         align-items: center;
         gap: 35px;
     }
-
-    overflow-y: auto;
 `
 
 export const MenuItem = styled.span`
