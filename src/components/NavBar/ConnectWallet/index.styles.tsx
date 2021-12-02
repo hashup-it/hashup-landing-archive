@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { mediaQuery } from "../../MediaQuery"
 
 export const StyledConnectWallet = styled.div`
     display: flex;
@@ -7,6 +6,13 @@ export const StyledConnectWallet = styled.div`
     gap: 12px;
     margin-right: 10px;
     justify-content: right;
+    cursor: pointer;
+    transition: opacity 100ms ease;
+
+    :hover {
+        transition: opacity 100ms ease;
+        opacity: 0.8;
+    }
 `
 
 export const StyledWalletTextWrapper = styled.div`

@@ -25,9 +25,11 @@ export const StyledMainMenu = styled.nav`
 export const MenuItem = styled.span`
     display: flex;
     align-items: flex-start;
+    transition: opacity 100ms ease;
 
     :hover {
-        opacity: 0.9;
+        transition: opacity 100ms ease;
+        opacity: 0.8;
     }
 
     > * {

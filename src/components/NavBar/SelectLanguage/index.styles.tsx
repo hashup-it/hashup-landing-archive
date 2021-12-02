@@ -28,13 +28,14 @@ export const StyledLanguageIcon = styled.img`
 export const StyledSelectedLanguage = styled.div`
     cursor: pointer;
     text-transform: uppercase;
-
-    :hover {
-        opacity: 0.9;
-    }
-
     display: flex;
     gap: 10px;
+    transition: opacity 100ms ease;
+
+    :hover {
+        transition: opacity 100ms ease;
+        opacity: 0.8;
+    }
 `
 
 export const StyledLanguageList = styled.ul`
