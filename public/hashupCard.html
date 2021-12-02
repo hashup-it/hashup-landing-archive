@@ -1,0 +1,284 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <style>
+        .background {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            }
+
+        body{
+            margin: 0; 
+            padding: 0;
+            font-family: "Quicksand", sans-serif;
+            display: grid;
+            height: 100vh;
+            max-height: 100vh;
+            grid-template-rows: 48px auto 50px;
+            background-color: #0f1932;
+            color: #97afd5;
+        }
+
+        nav{
+            margin-top: 20px;
+            grid-row: 1 2;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        #logo-string {
+            font-size: 48px;
+            font-family: 'Press Start 2P', cursive;
+        }
+        #logo-string a {
+            text-decoration: none;
+        }
+
+        #hash-string {
+            color: #eee;
+        }
+
+        #up-string {
+            color: #f42f54;
+        }
+
+        #it-string {
+            color: white;
+        }
+
+        main{
+            align-self: center;
+            grid-row: 2 3;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        #form-container{
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin: 0 auto;
+            justify-self: center;
+            border-style: solid;
+            border-radius: 10px;
+            border-color: #f42f54;
+            border-width: 0px;
+            padding: 10px;
+            max-width: 600px;
+        }
+
+        #form-container input{
+            color: WHITE;
+            font-family: Quicksand;
+            width: 100%;
+            font-size: 1.5em;
+            margin: 5px 0 5px 0;
+            padding: 1px;
+            background-color: #0f1932;
+            border-style: solid;
+            border-color: white;
+            border-width: 0 0 1px 0;
+        }
+        #form-container input:focus{
+            outline: none;
+        }
+        #form-container span{
+            color: #f42f54;
+        }
+        #form-container h2{
+            text-align: center;
+        }
+        #form-container p{
+            text-align: center;
+        }
+
+        #submit{
+            background-color: #f42f54;
+            color: #fff;
+            font-size: 1em;
+            padding: 10px;
+            border-radius: 10px;
+            border-width: 0;
+            font-family: "Quicksand", sans-serif;
+        }
+
+        #submit:hover{
+            background-color: #f04b69;
+            box-shadow: 0px 1px 1px 1px rgba(255, 255, 255, 0.4);
+
+        }
+
+        #alert-container{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .alert-box{
+            align-self: center;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            text-align: left;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .yellow-box{
+            background-color: yellow;
+            border-style: solid;
+            border-color: rgb(252, 252, 117);
+            border-width: 2px;
+            color: black;
+        }
+
+        .red-box{
+            background-color: red; 
+            border-style: solid;
+            border-color: rgb(255, 121, 121);
+            border-width: 2px;
+            color: white;
+        }
+
+        .green-box{
+            background-color: green;
+            border-style: solid;
+            border-color: rgb(64, 129, 64);
+            border-width: 2px;
+            color: white;
+        }
+
+        footer{
+            grid-row: 3 4;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script> -->
+    <script type="text/javascript">
+        window.onload = () => {
+    Particles.init({
+        selector: '.background',
+        color: ['#ffffff', '#f42f54', '#97afd5'],
+        maxParticiples: 050,
+        connectParticles: true,
+        responsive: [{
+            breakpoint: 800,
+            options: {
+            maxParticles: 40,
+            connectParticles: false
+          }
+        },
+        {
+            breakpoint: 1200,
+            options: {
+            maxParticles: 30,
+            connectParticles: true
+          }
+        },
+        {
+          breakpoint: 1900,
+          options: {
+          maxParticles: 50,
+          connectParticles: true
+        }
+      },
+    ]
+    });
+}
+    </script>
+    <script type="text/javascript">
+        const displayAlert = (status, message) => {
+    let styler = document.createElement("div");
+
+    switch (status){
+        case '404': 
+            styler.classList.add("red-box");
+            break;
+        case '300': 
+            styler.classList.add("yellow-box")
+            break;
+        case '200': 
+            styler.classList.add("green-box")
+            break;
+        default:
+            break;
+    }
+    styler.classList.add("alert-box");
+    styler.classList.add("animate__animated");
+    styler.classList.add("animate__bounceInLeft");
+   
+    styler.innerHTML = message;
+    document.getElementById("alert-container").appendChild(styler);
+    setTimeout(() => {
+        styler.classList.remove("animate__bounceInLeft");
+        styler.classList.add("animate__fadeOut")
+    }, 3000)
+    setTimeout(() => styler.parentNode.removeChild(styler), 4000);
+}
+
+const sendCodeAndAdress = () => {
+    const address = document.getElementById("adress-input").value;
+    const code = document.getElementById("code-input").value;
+
+        axios.post('https://hashup.it/checkCode', {address, code})
+        .then(response => {
+            displayAlert(response.data.status, response.data.message);
+        })
+        .catch(error => console.error(error));;
+}
+    </script>
+
+
+    <title>Get your Hash</title>
+</head>
+
+<body>
+    <nav>
+        <div class="animate__animated animate__pulse" id="logo-string">
+            <a href="https://hashup.it/">
+                <span id="hash-string">Hash</span><span id="up-string">Up</span><span id="it-string">.it</span>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div class="animate__animated animate__fadeIn" id="form-container">
+            <h2>Podaj dane</h2>
+            <h2><a href="https://hashup.it/howtogethash.pdf" style="text-decoration: none; cursor: pointer; color:rgb(255, 121, 121);">Jak otrzymać #?</a></h2>
+            <p>Wpisz adres swojego portfela BSC oraz wcześniej uzyskany kod, aby pozyskać #hashe!</p>
+                <label for="adress">ADRES PORTFELA BSC<span>*</span>:</label><br>
+                <input type="text" id="adress-input" name="adress"><br><br>
+                <label for="code">KOD PROMOCYJNY<span>*</span>:</label><br>
+                <input type="text" id="code-input" name="code">
+            <p style="text-align: left;"><span>*</span> - pole wymagane.</p>
+            <button id="submit" onclick="sendCodeAndAdress()">WYŚLIJ</button>
+        </div>
+        <div id="alert-container">
+        </div>
+
+    </main>
+    <footer>
+       <p class="animate__animated animate__pulse">@hashup.it 2021</p>
+    </footer>
+
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+</body>
