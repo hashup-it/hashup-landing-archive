@@ -3,12 +3,17 @@ import styled from "styled-components"
 import { SectionHeader } from "../Shared/sections.styles"
 import { globalHorizontalPadding } from "App.styles"
 
-export const StyledHeader = styled(SectionHeader)`
+export const StyledSectionContainer = styled.div`
     margin-bottom: 120px;
 
-    ${mediaQuery.tablet} {
-        margin-bottom: 60px;
+    ${mediaQuery.laptop} {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 80px;
     }
+`
+
+export const StyledHeader = styled(SectionHeader)`
+    margin-bottom: 60px;
 `
 
 export const StyledTeamDesktopWrapper = styled.div`
@@ -26,28 +31,8 @@ export const StyledTeamMobileWrapper = styled.div`
     }
 `
 
-export const StyledCarousel = styled.div`
-    margin: 45px 0;
-    width: calc(100% + ${globalHorizontalPadding[mediaQuery.tablet]} * 2);
-    margin-left: -${globalHorizontalPadding[mediaQuery.tablet]};
-
-    ${mediaQuery.mobileL} {
-        width: calc(100% + ${globalHorizontalPadding[mediaQuery.mobileL]} * 2);
-        margin-left: -${globalHorizontalPadding[mediaQuery.mobileL]};
-    }
-`
-
-export const StyledSectionContainer = styled.div`
-    margin-bottom: 140px;
-
-    ${mediaQuery.laptop} {
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 80px;
-    }
-`
-
 export const StyledPeopleContainer = styled.div`
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 60px 20px;
@@ -58,5 +43,16 @@ export const StyledPeopleContainer = styled.div`
 
     ${mediaQuery.laptop} {
         grid-template-columns: 1fr 1fr;
+    }
+`
+
+export const StyledCarousel = styled.div`
+    margin: 45px 0;
+    width: calc(100% + ${globalHorizontalPadding[mediaQuery.tablet]} * 2);
+    margin-left: -${globalHorizontalPadding[mediaQuery.tablet]};
+
+    ${mediaQuery.mobileL} {
+        width: calc(100% + ${globalHorizontalPadding[mediaQuery.mobileL]} * 2);
+        margin-left: -${globalHorizontalPadding[mediaQuery.mobileL]};
     }
 `

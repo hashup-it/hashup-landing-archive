@@ -5,6 +5,7 @@ import { RoleEnum } from "./interfaces"
 import { mediaQuery } from "components/MediaQuery"
 
 export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
+    margin-top: 60px; // Space for header-avatar
     .outline {
         background: ${props => {
             switch (props.personRole) {
@@ -27,7 +28,6 @@ export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
     }
 
     ${mediaQuery.tablet} {
-        margin-top: 60px; //On carousel space for header-avatar
         width: 320px; // There is some margin added
     }
 `
