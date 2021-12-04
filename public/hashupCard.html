@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="shortcut icon" href="favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     
     <style>
@@ -211,24 +211,31 @@
         const displayAlert = (status, message) => {
     let styler = document.createElement("div");
 
-    switch (status){
-        case '404': 
-            styler.classList.add("red-box");
-            break;
-        case '300': 
-            styler.classList.add("yellow-box")
-            break;
-        case '200': 
-            styler.classList.add("green-box")
-            break;
-        default:
-            break;
+    if (status === 'false') {
+        styler.classList.add("red-box")
+        styler.innerHTML = 'Błąd'; // message;
+    } else {
+        styler.classList.add("green-box")
+        styler.innerHTML = 'Sukces'; // message;
     }
+
+    // switch (status){
+    //     case '404': 
+    //         styler.classList.add("red-box");
+    //         break;
+    //     case '300': 
+    //         styler.classList.add("yellow-box")
+    //         break;
+    //     case '200': 
+    //         styler.classList.add("green-box")
+    //         break;
+    //     default:
+    //         break;
+    // }
     styler.classList.add("alert-box");
     styler.classList.add("animate__animated");
     styler.classList.add("animate__bounceInLeft");
    
-    styler.innerHTML = message;
     document.getElementById("alert-container").appendChild(styler);
     setTimeout(() => {
         styler.classList.remove("animate__bounceInLeft");
@@ -241,9 +248,19 @@ const sendCodeAndAdress = () => {
     const address = document.getElementById("adress-input").value;
     const code = document.getElementById("code-input").value;
 
-        axios.post('https://hashup.it/checkCode', {address, code})
-        .then(response => {
-            displayAlert(response.data.status, response.data.message);
+        axios.post('https://jhgg2etdvvaszlfrr3zjww7gru.appsync-api.eu-west-1.amazonaws.com/graphql', {
+            query: `mutation Mutation {
+                giftCardsCheckCode(address: "${address}", code: "${code}")
+            }`,
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': 'da2-umx34azugvgcpph7bqpuximlbm',
+            }
+        })
+        .then(({ data }) => {
+            displayAlert(data?.data?.giftCardsCheckCode);
+            // displayAlert(response.data.status, response.data.message);
         })
         .catch(error => console.error(error));;
 }
