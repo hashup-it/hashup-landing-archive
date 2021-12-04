@@ -208,6 +208,9 @@
 }
     </script>
     <script type="text/javascript">
+
+        
+
         const displayAlert = (status, message) => {
     let styler = document.createElement("div");
 
@@ -244,9 +247,22 @@
     setTimeout(() => styler.parentNode.removeChild(styler), 4000);
 }
 
+let currentlyProcessing = false;
+const initialText = "WYŚLIJ";
+const loadingText = "PRZETWARZANIE...";
+
 const sendCodeAndAdress = () => {
+    if(currentlyProcessing){
+        console.log("Trwa przetwarzanie...")
+        return;
+    }
+        
+    currentlyProcessing = true;
+
     const address = document.getElementById("adress-input").value;
     const code = document.getElementById("code-input").value;
+
+    document.getElementById("submit").innerHTML = loadingText;
 
         axios.post('https://jhgg2etdvvaszlfrr3zjww7gru.appsync-api.eu-west-1.amazonaws.com/graphql', {
             query: `mutation Mutation {
@@ -261,6 +277,8 @@ const sendCodeAndAdress = () => {
         .then(({ data }) => {
             displayAlert(data?.data?.giftCardsCheckCode);
             // displayAlert(response.data.status, response.data.message);
+            document.getElementById("submit").innerHTML = initialText;
+            currentlyProcessing = false;
         })
         .catch(error => console.error(error));;
 }
