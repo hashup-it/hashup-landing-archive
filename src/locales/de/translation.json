@@ -336,5 +336,10 @@
         "label": "Modernste Technologie",
         "header-1": "Technologie",
         "header-2": "Stack"
+    },
+    "languages": {
+        "pl": "polieren",
+        "en": "englisch",
+        "de": "deutsch"
     }
 }

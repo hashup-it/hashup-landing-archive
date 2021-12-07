@@ -73,6 +73,9 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
                     <Hyperlink href={SocialMediaUrls.instagram}>
                         <img src={SocialMediaIcons.instagram} alt="Instagram" />
                     </Hyperlink>
+                    <Hyperlink href={SocialMediaUrls.discord}>
+                        <img src={SocialMediaIcons.discord} alt="Discord" />
+                    </Hyperlink>
                 </StyledSocialMediaBox>
             </StyledDataGroup>
         </StyledHeaderBottom>

@@ -16,7 +16,7 @@ import {
 import { SelectLanguage } from "../SelectLanguage"
 import { useTranslation } from "react-i18next"
 import Link from "next/link"
-import { SocialMediaIcons, SocialMediaUrls } from "config"
+import { Documents, SocialMediaIcons, SocialMediaUrls } from "config"
 
 export const MainMenu = ({
     isMobileMenuShown,
@@ -72,6 +72,9 @@ export const MainMenu = ({
                         <a href={SocialMediaUrls.instagram}>
                             <Icon url={SocialMediaIcons.instagram} />
                         </a>
+                        <a href={SocialMediaUrls.discord}>
+                            <Icon url={SocialMediaIcons.discord} />
+                        </a>
                     </SocialMediaGroup>
                     <FooterTop>
                         <ListHeader>{t("footer.headquarters")}</ListHeader>
@@ -95,17 +98,15 @@ export const MainMenu = ({
                     <FooterBottom>
                         <FooterBottomGroup>
                             <FooterLink>
-                                <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
+                                <Hyperlink href={Documents.termsAndConditions}>
                                     Terms & Conditions
                                 </Hyperlink>
                             </FooterLink>
                             <FooterLink>
-                                <Hyperlink href="/documents/Data_Protection_Policy.pdf">
-                                    Privacy Policy
-                                </Hyperlink>
+                                <Hyperlink href={Documents.privacyPolicy}>Privacy Policy</Hyperlink>
                             </FooterLink>
                             <FooterLink>
-                                <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
+                                <Hyperlink href={Documents.airdropTermsOfUse}>
                                     Airdrop Terms of Use
                                 </Hyperlink>
                             </FooterLink>

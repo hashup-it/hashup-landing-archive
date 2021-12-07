@@ -30,7 +30,7 @@ import { Newsletter } from "./Newsletter"
 import { Hyperlink } from "../Shared/sections.styles"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
-import { assetsUrl, SocialMediaUrls, SocialMediaIcons, BrandAssets } from "config"
+import { assetsUrl, SocialMediaUrls, SocialMediaIcons, BrandAssets, Documents } from "config"
 
 const CURRENT_YEAR = new Date().getFullYear()
 
@@ -64,6 +64,9 @@ export const Footer = () => {
                     </a>
                     <a href={SocialMediaUrls.instagram}>
                         <Icon url={SocialMediaIcons.instagram} />
+                    </a>
+                    <a href={SocialMediaUrls.discord}>
+                        <Icon url={SocialMediaIcons.discord} />
                     </a>
                 </SocialMediaGroup>
             </FooterHeading>
@@ -130,17 +133,15 @@ export const Footer = () => {
                 <Copyright>Copyright © {CURRENT_YEAR} by HashUp. All Rights Reserved.</Copyright>
                 <FooterBottomGroup>
                     <FooterLink>
-                        <Hyperlink href="/documents/Hash_Token_Terms_of_Use.pdf">
+                        <Hyperlink href={Documents.termsAndConditions}>
                             Terms & Conditions
                         </Hyperlink>
                     </FooterLink>
                     <FooterLink>
-                        <Hyperlink href="/documents/Data_Protection_Policy.pdf">
-                            Privacy Policy
-                        </Hyperlink>
+                        <Hyperlink href={Documents.privacyPolicy}>Privacy Policy</Hyperlink>
                     </FooterLink>
                     <FooterLink>
-                        <Hyperlink href="/documents/Hash_Token_Airdrop_Terms_and_Conditions.pdf">
+                        <Hyperlink href={Documents.airdropTermsOfUse}>
                             Airdrop Terms of Use
                         </Hyperlink>
                     </FooterLink>

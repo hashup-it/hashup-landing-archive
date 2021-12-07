@@ -1,11 +1,14 @@
 export const scriptsUrl = (path: string): string => `/scripts/${path}`
 export const assetsUrl = (path: string): string => `/assets/${path}`
+export const documentsUrl = (path: string): string => `/documents/${path}`
 
-export const Languages = {
-    en: "en",
-    pl: "pl",
-    de: "de",
-} as const
+export enum Languages {
+    en = "en",
+    pl = "pl",
+    de = "de",
+}
+
+export const langsOfWhitepaper: string[] = [Languages.en, Languages.pl]
 
 export const SocialMediaUrls = {
     facebook: "https://www.facebook.com/HashUpIt",
@@ -35,4 +38,10 @@ const brandAssetsUrl = (filename: string): string => assetsUrl(`brand/${filename
 export const BrandAssets = {
     logoIcon: brandAssetsUrl("logo-icon.svg"),
     logo: brandAssetsUrl("logo.svg"),
+} as const
+
+export const Documents = {
+    termsAndConditions: documentsUrl("Hash_Token_Terms_of_Use.pdf"),
+    airdropTermsOfUse: documentsUrl("Hash_Token_Airdrop_Terms_and_Conditions.pdf"),
+    privacyPolicy: documentsUrl("Data_Protection_Policy.pdf"),
 } as const

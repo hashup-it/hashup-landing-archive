@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react"
 import { BoldText, ColoredText } from "../Shared"
 import {
+    StyledContentRow,
+    // -----
     StyledAfterConnectOptions,
     StyledAirdropSection,
     StyledAirdropBox,
-    StyledAirdropHeader,
+    StyledHeaderBox,
     StyledAirdropInfo,
-    StyledAirdropMain,
+    StyledInputBox,
     StyledAirdropReferral,
     StyledBeforeConnectWrapper,
     StyledCopyReferral,
@@ -19,8 +21,7 @@ import {
     StyledInputButtonFill,
     StyledInputIcon,
     StyledInputWrapper,
-    StyledMainHeader,
-    StyledMainSmall,
+    StyledInputHeader,
     StyledReferralInfo,
     StyledBackgroundFlare,
 } from "./index.styles"
@@ -31,32 +32,29 @@ import { AirdropPopup } from "./AirdropPopup"
 import { useTranslation } from "react-i18next"
 import { useAccountContext } from "context/account"
 import { assetsUrl } from "config"
-import { parse } from "query-string"
 
 const queryString = require("query-string")
 const BLOCKCHAIN_PROVIDER_URI = "https://bsc-dataseed.binance.org"
 
 const Airdrop = () => {
+    /* 
+        This is the most shitty code I've ever seen.
+        I'm scared when I think about touching it.
+        Someone has to clean that swamp.
+    */
     const [buddy, setBuddy] = useState<string | null>(null)
     const { account, showWalletSelector } = useAccountContext()
     const { t } = useTranslation()
 
-
-
-    if (typeof window !== "undefined") {
-    }
-
     useEffect(() => {
         const parsed = queryString.parse(window.location.search)
-        
-        if(parsed.buddy) 
-        {
-            localStorage.setItem('buddy', parsed.buddy);
+
+        if (parsed.buddy) {
+            localStorage.setItem("buddy", parsed.buddy)
         }
 
-        setBuddy(localStorage.getItem('buddy'))
+        setBuddy(localStorage.getItem("buddy"))
     }, [])
-
 
     const inputElement = useRef<any>(null)
 
@@ -98,7 +96,6 @@ const Airdrop = () => {
     }
 
     const handleNicknameInput = (event: any) => {
-
         if (!airdropDisabled) {
             setNicknameInput(event.target.value)
         }
@@ -110,7 +107,6 @@ const Airdrop = () => {
     }
 
     const handleLoginButton = async () => {
-
         if (account) {
             if (userNickname != "") return
 
@@ -174,7 +170,7 @@ const Airdrop = () => {
         <StyledAirdropSection>
             <StyledBackgroundFlare />
             <StyledAirdropBox>
-                <StyledAirdropHeader>
+                <StyledHeaderBox>
                     Join the{" "}
                     <BoldText>
                         Big <ColoredText>Airdrop</ColoredText>
@@ -183,10 +179,12 @@ const Airdrop = () => {
                     <BoldText>
                         <ColoredText>#</ColoredText>HashUp
                     </BoldText>
-                </StyledAirdropHeader>
-                <StyledAirdropMain>
-                    <StyledMainHeader>{t("airdrop.reserve")}</StyledMainHeader>
-                    <StyledMainSmall>{t("airdrop.nick")}</StyledMainSmall>
+                </StyledHeaderBox>
+                <StyledInputBox>
+                    <StyledInputHeader>
+                        <div className="title">{t("airdrop.reserve")}</div>
+                        <div className="caption">{t("airdrop.nick")}</div>
+                    </StyledInputHeader>
                     <StyledInputWrapper>
                         <StyledInputIcon />
                         <StyledInput
@@ -202,7 +200,7 @@ const Airdrop = () => {
                             <StyledInputButtonFill isDisabled={airdropDisabled} />
                         </StyledInputButton>
                     </StyledInputWrapper>
-                </StyledAirdropMain>
+                </StyledInputBox>
                 <StyledAirdropInfo>
                     <StyledInfoItem>
                         <StyledInfoLabel>{t("airdrop.hash-left")}</StyledInfoLabel>

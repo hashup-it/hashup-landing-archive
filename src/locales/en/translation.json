@@ -337,5 +337,10 @@
         "label": "Cutting-edge technologies",
         "header-1": "Tech",
         "header-2": "stack"
+    },
+    "languages": {
+        "pl": "polish",
+        "en": "english",
+        "de": "german"
     }
 }

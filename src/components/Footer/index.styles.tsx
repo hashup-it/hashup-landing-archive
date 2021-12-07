@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { mediaQuery } from "../MediaQuery"
 import { Swatches } from "../../__styles__/Swatches"
-import { assetsUrl } from "config"
+import { assetsUrl, SocialMediaIcons } from "config"
 
 export const StyledFooter = styled.div`
     position: relative;
@@ -123,7 +123,7 @@ export const FooterSeparatorAccent = styled.div`
 
     ${mediaQuery.mobileL} {
         display: none;
-    };
+    } ;
 `
 
 export const FooterSeparatorBase = styled.div`
@@ -137,32 +137,6 @@ export const FooterSeparatorBase = styled.div`
 
 export const FooterMetaSeparator = styled(FooterSeparatorBase)`
     top: 0;
-`
-
-export const SocialMediaGroup = styled.div`
-    align-items: center;
-    display: flex;
-    gap: 15px;
-
-    :last-child {
-        margin-left: 0;
-    }
-
-    > span {
-        text-transform: uppercase;
-        font-family: Sora;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 100%;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.08em;
-
-        ${mediaQuery.mobileL} {
-            display: none;
-        }
-    }
 `
 
 export const FooterLink = styled.div`
@@ -316,8 +290,40 @@ export const Icon = styled.div<{ url: string }>`
     :hover {
         border-color: white;
     }
+
+    ${props =>
+        props.url === SocialMediaIcons.discord &&
+        css`
+            background-size: 20px;
+        `}
 `
 
 export const Logo = styled.img`
     cursor: pointer;
+`
+
+export const SocialMediaGroup = styled.div`
+    align-items: center;
+    display: flex;
+    gap: 15px;
+
+    :last-child {
+        margin-left: 0;
+    }
+
+    > span {
+        text-transform: uppercase;
+        font-family: Sora;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.08em;
+
+        ${mediaQuery.mobileL} {
+            display: none;
+        }
+    }
 `

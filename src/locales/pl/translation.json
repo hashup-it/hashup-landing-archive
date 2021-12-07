@@ -336,5 +336,10 @@
         "label": "Najnowocześniejsze technologie",
         "header-1": "Stos",
         "header-2": "technologiczny"
+    },
+    "languages": {
+        "pl": "polski",
+        "en": "angielski",
+        "de": "niemiecki"
     }
 }

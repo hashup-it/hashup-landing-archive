@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { mediaQuery } from "components/MediaQuery"
 import { Swatches } from "__styles__/Swatches"
 import { assetsUrl } from "config"
@@ -95,6 +95,71 @@ export const HeaderGetAirdrop = styled.div`
 
     ${mediaQuery.tablet} {
         flex: 1;
+    }
+`
+
+export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 16px 32px 16px 32px;
+    font-family: Sora;
+    font-style: normal;
+    color: ${Swatches.text_main};
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    background-color: ${Swatches.background_main};
+
+    ${props =>
+        props.isMenuShown &&
+        css`
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: 1px solid transparent;
+        `}
+`
+
+export const StyledWhitepaperMenu = styled.div`
+    position: absolute;
+    background-color: ${Swatches.background_main};
+    top: 100%;
+    left: -1px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #ffffff;
+    border-top: 0.5px solid white;
+    width: 100%;
+`
+
+export const StyledWhitepaperLangItem = styled.a`
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    ${mediaQuery.tablet} {
+        padding: 20px 12px;
+    }
+
+    :hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    img {
+        margin-left: 15px;
+        margin-right: 12px;
     }
 `
 

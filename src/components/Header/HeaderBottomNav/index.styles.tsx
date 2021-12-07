@@ -79,7 +79,7 @@ export const StyledSocialMediaBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 
     ${mediaQuery.tablet} {
         margin-top: 55px;

@@ -1,4 +1,5 @@
-import { ButtonOutlined, ColoredText } from "../../Shared"
+import { FC } from "react"
+import { ColoredText } from "../../Shared"
 import { Hyperlink } from "../../Shared/sections.styles"
 import {
     StyledButtonsBox,
@@ -11,8 +12,47 @@ import {
     StyledForm,
     StyledNewsletterBox,
     StyledTitle,
+    StyledWhitepaperBox,
+    StyledWhitepaperMenu,
+    StyledWhitepaperLangItem,
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
+import i18n from "i18n"
+import { getWhitepaper } from "util/whitepaper"
+import { useState } from "react"
+import { assetsUrl, Languages } from "config"
+
+const WhitepaperLangItem: FC<{ readonly lang: Languages }> = ({ lang }) => {
+    const { t } = useTranslation()
+
+    return (
+        <StyledWhitepaperLangItem href={getWhitepaper(lang)}>
+            <img src={assetsUrl("icons/document.svg")} alt={`HashUp Whitepaper - ${lang}`} />
+            {t(`languages.${lang}`)}
+        </StyledWhitepaperLangItem>
+    )
+}
+
+const WhitepaperButton = () => {
+    const [isMenuShown, setIsMenuShown] = useState<boolean>(false)
+
+    return (
+        <StyledWhitepaperBox
+            onClick={() => setIsMenuShown(!isMenuShown)}
+            onMouseEnter={() => setIsMenuShown(true)}
+            onMouseLeave={() => setIsMenuShown(false)}
+            isMenuShown={isMenuShown}
+        >
+            Whitepaper
+            {isMenuShown && (
+                <StyledWhitepaperMenu>
+                    <WhitepaperLangItem lang={Languages.en} />
+                    <WhitepaperLangItem lang={Languages.pl} />
+                </StyledWhitepaperMenu>
+            )}
+        </StyledWhitepaperBox>
+    )
+}
 
 export const HeaderText = () => {
     const { t } = useTranslation()
@@ -25,7 +65,7 @@ export const HeaderText = () => {
             </StyledTitle>
             <StyledParagraph>{t("header.description")}</StyledParagraph>
             <StyledButtonsBox>
-                <ButtonOutlined href="/documents/Whitepaper.pdf">Whitepaper</ButtonOutlined>
+                <WhitepaperButton />
                 <Hyperlink href="/#airdrop">
                     <HeaderAirdropWrapper>
                         <HeaderAirdropIcon />

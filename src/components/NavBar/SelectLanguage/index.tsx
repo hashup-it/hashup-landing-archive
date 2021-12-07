@@ -7,9 +7,7 @@ import {
     StyledSelectedLanguage,
 } from "./index.styles"
 import i18n from "i18n"
-import { assetsUrl } from "config"
-
-const Languages: string[] = ["pl", "en", "de"]
+import { assetsUrl, Languages } from "config"
 
 export const SelectLanguage = () => {
     const [language, setLanguage] = useState<string>(i18n.language)
@@ -34,7 +32,7 @@ export const SelectLanguage = () => {
             </StyledSelectedLanguage>
             {isClicked && (
                 <StyledLanguageList>
-                    {Languages.map((lng, index) => (
+                    {Object.values(Languages).map((lng, index) => (
                         <StyledLanguageOption
                             value={lng}
                             key={index}

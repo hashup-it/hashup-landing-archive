@@ -32,7 +32,7 @@ export const StyledAirdropBox = styled.div`
     grid-template-columns: 1fr 1.4fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-        "header main"
+        "header input"
         "info referral";
     column-gap: 45px;
     row-gap: 45px;
@@ -41,7 +41,7 @@ export const StyledAirdropBox = styled.div`
     ${mediaQuery.laptop} {
         grid-template-areas:
             "header info"
-            "main main"
+            "input input"
             "referral referral";
         grid-template-columns: 1fr 1fr;
     }
@@ -50,14 +50,18 @@ export const StyledAirdropBox = styled.div`
         grid-template-areas:
             "header header"
             "info info"
-            "main main"
+            "input input"
             "referral referral";
         row-gap: 20px;
         padding: 52px 0;
     }
 `
 
-export const StyledAirdropHeader = styled.h1`
+export const StyledContentRow = styled.div`
+    background-color: red;
+`
+
+export const StyledHeaderBox = styled.h1`
     grid-area: header;
     font-style: normal;
     font-weight: normal;
@@ -73,34 +77,37 @@ export const StyledAirdropHeader = styled.h1`
     }
 `
 
-export const StyledAirdropMain = styled.div`
-    grid-area: main;
+export const StyledInputBox = styled.div`
+    grid-area: input;
 `
 
-export const StyledMainHeader = styled.h3`
+export const StyledInputHeader = styled.div`
     font-weight: normal;
-    font-size: 18px;
     line-height: 23px;
     margin-top: 15px;
     margin-bottom: 0;
-
+    
     ${mediaQuery.laptop} {
         text-align: center;
     }
-
+    
     ${mediaQuery.tablet} {
         margin-bottom: 0px;
     }
-`
+    
+    div.title {
+        font-size: 18px;
+    }
+    div.caption {
+        margin-top: 10px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: #646e83;
 
-export const StyledMainSmall = styled.p`
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    color: #646e83;
-
-    ${mediaQuery.laptop} {
-        text-align: center;
+        ${mediaQuery.laptop} {
+            text-align: center;
+        }
     }
 `
 
@@ -180,7 +187,8 @@ export const StyledBeforeConnectWrapper = styled.div`
 
 export const StyledInputButtonFill = styled.div<{ isDisabled: boolean }>`
     background-color: #010101;
-    background-image: url(${props =>assetsUrl(`icons/${props.isDisabled ? "check.svg" : "save.svg"}`)});
+    background-image: url(${props =>
+        assetsUrl(`icons/${props.isDisabled ? "check.svg" : "save.svg"}`)});
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
