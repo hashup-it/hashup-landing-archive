@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { mediaQuery } from "../MediaQuery"
 import { Swatches } from "__styles__/Swatches"
-import { assetsUrl } from "config"
+import { assetsUrl, SocialMediaIcons } from "config"
 
 export const StyledAirdropSection = styled.div`
     position: relative;
@@ -24,10 +24,11 @@ export const StyledBackgroundFlare = styled.div`
 
 export const StyledAirdropBox = styled.div`
     position: relative;
+    box-sizing: border-box;
     z-index: 9;
     background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
     border-top: 4px solid ${Swatches.primary_color};
-    padding: 52px 6.25%;
+    padding: 65px 125px;
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     grid-template-rows: auto auto;
@@ -36,29 +37,19 @@ export const StyledAirdropBox = styled.div`
         "info referral";
     column-gap: 45px;
     row-gap: 45px;
-    margin-bottom: 25vh;
+    margin-bottom: 110px;
 
     ${mediaQuery.laptop} {
-        grid-template-areas:
-            "header info"
-            "input input"
-            "referral referral";
-        grid-template-columns: 1fr 1fr;
+        padding: 65px 45px;
     }
 
     ${mediaQuery.tablet} {
-        grid-template-areas:
-            "header header"
-            "info info"
-            "input input"
-            "referral referral";
-        row-gap: 20px;
-        padding: 52px 0;
+        display: flex;
+        flex-direction: column;
+        padding: 27px;
+        column-gap: 0;
+        row-gap: 0;
     }
-`
-
-export const StyledContentRow = styled.div`
-    background-color: red;
 `
 
 export const StyledHeaderBox = styled.h1`
@@ -67,7 +58,7 @@ export const StyledHeaderBox = styled.h1`
     font-weight: normal;
     margin-top: 0;
     padding-top: 0;
-    font-size: 32.2483px;
+    font-size: 32px;
     max-width: 340px;
     line-height: 140%;
 
@@ -75,10 +66,20 @@ export const StyledHeaderBox = styled.h1`
         text-align: center;
         max-width: 100%;
     }
+
+    ${mediaQuery.tablet} {
+        text-align: left;
+        width: auto;
+        font-size: 28px;
+    }
 `
 
 export const StyledInputBox = styled.div`
     grid-area: input;
+
+    ${mediaQuery.tablet} {
+        margin-top: -10px;
+    }
 `
 
 export const StyledInputHeader = styled.div`
@@ -86,15 +87,8 @@ export const StyledInputHeader = styled.div`
     line-height: 23px;
     margin-top: 15px;
     margin-bottom: 0;
-    
-    ${mediaQuery.laptop} {
-        text-align: center;
-    }
-    
-    ${mediaQuery.tablet} {
-        margin-bottom: 0px;
-    }
-    
+    text-align: left;
+
     div.title {
         font-size: 18px;
     }
@@ -105,47 +99,60 @@ export const StyledInputHeader = styled.div`
         line-height: 15px;
         color: #646e83;
 
-        ${mediaQuery.laptop} {
-            text-align: center;
+        ${mediaQuery.tablet} {
+            font-size: 14px;
         }
     }
 `
 
 const inputHeight = 63
 export const StyledInputWrapper = styled.div`
-    height: ${inputHeight}px;
-    display: grid;
-    width: 500px;
-    grid-template-columns: ${inputHeight}px auto ${inputHeight}px;
+    display: flex;
     margin-top: 30px;
+    position: relative;
 
-    ${mediaQuery.laptop} {
-        width: auto;
+    div.icon {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        z-index: 9;
+        top: 18px;
+        left: 12px;
+        background-image: url(${() => assetsUrl("icons/user.svg")});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    input {
+        background-color: #ffffff;
+        border: none;
+        font-weight: normal;
+        font-size: 14px;
+        color: #222;
+        display: block;
+        width: 100%;
+        padding: 20px;
+        padding-left: 45px; // Space for icon
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 24px 0px 0px 4px;
+
+        ${mediaQuery.tablet} {
+            border-radius: 4px;
+        }
+
+        :focus {
+            outline: none;
+        }
+    }
+
+    ${mediaQuery.tablet} {
+        flex-direction: column;
     }
 `
 
-export const StyledInputIcon = styled.div`
-    background-color: #ffffff;
-    border-radius: 24px 0px 0px 4px;
-    background-image: url(${() => assetsUrl("icons/user.svg")});
-    background-position: center;
-    background-repeat: no-repeat;
-`
-
-export const StyledInput = styled.input`
-    background-color: #ffffff;
-    border: none;
-    font-weight: normal;
-    font-size: 0.9rem;
-    line-height: 18px;
-    color: #222;
-
-    :focus {
-        outline: none;
-    }
-`
-
-export const StyledInputButton = styled.div<{ isDisabled: boolean }>`
+export const StyledInputButton = styled.button<{ isDisabled: boolean }>`
     background: ${props =>
         props.isDisabled
             ? `linear-gradient(90deg, ${Swatches.background_main} 35%, ${Swatches.text_secondary} 100%)`
@@ -153,9 +160,66 @@ export const StyledInputButton = styled.div<{ isDisabled: boolean }>`
     position: relative;
     border-radius: 0px 4px 4px 0px;
     cursor: ${props => (props.isDisabled ? "cursor" : "pointer")};
+    border: 0;
+    width: 63px;
+
+    ${mediaQuery.tablet} {
+        height: 63px;
+        width: 100%;
+        margin: 7px auto 43px;
+        border-radius: 4px;
+    }
+
+    div.fill {
+        background-color: #010101;
+        position: absolute;
+        width: calc(100% - 1px);
+        height: calc(100% - 2px);
+        top: 1px;
+        left: 0;
+        border-radius: inherit;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 16px;
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        :hover {
+            :after {
+                background-image: url(${() => assetsUrl("icons/check.svg")});
+            }
+        }
+
+        :after {
+            display: block;
+            content: "";
+            width: 30px;
+            height: 30px;
+            background-image: url(${props =>
+                assetsUrl(`icons/${props.isDisabled ? "check.svg" : "save.svg"}`)});
+            background-position: center;
+            background-repeat: no-repeat;
+
+            ${mediaQuery.tablet} {
+                margin-left: 10px;
+            }
+        }
+
+        span.text {
+            display: none;
+
+            ${mediaQuery.tablet} {
+                display: inline-block;
+            }
+        }
+    }
 `
 
-export const StyledBeforeConnectWrapper = styled.div`
+export const StyledConnectButton = styled.button`
     color: ${Swatches.primary_color};
     font-weight: normal;
     font-size: 12px;
@@ -166,8 +230,9 @@ export const StyledBeforeConnectWrapper = styled.div`
     border: 1px dashed ${Swatches.primary_color};
     border-radius: 6px;
     cursor: pointer;
-    width: 500px;
+    width: 100%;
     box-sizing: border-box;
+    background-color: transparent;
 
     :after {
         content: "";
@@ -175,31 +240,14 @@ export const StyledBeforeConnectWrapper = styled.div`
         margin-left: 12px;
         height: 15px;
         display: inline-block;
-        background-image: url(${() => assetsUrl("icons/metamask.svg")});
+        background-image: url(${() => SocialMediaIcons.metamask});
         background-position: center;
         background-repeat: no-repeat;
     }
 
     ${mediaQuery.tablet} {
-        width: 300px;
-    }
-`
-
-export const StyledInputButtonFill = styled.div<{ isDisabled: boolean }>`
-    background-color: #010101;
-    background-image: url(${props =>
-        assetsUrl(`icons/${props.isDisabled ? "check.svg" : "save.svg"}`)});
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: calc(100% - 1px);
-    height: calc(100% - 2px);
-    top: 1px;
-    left: 0;
-    border-radius: inherit;
-
-    :hover {
-        background-image: url(${() => assetsUrl("icons/check.svg")});
+        text-align: left;
+        padding: 15px 25px;
     }
 `
 
@@ -220,7 +268,7 @@ export const StyledAirdropInfo = styled.div`
     }
 
     ${mediaQuery.tablet} {
-        margin-top: 0;
+        display: none;
     }
 `
 

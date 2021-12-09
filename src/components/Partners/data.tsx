@@ -40,4 +40,10 @@ export const partnersData: LogoInterface[] = [
         logoPath: partnersLogoUrl("flybridge.png"),
         logoAlt: "Flybridge",
     },
+    {
+        className: "synapse",
+        href: "https://synapse.network/",
+        logoPath: partnersLogoUrl("synapse.png"),
+        logoAlt: "Synapse",
+    },
 ]

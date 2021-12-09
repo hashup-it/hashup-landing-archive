@@ -35,6 +35,7 @@
         "price": "Cena #:",
         "connect": "Połącz się z Metamask by skopiować reflink",
         "nick-input": "Wpisz swój nowy nick HashUp",
+        "save": "zapisz",
         "popup": {
             "header": "Udało się!",
             "text-sent": "Właśnie wysłaliśmy twoje pierwsze ",

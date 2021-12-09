@@ -35,6 +35,7 @@
         "price": "Preis #: ",
         "connect": "Verbinden Sie sich mit Metamask, um Ihren Reflink zu kopieren",
         "nick-input": "Geben Sie Ihren neuen HashUp-Spitznamen ein",
+        "save": "Speichern",
         "popup": {
             "header": "Erfolgreich!",
             "text-sent": "Wir haben gerade Ihr erstes ",

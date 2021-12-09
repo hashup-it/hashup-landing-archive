@@ -1,6 +1,6 @@
-import { FunctionComponent } from "react"
+import { FC } from "react"
 import { ColoredText } from "../Shared"
-import { Swatches } from "../../__styles__/Swatches"
+import { Swatches } from "__styles__/Swatches"
 import {
     ComparisonItem,
     ComparisonItemContent,
@@ -14,9 +14,7 @@ import {
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
 
-interface ComparisonProps {}
-
-const Comparison: FunctionComponent<ComparisonProps> = () => {
+const Comparison: FC = () => {
     const { t } = useTranslation()
 
     return (

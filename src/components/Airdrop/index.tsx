@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { BoldText, ColoredText } from "../Shared"
 import {
-    StyledContentRow,
-    // -----
     StyledAfterConnectOptions,
     StyledAirdropSection,
     StyledAirdropBox,
@@ -10,16 +8,13 @@ import {
     StyledAirdropInfo,
     StyledInputBox,
     StyledAirdropReferral,
-    StyledBeforeConnectWrapper,
+    StyledConnectButton,
     StyledCopyReferral,
     StyledCopyReferralIcon,
     StyledInfoItem,
     StyledInfoLabel,
     StyledInfoValue,
-    StyledInput,
     StyledInputButton,
-    StyledInputButtonFill,
-    StyledInputIcon,
     StyledInputWrapper,
     StyledInputHeader,
     StyledReferralInfo,
@@ -186,8 +181,8 @@ const Airdrop = () => {
                         <div className="caption">{t("airdrop.nick")}</div>
                     </StyledInputHeader>
                     <StyledInputWrapper>
-                        <StyledInputIcon />
-                        <StyledInput
+                        <div className="icon" />
+                        <input
                             placeholder={t("airdrop.nick-input")}
                             onChange={handleNicknameInput}
                             disabled={airdropDisabled}
@@ -197,7 +192,9 @@ const Airdrop = () => {
                             isDisabled={airdropDisabled}
                             onClick={() => handleLoginButton()}
                         >
-                            <StyledInputButtonFill isDisabled={airdropDisabled} />
+                            <div className="fill">
+                                <span className="text">{t("airdrop.save")}</span>
+                            </div>
                         </StyledInputButton>
                     </StyledInputWrapper>
                 </StyledInputBox>
@@ -212,14 +209,14 @@ const Airdrop = () => {
                     </StyledInfoItem>
                     <StyledInfoItem>
                         <StyledInfoLabel>{t("airdrop.price")}</StyledInfoLabel>
-                        <StyledInfoValue>0.02 $</StyledInfoValue>
+                        <StyledInfoValue>0.02$</StyledInfoValue>
                     </StyledInfoItem>
                 </StyledAirdropInfo>
                 <StyledAirdropReferral>
                     {!account && (
-                        <StyledBeforeConnectWrapper onClick={showWalletSelector}>
+                        <StyledConnectButton onClick={showWalletSelector}>
                             {t("airdrop.connect")}
-                        </StyledBeforeConnectWrapper>
+                        </StyledConnectButton>
                     )}
                     {account && (
                         <StyledAfterConnectOptions>
