@@ -1,17 +1,19 @@
+import { globalContentWidth } from "App.styles"
 import styled from "styled-components"
 import { Swatches } from "__styles__/Swatches"
 import { mediaQuery } from "../../MediaQuery"
 
-export const StyledHeaderBottom = styled.div`
+export const StyledContainer = styled.div`
     position: absolute;
     bottom: 0;
-    margin-bottom: 1em;
-    width: 100%;
+    width: ${globalContentWidth}px;
+    margin-bottom: 10px;
     z-index: 3;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
 
     ${mediaQuery.laptop} {
         position: relative;
@@ -37,7 +39,6 @@ export const StyledScrollDown = styled.div`
     font-size: 14px;
     line-height: 160%;
     color: #545454;
-
     display: flex;
     align-items: center;
 

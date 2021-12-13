@@ -10,6 +10,8 @@ export const globalHorizontalPadding = {
     [mediaQuery.mobileL]: "23px",
 }
 
+export const globalContentWidth: number = 1240
+
 export const StyledLandingContainer = styled.div`
     background-color: ${Swatches.background_main};
     min-height: 100vh;
@@ -17,7 +19,7 @@ export const StyledLandingContainer = styled.div`
     margin: 0 auto;
 
     overflow: visible;
-    width: 1240px;
+    width: ${globalContentWidth}px;
     padding: 0px ${globalHorizontalPadding[mediaQuery.desktop]};
 
     ${mediaQuery.laptop} {

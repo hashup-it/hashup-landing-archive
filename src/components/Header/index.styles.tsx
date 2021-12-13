@@ -1,13 +1,18 @@
+import { globalContentWidth } from "App.styles"
 import styled from "styled-components"
 import { Swatches } from "__styles__/Swatches"
 import { mediaQuery } from "../MediaQuery"
 
-export const StyledHeaderContainer = styled.div`
-    height: 100vh;
+export const StyledContainer = styled.div`
+    max-height: 100vh;
+    overflow-y: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    background-color: black;
 
     ${mediaQuery.laptop} {
         height: auto;
@@ -26,25 +31,28 @@ export const StyledHeaderContainer = styled.div`
     }
 `
 
-export const StyledBackgroundFlare = styled.div`
+export const StyledContentBox = styled.div`
+    width: ${globalContentWidth}px;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
-    pointer-events: none;
-    top: 18vh;
-    right: -50px;
-    width: 700px;
-    height: 900px;
-    background-color: ${Swatches.primary_color};
-    opacity: 0.08;
-    border-radius: 600px;
-    filter: blur(130px);
-    transform: rotate(30deg) translateZ(-100px);
+    padding-top: 140px;
+    z-index: 9;
 `
 
-export const StyledCartridgeContainer = styled.div`
-    display: flex;
-    z-index: 2;
+export const StyledBackgroundPlaceholderImg = styled.div<{ isVisible: boolean }>`
+    opacity: ${props => (props.isVisible ? 1 : 0)};
+    width: 100vw;
+    height: 100vh;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    background-color: #b10000;
+    position: absolute;
+    z-index: 0;
+    transition: opacity 600ms ease;
+`
 
-    ${mediaQuery.laptop} {
-        display: none;
-    }
+export const StyledVideoBackground = styled.video<{ isLoaded: boolean }>`
+    /* opacity: ${props => (props.isLoaded ? 1 : 0)}; */
+    width: 100vw;
 `

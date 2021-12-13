@@ -3,11 +3,8 @@ import { mediaQuery } from "components/MediaQuery"
 import { Swatches } from "__styles__/Swatches"
 import { assetsUrl } from "config"
 
-export const StyledLandingHeaderText = styled.div`
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+export const StyledContainer = styled.div`
+    width: 650px;
 
     ${mediaQuery.laptopL} {
         padding-left: 100px;
@@ -15,15 +12,43 @@ export const StyledLandingHeaderText = styled.div`
 
     ${mediaQuery.tablet} {
         padding-left: 0;
-        gap: 15px;
+    }
+`
+
+export const StyledLabel = styled.h2`
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+
+    :before,
+    :after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 13px;
+        height: 10px;
+        background-image: url(${() => assetsUrl("icons/header-trapeze.svg")});
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    :before {
+        left: -12px;
+        top: -8px;
+    }
+
+    :after {
+        right: -12px;
+        bottom: -8px;
+        transform: rotate(-14deg);
     }
 `
 
 export const StyledTitle = styled.h1`
-    font-style: normal;
     font-weight: bold;
-    font-size: 60px;
-    line-height: 115%;
+    font-size: 70px;
+    line-height: 120%;
     margin: 0;
 
     ${mediaQuery.laptop} {
@@ -33,8 +58,8 @@ export const StyledTitle = styled.h1`
 
 export const StyledParagraph = styled.p`
     font-size: 18px;
-    padding-right: 100px;
-    line-height: 28px;
+    line-height: 160%;
+    width: 600px;
 
     ${mediaQuery.laptopL} {
         padding-right: 30px;
@@ -45,14 +70,9 @@ export const StyledParagraph = styled.p`
     }
 `
 
-export const GradientText = styled.span`
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 0, 0, 0.5) 100%);
-    padding-right: 10px;
-`
-
 export const StyledButtonsBox = styled.div`
     display: flex;
-    gap: 20px;
+    margin-top: 35px;
 
     ${mediaQuery.tablet} {
         display: grid;
@@ -61,40 +81,40 @@ export const StyledButtonsBox = styled.div`
     }
 `
 
-export const HeaderAirdropWrapper = styled.div`
+export const StyledGetAirdropButton = styled.div`
     display: flex;
-    justify-content: center;
     cursor: pointer;
+    margin-left: 20px;
 
     :hover {
         opacity: 0.9;
     }
-`
 
-export const HeaderAirdropIcon = styled.div`
-    background-color: #ffffff;
-    border-radius: 15px 0px 0px 15px;
-    background-image: url(${() => assetsUrl("icons/bolt.svg")});
-    background-position: 20px;
-    background-repeat: no-repeat;
-    background-size: 18;
-    width: 52px;
-`
+    div.icon {
+        background-color: #ffffff;
+        border-radius: 15px 0px 0px 15px;
+        background-image: url(${() => assetsUrl("icons/bolt.svg")});
+        background-position: 20px;
+        background-repeat: no-repeat;
+        width: 52px;
+    }
 
-export const HeaderGetAirdrop = styled.div`
-    background-color: ${Swatches.primary_color};
-    border-radius: 0px 15px 15px 0px;
-    padding: 16px;
-    color: white;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-align: center;
+    div.text {
+        background-color: ${Swatches.primary_color};
+        border-radius: 0px 15px 15px 0px;
+        padding: 16px 0;
+        color: white;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-align: center;
+        width: 210px;
 
-    ${mediaQuery.tablet} {
-        flex: 1;
+        ${mediaQuery.tablet} {
+            flex: 1;
+        }
     }
 `
 
@@ -104,12 +124,9 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
     box-sizing: border-box;
     border-radius: 15px;
     padding: 16px 32px 16px 32px;
-    font-family: Sora;
-    font-style: normal;
     color: ${Swatches.text_main};
     font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
@@ -125,7 +142,7 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
         `}
 `
 
-export const StyledWhitepaperMenu = styled.div`
+export const StyledWhitepaperMenu = styled.div<{ isShown: boolean }>`
     position: absolute;
     background-color: ${Swatches.background_main};
     top: 100%;
@@ -135,6 +152,7 @@ export const StyledWhitepaperMenu = styled.div`
     border: 1px solid #ffffff;
     border-top: 0.5px solid white;
     width: 100%;
+    display: ${props => (props.isShown ? "block" : "none")};
 `
 
 export const StyledWhitepaperLangItem = styled.a`
@@ -173,7 +191,7 @@ export const StyledNewsletterBox = styled.div`
     .title {
         font-size: 16px;
         font-weight: 700;
-        color: ${Swatches.primary_color};
+        color: white;
         padding-bottom: 22px;
         display: block;
     }
@@ -184,10 +202,14 @@ export const StyledForm = styled.div`
     box-sizing: border-box;
     height: 80px;
 
+    .ml-form-embedWrapper {
+        background: transparent !important;
+    }
+
     .row-form {
-        background: ${Swatches.background_main} !important;
+        background: transparent !important;
         padding: 0 !important;
-        width: 485px !important;
+        width: 455px !important; // This should be exactly as buttons box
 
         ${mediaQuery.mobileL} {
             width: 100% !important;
@@ -199,7 +221,7 @@ export const StyledForm = styled.div`
     .ml-input-horizontal,
     .ml-button-horizontal {
         width: auto !important;
-        background: ${Swatches.background_main} !important;
+        background: transparent !important;
     }
 
     .horozintalForm {

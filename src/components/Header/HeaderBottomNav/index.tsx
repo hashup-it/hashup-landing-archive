@@ -7,7 +7,7 @@ import { AddToMetamask } from "./AddToMetamask"
 import { CopyAdress } from "./CopyAdress"
 import {
     StyledDataGroup,
-    StyledHeaderBottom,
+    StyledContainer,
     StyledMouseIcon,
     StyledScrollDown,
     StyledSocialMediaBox,
@@ -38,7 +38,7 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
     }, [])
 
     return (
-        <StyledHeaderBottom>
+        <StyledContainer>
             <StyledScrollDown>
                 <StyledMouseIcon src={assetsUrl("icons/mouse.svg")} />
                 {t("header.scroll")}
@@ -78,7 +78,7 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
                     </Hyperlink>
                 </StyledSocialMediaBox>
             </StyledDataGroup>
-        </StyledHeaderBottom>
+        </StyledContainer>
     )
 }
 
