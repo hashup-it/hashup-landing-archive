@@ -10,6 +10,7 @@ import Newsletter from "./Newsletter"
 import SocialMediaBox from "./SocialMediaBox"
 import CompanyInfo from "./CompanyInfo"
 import FooterBottom from "./FooterBottom"
+import FooterMenu from "./FooterMenu"
 
 export const Footer = () => {
     const { t } = useTranslation()
@@ -33,7 +34,7 @@ export const Footer = () => {
             </StyledQuickNavigation>
             <StyledFooterTop>
                 <CompanyInfo/>
-                
+                <FooterMenu/>
                 <Newsletter />
             </StyledFooterTop>
             <FooterBottom />
