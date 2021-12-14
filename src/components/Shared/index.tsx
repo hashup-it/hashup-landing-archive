@@ -70,7 +70,7 @@ export const StyledContainerOutline = styled.div<{ outlineColor: string }>`
     );
 `
 
-export const AccentLongEmDash = styled.span`
+export const StyledAccentDash = styled.span`
     display: inline-block;
     background: url("assets/icons/accented-long-em-dash.svg");
     height: 2px;

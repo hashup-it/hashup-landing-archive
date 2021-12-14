@@ -1,152 +1,42 @@
-import { AccentLongEmDash, ColoredText } from "../Shared"
-import {
-    AddressLineEmphasized,
-    CompanyIds,
-    ContactField,
-    Copyright,
-    FooterBottom,
-    FooterBottomGroup,
-    FooterHeading,
-    FooterLink,
-    FooterMenu,
-    FooterMetaSeparator,
-    FooterQuickNavigation,
-    FooterSeparatorAccent,
-    FooterSeparatorBase,
-    FooterTop,
-    FooterTopLeft,
-    Icon,
-    ListHeader,
-    Logo,
-    MailLink,
-    MenuHeader,
-    MenuItem,
-    MenuItems,
-    MenuList,
-    SocialMediaGroup,
-    StyledFooter,
-} from "./index.styles"
-import { Newsletter } from "./Newsletter"
-import { Hyperlink } from "../Shared/sections.styles"
+import { ColoredText, StyledAccentDash } from "components/Shared"
+import { BrandAssets } from "config"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
-import { assetsUrl, SocialMediaUrls, SocialMediaIcons, BrandAssets, Documents } from "config"
 
-const CURRENT_YEAR = new Date().getFullYear()
+
+import { StyledFooter, StyledFooterTop, StyledHeading, StyledLogo, StyledMenuHeader, StyledQuickNavigation, StyledSeparatorAccent, StyledSeparatorBase } from "./index.styles"
+
+import Newsletter from "./Newsletter"
+import SocialMediaBox from "./SocialMediaBox"
+import CompanyInfo from "./CompanyInfo"
+import FooterBottom from "./FooterBottom"
 
 export const Footer = () => {
     const { t } = useTranslation()
 
     return (
         <StyledFooter>
-            <FooterSeparatorBase />
-            <FooterSeparatorAccent />
-            <FooterHeading>
+            <StyledSeparatorBase />
+            <StyledSeparatorAccent />
+            <StyledHeading>
                 <Link href="/" passHref>
-                    <Logo src={BrandAssets.logo} />
+                    <StyledLogo src={BrandAssets.logo} />
                 </Link>
-                <SocialMediaGroup>
-                    <span>
-                        {t("footer.span")}
-                        <ColoredText>&nbsp;social media</ColoredText>
-                    </span>
-                    <a href={SocialMediaUrls.linkedIn}>
-                        <Icon url={SocialMediaIcons.linkedin} />
-                    </a>
-                    <a href={SocialMediaUrls.telegram}>
-                        <Icon url={SocialMediaIcons.telegram} />
-                    </a>
-                    <a href={SocialMediaUrls.twitter}>
-                        <Icon url={SocialMediaIcons.twitter} />
-                    </a>
-                    <a href={SocialMediaUrls.facebook}>
-                        <Icon url={SocialMediaIcons.facebook} />
-                    </a>
-                    <a href={SocialMediaUrls.instagram}>
-                        <Icon url={SocialMediaIcons.instagram} />
-                    </a>
-                    <a href={SocialMediaUrls.discord}>
-                        <Icon url={SocialMediaIcons.discord} />
-                    </a>
-                </SocialMediaGroup>
-            </FooterHeading>
-            <FooterQuickNavigation>
+                <SocialMediaBox />
+            </StyledHeading>
+            <StyledQuickNavigation>
                 <span>
                     <ColoredText>Hash</ColoredText>Up.it
                 </span>
-                <AccentLongEmDash />
+                <StyledAccentDash />
                 <Link href="/">{t("footer.home")}</Link>
-            </FooterQuickNavigation>
-            <FooterTop>
-                <FooterTopLeft>
-                    <ListHeader>{t("footer.headquarters")}</ListHeader>
-                    <ContactField>
-                        <AddressLineEmphasized>HashUp P.S.A.</AddressLineEmphasized>
-                        Al. Jana Pawła II 27
-                        <br />
-                        00-867 {t("footer.warsaw")}
-                        <br />
-                        <br />
-                        <MailLink href="mailto:hello@hashup.it">hello@hashup.it</MailLink>
-                        <br />
-                    </ContactField>
-                    <CompanyIds>
-                        NIP: 5272974670
-                        <br />
-                        KRS: 0000927509
-                        <br />
-                    </CompanyIds>
-                </FooterTopLeft>
-                <FooterMenu>
-                    <MenuItems>
-                        {/*<MenuList>*/}
-                        {/*    <MenuHeader>HashUp</MenuHeader>*/}
-                        {/*    <MenuItem>Team</MenuItem>*/}
-                        {/*    <MenuItem>Media o nas</MenuItem>*/}
-                        {/*    <MenuItem>Praca w #</MenuItem>*/}
-                        {/*</MenuList>*/}
-                        {/*<MenuList>*/}
-                        {/*    <MenuHeader>Pomoc</MenuHeader>*/}
-                        {/*    <MenuItem>FAQ</MenuItem>*/}
-                        {/*    <MenuItem>Help center</MenuItem>*/}
-                        {/*    <MenuItem>Support</MenuItem>*/}
-                        {/*</MenuList>*/}
-                        <MenuList>
-                            <MenuHeader>{t("footer.creators")}</MenuHeader>
-                            <MenuItem>
-                                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/">
-                                    {t("menu.doc")}
-                                </Hyperlink>
-                            </MenuItem>
-                            <MenuItem>
-                                <Hyperlink href="https://hashup-it.gitbook.io/hashup-it-1/hashup-basics/cartridge">
-                                    {t("footer.cartridge")}
-                                </Hyperlink>
-                            </MenuItem>
-                        </MenuList>
-                    </MenuItems>
-                </FooterMenu>
+            </StyledQuickNavigation>
+            <StyledFooterTop>
+                <CompanyInfo/>
+                
                 <Newsletter />
-            </FooterTop>
-            <FooterBottom>
-                <FooterMetaSeparator />
-                <Copyright>Copyright © {CURRENT_YEAR} by HashUp. All Rights Reserved.</Copyright>
-                <FooterBottomGroup>
-                    <FooterLink>
-                        <Hyperlink href={Documents.termsAndConditions}>
-                            Terms & Conditions
-                        </Hyperlink>
-                    </FooterLink>
-                    <FooterLink>
-                        <Hyperlink href={Documents.privacyPolicy}>Privacy Policy</Hyperlink>
-                    </FooterLink>
-                    <FooterLink>
-                        <Hyperlink href={Documents.airdropTermsOfUse}>
-                            Airdrop Terms of Use
-                        </Hyperlink>
-                    </FooterLink>
-                </FooterBottomGroup>
-            </FooterBottom>
+            </StyledFooterTop>
+            <FooterBottom />
         </StyledFooter>
     )
 }

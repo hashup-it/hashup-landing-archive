@@ -5,15 +5,15 @@ import {
     StyledFormDescription,
     StyledInputContainer,
 } from "./index.styles"
-import { ListHeader } from "../index.styles"
+import { StyledListHeader } from "../index.styles"
 import { useTranslation } from "react-i18next"
 
-export const Newsletter = () => {
+const Newsletter = () => {
     const { t } = useTranslation()
 
     return (
         <NewsletterContainer>
-            <ListHeader>{t("newsletter.header")}</ListHeader>
+            <StyledListHeader>{t("newsletter.header")}</StyledListHeader>
             <StyledFormDescription>{t("newsletter.description")}</StyledFormDescription>
             <FormContainer>
                 <StyledInputContainer>
@@ -27,3 +27,5 @@ export const Newsletter = () => {
         </NewsletterContainer>
     )
 }
+
+export default Newsletter;
