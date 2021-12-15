@@ -2,8 +2,10 @@ import { useEffect, useState } from "react"
 import { HeaderText } from "./HeaderText"
 import {
     StyledContainer,
+    StyledInnerContainer,
     StyledVideoBackground,
     StyledContentBox,
+    StyledBackgroundContainer,
     StyledBackgroundPlaceholderImg,
 } from "./index.styles"
 import HeaderBottomNav from "./HeaderBottomNav"
@@ -15,11 +17,11 @@ const VideoBackground = () => {
 
     useEffect(() => {
         // Set video url after component render to force lazy loading
-        setVideoUrl(assetsUrl("video/spinning-cartridge.mp4"))
+        setVideoUrl(assetsUrl("video/spinning-cartridge.webm"))
     }, [])
 
     return (
-        <>
+        <StyledBackgroundContainer>
             <StyledBackgroundPlaceholderImg isVisible={!isVideoLoaded} />
             <StyledVideoBackground
                 autoPlay
@@ -32,18 +34,20 @@ const VideoBackground = () => {
                 preload="none"
                 poster=""
             />
-        </>
+        </StyledBackgroundContainer>
     )
 }
 
 const LandingHeader = () => (
-    <StyledContainer>
-        <StyledContentBox>
-            <HeaderText />
-        </StyledContentBox>
-        <HeaderBottomNav />
+    <>
+        <StyledInnerContainer>
+            <StyledContentBox>
+                <HeaderText />
+            </StyledContentBox>
+            <HeaderBottomNav />
+        </StyledInnerContainer>
         <VideoBackground />
-    </StyledContainer>
+    </>
 )
 
 export default LandingHeader

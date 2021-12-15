@@ -12,6 +12,7 @@ export const StyledContainer = styled.div`
 
     ${mediaQuery.tablet} {
         padding-left: 0;
+        width: 100%;
     }
 `
 
@@ -52,7 +53,7 @@ export const StyledTitle = styled.h1`
     margin: 0;
 
     ${mediaQuery.laptop} {
-        font-size: 50px;
+        font-size: 46px;
     }
 `
 
@@ -66,7 +67,10 @@ export const StyledParagraph = styled.p`
     }
 
     ${mediaQuery.tablet} {
+        padding-right: 0;
         font-size: 17px;
+        width: auto;
+        margin-top: 20px;
     }
 `
 
@@ -85,6 +89,11 @@ export const StyledGetAirdropButton = styled.div`
     display: flex;
     cursor: pointer;
     margin-left: 20px;
+
+    ${mediaQuery.tablet} {
+        margin-left: 0;
+        margin-top: 16px;
+    }
 
     :hover {
         opacity: 0.9;

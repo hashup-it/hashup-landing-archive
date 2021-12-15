@@ -6,16 +6,14 @@ import { mediaQuery } from "../../MediaQuery"
 export const StyledContainer = styled.div`
     position: absolute;
     bottom: 0;
-    width: ${globalContentWidth}px;
+    width: 100%;
     margin-bottom: 10px;
     z-index: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
 
-    ${mediaQuery.laptop} {
+    ${mediaQuery.laptopM} {
         position: relative;
         margin-top: 75px;
         margin-bottom: 45px;
