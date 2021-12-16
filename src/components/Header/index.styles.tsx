@@ -20,7 +20,7 @@ export const StyledInnerContainer = styled.div`
 `
 
 export const StyledContentBox = styled.div`
-    padding-top: 140px;
+    padding-top: 120px;
 `
 
 export const StyledBackgroundContainer = styled.div`
@@ -56,5 +56,24 @@ export const StyledVideoBackground = styled.video<{ isLoaded: boolean }>`
 
     ${mediaQuery.laptopM} {
         display: none;
+    }
+`
+
+export const StyledBackgroundFlare = styled.div`
+    display: none;
+
+    ${mediaQuery.laptopM} {
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        top: 65px;
+        left: 0;
+        width: 700px;
+        height: 900px;
+        background-color: ${Swatches.primary_color};
+        opacity: 0.08;
+        border-radius: 600px;
+        filter: blur(130px);
+        transform: rotate(30deg) translateZ(-100px);
     }
 `

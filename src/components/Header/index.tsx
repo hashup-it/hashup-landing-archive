@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import { HeaderText } from "./HeaderText"
 import {
-    StyledContainer,
     StyledInnerContainer,
     StyledVideoBackground,
     StyledContentBox,
     StyledBackgroundContainer,
     StyledBackgroundPlaceholderImg,
+    StyledBackgroundFlare,
 } from "./index.styles"
 import HeaderBottomNav from "./HeaderBottomNav"
 import { assetsUrl } from "config"
@@ -41,6 +41,7 @@ const VideoBackground = () => {
 const LandingHeader = () => (
     <>
         <StyledInnerContainer>
+            <StyledBackgroundFlare />
             <StyledContentBox>
                 <HeaderText />
             </StyledContentBox>
