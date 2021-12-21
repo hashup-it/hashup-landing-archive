@@ -1,8 +1,8 @@
 import { FC } from "react"
 import {
-    Avatar,
+    StyledAvatarImg,
     StyledDescription,
-    Function,
+    StyledRole,
     StyledNameBox,
     StyledPersonContainer,
     StyledContent,
@@ -71,12 +71,12 @@ const PersonBox: FC<PersonProps> = ({
         <StyledPersonContainer personRole={role}>
             <div className="outline">
                 <StyledContent>
-                    <Avatar src={assetsUrl(`team-avatars/${avatarFilename}`)} />
-                    <Function>
+                    <StyledAvatarImg src={assetsUrl(`team-avatars/${avatarFilename}`)} alt={`${name} avatar`} />
+                    <StyledRole>
                         <ColoredText>
                             {t(`team.team-members.${localeKey}.role`).toUpperCase()}
                         </ColoredText>
-                    </Function>
+                    </StyledRole>
                     <StyledNameBox>
                         <div className="line">{firstLine}</div>
                         <div className="line">{secondLine}</div>

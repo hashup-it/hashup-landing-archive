@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { ComparisonItemContent } from "../../Comparison/index.styles"
 import { Swatches } from "__styles__/Swatches"
 import { RoleEnum } from "./interfaces"
 import { mediaQuery } from "components/MediaQuery"
@@ -32,7 +31,7 @@ export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
     }
 `
 
-export const Avatar = styled.img`
+export const StyledAvatarImg = styled.img`
     border-radius: 50%;
     width: 120px;
     position: absolute;
@@ -40,7 +39,7 @@ export const Avatar = styled.img`
     right: 40px;
 `
 
-export const StyledContent = styled(ComparisonItemContent)`
+export const StyledContent = styled.div`
     padding: 60px 32px;
     min-height: 260px;
     position: relative;
@@ -48,8 +47,7 @@ export const StyledContent = styled(ComparisonItemContent)`
     border-radius: 40px;
 `
 
-export const Function = styled.div`
-    font-family: Sora;
+export const StyledRole = styled.div`
     font-size: 13px;
     font-style: normal;
     font-weight: 600;

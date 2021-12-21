@@ -4,7 +4,6 @@ import Roadmap from "components/Roadmap"
 import Partners from "components/Partners"
 import InfoNotes from "components/InfoNotes"
 import GameContract from "components/GameContract"
-import CreateCartridges from "components/CreateCartridges"
 import Airdrop from "components/Airdrop"
 import Team from "components/Team"
 import TechStack from "components/TechStack"
@@ -22,14 +21,12 @@ const LandingPage = () => (
         <GameWallet />
         <GameXplorer />
         <GameContract />
-        <Airdrop />
-        <CreateCartridges />
-        <GameContract />
         <InfoNotes />
         <Partners />
         <TechStack />
         <Team />
         <Roadmap />
+        <Airdrop />
     </>
 )
 

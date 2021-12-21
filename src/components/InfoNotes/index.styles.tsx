@@ -3,6 +3,7 @@ import { Swatches } from "../../__styles__/Swatches"
 import { mediaQuery } from "../MediaQuery"
 
 export const StyledInfoNotes = styled.div`
+    margin-top: 50px;
     text-align: center;
     margin-bottom: 180px;
 
