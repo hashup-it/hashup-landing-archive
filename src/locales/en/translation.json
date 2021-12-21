@@ -20,7 +20,10 @@
     "header": {
         "description": "DEFInitial game license media editing. P2P game exchange between players. Cartridge on blockchain. Without intermediaries. 0% commission.",
         "airdrop": "Claim your Airdrop",
-        "scroll": "Scroll to learn more",
+        "scroll": {
+            "1": "Scroll to",
+            "2": " learn more"
+        },
         "ico-signup": "Subscribe to IGO of PONG game",
         "add-hash-wallet": "Add # to your wallet",
         "all-gamers": "All gamers: ",

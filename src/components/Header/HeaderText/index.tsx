@@ -16,7 +16,7 @@ import { getWhitepaper } from "util/whitepaper"
 import { useState } from "react"
 import { assetsUrl, Languages } from "config"
 
-const WhitepaperLangItem: FC<{ readonly lang: Languages }> = ({ lang }) => {
+const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lang }) => {
     const { t } = useTranslation()
 
     return (
@@ -39,8 +39,8 @@ const WhitepaperButton = () => {
         >
             Whitepaper
             <StyledWhitepaperMenu isShown={isMenuShown}>
-                <WhitepaperLangItem lang={Languages.en} />
-                <WhitepaperLangItem lang={Languages.pl} />
+                <WhitepaperLangItem lang={Languages.en.code} />
+                <WhitepaperLangItem lang={Languages.pl.code} />
             </StyledWhitepaperMenu>
         </StyledWhitepaperBox>
     )

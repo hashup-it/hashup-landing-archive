@@ -1,6 +1,5 @@
 import hashInfo from "components/Airdrop/hash-info"
 import { useEffect, useState } from "react"
-import { FunctionComponent } from "react"
 import { BoldText, ColoredText } from "../../Shared"
 import { Hyperlink } from "../../Shared/sections.styles"
 import { AddToMetamask } from "./AddToMetamask"
@@ -8,8 +7,7 @@ import { CopyAdress } from "./CopyAdress"
 import {
     StyledDataGroup,
     StyledContainer,
-    StyledMouseIcon,
-    StyledScrollDown,
+    StyledScrollDownNote,
     StyledSocialMediaBox,
     StyledTokenInfo,
     StyledTokenInfoItem,
@@ -19,9 +17,21 @@ import Web3 from "web3"
 import { AbiItem } from "web3-utils"
 import { useTranslation } from "react-i18next"
 
-interface HeaderBottomProps {}
+const ScrollDownNote = () => {
+    const { t } = useTranslation()
 
-const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
+    return (
+        <StyledScrollDownNote>
+            <img className="mouse-icon" src={assetsUrl("icons/mouse.svg")} alt="" />
+            <span className="text">
+                {`${t("header.scroll.1")}`}
+                <ColoredText>{t("header.scroll.2")}</ColoredText>
+            </span>
+        </StyledScrollDownNote>
+    )
+}
+
+const HeaderBottom = () => {
     const [gamersCount, setGamersCount] = useState(1337)
     const { t } = useTranslation()
 
@@ -39,10 +49,7 @@ const HeaderBottom: FunctionComponent<HeaderBottomProps> = () => {
 
     return (
         <StyledContainer>
-            <StyledScrollDown>
-                <StyledMouseIcon src={assetsUrl("icons/mouse.svg")} />
-                {t("header.scroll")}
-            </StyledScrollDown>
+            <ScrollDownNote />
             <StyledDataGroup>
                 <StyledTokenInfo>
                     <StyledTokenInfoItem>

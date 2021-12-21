@@ -1,4 +1,5 @@
 import { globalContentWidth } from "App.styles"
+import { ColoredText } from "components/Shared"
 import styled from "styled-components"
 import { Swatches } from "__styles__/Swatches"
 import { mediaQuery } from "../../MediaQuery"
@@ -32,21 +33,24 @@ export const StyledContainer = styled.div`
     }
 `
 
-export const StyledScrollDown = styled.div`
+export const StyledScrollDownNote = styled.div`
     font-weight: normal;
     font-size: 14px;
     line-height: 160%;
-    color: #545454;
     display: flex;
     align-items: center;
+    color: white;
 
     ${mediaQuery.laptop} {
         display: none;
     }
-`
 
-export const StyledMouseIcon = styled.img`
-    margin-right: 13px;
+    img.mouse-icon {
+        margin-right: 13px;
+    }
+
+    span.text {
+    }
 `
 
 export const StyledDataGroup = styled.div`

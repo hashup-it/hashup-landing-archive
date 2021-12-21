@@ -32,13 +32,13 @@ export const SelectLanguage = () => {
             </StyledSelectedLanguage>
             {isClicked && (
                 <StyledLanguageList>
-                    {Object.values(Languages).map((lng, index) => (
+                    {Object.values(Languages).map((lang, index) => (
                         <StyledLanguageOption
-                            value={lng}
+                            value={lang.code}
                             key={index}
                             onClick={handleLanguageChange}
                         >
-                            {lng}
+                            {lang.code}
                         </StyledLanguageOption>
                     ))}
                 </StyledLanguageList>

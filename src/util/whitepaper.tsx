@@ -1,8 +1,9 @@
 import { langsOfWhitepaper, documentsUrl, Languages } from "config"
 
-export const getWhitepaper = (lang: string): string => {
-    if (!langsOfWhitepaper.includes(lang)) {
-        lang = Languages.en
+export const getWhitepaper = (langCode: string): string => {
+    if (!langsOfWhitepaper.includes(langCode)) {
+        // Fallback option
+        langCode = Languages.en.code
     }
-    return documentsUrl(`whitepapers/whitepaper-${lang}.pdf`)
+    return documentsUrl(`whitepapers/whitepaper-${langCode}.pdf`)
 }

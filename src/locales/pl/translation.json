@@ -20,7 +20,10 @@
     "header": {
         "description": "DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez pośredników. 0% prowizji.",
         "airdrop": "Odbierz Airdrop",
-        "scroll": "Przewiń, aby dowiedzieć się więcej",
+        "scroll": {
+            "1": "Przewiń, aby ",
+            "2": " dowiedzieć się więcej"
+        },
         "ico-signup": "Zapisz się na IGO gry PONG",
         "add-hash-wallet": "Dodaj # do portfela",
         "all-gamers": "Wszystkich graczy: ",

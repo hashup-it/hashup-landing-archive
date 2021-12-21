@@ -2,13 +2,37 @@ export const scriptsUrl = (path: string): string => `/scripts/${path}`
 export const assetsUrl = (path: string): string => `/assets/${path}`
 export const documentsUrl = (path: string): string => `/documents/${path}`
 
-export enum Languages {
-    en = "en",
-    pl = "pl",
-    de = "de",
+const translationEN = require("./locales/en/translation.json")
+const translationPL = require("./locales/pl/translation.json")
+const translationDE = require("./locales/de/translation.json")
+
+// export enum Languages {
+// en = "en",
+// pl = "pl",
+// de = "de",
+// }
+
+interface LanguageInterface {
+    readonly code: string
+    readonly locale: any
 }
 
-export const langsOfWhitepaper: string[] = [Languages.en, Languages.pl]
+export const Languages = {
+    pl: {
+        code: "pl",
+        locale: require("./locales/pl/translation.json"),
+    },
+    en: {
+        code: "en",
+        locale: require("./locales/en/translation.json"),
+    },
+    de: {
+        code: "de",
+        locale: require("./locales/de/translation.json"),
+    },
+} as const
+
+export const langsOfWhitepaper: string[] = [Languages.en.code, Languages.pl.code]
 
 export const SocialMediaUrls = {
     facebook: "https://www.facebook.com/HashUpIt",

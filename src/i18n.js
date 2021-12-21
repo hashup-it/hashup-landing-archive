@@ -4,14 +4,10 @@ import Cache from "i18next-localstorage-cache"
 import LanguageDetector from "i18next-browser-languagedetector"
 import { Languages } from "config"
 
-const translationEN = require("./locales/en/translation.json")
-const translationPL = require("./locales/pl/translation.json")
-const translationDE = require("./locales/de/translation.json")
-
 const resources = {
-    [Languages.en]: { translation: translationEN },
-    [Languages.pl]: { translation: translationPL },
-    [Languages.de]: { translation: translationDE },
+    [Languages.en.code]: { translation: Languages.en.locale },
+    [Languages.pl.code]: { translation: Languages.pl.locale },
+    [Languages.de.code]: { translation: Languages.de.locale },
 }
 
 i18n.use(initReactI18next)
@@ -19,7 +15,7 @@ i18n.use(initReactI18next)
     .use(LanguageDetector)
     .init({
         resources,
-        fallbackLng: Languages.en,
+        fallbackLng: Languages.en.code,
         interpolation: {
             escapeValue: false, // react already safes from xss
         },

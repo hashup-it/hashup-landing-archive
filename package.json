@@ -41,7 +41,8 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "check-locale": "npx tsc scripts/checkLocaleSync.ts && node scripts/checkLocaleSync.js"
   },
   "browserslist": {
     "production": [
