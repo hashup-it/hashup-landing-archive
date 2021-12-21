@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { CartridgeThumbnailContainer } from "./index.style"
 import { CartridgeThumbnailColoredText } from "../index.styles"
-import { CartridgeColor, CartridgeType } from "../interfaces"
+import { CartridgeColor, CartridgeType } from "config"
 
 const CartridgeThumbnail: FC<{ color: CartridgeColor; type: CartridgeType }> = ({
     color,

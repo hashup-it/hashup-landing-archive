@@ -15,11 +15,11 @@ import {
     CartridgeTargetItemContent,
     CartridgeTargetLabel,
     StyledDescriptionArea,
-    StyledFlare
+    StyledFlare,
 } from "./index.style"
 import { useTranslation } from "react-i18next"
-import { assetsUrl } from "config"
-import { CartridgeInterface, CartridgeType } from "../interfaces"
+import { assetsUrl, CartridgeType } from "config"
+import { CartridgeInterface } from "../interfaces"
 import { capitalizeFirstLetter } from "util/string"
 
 interface Props extends CartridgeInterface {

@@ -45,3 +45,19 @@ export const Documents = {
     airdropTermsOfUse: documentsUrl("Hash_Token_Airdrop_Terms_and_Conditions.pdf"),
     privacyPolicy: documentsUrl("Data_Protection_Policy.pdf"),
 } as const
+
+export enum CartridgeType {
+    green = "green",
+    gold = "gold",
+    blue = "blue",
+    gray = "gray",
+    red = "red",
+}
+
+export enum CartridgeColor {
+    green = "#6AAD38",
+    gold = "#BEA379",
+    blue = "#468CF4",
+    gray = "#9D9D9D",
+    red = "#FF3F3F",
+}

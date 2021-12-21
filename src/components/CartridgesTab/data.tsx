@@ -1,10 +1,11 @@
-import { CartridgeInterface, CartridgeColor, CartridgeType } from "./interfaces"
+import { CartridgeInterface } from "./interfaces"
 
 import ModelRed from "../../components/CartridgeScene/Three/ModelRed"
 import ModelBlue from "../../components/CartridgeScene/Three/ModelBlue"
 import ModelGray from "../../components/CartridgeScene/Three/ModelGray"
 import ModelGreen from "../../components/CartridgeScene/Three/ModelGreen"
 import ModelGold from "../../components/CartridgeScene/Three/ModelGold"
+import { CartridgeColor, CartridgeType } from "config"
 
 const ROTATION: number[] = [0, -2, Math.PI / 128]
 

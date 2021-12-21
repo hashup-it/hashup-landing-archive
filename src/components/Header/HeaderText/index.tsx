@@ -1,15 +1,12 @@
 import { FC } from "react"
 import { ColoredText } from "../../Shared"
-import { Hyperlink } from "../../Shared/sections.styles"
 import {
     StyledLabel,
     StyledTitle,
     StyledButtonsBox,
-    StyledGetAirdropButton,
+    StyledButton,
     StyledContainer,
     StyledParagraph,
-    StyledForm,
-    StyledNewsletterBox,
     StyledWhitepaperBox,
     StyledWhitepaperMenu,
     StyledWhitepaperLangItem,
@@ -18,13 +15,6 @@ import { useTranslation } from "react-i18next"
 import { getWhitepaper } from "util/whitepaper"
 import { useState } from "react"
 import { assetsUrl, Languages } from "config"
-
-const GetAirdropButton: FC<{ readonly text: string }> = ({ text }) => (
-    <StyledGetAirdropButton>
-        <div className="icon" />
-        <div className="text">{text}</div>
-    </StyledGetAirdropButton>
-)
 
 const WhitepaperLangItem: FC<{ readonly lang: Languages }> = ({ lang }) => {
     const { t } = useTranslation()
@@ -62,7 +52,7 @@ export const HeaderText = () => {
     return (
         <StyledContainer>
             <StyledLabel>
-                The Hash<ColoredText>Up</ColoredText> Cartridge
+                Video Game<ColoredText>Cartridges</ColoredText> on Blockchain
             </StyledLabel>
             <StyledTitle>
                 Decentralized <br />
@@ -70,21 +60,11 @@ export const HeaderText = () => {
             </StyledTitle>
             <StyledParagraph>{t("header.description")}</StyledParagraph>
             <StyledButtonsBox>
+                <a href="#airdrop">
+                    <StyledButton>{t("header.airdrop")} </StyledButton>
+                </a>
                 <WhitepaperButton />
-                <Hyperlink href="/#airdrop">
-                    <GetAirdropButton text={t("header.airdrop")} />
-                </Hyperlink>
             </StyledButtonsBox>
-            <StyledNewsletterBox>
-                <span className="title">{t("header.ico-signup")}</span>
-                <StyledForm>
-                    <div
-                        className="ml-form-embed"
-                        data-account="3556595:b7a5n7e8w5"
-                        data-form="5061527:j8h9l1"
-                    ></div>
-                </StyledForm>
-            </StyledNewsletterBox>
         </StyledContainer>
     )
 }

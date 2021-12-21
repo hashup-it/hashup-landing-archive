@@ -340,3 +340,8 @@ export const StyledReferralInfo = styled.span`
     line-height: 160%;
     max-width: 200px;
 `
+
+export const StyledAnchor = styled.div`
+    position: absolute;
+    top: -100px;
+`

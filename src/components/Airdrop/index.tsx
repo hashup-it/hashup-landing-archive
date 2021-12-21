@@ -19,6 +19,7 @@ import {
     StyledInputHeader,
     StyledReferralInfo,
     StyledBackgroundFlare,
+    StyledAnchor,
 } from "./index.styles"
 import Web3 from "web3"
 import { AbiItem } from "web3-utils"
@@ -163,6 +164,7 @@ const Airdrop = () => {
 
     return (
         <StyledAirdropSection>
+            <StyledAnchor id="airdrop" />
             <StyledBackgroundFlare />
             <StyledAirdropBox>
                 <StyledHeaderBox>

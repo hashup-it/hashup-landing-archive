@@ -1,18 +1,4 @@
-export enum CartridgeType {
-    green,
-    gold,
-    blue,
-    gray,
-    red,
-}
-
-export enum CartridgeColor {
-    green = "#6AAD38",
-    gold = "#BEA379",
-    blue = "#468CF4",
-    gray = "#9D9D9D",
-    red = "#FF3F3F",
-}
+import { CartridgeColor, CartridgeType } from "config"
 
 export interface CartridgeInterface {
     readonly type: CartridgeType

@@ -1,43 +1,58 @@
-import { ColoredText } from "../Shared"
+import { ColoredText } from "components/Shared"
+import { assetsUrl, CartridgeType } from "config"
 import {
-    LeftWrapper,
-    RightWrapper,
-    SectionHeader,
-    SectionLabel,
-    SectionPhotoSimple,
-    SectionText,
-} from "../Shared/sections.styles"
+    StyledButton1,
+    StyledSectionLabel,
+    StyledSectionParagraph,
+    StyledSectionTitle,
+    StyledSectionWrapper,
+} from "__styles__/shared"
+import Link from "next/link"
+import { StyledBackgroundFlare, StyledAnchor, StyledButtonBox, StyledImagesBox } from "./index.styles"
 
-import { StyledReversedSectionContainer, StyledGameContract, StyledGreyFlare } from "./index.styles"
-import { useTranslation } from "react-i18next"
-import { assetsUrl } from "config"
+const ImagesBox = () => (
+    <StyledImagesBox>
+        <img
+            className="laptop"
+            src={assetsUrl("game-contract/laptop.png")}
+            alt="GameContract website preview"
+        />
+        <img
+            className="floating-website"
+            src={assetsUrl("game-contract/floating-website.png")}
+            alt="GameContract floating website preview"
+        />
+    </StyledImagesBox>
+)
 
-const GameContract = () => {
-    const { t } = useTranslation()
-    return (
-        <>
-            <StyledGameContract>
-                <StyledReversedSectionContainer>
-                    <RightWrapper>
-                        <SectionPhotoSimple
-                            src={assetsUrl("section-photos/photo3.png")}
-                        ></SectionPhotoSimple>
-                    </RightWrapper>
-                    <LeftWrapper>
-                        <SectionLabel>{t("game-contract.label")}</SectionLabel>
-                        <SectionHeader>
-                            {t("game-contract.header-create")}
-                            <ColoredText>{t("game-contract.header-cartridges")}</ColoredText>
-                            {t("game-contract.header-publish")}
-                            <ColoredText>{t("game-contract.header-brokerless")}</ColoredText>.
-                        </SectionHeader>
-                        <SectionText>{t("game-contract.text")}</SectionText>
-                    </LeftWrapper>
-                </StyledReversedSectionContainer>
-                <StyledGreyFlare />
-            </StyledGameContract>
-        </>
-    )
-}
+const Cartridges = () => (
+    <StyledSectionWrapper>
+        <StyledAnchor id="game-contract" />
+        <StyledBackgroundFlare />
+        <StyledSectionLabel>
+            Game<ColoredText>Contract</ColoredText>.io
+        </StyledSectionLabel>
+        <StyledSectionTitle>
+            Publish your game by creating
+            <br />
+            GameContract<ColoredText>!</ColoredText>
+        </StyledSectionTitle>
+        <StyledSectionParagraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam turpis eget urna
+            condimentum, vel luctus turpis aliquet. Etiam in justo fermentum, fermentum arcu eu,
+            tincidunt felis. Vestibulum sit amet tincidunt metus.
+        </StyledSectionParagraph>
+        <StyledButtonBox>
+            <Link href="game-contract" passHref>
+                <a>
+                    <StyledButton1>
+                        More about <ColoredText>GameContract</ColoredText>
+                    </StyledButton1>
+                </a>
+            </Link>
+        </StyledButtonBox>
+        <ImagesBox />
+    </StyledSectionWrapper>
+)
 
-export default GameContract
+export default Cartridges
