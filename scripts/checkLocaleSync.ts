@@ -1,8 +1,6 @@
 import { Languages } from "../src/config"
 import LocaleTemplate from "../src/locales/template"
 
-// template
-
 const findMissing = (a: string[], b: string[]) => {
     // Return :a elements which are not in :b
     return a.filter((v, idx, arr) => !b.includes(v))
@@ -70,4 +68,6 @@ if (require.main === module) {
         console.log(`\nWhat's wrong with ${lang.code.toUpperCase()} locale file?`)
         compareObjects("", LocaleTemplate, lang.locale)
     }
+
+    console.log("\n")
 }

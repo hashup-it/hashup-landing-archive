@@ -1,11 +1,11 @@
-import { AccountContextProvider } from "context/account"
+import { AccountContextProvider } from "contexts/account"
 import Head from "next/head"
-import { StyledLandingContainer } from "App.styles"
-import Footer from "components/Footer"
-import NavBar from "components/NavBar"
-import { GlobalStyle } from "__styles__/GlobalStyle.style"
+import Footer from "components/global/Footer"
+import NavBar from "components/global/NavBar"
+import { GlobalStyles } from "__styles__/global"
 import Script from "next/script"
 import { scriptsUrl } from "config"
+import GlobalContentContainer from "components/global/GlobalContentContainer"
 
 const App = ({ Component, pageProps }) => {
     return (
@@ -18,14 +18,14 @@ const App = ({ Component, pageProps }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
             <AccountContextProvider>
-                <GlobalStyle />
-                <StyledLandingContainer>
+                <GlobalStyles />
+                <GlobalContentContainer>
                     <NavBar />
 
                     <Component {...pageProps} />
 
                     <Footer />
-                </StyledLandingContainer>
+                </GlobalContentContainer>
             </AccountContextProvider>
         </>
     )

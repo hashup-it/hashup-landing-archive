@@ -2,21 +2,6 @@ export const scriptsUrl = (path: string): string => `/scripts/${path}`
 export const assetsUrl = (path: string): string => `/assets/${path}`
 export const documentsUrl = (path: string): string => `/documents/${path}`
 
-const translationEN = require("./locales/en/translation.json")
-const translationPL = require("./locales/pl/translation.json")
-const translationDE = require("./locales/de/translation.json")
-
-// export enum Languages {
-// en = "en",
-// pl = "pl",
-// de = "de",
-// }
-
-interface LanguageInterface {
-    readonly code: string
-    readonly locale: any
-}
-
 export const Languages = {
     pl: {
         code: "pl",
