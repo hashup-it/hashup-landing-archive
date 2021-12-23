@@ -1,13 +1,25 @@
 import styled from "styled-components"
-import { Swatches } from "__styles__/consts"
+import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledImagesBox = styled.div`
     text-align: right;
     position: relative;
 
-    img.red-dots {
+    img.red-dots-1 {
         pointer-events: none;
         user-select: none;
+        position: absolute;
+        bottom: -12%;
+        right: 25%;
+        z-index: 999;
+
+        ${MediaQuery.laptopL} {
+            position: absolute;
+            left: -18%;
+            width: 90%;
+            bottom: -15%;
+            z-index: 99;
+        }
     }
 
     div.flare {

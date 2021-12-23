@@ -4,6 +4,7 @@ import { assetsUrl } from "config"
 import { StyledButton1 } from "components/shared/buttons.styles"
 import { StyledImagesBox } from "./index.styles"
 import { StyledMainImage } from "components/pages/index/SectionType1/index.styles"
+import { Trans, useTranslation } from "react-i18next"
 
 const ImagesBox = () => (
     <StyledImagesBox>
@@ -17,34 +18,39 @@ const ImagesBox = () => (
     </StyledImagesBox>
 )
 
-const GameXplorer = () => (
-    <SectionType1
-        anchor="game-xplorer"
-        label={
-            <>
-                Game<StyledColoredText>Xplorer</StyledColoredText>.io
-            </>
-        }
-        title={
-            <>
-                First blockchain explorer for the gamers<StyledColoredText>!</StyledColoredText>
-            </>
-        }
-        paragraph={
-            <>
-                Cartridge with a video game on the Blockchain. You must have one piece of the game
-                to play. Freely shape the rules of the secondary market as a Game Creator. Liquidity
-                pools with video games!
-            </>
-        }
-        button={
-            <StyledButton1>
-                More about <StyledColoredText>GameXplorer</StyledColoredText>
-            </StyledButton1>
-        }
-        bgImgSrc={assetsUrl("game-xplorer/lying-website.png")}
-        imagesBox={<ImagesBox />}
-    />
-)
+const Button = () => {
+    const { t } = useTranslation()
+
+    return (
+        <StyledButton1>
+            {t("game-xplorer.button")} <StyledColoredText>GameXplorer</StyledColoredText>
+        </StyledButton1>
+    )
+}
+
+const GameXplorer = () => {
+    const { t } = useTranslation()
+
+    return (
+        <SectionType1
+            anchor="game-xplorer"
+            label={
+                <>
+                    Game<StyledColoredText>Xplorer</StyledColoredText>.io
+                </>
+            }
+            title={
+                <>
+                    {t("game-xplorer.title")}
+                    <StyledColoredText>!</StyledColoredText>
+                </>
+            }
+            paragraph={<Trans i18nKey={"game-xplorer.paragraph"} components={{ b: <b /> }} />}
+            button={<></>}
+            bgImgSrc={assetsUrl("game-xplorer/lying-website.png")}
+            imagesBox={<ImagesBox />}
+        />
+    )
+}
 
 export default GameXplorer

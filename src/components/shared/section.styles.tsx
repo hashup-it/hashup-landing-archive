@@ -8,6 +8,10 @@ export const StyledSectionWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    ${MediaQuery.tablet} {
+        padding-top: 200px;
+    }
 `
 
 export const StyledSectionLabel = styled.h3`
@@ -15,13 +19,21 @@ export const StyledSectionLabel = styled.h3`
     background-color: #21242b;
     text-align: center;
     font-size: 18px;
-    padding: 11px 0;
+    padding: 11px 26px;
     border-radius: 24px;
     margin-bottom: 50px;
-    width: 205px;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     z-index: 9;
+
+    ${MediaQuery.laptopL} {
+        font-size: 16px;
+    }
+
+    ${MediaQuery.laptop} {
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
 `
 
 export const StyledSectionTitle = styled.h1`
@@ -31,7 +43,18 @@ export const StyledSectionTitle = styled.h1`
     font-weight: 700;
     text-align: center;
     position: relative;
+    max-width: 850px;
     z-index: 9;
+    margin: 0 auto;
+
+    ${MediaQuery.laptopL} {
+        font-size: 40px;
+    }
+
+    ${MediaQuery.laptop} {
+        max-width: 600px;
+        font-size: 30px;
+    }
 `
 
 export const StyledSmallSectionTitle = styled(StyledSectionTitle)`
@@ -63,4 +86,23 @@ export const StyledSectionParagraph = styled.p`
     margin-top: 50px;
     position: relative;
     z-index: 9;
+    font-weight: 500;
+
+    ${MediaQuery.laptopL} {
+        font-size: 22px;
+        max-width: 600px;
+    }
+
+    ${MediaQuery.laptop} {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+
+    ${MediaQuery.mobileL} {
+        margin-top: 30px;
+    }
+
+    strong {
+        font-weight: 700;
+    }
 `

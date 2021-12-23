@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { Swatches } from "__styles__/consts"
+import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledAnchor = styled.div`
     position: absolute;
@@ -24,11 +24,25 @@ export const StyledImagesBox = styled.div`
     margin-top: -60px;
     position: relative;
 
+    ${MediaQuery.tablet} {
+        margin-bottom: 250px;
+    }
+
     img.tablet {
         display: block;
         left: 0;
         transform: translateX(-100px);
         z-index: 10;
+
+        ${MediaQuery.laptopL} {
+            transform: translateX(30px);
+            width: 70%;
+        }
+
+        ${MediaQuery.tablet} {
+            width: 100%;
+            transform: translateX(0);
+        }
     }
 
     img.phone {
@@ -39,9 +53,20 @@ export const StyledImagesBox = styled.div`
         bottom: -70px;
         z-index: 30;
         animation: ${levitationAnim} 4.5s ease-in-out infinite;
+
+        ${MediaQuery.laptopL} {
+            width: 28%;
+            left: calc(50% + 70px);
+        }
+
+        ${MediaQuery.tablet} {
+            animation: none;
+            width: 55%;
+            transform: translateX(-8%);
+        }
     }
 
-    img.red-dots {
+    img.red-dots-1 {
         display: block;
         pointer-events: none;
         user-select: none;
@@ -50,6 +75,12 @@ export const StyledImagesBox = styled.div`
         top: 210px;
         right: -40px;
         z-index: 20;
+
+        ${MediaQuery.tablet} {
+            top: -7%;
+            right: -45%;
+            width: 90%;
+        }
     }
 
     div.flare {
@@ -62,5 +93,10 @@ export const StyledImagesBox = styled.div`
         filter: blur(400px);
         opacity: 0.12;
         z-index: 21;
+
+        ${MediaQuery.tablet} {
+            width: 40%;
+            height: 40%;
+        }
     }
 `

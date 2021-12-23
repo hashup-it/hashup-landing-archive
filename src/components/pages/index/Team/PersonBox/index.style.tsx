@@ -5,15 +5,16 @@ import { MediaQuery } from "__styles__/consts"
 
 export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
     margin-top: 60px; // Space for header-avatar
+
     .outline {
         background: ${props => {
             switch (props.personRole) {
                 case RoleEnum.coreTeam:
                     return `linear-gradient(${Swatches.primary_color} 0%, ${Swatches.background_main} 80%)`
                 case RoleEnum.team:
-                    return `linear-gradient(#2e2e2d 0%, ${Swatches.background_main} 80%)`
+                    return `linear-gradient(#343942 0%, ${Swatches.background_main} 80%)`
                 default:
-                    return "auto"
+                    return `linear-gradient(#3b404b 0%, ${Swatches.background_main} 100%)`
             }
         }};
         padding: 1px;

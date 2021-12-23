@@ -10,6 +10,7 @@ import {
 import Link from "next/link"
 import { StyledBackgroundFlare, StyledCartridgesBox, StyledAnchor } from "./index.styles"
 import React from "react"
+import { useTranslation } from "react-i18next"
 
 const cartridges: CartridgeType[] = [
     CartridgeType.blue,
@@ -34,30 +35,34 @@ const CartridgesBox = () => (
     </StyledCartridgesBox>
 )
 
-const Cartridges = () => (
-    <StyledSectionWrapper>
-        <StyledAnchor id="cartridges" />
-        <StyledBackgroundFlare />
-        <StyledSectionLabel>Cartridges</StyledSectionLabel>
-        <StyledSectionTitle>
-            1 Token <StyledColoredText>=</StyledColoredText> 1 Video Game<StyledColoredText>.</StyledColoredText>
-            <br />
-            Buy<StyledColoredText>2</StyledColoredText>Play
-        </StyledSectionTitle>
-        <StyledSectionParagraph>
-            Cartridge with a video game on the Blockchain. You must have one piece of the game to
-            play. Freely shape the rules of the secondary market as a Game Creator. Liquidity pools
-            with video games!
-        </StyledSectionParagraph>
-        <CartridgesBox />
-        <Link href="cartridges" passHref>
-            <a>
-                <StyledButton1>
-                    Find out more about <StyledColoredText>Cartridges</StyledColoredText>
-                </StyledButton1>
-            </a>
-        </Link>
-    </StyledSectionWrapper>
-)
+const Cartridges = () => {
+    const { t } = useTranslation()
+
+    return (
+        <StyledSectionWrapper>
+            <StyledAnchor id="cartridges" />
+            <StyledBackgroundFlare />
+            <StyledSectionLabel>{t("cartridges.label")}</StyledSectionLabel>
+            <StyledSectionTitle>
+                {t("cartridges.title.1")} <StyledColoredText>=</StyledColoredText>{" "}
+                {t("cartridges.title.2")}
+                <StyledColoredText>.</StyledColoredText>
+                <br />
+                Buy
+                <StyledColoredText>2</StyledColoredText>
+                Play
+            </StyledSectionTitle>
+            <StyledSectionParagraph>{t("cartridges.paragraph")}</StyledSectionParagraph>
+            <CartridgesBox />
+            <Link href="cartridges" passHref>
+                <a>
+                    <StyledButton1>
+                        {t("cartridges.button.1")} <StyledColoredText>{t("cartridges.button.2")}</StyledColoredText>
+                    </StyledButton1>
+                </a>
+            </Link>
+        </StyledSectionWrapper>
+    )
+}
 
 export default Cartridges

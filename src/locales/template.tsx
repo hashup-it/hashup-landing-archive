@@ -7,28 +7,27 @@ const LocaleTemplate = {
         "wallet-not-connected": "",
         "wallet-connected": "",
     },
-    "about-us": {
-        "free-yourself": "",
-        "header-free": "",
-        "header-market": "",
-        "section-text": "",
-        "distribution-header": "",
-        distribution: "",
-        "provision-header": "",
-        provision: "",
-    },
     header: {
+        label: {
+            "1": "",
+            "2": "",
+            "3": "",
+        },
+        title: "",
         description: "",
-        airdrop: "",
         scroll: {
             "1": "",
             "2": "",
         },
-        "ico-signup": "",
+        button: "",
         "add-hash-wallet": "",
         "all-gamers": "",
         contract: "",
-        "add#": "",
+    },
+    ecosystem: {
+        label: "",
+        title: "",
+        paragraph: "",
     },
     airdrop: {
         reserve: "",
@@ -46,82 +45,69 @@ const LocaleTemplate = {
             metamask: "",
         },
     },
-    calc: {
-        "check-how": "",
-        "check-losing": "",
-        "check-charged": "",
-        price: "Cena",
-        "slider-label": "",
-        result: "",
-        "result-label-get": "",
-        "result-label-lose": "",
-    },
-    comparison: {
-        traditional: "",
-        digital: "",
-        "distribution-with": "",
-        gains: "",
-        aftermarket: "",
-        rights: "",
-        comfort: "",
-        carrier: "",
-        intermediaries: "",
-        freemarket: "",
-        losses: "",
-        ncomfort: "",
-        ncarrier: "",
-        commisions: "",
-        nrights: "",
-        naftermarket: "",
-    },
-    "create-cartridge": {
-        "header-go": "",
-        "header-enslavement": "",
-        text: "",
+    cartridges: {
+        label: "",
+        title: {
+            "1": "",
+            "2": "",
+        },
+        paragraph: "",
+        button: {
+            "1": "",
+            "2": ""
+        },
     },
     "game-cap": {
-        "header-all": "",
-        "header-cartridges": "",
-        "header-place": "",
-        text: "",
+        title: "",
+        paragraph: "",
+        button: "",
     },
     "game-contract": {
-        label: "",
-        "header-create": "",
-        "header-cartridges": "",
-        "header-publish": "",
-        "header-brokerless": "",
-        text: "",
+        title: "",
+        paragraph: "",
+        button: "",
     },
-    "game-library": {
-        "header-new": "",
-        "header-profile": "",
-        "header-on": "",
-        "header-xplorer": "",
-        "header-collection": "",
-        "nick-header": "",
-        "nick-customize": "",
-        "nick-brag": "",
-        "nick-swap": "",
+    "game-wallet": {
+        title: "",
+        paragraph: "",
+        button: "",
     },
-    "game-explorer": {
-        "header-meeting": "",
-        "header-collectors": "",
-        "text-gamers": "",
-        "text-dev": "",
+    "game-xplorer": {
+        title: "",
+        paragraph: "",
+        button: "",
     },
     "info-notes": {
         "header-def": "",
         "header-form": "",
-        "note1-invest": "",
-        "note1-games": "",
-        "note1-content": "",
-        "note2-decentralised": "",
-        "note2-distribution": "",
-        "note2-content": "",
-        "note3-become": "",
-        "note3-independent": "",
-        "note3-content": "",
+        "note-1": {
+            "title": {
+                "1": "",
+                "2": ""
+            },
+            content: ""
+        },
+        "note-2": {
+            "title": {
+                "1": "",
+                "2": ""
+            },
+            content: ""
+        },
+        "note-3": {
+            "title": {
+                "1": "",
+                "2": ""
+            },
+            content: ""
+        },
+        "note-4": {
+            "title": {
+                "1": "",
+                "2": ""
+            },
+            content: ""
+        }
     },
     partners: {
         label: "",

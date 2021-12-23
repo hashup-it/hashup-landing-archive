@@ -6,7 +6,7 @@ import {
     StyledContentBox,
     StyledBackgroundContainer,
     StyledBackgroundPlaceholderImg,
-    StyledBackgroundFlare,
+    StyledBackgroundImg,
 } from "./index.styles"
 import HeaderBottomNav from "./HeaderBottomNav"
 import { assetsUrl } from "config"
@@ -41,11 +41,11 @@ const VideoBackground = () => {
 const LandingHeader = () => (
     <>
         <StyledInnerContainer>
-            <StyledBackgroundFlare />
             <StyledContentBox>
                 <HeaderText />
             </StyledContentBox>
             <HeaderBottomNav />
+            <StyledBackgroundImg src={assetsUrl("header/cartridge.png")} alt="" />
         </StyledInnerContainer>
         <VideoBackground />
     </>

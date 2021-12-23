@@ -47,6 +47,15 @@ class MyDocument extends Document {
                     />
                 </Head>
                 <body>
+                    {/* Facebook Pixel */}
+                    <noscript>
+                        <img
+                            height="1"
+                            width="1"
+                            src="https://www.facebook.com/tr?id=949316722346083&ev=PageView&noscript=1"
+                            alt=""
+                        />
+                    </noscript>
                     {/* Google analitics */}
                     <noscript>
                         <iframe

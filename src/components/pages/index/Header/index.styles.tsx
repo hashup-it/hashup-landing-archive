@@ -1,8 +1,5 @@
-import { GLOBAL_CONTENT_WIDTH } from "__styles__/consts"
-import { assetsUrl } from "config"
 import styled from "styled-components"
-import { Swatches } from "__styles__/consts"
-import { MediaQuery } from "__styles__/consts"
+import { GlobalHorizontalPadding, MediaQuery } from "__styles__/consts"
 
 const minHeight: string = "900px"
 
@@ -17,6 +14,13 @@ export const StyledInnerContainer = styled.div`
         height: auto;
     }
 
+    ${MediaQuery.laptop} {
+        width: calc(100vw - 30px);
+        left: calc(-50vw + 50%);
+        position: relative;
+        padding: 0 15px;
+    }
+
     ${MediaQuery.tablet} {
         padding-bottom: 45px;
     }
@@ -24,6 +28,8 @@ export const StyledInnerContainer = styled.div`
 
 export const StyledContentBox = styled.div`
     padding-top: 120px;
+    position: relative;
+    z-index: 999;
 `
 
 export const StyledBackgroundContainer = styled.div`
@@ -37,7 +43,7 @@ export const StyledBackgroundContainer = styled.div`
     left: 0;
     z-index: 0;
 
-    ${MediaQuery.laptopM} {
+    ${MediaQuery.laptop} {
         display: none;
     }
 `
@@ -62,21 +68,29 @@ export const StyledVideoBackground = styled.video<{ isLoaded: boolean }>`
     z-index: 1;
 `
 
-export const StyledBackgroundFlare = styled.div`
-    display: none;
+export const StyledBackgroundImg = styled.img`
+    display: none; // Mobile only
+    z-index: 0;
+    position: absolute;
+    opacity: 0.3;
 
-    ${MediaQuery.laptopM} {
+    ${MediaQuery.laptop} {
         display: block;
-        position: absolute;
-        pointer-events: none;
-        top: 65px;
-        left: 0;
-        width: 700px;
-        height: 900px;
-        background-color: ${Swatches.primary_color};
-        opacity: 0.08;
-        border-radius: 600px;
-        filter: blur(130px);
-        transform: rotate(30deg) translateZ(-100px);
+        width: 115%;
+        left: -10%;
+        top: 4%;
+    }
+
+    ${MediaQuery.tablet} {
+        width: 130%;
+        left: -15%;
+        top: 6%;
+    }
+
+    ${MediaQuery.mobileL} {
+        opacity: 0.22;
+        width: 170%;
+        top: 8%;
+        left: -50%;
     }
 `

@@ -15,18 +15,14 @@ export const StyledContainer = styled.div`
         position: relative;
         margin-top: 75px;
         margin-bottom: 45px;
+        justify-content: center;
     }
 
     ${MediaQuery.tablet} {
         flex-direction: column;
-        position: relative;
         gap: 35px;
-        margin-top: 160px;
-        margin-bottom: 80px;
-    }
-
-    ${MediaQuery.mobileM} {
-        margin-bottom: 2rem;
+        margin-top: 120px;
+        margin-bottom: 0;
     }
 `
 
@@ -38,7 +34,7 @@ export const StyledScrollDownNote = styled.div`
     align-items: center;
     color: white;
 
-    ${MediaQuery.laptop} {
+    ${MediaQuery.laptopM} {
         display: none;
     }
 

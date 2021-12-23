@@ -1,10 +1,15 @@
-import styled, { keyframes } from "styled-components"
-import { StyledSectionParagraph } from "components/shared/section.styles"
-import { Swatches } from "__styles__/consts"
+import styled from "styled-components"
+import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledIconsWrapper = styled.div`
-    margin-top: 140px;
+    margin-top: 30px;
     display: flex;
+    justify-content: center;
+
+    ${MediaQuery.laptop} {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 `
 
 export const StyledIconBox = styled.a`
@@ -20,6 +25,16 @@ export const StyledIconBox = styled.a`
     cursor: pointer;
     transition: 100ms opacity ease;
     color: white;
+    margin-top: 80px;
+
+    ${MediaQuery.laptopM} {
+        border: none;
+        width: 180px;
+    }
+
+    ${MediaQuery.tablet} {
+        width: 150px;
+    }
 
     :hover {
         opacity: 0.75;
@@ -61,6 +76,10 @@ export const StyledImagesBox = styled.div`
     width: 100%;
     float: right;
 
+    ${MediaQuery.mobileL} {
+        display: none;
+    }
+
     img.laptop {
         display: block;
         width: 115%;
@@ -68,7 +87,10 @@ export const StyledImagesBox = styled.div`
         z-index: 1;
         left: 50%;
         transform: translateX(-50%);
-        /* transform: scale(1.1); */
+
+        ${MediaQuery.laptopL} {
+            max-width: 105%;
+        }
     }
 
     div.flare {

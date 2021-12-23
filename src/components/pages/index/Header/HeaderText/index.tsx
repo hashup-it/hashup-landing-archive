@@ -10,6 +10,8 @@ import {
     StyledWhitepaperBox,
     StyledWhitepaperMenu,
     StyledWhitepaperLangItem,
+    StyledNewsletterBox,
+    StyledForm,
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
 import { getWhitepaper } from "util/whitepaper"
@@ -40,7 +42,7 @@ const WhitepaperButton = () => {
             Whitepaper
             <StyledWhitepaperMenu isShown={isMenuShown}>
                 <WhitepaperLangItem lang={Languages.en.code} />
-                <WhitepaperLangItem lang={Languages.pl.code} />
+                <WhitepaperLangItem lang={"pl"} />
             </StyledWhitepaperMenu>
         </StyledWhitepaperBox>
     )
@@ -52,19 +54,30 @@ export const HeaderText = () => {
     return (
         <StyledContainer>
             <StyledLabel>
-                Video Game<StyledColoredText>Cartridges</StyledColoredText> on Blockchain
+                {t("header.label.1")} <StyledColoredText>{t("header.label.2")}</StyledColoredText>{" "}
+                {t("header.label.3")}
             </StyledLabel>
             <StyledTitle>
-                Decentralized <br />
-                Game Publishing Platform<StyledColoredText>.</StyledColoredText>
+                {t("header.title")}
+                <StyledColoredText>.</StyledColoredText>
             </StyledTitle>
             <StyledParagraph>{t("header.description")}</StyledParagraph>
             <StyledButtonsBox>
                 <a href="#airdrop">
-                    <StyledButton>{t("header.airdrop")} </StyledButton>
+                    <StyledButton>{t("header.button")} </StyledButton>
                 </a>
                 <WhitepaperButton />
             </StyledButtonsBox>
+            <StyledNewsletterBox>
+                <span className="title">{t("header.ico-signup")}</span>
+                <StyledForm>
+                    <div
+                        className="ml-form-embed"
+                        data-account="3556595:b7a5n7e8w5"
+                        data-form="5061527:j8h9l1"
+                    ></div>
+                </StyledForm>
+            </StyledNewsletterBox>
         </StyledContainer>
     )
 }

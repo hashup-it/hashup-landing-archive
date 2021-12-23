@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Swatches } from "__styles__/consts"
+import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledBackgroundFlare = styled.div`
     filter: blur(500px);
@@ -22,6 +22,11 @@ export const StyledCartridgesBox = styled.div`
     align-items: center;
     justify-content: center;
 
+    ${MediaQuery.tablet} {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
     img {
         display: block;
         position: absolute;
@@ -31,6 +36,10 @@ export const StyledCartridgesBox = styled.div`
     img.gold {
         width: 630px;
         z-index: 100;
+
+        ${MediaQuery.mobileL} {
+            width: 120%;
+        }
     }
 
     div.gold-glow {
@@ -39,6 +48,12 @@ export const StyledCartridgesBox = styled.div`
         height: 225px;
         background-color: #edee87;
         filter: blur(66px);
+
+        ${MediaQuery.mobileL} {
+            width: 75%;
+            height: 130px;
+            opacity: 0.8;
+        }
     }
 
     // ========== 2nd level ==========
@@ -46,6 +61,10 @@ export const StyledCartridgesBox = styled.div`
     img.gray {
         opacity: 0.5;
         width: 420px;
+
+        ${MediaQuery.mobileL} {
+            display: none;
+        }
     }
     img.red {
         transform: translateX(-330px);
@@ -60,6 +79,10 @@ export const StyledCartridgesBox = styled.div`
         opacity: 0.17;
         z-index: 1;
         width: 305px;
+
+        ${MediaQuery.tablet} {
+            display: none;
+        }
     }
     img.blue {
         transform: translateX(-665px);

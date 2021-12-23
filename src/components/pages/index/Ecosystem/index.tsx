@@ -9,6 +9,7 @@ import {
     StyledSectionTitle,
     StyledSectionWrapper,
 } from "components/shared/section.styles"
+import { useTranslation } from "react-i18next"
 
 export interface IconInterface {
     readonly label: JSX.Element
@@ -39,23 +40,25 @@ const Images = () => (
     </StyledImagesBox>
 )
 
-const Ecosystem = () => (
-    <>
-        <StyledSectionWrapper>
-            <StyledSectionLabel>Our Ecosystem</StyledSectionLabel>
-            <StyledSectionTitle>
-                A new method of distributing <br />
-                video games<StyledColoredText>.</StyledColoredText>
-            </StyledSectionTitle>
-            <StyledSectionParagraph>
-                Video Game Cartridges on the Blochchain. Decentralized cryptocurrency distribution
-                model moved to video game publishing.
-            </StyledSectionParagraph>
-            <Icons />
-            <Images />
-        </StyledSectionWrapper>
-        <StyledSeparator />
-    </>
-)
+const Ecosystem = () => {
+    const { t } = useTranslation()
+
+    return (
+        <>
+            <StyledSectionWrapper>
+                <div id="ecosystem" />
+                <StyledSectionLabel>{t("ecosystem.label")}</StyledSectionLabel>
+                <StyledSectionTitle>
+                    {t("ecosystem.title")}
+                    <StyledColoredText>.</StyledColoredText>
+                </StyledSectionTitle>
+                <StyledSectionParagraph>{t("ecosystem.paragraph")}</StyledSectionParagraph>
+                <Icons />
+                <Images />
+            </StyledSectionWrapper>
+            <StyledSeparator />
+        </>
+    )
+}
 
 export default Ecosystem

@@ -42,10 +42,15 @@ export const StyledDescriptionBox = styled.div<{ leftBasedLayout: boolean }>`
     grid-area: text;
     top: 0;
     display: inline-block;
-    width: 480px;
+    max-width: 480px;
+    width: 480px !important;
     padding: 0 20px;
     box-sizing: border-box;
     text-align: left;
+
+    ${MediaQuery.tablet} {
+        width: 300px !important;
+    }
 
     ${StyledSectionTitle} {
         text-align: left;
@@ -82,8 +87,6 @@ export const StyledDescriptionBox = styled.div<{ leftBasedLayout: boolean }>`
 `
 
 export const StyledLabel = styled(SmallHeaderText)`
-    font-family: Sora;
-    font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 160%;
@@ -121,35 +124,24 @@ export const StyledImageBox = styled.div<{ mobileImageUrl: string }>`
         height: auto;
         margin-top: -20px;
     }
-`
 
-export const CartridgeInfoBox = styled.div<{ outlineColor: string }>`
-    background: linear-gradient(
-        90deg,
-        ${props => hexToRGB(props.outlineColor, 0)} 35%,
-        ${props => props.outlineColor} 100%
-    );
-    padding: 1px;
-    display: grid;
-    border-radius: 13px;
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
-
-    ${MediaQuery.tablet} {
-        width: 232px;
+    ${MediaQuery.mobileL} {
+        width: 100%;
     }
 `
 
-export const CartridgeTargetItemContent = styled.ul`
-    margin: 0;
-    padding: 0;
+export const CartridgeInfoBox = styled.div`
+    background: linear-gradient(90deg, ${props => hexToRGB("#989898", 0)} 35%, #989898 100%);
+    padding: 1px;
+    display: grid;
+    border-radius: 13px;
+    margin-top: 30px;
+`
+
+export const CartridgeTargetItemContent = styled.div`
     padding: 15px 20px;
     background: #161616;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: inherit;
-    position: relative;
-    list-style-type: none;
     font-size: 14px;
     line-height: 180%;
 `
@@ -161,6 +153,7 @@ export const CartridgeTargetContent = styled.div`
     font-size: 18px;
     line-height: 160%;
     color: #ffffff;
+    width: 100%;
 `
 
 export const StyledBulletList = styled.ul<{ markerSrc: string }>`

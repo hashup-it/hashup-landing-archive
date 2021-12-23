@@ -37,7 +37,7 @@ export const StyledAirdropBox = styled.div`
         "info referral";
     column-gap: 45px;
     row-gap: 45px;
-    margin-bottom: 110px;
+    margin-bottom: 180px;
 
     ${MediaQuery.laptop} {
         padding: 65px 45px;

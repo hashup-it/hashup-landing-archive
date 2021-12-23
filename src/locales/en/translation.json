@@ -7,28 +7,60 @@
         "wallet-not-connected": "Connect Wallet",
         "wallet-connected": "Connected"
     },
-    "about-us": {
-        "free-yourself": "FREE YOURSELF",
-        "header-free": "Free ",
-        "header-market": "games and software market",
-        "section-text": "The free software market is a natural consequence of putting software in the hands of players. Trade games! The free market will discover the true price of the software.",
-        "distribution-header": "Distribution in your hands",
-        "distribution": "Control the price of the game and the number of licenses issued. Earn money in the secondary market. Everything under your control.",
-        "provision-header": "No commission",
-        "provision": "You are the only publisher. Don't let anyone else make money off your hard work. Will you make more money this way or will you lower the price of the game to reach a larger audience? The decision is yours!"
+    "ecosystem": {
+        "label": "Our Ecosystem",
+        "title": "A new method of distributing video games",
+        "paragraph": "Video Game Cartridges on the Blochchain. Decentralized cryptocurrency distribution model moved to video game publishing."
+    },
+    "cartridges": {
+        "label": "Cartridges",
+        "title": {
+            "1": "1 Token",
+            "2": "1 Video Game"
+        },
+        "paragraph": "Cartridge with a video game on the Blockchain. You must have one piece of the game to play. Freely shape the rules of the secondary market as a Game Creator. Liquidity pools with video games!",
+        "button": {
+            "1": "More about",
+            "2": "cartridges"
+        }
+    },
+    "game-cap": {
+        "title": "Video Games Market Cap Listing",
+        "paragraph": "Imagine <strong>CoinMarketCap with video games</strong> that lets you list their prices. Ranking games based on their true value! <strong>Nothing shows the quality of a game better than its true price.</strong>",
+        "button": "More about"
+    },
+    "game-contract": {
+        "title": "Publish your game by creating GameContract",
+        "paragraph": "Publish games without middlemen with the help of GameContract.io in 5 minutes. Create cartridges on the blockchain in the Smart Contracts factory!",
+        "button": "More about"
+    },
+    "game-wallet": {
+        "title": "Store video games like cryptocurrencies",
+        "paragraph": "Imagine if gamers were to decide the pricing of games! <strong>Buy</strong> a game, <strong>play</strong> a game, <strong>borrow</strong> a game, <strong>sell</strong> a game. With us, you will finally <strong>own</strong> the games!",
+        "button": "More about"
+    },
+    "game-xplorer": {
+        "title": "First blockchain explorer for the gamers",
+        "paragraph": "View Player Transactions, their items and NFTs. Take pride in your game collection and collect them. Vote for video games and leave comments under players and profiles! Follow infuencers and friends.",
+        "button": "More about"
     },
     "header": {
-        "description": "DEFInitial game license media editing. P2P game exchange between players. Cartridge on blockchain. Without intermediaries. 0% commission.",
-        "airdrop": "Claim your Airdrop",
+        "description": "DeFinitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!",
         "scroll": {
             "1": "Scroll to",
             "2": " learn more"
         },
-        "ico-signup": "Subscribe to IGO of PONG game",
         "add-hash-wallet": "Add # to your wallet",
         "all-gamers": "All gamers: ",
         "contract": "Contract: ",
-        "add#": "Add # to Metamask"
+        "label": {
+            "1": "Video Game",
+            "2": "Cartridges",
+            "3": "on Blockchain"
+        },
+        "title": "Decentralized Game Publishing Platform",
+        "button": "More about cartridges",
+        "ico-signup": "Subscribe to IGO of PONG game"
     },
     "airdrop": {
         "reserve": "Reserve your unique Nickname to receive the Airdrop",
@@ -46,82 +78,37 @@
             "metamask": "Add Hash to the Metamask"
         }
     },
-    "calc": {
-        "check-how": "Check how much ",
-        "check-losing": "you are losing on commissions",
-        "check-charged": " charged by popular publishing platforms",
-        "price": "Price",
-        "slider-label": "Copies sold:",
-        "result": "With us, so much goes to you",
-        "result-label-get": "That's what you get now",
-        "result-label-lose": "You lose so much on commissions"
-    },
-    "comparison": {
-        "traditional": "Traditional distribution",
-        "digital": "Digital distribution",
-        "distribution-with": "Distribution with ",
-        "gains": "Gains",
-        "aftermarket": "Aftermarket",
-        "rights": "Full product rights",
-        "comfort": "Comfort",
-        "carrier": "No carrier",
-        "intermediaries": "No intermediaries",
-        "freemarket": "Free market price",
-        "losses": "Losses",
-        "ncomfort": "Lack of comfort",
-        "ncarrier": "Destructible carrier",
-        "commisions": "High commissions",
-        "nrights": "Lack of full rights",
-        "naftermarket": "Lack of aftermarket"
-    },
-    "create-cartridge": {
-        "header-go": "Let's go back to the days before",
-        "header-enslavement": " software enslavement",
-        "text": "We long for the times when by purchasing a game license we actually became its owner. The current software distribution model means that the digital goods we purchase do not really belong to us. But all is not lost! HashUp with the help of a digital cartridge will allow you to enjoy full control again. Trade in your games! After all, they are yours!"
-    },
-    "game-cap": {
-        "header-all": "All ",
-        "header-cartridges": "cartridges ",
-        "header-place": "in one place.",
-        "text": "Buy software the easy way. On the platform, you will find all information about the game you want to buy. Track the price and supply. Follow specific projects. Stay up to date!"
-    },
-    "game-contract": {
-        "label": "FREE MARKET SOFTWARE",
-        "header-create": "Create blockchain ",
-        "header-cartridges": "cartridges ",
-        "header-publish": "and publish your games ",
-        "header-brokerless": "brokerless",
-        "text": "Create a smart contract using an intuitive editor. Determine the distribution method, aftermarket rules, and link the cartridge to the software."
-    },
-    "game-library": {
-        "header-new": "Completely new ",
-        "header-profile": "player profile ",
-        "header-on": "on ",
-        "header-xplorer": "Xplorer. Show off ",
-        "header-collection": "your collection",
-        "nick-header": "Reserve your unique account name.",
-        "nick-customize": "customize your player profile as you wish",
-        "nick-brag": "brag about your game catalog",
-        "nick-swap": "swap games with friends"
-    },
-    "game-explorer": {
-        "header-meeting": "Meeting the needs of ",
-        "header-collectors": "collectors",
-        "text-gamers": "Gamers love to take care of their libraries. GameXplorer will allow them to showcase their collections in a better way than ever.",
-        "text-dev": "As a developer, you will have the opportunity to release a collector's edition of your game that is sure to catch the eye of collectors."
-    },
     "info-notes": {
         "header-def": "DEFInitive",
-        "header-form": " form of digital distribution.",
-        "note1-invest": "Earn",
-        "note1-games": " money on your own game",
-        "note1-content": "Make money speculating with your own game.",
-        "note2-decentralised": "Decentralised",
-        "note2-distribution": " distribution",
-        "note2-content": "Publish games through decentralized distribution.",
-        "note3-become": "Become",
-        "note3-independent": " independent",
-        "note3-content": "Earn more through the free market."
+        "header-form": " edition of Video Game Market",
+        "note-1": {
+            "title": {
+                "1": "Liquidity pool",
+                "2": "with video games"
+            },
+            "content": "You have an impact on the <strong>price of games!</strong>"
+        },
+        "note-2": {
+            "title": {
+                "1": "DAO",
+                "2": "Publisher"
+            },
+            "content": "Hash Holders <strong>decide</strong> which games get released!"
+        },
+        "note-3": {
+            "title": {
+                "1": "<strong>Independent</strong>",
+                "2": "advertising system"
+            },
+            "content": "Hit up players based on their past purchases!"
+        },
+        "note-4": {
+            "title": {
+                "1": "Blockchain Explorer",
+                "2": "<strong>for Gamers</strong>"
+            },
+            "content": "Explore player libraries, collect games like never before."
+        }
     },
     "partners": {
         "label": "Together we will change the world",
@@ -294,7 +281,6 @@
         "header-small-1": "We've created entirely new game carriers. On the blockchain. P2P.",
         "header-small-2": "Your game will finally be yours. You need us because you can't lend your game to a friend.",
         "cartridge-for": "Cartridge for",
-        "description": "The free market. And that's it!",
         "green": {
             "description": "The free market. It's simple.",
             "target": "Everyone!",

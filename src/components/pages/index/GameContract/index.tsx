@@ -14,6 +14,7 @@ import {
     StyledButtonBox,
     StyledImagesBox,
 } from "./index.styles"
+import { useTranslation } from "react-i18next"
 
 const ImagesBox = () => (
     <StyledImagesBox>
@@ -27,37 +28,47 @@ const ImagesBox = () => (
             src={assetsUrl("game-contract/floating-website.png")}
             alt="GameContract floating website preview"
         />
+        <img className="red-dots-1" src={assetsUrl("game-contract/red-dots-1.png")} alt="" />
+        <img className="red-dots-2" src={assetsUrl("game-contract/red-dots-2.png")} alt="" />
+        <div className="flare" />
     </StyledImagesBox>
 )
 
-const Cartridges = () => (
-    <StyledSectionWrapper>
-        <StyledAnchor id="game-contract" />
-        <StyledBackgroundFlare />
-        <StyledSectionLabel>
-            Game<StyledColoredText>Contract</StyledColoredText>.io
-        </StyledSectionLabel>
-        <StyledSectionTitle>
-            Publish your game by creating
-            <br />
-            GameContract<StyledColoredText>!</StyledColoredText>
-        </StyledSectionTitle>
-        <StyledSectionParagraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam turpis eget urna
-            condimentum, vel luctus turpis aliquet. Etiam in justo fermentum, fermentum arcu eu,
-            tincidunt felis. Vestibulum sit amet tincidunt metus.
-        </StyledSectionParagraph>
-        <StyledButtonBox>
-            <Link href="game-contract" passHref>
-                <a>
-                    <StyledButton1>
-                        More about <StyledColoredText>GameContract</StyledColoredText>
-                    </StyledButton1>
-                </a>
-            </Link>
-        </StyledButtonBox>
-        <ImagesBox />
-    </StyledSectionWrapper>
-)
+const Button = () => {
+    const { t } = useTranslation()
+
+    return (
+        <Link href="game-contract" passHref>
+            <a>
+                <StyledButton1>
+                    {t("game-contract.button")} <StyledColoredText>GameContract</StyledColoredText>
+                </StyledButton1>
+            </a>
+        </Link>
+    )
+}
+
+const Cartridges = () => {
+    const { t } = useTranslation()
+
+    return (
+        <StyledSectionWrapper>
+            <StyledAnchor id="game-contract" />
+            <StyledBackgroundFlare />
+            <StyledSectionLabel>
+                Game<StyledColoredText>Contract</StyledColoredText>.io
+            </StyledSectionLabel>
+            <StyledSectionTitle>
+                {t("game-contract.title")}
+                <StyledColoredText>!</StyledColoredText>
+            </StyledSectionTitle>
+            <StyledSectionParagraph>{t("game-contract.paragraph")}</StyledSectionParagraph>
+            <StyledButtonBox>
+                {/* <Button /> */}
+            </StyledButtonBox>
+            <ImagesBox />
+        </StyledSectionWrapper>
+    )
+}
 
 export default Cartridges

@@ -42,8 +42,8 @@ export const StyledLanguageList = styled.ul`
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin-top: 10rem;
-    margin-right: 1.25rem;
+    margin-top: 150px;
+    margin-left: 18px;
     position: fixed;
     z-index: 99999999;
 `

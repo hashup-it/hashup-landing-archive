@@ -6,8 +6,8 @@ import { Languages } from "config"
 
 const resources = {
     [Languages.en.code]: { translation: Languages.en.locale },
-    [Languages.pl.code]: { translation: Languages.pl.locale },
-    [Languages.de.code]: { translation: Languages.de.locale },
+    // [Languages.pl.code]: { translation: Languages.pl.locale },
+    // [Languages.de.code]: { translation: Languages.de.locale },
 }
 
 i18n.use(initReactI18next)

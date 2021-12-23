@@ -20,7 +20,7 @@ export const SelectLanguage = () => {
     }
 
     const handleClick = (): void => {
-        setIsClicked(!isClicked)
+        // setIsClicked(!isClicked)
     }
 
     return (

@@ -11,6 +11,7 @@ const App = ({ Component, pageProps }) => {
     return (
         <>
             <Script src={scriptsUrl("google-analitics.js")} strategy="beforeInteractive" />
+            <Script src={scriptsUrl("facebook.js")} strategy="beforeInteractive" />
             <Script src={scriptsUrl("mailerlite-universal.js")} />
             <Head>
                 <title>The HashUp Cartridge</title>

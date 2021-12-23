@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Swatches } from "__styles__/consts"
 
 export const StyledMetamaskButton = styled.div`
     display: grid;
@@ -13,6 +14,7 @@ export const StyledMetamaskButton = styled.div`
     font-weight: 700;
     transition: opacity 100ms ease;
     font-size: 12px;
+    border: 1px solid ${Swatches.primary_color};
 
     :hover {
         transition: opacity 100ms ease;

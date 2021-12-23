@@ -3,32 +3,25 @@ import { Swatches } from "__styles__/consts"
 import { MediaQuery } from "__styles__/consts"
 
 export const StyledNotesArea = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 100px;
-    padding-top: 90px;
-
-    ${MediaQuery.laptop} {
-        gap: 30px;
-    }
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
 
     ${MediaQuery.tablet} {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 65px;
+        padding-bottom: 40px;
     }
 `
 
 export const StyledNote = styled.div`
-    width: 220px;
-    text-align: left;
-    margin: 0 auto;
-
-    ${MediaQuery.tablet} {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    width: 280px;
+    margin: 35px auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 `
 
 const rotateAnim = keyframes`
@@ -75,31 +68,24 @@ export const StyledNoteLabel = styled.div`
     margin-top: 40px;
     line-height: 140%;
     font-size: 24px;
+    font-weight: 600;
 `
 
 export const StyledNoteContent = styled.div`
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 18px;
     line-height: 160%;
-    color: ${Swatches.text_tertiary};
     position: relative;
-
-    ${MediaQuery.tablet} {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    width: 72%;
 
     :before {
-        margin-bottom: 12px;
+        // Red line above content
         display: block;
         content: "";
         background-color: ${Swatches.primary_color};
         width: 18px;
         height: 2px;
-
-        ${MediaQuery.tablet} {
-            width: 20vw;
-        }
+        width: 20px;
+        margin: 22px auto;
     }
 `

@@ -47,7 +47,7 @@ const CartridgeDescription: FC<Props> = ({
                         Cartridge
                     </StyledSectionTitle>
                     <StyledLabel>{t(`cartridges-tab.${colorText}.description`)}</StyledLabel>
-                    <CartridgeInfoBox outlineColor={Swatches.cartridge_target_outline_color}>
+                    <CartridgeInfoBox>
                         <CartridgeTargetItemContent>
                             <StyledSmallSectionLabel>
                                 {t("cartridges-tab.cartridge-for")}

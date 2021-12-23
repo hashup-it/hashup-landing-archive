@@ -3,21 +3,21 @@ export const assetsUrl = (path: string): string => `/assets/${path}`
 export const documentsUrl = (path: string): string => `/documents/${path}`
 
 export const Languages = {
-    pl: {
-        code: "pl",
-        locale: require("./locales/pl/translation.json"),
-    },
+    // pl: {
+    // code: "pl",
+    // locale: require("./locales/pl/translation.json"),
+    // },
     en: {
         code: "en",
         locale: require("./locales/en/translation.json"),
     },
-    de: {
-        code: "de",
-        locale: require("./locales/de/translation.json"),
-    },
+    // de: {
+    // code: "de",
+    // locale: require("./locales/de/translation.json"),
+    // },
 } as const
 
-export const langsOfWhitepaper: string[] = [Languages.en.code, Languages.pl.code]
+export const langsOfWhitepaper: string[] = [Languages.en.code, "pl"]
 
 export const SocialMediaUrls = {
     facebook: "https://www.facebook.com/HashUpIt",
