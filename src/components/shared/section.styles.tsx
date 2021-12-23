@@ -63,6 +63,7 @@ export const StyledSmallSectionTitle = styled(StyledSectionTitle)`
     line-height: 140%;
     color: white;
     margin-top: 20px;
+    margin-left: 0;
 
     ${MediaQuery.tablet} {
         font-size: 30px;

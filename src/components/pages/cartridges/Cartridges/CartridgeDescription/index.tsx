@@ -1,6 +1,5 @@
 import { FC } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
-import { Swatches } from "__styles__/consts"
 import { CameraDistance, CartridgeScene } from "../../CartridgeScene"
 import {
     CartridgeDescriptionContainer,
