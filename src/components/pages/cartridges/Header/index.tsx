@@ -28,11 +28,7 @@ const Header = () => {
                 {t("cartridges-tab.header")}
                 <StyledColoredText>.</StyledColoredText>
             </StyledTitle>
-            <StyledSectionParagraph>
-                {t("cartridges-tab.header-small-1")}
-                <br />
-                {t("cartridges-tab.header-small-2")}
-            </StyledSectionParagraph>
+            <StyledSectionParagraph>{t("cartridges-tab.header-paragraph")}</StyledSectionParagraph>
             <CartridgeThumbnails />
         </StyledContainer>
     )
