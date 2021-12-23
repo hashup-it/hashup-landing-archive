@@ -17,6 +17,7 @@ import { useTranslation } from "react-i18next"
 import { getWhitepaper } from "util/whitepaper"
 import { useState } from "react"
 import { assetsUrl, Languages } from "config"
+import Link from "next/link"
 
 const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lang }) => {
     const { t } = useTranslation()
@@ -63,9 +64,11 @@ export const HeaderText = () => {
             </StyledTitle>
             <StyledParagraph>{t("header.description")}</StyledParagraph>
             <StyledButtonsBox>
-                <a href="#airdrop">
-                    <StyledButton>{t("header.button")} </StyledButton>
-                </a>
+                <Link href="cartridges" passHref>
+                    <a>
+                        <StyledButton>{t("header.button")} </StyledButton>
+                    </a>
+                </Link>
                 <WhitepaperButton />
             </StyledButtonsBox>
             <StyledNewsletterBox>
