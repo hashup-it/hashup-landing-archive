@@ -9,8 +9,21 @@ import {
 import i18n from "i18n"
 import { assetsUrl, Languages } from "config"
 
+
+const getLanguage = (): string => {
+    const lang: string = i18n.language
+    
+    // Why is it necessary? Good question. Nobody knows why i18n.language sometimes
+    // returns "en-en" instead of pure "en". If so, get first part.
+    if (lang.includes("-")) {
+        return lang.split("-")[0]
+    }
+
+    return lang
+}
+
 export const SelectLanguage = () => {
-    const [language, setLanguage] = useState<string>(i18n.language)
+    const [language, setLanguage] = useState<string>(getLanguage())
     const [isClicked, setIsClicked] = useState<boolean>(false)
 
     const handleLanguageChange = (e: any): void => {

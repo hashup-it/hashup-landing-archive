@@ -107,3 +107,20 @@ export const StyledSectionParagraph = styled.p`
         font-weight: 700;
     }
 `
+
+export const StyledSeparator = styled.div`
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    background-color: #323232;
+    height: 1px;
+
+    :before {
+        content: "";
+        width: 30%;
+        height: 3px;
+        background-color: ${Swatches.primary_color};
+        top: -1px;
+        position: absolute;
+    }
+`

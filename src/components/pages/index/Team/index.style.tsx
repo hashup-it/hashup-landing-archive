@@ -1,6 +1,5 @@
-import { MediaQuery, GlobalHorizontalPadding } from "__styles__/consts"
+import { MediaQuery, GLOBAL_HORIZONTAL_PADDING_PX } from "__styles__/consts"
 import styled from "styled-components"
-import { StyledSectionTitle } from "components/shared/section.styles"
 
 export const StyledSectionContainer = styled.div`
     margin-bottom: 120px;
@@ -44,11 +43,7 @@ export const StyledPeopleContainer = styled.div`
 
 export const StyledCarousel = styled.div`
     margin: 45px 0;
-    width: calc(100% + ${GlobalHorizontalPadding[MediaQuery.tablet]} * 2);
-    margin-left: -${GlobalHorizontalPadding[MediaQuery.tablet]};
+    width: calc(100% + ${GLOBAL_HORIZONTAL_PADDING_PX}px * 2);
+    margin-left: -${GLOBAL_HORIZONTAL_PADDING_PX}px;
 
-    ${MediaQuery.mobileL} {
-        width: calc(100% + ${GlobalHorizontalPadding[MediaQuery.mobileL]} * 2);
-        margin-left: -${GlobalHorizontalPadding[MediaQuery.mobileL]};
-    }
 `

@@ -11,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    * {
+        font-family: 'Sora', normal !important;
+    }
+
     a {
         text-decoration: none;
         color: white;

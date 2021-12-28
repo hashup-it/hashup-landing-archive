@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import {
-    GlobalHorizontalPadding,
+    GLOBAL_HORIZONTAL_PADDING_PX,
     GLOBAL_CONTENT_WIDTH_PX,
     MediaQuery,
     Swatches,
@@ -12,21 +12,11 @@ export const StyledWrapper = styled.div`
     color: white;
     margin: 0 auto;
     overflow: visible;
-    width: ${GLOBAL_CONTENT_WIDTH_PX}px;
-    padding: 0px ${GlobalHorizontalPadding[MediaQuery.desktop]};
+    max-width: ${GLOBAL_CONTENT_WIDTH_PX}px;
+    box-sizing: border-box;
+    padding: 0px ${GLOBAL_HORIZONTAL_PADDING_PX}px;
 
-    ${MediaQuery.laptop} {
-        width: auto;
-        padding: 0px ${GlobalHorizontalPadding[MediaQuery.laptop]};
+    ${MediaQuery.tablet} {
         overflow: hidden;
-    }
-
-    ${MediaQuery.laptopL} {
-        width: auto;
-        padding: 0px ${GlobalHorizontalPadding[MediaQuery.laptopL]};
-    }
-
-    ${MediaQuery.mobileL} {
-        padding: 0px ${GlobalHorizontalPadding[MediaQuery.mobileL]};
     }
 `

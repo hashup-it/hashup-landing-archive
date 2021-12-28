@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
-import { StyledIconsWrapper, StyledIconBox, StyledImagesBox, StyledSeparator } from "./index.styles"
+import { StyledIconsWrapper, StyledIconBox, StyledImagesBox } from "./index.styles"
 import { iconsData } from "./data"
 import { assetsUrl } from "config"
 import {
@@ -8,6 +8,7 @@ import {
     StyledSectionParagraph,
     StyledSectionTitle,
     StyledSectionWrapper,
+    StyledSeparator,
 } from "components/shared/section.styles"
 import { useTranslation } from "react-i18next"
 
@@ -19,7 +20,7 @@ export interface IconInterface {
 }
 
 const Icon: FC<IconInterface> = ({ anchor, label, iconFilename, iconAlt }) => (
-    <StyledIconBox href={`#${anchor}`} title={iconAlt}>
+    <StyledIconBox href={`#${anchor}`} title={iconAlt} className={anchor}>
         <img src={assetsUrl(`our-ecosystem/${iconFilename}`)} className="icon" alt={iconAlt} />
         <div className="label">{label}</div>
     </StyledIconBox>

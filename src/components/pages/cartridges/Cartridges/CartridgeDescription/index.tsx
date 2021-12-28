@@ -1,6 +1,5 @@
-import { FC } from "react"
+import { FC, useEffect, useState } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
-import { CameraDistance, CartridgeScene } from "../../CartridgeScene"
 import {
     CartridgeDescriptionContainer,
     StyledImageBox,
@@ -19,20 +18,22 @@ import { assetsUrl, CartridgeType } from "config"
 import { CartridgeInterface } from "../../interfaces"
 import { capitalizeFirstLetter } from "util/string"
 import { StyledSectionTitle, StyledSmallSectionLabel } from "components/shared/section.styles"
+import { get3dModel } from "../logic"
 
 interface Props extends CartridgeInterface {
     readonly leftBasedLayout: boolean
 }
 
-const CartridgeDescription: FC<Props> = ({
-    leftBasedLayout,
-    type,
-    color,
-    numberOfBullets,
-    model3d,
-}) => {
+const CartridgeDescription: FC<Props> = ({ leftBasedLayout, type, color, numberOfBullets }) => {
     const { t } = useTranslation()
     const colorText: string = CartridgeType[type]
+    const [cartridge3dModel, setCartridge3dModel] = useState<JSX.Element | null>(null)
+
+    useEffect(() => {
+        if (cartridge3dModel === null) {
+            setCartridge3dModel(get3dModel(type))
+        }
+    }, [])
 
     return (
         <CartridgeDescriptionContainer leftBasedLayout={leftBasedLayout}>
@@ -67,10 +68,7 @@ const CartridgeDescription: FC<Props> = ({
             </StyledDescriptionArea>
             <StyledImageBox mobileImageUrl={assetsUrl(`models/2d/${colorText}.png`)}>
                 <StyledFlare color={color} />
-                <CartridgeScene
-                    cameraDistance={CameraDistance.cartridgesListing}
-                    cartridgeModel={model3d}
-                />
+                {cartridge3dModel}
             </StyledImageBox>
         </CartridgeDescriptionContainer>
     )

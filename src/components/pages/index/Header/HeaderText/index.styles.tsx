@@ -1,10 +1,18 @@
 import styled, { css } from "styled-components"
-import { MediaQuery } from "__styles__/consts"
+import { MediaQuery, minHeight } from "__styles__/consts"
 import { Swatches } from "__styles__/consts"
 import { assetsUrl } from "config"
 
 export const StyledContainer = styled.div`
     width: 650px;
+
+    ${MediaQuery.laptopL} {
+        padding-left: 150px;
+    }
+
+    ${MediaQuery.laptop} {
+        padding-left: 100px;
+    }
 
     ${MediaQuery.tablet} {
         padding-left: 0;
@@ -212,9 +220,17 @@ export const StyledWhitepaperLangItem = styled.a`
 `
 
 export const StyledNewsletterBox = styled.div`
-    padding-top: 30px;
+    padding-top: 50px;
     position: relative;
     z-index: 0;
+
+    ${minHeight("1100px")} {
+        padding-top: 10vh;
+    }
+
+    ${MediaQuery.laptopM} {
+        padding-top: 40px;
+    }
 
     ${MediaQuery.tablet} {
         padding-top: 75px;

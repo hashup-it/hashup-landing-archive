@@ -1,28 +1,36 @@
-import { MediaQuery } from "__styles__/consts";
-import styled from "styled-components";
+import {
+    GLOBAL_HORIZONTAL_PADDING_PX,
+    GLOBAL_CONTENT_WIDTH_PX,
+    MediaQuery,
+    Swatches,
+} from "__styles__/consts"
+import styled from "styled-components"
 
 export const StyledFooterBottom = styled.div`
     position: relative;
-    padding: 32px 0px 32px 0px;
-    display: flex;
-    justify-content: space-between;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    align-items: center;
+    background-color: ${Swatches.background_secondary};
 
-    ${MediaQuery.tablet} {
+    div.content {
+        padding: 32px ${GLOBAL_HORIZONTAL_PADDING_PX}px;
+        margin: auto;
+        max-width: ${GLOBAL_CONTENT_WIDTH_PX}px;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
-        gap: 20px;
 
-        padding: 0;
-        margin-bottom: 12em;
+        ${MediaQuery.tablet} {
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 `
 
-
 export const StyledCopyright = styled.span`
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 160%;
@@ -31,8 +39,6 @@ export const StyledCopyright = styled.span`
     color: #8a8f98;
 `
 export const StyledFooterLink = styled.a`
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 160%;
@@ -72,6 +78,3 @@ export const StyledDocumentGroup = styled.div`
         flex-direction: column;
     }
 `
-
-
-

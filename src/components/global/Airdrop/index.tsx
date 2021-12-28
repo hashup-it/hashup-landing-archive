@@ -18,7 +18,6 @@ import {
     StyledInputWrapper,
     StyledInputHeader,
     StyledReferralInfo,
-    StyledBackgroundFlare,
     StyledAnchor,
 } from "./index.styles"
 import Web3 from "web3"
@@ -165,7 +164,6 @@ const Airdrop = () => {
     return (
         <StyledAirdropSection>
             <StyledAnchor id="airdrop" />
-            <StyledBackgroundFlare />
             <StyledAirdropBox>
                 <StyledHeaderBox>
                     Join the{" "}

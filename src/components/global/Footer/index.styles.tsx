@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components"
-import { Swatches, MediaQuery } from "__styles__/consts"
-import { assetsUrl, SocialMediaIcons } from "config"
+import { Swatches, MediaQuery, GLOBAL_HORIZONTAL_PADDING_PX } from "__styles__/consts"
+import { SocialMediaIcons } from "config"
 
 export const StyledFooter = styled.div`
     position: relative;
-    margin-top: 50px;
+    padding-top: 65px;
 `
 
 export const StyledFooterTop = styled.div`
@@ -55,32 +55,6 @@ export const StyledQuickNavigation = styled.div`
     }
 
     margin: 55px 0;
-`
-
-export const StyledSeparatorAccent = styled.div`
-    background: url(${() => assetsUrl("icons/footer-separator-accent.svg")});
-    width: 280px;
-    height: 2px;
-    position: absolute;
-    top: -50px;
-    left: -93px;
-
-    ${MediaQuery.tablet} {
-        left: -200px;
-    }
-
-    ${MediaQuery.mobileL} {
-        display: none;
-    } ;
-`
-
-export const StyledSeparatorBase = styled.div`
-    background: url(${() => assetsUrl("icons/footer-separator-base.svg")});
-    width: 1440px;
-    height: 2px;
-    position: absolute;
-    top: -50px;
-    left: -93px;
 `
 
 export const StyledMenuLabel = styled.span`

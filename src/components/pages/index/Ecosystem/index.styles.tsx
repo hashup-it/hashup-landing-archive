@@ -10,6 +10,19 @@ export const StyledIconsWrapper = styled.div`
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
+    ${MediaQuery.tablet} {
+        display: block;
+        height: 300px;
+        width: 80%;
+        max-width: 400px;
+        position: relative;
+        margin-top: 45px;
+    }
+
+    ${MediaQuery.mobileL} {
+        width: calc(100% - 20px);
+    }
 `
 
 export const StyledIconBox = styled.a`
@@ -33,7 +46,31 @@ export const StyledIconBox = styled.a`
     }
 
     ${MediaQuery.tablet} {
-        width: 150px;
+        width: 110px;
+        position: absolute;
+        margin-top: 0;
+
+        &.cartridges {
+            top: 0;
+            left: 0;
+        }
+        &.game-cap {
+            top: 0;
+            right: 0;
+        }
+        &.game-contract {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &.game-wallet {
+            bottom: 0;
+            left: 0;
+        }
+        &.game-xplorer {
+            bottom: 0;
+            right: 0;
+        }
     }
 
     :hover {
@@ -48,6 +85,10 @@ export const StyledIconBox = styled.a`
     img.icon {
         position: absolute;
         top: -25px;
+
+        ${MediaQuery.tablet} {
+            top: 0;
+        }
     }
 
     div.label {
@@ -55,6 +96,10 @@ export const StyledIconBox = styled.a`
         font-weight: 600;
         position: absolute;
         bottom: 0;
+
+        ${MediaQuery.tablet} {
+            font-size: 14px;
+        }
 
         :after {
             content: "";
@@ -90,6 +135,10 @@ export const StyledImagesBox = styled.div`
 
         ${MediaQuery.laptopL} {
             max-width: 105%;
+        }
+
+        ${MediaQuery.mobileL} {
+            display: none;
         }
     }
 

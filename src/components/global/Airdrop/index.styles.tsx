@@ -1,49 +1,53 @@
 import styled from "styled-components"
-import { MediaQuery } from "__styles__/consts"
+import {
+    GLOBAL_CONTENT_WIDTH_PX,
+    GLOBAL_HORIZONTAL_PADDING_PX,
+    maxWidth,
+    MediaQuery,
+} from "__styles__/consts"
 import { Swatches } from "__styles__/consts"
 import { assetsUrl, SocialMediaIcons } from "config"
 
+const layoutChangeMediaQuery: string = maxWidth("590px")
+
 export const StyledAirdropSection = styled.div`
     position: relative;
-`
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    border-top: 4px solid ${Swatches.primary_color};
+    background-color: ${Swatches.background_secondary};
+    padding: 110px 0;
 
-export const StyledBackgroundFlare = styled.div`
-    position: absolute;
-    pointer-events: none;
-    top: -130px;
-    left: 70px;
-    width: 600px;
-    height: 750px;
-    background-color: red;
-    opacity: 0.08;
-    border-radius: 600px;
-    filter: blur(120px);
-    transform: rotate(-25deg) translateZ(-100px);
-    z-index: 0;
+    ${layoutChangeMediaQuery} {
+        padding: 30px 0;
+    }
 `
 
 export const StyledAirdropBox = styled.div`
+    max-width: ${GLOBAL_CONTENT_WIDTH_PX}px;
+    margin: auto;
     position: relative;
     box-sizing: border-box;
-    z-index: 9;
-    background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
-    border-top: 4px solid ${Swatches.primary_color};
-    padding: 65px 125px;
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     grid-template-rows: auto auto;
     grid-template-areas:
         "header input"
         "info referral";
-    column-gap: 45px;
+    column-gap: 250px;
     row-gap: 45px;
-    margin-bottom: 180px;
+    padding: 0 ${GLOBAL_HORIZONTAL_PADDING_PX}px;
 
-    ${MediaQuery.laptop} {
-        padding: 65px 45px;
+    ${MediaQuery.laptopM} {
+        column-gap: 130px;
     }
 
-    ${MediaQuery.tablet} {
+    ${MediaQuery.laptop} {
+        column-gap: 100px;
+    }
+
+    ${layoutChangeMediaQuery} {
         display: flex;
         flex-direction: column;
         padding: 27px;
@@ -67,7 +71,7 @@ export const StyledHeaderBox = styled.h1`
         max-width: 100%;
     }
 
-    ${MediaQuery.tablet} {
+    ${layoutChangeMediaQuery} {
         text-align: left;
         width: auto;
         font-size: 28px;
@@ -76,10 +80,6 @@ export const StyledHeaderBox = styled.h1`
 
 export const StyledInputBox = styled.div`
     grid-area: input;
-
-    ${MediaQuery.tablet} {
-        margin-top: -10px;
-    }
 `
 
 export const StyledInputHeader = styled.div`
@@ -91,6 +91,10 @@ export const StyledInputHeader = styled.div`
 
     div.title {
         font-size: 18px;
+
+        ${layoutChangeMediaQuery} {
+            margin-top: 20px;
+        }
     }
     div.caption {
         margin-top: 10px;
@@ -98,9 +102,11 @@ export const StyledInputHeader = styled.div`
         font-size: 12px;
         line-height: 15px;
         color: #646e83;
+        line-height: 140%;
 
-        ${MediaQuery.tablet} {
+        ${layoutChangeMediaQuery} {
             font-size: 14px;
+            margin-top: 20px;
         }
     }
 `
@@ -138,7 +144,7 @@ export const StyledInputWrapper = styled.div`
         position: relative;
         border-radius: 24px 0px 0px 4px;
 
-        ${MediaQuery.tablet} {
+        ${layoutChangeMediaQuery} {
             border-radius: 4px;
         }
 
@@ -147,7 +153,7 @@ export const StyledInputWrapper = styled.div`
         }
     }
 
-    ${MediaQuery.tablet} {
+    ${layoutChangeMediaQuery} {
         flex-direction: column;
     }
 `
@@ -163,7 +169,7 @@ export const StyledInputButton = styled.button<{ isDisabled: boolean }>`
     border: 0;
     width: 63px;
 
-    ${MediaQuery.tablet} {
+    ${layoutChangeMediaQuery} {
         height: 63px;
         width: 100%;
         margin: 7px auto 43px;
@@ -204,7 +210,7 @@ export const StyledInputButton = styled.button<{ isDisabled: boolean }>`
             background-position: center;
             background-repeat: no-repeat;
 
-            ${MediaQuery.tablet} {
+            ${layoutChangeMediaQuery} {
                 margin-left: 10px;
             }
         }
@@ -212,7 +218,7 @@ export const StyledInputButton = styled.button<{ isDisabled: boolean }>`
         span.text {
             display: none;
 
-            ${MediaQuery.tablet} {
+            ${layoutChangeMediaQuery} {
                 display: inline-block;
             }
         }
@@ -245,7 +251,7 @@ export const StyledConnectButton = styled.button`
         background-repeat: no-repeat;
     }
 
-    ${MediaQuery.tablet} {
+    ${layoutChangeMediaQuery} {
         text-align: left;
         padding: 15px 25px;
     }
@@ -267,7 +273,7 @@ export const StyledAirdropInfo = styled.div`
         margin-top: 14px;
     }
 
-    ${MediaQuery.tablet} {
+    ${layoutChangeMediaQuery} {
         display: none;
     }
 `

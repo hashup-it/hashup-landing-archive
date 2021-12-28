@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { GlobalHorizontalPadding, MediaQuery } from "__styles__/consts"
+import { MediaQuery } from "__styles__/consts"
 
 const minHeight: string = "900px"
 
@@ -27,9 +27,17 @@ export const StyledInnerContainer = styled.div`
 `
 
 export const StyledContentBox = styled.div`
-    padding-top: 120px;
     position: relative;
-    z-index: 999;
+    z-index: 99;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    ${MediaQuery.laptopM} {
+        padding-top: 120px;
+        display: static;
+    }
 `
 
 export const StyledBackgroundContainer = styled.div`

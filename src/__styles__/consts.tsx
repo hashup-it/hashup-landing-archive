@@ -1,7 +1,9 @@
 export const GLOBAL_CONTENT_WIDTH_PX: number = 1240
+export const GLOBAL_HORIZONTAL_PADDING_PX: number = 15
 
 export const Swatches = {
-    background_main: "#0A0A08",
+    background_main: "#101010",
+    background_secondary: "#050505",
     primary_color: "#FF3F3F",
     inactive: "#CDCDCD",
     text_main: "#FFFFFF",
@@ -20,6 +22,7 @@ const size = {
     desktopL: "2560px",
 } as const
 
+export const minHeight = (height: string): string => `@media(min-height: ${height})`
 export const maxWidth = (width: string): string => `@media(max-width: ${width})`
 
 export const MediaQuery = {
@@ -33,11 +36,3 @@ export const MediaQuery = {
     desktop: maxWidth(size.desktop),
     desktopL: maxWidth(size.desktopL),
 } as const
-
-export const GlobalHorizontalPadding = {
-    [MediaQuery.desktop]: "93px",
-    [MediaQuery.laptop]: "45px",
-    [MediaQuery.laptopL]: "15px",
-    [MediaQuery.tablet]: "15px",
-    [MediaQuery.mobileL]: "15px",
-}

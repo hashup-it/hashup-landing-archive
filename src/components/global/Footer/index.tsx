@@ -9,10 +9,7 @@ import {
     StyledHeading,
     StyledLogo,
     StyledQuickNavigation,
-    StyledSeparatorAccent,
-    StyledSeparatorBase,
 } from "./index.styles"
-
 import Newsletter from "./Newsletter"
 import SocialMediaBox from "./SocialMediaBox"
 import CompanyInfo from "./CompanyInfo"
@@ -24,8 +21,6 @@ export const Footer = () => {
 
     return (
         <StyledFooter>
-            <StyledSeparatorBase />
-            <StyledSeparatorAccent />
             <StyledHeading>
                 <Link href="/" passHref>
                     <StyledLogo src={BrandAssets.logo} />

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { MediaQuery, Swatches, GlobalHorizontalPadding } from "__styles__/consts"
+import { MediaQuery, Swatches, GLOBAL_HORIZONTAL_PADDING_PX } from "__styles__/consts"
 
 export const StyledRoadmap = styled.div`
     text-align: center;
@@ -14,15 +14,10 @@ export const StyledCarousele = styled.div`
 
     ${MediaQuery.laptopL} {
         position: static;
-        width: calc(100% + ${GlobalHorizontalPadding[MediaQuery.laptopL]} * 2);
-        margin-left: -${GlobalHorizontalPadding[MediaQuery.laptopL]};
+        width: calc(100% + ${GLOBAL_HORIZONTAL_PADDING_PX}px * 2);
+        margin-left: -${GLOBAL_HORIZONTAL_PADDING_PX}px;
         margin-top: 50px;
         left: 0;
-    }
-
-    ${MediaQuery.mobileL} {
-        width: calc(100% + ${GlobalHorizontalPadding[MediaQuery.mobileL]} * 2);
-        margin-left: -${GlobalHorizontalPadding[MediaQuery.mobileL]};
     }
 
     /* =========== CAROUSEL BOTTOM BUTTONS STYLES ========== */
