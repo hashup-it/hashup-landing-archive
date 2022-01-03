@@ -1,3 +1,4 @@
+import { StyledLoadingSpinner } from "components/shared/loading.styles"
 import styled from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 
@@ -122,6 +123,11 @@ export const StyledTokenInfoItem = styled.div`
     display: flex;
     align-items: center;
     gap: 7px;
+
+    ${StyledLoadingSpinner} {
+        width: 30px;
+        height: 30px;
+    }
 `
 
 export const StyledTokenIcon = styled.div<{ icon: string }>`

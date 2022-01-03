@@ -12,12 +12,15 @@ import { assetsUrl, Languages } from "config"
 
 const getLanguage = (): string => {
     const lang: string = i18n.language
+    // TODO: Remove that
+    return 'EN'
     
     // Why is it necessary? Good question. Nobody knows why i18n.language sometimes
     // returns "en-en" instead of pure "en". If so, get first part.
     if (lang.includes("-")) {
         return lang.split("-")[0]
     }
+
 
     return lang
 }

@@ -19,7 +19,7 @@ import {
 import { useTranslation } from "react-i18next"
 
 interface AidropPopupProps {
-    setPopupOpened: Function
+    setPopupOpened: (v: boolean) => void
 }
 
 export const AirdropPopup: FC<AidropPopupProps> = ({ setPopupOpened }) => {

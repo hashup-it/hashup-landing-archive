@@ -40,7 +40,7 @@ export const SocialMediaIcons = {
     dribble: socialMediaIconUrl("dribble.svg"),
     github: socialMediaIconUrl("github.svg"),
     metamask: socialMediaIconUrl("metamask.svg"),
-    wikipedia: socialMediaIconUrl("wikipedia.ico"),
+    wikipedia: socialMediaIconUrl("wikipedia.svg"),
 } as const
 
 const brandAssetsUrl = (filename: string): string => assetsUrl(`brand/${filename}`)

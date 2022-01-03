@@ -1,5 +1,3 @@
-import hashInfo from "components/global/Airdrop/hash-info"
-import { useEffect, useState } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
 import { AddToMetamask } from "./AddToMetamask"
 import { CopyAdress } from "./CopyAdress"
@@ -12,9 +10,14 @@ import {
     StyledTokenInfoItem,
 } from "./index.styles"
 import { assetsUrl, SocialMediaIcons, SocialMediaUrls } from "config"
-import Web3 from "web3"
-import { AbiItem } from "web3-utils"
 import { useTranslation } from "react-i18next"
+import dynamic from "next/dynamic"
+import { StyledLoadingSpinner } from "components/shared/loading.styles"
+import { useEffect, useState } from "react"
+
+const GamersCount = dynamic(() => import("./GamersCount/index"), {
+    loading: () => <StyledLoadingSpinner />,
+})
 
 const ScrollDownNote = () => {
     const { t } = useTranslation()
@@ -31,19 +34,12 @@ const ScrollDownNote = () => {
 }
 
 const HeaderBottom = () => {
-    const [gamersCount, setGamersCount] = useState(1337)
+    const [isGamersCountShown, setIsGamersCountShown] = useState<boolean>(false)
     const { t } = useTranslation()
 
     useEffect(() => {
-        ;(async () => {
-            const web3 = new Web3("https://bsc-dataseed.binance.org/")
-            const contract = await new web3.eth.Contract(
-                hashInfo.abi as AbiItem[],
-                hashInfo.contractAddress
-            )
-            let gamersCountRes = await contract.methods.gamersCount().call()
-            setGamersCount(gamersCountRes)
-        })()
+        // Lazy loading
+        setTimeout(() => setIsGamersCountShown(true), 1000)
     }, [])
 
     return (
@@ -53,7 +49,7 @@ const HeaderBottom = () => {
                 <StyledTokenInfo>
                     <StyledTokenInfoItem>
                         <b>{t("header.all-gamers")}</b>
-                        <StyledColoredText>{gamersCount}</StyledColoredText>
+                        {isGamersCountShown ? <GamersCount /> : <StyledLoadingSpinner />}
                     </StyledTokenInfoItem>
                     <StyledTokenInfoItem>
                         <b>{t("header.contract")}</b>

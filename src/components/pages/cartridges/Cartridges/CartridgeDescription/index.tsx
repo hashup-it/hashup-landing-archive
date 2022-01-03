@@ -18,7 +18,13 @@ import { assetsUrl, CartridgeType } from "config"
 import { CartridgeInterface } from "../../interfaces"
 import { capitalizeFirstLetter } from "util/string"
 import { StyledSectionTitle, StyledSmallSectionLabel } from "components/shared/section.styles"
-import { get3dModel } from "../logic"
+import dynamic from "next/dynamic"
+import { StyledLoadingSpinner } from "components/shared/loading.styles"
+
+const Cartridge3d = dynamic(() => import("./Cartridge3d"), {
+    ssr: false,
+    loading: () => <StyledLoadingSpinner />,
+})
 
 interface Props extends CartridgeInterface {
     readonly leftBasedLayout: boolean
@@ -27,13 +33,11 @@ interface Props extends CartridgeInterface {
 const CartridgeDescription: FC<Props> = ({ leftBasedLayout, type, color, numberOfBullets }) => {
     const { t } = useTranslation()
     const colorText: string = CartridgeType[type]
-    const [cartridge3dModel, setCartridge3dModel] = useState<JSX.Element | null>(null)
+    const [isCartridgeShown, setIsCartridgeShown] = useState<boolean>(false)
 
     useEffect(() => {
-        if (cartridge3dModel === null) {
-            setCartridge3dModel(get3dModel(type))
-        }
-    }, [])
+        setTimeout(() => setIsCartridgeShown(true), 650)
+    }, [isCartridgeShown])
 
     return (
         <CartridgeDescriptionContainer leftBasedLayout={leftBasedLayout}>
@@ -68,7 +72,7 @@ const CartridgeDescription: FC<Props> = ({ leftBasedLayout, type, color, numberO
             </StyledDescriptionArea>
             <StyledImageBox mobileImageUrl={assetsUrl(`models/2d/${colorText}.png`)}>
                 <StyledFlare color={color} />
-                {cartridge3dModel}
+                {isCartridgeShown ? <Cartridge3d type={type} /> : <StyledLoadingSpinner />}
             </StyledImageBox>
         </CartridgeDescriptionContainer>
     )

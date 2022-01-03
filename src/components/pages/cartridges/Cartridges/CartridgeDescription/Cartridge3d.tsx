@@ -1,8 +1,9 @@
 import { CameraDistance } from "components/pages/cartridges/CartridgeScene"
 import { CartridgeType } from "config"
 import dynamic from "next/dynamic"
+import { FC } from "react"
 
-export const get3dModel = (type: CartridgeType) => {
+const Cartridge3d: FC<{ readonly type: CartridgeType }> = ({ type }) => {
     let Dynamic3dModel: any
 
     switch (type) {
@@ -50,3 +51,5 @@ export const get3dModel = (type: CartridgeType) => {
         />
     )
 }
+
+export default Cartridge3d

@@ -17,7 +17,7 @@ const VideoBackground = () => {
 
     useEffect(() => {
         // Set video url after component render to force lazy loading
-        setVideoUrl(assetsUrl("video/spinning-cartridge.webm"))
+        setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 1000)
     }, [])
 
     return (
