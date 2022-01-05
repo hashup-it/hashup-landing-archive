@@ -41,7 +41,7 @@
   "scripts": {
     "dev": "next dev",
     "test-build": "ANALYZE=true next build",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint src/",
     "check-locale": "npx ts-node scripts/checkLocaleSync.ts"
