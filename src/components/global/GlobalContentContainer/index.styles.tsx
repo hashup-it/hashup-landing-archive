@@ -7,7 +7,7 @@ import {
 } from "__styles__/consts"
 
 export const StyledWrapper = styled.div`
-    background-color: ${Swatches.background_main};
+    /* background-color: ${Swatches.background_main}; */
     min-height: 100vh;
     color: white;
     margin: 0 auto;

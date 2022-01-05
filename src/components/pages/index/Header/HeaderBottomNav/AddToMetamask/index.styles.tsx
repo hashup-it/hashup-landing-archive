@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import { Swatches } from "__styles__/consts"
 
-export const StyledMetamaskButton = styled.div`
-    display: grid;
+export const StyledMetamaskButton = styled.button`
+    color: white;
     display: flex;
     border-radius: 8px;
     text-align: center;
@@ -15,13 +15,19 @@ export const StyledMetamaskButton = styled.div`
     transition: opacity 100ms ease;
     font-size: 12px;
     border: 1px solid ${Swatches.primary_color};
+    align-items: center;
 
     :hover {
         transition: opacity 100ms ease;
-        opacity: 0.7;
+        opacity: 0.8;
     }
 
-    .text {
+    div.icon-wrapper {
+        width: 17px;
+        height: 17px;
+    }
+
+    span.text {
         padding: 0 10px;
     }
 `

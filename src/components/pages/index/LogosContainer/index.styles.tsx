@@ -20,7 +20,7 @@ export const StyledLogosContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 60px 0;
+    gap: 55px 0;
     text-align: center;
     align-items: center;
 
@@ -35,7 +35,7 @@ export const StyledLogosContainer = styled.div`
     }
 `
 
-export const StyledLogo = styled.img`
+export const StyledLogoWrapper = styled.div`
     max-width: 55%;
 
     ${MediaQuery.tablet} {

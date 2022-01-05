@@ -8,28 +8,71 @@ import {
     StyledSectionWrapper,
 } from "components/shared/section.styles"
 import Link from "next/link"
-import { StyledBackgroundFlare, StyledCartridgesBox, StyledAnchor } from "./index.styles"
+import {
+    StyledBackgroundFlare,
+    StyledCartridgesBox,
+    StyledAnchor,
+    StyledCartridgeImgWrapper,
+} from "./index.styles"
 import React from "react"
 import { useTranslation } from "react-i18next"
+import Image from "next/image"
 
-const cartridges: CartridgeType[] = [
-    CartridgeType.blue,
-    CartridgeType.green,
-    CartridgeType.gold,
-    CartridgeType.gray,
-    CartridgeType.red,
+import redCartridgeImg from "/public/assets/2d-cartridges/without-extras/red.png"
+import blueCartridgeImg from "/public/assets/2d-cartridges/without-extras/blue.png"
+import greenCartridgeImg from "/public/assets/2d-cartridges/without-extras/green.png"
+import goldCartridgeImg from "/public/assets/2d-cartridges/without-extras/gold.png"
+import grayCartridgeImg from "/public/assets/2d-cartridges/without-extras/gray.png"
+import { DeviceWidth } from "__styles__/consts"
+
+const cartridges: { type: CartridgeType; img: string; imgQuality: number; priority: boolean }[] = [
+    {
+        type: CartridgeType.blue,
+        img: blueCartridgeImg,
+        imgQuality: 1,
+        priority: false,
+    },
+    {
+        type: CartridgeType.green,
+        img: greenCartridgeImg,
+        imgQuality: 1,
+        priority: false,
+    },
+    {
+        type: CartridgeType.gray,
+        img: grayCartridgeImg,
+        imgQuality: 25,
+        priority: true,
+    },
+    {
+        type: CartridgeType.red,
+        img: redCartridgeImg,
+        imgQuality: 25,
+        priority: true,
+    },
+    {
+        type: CartridgeType.gold,
+        img: goldCartridgeImg,
+        imgQuality: 65,
+        priority: true,
+    },
 ]
 
 const CartridgesBox = () => (
     <StyledCartridgesBox>
         {cartridges.map(item => (
-            <React.Fragment key={item}>
-                <img
-                    src={assetsUrl(`2d-cartridges/without-extras/${item}.png`)}
-                    className={item}
-                    alt={`${item} cartridge`}
-                />
-                {item === CartridgeType.gold && <div className="gold-glow" />}
+            <React.Fragment key={item.type}>
+                <StyledCartridgeImgWrapper className={item.type}>
+                    <Image
+                        src={item.img}
+                        alt={`${item.type} cartridge`}
+                        sizes={`(min-width: ${DeviceWidth.desktop}) 630px, (max-width: ${DeviceWidth.tablet}) 460px, auto`}
+                        quality={item.imgQuality}
+                        priority={item.priority}
+                        placeholder="blur"
+                    />
+                </StyledCartridgeImgWrapper>
+                {item.type === CartridgeType.gold && <div className="gold-glow" />}
             </React.Fragment>
         ))}
     </StyledCartridgesBox>
@@ -57,7 +100,8 @@ const Cartridges = () => {
             <Link href="cartridges" passHref>
                 <a>
                     <StyledButton1>
-                        {t("cartridges.button.1")} <StyledColoredText>{t("cartridges.button.2")}</StyledColoredText>
+                        {t("cartridges.button.1")}{" "}
+                        <StyledColoredText>{t("cartridges.button.2")}</StyledColoredText>
                     </StyledButton1>
                 </a>
             </Link>

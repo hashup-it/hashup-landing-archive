@@ -10,7 +10,7 @@ export const Swatches = {
     text_secondary: "#ADADAD",
 } as const
 
-const size = {
+export const DeviceWidth = {
     mobileS: "320px",
     mobileM: "375px",
     mobileL: "425px",
@@ -26,13 +26,13 @@ export const minHeight = (height: string): string => `@media(min-height: ${heigh
 export const maxWidth = (width: string): string => `@media(max-width: ${width})`
 
 export const MediaQuery = {
-    mobileS: maxWidth(size.mobileS),
-    mobileM: maxWidth(size.mobileM),
-    mobileL: maxWidth(size.mobileL),
-    tablet: maxWidth(size.tablet),
-    laptop: maxWidth(size.laptop),
-    laptopM: maxWidth(size.laptopM),
-    laptopL: maxWidth(size.laptopL),
-    desktop: maxWidth(size.desktop),
-    desktopL: maxWidth(size.desktopL),
+    mobileS: maxWidth(DeviceWidth.mobileS),
+    mobileM: maxWidth(DeviceWidth.mobileM),
+    mobileL: maxWidth(DeviceWidth.mobileL),
+    tablet: maxWidth(DeviceWidth.tablet),
+    laptop: maxWidth(DeviceWidth.laptop),
+    laptopM: maxWidth(DeviceWidth.laptopM),
+    laptopL: maxWidth(DeviceWidth.laptopL),
+    desktop: maxWidth(DeviceWidth.desktop),
+    desktopL: maxWidth(DeviceWidth.desktopL),
 } as const

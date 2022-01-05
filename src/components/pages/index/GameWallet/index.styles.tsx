@@ -28,8 +28,28 @@ export const StyledImagesBox = styled.div`
         margin-bottom: 250px;
     }
 
-    img.tablet {
+    div.flare {
+        position: absolute;
+        top: 100px;
+        right: 40px;
+        width: 300px;
+        height: 300px;
+        background-color: ${Swatches.primary_color};
+        filter: blur(400px);
+        opacity: 0.12;
+        z-index: 21;
+
+        ${MediaQuery.tablet} {
+            width: 40%;
+            height: 40%;
+        }
+    }
+`
+
+export const StyledImgWrapper = styled.div`
+    &.tablet {
         display: block;
+        width: 90%;
         left: 0;
         transform: translateX(-100px);
         z-index: 10;
@@ -45,7 +65,7 @@ export const StyledImagesBox = styled.div`
         }
     }
 
-    img.phone {
+    &.phone {
         display: block;
         position: absolute;
         width: 450px;
@@ -66,7 +86,7 @@ export const StyledImagesBox = styled.div`
         }
     }
 
-    img.red-dots-1 {
+    &.red-dots-1 {
         display: block;
         pointer-events: none;
         user-select: none;
@@ -80,23 +100,6 @@ export const StyledImagesBox = styled.div`
             top: -7%;
             right: -45%;
             width: 90%;
-        }
-    }
-
-    div.flare {
-        position: absolute;
-        top: 100px;
-        right: 40px;
-        width: 300px;
-        height: 300px;
-        background-color: ${Swatches.primary_color};
-        filter: blur(400px);
-        opacity: 0.12;
-        z-index: 21;
-
-        ${MediaQuery.tablet} {
-            width: 40%;
-            height: 40%;
         }
     }
 `

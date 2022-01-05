@@ -213,7 +213,7 @@ export const StyledWhitepaperLangItem = styled.a`
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    img {
+    div.icon-wrapper {
         margin-left: 15px;
         margin-right: 12px;
     }

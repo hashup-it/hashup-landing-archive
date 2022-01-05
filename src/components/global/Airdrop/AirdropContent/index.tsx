@@ -20,9 +20,10 @@ import {
     StyledInputHeader,
     StyledReferralInfo,
 } from "../index.styles"
-import queryString, { parse } from "query-string"
-import { assetsUrl } from "config"
+import queryString from "query-string"
+import { assetsUrl, SocialMediaIcons } from "config"
 import { AirdropPopup } from "../AirdropPopup"
+import Image from "next/image"
 
 const BLOCKCHAIN_PROVIDER_URI = "https://bsc-dataseed.binance.org"
 
@@ -201,6 +202,14 @@ const AidropContent = () => {
             <StyledAirdropReferral>
                 {!account && (
                     <StyledConnectButton onClick={showWalletSelector}>
+                        <div className="icon-wrapper">
+                            <Image
+                                src={SocialMediaIcons.metamask}
+                                width={20}
+                                height={20}
+                                alt="Metamask icon"
+                            />
+                        </div>
                         {t("airdrop.connect")}
                     </StyledConnectButton>
                 )}

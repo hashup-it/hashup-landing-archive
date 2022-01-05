@@ -82,15 +82,6 @@ export const StyledIconBox = styled.a`
         border-left: none;
     }
 
-    img.icon {
-        position: absolute;
-        top: -25px;
-
-        ${MediaQuery.tablet} {
-            top: 0;
-        }
-    }
-
     div.label {
         font-size: 18px;
         font-weight: 600;
@@ -115,6 +106,16 @@ export const StyledIconBox = styled.a`
     }
 `
 
+export const StyledIconWrapper = styled.div`
+    position: absolute;
+    top: -25px;
+
+    ${MediaQuery.tablet} {
+        top: 0px;
+        width: 50px;
+    }
+`
+
 export const StyledImagesBox = styled.div`
     margin-top: 140px;
     position: relative;
@@ -125,9 +126,21 @@ export const StyledImagesBox = styled.div`
         display: none;
     }
 
-    img.laptop {
-        display: block;
-        width: 115%;
+    div.flare {
+        top: 0;
+        width: 600px;
+        height: 700px;
+        background-color: ${Swatches.primary_color};
+        position: absolute;
+        z-index: 0;
+        filter: blur(544px);
+        opacity: 0;
+    }
+`
+
+export const StyledMainImageWrapper = styled.div`
+    span {
+        width: 115% !important;
         position: relative;
         z-index: 1;
         left: 50%;
@@ -140,17 +153,6 @@ export const StyledImagesBox = styled.div`
         ${MediaQuery.mobileL} {
             display: none;
         }
-    }
-
-    div.flare {
-        top: 0;
-        width: 600px;
-        height: 700px;
-        background-color: ${Swatches.primary_color};
-        position: absolute;
-        z-index: 0;
-        filter: blur(544px);
-        opacity: 0;
     }
 `
 

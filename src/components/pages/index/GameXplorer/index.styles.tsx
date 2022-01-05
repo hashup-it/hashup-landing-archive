@@ -5,14 +5,27 @@ export const StyledImagesBox = styled.div`
     text-align: right;
     position: relative;
 
-    img.red-dots-1,
-    img.red-dots-2 {
-        pointer-events: none;
-        user-select: none;
-    }
-
-    img.red-dots-2 {
+    div.flare {
+        background-color: ${Swatches.primary_color};
+        width: 400px;
+        height: 400px;
+        border-radius: 100px;
         position: absolute;
+        top: 0;
+        left: -20px;
+        filter: blur(250px);
+        z-index: 1;
+        opacity: 0.1;
+    }
+`
+
+export const StyledImgWrapper = styled.div`
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    width: 100%;
+
+    &.red-dots-2 {
         bottom: 0;
         right: 0;
         transform: translate(310px, 120px);
@@ -31,8 +44,7 @@ export const StyledImagesBox = styled.div`
         }
     }
 
-    img.red-dots-1 {
-        position: absolute;
+    &.red-dots-1 {
         top: -100px;
         left: -300px;
         z-index: 999;
@@ -50,18 +62,5 @@ export const StyledImagesBox = styled.div`
             left: auto;
             right: -20%;
         }
-    }
-
-    div.flare {
-        background-color: ${Swatches.primary_color};
-        width: 400px;
-        height: 400px;
-        border-radius: 100px;
-        position: absolute;
-        top: 0;
-        left: -20px;
-        filter: blur(250px);
-        z-index: 1;
-        opacity: 0.1;
     }
 `

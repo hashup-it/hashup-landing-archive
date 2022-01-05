@@ -43,7 +43,7 @@ class MyDocument extends Document {
                         content="vb77o69t264e4n8m5zykf5k8e9ibiq"
                     />
                     <meta charSet="utf-8" />
-                    <link rel="icon" href="assets/hashup.ico" />
+                    <link rel="icon" href="assets/brand/favicon.ico" />
                     <meta name="theme-color" content="#000000" />
                     <link rel="apple-touch-icon" href="assets/logo-192.png" />
                     <link rel="manifest" href="manifest.json" />
@@ -51,11 +51,13 @@ class MyDocument extends Document {
                 <body>
                     {/* Facebook Pixel */}
                     <noscript>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             height="1"
                             width="1"
                             src="https://www.facebook.com/tr?id=949316722346083&ev=PageView&noscript=1"
                             alt=""
+                            priority
                         />
                     </noscript>
                     {/* Google analitics */}

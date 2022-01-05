@@ -31,11 +31,11 @@ export const StyledFooterBottom = styled.div`
 `
 
 export const StyledCopyright = styled.span`
-    font-weight: normal;
     font-size: 14px;
     line-height: 160%;
     display: flex;
     align-items: center;
+    text-align: center;
     color: #8a8f98;
 `
 export const StyledFooterLink = styled.a`

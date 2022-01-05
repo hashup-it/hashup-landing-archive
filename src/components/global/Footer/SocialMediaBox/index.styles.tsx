@@ -1,17 +1,17 @@
-import { MediaQuery } from "__styles__/consts";
-import styled from "styled-components";
+import { MediaQuery } from "__styles__/consts"
+import styled from "styled-components"
 
 export const StyledSocialMediaBox = styled.div`
     display: flex;
     gap: 45px;
     align-items: center;
-`;
+`
 
 export const StyledSocialsContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
-`;
+`
 
 export const StyledSocialIconWrapper = styled.a`
     width: 34px;
@@ -25,12 +25,12 @@ export const StyledSocialIconWrapper = styled.a`
     :hover {
         border-color: white;
     }
-    
-    > img {
+
+    div.icon-wrapper {
         max-height: 17px;
         max-width: 17px;
     }
-`;
+`
 
 export const StyledSocialMediaText = styled.span`
     font-family: Sora;
@@ -46,5 +46,4 @@ export const StyledSocialMediaText = styled.span`
     ${MediaQuery.laptop} {
         display: none;
     }
-`;
-
+`

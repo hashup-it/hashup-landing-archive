@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
 import {
     StyledLabel,
@@ -18,13 +18,26 @@ import { getWhitepaper } from "util/whitepaper"
 import { useState } from "react"
 import { assetsUrl, Languages } from "config"
 import Link from "next/link"
+import Image from "next/image"
+import dynamic from "next/dynamic"
+import { StyledLoadingSpinner } from "components/shared/loading.styles"
+
+const SubscribeForm = dynamic(() => import("./SubscribeForm"), { ssr: false })
 
 const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lang }) => {
     const { t } = useTranslation()
 
     return (
         <StyledWhitepaperLangItem href={getWhitepaper(lang)}>
-            <img src={assetsUrl("icons/document.svg")} alt={`HashUp Whitepaper - ${lang}`} />
+            <div className="icon-wrapper">
+                <Image
+                    src={assetsUrl("icons/document.svg")}
+                    alt={`HashUp Whitepaper - ${lang}`}
+                    width={20}
+                    height={20}
+                    priority
+                />
+            </div>
             {t(`languages.${lang}`)}
         </StyledWhitepaperLangItem>
     )
@@ -50,7 +63,12 @@ const WhitepaperButton = () => {
 }
 
 export const HeaderText = () => {
+    const [isFormShown, setIsFormShown] = useState<boolean>(false)
     const { t } = useTranslation()
+
+    useEffect(() => {
+        setTimeout(() => setIsFormShown(true), 1000)
+    }, [])
 
     return (
         <StyledContainer>
@@ -73,13 +91,7 @@ export const HeaderText = () => {
             </StyledButtonsBox>
             <StyledNewsletterBox>
                 <span className="title">{t("header.ico-signup")}</span>
-                <StyledForm>
-                    <div
-                        className="ml-form-embed"
-                        data-account="3556595:b7a5n7e8w5"
-                        data-form="5061527:j8h9l1"
-                    ></div>
-                </StyledForm>
+                <StyledForm>{isFormShown && <SubscribeForm />}</StyledForm>
             </StyledNewsletterBox>
         </StyledContainer>
     )

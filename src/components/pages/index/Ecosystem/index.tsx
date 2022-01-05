@@ -1,6 +1,12 @@
 import { FC } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
-import { StyledIconsWrapper, StyledIconBox, StyledImagesBox } from "./index.styles"
+import {
+    StyledIconsWrapper,
+    StyledIconBox,
+    StyledImagesBox,
+    StyledMainImageWrapper,
+    StyledIconWrapper,
+} from "./index.styles"
 import { iconsData } from "./data"
 import { assetsUrl } from "config"
 import {
@@ -11,6 +17,9 @@ import {
     StyledSeparator,
 } from "components/shared/section.styles"
 import { useTranslation } from "react-i18next"
+import Image from "next/image"
+import { DeviceWidth } from "__styles__/consts"
+import laptopImg from "/public/assets/our-ecosystem/laptop.png"
 
 export interface IconInterface {
     readonly label: JSX.Element
@@ -21,7 +30,16 @@ export interface IconInterface {
 
 const Icon: FC<IconInterface> = ({ anchor, label, iconFilename, iconAlt }) => (
     <StyledIconBox href={`#${anchor}`} title={iconAlt} className={anchor}>
-        <img src={assetsUrl(`our-ecosystem/${iconFilename}`)} className="icon" alt={iconAlt} />
+        <StyledIconWrapper>
+            <Image
+                src={assetsUrl(`our-ecosystem/${iconFilename}`)}
+                className="icon"
+                alt={iconAlt}
+                width={60}
+                height={60}
+                priority
+            />
+        </StyledIconWrapper>
         <div className="label">{label}</div>
     </StyledIconBox>
 )
@@ -36,7 +54,16 @@ const Icons = () => (
 
 const Images = () => (
     <StyledImagesBox>
-        <img className="laptop" src={assetsUrl("our-ecosystem/laptop.png")} alt="GameCap Laptop" />
+        <StyledMainImageWrapper>
+            <Image
+                className="laptop"
+                src={laptopImg}
+                sizes={`(min-width: ${DeviceWidth.desktop}) 1600px, auto`}
+                alt="GameCap Laptop"
+                quality={75}
+                priority
+            />
+        </StyledMainImageWrapper>
         <div className="flare" />
     </StyledImagesBox>
 )

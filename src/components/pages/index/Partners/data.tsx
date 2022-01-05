@@ -1,49 +1,55 @@
 import { LogoInterface } from "components/pages/index/LogosContainer/interfaces"
-import { assetsUrl } from "config"
 
-const partnersLogoUrl = (filename: string): string => assetsUrl(`partners/${filename}`)
+import adSharesImg from "/public/assets/partners/adshares.png"
+import tubblyImg from "/public/assets/partners/tubbly.png"
+import blockchainAllianceImg from "/public/assets/partners/blockchain-alliance.png"
+import adriaGamesImg from "/public/assets/partners/adria-games.png"
+import unitedIdeasImg from "/public/assets/partners/united-ideas.png"
+import flybridgeImg from "/public/assets/partners/flybridge.png"
+import synapseImg from "/public/assets/partners/synapse.png"
+
 
 export const partnersData: LogoInterface[] = [
     {
         className: "ad-shares",
         href: "https://adshares.net/",
-        logoPath: partnersLogoUrl("adshares.png"),
+        logoPath: adSharesImg,
         logoAlt: "AdShares",
     },
     {
         className: "tubbly",
         href: "https://tubbly.webflow.io/",
-        logoPath: partnersLogoUrl("tubbly.png"),
+        logoPath: tubblyImg,
         logoAlt: "Tubbly",
     },
     {
         className: "blockchain-alliance",
         href: "https://www.blockalliance.io/",
-        logoPath: partnersLogoUrl("blockchain-alliance.png"),
+        logoPath: blockchainAllianceImg,
         logoAlt: "Blockchain Alliance",
     },
     {
         className: "adria-games",
         href: "https://adriagames.com",
-        logoPath: partnersLogoUrl("adria-games.png"),
+        logoPath: adriaGamesImg,
         logoAlt: "Adria Games",
     },
     {
         className: "united-ideas",
         href: "https://unitedideas.co/",
-        logoPath: partnersLogoUrl("united-ideas.png"),
+        logoPath: unitedIdeasImg,
         logoAlt: "United Ideas",
     },
     {
         className: "flybridge",
         href: "http://www.flybridgestudio.com/about",
-        logoPath: partnersLogoUrl("flybridge.png"),
+        logoPath: flybridgeImg,
         logoAlt: "Flybridge",
     },
     {
         className: "synapse",
         href: "https://synapse.network/",
-        logoPath: partnersLogoUrl("synapse.png"),
+        logoPath: synapseImg,
         logoAlt: "Synapse",
     },
 ]

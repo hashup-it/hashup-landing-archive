@@ -22,22 +22,9 @@ export const StyledAnchor = styled.div`
     top: 200px;
 `
 
-const levitationAnim = keyframes`
-    0% {
-        transform: translateY(-10px);
-    }
-
-    50% {
-        transform: translateY(25px);
-    }
-
-    100% {
-        transform: translateY(-10px);
-    }
-`
-
 export const StyledImagesBox = styled.div`
     margin-top: 100px;
+    width: 100%;
     position: relative;
 
     ${MediaQuery.laptopL} {
@@ -46,49 +33,6 @@ export const StyledImagesBox = styled.div`
 
     ${MediaQuery.tablet} {
         margin-top: -30px;
-    }
-
-    img.red-dots-1,
-    img.red-dots-2 {
-        pointer-events: none;
-        user-select: none;
-    }
-
-    img.red-dots-1 {
-        position: absolute;
-        top: 10px;
-        left: 0%;
-        z-index: 9;
-
-        ${MediaQuery.laptopM} {
-            width: 50%;
-            left: 15%;
-            top: 15%;
-        }
-
-        ${MediaQuery.tablet} {
-            width: 130%;
-            bottom: -4%;
-            right: -60%;
-            top: auto;
-            left: auto;
-        }
-    }
-    img.red-dots-2 {
-        position: absolute;
-        bottom: 15%;
-        left: 55%;
-        width: 55%;
-
-        ${MediaQuery.laptopM} {
-            width: 55%;
-            left: 26%;
-            bottom: 8%;
-        }
-
-        ${MediaQuery.tablet} {
-            display: none;
-        }
     }
 
     div.flare {
@@ -111,11 +55,71 @@ export const StyledImagesBox = styled.div`
             height: 20%;
         }
     }
+`
 
-    img.laptop {
+const levitationAnim = keyframes`
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(25px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+`
+
+export const StyledImgWrapper = styled.div`
+    &.red-dots-1,
+    &.red-dots-2 {
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &.red-dots-1 {
+        position: absolute;
+        top: 10px;
+        left: 5%;
+        z-index: 9;
+
+        ${MediaQuery.laptopM} {
+            width: 50%;
+            left: 15%;
+            top: 15%;
+        }
+
+        ${MediaQuery.tablet} {
+            width: 130%;
+            bottom: -4%;
+            right: -60%;
+            top: auto;
+            left: auto;
+        }
+    }
+    &.red-dots-2 {
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        width: 55%;
+
+        ${MediaQuery.laptopM} {
+            width: 55%;
+            left: 26%;
+            bottom: 8%;
+        }
+
+        ${MediaQuery.tablet} {
+            display: none;
+        }
+    }
+
+    &.laptop {
         margin-top: 160px;
-        margin-left: -400px;
+        margin-left: -300px;
         position: relative;
+        width: 1400px;
         z-index: 2;
 
         ${MediaQuery.laptopL} {
@@ -128,11 +132,12 @@ export const StyledImagesBox = styled.div`
             margin-left: -60px;
         }
     }
-    img.floating-website {
+    &.floating-website {
         position: absolute;
         top: 15px;
-        right: -315px;
+        right: -200px;
         z-index: 99;
+        width: 1000px;
         animation: ${levitationAnim} 4.5s ease-in-out infinite;
 
         ${MediaQuery.laptopL} {
@@ -146,6 +151,10 @@ export const StyledImagesBox = styled.div`
             width: 110%;
             top: 5%;
             right: -40%;
+        }
+
+        ${MediaQuery.mobileL} {
+            top: 12%;
         }
     }
 `

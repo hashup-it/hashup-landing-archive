@@ -2,6 +2,7 @@ import { StyledTokenIcon } from "../index.styles"
 import { useTranslation } from "react-i18next"
 import { StyledMetamaskButton } from "./index.styles"
 import { assetsUrl, SocialMediaIcons } from "config"
+import Image from "next/image"
 
 export const AddToMetamask = () => {
     const { t } = useTranslation()
@@ -38,7 +39,9 @@ export const AddToMetamask = () => {
 
     return (
         <StyledMetamaskButton onClick={handleAddToMetamask}>
-            <StyledTokenIcon icon={SocialMediaIcons.metamask} />
+            <div className="icon-wrapper">
+                <Image src={SocialMediaIcons.metamask} alt="Metamask icon" width={18} height={18} />
+            </div>
             <span className="text">{t("header.add-hash-wallet")}</span>
         </StyledMetamaskButton>
     )

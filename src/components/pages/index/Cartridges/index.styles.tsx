@@ -23,23 +23,8 @@ export const StyledCartridgesBox = styled.div`
     justify-content: center;
 
     ${MediaQuery.tablet} {
-        margin-top: 0px;
+        margin-top: 60px;
         margin-bottom: 20px;
-    }
-
-    img {
-        display: block;
-        position: absolute;
-    }
-
-    // ========== 1st level ==========
-    img.gold {
-        width: 630px;
-        z-index: 100;
-
-        ${MediaQuery.mobileL} {
-            width: 120%;
-        }
     }
 
     div.gold-glow {
@@ -49,33 +34,64 @@ export const StyledCartridgesBox = styled.div`
         background-color: #edee87;
         filter: blur(66px);
 
-        ${MediaQuery.mobileL} {
+        ${MediaQuery.tablet} {
             width: 75%;
             height: 130px;
             opacity: 0.8;
         }
     }
+`
+
+export const StyledCartridgeImgWrapper = styled.div`
+    display: block;
+    position: absolute;
+
+    // ========== 1st level ==========
+    &.gold {
+        width: 630px;
+        z-index: 100;
+
+        ${MediaQuery.tablet} {
+            width: 460px;
+        }
+
+        ${MediaQuery.mobileL} {
+            width: 120%;
+        }
+    }
 
     // ========== 2nd level ==========
-    img.red,
-    img.gray {
+    &.red,
+    &.gray {
         opacity: 0.5;
         width: 420px;
+
+        ${MediaQuery.tablet} {
+            width: 320px;
+        }
 
         ${MediaQuery.mobileL} {
             display: none;
         }
     }
-    img.red {
+    &.red {
         transform: translateX(-330px);
+
+        ${MediaQuery.tablet} {
+            transform: translateX(-240px);
+        }
     }
-    img.gray {
+    &.gray {
         transform: translateX(330px);
+
+        ${MediaQuery.tablet} {
+            transform: translateX(240px);
+        }
     }
 
     // ========== 3rd level ===========
-    img.blue,
-    img.green {
+    &.blue,
+    &.green {
         opacity: 0.17;
         z-index: 1;
         width: 305px;
@@ -84,10 +100,10 @@ export const StyledCartridgesBox = styled.div`
             display: none;
         }
     }
-    img.blue {
+    &.blue {
         transform: translateX(-665px);
     }
-    img.green {
+    &.green {
         transform: translateX(665px);
     }
 `

@@ -1,6 +1,6 @@
 import { FC } from "react"
 import {
-    StyledAvatarImg,
+    StyledAvatarWrapper,
     StyledDescription,
     StyledRole,
     StyledNameBox,
@@ -14,6 +14,7 @@ import { StyledColoredText } from "components/shared/utils.styles"
 import { useTranslation } from "react-i18next"
 import { assetsUrl, SocialMediaIcons } from "config"
 import { useSplitText } from "./logic"
+import Image from "next/image"
 
 interface SocialMediaIconProps {
     readonly type: SocialMediaEnum
@@ -29,7 +30,7 @@ const SocialMediaIcon: FC<SocialMediaIconProps> = ({ name, type, url }) => {
             target="_blank"
             rel="noopener noreferrer"
         >
-            <img src={src} alt={`${title} - ${name}`} />
+            <Image src={src} alt={`${title} - ${name}`} width={16} height={16} />
         </StyledIconA>
     )
 
@@ -71,7 +72,16 @@ const PersonBox: FC<PersonProps> = ({
         <StyledPersonContainer personRole={role}>
             <div className="outline">
                 <StyledContent>
-                    <StyledAvatarImg src={assetsUrl(`team-avatars/${avatarFilename}`)} alt={`${name} avatar`} />
+                    <StyledAvatarWrapper>
+                        <Image
+                            src={assetsUrl(`team-avatars/${avatarFilename}`)}
+                            alt={`${name} avatar`}
+                            quality={85}
+                            width={120}
+                            height={120}
+                            priority
+                        />
+                    </StyledAvatarWrapper>
                     <StyledRole>
                         <StyledColoredText>
                             {t(`team.team-members.${localeKey}.role`).toUpperCase()}
