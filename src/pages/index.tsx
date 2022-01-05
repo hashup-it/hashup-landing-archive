@@ -11,10 +11,12 @@ import GameContract from "components/pages/index/GameContract"
 import Cartridges from "components/pages/index/Cartridges"
 import GameWallet from "components/pages/index/GameWallet"
 import GameXplorer from "components/pages/index/GameXplorer"
+import Community from "components/pages/index/Community"
 
 const LandingPage = () => (
     <>
         <LandingHeader />
+        <Community />
         <Ecosystem />
         <Cartridges />
         <GameCap />
