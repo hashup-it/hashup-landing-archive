@@ -57,7 +57,6 @@ class MyDocument extends Document {
                             width="1"
                             src="https://www.facebook.com/tr?id=949316722346083&ev=PageView&noscript=1"
                             alt=""
-                            priority
                         />
                     </noscript>
                     {/* Google analitics */}
