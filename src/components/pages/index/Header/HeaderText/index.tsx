@@ -10,8 +10,6 @@ import {
     StyledWhitepaperBox,
     StyledWhitepaperMenu,
     StyledWhitepaperLangItem,
-    StyledNewsletterBox,
-    StyledForm,
 } from "./index.styles"
 import { useTranslation } from "react-i18next"
 import { getWhitepaper } from "util/whitepaper"
@@ -71,16 +69,6 @@ export const HeaderText = () => {
                 </Link>
                 <WhitepaperButton />
             </StyledButtonsBox>
-            <StyledNewsletterBox>
-                <span className="title">{t("header.ico-signup")}</span>
-                <StyledForm>
-                    <div
-                        className="ml-form-embed"
-                        data-account="3556595:b7a5n7e8w5"
-                        data-form="5061527:j8h9l1"
-                    ></div>
-                </StyledForm>
-            </StyledNewsletterBox>
         </StyledContainer>
     )
 }

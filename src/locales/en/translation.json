@@ -59,8 +59,10 @@
             "3": "on Blockchain"
         },
         "title": "Decentralized Game Publishing Platform",
-        "button": "More about cartridges",
-        "ico-signup": "Subscribe to IGO of PONG game"
+        "button": "More about cartridges"
+    },
+    "igo-form": {
+        "title": "Subscribe to IGO of <i>PONG</i> game"
     },
     "airdrop": {
         "reserve": "Reserve your unique Nickname to receive the Airdrop",

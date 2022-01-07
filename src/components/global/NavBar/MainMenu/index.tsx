@@ -40,7 +40,7 @@ export const MainMenu = ({
             <MenuItem>
                 <a href={SocialMediaUrls.gitbook}>{t("menu.doc")}</a>
             </MenuItem>
-            <SelectLanguage />
+            {/* <SelectLanguage /> */}
             {isMobileMenuShown && (
                 <>
                     <SocialMediaBox />

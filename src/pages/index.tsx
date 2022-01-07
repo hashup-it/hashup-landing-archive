@@ -12,10 +12,12 @@ import Cartridges from "components/pages/index/Cartridges"
 import GameWallet from "components/pages/index/GameWallet"
 import GameXplorer from "components/pages/index/GameXplorer"
 import Community from "components/pages/index/Community"
+import IgoFormBox from "components/pages/index/IgoFormBox"
 
 const LandingPage = () => (
     <>
         <LandingHeader />
+        <IgoFormBox />
         <Community />
         <Ecosystem />
         <Cartridges />

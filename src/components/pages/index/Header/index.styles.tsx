@@ -74,6 +74,7 @@ export const StyledVideoBackground = styled.video<{ isLoaded: boolean }>`
     width: 100%;
     min-height: ${minHeight};
     z-index: 1;
+    opacity: 0.45;
 `
 
 export const StyledBackgroundImg = styled.img`
