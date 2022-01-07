@@ -40,6 +40,9 @@ export const SelectLanguage = () => {
     }
 
     return (
+        <></>
+    )
+    /*
         <StyledSelectLanguage>
             <StyledLanguageIcon src={assetsUrl("icons/globe.svg")} />
             <StyledSelectedLanguage onClick={handleClick}>
@@ -60,5 +63,5 @@ export const SelectLanguage = () => {
                 </StyledLanguageList>
             )}
         </StyledSelectLanguage>
-    )
+    */
 }

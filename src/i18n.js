@@ -11,10 +11,11 @@ const resources = {
 }
 
 i18n.use(initReactI18next)
-    .use(Cache)
-    .use(LanguageDetector)
+    // .use(Cache)
+    // .use(LanguageDetector)
     .init({
         resources,
+        lng: Languages.en.code,
         fallbackLng: Languages.en.code,
         interpolation: {
             escapeValue: false, // react already safes from xss

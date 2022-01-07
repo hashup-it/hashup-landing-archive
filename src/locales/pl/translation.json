@@ -17,6 +17,9 @@
         "provision-header": "Bez prowizji",
         "provision": "Jesteś jedynym wydawcą. Nie pozwól nikomu zarabiać na twojej ciężkiej pracy. Zarobisz w ten sposób więcej pieniędzy, czy obniżysz cenę gry, aby dotrzeć do większej liczby odbiorców? Decyzja należy do Ciebie!"
     },
+    "igo-form": {
+        "title": "Subscribe to IGO of <i>PONG</i> game"
+    },
     "header": {
         "description": "DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez pośredników. 0% prowizji.",
         "airdrop": "Odbierz Airdrop",

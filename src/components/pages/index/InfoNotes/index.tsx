@@ -59,6 +59,7 @@ const InfoNotes = () => {
                         </>
                     }
                     content={<Trans i18nKey={"info-notes.note-2.content"} />}
+
                 />
 
                 <Note
