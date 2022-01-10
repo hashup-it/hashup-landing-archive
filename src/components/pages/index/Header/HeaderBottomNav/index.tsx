@@ -13,7 +13,10 @@ import { assetsUrl, SocialMediaIcons, SocialMediaUrls } from "config"
 import { useTranslation } from "react-i18next"
 import dynamic from "next/dynamic"
 import { StyledLoadingSpinner } from "components/shared/loading.styles"
-import { useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
+import Image from "next/image"
+
+import mouseSvg from "/public/assets/icons/mouse.svg"
 
 const GamersCount = dynamic(() => import("./GamersCount/index"), {
     loading: () => <StyledLoadingSpinner />,
@@ -24,7 +27,9 @@ const ScrollDownNote = () => {
 
     return (
         <StyledScrollDownNote>
-            <img className="mouse-icon" src={assetsUrl("icons/mouse.svg")} alt="" />
+            <div className="mouse-icon-wrapper">
+                <Image src={mouseSvg} alt="" width={20} height={25} />
+            </div>
             <span className="text">
                 {`${t("header.scroll.1")}`}
                 <StyledColoredText>{t("header.scroll.2")}</StyledColoredText>
@@ -32,6 +37,14 @@ const ScrollDownNote = () => {
         </StyledScrollDownNote>
     )
 }
+
+const SocialMediaIcon: FC<{ href: string; alt: string; src: string }> = ({ href, alt, src }) => (
+    <a href={href}>
+        <div className="icon-wrapper">
+            <Image src={src} alt={alt} width={50} height={50} />
+        </div>
+    </a>
+)
 
 const HeaderBottom = () => {
     const [isGamersCountShown, setIsGamersCountShown] = useState<boolean>(false)
@@ -60,24 +73,36 @@ const HeaderBottom = () => {
                     </StyledTokenInfoItem>
                 </StyledTokenInfo>
                 <StyledSocialMediaBox>
-                    <a href={SocialMediaUrls.linkedIn}>
-                        <img src={SocialMediaIcons.linkedin} alt="LinkedIn" />
-                    </a>
-                    <a href={SocialMediaUrls.telegram}>
-                        <img src={SocialMediaIcons.telegram} alt="Telegram" />
-                    </a>
-                    <a href={SocialMediaUrls.twitter}>
-                        <img src={SocialMediaIcons.twitter} alt="Twitter" />
-                    </a>
-                    <a href={SocialMediaUrls.facebook}>
-                        <img src={SocialMediaIcons.facebook} alt="Facebook" />
-                    </a>
-                    <a href={SocialMediaUrls.instagram}>
-                        <img src={SocialMediaIcons.instagram} alt="Instagram" />
-                    </a>
-                    <a href={SocialMediaUrls.discord}>
-                        <img src={SocialMediaIcons.discord} alt="Discord" />
-                    </a>
+                    <SocialMediaIcon
+                        href={SocialMediaUrls.linkedIn}
+                        src={SocialMediaIcons.linkedin}
+                        alt="LinkedIn"
+                    />
+                    <SocialMediaIcon
+                        href={SocialMediaUrls.telegram}
+                        src={SocialMediaIcons.telegram}
+                        alt="Telegram"
+                    />
+                    <SocialMediaIcon
+                        href={SocialMediaUrls.twitter}
+                        src={SocialMediaIcons.twitter}
+                        alt="Twitter"
+                    />
+                    <SocialMediaIcon
+                        href={SocialMediaUrls.facebook}
+                        src={SocialMediaIcons.facebook}
+                        alt="Facebook"
+                    />
+                    <SocialMediaIcon
+                        href={SocialMediaUrls.instagram}
+                        src={SocialMediaIcons.instagram}
+                        alt="Instagram"
+                    />
+                    <SocialMediaIcon
+                        href={SocialMediaUrls.discord}
+                        src={SocialMediaIcons.discord}
+                        alt="Discord"
+                    />
                 </StyledSocialMediaBox>
             </StyledDataGroup>
         </StyledContainer>

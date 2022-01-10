@@ -1,3 +1,14 @@
+import facebookSvg from '/public/assets/social-media-icons/facebook.svg'
+import twitterSvg from '/public/assets/social-media-icons/twitter.svg'
+import wikipediaSvg from '/public/assets/social-media-icons/wikipedia.svg'
+import discordSvg from '/public/assets/social-media-icons/discord.svg'
+import linkedinSvg from '/public/assets/social-media-icons/linkedin.svg'
+import telegramSvg from '/public/assets/social-media-icons/telegram.svg'
+import dribbleSvg from '/public/assets/social-media-icons/dribble.svg'
+import githubSvg from '/public/assets/social-media-icons/github.svg'
+import metamaskSvg from '/public/assets/social-media-icons/metamask.svg'
+import instagramSvg from '/public/assets/social-media-icons/instagram.svg'
+
 export const scriptsUrl = (path: string): string => `/scripts/${path}`
 export const assetsUrl = (path: string): string => `/assets/${path}`
 export const documentsUrl = (path: string): string => `/documents/${path}`
@@ -29,18 +40,17 @@ export const SocialMediaUrls = {
     gitbook: "https://hashup-it.gitbook.io/hashup-it-1/",
 } as const
 
-const socialMediaIconUrl = (filename: string): string => assetsUrl(`social-media-icons/${filename}`)
 export const SocialMediaIcons = {
-    facebook: socialMediaIconUrl("facebook.svg"),
-    linkedin: socialMediaIconUrl("linkedin.svg"),
-    instagram: socialMediaIconUrl("instagram.svg"),
-    telegram: socialMediaIconUrl("telegram.svg"),
-    twitter: socialMediaIconUrl("twitter.svg"),
-    discord: socialMediaIconUrl("discord.svg"),
-    dribble: socialMediaIconUrl("dribble.svg"),
-    github: socialMediaIconUrl("github.svg"),
-    metamask: socialMediaIconUrl("metamask.svg"),
-    wikipedia: socialMediaIconUrl("wikipedia.svg"),
+    facebook: facebookSvg,
+    linkedin: linkedinSvg,
+    instagram: instagramSvg,
+    telegram: telegramSvg,
+    twitter: twitterSvg,
+    discord: discordSvg,
+    dribble: dribbleSvg,
+    github: githubSvg,
+    metamask: metamaskSvg,
+    wikipedia: wikipediaSvg,
 } as const
 
 const brandAssetsUrl = (filename: string): string => assetsUrl(`brand/${filename}`)
@@ -70,3 +80,4 @@ export enum CartridgeColor {
     gray = "#9D9D9D",
     red = "#FF3F3F",
 }
+

@@ -32,7 +32,7 @@ export const StyledPersonContainer = styled.div<{ personRole: RoleEnum }>`
     }
 `
 
-export const StyledAvatarImg = styled.img`
+export const StyledAvatarWrapper = styled.div`
     border-radius: 50%;
     width: 120px;
     position: absolute;

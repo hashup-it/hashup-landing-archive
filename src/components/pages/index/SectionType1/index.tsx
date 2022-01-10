@@ -1,6 +1,12 @@
 import { FC } from "react"
-import { StyledSectionLabel, StyledSectionParagraph, StyledSectionTitle } from "components/shared/section.styles"
-import { StyledSectionWrapper, StyledAnchor, StyledBackgroundImg } from "./index.styles"
+import {
+    StyledSectionLabel,
+    StyledSectionParagraph,
+    StyledSectionTitle,
+} from "components/shared/section.styles"
+import { StyledSectionWrapper, StyledAnchor, StyledBackgroundImgWrapper } from "./index.styles"
+import Image from "next/image"
+import { DeviceWidth } from "__styles__/consts"
 
 interface SectionType1Props {
     readonly anchor: string
@@ -10,6 +16,7 @@ interface SectionType1Props {
     readonly button: JSX.Element
     readonly imagesBox: JSX.Element
     readonly bgImgSrc: string
+    readonly bgImgAlt: string
 }
 
 const SectionType1: FC<SectionType1Props> = ({
@@ -30,7 +37,15 @@ const SectionType1: FC<SectionType1Props> = ({
             {button}
         </div>
         <div className="second">{imagesBox}</div>
-        <StyledBackgroundImg src={bgImgSrc} alt="" />
+        <StyledBackgroundImgWrapper>
+            <Image
+                src={bgImgSrc}
+                alt={bgImgSrc}
+                quality={40}
+                sizes={`(min-width: ${DeviceWidth.desktop}) 1900px, (max-width: ${DeviceWidth.tablet}) 1000px`}
+                priority
+            />
+        </StyledBackgroundImgWrapper>
     </StyledSectionWrapper>
 )
 

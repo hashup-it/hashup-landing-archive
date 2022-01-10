@@ -2,12 +2,12 @@ import { FC } from "react"
 import {
     StyledContentBox,
     StyledLogosSection,
-    StyledLogo,
     StyledLogosContainer,
+    StyledLogoWrapper,
 } from "./index.styles"
-import { useTranslation } from "react-i18next"
 import { LogoInterface } from "./interfaces"
 import { StyledSmallSectionLabel, StyledSmallSectionTitle } from "components/shared/section.styles"
+import Image from "next/image"
 
 interface LogosContainerProps {
     readonly data: LogoInterface[]
@@ -15,22 +15,27 @@ interface LogosContainerProps {
     readonly header: JSX.Element
 }
 
-const LogosContainer: FC<LogosContainerProps> = ({ data, label, header }) => {
-    const { t } = useTranslation()
-
-    return (
-        <StyledLogosSection>
-            <StyledSmallSectionLabel>{label}</StyledSmallSectionLabel>
-            <StyledSmallSectionTitle>{header}</StyledSmallSectionTitle>
-            <StyledContentBox>
-                <StyledLogosContainer>
-                    {data.map((item, index) => (
-                        <StyledLogo key={index} src={item.logoPath} alt={item.logoAlt} />
-                    ))}
-                </StyledLogosContainer>
-            </StyledContentBox>
-        </StyledLogosSection>
-    )
-}
+const LogosContainer: FC<LogosContainerProps> = ({ data, label, header }) => (
+    <StyledLogosSection>
+        <StyledSmallSectionLabel>{label}</StyledSmallSectionLabel>
+        <StyledSmallSectionTitle>{header}</StyledSmallSectionTitle>
+        <StyledContentBox>
+            <StyledLogosContainer>
+                {data.map((item, index) => (
+                    <StyledLogoWrapper key={index}>
+                        <Image
+                            src={item.logoPath}
+                            alt={item.logoAlt}
+                            quality={50}
+                            sizes={`240px`}
+                            objectFit="scale-down"
+                            placeholder="blur"
+                        />
+                    </StyledLogoWrapper>
+                ))}
+            </StyledLogosContainer>
+        </StyledContentBox>
+    </StyledLogosSection>
+)
 
 export default LogosContainer

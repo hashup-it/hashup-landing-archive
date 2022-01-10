@@ -19,10 +19,7 @@ export const StyledInnerContainer = styled.div`
         left: calc(-50vw + 50%);
         position: relative;
         padding: 0 15px;
-    }
-
-    ${MediaQuery.tablet} {
-        padding-bottom: 45px;
+        background-color: black;
     }
 `
 
@@ -56,7 +53,7 @@ export const StyledBackgroundContainer = styled.div`
     }
 `
 
-export const StyledBackgroundPlaceholderImg = styled.div<{ isVisible: boolean }>`
+export const StyledBackgroundPlaceholder = styled.div<{ isVisible: boolean }>`
     opacity: ${props => (props.isVisible ? 1 : 0)};
     width: 100%;
     height: 100%;
@@ -77,7 +74,7 @@ export const StyledVideoBackground = styled.video<{ isLoaded: boolean }>`
     opacity: 0.45;
 `
 
-export const StyledBackgroundImg = styled.img`
+export const StyledBackgroundImgWrapper = styled.div`
     display: none; // Mobile only
     z-index: 0;
     position: absolute;
@@ -101,5 +98,18 @@ export const StyledBackgroundImg = styled.img`
         width: 170%;
         top: 8%;
         left: -50%;
+    }
+`
+
+export const StyledBottomGradient = styled.div`
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    background: linear-gradient(rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+    height: 300px;
+    margin-bottom: -240px;
+
+    ${MediaQuery.tablet} {
+        margin-bottom: -200px;
     }
 `

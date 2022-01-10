@@ -1,27 +1,42 @@
 import { StyledColoredText } from "components/shared/utils.styles"
-import { assetsUrl } from "config"
 import {
     StyledSectionLabel,
     StyledSectionParagraph,
     StyledSectionTitle,
     StyledSectionWrapper,
 } from "components/shared/section.styles"
-import { StyledImagesBox, StyledAnchor } from "./index.styles"
+import { StyledImagesBox, StyledAnchor, StyledImgWrapper } from "./index.styles"
 import { Trans, useTranslation } from "react-i18next"
+import Image from "next/image"
+
+import tabletImg from "/public/assets/game-wallet/tablet.png"
+import phoneImg from "/public/assets/game-wallet/phone.png"
+import redDots1Img from "/public/assets/game-wallet/red-dots.png"
+import { DeviceWidth } from "__styles__/consts"
 
 const ImagesBox = () => (
     <StyledImagesBox>
-        <img
-            className="tablet"
-            src={assetsUrl("game-wallet/tablet.png")}
-            alt="GameWallet tablet screen"
-        />
-        <img
-            className="phone"
-            src={assetsUrl("game-wallet/phone.png")}
-            alt="GameWallet phone screen"
-        />
-        <img className="red-dots-1" src={assetsUrl("game-wallet/red-dots.png")} alt="" />
+        <StyledImgWrapper className="tablet">
+            <Image
+                src={tabletImg}
+                alt="GameWallet tablet screen"
+                quality={85}
+                sizes={`95vw`}
+                priority
+            />
+        </StyledImgWrapper>
+        <StyledImgWrapper className="phone">
+            <Image
+                src={phoneImg}
+                alt="GameWallet phone screen"
+                quality={70}
+                sizes={`50vw`}
+                priority
+            />
+        </StyledImgWrapper>
+        <StyledImgWrapper className="red-dots-1">
+            <Image src={redDots1Img} alt="" quality={1} />
+        </StyledImgWrapper>
         <div className="flare" />
     </StyledImagesBox>
 )

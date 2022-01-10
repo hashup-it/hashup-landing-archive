@@ -23,6 +23,7 @@ export const StyledSectionWrapper = styled.div`
 
         ${StyledSectionTitle} {
             text-align: left;
+            margin-left: 0;
         }
 
         ${StyledSectionParagraph} {
@@ -45,7 +46,7 @@ export const StyledSectionWrapper = styled.div`
     }
 `
 
-export const StyledBackgroundImg = styled.img`
+export const StyledBackgroundImgWrapper = styled.div`
     position: absolute;
     z-index: 1;
     width: 1900px;
@@ -62,23 +63,31 @@ export const StyledBackgroundImg = styled.img`
     }
 
     ${MediaQuery.tablet} {
-        top: -100px;
-        left: -800px;
+        top: -00px;
+        left: -600px;
+        width: 1500px;
+    }
+
+    ${MediaQuery.mobileL} {
     }
 `
 
-export const StyledMainImage = styled.img`
+export const StyledMainImageWrapper = styled.div`
     width: 112%;
     transform: translateX(100px);
     position: relative;
     z-index: 99;
 
     ${MediaQuery.laptopL} {
-        transform: translateX(0px);
+        position: relative;
+        right: 0;
+        transform: translateX(40px);
         width: 90%;
     }
 
     ${MediaQuery.tablet} {
+        transform: translateX(0);
+        position: relative;
         width: 100%;
     }
 `

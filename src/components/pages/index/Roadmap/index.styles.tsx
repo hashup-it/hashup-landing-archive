@@ -12,7 +12,7 @@ export const StyledCarousele = styled.div`
     left: calc(-50vw + 50%);
     margin: 80px 0 140px;
 
-    ${MediaQuery.laptopL} {
+    ${MediaQuery.laptopM} {
         position: static;
         width: calc(100% + ${GLOBAL_HORIZONTAL_PADDING_PX}px * 2);
         margin-left: -${GLOBAL_HORIZONTAL_PADDING_PX}px;

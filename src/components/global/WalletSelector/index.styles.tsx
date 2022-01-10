@@ -70,8 +70,6 @@ export const ConnectionButton = styled.button`
     border-radius: 15px;
     background: none;
     padding: 16px 32px 16px 32px;
-    font-family: Sora;
-    font-style: normal;
     color: ${Swatches.text_main};
     font-weight: 600;
     font-size: 16px;
@@ -93,6 +91,10 @@ export const ConnectionButton = styled.button`
 
     ${MediaQuery.tablet} {
         width: 90%;
+    }
+
+    ${MediaQuery.mobileL} {
+        width: 100%;
     }
 
     img {

@@ -240,15 +240,10 @@ export const StyledConnectButton = styled.button`
     box-sizing: border-box;
     background-color: transparent;
 
-    :after {
-        content: "";
-        width: 20px;
-        margin-left: 12px;
-        height: 15px;
-        display: inline-block;
-        background-image: url(${() => SocialMediaIcons.metamask});
-        background-position: center;
-        background-repeat: no-repeat;
+    div.icon-wrapper {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
     }
 
     ${layoutChangeMediaQuery} {

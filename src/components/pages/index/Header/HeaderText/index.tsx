@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
 import {
     StyledLabel,
@@ -16,13 +16,23 @@ import { getWhitepaper } from "util/whitepaper"
 import { useState } from "react"
 import { assetsUrl, Languages } from "config"
 import Link from "next/link"
+import Image from "next/image"
+
 
 const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lang }) => {
     const { t } = useTranslation()
 
     return (
         <StyledWhitepaperLangItem href={getWhitepaper(lang)}>
-            <img src={assetsUrl("icons/document.svg")} alt={`HashUp Whitepaper - ${lang}`} />
+            <div className="icon-wrapper">
+                <Image
+                    src={assetsUrl("icons/document.svg")}
+                    alt={`HashUp Whitepaper - ${lang}`}
+                    width={20}
+                    height={20}
+                    priority
+                />
+            </div>
             {t(`languages.${lang}`)}
         </StyledWhitepaperLangItem>
     )

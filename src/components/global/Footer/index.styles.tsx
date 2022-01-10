@@ -39,22 +39,20 @@ export const StyledHeading = styled.div`
 export const StyledQuickNavigation = styled.div`
     display: flex;
     align-items: center;
-
-    > p {
-        font-family: Sora;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 160%;
-        margin: 0;
-    }
-
-    > a {
-        text-decoration: none;
-        color: inherit;
-    }
-
     margin: 55px 0;
+
+    ${MediaQuery.tablet} {
+        justify-content: center;
+    }
+
+    a {
+        transition: opacity 100ms ease;
+
+        :hover {
+            opacity: 0.8;
+            transition: opacity 100ms ease;
+        }
+    }
 `
 
 export const StyledMenuLabel = styled.span`

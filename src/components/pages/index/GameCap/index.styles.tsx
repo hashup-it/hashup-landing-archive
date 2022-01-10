@@ -5,23 +5,6 @@ export const StyledImagesBox = styled.div`
     text-align: right;
     position: relative;
 
-    img.red-dots-1 {
-        pointer-events: none;
-        user-select: none;
-        position: absolute;
-        bottom: -12%;
-        right: 25%;
-        z-index: 999;
-
-        ${MediaQuery.laptopL} {
-            position: absolute;
-            left: -18%;
-            width: 90%;
-            bottom: -15%;
-            z-index: 99;
-        }
-    }
-
     div.flare {
         background-color: ${Swatches.primary_color};
         width: 400px;
@@ -33,5 +16,25 @@ export const StyledImagesBox = styled.div`
         filter: blur(250px);
         z-index: 1;
         opacity: 0.1;
+    }
+`
+
+export const StyledImgWrapper = styled.div`
+    &.red-dots-1 {
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+        position: absolute;
+        bottom: -14%;
+        right: 25%;
+        z-index: 999;
+
+        ${MediaQuery.laptopL} {
+            position: absolute;
+            left: -18%;
+            width: 90%;
+            bottom: -15%;
+            z-index: 99;
+        }
     }
 `

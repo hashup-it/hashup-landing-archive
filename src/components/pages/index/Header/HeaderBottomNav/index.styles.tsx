@@ -13,13 +13,11 @@ export const StyledContainer = styled.div`
     align-items: center;
 
     ${MediaQuery.laptopM} {
-        position: relative;
-        margin-top: 75px;
-        margin-bottom: 45px;
         justify-content: center;
     }
 
     ${MediaQuery.tablet} {
+        position: relative;
         flex-direction: column;
         gap: 35px;
         margin-top: 120px;
@@ -39,7 +37,9 @@ export const StyledScrollDownNote = styled.div`
         display: none;
     }
 
-    img.mouse-icon {
+    div.mouse-icon-wrapper {
+        display: flex;
+        align-items: center;
         margin-right: 13px;
     }
 
@@ -76,10 +76,15 @@ export const StyledSocialMediaBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 
     ${MediaQuery.tablet} {
         margin-top: 55px;
+        gap: 16px;
+    }
+
+    ${MediaQuery.mobileL} {
+        gap: 8px;
     }
 
     :before {
@@ -88,7 +93,7 @@ export const StyledSocialMediaBox = styled.div`
         content: "";
         width: 2px;
         height: 18px;
-        margin-right: 12px;
+        margin-right: 10px;
         background-color: ${Swatches.primary_color};
 
         ${MediaQuery.tablet} {
@@ -96,12 +101,13 @@ export const StyledSocialMediaBox = styled.div`
         }
     }
 
-    img {
+    div.icon-wrapper {
+        display: flex;
+        align-items: center;
         cursor: pointer;
         transition: opacity 100ms ease;
-        padding: 5px;
-        height: 15px;
-        margin-bottom: -4px; // Better align
+        height: 16px;
+        width: 16px;
 
         :hover {
             opacity: 0.7;
@@ -111,6 +117,7 @@ export const StyledSocialMediaBox = styled.div`
         ${MediaQuery.tablet} {
             margin-bottom: 0;
             height: 22px;
+            width: 22px;
             padding: 5px 12px;
         }
     }

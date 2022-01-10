@@ -7,6 +7,7 @@ import {
     StyledSocialMediaText,
     StyledSocialsContainer,
 } from "./index.styles"
+import Image from "next/image"
 
 const SocialMediaBox = () => {
     const { t } = useTranslation()
@@ -19,7 +20,9 @@ const SocialMediaBox = () => {
             <StyledSocialsContainer>
                 {footerSocialsData.map((social, index) => (
                     <StyledSocialIconWrapper href={social.destination} key={index}>
-                        <img src={social.icon} />
+                        <div className="icon-wrapper">
+                            <Image src={social.icon} alt="" />
+                        </div>
                     </StyledSocialIconWrapper>
                 ))}
             </StyledSocialsContainer>
