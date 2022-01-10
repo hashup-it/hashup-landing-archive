@@ -7,7 +7,7 @@ import {
     StyledFooter,
     StyledFooterTop,
     StyledHeading,
-    StyledLogo,
+    StyledLogoWrapper,
     StyledQuickNavigation,
 } from "./index.styles"
 import Newsletter from "./Newsletter"
@@ -15,6 +15,7 @@ import SocialMediaBox from "./SocialMediaBox"
 import CompanyInfo from "./CompanyInfo"
 import FooterBottom from "./FooterBottom"
 import FooterMenu from "./FooterMenu"
+import Image from "next/image"
 
 export const Footer = () => {
     const { t } = useTranslation()
@@ -23,7 +24,16 @@ export const Footer = () => {
         <StyledFooter>
             <StyledHeading>
                 <Link href="/" passHref>
-                    <StyledLogo src={BrandAssets.logo} />
+                    <StyledLogoWrapper>
+                        <Image
+                            src={BrandAssets.logo}
+                            width={150}
+                            height={35}
+                            alt="HashUp logo"
+                            quality={60}
+                            priority
+                        />
+                    </StyledLogoWrapper>
                 </Link>
                 <SocialMediaBox />
             </StyledHeading>

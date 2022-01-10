@@ -9,7 +9,7 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     top: 0;
     left: 0;
     right: 0;
-    padding: 25px;
+    padding: 22px 25px;
     font-size: 16px;
     color: ${Swatches.text_main};
     font-weight: 600;
@@ -51,6 +51,8 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
 
     ${MediaQuery.tablet} {
         padding: 25px 18px;
+        height: 18px;
+        background-color: rgba(0, 0, 0, 0.95);
     }
 `
 
@@ -75,32 +77,29 @@ export const MenuWrapper = styled.div`
     }
 `
 
-export const StyledFullLogo = styled.img`
-    width: 150px;
-    position: absolute;
-    top: 18px;
-
-    ${MediaQuery.tablet} {
-        display: none;
-    }
-`
-
 export const StyledLogoWrapper = styled.div`
     cursor: pointer;
-    margin-top: -9px;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-`
 
-export const StyledLogoIcon = styled.img`
-    display: none;
+    div.icon-logo {
+        display: none;
 
-    ${MediaQuery.tablet} {
-        width: 35px;
+        ${MediaQuery.tablet} {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            top: 17px;
+            display: block;
+        }
+    }
+
+    div.full-logo {
+        width: 150px;
         position: absolute;
-        top: 22px;
-        display: block;
+        top: 18px;
+
+        ${MediaQuery.tablet} {
+            display: none;
+        }
     }
 `
 
@@ -113,9 +112,10 @@ export const HamburgerButton = styled.div<{ opened: boolean }>`
     background-repeat: no-repeat;
     margin-left: 10px;
     display: none;
+    margin-top: -10px;
 
     ${MediaQuery.tablet} {
-        display: initial;
+        display: block;
     }
 `
 

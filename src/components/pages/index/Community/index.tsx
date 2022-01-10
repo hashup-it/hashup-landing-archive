@@ -3,6 +3,7 @@ import { StyledSocialBoxA, StyledSocialArea, StyledSection } from "./index.style
 import { FC } from "react"
 import { assetsUrl, SocialMediaIcons, SocialMediaUrls } from "config"
 import { StyledSectionParagraph, StyledSectionTitle } from "components/shared/section.styles"
+import Image from "next/image"
 
 const SocialBox: FC<{ iconSrc: string; label: string; href: string }> = ({
     iconSrc,
@@ -16,7 +17,7 @@ const SocialBox: FC<{ iconSrc: string; label: string; href: string }> = ({
         title={`${label} - HashUp`}
     >
         <div className="icon-wrapper">
-            <img src={iconSrc} alt={`${label} - HashUp`} />
+            <Image src={iconSrc} alt={`${label} - HashUp`} width={30} height={30} />
         </div>
         <div className="label">{label}</div>
         <div className="small-label">Announcements</div>

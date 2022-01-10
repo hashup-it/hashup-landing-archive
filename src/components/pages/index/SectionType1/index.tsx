@@ -43,7 +43,8 @@ const SectionType1: FC<SectionType1Props> = ({
                 alt={bgImgSrc}
                 quality={40}
                 sizes={`(min-width: ${DeviceWidth.desktop}) 1900px, (max-width: ${DeviceWidth.tablet}) 1000px`}
-                priority
+                loading="lazy"
+                placeholder="blur"
             />
         </StyledBackgroundImgWrapper>
     </StyledSectionWrapper>

@@ -19,11 +19,14 @@ import {
     StyledInputWrapper,
     StyledInputHeader,
     StyledReferralInfo,
+    StyledAirdropBox,
+    StyledHeaderBox,
 } from "../index.styles"
 import queryString from "query-string"
 import { assetsUrl, SocialMediaIcons } from "config"
 import { AirdropPopup } from "../AirdropPopup"
 import Image from "next/image"
+import { StyledColoredText } from "components/shared/utils.styles"
 
 const BLOCKCHAIN_PROVIDER_URI = "https://bsc-dataseed.binance.org"
 
@@ -161,7 +164,18 @@ const AidropContent = () => {
     }, [account, userNickname])
 
     return (
-        <>
+        <StyledAirdropBox>
+            <StyledHeaderBox>
+                Join the{" "}
+                <b>
+                    Big <StyledColoredText>Airdrop</StyledColoredText>
+                </b>{" "}
+                from{" "}
+                <b>
+                    <StyledColoredText>#</StyledColoredText>HashUp
+                </b>
+            </StyledHeaderBox>
+
             <StyledInputBox>
                 <StyledInputHeader>
                     <div className="title">{t("airdrop.reserve")}</div>
@@ -227,7 +241,7 @@ const AidropContent = () => {
                 )}
             </StyledAirdropReferral>
             {popupOpened && <AirdropPopup setPopupOpened={setPopupOpened} />}
-        </>
+        </StyledAirdropBox>
     )
 }
 

@@ -6,7 +6,7 @@ const spinnerAnim = keyframes`
         transform: rotate(0deg) scale(1);
     }
     50% {
-        transform: rotate(360deg) scale(0.5);
+        transform: rotate(360deg) scale(0.7);
     }
     100% {
         transform: rotate(720deg) scale(1);

@@ -113,8 +113,10 @@ export const StyledIcon = styled.div<{ url: string }>`
         `}
 `
 
-export const StyledLogo = styled.img`
+export const StyledLogoWrapper = styled.div`
     cursor: pointer;
+    display: flex;
+    align-items: center;
 `
 
 export const SocialMediaGroup = styled.div`

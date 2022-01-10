@@ -132,8 +132,8 @@ export const StyledTokenInfoItem = styled.div`
     gap: 7px;
 
     ${StyledLoadingSpinner} {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 `
 

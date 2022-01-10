@@ -346,3 +346,18 @@ export const StyledAnchor = styled.div`
     position: absolute;
     top: -100px;
 `
+
+export const StyledLoadingPlaceholder = styled.div`
+    height: 270px;
+    margin: auto;
+    width: ${GLOBAL_CONTENT_WIDTH_PX}px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+
+    ${StyledHeaderBox} {
+        text-align: center;
+    }
+`

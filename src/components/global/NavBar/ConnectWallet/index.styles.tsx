@@ -30,6 +30,6 @@ export const StyledAddress = styled.div`
     line-height: 20px;
 `
 
-export const WalletIcon = styled.img`
+export const WalletIconWrapper = styled.div`
     margin-top: -3px;
 `

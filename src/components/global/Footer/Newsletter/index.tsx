@@ -7,6 +7,10 @@ import {
 } from "./index.styles"
 import { StyledListHeader } from "../index.styles"
 import { useTranslation } from "react-i18next"
+import dynamic from "next/dynamic"
+import LazyLoad from "react-lazyload"
+
+const Form = dynamic(() => import("./Form"), { ssr: false })
 
 const Newsletter = () => {
     const { t } = useTranslation()
@@ -17,15 +21,13 @@ const Newsletter = () => {
             <StyledFormDescription>{t("newsletter.description")}</StyledFormDescription>
             <FormContainer>
                 <StyledInputContainer>
-                    <div
-                        className="ml-form-embed"
-                        data-account="3556595:b7a5n7e8w5"
-                        data-form="4955744:x2o8o0"
-                    />
+                    <LazyLoad offset={300} once>
+                        <Form />
+                    </LazyLoad>
                 </StyledInputContainer>
             </FormContainer>
         </NewsletterContainer>
     )
 }
 
-export default Newsletter;
+export default Newsletter

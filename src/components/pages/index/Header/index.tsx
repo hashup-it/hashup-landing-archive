@@ -10,11 +10,11 @@ import {
     StyledBottomGradient,
 } from "./index.styles"
 import HeaderBottomNav from "./HeaderBottomNav"
-import { assetsUrl } from "config"
 import Image from "next/image"
 
 import bgImg from "/public/assets/header/cartridge.png"
-import { MediaQuery } from "__styles__/consts"
+import { assetsUrl } from "config"
+import LazyLoad from "react-lazyload"
 
 const DO_NOT_SHOW_VIDEO_BELOW_PX: number = 1024
 
@@ -26,24 +26,26 @@ const VideoBackground = () => {
         // Do not download video on mobile device
         if (window.innerWidth >= DO_NOT_SHOW_VIDEO_BELOW_PX) {
             // Set video url after component render to force lazy loading
-            setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 1000)
+            setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 100)
         }
     }, [])
 
     return (
         <StyledBackgroundContainer>
             <StyledBackgroundPlaceholder isVisible={!isVideoLoaded} />
-            <StyledVideoBackground
-                autoPlay
-                muted
-                loop
-                playsInline
-                src={videoUrl}
-                onLoadedData={() => setIsVideoLoaded(true)}
-                isLoaded={isVideoLoaded}
-                preload="none"
-                poster=""
-            />
+            <LazyLoad once>
+                <StyledVideoBackground
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    src={videoUrl}
+                    onLoadedData={() => setIsVideoLoaded(true)}
+                    isLoaded={isVideoLoaded}
+                    preload="none"
+                    poster=""
+                />
+            </LazyLoad>
         </StyledBackgroundContainer>
     )
 }

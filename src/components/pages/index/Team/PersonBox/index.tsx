@@ -79,7 +79,6 @@ const PersonBox: FC<PersonProps> = ({
                             quality={85}
                             width={120}
                             height={120}
-                            priority
                         />
                     </StyledAvatarWrapper>
                     <StyledRole>

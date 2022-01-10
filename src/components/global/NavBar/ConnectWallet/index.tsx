@@ -3,12 +3,14 @@ import {
     StyledConnectWallet,
     StyledWalletTextWrapper,
     StyledWrapper,
-    WalletIcon,
+    WalletIconWrapper,
 } from "./index.styles"
 import { WalletSelector } from "../../WalletSelector"
 import { useTranslation } from "react-i18next"
 import { useAccountContext } from "contexts/account"
-import { assetsUrl } from "config"
+import Image from "next/image"
+
+import walletSvg from "/public/assets/icons/wallet.svg"
 
 export const ConnectWallet = () => {
     const { isWalletSelectorShown, showWalletSelector, account } = useAccountContext()
@@ -27,7 +29,10 @@ export const ConnectWallet = () => {
                         </StyledAddress>
                     )}
                 </StyledWalletTextWrapper>
-                <WalletIcon src={assetsUrl("icons/wallet.svg")} />
+
+                <WalletIconWrapper>
+                    <Image src={walletSvg} alt="Wallet icon" priority />
+                </WalletIconWrapper>
             </StyledConnectWallet>
             {isWalletSelectorShown && <WalletSelector />}
         </>

@@ -3,8 +3,6 @@ import Link from "next/link"
 import { ConnectWallet } from "./ConnectWallet"
 import {
     HamburgerButton,
-    StyledFullLogo,
-    StyledLogoIcon,
     StyledLogoWrapper,
     MenuWrapper,
     MobileHideWrapper,
@@ -13,6 +11,7 @@ import {
 import { MainMenu } from "./MainMenu"
 import { MobileMenu } from "./MobileMenu"
 import { useNavBarScrollEffect } from "./logic"
+import Image from "next/image"
 import { BrandAssets } from "config"
 
 const NavBar = () => {
@@ -26,8 +25,25 @@ const NavBar = () => {
                     <Link href="/" passHref>
                         <a>
                             <StyledLogoWrapper>
-                                <StyledLogoIcon src={BrandAssets.logoIcon} />
-                                <StyledFullLogo src={BrandAssets.logo} />
+                                <div className="full-logo">
+                                    <Image
+                                        src={BrandAssets.logo}
+                                        width={150}
+                                        height={35}
+                                        alt="HashUp logo"
+                                        quality={60}
+                                        priority
+                                    />
+                                </div>
+                                <div className="icon-logo">
+                                    <Image
+                                        src={BrandAssets.logoIcon}
+                                        width={35}
+                                        height={35}
+                                        alt="HashUp icon"
+                                        priority
+                                    />
+                                </div>
                             </StyledLogoWrapper>
                         </a>
                     </Link>

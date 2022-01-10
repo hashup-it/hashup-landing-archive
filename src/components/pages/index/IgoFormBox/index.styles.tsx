@@ -1,3 +1,4 @@
+import { StyledLoadingSpinner } from "components/shared/loading.styles"
 import styled from "styled-components"
 import { maxWidth, MediaQuery, minHeight, Swatches } from "__styles__/consts"
 
@@ -109,7 +110,7 @@ export const StyledImg = styled.div`
         display: none;
     }
 
-    img {
+    div.img-wrapper {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -143,6 +144,11 @@ export const StyledForm = styled.div`
     ${MediaQuery.mobileL} {
         height: auto;
         padding: 0;
+    }
+
+    ${StyledLoadingSpinner} {
+        width: 100px;
+        margin-top: -18px;
     }
 
     .ml-form-embedWrapper {

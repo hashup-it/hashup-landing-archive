@@ -9,14 +9,15 @@ import {
     StyledTokenInfo,
     StyledTokenInfoItem,
 } from "./index.styles"
-import { assetsUrl, SocialMediaIcons, SocialMediaUrls } from "config"
+import { SocialMediaIcons, SocialMediaUrls } from "config"
 import { useTranslation } from "react-i18next"
 import dynamic from "next/dynamic"
 import { StyledLoadingSpinner } from "components/shared/loading.styles"
-import { FC, useEffect, useState } from "react"
+import { FC, } from "react"
 import Image from "next/image"
 
 import mouseSvg from "/public/assets/icons/mouse.svg"
+import LazyLoad from "react-lazyload"
 
 const GamersCount = dynamic(() => import("./GamersCount/index"), {
     loading: () => <StyledLoadingSpinner />,
@@ -47,13 +48,7 @@ const SocialMediaIcon: FC<{ href: string; alt: string; src: string }> = ({ href,
 )
 
 const HeaderBottom = () => {
-    const [isGamersCountShown, setIsGamersCountShown] = useState<boolean>(false)
     const { t } = useTranslation()
-
-    useEffect(() => {
-        // Lazy loading
-        setTimeout(() => setIsGamersCountShown(true), 1000)
-    }, [])
 
     return (
         <StyledContainer>
@@ -62,7 +57,9 @@ const HeaderBottom = () => {
                 <StyledTokenInfo>
                     <StyledTokenInfoItem>
                         <b>{t("header.all-gamers")}</b>
-                        {isGamersCountShown ? <GamersCount /> : <StyledLoadingSpinner />}
+                        <LazyLoad once>
+                            <GamersCount />
+                        </LazyLoad>
                     </StyledTokenInfoItem>
                     <StyledTokenInfoItem>
                         <b>{t("header.contract")}</b>
