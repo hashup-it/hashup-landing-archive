@@ -1,6 +1,6 @@
 import { InfoBoxInterface } from "./InfoBox/interfaces"
 
-export const highlightedId: number = 2
+export const highlightedId: number = 1
 
 export const infoBoxesData: InfoBoxInterface[] = [
     {
@@ -38,17 +38,17 @@ export const infoBoxesData: InfoBoxInterface[] = [
         bullets: [
             {
                 contentLocale: "roadmap.box-2.bullet-1",
-                isDone: true,
+                isDone: false,
                 bold: false,
             },
             {
                 contentLocale: "roadmap.box-2.bullet-2",
-                isDone: true,
+                isDone: false,
                 bold: false,
             },
             {
                 contentLocale: "roadmap.box-2.bullet-3",
-                isDone: true,
+                isDone: false,
                 bold: false,
             },
             {
@@ -63,12 +63,12 @@ export const infoBoxesData: InfoBoxInterface[] = [
             },
             {
                 contentLocale: "roadmap.box-2.bullet-6",
-                isDone: true,
+                isDone: false,
                 bold: false,
             },
             {
                 contentLocale: "roadmap.box-2.bullet-7",
-                isDone: true,
+                isDone: false,
                 bold: false,
             },
         ],
@@ -187,40 +187,5 @@ export const infoBoxesData: InfoBoxInterface[] = [
                 bold: true,
             },
         ],
-    },
-    {
-        labelLocale: "roadmap.box-6.label",
-        bullets: [
-            {
-                contentLocale: "roadmap.box-6.bullet-1",
-                isDone: false,
-                bold: false,
-            },
-            {
-                contentLocale: "roadmap.box-6.bullet-2",
-                isDone: false,
-                bold: false,
-            },
-            {
-                contentLocale: "roadmap.box-6.bullet-3",
-                isDone: false,
-                bold: true,
-            },
-            {
-                contentLocale: "roadmap.box-6.bullet-4",
-                isDone: false,
-                bold: true,
-            },
-        ],
-    },
-    {
-        labelLocale: "roadmap.box-7.label",
-        bullets: [
-            {
-                contentLocale: "roadmap.box-7.bullet-1",
-                isDone: false,
-                bold: false,
-            },
-        ],
-    },
+    }
 ]

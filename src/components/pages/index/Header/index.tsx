@@ -23,10 +23,18 @@ const VideoBackground = () => {
     const [videoUrl, setVideoUrl] = useState<string>("")
 
     useEffect(() => {
+        const handle = () => {
+            setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 100)
+        }
+        
         // Do not download video on mobile device
         if (window.innerWidth >= DO_NOT_SHOW_VIDEO_BELOW_PX) {
             // Set video url after component render to force lazy loading
-            setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 100)
+            window.addEventListener("load", handle)
+        }
+
+        return () => {
+            window.removeEventListener("load", handle)
         }
     }, [])
 
@@ -61,7 +69,6 @@ const LandingHeader = () => (
                 <Image
                     src={bgImg}
                     alt="HashUp.it cartridge"
-                    // For desktop download the smallest one
                     sizes={`100vw`}
                     placeholder="blur"
                 />

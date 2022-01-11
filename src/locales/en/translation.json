@@ -123,62 +123,49 @@
         "header-look": "Look, ",
         "header-when": "when are we going to do all this",
         "box-1": {
-            "label": "Q3 2021",
-            "bullet-1": "Whitepaper v1",
-            "bullet-2": "Shaping the idea",
-            "bullet-3": "150k pln seed funding",
+            "label": "2021",
+            "bullet-1": "Whitepaper",
+            "bullet-2": "Seed Funding",
+            "bullet-3": "Start of work on HashUp",
             "bullet-4": "# Token Issue",
-            "bullet-5": "Start of work on HashUp"
+            "bullet-5": "HashUp employs 15 people"
         },
         "box-2": {
-            "label": "Q4 2021",
-            "bullet-1": "First partnership with Software Developers. (secret)",
-            "bullet-2": "Creating HashUp nicknames",
-            "bullet-3": "Publication of HashUp first airdrop",
-            "bullet-4": "1-1.6mln pln private round",
-            "bullet-5": "GameCap, GameXplorer, GameContract.io development",
-            "bullet-6": "Development of green and red cartridge",
-            "bullet-7": "HashUp employs 10 people"
+            "label": "Q1-Q2 2022 BSC",
+            "bullet-1": "GameXplorer.io",
+            "bullet-2": "GameCap.io",
+            "bullet-3": "Private founding & ICO",
+            "bullet-4": "Premiere of Pong - first ever video game on The HashUp Cartridge",
+            "bullet-5": "Listing on DEX",
+            "bullet-6": "First PC computer games premiere",
+            "bullet-7": "Selling idea of HashUp to Indie Games Studios around the world"
         },
         "box-3": {
-            "label": "Q4 2021",
-            "bullet-1": "$4m Initial Coin Offering",
-            "bullet-2": "DEX Listing",
-            "bullet-3": "Creation of blue, gold and grey cartridge",
-            "bullet-4": "Finalise documentation work",
-            "bullet-5": "Publication of GameContract, GameCap and GameXplorer",
-            "bullet-6": "Listing of the first free market game on GameCap",
-            "bullet-7": "Ability to release HTML5 games on HashUp cartridges"
+            "label": "Q3-Q4 2022 BSC/Poligon",
+            "bullet-1": "GameWallet on PC/Mac/Android/IOS",
+            "bullet-2": "HashUp on Video Games Events",
+            "bullet-3": "HashUp Video Games #Forum is live, where your like power is your cartridge balance",
+            "bullet-4": "First CEX listing",
+            "bullet-5": "HashUp Fiat => Crypto Ramp",
+            "bullet-6": "HashUp Crypto => Computers Games Ramp",
+            "bullet-7": "Unity, Unreal Engine HashUp plug-ins"
         },
         "box-4": {
-            "label": "Q1 2022",
-            "bullet-1": "Listing of first 10 games",
-            "bullet-2": "Building a team to help publish games on Blockchain",
-            "bullet-3": "Free and easy airdrops of first games",
-            "bullet-4": "Release of HashWallet, enabling release of PC games",
-            "bullet-5": "First partnerships with major game and software publishers.",
-            "bullet-6": "First CEX listing"
+            "label": "2023 ETH/BSC/Poligon/AVA",
+            "bullet-1": "HashUp on 5 Chains",
+            "bullet-2": "GameWallet p2p Messager and Video Games #Forum integration",
+            "bullet-3": "GamePaper.io - Kickstarter for Computer Games on Blockchain",
+            "bullet-4": "Gamexchange.finace - First DEX of computer games nad software",
+            "bullet-5": "HashUp.Games start working on our first AAA Games Exclusive on HashUp's",
+            "bullet-6": "Start working on HashUp's Software Edition"
         },
         "box-5": {
-            "label": "Q2-Q3 2022",
-            "bullet-1": "Listing of first PC game",
-            "bullet-2": "Organisation of the first HashUp event in Poland for Game Developers.",
-            "bullet-3": "HashUp employs 35 people",
-            "bullet-4": "Listing of first 100 games",
-            "bullet-5": "Start of work on GameXchange and GamePaper",
-            "bullet-6": "Publication of HashWallet on Android and IOS",
-            "bullet-7": "Opening of FIAT payment gateway -> # and # -> FIAT"
-        },
-        "box-6": {
-            "label": "Q4 2022",
-            "bullet-1": "First AAA PC game",
-            "bullet-2": "$1 billion # turnover and cartridges on the platform",
-            "bullet-3": "Publication of GameXchange, DEX with AMM and Order Book",
-            "bullet-4": "Possibility of collections via cartridges"
-        },
-        "box-7": {
-            "label": "Q1 2023+",
-            "bullet-1": "This is just the beginning…"
+            "label": "2024++ ETH/BSC/POL/SOLANA ",
+            "bullet-1": "Preparing for next crypto bubble: 30mld$+ market cap potencial",
+            "bullet-2": "Research into the economic issues surrounding the open distribution of software so that creators can make the most of their potential",
+            "bullet-3": "Integration of a decentralised software distribution platform with mobile devices and consoles and with devices yet to be developed",
+            "bullet-4": "Integration with alternative networks such as Helium, so you can play anywhere without needing an internet connection",
+            "bullet-5": "Working on cloud, computing, Google Stadia style, GeForce Now along the lines of a combination of Helium and Golem for gamers, so everyone can play the latest games without having to buy expensive hardware"
         }
     },
     "team": {
