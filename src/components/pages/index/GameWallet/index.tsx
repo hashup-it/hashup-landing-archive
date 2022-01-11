@@ -20,18 +20,22 @@ const ImagesBox = () => (
             <Image
                 src={tabletImg}
                 alt="GameWallet tablet screen"
-                quality={85}
+                quality={75}
                 sizes={`95vw`}
-                priority
+                loading="lazy"
+                placeholder="blur"
+                lazyBoundary="500px"
             />
         </StyledImgWrapper>
         <StyledImgWrapper className="phone">
             <Image
                 src={phoneImg}
                 alt="GameWallet phone screen"
-                quality={70}
+                quality={60}
                 sizes={`50vw`}
-                priority
+                loading="lazy"
+                placeholder="blur"
+                lazyBoundary="400px"
             />
         </StyledImgWrapper>
         <StyledImgWrapper className="red-dots-1">

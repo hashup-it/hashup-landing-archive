@@ -20,16 +20,17 @@ const ImagesBox = () => (
                 alt="GameXplorer website preview"
                 layout="responsive"
                 sizes={`(max-width: ${DeviceWidth.mobileL}) 350px, auto`}
-                quality={90}
+                quality={75}
+                loading="lazy"
                 placeholder="blur"
-                priority
+                lazyBoundary="400px"
             />
         </StyledMainImageWrapper>
         <StyledImgWrapper className="red-dots-1">
-            <Image src={redDotsImg1} alt="" quality={15} />
+            <Image src={redDotsImg1} alt="" quality={15} lazyBoundary="300px" />
         </StyledImgWrapper>
         <StyledImgWrapper className="red-dots-2">
-            <Image src={redDotsImg2} alt="" quality={15} />
+            <Image src={redDotsImg2} alt="" quality={15} lazyBoundary="300px" />
         </StyledImgWrapper>
     </StyledImagesBox>
 )

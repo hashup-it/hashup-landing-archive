@@ -55,7 +55,7 @@ interface PersonProps extends PersonInterface {
 }
 
 const PersonBox: FC<PersonProps> = ({
-    avatarFilename,
+    avatarImg,
     localeKey,
     name,
     socialMedia,
@@ -74,11 +74,13 @@ const PersonBox: FC<PersonProps> = ({
                 <StyledContent>
                     <StyledAvatarWrapper>
                         <Image
-                            src={assetsUrl(`team-avatars/${avatarFilename}`)}
+                            src={avatarImg}
                             alt={`${name} avatar`}
-                            quality={85}
                             width={120}
                             height={120}
+                            loading="lazy"
+                            placeholder="blur"
+                            lazyBoundary="250px"
                         />
                     </StyledAvatarWrapper>
                     <StyledRole>

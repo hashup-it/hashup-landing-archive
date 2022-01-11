@@ -30,7 +30,10 @@ const ImagesBox = () => (
                 src={laptopImg}
                 alt="GameContract laptop website preview"
                 sizes={`(min-width: ${DeviceWidth.laptopL}): 1400px, 105vw`}
-                priority
+                quality={60}
+                loading="lazy"
+                placeholder="blur"
+                lazyBoundary="500px"
             />
         </StyledImgWrapper>
         <StyledImgWrapper className="floating-website">
@@ -38,11 +41,14 @@ const ImagesBox = () => (
                 src={websiteImg}
                 alt="GameContract floating website preview"
                 sizes={`(min-width: ${DeviceWidth.laptopL}): 1400px, 100vw`}
-                priority
+                quality={60}
+                loading="lazy"
+                placeholder="blur"
+                lazyBoundary="500px"
             />
         </StyledImgWrapper>
         <StyledImgWrapper className="red-dots-1">
-            <Image src={redDots1Img} alt="" quality={15} />
+            <Image src={redDots1Img} alt="" quality={10} />
         </StyledImgWrapper>
         <StyledImgWrapper className="red-dots-2">
             <Image src={redDots2Img} alt="" quality={10} />

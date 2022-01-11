@@ -10,8 +10,8 @@ import GlobalContentContainer from "components/global/GlobalContentContainer"
 const App = ({ Component, pageProps }) => {
     return (
         <>
-            <Script src={scriptsUrl("google-analitics.js")} strategy="beforeInteractive" />
-            <Script src={scriptsUrl("facebook.js")} strategy="beforeInteractive" />
+            {/* <Script src={scriptsUrl("google-analitics.js")} strategy="beforeInteractive" /> */}
+            {/* <Script src={scriptsUrl("facebook.js")} strategy="beforeInteractive" /> */}
             <Head>
                 <title>The HashUp Cartridge</title>
                 <meta name="description" content="HashUp.it – We will free the game market." />

@@ -29,7 +29,9 @@ const LogosContainer: FC<LogosContainerProps> = ({ data, label, header }) => (
                             quality={50}
                             sizes={`240px`}
                             objectFit="scale-down"
+                            loading="lazy"
                             placeholder="blur"
+                            lazyBoundary="300px"
                         />
                     </StyledLogoWrapper>
                 ))}

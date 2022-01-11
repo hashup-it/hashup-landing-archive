@@ -60,8 +60,10 @@ const Images = () => (
                 src={laptopImg}
                 sizes={`(min-width: ${DeviceWidth.desktop}) 1600px, auto`}
                 alt="GameCap Laptop"
-                quality={75}
-                priority
+                quality={55}
+                loading="lazy"
+                placeholder="blur"
+                lazyBoundary="500px"
             />
         </StyledMainImageWrapper>
         <div className="flare" />

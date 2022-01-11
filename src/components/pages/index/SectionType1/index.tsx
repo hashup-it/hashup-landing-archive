@@ -45,6 +45,7 @@ const SectionType1: FC<SectionType1Props> = ({
                 sizes={`(min-width: ${DeviceWidth.desktop}) 1900px, (max-width: ${DeviceWidth.tablet}) 1000px`}
                 loading="lazy"
                 placeholder="blur"
+                lazyBoundary="400px"
             />
         </StyledBackgroundImgWrapper>
     </StyledSectionWrapper>

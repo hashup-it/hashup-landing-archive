@@ -1,11 +1,14 @@
 import { SocialMediaEnum, PersonInterface, RoleEnum } from "./PersonBox/interfaces"
 import PersonBox from "./PersonBox"
 
+import jaworskikmg from "/public/assets/team-avatars/jakub_jaworski.png"
+import laskarzewskiImg from "/public/assets/team-avatars/pawel_laskarzewski.png"
+
 export const coreTeam: PersonInterface[] = [
     {
         name: "Szymon Jankowski",
         localeKey: "szymon-jankowski",
-        avatarFilename: "szymon_jankowski.png",
+        avatarImg: require("/public/assets/team-avatars/szymon_jankowski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -20,7 +23,7 @@ export const coreTeam: PersonInterface[] = [
     {
         name: "Filip Szydłowski",
         localeKey: "filip-szydlowski",
-        avatarFilename: "filip_szydlowski.png",
+        avatarImg: require("/public/assets/team-avatars/filip_szydlowski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -31,7 +34,7 @@ export const coreTeam: PersonInterface[] = [
     {
         name: "Rafał Bielenia",
         localeKey: "rafal-bielenia",
-        avatarFilename: "rafal_bielenia.png",
+        avatarImg: require("/public/assets/team-avatars/rafal_bielenia.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -42,7 +45,7 @@ export const coreTeam: PersonInterface[] = [
     {
         name: "Tomasz Fiema",
         localeKey: "tomasz-fiema",
-        avatarFilename: "tomasz_fiema.png",
+        avatarImg: require("/public/assets/team-avatars/tomasz_fiema.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -57,7 +60,7 @@ export const coreTeam: PersonInterface[] = [
     {
         name: "Cezary Dobrowolski",
         localeKey: "cezary-dobrowolski",
-        avatarFilename: "cezary_dobrowolski.png",
+        avatarImg: require("/public/assets/team-avatars/cezary_dobrowolski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -68,7 +71,7 @@ export const coreTeam: PersonInterface[] = [
     {
         name: "Szymon Fiałkowski",
         localeKey: "szymon-fialkowski",
-        avatarFilename: "szymon_fialkowski.png",
+        avatarImg: require("/public/assets/team-avatars/szymon_fialkowski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -82,7 +85,7 @@ export const team: PersonInterface[] = [
     {
         name: "Damian Sarnecki",
         localeKey: "damian-sarnecki",
-        avatarFilename: "damian_sarnecki.png",
+        avatarImg: require("/public/assets/team-avatars/damian_sarnecki.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -97,7 +100,7 @@ export const team: PersonInterface[] = [
     {
         name: "Robert Dziubek",
         localeKey: "robert-dziubek",
-        avatarFilename: "robert_dziubek.png",
+        avatarImg: require("/public/assets/team-avatars/robert_dziubek.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -112,7 +115,7 @@ export const team: PersonInterface[] = [
     {
         name: "Jakub Jaworski",
         localeKey: "jakub-jaworski",
-        avatarFilename: "jakub_jaworski.png",
+        avatarImg: require("/public/assets/team-avatars/jakub_jaworski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -127,7 +130,7 @@ export const team: PersonInterface[] = [
     {
         name: "Jakub Stebel",
         localeKey: "jakub-stebel",
-        avatarFilename: "jakub_stebel.png",
+        avatarImg: require("/public/assets/team-avatars/jakub_stebel.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -138,7 +141,7 @@ export const team: PersonInterface[] = [
     {
         name: "Patryk Rossa",
         localeKey: "patryk-rossa",
-        avatarFilename: "patryk_rossa.png",
+        avatarImg: require("/public/assets/team-avatars/patryk_rossa.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -149,7 +152,7 @@ export const team: PersonInterface[] = [
     {
         name: "Kamil Kaminski",
         localeKey: "kamil-kaminski",
-        avatarFilename: "kamil_kaminski.png",
+        avatarImg: require("/public/assets/team-avatars/kamil_kaminski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -164,7 +167,7 @@ export const advisors: PersonInterface[] = [
         name: "dr Tomasz R. Smus",
         wordsBeforeNameBreak: 3,
         localeKey: "tomasz-smus",
-        avatarFilename: "tomasz_smus.png",
+        avatarImg: require("/public/assets/team-avatars/tomasz_smus.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -176,7 +179,7 @@ export const advisors: PersonInterface[] = [
         name: "prof. Krzysztof Piech",
         wordsBeforeNameBreak: 2,
         localeKey: "krzysztof-piech",
-        avatarFilename: "krzysztof_piech.png",
+        avatarImg: require("/public/assets/team-avatars/krzysztof_piech.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -191,7 +194,7 @@ export const advisors: PersonInterface[] = [
     {
         name: "Paweł Łaskarzewski",
         localeKey: "pawel-laskarzewski",
-        avatarFilename: "pawel-laskarzewski.png",
+        avatarImg: require("/public/assets/team-avatars/pawel_laskarzewski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -206,7 +209,7 @@ export const advisors: PersonInterface[] = [
     {
         name: "Marcin Wenus",
         localeKey: "marcin-wenus",
-        avatarFilename: "marcin_wenus.png",
+        avatarImg: require("/public/assets/team-avatars/marcin_wenus.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -217,7 +220,7 @@ export const advisors: PersonInterface[] = [
     {
         name: "Krzysztof Chmielewski",
         localeKey: "krzysztof-chmielewski",
-        avatarFilename: "krzysztof_chmielewski.png",
+        avatarImg: require("/public/assets/team-avatars/krzysztof_chmielewski.png"),
         socialMedia: [
             {
                 type: SocialMediaEnum.linkedIn,
@@ -231,7 +234,7 @@ export const teamItems: JSX.Element[] = [
     ...coreTeam.map((item, index) => (
         <PersonBox
             key={index}
-            avatarFilename={item.avatarFilename}
+            avatarImg={item.avatarImg}
             name={item.name}
             localeKey={item.localeKey}
             socialMedia={item.socialMedia}
@@ -242,7 +245,7 @@ export const teamItems: JSX.Element[] = [
     ...team.map((item, index) => (
         <PersonBox
             key={index}
-            avatarFilename={item.avatarFilename}
+            avatarImg={item.avatarImg}
             name={item.name}
             localeKey={item.localeKey}
             socialMedia={item.socialMedia}
@@ -256,7 +259,7 @@ export const advisorsItems: JSX.Element[] = [
     ...advisors.map((item, index) => (
         <PersonBox
             key={index}
-            avatarFilename={item.avatarFilename}
+            avatarImg={item.avatarImg}
             name={item.name}
             localeKey={item.localeKey}
             socialMedia={item.socialMedia}

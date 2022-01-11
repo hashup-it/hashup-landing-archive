@@ -31,7 +31,8 @@ export const Footer = () => {
                             height={35}
                             alt="HashUp logo"
                             quality={60}
-                            priority
+                            loading="lazy"
+                            lazyBoundary="500px"
                         />
                     </StyledLogoWrapper>
                 </Link>

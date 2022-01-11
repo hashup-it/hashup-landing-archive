@@ -30,7 +30,7 @@ const NavBar = () => {
                                         src={BrandAssets.logo}
                                         width={150}
                                         height={35}
-                                        alt="HashUp logo"
+                                        alt=""
                                         quality={60}
                                         priority
                                     />
@@ -40,7 +40,7 @@ const NavBar = () => {
                                         src={BrandAssets.logoIcon}
                                         width={35}
                                         height={35}
-                                        alt="HashUp icon"
+                                        alt=""
                                         priority
                                     />
                                 </div>

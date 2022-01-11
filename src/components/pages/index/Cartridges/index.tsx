@@ -25,38 +25,39 @@ import goldCartridgeImg from "/public/assets/2d-cartridges/without-extras/gold.p
 import grayCartridgeImg from "/public/assets/2d-cartridges/without-extras/gray.png"
 import { DeviceWidth } from "__styles__/consts"
 
-const cartridges: { type: CartridgeType; img: string; imgQuality: number; priority: boolean }[] = [
-    {
-        type: CartridgeType.blue,
-        img: blueCartridgeImg,
-        imgQuality: 1,
-        priority: false,
-    },
-    {
-        type: CartridgeType.green,
-        img: greenCartridgeImg,
-        imgQuality: 1,
-        priority: false,
-    },
-    {
-        type: CartridgeType.gray,
-        img: grayCartridgeImg,
-        imgQuality: 25,
-        priority: true,
-    },
-    {
-        type: CartridgeType.red,
-        img: redCartridgeImg,
-        imgQuality: 25,
-        priority: true,
-    },
-    {
-        type: CartridgeType.gold,
-        img: goldCartridgeImg,
-        imgQuality: 65,
-        priority: true,
-    },
-]
+const cartridges: { type: CartridgeType; img: string; imgQuality: number; lazyBoundary: number }[] =
+    [
+        {
+            type: CartridgeType.blue,
+            img: blueCartridgeImg,
+            imgQuality: 1,
+            lazyBoundary: 200,
+        },
+        {
+            type: CartridgeType.green,
+            img: greenCartridgeImg,
+            imgQuality: 1,
+            lazyBoundary: 200,
+        },
+        {
+            type: CartridgeType.gray,
+            img: grayCartridgeImg,
+            imgQuality: 10,
+            lazyBoundary: 300,
+        },
+        {
+            type: CartridgeType.red,
+            img: redCartridgeImg,
+            imgQuality: 10,
+            lazyBoundary: 300,
+        },
+        {
+            type: CartridgeType.gold,
+            img: goldCartridgeImg,
+            imgQuality: 55,
+            lazyBoundary: 500,
+        },
+    ]
 
 const CartridgesBox = () => (
     <StyledCartridgesBox>
@@ -68,8 +69,9 @@ const CartridgesBox = () => (
                         alt={`${item.type} cartridge`}
                         sizes={`(min-width: ${DeviceWidth.desktop}) 630px, (max-width: ${DeviceWidth.tablet}) 460px, auto`}
                         quality={item.imgQuality}
-                        priority={item.priority}
+                        loading="lazy"
                         placeholder="blur"
+                        lazyBoundary={`${item.lazyBoundary}px`}
                     />
                 </StyledCartridgeImgWrapper>
                 {item.type === CartridgeType.gold && <div className="gold-glow" />}

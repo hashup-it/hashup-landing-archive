@@ -19,13 +19,14 @@ const ImagesBox = () => (
                 alt="GameCap website preview"
                 layout="responsive"
                 sizes={`(max-width: ${DeviceWidth.mobileL}) 350px, auto`}
-                quality={90}
+                quality={75}
+                loading="lazy"
                 placeholder="blur"
-                priority
+                lazyBoundary="400px"
             />
         </StyledMainImageWrapper>
         <StyledImgWrapper className="red-dots-1">
-            <Image src={redDotsImg1} alt="" quality={5} />
+            <Image src={redDotsImg1} alt="" quality={5} lazyBoundary="300px" />
         </StyledImgWrapper>
         <div className="flare" />
     </StyledImagesBox>
