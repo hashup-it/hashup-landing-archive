@@ -111,6 +111,8 @@ export const StyledButtonsBox = styled.div`
     ${MediaQuery.mobileL} {
         margin-top: 50px;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 `
 
@@ -161,7 +163,7 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
     background-color: transparent;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    
+
     ${props =>
         props.isMenuShown &&
         css`
@@ -195,8 +197,7 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
 
     ${MediaQuery.mobileL} {
         margin-left: 0;
-        margin-top: 35px;
-        width: 280px;
+        margin-top: 25px;
     }
 
     div.button-content {
@@ -234,7 +235,6 @@ export const StyledWhitepaperMenu = styled.div<{ isShown: boolean }>`
     border-bottom-right-radius: 5px;
     width: 100%;
     display: ${props => (props.isShown ? "block" : "none")};
-    z-index: 99;
     animation: ${fadeInAnim} 120ms ease;
 `
 
@@ -249,6 +249,7 @@ export const StyledWhitepaperLangItem = styled.a`
     text-align: left;
     display: flex;
     align-items: center;
+    position: relative;
 
     ${MediaQuery.tablet} {
         padding: 20px 12px;

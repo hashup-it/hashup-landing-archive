@@ -25,7 +25,7 @@ export const StyledInnerContainer = styled.div`
 
 export const StyledContentBox = styled.div`
     position: relative;
-    z-index: 99;
+    z-index: 999;
     height: 100%;
     display: flex;
     flex-direction: column;
