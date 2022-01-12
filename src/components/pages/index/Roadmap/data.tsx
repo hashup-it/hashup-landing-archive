@@ -171,21 +171,6 @@ export const infoBoxesData: InfoBoxInterface[] = [
                 isDone: false,
                 bold: false,
             },
-            {
-                contentLocale: "roadmap.box-5.bullet-5",
-                isDone: false,
-                bold: false,
-            },
-            {
-                contentLocale: "roadmap.box-5.bullet-6",
-                isDone: false,
-                bold: false,
-            },
-            {
-                contentLocale: "roadmap.box-5.bullet-7",
-                isDone: false,
-                bold: true,
-            },
         ],
     }
 ]

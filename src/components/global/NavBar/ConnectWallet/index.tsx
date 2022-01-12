@@ -1,9 +1,6 @@
 import {
     StyledAddress,
-    StyledConnectWallet,
-    StyledWalletTextWrapper,
     StyledWrapper,
-    WalletIconWrapper,
 } from "./index.styles"
 import { WalletSelector } from "../../WalletSelector"
 import { useTranslation } from "react-i18next"
@@ -18,22 +15,19 @@ export const ConnectWallet = () => {
 
     return (
         <>
-            <StyledConnectWallet onClick={showWalletSelector}>
-                <StyledWalletTextWrapper>
-                    <StyledWrapper>
-                        {account ? t(`menu.wallet-connected`) : t(`menu.wallet-not-connected`)}
-                    </StyledWrapper>
+            <StyledWrapper onClick={showWalletSelector}>
+                <div className="text">
+                    {account ? t(`menu.wallet-connected`) : t(`menu.wallet-not-connected`)}
                     {account && (
                         <StyledAddress>
                             {account.slice(0, 4) + "…" + account.slice(37, 42)}
                         </StyledAddress>
                     )}
-                </StyledWalletTextWrapper>
-
-                <WalletIconWrapper>
+                </div>
+                <div className="icon-wrapper">
                     <Image src={walletSvg} alt="Wallet icon" priority />
-                </WalletIconWrapper>
-            </StyledConnectWallet>
+                </div>
+            </StyledWrapper>
             {isWalletSelectorShown && <WalletSelector />}
         </>
     )

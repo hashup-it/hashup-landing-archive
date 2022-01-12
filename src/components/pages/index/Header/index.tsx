@@ -11,6 +11,7 @@ import {
 } from "./index.styles"
 import HeaderBottomNav from "./HeaderBottomNav"
 import Image from "next/image"
+import SideMenu from "./SideMenu"
 
 import bgImg from "/public/assets/header/cartridge.png"
 import { assetsUrl } from "config"
@@ -26,7 +27,7 @@ const VideoBackground = () => {
         const handle = () => {
             setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 100)
         }
-        
+
         // Do not download video on mobile device
         if (window.innerWidth >= DO_NOT_SHOW_VIDEO_BELOW_PX) {
             // Set video url after component render to force lazy loading
@@ -40,6 +41,7 @@ const VideoBackground = () => {
 
     return (
         <StyledBackgroundContainer>
+            <SideMenu />
             <StyledBackgroundPlaceholder isVisible={!isVideoLoaded} />
             <LazyLoad once>
                 <StyledVideoBackground
@@ -66,12 +68,7 @@ const LandingHeader = () => (
             </StyledContentBox>
             <HeaderBottomNav />
             <StyledBackgroundImgWrapper>
-                <Image
-                    src={bgImg}
-                    alt="HashUp.it cartridge"
-                    sizes={`100vw`}
-                    placeholder="blur"
-                />
+                <Image src={bgImg} alt="HashUp.it cartridge" sizes={`100vw`} placeholder="blur" />
             </StyledBackgroundImgWrapper>
         </StyledInnerContainer>
         <VideoBackground />

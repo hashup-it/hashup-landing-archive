@@ -231,9 +231,9 @@ export const advisors: PersonInterface[] = [
 ]
 
 export const teamItems: JSX.Element[] = [
-    ...coreTeam.map((item, index) => (
+    ...coreTeam.map((item, _) => (
         <PersonBox
-            key={index}
+            key={item.name}
             avatarImg={item.avatarImg}
             name={item.name}
             localeKey={item.localeKey}
@@ -242,9 +242,9 @@ export const teamItems: JSX.Element[] = [
             wordsBeforeNameBreak={item.wordsBeforeNameBreak}
         />
     )),
-    ...team.map((item, index) => (
+    ...team.map((item, _) => (
         <PersonBox
-            key={index}
+            key={item.name}
             avatarImg={item.avatarImg}
             name={item.name}
             localeKey={item.localeKey}
@@ -256,9 +256,9 @@ export const teamItems: JSX.Element[] = [
 ]
 
 export const advisorsItems: JSX.Element[] = [
-    ...advisors.map((item, index) => (
+    ...advisors.map((item, _) => (
         <PersonBox
-            key={index}
+            key={item.name}
             avatarImg={item.avatarImg}
             name={item.name}
             localeKey={item.localeKey}

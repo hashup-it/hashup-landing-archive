@@ -9,7 +9,7 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     top: 0;
     left: 0;
     right: 0;
-    padding: 22px 25px;
+    padding: 10px 25px;
     font-size: 16px;
     color: ${Swatches.text_main};
     font-weight: 600;
@@ -50,35 +50,21 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     }
 
     ${MediaQuery.tablet} {
-        padding: 25px 18px;
-        height: 18px;
+        padding: 12px 15px;
         background-color: rgba(0, 0, 0, 0.95);
     }
 `
 
-export const MenuWrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    width: 1240px;
-    margin: 0 auto;
-
-    ${MediaQuery.desktopL} {
-        width: 1400px;
-    }
-
-    ${MediaQuery.laptopL} {
-        width: auto;
-    }
-
-    ${MediaQuery.tablet} {
-        grid-template-columns: 50px 1fr auto;
-        align-items: center;
-        width: 100%;
-    }
+export const StyledInnerBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 export const StyledLogoWrapper = styled.div`
-    cursor: pointer;
+    ${MediaQuery.tablet} {
+        flex: 1;
+    }
 
     div.icon-logo {
         display: none;
@@ -86,16 +72,12 @@ export const StyledLogoWrapper = styled.div`
         ${MediaQuery.tablet} {
             width: 35px;
             height: 35px;
-            position: absolute;
-            top: 17px;
             display: block;
         }
     }
 
     div.full-logo {
         width: 150px;
-        position: absolute;
-        top: 18px;
 
         ${MediaQuery.tablet} {
             display: none;
@@ -104,18 +86,17 @@ export const StyledLogoWrapper = styled.div`
 `
 
 export const HamburgerButton = styled.div<{ opened: boolean }>`
-    width: 30px;
-    height: 30px;
-    background-image: url(${props =>
-        assetsUrl(props.opened ? "icons/x.svg" : "icons/hamburger.svg")});
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 10px;
     display: none;
-    margin-top: -10px;
 
     ${MediaQuery.tablet} {
         display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url(${props =>
+            assetsUrl(props.opened ? "icons/x.svg" : "icons/hamburger.svg")});
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 10px;
     }
 `
 

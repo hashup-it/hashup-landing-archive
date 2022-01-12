@@ -10,7 +10,6 @@ export const StyledMetamaskButton = styled.button`
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
-    margin-left: 16px;
     font-weight: 700;
     transition: opacity 100ms ease;
     font-size: 12px;

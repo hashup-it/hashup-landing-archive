@@ -63,7 +63,7 @@ export const StyledDataGroup = styled.div`
 
 export const StyledTokenInfo = styled.div`
     display: flex;
-    gap: 44px;
+    gap: 32px;
     align-items: center;
 
     ${MediaQuery.tablet} {
@@ -73,10 +73,13 @@ export const StyledTokenInfo = styled.div`
 `
 
 export const StyledSocialMediaBox = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    display: none;
+
+    ${MediaQuery.laptop} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     ${MediaQuery.tablet} {
         margin-top: 55px;
@@ -108,6 +111,7 @@ export const StyledSocialMediaBox = styled.div`
         transition: opacity 100ms ease;
         height: 16px;
         width: 16px;
+        padding: 10px;
 
         :hover {
             opacity: 0.7;

@@ -4,7 +4,7 @@ import { ConnectWallet } from "./ConnectWallet"
 import {
     HamburgerButton,
     StyledLogoWrapper,
-    MenuWrapper,
+    StyledInnerBox,
     MobileHideWrapper,
     StyledNavBar,
 } from "./index.styles"
@@ -14,6 +14,32 @@ import { useNavBarScrollEffect } from "./logic"
 import Image from "next/image"
 import { BrandAssets } from "config"
 
+const Logo = () => (
+    <StyledLogoWrapper>
+        <div className="full-logo">
+            <Link href="/" passHref>
+                <a>
+                    <Image
+                        src={BrandAssets.logo}
+                        width={150}
+                        height={35}
+                        alt=""
+                        quality={60}
+                        priority
+                    />
+                </a>
+            </Link>
+        </div>
+        <div className="icon-logo">
+            <Link href="/" passHref>
+                <a>
+                    <Image src={BrandAssets.logoIcon} width={35} height={35} alt="" priority />
+                </a>
+            </Link>
+        </div>
+    </StyledLogoWrapper>
+)
+
 const NavBar = () => {
     const [isMobileMenuShown, setIsMobileMenuShown] = useState<boolean>(false)
     const { navBarState } = useNavBarScrollEffect() // For desktop only
@@ -21,32 +47,8 @@ const NavBar = () => {
     return (
         <>
             <StyledNavBar state={navBarState}>
-                <MenuWrapper>
-                    <Link href="/" passHref>
-                        <a>
-                            <StyledLogoWrapper>
-                                <div className="full-logo">
-                                    <Image
-                                        src={BrandAssets.logo}
-                                        width={150}
-                                        height={35}
-                                        alt=""
-                                        quality={60}
-                                        priority
-                                    />
-                                </div>
-                                <div className="icon-logo">
-                                    <Image
-                                        src={BrandAssets.logoIcon}
-                                        width={35}
-                                        height={35}
-                                        alt=""
-                                        priority
-                                    />
-                                </div>
-                            </StyledLogoWrapper>
-                        </a>
-                    </Link>
+                <StyledInnerBox>
+                    <Logo />
                     <MobileHideWrapper>
                         <MainMenu isMobileMenuShown={isMobileMenuShown} />
                     </MobileHideWrapper>
@@ -55,7 +57,7 @@ const NavBar = () => {
                         opened={isMobileMenuShown}
                         onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
                     />
-                </MenuWrapper>
+                </StyledInnerBox>
             </StyledNavBar>
             {isMobileMenuShown && (
                 <MobileMenu opened={isMobileMenuShown} setOpened={setIsMobileMenuShown} />

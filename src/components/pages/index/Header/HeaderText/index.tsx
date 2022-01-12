@@ -18,7 +18,6 @@ import { assetsUrl, Languages } from "config"
 import Link from "next/link"
 import Image from "next/image"
 
-
 const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lang }) => {
     const { t } = useTranslation()
 
@@ -48,7 +47,18 @@ const WhitepaperButton = () => {
             onMouseLeave={() => setIsMenuShown(false)}
             isMenuShown={isMenuShown}
         >
-            Whitepaper
+            <div className="button-content">
+                Whitepaper<StyledColoredText>.</StyledColoredText>
+                <div className="arrow-wrapper">
+                    <Image
+                        src={assetsUrl("header/arrow.svg")}
+                        width={20}
+                        height={20}
+                        alt=""
+                        priority
+                    />
+                </div>
+            </div>
             <StyledWhitepaperMenu isShown={isMenuShown}>
                 <WhitepaperLangItem lang={Languages.en.code} />
                 <WhitepaperLangItem lang={"pl"} />

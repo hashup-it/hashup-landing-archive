@@ -1,14 +1,11 @@
-import styled from "styled-components"
-import { MediaQuery } from "__styles__/consts"
-import { FooterTopLeft } from "../../Footer/index.styles"
+import styled, { css } from "styled-components"
+import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledMainMenu = styled.nav`
     display: flex;
-    list-style-type: none;
     gap: 50px;
     justify-content: center;
-    overflow-y: auto;
-    position: relative;
+    align-items: center;
 
     ${MediaQuery.laptop} {
         gap: 20px;
@@ -22,26 +19,35 @@ export const StyledMainMenu = styled.nav`
     }
 `
 
-export const MenuItem = styled.span`
-    display: flex;
-    align-items: flex-start;
+export const MenuItem = styled.span<{ isSelected?: boolean }>`
     transition: opacity 100ms ease;
+    font-size: 16px;
+    position: relative;
+
+    :before {
+        content: "";
+        top: 0;
+        left: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 100%;
+        background-color: ${Swatches.primary_color};
+        width: 8px;
+        height: 8px;
+        
+        ${props =>
+            props.isSelected &&
+            css`
+                position: absolute;
+            `}
+    }
+
+    a {
+        padding: 8px;
+    }
 
     :hover {
         transition: opacity 100ms ease;
         opacity: 0.8;
-    }
-
-    > * {
-        text-decoration: none;
-        color: white;
-    }
-`
-
-export const FooterTop = styled(FooterTopLeft)`
-    text-align: center;
-
-    * {
-        justify-content: center;
     }
 `

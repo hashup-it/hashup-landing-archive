@@ -4,8 +4,9 @@
         "media": "Media",
         "doc": "Docs",
         "cartridges": "Cartridges",
-        "wallet-not-connected": "Connect Wallet",
-        "wallet-connected": "Connected"
+        "wallet-not-connected": "Connect",
+        "wallet-connected": "Connected",
+        "home": "Home"
     },
     "ecosystem": {
         "label": "Our Ecosystem",
@@ -131,7 +132,7 @@
             "bullet-5": "HashUp employs 15 people"
         },
         "box-2": {
-            "label": "Q1-Q2 2022 BSC",
+            "label": "Q1-Q2 2022",
             "bullet-1": "GameXplorer.io",
             "bullet-2": "GameCap.io",
             "bullet-3": "Private founding & ICO",
@@ -141,8 +142,8 @@
             "bullet-7": "Selling idea of HashUp to Indie Games Studios around the world"
         },
         "box-3": {
-            "label": "Q3-Q4 2022 BSC/Poligon",
-            "bullet-1": "GameWallet on PC/Mac/Android/IOS",
+            "label": "Q3-Q4 2022",
+            "bullet-1": "Multiplatform GameWallet",
             "bullet-2": "HashUp on Video Games Events",
             "bullet-3": "HashUp Video Games #Forum is live, where your like power is your cartridge balance",
             "bullet-4": "First CEX listing",
@@ -151,7 +152,7 @@
             "bullet-7": "Unity, Unreal Engine HashUp plug-ins"
         },
         "box-4": {
-            "label": "2023 ETH/BSC/Poligon/AVA",
+            "label": "2023",
             "bullet-1": "HashUp on 5 Chains",
             "bullet-2": "GameWallet p2p Messager and Video Games #Forum integration",
             "bullet-3": "GamePaper.io - Kickstarter for Computer Games on Blockchain",
@@ -160,12 +161,11 @@
             "bullet-6": "Start working on HashUp's Software Edition"
         },
         "box-5": {
-            "label": "2024++ ETH/BSC/POL/SOLANA ",
+            "label": "2024++",
             "bullet-1": "Preparing for next crypto bubble: 30mld$+ market cap potencial",
             "bullet-2": "Research into the economic issues surrounding the open distribution of software so that creators can make the most of their potential",
             "bullet-3": "Integration of a decentralised software distribution platform with mobile devices and consoles and with devices yet to be developed",
-            "bullet-4": "Integration with alternative networks such as Helium, so you can play anywhere without needing an internet connection",
-            "bullet-5": "Working on cloud, computing, Google Stadia style, GeForce Now along the lines of a combination of Helium and Golem for gamers, so everyone can play the latest games without having to buy expensive hardware"
+            "bullet-4": "Integration with alternative networks such as Helium, so you can play anywhere without needing an internet connection"
         }
     },
     "team": {

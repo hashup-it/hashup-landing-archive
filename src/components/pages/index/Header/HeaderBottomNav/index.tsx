@@ -16,7 +16,7 @@ import { StyledLoadingSpinner } from "components/shared/loading.styles"
 import { FC, } from "react"
 import Image from "next/image"
 
-import mouseSvg from "/public/assets/icons/mouse.svg"
+import mouseSvg from "/public/assets/header/mouse.svg"
 import LazyLoad from "react-lazyload"
 
 const GamersCount = dynamic(() => import("./GamersCount/index"), {

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 import { MediaQuery, minHeight } from "__styles__/consts"
 import { Swatches } from "__styles__/consts"
 import { assetsUrl } from "config"
@@ -104,7 +104,7 @@ export const StyledParagraph = styled.p`
 `
 
 export const StyledButtonsBox = styled.div`
-    margin-top: 35px;
+    margin-top: 85px;
     display: flex;
     align-items: center;
 
@@ -116,6 +116,7 @@ export const StyledButtonsBox = styled.div`
 
 export const StyledButton = styled.button`
     width: 280px;
+    display: block;
     cursor: pointer;
     border-radius: 15px;
     background-color: ${Swatches.primary_color};
@@ -126,6 +127,8 @@ export const StyledButton = styled.button`
     font-size: 16px;
     text-transform: uppercase;
     text-align: center;
+    position: relative;
+    box-shadow: 0px 8px 40px -10px rgba(255, 0, 0, 1);
 
     :hover {
         opacity: 0.9;
@@ -144,9 +147,7 @@ export const StyledButton = styled.button`
 
 export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
     text-decoration: none;
-    border: 1px solid #ffffff;
     box-sizing: border-box;
-    border-radius: 15px;
     padding: 16px 32px 16px 32px;
     color: ${Swatches.text_main};
     font-weight: 600;
@@ -155,16 +156,36 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
-    background-color: ${Swatches.background_main};
     margin-left: 20px;
-
+    position: relative;
+    background-color: transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
     ${props =>
         props.isMenuShown &&
         css`
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            border-bottom: 1px solid transparent;
+            transition: background-color 120ms ease;
+            background-color: ${Swatches.background_main};
         `}
+
+    :before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 32px;
+        height: 2px;
+        background-color: ${Swatches.primary_color};
+        bottom: 0;
+        transition: width 120ms ease-in-out;
+
+        ${props =>
+            props.isMenuShown &&
+            css`
+                width: 0;
+                transition: width 180ms ease-in-out;
+            `}
+    }
 
     ${MediaQuery.tablet} {
         margin-left: 10px;
@@ -177,20 +198,44 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
         margin-top: 35px;
         width: 280px;
     }
+
+    div.button-content {
+        display: flex;
+
+        div.arrow-wrapper {
+            margin-left: 12px;
+            transition: transform 150ms ease-in-out;
+
+            ${props =>
+                props.isMenuShown &&
+                css`
+                    transition: transform 190ms ease-in-out;
+                    transform: rotate(90deg);
+                `}
+        }
+    }
+`
+
+const fadeInAnim = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 `
 
 export const StyledWhitepaperMenu = styled.div<{ isShown: boolean }>`
     position: absolute;
     background-color: ${Swatches.background_main};
     top: 100%;
-    left: -1px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: 1px solid #ffffff;
-    border-top: 0.5px solid white;
+    left: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     width: 100%;
     display: ${props => (props.isShown ? "block" : "none")};
     z-index: 99;
+    animation: ${fadeInAnim} 120ms ease;
 `
 
 export const StyledWhitepaperLangItem = styled.a`
