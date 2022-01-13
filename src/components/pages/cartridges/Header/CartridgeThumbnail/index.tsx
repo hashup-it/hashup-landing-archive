@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { StyledBox, StyledLabel } from "./index.style"
+import { StyledBox } from "./index.style"
 import { CartridgeColor, CartridgeType } from "config"
 
 const CartridgeThumbnail: FC<{ color: CartridgeColor; type: CartridgeType }> = ({
@@ -9,10 +9,11 @@ const CartridgeThumbnail: FC<{ color: CartridgeColor; type: CartridgeType }> = (
     const anchor: string = CartridgeType[type]
 
     return (
-        <StyledBox href={`#${anchor}`} highlightColor={color}>
-            <StyledLabel color={color}>{anchor}</StyledLabel>
-            <br />
-            Cartridge
+        <StyledBox href={`#${anchor}`} color={color}>
+            <div className="label">
+                {anchor}
+            </div>
+            <div className="text">Cartridge</div>
         </StyledBox>
     )
 }

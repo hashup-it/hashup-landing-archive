@@ -43,19 +43,17 @@ const VideoBackground = () => {
         <StyledBackgroundContainer>
             <SideMenu />
             <StyledBackgroundPlaceholder isVisible={!isVideoLoaded} />
-            <LazyLoad once>
-                <StyledVideoBackground
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    src={videoUrl}
-                    onLoadedData={() => setIsVideoLoaded(true)}
-                    isLoaded={isVideoLoaded}
-                    preload="none"
-                    poster=""
-                />
-            </LazyLoad>
+            <StyledVideoBackground
+                autoPlay
+                muted
+                loop
+                playsInline
+                src={videoUrl}
+                onLoadedData={() => setIsVideoLoaded(true)}
+                isLoaded={isVideoLoaded}
+                preload="none"
+                poster=""
+            />
         </StyledBackgroundContainer>
     )
 }

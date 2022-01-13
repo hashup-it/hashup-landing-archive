@@ -22,7 +22,11 @@ const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lan
     const { t } = useTranslation()
 
     return (
-        <StyledWhitepaperLangItem href={getWhitepaper(lang)}>
+        <StyledWhitepaperLangItem
+            href={getWhitepaper(lang)}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <div className="icon-wrapper">
                 <Image
                     src={assetsUrl("icons/document.svg")}

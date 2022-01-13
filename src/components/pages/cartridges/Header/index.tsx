@@ -6,16 +6,17 @@ import CartridgeThumbnail from "./CartridgeThumbnail"
 import {
     StyledTitle,
     StyledContainer,
-    StyledCartridgeThumbnailsBox,
     StyledBackgroundFlare,
+    StyledParagraph,
+    StyledThumbnailsBox,
 } from "./index.styles"
 
-const CartridgeThumbnails = () => (
-    <StyledCartridgeThumbnailsBox>
+const Thumbnails = () => (
+    <StyledThumbnailsBox>
         {cartridgesData.map((item, index) => (
             <CartridgeThumbnail key={index} color={item.color} type={item.type} />
         ))}
-    </StyledCartridgeThumbnailsBox>
+    </StyledThumbnailsBox>
 )
 
 const Header = () => {
@@ -28,8 +29,8 @@ const Header = () => {
                 {t("cartridges-tab.header")}
                 <StyledColoredText>.</StyledColoredText>
             </StyledTitle>
-            <StyledSectionParagraph>{t("cartridges-tab.header-paragraph")}</StyledSectionParagraph>
-            <CartridgeThumbnails />
+            <StyledParagraph>{t("cartridges-tab.header-paragraph")}</StyledParagraph>
+            <Thumbnails />
         </StyledContainer>
     )
 }

@@ -1,9 +1,7 @@
 import styled from "styled-components"
-import { SectionText } from "components/pages/cartridges/sections.styles"
 import { Swatches } from "__styles__/consts"
 import { MediaQuery } from "__styles__/consts"
 import { assetsUrl } from "config"
-import { StyledSectionTitle } from "components/shared/section.styles"
 
 export const WalletSelectorContainer = styled.div`
     position: fixed;
@@ -45,7 +43,7 @@ export const ContentWrapper = styled.div`
     }
 `
 
-export const ConnectionHeader = styled(StyledSectionTitle)`
+export const ConnectionHeader = styled.div`
     font-weight: normal;
     font-size: 30px;
     line-height: 140%;
@@ -53,7 +51,7 @@ export const ConnectionHeader = styled(StyledSectionTitle)`
     color: #ffffff;
 `
 
-export const ConnectionText = styled(SectionText)`
+export const ConnectionText = styled.div`
     font-family: Sora;
     font-style: normal;
     font-weight: normal;
@@ -107,6 +105,7 @@ export const ButtonsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding-top: 50px;
 `
 
 export const PermanentHyperlink = styled.a`

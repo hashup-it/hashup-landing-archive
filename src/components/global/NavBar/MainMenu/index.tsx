@@ -48,12 +48,22 @@ export const MainMenu = ({
                 </Link>
             </MenuItem>
             <MenuItem>
-                <a href={SocialMediaUrls.linkedIn} title="Media">
+                <a
+                    href={SocialMediaUrls.linkedIn}
+                    title="Media"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {t("menu.media")}
                 </a>
             </MenuItem>
             <MenuItem>
-                <a href={SocialMediaUrls.gitbook} title="Documentation">
+                <a
+                    href={SocialMediaUrls.gitbook}
+                    title="Documentation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {t("menu.doc")}
                 </a>
             </MenuItem>

@@ -7,7 +7,7 @@ export const StyledContainer = styled.div`
     bottom: 0;
     width: 100%;
     margin-bottom: 10px;
-    z-index: 99;
+    z-index: 999999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +22,7 @@ export const StyledContainer = styled.div`
         gap: 35px;
         margin-top: 120px;
         margin-bottom: 0;
+        z-index: 99;
     }
 `
 

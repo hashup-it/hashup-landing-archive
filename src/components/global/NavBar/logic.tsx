@@ -40,7 +40,7 @@ export const useNavBarScrollEffect = (): { navBarState: NavBarStateEnum } => {
         let lastPositionY: number = window.scrollY
 
         const handleScroll = throttle(() => {
-            if (window.scrollY <= 3) {
+            if (window.scrollY <= 1) {
                 // Absolute top of the page
                 setState(NavBarStateEnum.top)
             } else {

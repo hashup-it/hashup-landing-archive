@@ -4,56 +4,54 @@ import { MediaQuery } from "__styles__/consts"
 
 export const StyledContainer = styled.div`
     height: 100vh;
+    min-height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 40px;
 
     ${MediaQuery.laptop} {
         height: auto;
+    }
+
+    ${MediaQuery.tablet} {
+        padding-top: 30px;
     }
 `
 
 export const StyledTitle = styled.h1`
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 70px;
     line-height: 115%;
     padding: 0;
     margin: 0;
     text-align: center;
-    width: 16em;
+    max-width: 1100px;
 
     ${MediaQuery.laptop} {
-        width: auto;
+        font-size: 55px;
         padding-top: 112px;
         font-size: 50px;
     }
 
     ${MediaQuery.mobileL} {
-        font-size: 45px;
-        width: 100%;
+        font-size: 35px;
         word-break: break-word;
     }
 `
 
-export const SmallCartridgeHeaderText = styled(StyledSectionParagraph)`
-    white-space: pre-line;
+export const StyledParagraph = styled(StyledSectionParagraph)`
+    margin: 50px auto 90px;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 160%;
-    padding-bottom: 30px;
-
+    max-width: 700px;
     text-align: center;
-
-    color: #e0e0e0;
 `
 
-export const StyledCartridgeThumbnailsBox = styled.div`
+export const StyledThumbnailsBox = styled.div`
     display: flex;
-    gap: 25px;
+    gap: 18px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
