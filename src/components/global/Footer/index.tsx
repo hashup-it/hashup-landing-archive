@@ -22,7 +22,6 @@ export const Footer = () => {
 
     return (
         <StyledFooter>
-            TEST
             <StyledHeading>
                 <Link href="/" passHref>
                     <StyledLogoWrapper>
