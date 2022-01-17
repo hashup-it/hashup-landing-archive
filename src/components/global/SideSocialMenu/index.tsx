@@ -1,6 +1,6 @@
 import { FC } from "react"
 import Image from "next/image"
-import { StyledWrapper } from "./index.styles"
+import { StyledSideSocialMenu } from "./index.styles"
 import { SocialMediaIcons, SocialMediaUrls } from "config"
 
 const SocialMediaIcon: FC<{ href: string; alt: string; src: string }> = ({ href, alt, src }) => (
@@ -12,7 +12,7 @@ const SocialMediaIcon: FC<{ href: string; alt: string; src: string }> = ({ href,
 )
 
 const SideMenu = () => (
-    <StyledWrapper>
+    <StyledSideSocialMenu>
         <SocialMediaIcon
             href={SocialMediaUrls.linkedIn}
             src={SocialMediaIcons.linkedin}
@@ -43,7 +43,7 @@ const SideMenu = () => (
             src={SocialMediaIcons.discord}
             alt="Discord"
         />
-    </StyledWrapper>
+    </StyledSideSocialMenu>
 )
 
 export default SideMenu

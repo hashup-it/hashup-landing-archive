@@ -1,8 +1,8 @@
-import { StyledSectionParagraph } from "components/shared/section.styles"
 import { StyledColoredText } from "components/shared/utils.styles"
 import { useTranslation } from "react-i18next"
 import { cartridgesData } from "../data"
 import CartridgeThumbnail from "./CartridgeThumbnail"
+import SideSocialMenu from "components/global/SideSocialMenu"
 import {
     StyledTitle,
     StyledContainer,
@@ -24,13 +24,16 @@ const Header = () => {
 
     return (
         <StyledContainer>
-            <StyledBackgroundFlare />
-            <StyledTitle>
-                {t("cartridges-tab.header")}
-                <StyledColoredText>.</StyledColoredText>
-            </StyledTitle>
-            <StyledParagraph>{t("cartridges-tab.header-paragraph")}</StyledParagraph>
-            <Thumbnails />
+            <div className="inner-container">
+                <StyledBackgroundFlare />
+                <StyledTitle>
+                    {t("cartridges-tab.header")}
+                    <StyledColoredText>.</StyledColoredText>
+                </StyledTitle>
+                <StyledParagraph>{t("cartridges-tab.header-paragraph")}</StyledParagraph>
+                <Thumbnails />
+                <SideSocialMenu />
+            </div>
         </StyledContainer>
     )
 }

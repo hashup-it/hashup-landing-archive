@@ -11,37 +11,44 @@ import {
 } from "./index.styles"
 import HeaderBottomNav from "./HeaderBottomNav"
 import Image from "next/image"
-import SideMenu from "./SideMenu"
+import SideSocialMenu from "components/global/SideSocialMenu"
 
 import bgImg from "/public/assets/header/cartridge.png"
 import { assetsUrl } from "config"
-import LazyLoad from "react-lazyload"
+import { useRouter } from "next/router"
 
 const DO_NOT_SHOW_VIDEO_BELOW_PX: number = 1024
 
 const VideoBackground = () => {
     const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false)
     const [videoUrl, setVideoUrl] = useState<string>("")
+    const router = useRouter()
 
     useEffect(() => {
-        const handle = () => {
-            setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 100)
+        const handleVideoDownload = () => {
+            if (videoUrl === "") {
+                setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 100)
+            }
         }
 
         // Do not download video on mobile device
         if (window.innerWidth >= DO_NOT_SHOW_VIDEO_BELOW_PX) {
             // Set video url after component render to force lazy loading
-            window.addEventListener("load", handle)
+            // This trick (using both window and router event) is necessary because
+            // window is fired on initial load, router is fired on further navigation reload
+            window.addEventListener("load", handleVideoDownload)
+            router.events.on("routeChangeComplete", handleVideoDownload)
         }
 
         return () => {
-            window.removeEventListener("load", handle)
+            window.removeEventListener("load", handleVideoDownload)
+            router.events.off("routeChangeComplete", handleVideoDownload)
         }
-    }, [])
+    }, [videoUrl, router])
 
     return (
         <StyledBackgroundContainer>
-            <SideMenu />
+            <SideSocialMenu />
             <StyledBackgroundPlaceholder isVisible={!isVideoLoaded} />
             <StyledVideoBackground
                 autoPlay

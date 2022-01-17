@@ -1,15 +1,19 @@
+import { StyledSideSocialMenu } from "components/global/SideSocialMenu/index.styles"
 import { StyledSectionParagraph } from "components/shared/section.styles"
 import styled from "styled-components"
 import { MediaQuery } from "__styles__/consts"
 
 export const StyledContainer = styled.div`
     height: 100vh;
+    position: absolute;
     min-height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     position: relative;
+    left: calc(-50vw + 50%);
 
     ${MediaQuery.laptop} {
         height: auto;
@@ -17,6 +21,10 @@ export const StyledContainer = styled.div`
 
     ${MediaQuery.tablet} {
         padding-top: 30px;
+    }
+
+    div.inner-container {
+        padding: 0 8px;
     }
 `
 
@@ -29,11 +37,18 @@ export const StyledTitle = styled.h1`
     margin: 0;
     text-align: center;
     max-width: 1100px;
+    margin: auto;
+
+    ${MediaQuery.laptopM} {
+        font-size: 55px;
+        width: 80vw;
+    }
 
     ${MediaQuery.laptop} {
         font-size: 55px;
         padding-top: 112px;
         font-size: 50px;
+        width: auto;
     }
 
     ${MediaQuery.mobileL} {
