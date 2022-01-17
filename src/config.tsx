@@ -63,6 +63,7 @@ export const Documents = {
     termsAndConditions: documentsUrl("Hash_Token_Terms_of_Use.pdf"),
     airdropTermsOfUse: documentsUrl("Hash_Token_Airdrop_Terms_and_Conditions.pdf"),
     privacyPolicy: documentsUrl("Data_Protection_Policy.pdf"),
+    lightpaper: documentsUrl("lightpaper.pdf"),
 } as const
 
 export enum CartridgeType {
