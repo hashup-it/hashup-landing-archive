@@ -34,7 +34,7 @@ export const SocialMediaUrls = {
     facebook: "https://www.facebook.com/HashUpIt",
     linkedIn: "https://www.linkedin.com/company/hashupit",
     instagram: "https://www.instagram.com/hashup.it/",
-    telegram: "https://t.me/HashUpAnnouncements",
+    telegram: "https://t.me/HashUpChat",
     twitter: "https://twitter.com/HashUp_it",
     discord: "https://discord.gg/ZxwhHb7R9e",
     gitbook: "https://hashup-it.gitbook.io/hashup-it-1/",

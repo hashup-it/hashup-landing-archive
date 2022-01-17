@@ -38,7 +38,7 @@ const Community = () => (
             <SocialBox
                 iconSrc={assetsUrl(`community/telegram.svg`)}
                 label="Telegram"
-                href={"https://t.me/HashUpChat"}
+                href={SocialMediaUrls.telegram}
             />
             <SocialBox
                 iconSrc={assetsUrl(`community/discord.svg`)}
