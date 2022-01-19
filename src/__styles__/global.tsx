@@ -9,6 +9,20 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Sora', normal;
         background-color: ${Swatches.background_main};
         overflow-x: hidden;
+
+        // Custom scrollbar styles
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: #222;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #fff;
+        }
     }
 
     * {
@@ -31,4 +45,6 @@ export const GlobalStyles = createGlobalStyle`
     ul {
         padding: 0;
     }
+
+    
 `
