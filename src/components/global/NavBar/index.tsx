@@ -60,7 +60,7 @@ const NavBar = () => {
                 </StyledInnerBox>
             </StyledNavBar>
             {isMobileMenuShown && (
-                <MobileMenu opened={isMobileMenuShown} setOpened={setIsMobileMenuShown} />
+                <MobileMenu opened={isMobileMenuShown} />
             )}
         </>
     )
