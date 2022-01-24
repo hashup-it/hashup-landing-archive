@@ -21,6 +21,8 @@ export const StyledImagesBox = styled.div`
 
 export const StyledImgWrapper = styled.div`
     &.red-dots-1 {
+        will-change: opacity, transform;
+        transition: transform 25ms ease, opacity 25ms ease;
         width: 100%;
         pointer-events: none;
         user-select: none;

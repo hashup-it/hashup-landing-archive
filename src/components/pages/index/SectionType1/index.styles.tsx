@@ -74,9 +74,11 @@ export const StyledBackgroundImgWrapper = styled.div`
 
 export const StyledMainImageWrapper = styled.div`
     width: 112%;
-    transform: translateX(100px);
+    /* transform: translateX(100px); */
     position: relative;
     z-index: 99;
+    transition: transform 50ms ease, opacity 25ms ease;
+    will-change: opacity, transform;
 
     ${MediaQuery.laptopL} {
         position: relative;

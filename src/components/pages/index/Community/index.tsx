@@ -1,8 +1,7 @@
 import { StyledColoredText } from "components/shared/utils.styles"
 import { StyledSocialBoxA, StyledSocialArea, StyledSection } from "./index.styles"
 import { FC } from "react"
-import { assetsUrl, SocialMediaIcons, SocialMediaUrls } from "config"
-import { StyledSectionParagraph, StyledSectionTitle } from "components/shared/section.styles"
+import { assetsUrl, SocialMediaUrls } from "config"
 import Image from "next/image"
 
 const SocialBox: FC<{ iconSrc: string; label: string; href: string }> = ({
@@ -17,7 +16,7 @@ const SocialBox: FC<{ iconSrc: string; label: string; href: string }> = ({
         title={`${label} - HashUp`}
     >
         <div className="icon-wrapper">
-            <Image src={iconSrc} alt={`${label} - HashUp`} width={30} height={30} />
+            <Image src={iconSrc} alt={`${label} - HashUp`} width={30} height={30} priority />
         </div>
         <div className="label">{label}</div>
         <div className="small-label">Announcements</div>

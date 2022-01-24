@@ -9,28 +9,56 @@ import Image from "next/image"
 import bgImg from "/public/assets/game-cap/lying-website.png"
 import redDotsImg1 from "/public/assets/game-cap/red-dots.png"
 import mainImg from "/public/assets/game-cap/website-preview.png"
-import { DeviceWidth } from "__styles__/consts"
+import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
+import { useCallback } from "react"
+import { getParallaxValue, useParallax } from "hooks/parallax"
+import { CSSProperties } from "styled-components"
 
-const ImagesBox = () => (
-    <StyledImagesBox>
-        <StyledMainImageWrapper>
-            <Image
-                src={mainImg}
-                alt="GameCap website preview"
-                layout="responsive"
-                sizes={`(max-width: ${DeviceWidth.mobileL}) 350px, auto`}
-                quality={75}
-                loading="lazy"
-                placeholder="blur"
-                lazyBoundary="400px"
-            />
-        </StyledMainImageWrapper>
-        <StyledImgWrapper className="red-dots-1">
-            <Image src={redDotsImg1} alt="" quality={5} lazyBoundary="300px" />
-        </StyledImgWrapper>
-        <div className="flare" />
-    </StyledImagesBox>
-)
+interface ParallaxProps {
+    readonly mainImage: CSSProperties
+    readonly redDots1: CSSProperties
+}
+
+const ImagesBox = () => {
+    const { ref, result } = useParallax<ParallaxProps>({
+        onScroll: useCallback(percentage => {
+            const opacity = getParallaxValue(percentage, 0, 100, 55) / 100
+
+            return {
+                mainImage: {
+                    transform: `translateX(${getParallaxValue(percentage, 250, 100, 55)}px)`,
+                    opacity
+                },
+                redDots1: {
+                    transform: `translateX(${getParallaxValue(percentage, -300, 0, 55)}px)`,
+                    opacity
+                },
+            }
+        }, []),
+        minWindowWidth: RawDeviceWidthPx.laptop,
+    })
+
+    return (
+        <StyledImagesBox ref={ref}>
+            <StyledMainImageWrapper style={result?.mainImage}>
+                <Image
+                    src={mainImg}
+                    alt="GameCap website preview"
+                    layout="responsive"
+                    sizes={`(max-width: ${DeviceWidth.mobileL}) 350px, auto`}
+                    quality={75}
+                    loading="lazy"
+                    placeholder="blur"
+                    lazyBoundary="400px"
+                />
+            </StyledMainImageWrapper>
+            <StyledImgWrapper className="red-dots-1" style={result?.redDots1}>
+                <Image src={redDotsImg1} alt="" quality={5} lazyBoundary="300px" />
+            </StyledImgWrapper>
+            <div className="flare" />
+        </StyledImagesBox>
+    )
+}
 
 const Button = () => {
     const { t } = useTranslation()

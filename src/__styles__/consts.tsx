@@ -10,6 +10,18 @@ export const Swatches = {
     text_secondary: "#ADADAD",
 } as const
 
+export const RawDeviceWidthPx = {
+    mobileS: 320,
+    mobileM: 375,
+    mobileL: 425,
+    tablet: 768,
+    laptop: 1024,
+    laptopM: 1320,
+    laptopL: 1440,
+    desktop: 1920,
+    desktopL: 2560,
+} as const
+
 export const DeviceWidth = {
     mobileS: "320px",
     mobileM: "375px",

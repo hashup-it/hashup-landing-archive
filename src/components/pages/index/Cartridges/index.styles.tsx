@@ -43,6 +43,8 @@ export const StyledCartridgesBox = styled.div`
 `
 
 export const StyledCartridgeImgWrapper = styled.div`
+    will-change: transform;
+    transition: transform 25ms ease;
     display: block;
     position: absolute;
 
@@ -63,7 +65,8 @@ export const StyledCartridgeImgWrapper = styled.div`
     // ========== 2nd level ==========
     &.red,
     &.gray {
-        opacity: 0.5;
+        z-index: 2;
+        filter: brightness(40%);
         width: 420px;
 
         ${MediaQuery.tablet} {
@@ -75,16 +78,12 @@ export const StyledCartridgeImgWrapper = styled.div`
         }
     }
     &.red {
-        transform: translateX(-330px);
-
-        ${MediaQuery.tablet} {
+        ${MediaQuery.laptop} {
             transform: translateX(-240px);
         }
     }
     &.gray {
-        transform: translateX(330px);
-
-        ${MediaQuery.tablet} {
+        ${MediaQuery.laptop} {
             transform: translateX(240px);
         }
     }
@@ -92,8 +91,8 @@ export const StyledCartridgeImgWrapper = styled.div`
     // ========== 3rd level ===========
     &.blue,
     &.green {
-        opacity: 0.17;
         z-index: 1;
+        filter: brightness(22%);
         width: 305px;
 
         ${MediaQuery.tablet} {
@@ -101,10 +100,10 @@ export const StyledCartridgeImgWrapper = styled.div`
         }
     }
     &.blue {
-        transform: translateX(-665px);
+        /* transform: translateX(-665px); */
     }
     &.green {
-        transform: translateX(665px);
+        /* transform: translateX(665px); */
     }
 `
 

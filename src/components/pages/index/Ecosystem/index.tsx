@@ -20,6 +20,7 @@ import { useTranslation } from "react-i18next"
 import Image from "next/image"
 import { DeviceWidth } from "__styles__/consts"
 import laptopImg from "/public/assets/our-ecosystem/laptop.png"
+import { useScrollPercentage } from "react-scroll-percentage"
 
 export interface IconInterface {
     readonly label: JSX.Element
@@ -51,7 +52,6 @@ const Icons = () => (
         ))}
     </StyledIconsWrapper>
 )
-
 const Images = () => (
     <StyledImagesBox>
         <StyledMainImageWrapper>
