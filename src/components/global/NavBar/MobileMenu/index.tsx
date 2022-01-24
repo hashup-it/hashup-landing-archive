@@ -1,8 +1,8 @@
 import { FunctionComponent } from "react"
-import { MainMenu } from "../MainMenu"
+import MainMenu from "../MainMenu"
 import { StyledMobileMenu } from "./index.styles"
 
-export const MobileMenu: FunctionComponent<{ opened: boolean; setOpened: Function }> = ({
+const MobileMenu: FunctionComponent<{ opened: boolean; setOpened: Function }> = ({
     opened,
     setOpened,
 }) => (
@@ -10,3 +10,5 @@ export const MobileMenu: FunctionComponent<{ opened: boolean; setOpened: Functio
         <MainMenu isMobileMenuShown={opened} setIsMobileMenuShown={setOpened} />
     </StyledMobileMenu>
 )
+
+export default MobileMenu

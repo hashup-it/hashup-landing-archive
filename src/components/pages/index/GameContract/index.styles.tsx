@@ -74,6 +74,8 @@ const levitationAnim = keyframes`
 export const StyledImgWrapper = styled.div`
     &.red-dots-1,
     &.red-dots-2 {
+        will-change: transform, opacity;
+        transition: transform 25ms ease, opacity 25ms ease;
         pointer-events: none;
         user-select: none;
     }
@@ -116,6 +118,8 @@ export const StyledImgWrapper = styled.div`
     }
 
     &.laptop {
+        will-change: transform, opacity;
+        transition: transform 25ms ease, opacity 25ms ease;
         margin-top: 160px;
         margin-left: -300px;
         position: relative;
@@ -132,13 +136,15 @@ export const StyledImgWrapper = styled.div`
             margin-left: -60px;
         }
     }
-    &.floating-website {
+    &.website {
+        will-change: transform, opacity;
+        transition: transform 25ms ease, opacity 25ms ease;
         position: absolute;
         top: 15px;
         right: -200px;
         z-index: 99;
         width: 1000px;
-        animation: ${levitationAnim} 4.5s ease-in-out infinite;
+        /* animation: ${levitationAnim} 4.5s ease-in-out infinite; */
 
         ${MediaQuery.laptopL} {
             top: 30px;

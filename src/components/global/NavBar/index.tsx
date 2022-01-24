@@ -8,8 +8,8 @@ import {
     MobileHideWrapper,
     StyledNavBar,
 } from "./index.styles"
-import { MainMenu } from "./MainMenu"
-import { MobileMenu } from "./MobileMenu"
+import MainMenu from "./MainMenu"
+import MobileMenu from "./MobileMenu"
 import { useNavBarScrollEffect } from "./logic"
 import Image from "next/image"
 import { BrandAssets } from "config"

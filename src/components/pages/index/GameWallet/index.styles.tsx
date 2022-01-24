@@ -6,20 +6,6 @@ export const StyledAnchor = styled.div`
     top: 180px;
 `
 
-const levitationAnim = keyframes`
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-25px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-`
-
 export const StyledImagesBox = styled.div`
     margin-top: -60px;
     position: relative;
@@ -46,12 +32,27 @@ export const StyledImagesBox = styled.div`
     }
 `
 
+const levitationAnim = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+`
+
 export const StyledImgWrapper = styled.div`
     &.tablet {
+        will-change: opacity, transform;
+        transition: transform 25ms ease, opacity 25ms ease;
         display: block;
         width: 90%;
         left: 0;
-        transform: translateX(-100px);
         z-index: 10;
 
         ${MediaQuery.laptopL} {
@@ -66,13 +67,15 @@ export const StyledImgWrapper = styled.div`
     }
 
     &.phone {
+        will-change: opacity, transform;
+        transition: transform 25ms ease, opacity 25ms ease;
         display: block;
         position: absolute;
         width: 450px;
         right: -20px;
         bottom: -70px;
         z-index: 30;
-        animation: ${levitationAnim} 4.5s ease-in-out infinite;
+        /* animation: ${levitationAnim} 4.5s ease-in-out infinite; */
 
         ${MediaQuery.laptopL} {
             width: 28%;
@@ -87,6 +90,8 @@ export const StyledImgWrapper = styled.div`
     }
 
     &.red-dots-1 {
+        will-change: opacity, transform;
+        transition: transform 25ms ease, opacity 25ms ease;
         display: block;
         pointer-events: none;
         user-select: none;

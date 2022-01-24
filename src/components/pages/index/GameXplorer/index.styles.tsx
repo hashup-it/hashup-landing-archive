@@ -26,9 +26,10 @@ export const StyledImgWrapper = styled.div`
     width: 100%;
 
     &.red-dots-2 {
-        bottom: 0;
-        right: 0;
-        transform: translate(310px, 120px);
+        will-change: opacity;
+        transition: opacity 25ms ease;
+        bottom: -100px;
+        right: -250px;
 
         ${MediaQuery.laptopM} {
             width: 100%;
@@ -45,6 +46,8 @@ export const StyledImgWrapper = styled.div`
     }
 
     &.red-dots-1 {
+        will-change: transform, opacity;
+        transition: transform 25ms ease, opacity 25ms ease;
         top: -100px;
         left: -300px;
         z-index: 999;

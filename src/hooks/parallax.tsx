@@ -41,8 +41,6 @@ export const getParallaxValue = (
 
     if (startValue <= endValue) {
         const result = step * percentage * 100 + startValue
-        // console.log(result)
-        // const result = (delta * percentage * 100) / fullOnPercantage + min
 
         if (result > endValue) {
             return endValue

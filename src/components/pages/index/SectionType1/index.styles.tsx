@@ -77,7 +77,7 @@ export const StyledMainImageWrapper = styled.div`
     /* transform: translateX(100px); */
     position: relative;
     z-index: 99;
-    transition: transform 50ms ease, opacity 25ms ease;
+    transition: transform 25ms ease-in-out, opacity 25ms ease;
     will-change: opacity, transform;
 
     ${MediaQuery.laptopL} {

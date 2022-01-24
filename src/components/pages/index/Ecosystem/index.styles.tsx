@@ -134,11 +134,14 @@ export const StyledImagesBox = styled.div`
         position: absolute;
         z-index: 0;
         filter: blur(544px);
-        opacity: 0;
+        opacity: 0.04;
     }
 `
 
 export const StyledMainImageWrapper = styled.div`
+    will-change: transform, opacity;
+    transition: transform 25ms ease, opacity 25ms ease;
+
     span {
         width: 115% !important;
         position: relative;
