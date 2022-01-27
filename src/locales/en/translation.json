@@ -226,7 +226,7 @@
             },
             "jakub-stebel": {
                 "role": "Business analyst",
-                "description": "He is passionate about investing and economic analysis"
+                "description": "He is passionate about investing and economic analysis."
             },
             "patryk-rossa": {
                 "role": "Front-end dev",
@@ -239,6 +239,10 @@
             "pawel-laskarzewski": {
                 "role": "Advisor",
                 "description": "Technology consultant and solution architect with extensive experience in the ICT industry. Synapse Network founder."
+            },
+            "tomasz-kopera": {
+                "role": "Advisor",
+                "description": "Founder and CEO of Blockchain Ventures Hub."
             }
         },
         "advisors": "Advisors",

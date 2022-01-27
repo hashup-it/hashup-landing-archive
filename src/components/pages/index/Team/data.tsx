@@ -32,17 +32,6 @@ export const coreTeam: PersonInterface[] = [
         ],
     },
     {
-        name: "Rafał Bielenia",
-        localeKey: "rafal-bielenia",
-        avatarImg: require("/public/assets/team-avatars/rafal_bielenia.png"),
-        socialMedia: [
-            {
-                type: SocialMediaEnum.linkedIn,
-                url: "https://www.linkedin.com/in/rafal-bielenia-b87ab935/",
-            },
-        ],
-    },
-    {
         name: "Tomasz Fiema",
         localeKey: "tomasz-fiema",
         avatarImg: require("/public/assets/team-avatars/tomasz_fiema.png"),
@@ -225,6 +214,21 @@ export const advisors: PersonInterface[] = [
             {
                 type: SocialMediaEnum.linkedIn,
                 url: "https://www.linkedin.com/in/krzysztof-chmielewski-a87b5a8a/",
+            },
+        ],
+    },
+    {
+        name: "Tomasz Kopera",
+        localeKey: "tomasz-kopera",
+        avatarImg: require("/public/assets/team-avatars/tomasz_kopera.png"),
+        socialMedia: [
+            {
+                type: SocialMediaEnum.linkedIn,
+                url: "https://pl.linkedin.com/in/tomasz-kopera-856b7a6",
+            },
+            {
+                type: SocialMediaEnum.twitter,
+                url: "https://twitter.com/tomkopera",
             },
         ],
     },
