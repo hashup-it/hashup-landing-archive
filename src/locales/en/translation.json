@@ -324,5 +324,41 @@
         "pl": "polish",
         "en": "english",
         "de": "german"
+    },
+    "media": {
+        "header": {
+            "paragraph": "Ripple leadership team can be downloaded by clicking Headshots. For media inquiries, please contact us here."
+        },
+        "brand-materials": {
+            "section-title": "Brand materials",
+            "download-button": "Download",
+            "items": [
+                {
+                    "label": "Logos & Brand",
+                    "description-1": "Contains:",
+                    "description-2": "Available in several color variations"
+                },
+                {
+                    "label": "Promo video",
+                    "description-1": "File format:",
+                    "description-2": "YouTube version:"
+                }
+            ]
+        },
+        "leadership": {
+            "section-title": "Leadership",
+            "photo-download-button": "Download hi-res photo",
+            "people": {
+                "jankowski": "siema",
+                "szydlowski": "test"
+            }
+        },
+        "overview": {
+            "section-title": "overview",
+            "title1": "Short version",
+            "paragraph1": "HashUp is a distribution platform for games (in the future software) based on Blockchain technology. Our solution allows producers to free themselves from intermediaries and connects them directly with the recipients, who become the real owners of the product. HashUp, thanks to its developed ecosystem focused on games, offers creative solutions to the current model such as free market price, secondary market and above all freedom for creators. We believe we are the next evolutionary step in software distribution.",
+            "title2": "Extended version",
+            "paragraph2": "HashUp is the first completely decentralized open-source software distribution platform for videogames (and soon software as well). It's a natural step in the evolution, utilizing blockchain technology to improve trading and create new market opportunities. The platform primarily aims to connect players and creators directly, without intermediaries. <br /> <br /> What Makes HashUp revolutionary? HashUp creates entirely new digital media software licenses using decentralized finance underneath. We allow producers to free themselves from intermediaries and connect them directly with the recipients. Thanks to blockchain, gamers will become the real owners of the product they buy. <br /> <br /> HashUp ecosystem is being developed in a spirit of free-market pricing, secondary market, and most importantly freedom for developers. Own what you buy, and don't let anyone control your property! <br /> <br /> What is #? The # is the exchange unit for games and software. It is used to purchase cartridges and floppy disks on the blockchain at HashUp. The total # is exactly 2.137 billion. The company managing HashUp holds approximately 250 million # in reserves. In the initial circulation, there are about 300 million #. 500 million # is allocated for rewards for stakeholders #. 1 billion # is earmarked for those who stake the cartridges. <br /> <br /># is essential when it comes to providing liquidity for all cartridges and floppy disks on Blockchain. It's also the voting power when adding games to the official list - released on the platform. The players vote on the games that they want to get a public release. Last but not least, it enables buying ads visible in the HashUp ecosystem."
+        }
     }
 }

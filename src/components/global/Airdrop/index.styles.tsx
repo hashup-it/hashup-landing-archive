@@ -6,7 +6,7 @@ import {
     MediaQuery,
 } from "__styles__/consts"
 import { Swatches } from "__styles__/consts"
-import { assetsUrl, SocialMediaIcons } from "config"
+import { assetsUrl } from "config"
 
 const layoutChangeMediaQuery: string = maxWidth("590px")
 

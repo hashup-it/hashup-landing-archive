@@ -66,13 +66,6 @@ export const StyledMenuLabel = styled.span`
     gap: 13px;
 `
 
-export const ColoredLine = styled.div`
-    background: ${Swatches.primary_color};
-    opacity: 0.2;
-    width: 125px;
-    height: 1px;
-`
-
 export const StyledListHeader = styled.div`
     text-transform: uppercase;
     font-style: normal;
