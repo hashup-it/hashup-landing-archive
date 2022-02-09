@@ -1,22 +1,29 @@
 import styled, { css } from "styled-components"
 import { Swatches } from "__styles__/consts"
 
+
 export const StyledLeadershipWrapper = styled.div`
     margin-top: 150px;
+
+    div.content {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        width: 920px;
+    }
 `
 
-export const StyledTextBox = styled.div<{ reversedLayout?: boolean }>`
-    flex: 1;
-    font-weight: 600;
+export const StyledLeaderBox = styled.div`
+    width: 390px;
 
-    ${p =>
-        p.reversedLayout
-            ? css`
-                  padding-right: 95px;
-              `
-            : css`
-                  padding-left: 95px;
-              `}
+    div.img-wrapper {
+        margin-bottom: 30px;
+        width: 300px;
+    }
+`
+
+export const StyledTextBox = styled.div`
+    font-weight: 600;
 
     div.header {
         div.role {
@@ -32,26 +39,13 @@ export const StyledTextBox = styled.div<{ reversedLayout?: boolean }>`
 
     p.text {
         margin-top: 45px;
-        column-count: 2;
-        column-gap: 75px;
-        text-align: justify;
         font-size: 16px;
-        line-height: 200%;
+        line-height: 185%;
         color: #b7b7b7;
-        width: 800px;
     }
-`
 
-export const StyledLeaderSection = styled.div<{ reversedLayout?: boolean }>`
-    margin-top: 85px;
-    display: flex;
-    flex-direction: ${p => (p.reversedLayout ? "row-reverse" : "row")};
-`
-
-export const StyledImgBox = styled.div`
-    width: 300px;
-
-    div.img-wrapper {
-        margin-bottom: 30px;
+    div.button-wrapper {
+        margin-top: 50px;
+        width: 235px;
     }
 `

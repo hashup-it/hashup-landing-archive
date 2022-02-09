@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Swatches } from "__styles__/consts"
+import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledBrandMaterialsWrapper = styled.div`
     margin-top: 120px;
@@ -9,10 +9,16 @@ export const StyledMaterialsList = styled.div`
     display: flex;
     gap: 35px;
     margin-top: 75px;
+
+    ${MediaQuery.tablet} {
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+    }
 `
 
 export const StyledMaterialItemBox = styled.div`
-    width: 310px;
+    width: 300px;
 
     div.img-box {
         width: 100%;

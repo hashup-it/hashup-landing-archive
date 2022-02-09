@@ -1,5 +1,9 @@
 import styled, { keyframes } from "styled-components"
-import { GLOBAL_CONTENT_WIDTH_PX, GLOBAL_HORIZONTAL_PADDING_PX } from "__styles__/consts"
+import {
+    GLOBAL_CONTENT_WIDTH_PX,
+    GLOBAL_HORIZONTAL_PADDING_PX,
+    MediaQuery,
+} from "__styles__/consts"
 
 export const StyledHeaderWrapper = styled.div`
     width: 100vw;
@@ -8,12 +12,22 @@ export const StyledHeaderWrapper = styled.div`
     padding: 165px 0 135px 0;
     background-color: black;
 
+    ${MediaQuery.tablet} {
+        padding: 130px 0 100px 0;
+    }
+
     div.content {
-        width: ${GLOBAL_CONTENT_WIDTH_PX}px;
+        max-width: ${GLOBAL_CONTENT_WIDTH_PX}px;
         padding: 0 ${GLOBAL_HORIZONTAL_PADDING_PX}px;
         box-sizing: border-box;
         margin: auto;
         display: flex;
+        gap: 40px;
+
+        ${MediaQuery.tablet} {
+            flex-direction: column;
+            gap: 80px;
+        }
     }
 `
 
@@ -34,6 +48,10 @@ const bloomAnim = keyframes`
 `
 
 export const StyledImageSection = styled.div`
+    ${MediaQuery.tablet} {
+        display: none;
+    }
+
     div.img-wrapper {
         width: 175px;
         margin: auto;
@@ -59,12 +77,28 @@ export const StyledTitle = styled.div`
     div.label {
         font-size: 18px;
         font-weight: 600;
+
+        ${MediaQuery.mobileL} {
+            font-size: 14px;
+            text-align: center;
+        }
     }
 
     h1.title {
         margin-left: -4px;
         font-weight: 700;
         font-size: 70px;
+
+        ${MediaQuery.tablet} {
+            font-size: 58px;
+        }
+
+        ${MediaQuery.mobileL} {
+            margin-left: 0;
+            font-size: 38px;
+            text-align: center;
+            margin-top: 12px;
+        }
     }
 `
 
@@ -72,5 +106,18 @@ export const StyledParagraph = styled.div`
     line-height: 160%;
     font-size: 24px;
     margin-top: 26px;
-    width: 700px;
+    max-width: 700px;
+
+    ${MediaQuery.tablet} {
+        padding-right: 0;
+        font-size: 18px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    ${MediaQuery.mobileL} {
+        margin-top: 35px;
+        width: auto;
+        text-align: center;
+    }
 `

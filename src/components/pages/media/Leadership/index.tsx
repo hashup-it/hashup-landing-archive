@@ -1,11 +1,6 @@
 import { FC } from "react"
-import { DownloadButton, StyledDownloadButton, StyledTitle } from "../shared"
-import {
-    StyledLeadershipWrapper,
-    StyledLeaderSection,
-    StyledImgBox,
-    StyledTextBox,
-} from "./index.styles"
+import { DownloadButton, StyledTitle } from "../shared"
+import { StyledLeadershipWrapper, StyledLeaderBox, StyledTextBox } from "./index.styles"
 import Image from "next/image"
 import { Materials } from "../data"
 import { Trans, useTranslation } from "react-i18next"
@@ -13,28 +8,21 @@ import { Trans, useTranslation } from "react-i18next"
 const jankowskiImg = require("/public/assets/media/szymon-jankowski.png")
 const szydlowskiImg = require("/public/assets/media/filip-szydlowski.png")
 
-const LeaderSection: FC<{
+const LeaderBox: FC<{
     role: string
     name: string
     textLocaleKey: string
     avatarImg: string
     fullImg: string
-    reversedLayout?: boolean
-}> = ({ role, name, textLocaleKey, avatarImg, fullImg, reversedLayout }) => {
+}> = ({ role, name, textLocaleKey, avatarImg, fullImg }) => {
     const { t } = useTranslation()
 
     return (
-        <StyledLeaderSection reversedLayout={reversedLayout}>
-            <StyledImgBox>
-                <div className="img-wrapper">
-                    <Image src={avatarImg} alt={`${name}`} />
-                </div>
-                <DownloadButton
-                    label={t("media.leadership.photo-download-button")}
-                    href={fullImg}
-                />
-            </StyledImgBox>
-            <StyledTextBox reversedLayout={reversedLayout}>
+        <StyledLeaderBox>
+            <div className="img-wrapper">
+                <Image src={avatarImg} alt={`${name}`} />
+            </div>
+            <StyledTextBox>
                 <div className="header">
                     <div className="role">{role}</div>
                     <div className="name">{name}</div>
@@ -42,8 +30,14 @@ const LeaderSection: FC<{
                 <p className="text">
                     <Trans i18nKey={textLocaleKey} />{" "}
                 </p>
+                <div className="button-wrapper">
+                    <DownloadButton
+                        label={t("media.leadership.photo-download-button")}
+                        href={fullImg}
+                    />
+                </div>
             </StyledTextBox>
-        </StyledLeaderSection>
+        </StyledLeaderBox>
     )
 }
 
@@ -53,21 +47,22 @@ const Leadership = () => {
     return (
         <StyledLeadershipWrapper>
             <StyledTitle>{t("media.leadership.section-title")}</StyledTitle>
-            <LeaderSection
-                role="CEO"
-                name="Szymon Jankowski"
-                textLocaleKey="media.leadership.people.jankowski"
-                fullImg={Materials.jankowskiPhoto}
-                avatarImg={jankowskiImg}
-            />
-            <LeaderSection
-                role="COO/CLO"
-                name="Filip Szydłowski"
-                textLocaleKey="media.leadership.people.szydlowski"
-                fullImg={Materials.szydlowskiPhoto}
-                avatarImg={szydlowskiImg}
-                reversedLayout
-            />
+            <div className="content">
+                <LeaderBox
+                    role="CEO"
+                    name="Szymon Jankowski"
+                    textLocaleKey="media.leadership.people.jankowski"
+                    fullImg={Materials.jankowskiPhoto}
+                    avatarImg={jankowskiImg}
+                />
+                <LeaderBox
+                    role="COO/CLO"
+                    name="Filip Szydłowski"
+                    textLocaleKey="media.leadership.people.szydlowski"
+                    fullImg={Materials.szydlowskiPhoto}
+                    avatarImg={szydlowskiImg}
+                />
+            </div>
         </StyledLeadershipWrapper>
     )
 }

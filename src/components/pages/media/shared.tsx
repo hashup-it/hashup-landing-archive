@@ -1,6 +1,6 @@
 import { FC } from "react"
 import styled from "styled-components"
-import { Swatches } from "__styles__/consts"
+import { MediaQuery, Swatches } from "__styles__/consts"
 import Image from "next/image"
 
 const downloadSvg = require("/public/assets/media/download-icon.svg")
@@ -36,6 +36,14 @@ export const DownloadButton: FC<{ href: string; label: string }> = ({ href, labe
 export const StyledTitle = styled.h2`
     font-size: 42px;
     font-weight: 700;
+
+    ${MediaQuery.tablet} {
+        font-size: 38px;
+    }
+
+    ${MediaQuery.mobileL} {
+        font-size: 36px;
+    }
 
     :before {
         content: "";
