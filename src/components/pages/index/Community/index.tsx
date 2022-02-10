@@ -1,26 +1,28 @@
 import { StyledColoredText } from "components/shared/utils.styles"
-import { StyledSocialBoxA, StyledSocialArea, StyledSection } from "./index.styles"
+import { StyledSocialArea, StyledSection } from "./index.styles"
 import { FC } from "react"
 import { assetsUrl, SocialMediaUrls } from "config"
 import Image from "next/image"
+import BlockButton from "components/shared/BlockButton"
 
-const SocialBox: FC<{ iconSrc: string; label: string; href: string }> = ({
-    iconSrc,
-    label,
+const SocialBox: FC<{ socialName: string; href: string; iconSrc: string }> = ({
+    socialName,
     href,
+    iconSrc,
 }) => (
-    <StyledSocialBoxA
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={`${label} - HashUp`}
-    >
-        <div className="icon-wrapper">
-            <Image src={iconSrc} alt={`${label} - HashUp`} width={30} height={30} priority />
-        </div>
-        <div className="label">{label}</div>
-        <div className="small-label">Announcements</div>
-    </StyledSocialBoxA>
+    <BlockButton
+        button={{
+            icon: (
+                <Image src={iconSrc} alt={`${socialName} HashUp`} width={30} height={30} priority />
+            ),
+            title: socialName,
+            label: "Announcements",
+        }}
+        link={{
+            href: href,
+            title: socialName,
+        }}
+    />
 )
 
 // TODO: translation
@@ -36,22 +38,22 @@ const Community = () => (
         <StyledSocialArea>
             <SocialBox
                 iconSrc={assetsUrl(`community/telegram.svg`)}
-                label="Telegram"
+                socialName="Telegram"
                 href={SocialMediaUrls.telegram}
             />
             <SocialBox
                 iconSrc={assetsUrl(`community/discord.svg`)}
-                label="Discord"
+                socialName="Discord"
                 href={SocialMediaUrls.discord}
             />
             <SocialBox
                 iconSrc={assetsUrl(`community/twitter.svg`)}
-                label="Twitter"
+                socialName="Twitter"
                 href={SocialMediaUrls.twitter}
             />
             <SocialBox
                 iconSrc={assetsUrl(`community/linkedin.svg`)}
-                label="LinkedIn"
+                socialName="LinkedIn"
                 href={SocialMediaUrls.linkedIn}
             />
         </StyledSocialArea>

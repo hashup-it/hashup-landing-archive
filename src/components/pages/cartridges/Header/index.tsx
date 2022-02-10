@@ -2,7 +2,7 @@ import { StyledColoredText } from "components/shared/utils.styles"
 import { useTranslation } from "react-i18next"
 import { cartridgesData } from "../data"
 import CartridgeThumbnail from "./CartridgeThumbnail"
-import SideSocialMenu from "components/global/SideSocialMenu"
+import SideSocialMenu from "components/shared/Header/SideSocialMenu"
 import {
     StyledTitle,
     StyledContainer,

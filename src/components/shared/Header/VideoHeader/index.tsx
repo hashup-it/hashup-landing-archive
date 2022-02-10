@@ -1,25 +1,22 @@
-import { useEffect, useState } from "react"
-import { HeaderText } from "./HeaderText"
+import { useRouter } from "next/router"
+import { FC, useEffect, useState } from "react"
 import {
-    StyledInnerContainer,
     StyledVideoBackground,
-    StyledContentBox,
     StyledBackgroundContainer,
     StyledBackgroundPlaceholder,
+    StyledInnerContainer,
+    StyledContentBox,
     StyledBackgroundImgWrapper,
-    StyledBottomGradient,
 } from "./index.styles"
-import HeaderBottomNav from "./HeaderBottomNav"
+import SideSocialMenu from "../SideSocialMenu"
 import Image from "next/image"
-import SideSocialMenu from "components/shared/Header/SideSocialMenu"
-import { assetsUrl } from "config"
-import { useRouter } from "next/router"
-
-import bgImg from "/public/assets/header/cartridge.png"
 
 const DO_NOT_SHOW_VIDEO_BELOW_PX: number = 1024
 
-const VideoBackground = () => {
+const VideoBackground: FC<{
+    readonly video: string
+    readonly opacity: number
+}> = ({ video, opacity }) => {
     const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false)
     const [videoUrl, setVideoUrl] = useState<string>("")
     const router = useRouter()
@@ -27,7 +24,7 @@ const VideoBackground = () => {
     useEffect(() => {
         const handleVideoDownload = () => {
             if (videoUrl === "") {
-                setTimeout(() => setVideoUrl(assetsUrl("video/spinning-cartridge.webm")), 100)
+                setTimeout(() => setVideoUrl(video), 100)
             }
         }
 
@@ -44,7 +41,7 @@ const VideoBackground = () => {
             window.removeEventListener("load", handleVideoDownload)
             router.events.off("routeChangeComplete", handleVideoDownload)
         }
-    }, [videoUrl, router])
+    }, [videoUrl, router, video])
 
     return (
         <StyledBackgroundContainer>
@@ -57,28 +54,38 @@ const VideoBackground = () => {
                 playsInline
                 src={videoUrl}
                 onLoadedData={() => setIsVideoLoaded(true)}
-                isLoaded={isVideoLoaded}
                 preload="none"
                 poster=""
+                opacity={opacity}
             />
         </StyledBackgroundContainer>
     )
 }
 
-const LandingHeader = () => (
+interface VideoHeaderProps {
+    readonly video: {
+        readonly src: string
+        readonly opacity: number
+    }
+    readonly img: {
+        readonly src: string
+        readonly alt: string
+    }
+    readonly children: JSX.Element
+    readonly extraContent?: JSX.Element
+}
+
+const VideoHeader: FC<VideoHeaderProps> = ({ video, img, children, extraContent }) => (
     <>
         <StyledInnerContainer>
-            <StyledContentBox>
-                <HeaderText />
-            </StyledContentBox>
-            <HeaderBottomNav />
+            <StyledContentBox>{children}</StyledContentBox>
+            {extraContent}
             <StyledBackgroundImgWrapper>
-                <Image src={bgImg} alt="HashUp.it cartridge" sizes={`100vw`} placeholder="blur" />
+                <Image src={img.src} alt={img.alt} sizes={`100vw`} placeholder="blur" />
             </StyledBackgroundImgWrapper>
         </StyledInnerContainer>
-        <VideoBackground />
-        <StyledBottomGradient />
+        <VideoBackground video={video.src} opacity={video.opacity} />
     </>
 )
 
-export default LandingHeader
+export default VideoHeader

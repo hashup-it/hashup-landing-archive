@@ -1,5 +1,6 @@
+import { FC } from "react"
 import styled from "styled-components"
-import { Swatches } from "__styles__/consts";
+import { Swatches } from "__styles__/consts"
 
 export const StyledButton1 = styled.button`
     margin: 0;

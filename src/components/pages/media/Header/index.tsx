@@ -8,6 +8,7 @@ import {
 import Image from "next/image"
 import { StyledColoredText } from "components/shared/utils.styles"
 import { useTranslation } from "react-i18next"
+import { CompanyInfo } from "config"
 
 const fankitSvg = require("/public/assets/media/fankit-icon.svg")
 
@@ -24,7 +25,10 @@ const TextSection = () => {
                     Media Kit<StyledColoredText>.</StyledColoredText>
                 </h1>
             </StyledTitle>
-            <StyledParagraph>{t("media.header.paragraph")}</StyledParagraph>
+            <StyledParagraph>
+                {t("media.header.paragraph")}{" "}
+                <a href={`mailto:${CompanyInfo.email}`}>{t("media.header.paragraph-link")}</a>.
+            </StyledParagraph>
         </StyledTextSection>
     )
 }

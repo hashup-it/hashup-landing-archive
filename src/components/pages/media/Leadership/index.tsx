@@ -20,7 +20,14 @@ const LeaderBox: FC<{
     return (
         <StyledLeaderBox>
             <div className="img-wrapper">
-                <Image src={avatarImg} alt={`${name}`} />
+                <Image
+                    src={avatarImg}
+                    alt={`${name}`}
+                    loading="lazy"
+                    placeholder="blur"
+                    lazyBoundary="400px"
+                    sizes="350px"
+                />
             </div>
             <StyledTextBox>
                 <div className="header">
@@ -30,12 +37,12 @@ const LeaderBox: FC<{
                 <p className="text">
                     <Trans i18nKey={textLocaleKey} />{" "}
                 </p>
-                <div className="button-wrapper">
+                {/* <div className="button-wrapper">
                     <DownloadButton
                         label={t("media.leadership.photo-download-button")}
                         href={fullImg}
                     />
-                </div>
+                </div> */}
             </StyledTextBox>
         </StyledLeaderBox>
     )

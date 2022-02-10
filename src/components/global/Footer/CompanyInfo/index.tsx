@@ -1,9 +1,15 @@
-import { useTranslation } from "react-i18next";
-import { StyledListHeader } from "../index.styles";
-import { StyledAddressLineEmphasized, StyledCompanyIds, StyledCompanyInfo, StyledContactField, StyledMailLink } from "./index.styles";
+import { CompanyInfo } from "config"
+import { useTranslation } from "react-i18next"
+import { StyledListHeader } from "../index.styles"
+import {
+    StyledAddressLineEmphasized,
+    StyledCompanyIds,
+    StyledCompanyInfo,
+    StyledContactField,
+    StyledMailLink,
+} from "./index.styles"
 
-const CompanyInfo = () => {
-
+const CompanyInfoBox = () => {
     const { t } = useTranslation()
 
     return (
@@ -16,7 +22,9 @@ const CompanyInfo = () => {
                 00-867 {t("footer.warsaw")}
                 <br />
                 <br />
-                <StyledMailLink href="mailto:hello@hashup.it">hello@hashup.it</StyledMailLink>
+                <StyledMailLink href={`mailto:${CompanyInfo.email}`}>
+                    {CompanyInfo.email}
+                </StyledMailLink>
                 <br />
             </StyledContactField>
             <StyledCompanyIds>
@@ -26,7 +34,7 @@ const CompanyInfo = () => {
                 <br />
             </StyledCompanyIds>
         </StyledCompanyInfo>
-    );
+    )
 }
 
-export default CompanyInfo
+export default CompanyInfoBox

@@ -1,13 +1,13 @@
-import facebookSvg from '/public/assets/social-media-icons/facebook.svg'
-import twitterSvg from '/public/assets/social-media-icons/twitter.svg'
-import wikipediaSvg from '/public/assets/social-media-icons/wikipedia.svg'
-import discordSvg from '/public/assets/social-media-icons/discord.svg'
-import linkedinSvg from '/public/assets/social-media-icons/linkedin.svg'
-import telegramSvg from '/public/assets/social-media-icons/telegram.svg'
-import dribbleSvg from '/public/assets/social-media-icons/dribble.svg'
-import githubSvg from '/public/assets/social-media-icons/github.svg'
-import metamaskSvg from '/public/assets/social-media-icons/metamask.svg'
-import instagramSvg from '/public/assets/social-media-icons/instagram.svg'
+import facebookSvg from "/public/assets/social-media-icons/facebook.svg"
+import twitterSvg from "/public/assets/social-media-icons/twitter.svg"
+import wikipediaSvg from "/public/assets/social-media-icons/wikipedia.svg"
+import discordSvg from "/public/assets/social-media-icons/discord.svg"
+import linkedinSvg from "/public/assets/social-media-icons/linkedin.svg"
+import telegramSvg from "/public/assets/social-media-icons/telegram.svg"
+import dribbleSvg from "/public/assets/social-media-icons/dribble.svg"
+import githubSvg from "/public/assets/social-media-icons/github.svg"
+import metamaskSvg from "/public/assets/social-media-icons/metamask.svg"
+import instagramSvg from "/public/assets/social-media-icons/instagram.svg"
 
 export const scriptsUrl = (path: string): string => `/scripts/${path}`
 export const assetsUrl = (path: string): string => `/assets/${path}`
@@ -60,10 +60,15 @@ export const BrandAssets = {
 } as const
 
 export const Documents = {
-    termsAndConditions: documentsUrl("Hash_Token_Terms_of_Use.pdf"),
-    airdropTermsOfUse: documentsUrl("Hash_Token_Airdrop_Terms_and_Conditions.pdf"),
-    privacyPolicy: documentsUrl("Data_Protection_Policy.pdf"),
-    lightpaper: documentsUrl("lightpaper.pdf"),
+    termsAndConditions: "https://cdn.hashup.it/landing/Hash_Token_Terms_of_Use.pdf",
+    airdropTermsOfUse: "https://cdn.hashup.it/landing/Hash_Token_Airdrop_Terms_and_Conditions.pdf",
+    privacyPolicy: "https://cdn.hashup.it/landing/Data_Protection_Policy.pdf",
+    lightpaper: "https://cdn.hashup.it/landing/lightpaper.pdf",
+    pitchdeck: "https://cdn.hashup.it/landing/HashUp_PitchDeck.pdf",
+} as const
+
+export const CompanyInfo = {
+    email: "hello@hashup.it",
 } as const
 
 export enum CartridgeType {
@@ -81,4 +86,3 @@ export enum CartridgeColor {
     gray = "#9D9D9D",
     red = "#FF3F3F",
 }
-

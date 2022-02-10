@@ -1,4 +1,4 @@
-import { StyledSideSocialMenu } from "components/global/SideSocialMenu/index.styles"
+import { StyledSideSocialMenu } from "components/shared/Header/SideSocialMenu/index.styles"
 import { StyledSectionParagraph } from "components/shared/section.styles"
 import styled from "styled-components"
 import { MediaQuery } from "__styles__/consts"

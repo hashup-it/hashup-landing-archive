@@ -81,9 +81,7 @@ const MainMenu: FC<{ readonly isMobileMenuShown: boolean }> = ({ isMobileMenuSho
             {/* <EcosystemMenu isSelected={allEcosystemUrls.includes(router.asPath)} /> */}
             <StyledMenuItem>
                 <Link href="/#ecosystem" passHref>
-                    <a title="Ecosystem">
-                        {t("menu.ecosystem")}
-                    </a>
+                    <a title="Ecosystem">{t("menu.ecosystem")}</a>
                 </Link>
             </StyledMenuItem>
             <StyledMenuItem isSelected={router.asPath === "/cartridges"}>
@@ -91,15 +89,10 @@ const MainMenu: FC<{ readonly isMobileMenuShown: boolean }> = ({ isMobileMenuSho
                     <a title="Cartridges">{t("menu.cartridges")}</a>
                 </Link>
             </StyledMenuItem>
-            <StyledMenuItem>
-                <a
-                    href={SocialMediaUrls.linkedIn}
-                    title="Media"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {t("menu.media")}
-                </a>
+            <StyledMenuItem isSelected={router.asPath === "/media"}>
+                <Link href="/media" passHref>
+                    <a title="Media">{t("menu.media")}</a>
+                </Link>
             </StyledMenuItem>
             <StyledMenuItem>
                 <a

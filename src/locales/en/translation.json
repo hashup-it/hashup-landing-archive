@@ -327,7 +327,8 @@
     },
     "media": {
         "header": {
-            "paragraph": "Ripple leadership team can be downloaded by clicking Headshots. For media inquiries, please contact us here."
+            "paragraph": "Take a look for resources to help you better describe HashUp! For more media inquiries, pls contact us",
+            "paragraph-link": "here"
         },
         "brand-materials": {
             "section-title": "Brand materials",
@@ -360,5 +361,26 @@
             "title2": "Extended version",
             "paragraph2": "HashUp is the first completely decentralized open-source software distribution platform for videogames (and soon software as well). It's a natural step in the evolution, utilizing blockchain technology to improve trading and create new market opportunities. The platform primarily aims to connect players and creators directly, without intermediaries. <br /> <br /> What Makes HashUp revolutionary? HashUp creates entirely new digital media software licenses using decentralized finance underneath. We allow producers to free themselves from intermediaries and connect them directly with the recipients. Thanks to blockchain, gamers will become the real owners of the product they buy. <br /> <br /> HashUp ecosystem is being developed in a spirit of free-market pricing, secondary market, and most importantly freedom for developers. Own what you buy, and don't let anyone control your property! <br /> <br /> What is #? The # is the exchange unit for games and software. It is used to purchase cartridges and floppy disks on the blockchain at HashUp. The total # is exactly 2.137 billion. The company managing HashUp holds approximately 250 million # in reserves. In the initial circulation, there are about 300 million #. 500 million # is allocated for rewards for stakeholders #. 1 billion # is earmarked for those who stake the cartridges. <br /> <br /># is essential when it comes to providing liquidity for all cartridges and floppy disks on Blockchain. It's also the voting power when adding games to the official list - released on the platform. The players vote on the games that they want to get a public release. Last but not least, it enables buying ads visible in the HashUp ecosystem."
         }
+    },
+    "vccard": {
+        "header": {
+            "label": "Web <strong>3.0</strong> of Steam",
+            "title": "What if <strong>Games</strong> got published like crypto?",
+            "paragraph": "<strong>DeFi</strong>nitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!"
+        },
+        "buttons": [
+            {
+                "title": "Calendly",
+                "label": "Make an appointment"
+            },
+            {
+                "title": "Pitchdeck",
+                "label": "View the file"
+            },
+            {
+                "title": "Whitepaper",
+                "label": "View the file"
+            }
+        ]
     }
 }

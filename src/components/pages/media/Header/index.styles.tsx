@@ -3,6 +3,7 @@ import {
     GLOBAL_CONTENT_WIDTH_PX,
     GLOBAL_HORIZONTAL_PADDING_PX,
     MediaQuery,
+    Swatches,
 } from "__styles__/consts"
 
 export const StyledHeaderWrapper = styled.div`
@@ -119,5 +120,14 @@ export const StyledParagraph = styled.div`
         margin-top: 35px;
         width: auto;
         text-align: center;
+    }
+
+    a {
+        text-decoration: underline;
+        color: ${Swatches.primary_color};
+
+        :hover {
+            opacity: 0.8;
+        }
     }
 `
