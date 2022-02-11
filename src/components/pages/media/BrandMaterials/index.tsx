@@ -88,7 +88,7 @@ const BrandMaterials = () => {
                             <a
                                 target="_blank"
                                 rel="noreferrer noopener"
-                                href="https://youtube.com/test"
+                                href={Materials.promoVideoYouTube}
                                 title="HashUp Promo - Youtube"
                             >
                                 LINK

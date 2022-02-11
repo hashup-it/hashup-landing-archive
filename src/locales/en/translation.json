@@ -363,6 +363,13 @@
         }
     },
     "vccard": {
+        "password": {
+            "title": "You need a secret <strong>password</strong> to get here<strong>.</strong>",
+            "input": {
+                "placeholder": "Password",
+                "button-label": "Enter"
+            }
+        },
         "header": {
             "label": "Web <strong>3.0</strong> of Steam",
             "title": "What if <strong>Games</strong> got published like crypto?",
