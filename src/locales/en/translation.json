@@ -373,7 +373,8 @@
         "header": {
             "label": "Web <strong>3.0</strong> of Steam",
             "title": "What if <strong>Games</strong> got published like crypto?",
-            "paragraph": "<strong>DeFi</strong>nitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!"
+            "paragraph": "<strong>DeFi</strong>nitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!",
+            "play-button": "Play Video"
         },
         "buttons": [
             {

@@ -45,7 +45,7 @@ export const StyledLanguageList = styled.ul`
     margin-top: 150px;
     margin-left: 18px;
     position: fixed;
-    z-index: 99999999;
+    z-index: 9999;
 `
 
 export const StyledLanguageOption = styled.button`
