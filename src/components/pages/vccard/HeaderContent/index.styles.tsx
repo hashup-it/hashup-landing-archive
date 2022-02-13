@@ -56,12 +56,7 @@ export const StyledPlayButton = styled.button`
 export const StyledNote = styled.div`
     margin-top: 25px;
 
-    ${MediaQuery.laptopL} {
-        margin-left: 150px;
-    }
-
     ${MediaQuery.laptop} {
-        margin-left: 0;
         margin-top: 35px;
         text-align: center;
     }

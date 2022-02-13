@@ -6,12 +6,9 @@ export const StyledButtonsBox = styled.div`
     gap: 30px;
     margin-top: 35px;
 
-    ${MediaQuery.laptopL} {
-        justify-content: center;
-    }
-
     ${MediaQuery.laptop} {
         gap: 5px;
+        justify-content: center;
     }
 
     ${MediaQuery.tablet} {

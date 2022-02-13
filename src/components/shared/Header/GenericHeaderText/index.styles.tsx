@@ -5,16 +5,15 @@ import { assetsUrl } from "config"
 export const StyledContainer = styled.div`
     width: 650px;
 
-    ${MediaQuery.laptopL} {
+    /* ${MediaQuery.laptopL} {
         padding-left: 150px;
     }
 
     ${MediaQuery.laptop} {
         padding-left: 100px;
-    }
+    } */
 
     ${MediaQuery.tablet} {
-        padding-left: 0;
         width: 100%;
     }
 

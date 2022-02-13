@@ -7,6 +7,7 @@ import {
     StyledInnerContainer,
     StyledContentBox,
     StyledBackgroundImgWrapper,
+    StyledContainer
 } from "./index.styles"
 import SideSocialMenu from "../SideSocialMenu"
 import Image from "next/image"
@@ -76,7 +77,7 @@ interface VideoHeaderProps {
 }
 
 const VideoHeader: FC<VideoHeaderProps> = ({ video, img, children, extraContent }) => (
-    <>
+    <StyledContainer>
         <StyledInnerContainer>
             <StyledContentBox>{children}</StyledContentBox>
             {extraContent}
@@ -85,7 +86,7 @@ const VideoHeader: FC<VideoHeaderProps> = ({ video, img, children, extraContent 
             </StyledBackgroundImgWrapper>
         </StyledInnerContainer>
         <VideoBackground video={video.src} opacity={video.opacity} />
-    </>
+    </StyledContainer>
 )
 
 export default VideoHeader
