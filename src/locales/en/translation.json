@@ -367,7 +367,8 @@
             "title": "You need a secret <strong>password</strong> to get here<strong>.</strong>",
             "input": {
                 "placeholder": "Password",
-                "button-label": "Enter"
+                "button-label": "Enter",
+                "wrong-pass": "Wrong password."
             }
         },
         "header": {

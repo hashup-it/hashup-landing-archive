@@ -1,9 +1,9 @@
 import { Trans, useTranslation } from "react-i18next"
 import { GenericHeaderText } from "components/shared/Header/GenericHeaderText"
 import Buttons from "./Buttons"
-import { StyledContentWrapper, StyledPlayButton } from "./index.styles"
+import { StyledContentWrapper, StyledPlayButton, StyledNote } from "./index.styles"
 import { StyledColoredText } from "components/shared/utils.styles"
-import { assetsUrl } from "config"
+import { assetsUrl, SocialMediaUrls } from "config"
 import Image from "next/image"
 import { useState } from "react"
 import VideoPopup from "./VideoPopup"
@@ -49,6 +49,13 @@ const HeaderContent = () => (
             <PlayButton />
         </div>
         <Buttons />
+        {/* TODO: ASAP temporary note -> make it better */}
+        <StyledNote>
+            CEO on Telegram:{" "}
+            <a href={SocialMediaUrls.jankowskiTelegram} target="_blank" rel="noreferrer">
+                @SzymonJankowski
+            </a>
+        </StyledNote>
     </StyledContentWrapper>
 )
 

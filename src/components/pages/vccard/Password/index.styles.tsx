@@ -29,45 +29,60 @@ export const StyledContentWrapper = styled.div`
 `
 
 export const StyledInputBox = styled.div`
-    display: flex;
-    gap: 10px;
-    margin-top: 65px;
+    margin-top: 60px;
 
     ${MediaQuery.tablet} {
-        flex-direction: column;
-        margin-top: 90px;
+        margin-top: 75px;
     }
 
-    input,
-    button {
-        border-radius: 6px;
-        font-size: 16px;
+    div.error {
+        color: ${Swatches.primary_color};
         font-weight: 600;
-        color: white;
-        padding: 10px 20px;
-        box-sizing: border-box;
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 6px;
+        height: 22px;
     }
 
-    input {
-        border: 1px solid #4e4f52;
-        background-color: ${Swatches.background_main};
-        width: 280px;
-    }
-
-    button {
-        text-transform: uppercase;
-        background-color: ${Swatches.primary_color};
-        width: 120px;
-        transition: opacity 100ms ease;
-
-        :hover {
-            cursor: pointer;
-            opacity: 0.8;
-            transition: opacity 100ms ease;
-        }
+    div.input-group {
+        display: flex;
+        gap: 10px;
 
         ${MediaQuery.tablet} {
+            flex-direction: column;
+        }
+
+        input,
+        button {
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        input {
+            border: 1px solid #4e4f52;
+            background-color: ${Swatches.background_main};
             width: 280px;
+        }
+
+        button {
+            text-transform: uppercase;
+            background-color: ${Swatches.primary_color};
+            width: 120px;
+            transition: opacity 100ms ease;
+
+            :hover {
+                cursor: pointer;
+                opacity: 0.8;
+                transition: opacity 100ms ease;
+            }
+
+            ${MediaQuery.tablet} {
+                width: 280px;
+            }
         }
     }
 `

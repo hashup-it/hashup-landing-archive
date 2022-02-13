@@ -22,7 +22,7 @@ export const StyledSideSocialMenu = styled.div`
     }
 
     ${MediaQuery.laptopL} {
-        right: 12px;
+        right: 25px;
     }
 
     ${MediaQuery.laptop} {

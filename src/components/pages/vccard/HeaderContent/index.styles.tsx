@@ -10,6 +10,10 @@ export const StyledContentWrapper = styled.div`
             flex-direction: column;
         }
     }
+
+    ${MediaQuery.laptop} {
+        margin-bottom: 100px;
+    }
 `
 
 export const StyledPlayButton = styled.button`
@@ -46,5 +50,27 @@ export const StyledPlayButton = styled.button`
         cursor: pointer;
         opacity: 0.8;
         transition: opacity 100ms ease;
+    }
+`
+
+export const StyledNote = styled.div`
+    margin-top: 25px;
+
+    ${MediaQuery.laptopL} {
+        margin-left: 150px;
+    }
+
+    ${MediaQuery.laptop} {
+        margin-left: 0;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    a {
+        color: ${Swatches.primary_color};
+
+        :hover {
+            opacity: 0.8;
+        }
     }
 `

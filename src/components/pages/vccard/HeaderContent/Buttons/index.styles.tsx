@@ -4,7 +4,7 @@ import { MediaQuery } from "__styles__/consts"
 export const StyledButtonsBox = styled.div`
     display: flex;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 35px;
 
     ${MediaQuery.laptopL} {
         justify-content: center;
@@ -19,6 +19,5 @@ export const StyledButtonsBox = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        margin-bottom: 90px;
     }
 `

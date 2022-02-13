@@ -18,6 +18,7 @@ export const PasswordConfig = {
 const Input: FC<{ setAuthorized: () => void }> = ({ setAuthorized }) => {
     const { t } = useTranslation()
     const [pass, setPass] = useState<string>("")
+    const [isPassWrong, setIsPassWrong] = useState<boolean>(false)
 
     const checkPass = () => {
         if (pass === PasswordConfig.correctPass) {
@@ -27,6 +28,8 @@ const Input: FC<{ setAuthorized: () => void }> = ({ setAuthorized }) => {
                 PasswordConfig.cookieOptions
             )
             setAuthorized()
+        } else {
+            setIsPassWrong(true)
         }
     }
 
@@ -40,13 +43,16 @@ const Input: FC<{ setAuthorized: () => void }> = ({ setAuthorized }) => {
 
     return (
         <StyledInputBox>
-            <input
-                value={pass}
-                onChange={e => setPass(e.target.value)}
-                placeholder={t("vccard.password.input.placeholder")}
-                onKeyDown={handleEnter}
-            />
-            <button onClick={checkPass}>{t("vccard.password.input.button-label")}</button>
+            <div className="error">{isPassWrong && t("vccard.password.input.wrong-pass")}</div>
+            <div className="input-group">
+                <input
+                    value={pass}
+                    onChange={e => setPass(e.target.value)}
+                    placeholder={t("vccard.password.input.placeholder")}
+                    onKeyDown={handleEnter}
+                />
+                <button onClick={checkPass}>{t("vccard.password.input.button-label")}</button>
+            </div>
         </StyledInputBox>
     )
 }
