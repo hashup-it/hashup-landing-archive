@@ -5,14 +5,6 @@ import { assetsUrl } from "config"
 export const StyledContainer = styled.div`
     width: 650px;
 
-    /* ${MediaQuery.laptopL} {
-        padding-left: 150px;
-    }
-
-    ${MediaQuery.laptop} {
-        padding-left: 100px;
-    } */
-
     ${MediaQuery.tablet} {
         width: 100%;
     }
@@ -27,7 +19,6 @@ export const StyledLabel = styled.h2<{ showAccents?: boolean }>`
     font-weight: 700;
     position: relative;
     display: inline-block;
-    margin-left: 12px;
 
     ${MediaQuery.mobileL} {
         text-align: center;
@@ -40,6 +31,8 @@ export const StyledLabel = styled.h2<{ showAccents?: boolean }>`
     ${p =>
         p.showAccents &&
         css`
+            margin-left: 12px;
+
             :before,
             :after {
                 content: "";
@@ -74,9 +67,11 @@ export const StyledTitle = styled.h1`
     font-size: 70px;
     line-height: 120%;
     margin-top: 18px;
+    margin-left: -4px;
 
     ${MediaQuery.tablet} {
         font-size: 58px;
+        margin-left: 0;
     }
 
     ${MediaQuery.mobileL} {

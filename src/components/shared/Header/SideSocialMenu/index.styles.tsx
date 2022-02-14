@@ -25,7 +25,7 @@ export const StyledSideSocialMenu = styled.div`
         right: 25px;
     }
 
-    ${MediaQuery.laptop} {
+    ${MediaQuery.tablet} {
         display: none;
     }
 `
