@@ -48,14 +48,16 @@ const HeaderContent = () => (
             />
             <PlayButton />
         </div>
-        <Buttons />
-        {/* TODO: ASAP temporary note -> make it better */}
-        <StyledNote>
-            CEO on Telegram:{" "}
-            <a href={SocialMediaUrls.jankowskiTelegram} target="_blank" rel="noreferrer">
-                @SzymonJankowski
-            </a>
-        </StyledNote>
+        <div className="bottom-group">
+            <Buttons />
+            {/* TODO: ASAP temporary note -> make it better */}
+            <StyledNote>
+                CEO on Telegram:{" "}
+                <a href={SocialMediaUrls.jankowskiTelegram} target="_blank" rel="noreferrer">
+                    @SzymonJankowski
+                </a>
+            </StyledNote>
+        </div>
     </StyledContentWrapper>
 )
 

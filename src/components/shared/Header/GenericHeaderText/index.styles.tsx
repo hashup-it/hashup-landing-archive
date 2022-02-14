@@ -5,8 +5,18 @@ import { assetsUrl } from "config"
 export const StyledContainer = styled.div`
     width: 650px;
 
+    ${MediaQuery.laptopL} {
+        width: 600px;
+        padding-left: 100px;
+    }
+
+    ${MediaQuery.laptop} {
+        padding-left: 0;
+    }
+
     ${MediaQuery.tablet} {
         width: 100%;
+        padding-left: 0;
     }
 
     ${MediaQuery.mobileL} {

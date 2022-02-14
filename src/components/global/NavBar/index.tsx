@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { ConnectWallet } from "./ConnectWallet"
 import {
@@ -13,6 +13,7 @@ import MobileMenu from "./MobileMenu"
 import { useNavBarScrollEffect } from "./logic"
 import Image from "next/image"
 import { BrandAssets } from "config"
+import { useRouter } from "next/router"
 
 const Logo = () => (
     <StyledLogoWrapper>
@@ -43,6 +44,19 @@ const Logo = () => (
 const NavBar = () => {
     const [isMobileMenuShown, setIsMobileMenuShown] = useState<boolean>(false)
     const { navBarState } = useNavBarScrollEffect() // For desktop only
+    const router = useRouter()
+
+    useEffect(() => {
+        const closeMobileMenu = () => {
+            setIsMobileMenuShown(false)
+        }
+
+        router.events.on("routeChangeComplete", closeMobileMenu)
+
+        return () => {
+            router.events.off("routeChangeComplete", closeMobileMenu)
+        }
+    }, [router])
 
     return (
         <>
@@ -59,9 +73,7 @@ const NavBar = () => {
                     />
                 </StyledInnerBox>
             </StyledNavBar>
-            {isMobileMenuShown && (
-                <MobileMenu opened={isMobileMenuShown} />
-            )}
+            {isMobileMenuShown && <MobileMenu opened={isMobileMenuShown} />}
         </>
     )
 }

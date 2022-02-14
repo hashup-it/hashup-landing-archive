@@ -13,7 +13,7 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     font-size: 16px;
     color: ${Swatches.text_main};
     font-weight: 600;
-    z-index: 9999;
+    z-index: 9999999999999;
     background-color: rgba(0, 0, 0, 0.93);
 
     // Interactive hide-show menu on scroll action

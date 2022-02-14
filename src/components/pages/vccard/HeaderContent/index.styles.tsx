@@ -11,6 +11,16 @@ export const StyledContentWrapper = styled.div`
         }
     }
 
+    div.bottom-group {
+        ${MediaQuery.laptopL} {
+            padding-left: 100px;
+        }
+
+        ${MediaQuery.laptop} {
+            padding-left: 0;
+        }
+    }
+
     ${MediaQuery.laptop} {
         margin-bottom: 100px;
     }

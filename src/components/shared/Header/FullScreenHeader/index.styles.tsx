@@ -11,10 +11,6 @@ export const StyledContainer = styled.div`
     min-height: 100vh;
     left: calc(-50vw + 50%);
     background-color: black;
-
-    ${MediaQuery.mobileL} {
-        min-height: auto;
-    }
 `
 
 export const StyledBackgroundBox = styled.div`
@@ -64,24 +60,21 @@ export const StyledContentBox = styled.div`
 
     div.inner {
         z-index: 999;
+        width: 100%;
         // (For high content) It prevents content from sticking to vertical borders
         padding: 80px 0;
+        box-sizing: border-box;
 
         ${MediaQuery.laptopL} {
-            padding-left: 100px;
+            padding-top: 140px;
         }
-
+        
         ${MediaQuery.laptop} {
-            padding-left: 100px;
+            padding-left: 0;
         }
-
+        
         ${MediaQuery.tablet} {
             padding: 0;
-            width: 85%;
-        }
-
-        ${MediaQuery.mobileL} {
-            width: 100%;
         }
     }
 `

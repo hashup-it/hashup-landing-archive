@@ -8,15 +8,7 @@ export const StyledContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20vh;
-
-    ${MediaQuery.laptopM} {
-        margin-top: 50px;
-    }
-
-    ${MediaQuery.tablet} {
-        margin-top: 0px;
-    }
+    width: 100%;
 
     div.icon {
         margin-bottom: 12px;

@@ -1,18 +1,22 @@
 import HeaderContent from "../components/pages/vccard/HeaderContent"
 import Password, { PasswordConfig } from "../components/pages/vccard/Password"
 import Cookies from "js-cookie"
-import VideoHeader from "components/shared/Header/VideoHeader"
+import VideoBackground from "components/shared/Header/VideoBackground"
 
 import bgImg from "/public/assets/header/cartridge.png"
 import { FC, useEffect, useState } from "react"
+import FullScreenHeader from "components/shared/Header/FullScreenHeader"
+import ImgBackground from "components/shared/Header/ImgBackground"
 
 const HeaderBackground: FC<{ readonly children: JSX.Element }> = ({ children }) => (
-    <VideoHeader
-        video={{ src: "https://cdn.hashup.it/landing/Hashup_web.mp4", opacity: 0.4 }}
-        img={{ src: bgImg, alt: "test" }}
+    <FullScreenHeader
+        desktopBackground={
+            <VideoBackground src="https://cdn.hashup.it/landing/Hashup_web.mp4" opacity={0.4} />
+        }
+        mobileBackground={<ImgBackground src={bgImg} alt="HashUp Cartridge" />}
     >
         {children}
-    </VideoHeader>
+    </FullScreenHeader>
 )
 
 const VCCard = () => {

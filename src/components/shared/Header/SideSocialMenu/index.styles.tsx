@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { MediaQuery } from "__styles__/consts"
 
 export const StyledSideSocialMenu = styled.div`
-    z-index: 99;
+    z-index: 9999;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -25,7 +25,7 @@ export const StyledSideSocialMenu = styled.div`
         right: 25px;
     }
 
-    ${MediaQuery.tablet} {
+    ${MediaQuery.laptop} {
         display: none;
     }
 `
