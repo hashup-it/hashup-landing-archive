@@ -1,5 +1,4 @@
 import { FC } from "react"
-import { StyledColoredText } from "components/shared/utils.styles"
 import {
     StyledIconsWrapper,
     StyledIconBox,
@@ -20,7 +19,6 @@ import { Trans, useTranslation } from "react-i18next"
 import Image from "next/image"
 import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
 import laptopImg from "/public/assets/our-ecosystem/laptop.png"
-import { useScrollPercentage } from "react-scroll-percentage"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { useCallback } from "react"
 import { CSSProperties } from "styled-components"
