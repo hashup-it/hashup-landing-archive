@@ -36,10 +36,10 @@ export const StyledSectionLabel = styled.h3`
     }
 `
 
-export const StyledSectionTitle = styled.h1`
+export const StyledSectionTitle = styled.h2`
     color: white;
     line-height: 130%;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
     text-align: center;
     position: relative;
@@ -79,11 +79,11 @@ export const StyledSmallSectionLabel = styled.h3`
 `
 
 export const StyledSectionParagraph = styled.p`
-    font-size: 24px;
+    font-size: 20px;
     line-height: 160%;
     text-align: center;
     color: white;
-    max-width: 860px;
+    max-width: 600px;
     margin-top: 50px;
     position: relative;
     z-index: 9;
@@ -105,6 +105,7 @@ export const StyledSectionParagraph = styled.p`
 
     strong {
         font-weight: 700;
+        color: white;
     }
 `
 

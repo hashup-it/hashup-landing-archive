@@ -15,7 +15,7 @@ export const StyledMainMenu = styled.nav`
     ${MediaQuery.tablet} {
         flex-direction: column;
         align-items: center;
-        gap: 35px;
+        gap: 25px;
     }
 `
 

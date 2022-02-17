@@ -1,7 +1,6 @@
 import { FC } from "react"
 import { StyledContentBox, StyledContainer, StyledBackgroundBox } from "./index.styles"
 import SideSocialMenu from "../SideSocialMenu"
-import Image from "next/image"
 
 interface FullScreenHeaderProps {
     readonly children: JSX.Element
@@ -20,6 +19,7 @@ const FullScreenHeader: FC<FullScreenHeaderProps> = ({
         <SideSocialMenu />
         <StyledContentBox>
             <div className="inner">{children}</div>
+            {extraContent}
         </StyledContentBox>
         <StyledBackgroundBox>
             <div className="desktop">{desktopBackground}</div>

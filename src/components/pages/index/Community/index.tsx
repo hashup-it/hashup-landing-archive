@@ -25,16 +25,8 @@ const SocialBox: FC<{ socialName: string; href: string; iconSrc: string }> = ({
     />
 )
 
-// TODO: translation
 const Community = () => (
     <StyledSection>
-        <h1>
-            Join our Community<StyledColoredText>.</StyledColoredText>
-        </h1>
-        <p>
-            Follow us on a wide range of media that are up to date with all the news. Be part of
-            HashUp network!
-        </p>
         <StyledSocialArea>
             <SocialBox
                 iconSrc={assetsUrl(`community/telegram.svg`)}

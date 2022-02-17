@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { MediaQuery } from "__styles__/consts"
+import { GLOBAL_CONTENT_WIDTH_PX, MediaQuery } from "__styles__/consts"
 import { Swatches } from "__styles__/consts"
 import { NavBarStateEnum } from "./logic"
 import { assetsUrl } from "config"
@@ -13,7 +13,7 @@ export const StyledNavBar = styled.div<{ state: NavBarStateEnum }>`
     font-size: 16px;
     color: ${Swatches.text_main};
     font-weight: 600;
-    z-index: 9999999999999;
+    z-index: 9999999999;
     background-color: rgba(0, 0, 0, 0.93);
 
     // Interactive hide-show menu on scroll action
@@ -59,6 +59,8 @@ export const StyledInnerBox = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: ${GLOBAL_CONTENT_WIDTH_PX + 150}px;
+    margin: auto;
 `
 
 export const StyledLogoWrapper = styled.div`

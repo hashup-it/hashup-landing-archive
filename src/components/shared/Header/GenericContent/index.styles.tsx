@@ -2,21 +2,37 @@ import styled, { css } from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 import { assetsUrl } from "config"
 
-export const StyledContainer = styled.div`
-    width: 650px;
+export const StyledContentWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 
-    ${MediaQuery.laptopL} {
-        width: 600px;
-        padding-left: 100px;
+    ${MediaQuery.laptop} {
+        align-items: center;
+    }
+
+    div.top-group {
+        display: flex;
+        align-items: center;
+
+        ${MediaQuery.laptop} {
+            flex-direction: column;
+        }
+    }
+
+    div.bottom-group {
     }
 
     ${MediaQuery.laptop} {
-        padding-left: 0;
+        margin-bottom: 100px;
     }
+`
+
+export const StyledGenericContainer = styled.div`
+    width: 650px;
 
     ${MediaQuery.tablet} {
         width: 100%;
-        padding-left: 0;
     }
 
     ${MediaQuery.mobileL} {

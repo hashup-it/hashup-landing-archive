@@ -46,5 +46,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
     }
 
-    
+    strong {
+        color: ${Swatches.primary_color};
+    }
 `

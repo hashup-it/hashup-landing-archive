@@ -7,7 +7,7 @@ export const StyledContainer = styled.div`
     bottom: 0;
     width: 100%;
     margin-bottom: 10px;
-    z-index: 999999;
+    /* z-index: 9; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +22,6 @@ export const StyledContainer = styled.div`
         gap: 35px;
         margin-top: 120px;
         margin-bottom: 0;
-        z-index: 99;
     }
 `
 
@@ -45,6 +44,10 @@ export const StyledScrollDownNote = styled.div`
     }
 
     span.text {
+        strong {
+            font-weight: 500;
+            color: ${Swatches.primary_color};
+        }
     }
 `
 

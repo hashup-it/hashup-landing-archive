@@ -13,12 +13,13 @@ import GameWallet from "components/pages/index/GameWallet"
 import GameXplorer from "components/pages/index/GameXplorer"
 import Community from "components/pages/index/Community"
 import IgoFormBox from "components/pages/index/IgoFormBox"
+import HowItWorks from "components/pages/index/HowItWorks"
 
 const LandingPage = () => (
     <>
         <LandingHeader />
         <IgoFormBox />
-        <Community />
+        <HowItWorks />
         <Ecosystem />
         <Cartridges />
         <GameCap />
@@ -27,6 +28,7 @@ const LandingPage = () => (
         <GameContract />
         <InfoNotes />
         <Partners />
+        <Community />
         <TechStack />
         <Team />
         <Roadmap />

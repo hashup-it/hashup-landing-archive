@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { maxWidth, MediaQuery, minHeight, Swatches } from "__styles__/consts"
 
 export const StyledBoxWrapper = styled.div`
-    padding-top: 50px;
     position: relative;
     z-index: 0;
     background-color: black;
@@ -14,7 +13,7 @@ export const StyledBoxWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 150px auto;
+    margin: 150px auto 0;
     position: relative;
 
     ${MediaQuery.laptop} {

@@ -1,12 +1,8 @@
 import { FC } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
 import {
-    StyledLabel,
-    StyledTitle,
     StyledButtonsBox,
     StyledButton,
-    StyledContainer,
-    StyledParagraph,
     StyledWhitepaperBox,
     StyledWhitepaperMenu,
     StyledWhitepaperLangItem,
@@ -30,13 +26,13 @@ const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lan
             <div className="icon-wrapper">
                 <Image
                     src={assetsUrl("icons/document.svg")}
-                    alt={`HashUp Whitepaper - ${lang}`}
+                    alt={`HashUp Whitepaper - ${String(lang)}`}
                     width={20}
                     height={20}
                     priority
                 />
             </div>
-            {t(`languages.${lang}`)}
+            {t(`languages.${String(lang)}`)}
         </StyledWhitepaperLangItem>
     )
 }
@@ -71,28 +67,19 @@ const WhitepaperButton = () => {
     )
 }
 
-export const HeaderText = () => {
+const Buttons = () => {
     const { t } = useTranslation()
 
     return (
-        <StyledContainer>
-            <StyledLabel>
-                {t("header.label.1")} <StyledColoredText>{t("header.label.2")}</StyledColoredText>{" "}
-                {t("header.label.3")}
-            </StyledLabel>
-            <StyledTitle>
-                {t("header.title")}
-                <StyledColoredText>.</StyledColoredText>
-            </StyledTitle>
-            <StyledParagraph>{t("header.description")}</StyledParagraph>
-            <StyledButtonsBox>
-                <Link href="cartridges" passHref>
-                    <a>
-                        <StyledButton>{t("header.button")} </StyledButton>
-                    </a>
-                </Link>
-                <WhitepaperButton />
-            </StyledButtonsBox>
-        </StyledContainer>
+        <StyledButtonsBox>
+            <Link href="cartridges" passHref>
+                <a>
+                    <StyledButton>{t("home.header.button")} </StyledButton>
+                </a>
+            </Link>
+            <WhitepaperButton />
+        </StyledButtonsBox>
     )
 }
+
+export default Buttons

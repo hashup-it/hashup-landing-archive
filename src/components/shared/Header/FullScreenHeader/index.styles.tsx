@@ -47,6 +47,11 @@ export const StyledContentBox = styled.div`
     display: flex;
     align-items: center;
 
+    ${MediaQuery.laptop} {
+        // It prevents content from sticking to vertical borders
+        padding: 100px ${GLOBAL_HORIZONTAL_PADDING_PX}px;
+    }
+
     ${MediaQuery.tablet} {
         display: block;
         padding: 140px ${GLOBAL_HORIZONTAL_PADDING_PX}px 100px;
@@ -59,22 +64,13 @@ export const StyledContentBox = styled.div`
     }
 
     div.inner {
-        z-index: 999;
+        z-index: 99999;
         width: 100%;
-        // (For high content) It prevents content from sticking to vertical borders
-        padding: 80px 0;
         box-sizing: border-box;
+        margin-left: 80px;
 
-        ${MediaQuery.laptopL} {
-            padding-top: 140px;
-        }
-        
         ${MediaQuery.laptop} {
-            padding-left: 0;
-        }
-        
-        ${MediaQuery.tablet} {
-            padding: 0;
+            margin: 0;
         }
     }
 `

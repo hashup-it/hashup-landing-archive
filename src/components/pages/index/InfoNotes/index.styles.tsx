@@ -76,7 +76,7 @@ export const StyledNoteContent = styled.div`
     font-size: 18px;
     line-height: 160%;
     position: relative;
-    width: 72%;
+    width: 95%;
 
     :before {
         // Red line above content
@@ -87,5 +87,9 @@ export const StyledNoteContent = styled.div`
         height: 2px;
         width: 20px;
         margin: 22px auto;
+    }
+
+    strong {
+        color: white;
     }
 `

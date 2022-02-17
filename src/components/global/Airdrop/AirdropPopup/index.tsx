@@ -1,4 +1,4 @@
-import { AddToMetamask } from "components/pages/index/Header/HeaderBottomNav/AddToMetamask"
+import { AddToMetamask } from "components/pages/index/Header/BottomNav/AddToMetamask"
 import { StyledColoredText } from "components/shared/utils.styles"
 import { FC } from "react"
 import {

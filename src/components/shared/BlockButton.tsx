@@ -4,7 +4,7 @@ import styled, { css } from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledSocialBoxA = styled.a<{ isFilled?: boolean }>`
-    display: block;
+    display: flex;
     width: 285px;
     box-sizing: border-box;
     border: 1px solid ${Swatches.primary_color};
@@ -45,9 +45,10 @@ export const StyledSocialBoxA = styled.a<{ isFilled?: boolean }>`
     }
 
     div.icon-wrapper {
+        margin-right: 18px;
         width: 25px;
         height: 30px;
-        margin-bottom: 18px;
+        margin-top: 2px;
 
         img {
             width: 100%;
@@ -64,7 +65,7 @@ export const StyledSocialBoxA = styled.a<{ isFilled?: boolean }>`
     div.label {
         font-weight: 600;
         font-size: 14px;
-        margin-top: 10px;
+        margin-top: 6px;
         color: #5a5e68;
 
         ${p =>
@@ -97,8 +98,10 @@ const BlockButton: FC<BlockButtonProps> = ({ link, button, isFilled }) => (
         isFilled={isFilled}
     >
         {button.icon && <div className="icon-wrapper">{button.icon}</div>}
-        <div className="title">{button.title}</div>
-        <div className="label">{button.label}</div>
+        <div className="texts-group">
+            <div className="title">{button.title}</div>
+            <div className="label">{button.label}</div>
+        </div>
     </StyledSocialBoxA>
 )
 

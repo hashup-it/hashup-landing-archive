@@ -1,118 +1,18 @@
 import styled, { css, keyframes } from "styled-components"
-import { MediaQuery, minHeight } from "__styles__/consts"
+import { MediaQuery } from "__styles__/consts"
 import { Swatches } from "__styles__/consts"
-import { assetsUrl } from "config"
-
-export const StyledContainer = styled.div`
-    width: 650px;
-
-    ${MediaQuery.laptopL} {
-        padding-left: 150px;
-    }
-
-    ${MediaQuery.laptop} {
-        padding-left: 100px;
-    }
-
-    ${MediaQuery.tablet} {
-        padding-left: 0;
-        width: 100%;
-    }
-
-    ${MediaQuery.mobileL} {
-        margin-top: 40px;
-    }
-`
-
-export const StyledLabel = styled.h2`
-    font-size: 18px;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-    margin-left: 12px;
-
-    ${MediaQuery.mobileL} {
-        text-align: center;
-        width: 180px;
-        margin: auto;
-        display: block;
-        font-size: 14px;
-    }
-
-    :before,
-    :after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 13px;
-        height: 10px;
-        background-image: url(${() => assetsUrl("icons/header-trapeze.svg")});
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    :before {
-        left: -12px;
-        top: -8px;
-    }
-
-    :after {
-        right: -12px;
-        bottom: -8px;
-        transform: rotate(-14deg);
-    }
-`
-
-export const StyledTitle = styled.h1`
-    font-weight: bold;
-    font-size: 70px;
-    line-height: 120%;
-    margin-top: 18px;
-
-    ${MediaQuery.tablet} {
-        font-size: 58px;
-    }
-
-    ${MediaQuery.mobileL} {
-        font-size: 38px;
-        text-align: center;
-    }
-`
-
-export const StyledParagraph = styled.p`
-    margin-top: 45px;
-    font-size: 24px;
-    line-height: 160%;
-    width: 600px;
-
-    ${MediaQuery.laptopL} {
-        padding-right: 30px;
-    }
-
-    ${MediaQuery.tablet} {
-        padding-right: 0;
-        font-size: 18px;
-        max-width: 500px;
-        width: 100%;
-    }
-
-    ${MediaQuery.mobileL} {
-        margin-top: 35px;
-        width: auto;
-        text-align: center;
-    }
-`
 
 export const StyledButtonsBox = styled.div`
-    margin-top: 85px;
+    margin-top: 45px;
     display: flex;
     align-items: center;
 
-    ${MediaQuery.mobileL} {
+    ${MediaQuery.tablet} {
         margin-top: 50px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 22px;
     }
 `
 
@@ -157,7 +57,6 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    position: relative;
     margin-left: 20px;
     position: relative;
     background-color: transparent;
@@ -197,7 +96,6 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
 
     ${MediaQuery.mobileL} {
         margin-left: 0;
-        margin-top: 25px;
     }
 
     div.button-content {

@@ -15,7 +15,7 @@ import {
     StyledCartridgeImgWrapper,
 } from "./index.styles"
 import React, { useCallback } from "react"
-import { useTranslation } from "react-i18next"
+import { Trans, useTranslation } from "react-i18next"
 import Image from "next/image"
 import { useParallax, getParallaxValue } from "hooks/parallax"
 import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
@@ -111,35 +111,28 @@ const CartridgesBox = () => {
     )
 }
 
-const Cartridges = () => {
-    const { t } = useTranslation()
-
-    return (
-        <StyledSectionWrapper>
-            <StyledAnchor id="cartridges" />
-            <StyledBackgroundFlare />
-            <StyledSectionLabel>{t("cartridges.label")}</StyledSectionLabel>
-            <StyledSectionTitle>
-                {t("cartridges.title.1")} <StyledColoredText>=</StyledColoredText>{" "}
-                {t("cartridges.title.2")}
-                <StyledColoredText>.</StyledColoredText>
-                <br />
-                Buy
-                <StyledColoredText>2</StyledColoredText>
-                Play
-            </StyledSectionTitle>
-            <StyledSectionParagraph>{t("cartridges.paragraph")}</StyledSectionParagraph>
-            <CartridgesBox />
-            <Link href="cartridges" passHref>
-                <a>
-                    <StyledButton1>
-                        {t("cartridges.button.1")}{" "}
-                        <StyledColoredText>{t("cartridges.button.2")}</StyledColoredText>
-                    </StyledButton1>
-                </a>
-            </Link>
-        </StyledSectionWrapper>
-    )
-}
+const Cartridges = () => (
+    <StyledSectionWrapper>
+        <StyledAnchor id="cartridges" />
+        <StyledBackgroundFlare />
+        <StyledSectionLabel>
+            <Trans i18nKey="home.cartridges.label" />
+        </StyledSectionLabel>
+        <StyledSectionTitle>
+            <Trans i18nKey="home.cartridges.title" />
+        </StyledSectionTitle>
+        <StyledSectionParagraph>
+            <Trans i18nKey="home.cartridges.paragraph" />
+        </StyledSectionParagraph>
+        <CartridgesBox />
+        <Link href="cartridges" passHref>
+            <a>
+                <StyledButton1>
+                    <Trans i18nKey="home.cartridges.button" />
+                </StyledButton1>
+            </a>
+        </Link>
+    </StyledSectionWrapper>
+)
 
 export default Cartridges

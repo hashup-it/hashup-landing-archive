@@ -1,54 +1,19 @@
-import { Trans, useTranslation } from "react-i18next"
-import { GenericHeaderText } from "components/shared/Header/GenericHeaderText"
+import { Trans } from "react-i18next"
+import GenericContent from "components/shared/Header/GenericContent"
 import Buttons from "./Buttons"
-import { StyledContentWrapper, StyledPlayButton, StyledNote } from "./index.styles"
-import { StyledColoredText } from "components/shared/utils.styles"
-import { assetsUrl, SocialMediaUrls } from "config"
-import Image from "next/image"
-import { useState } from "react"
-import VideoPopup from "./VideoPopup"
-
-const PlayButton = () => {
-    const [popupShown, setPopupShown] = useState<boolean>(false)
-    const { t } = useTranslation()
-
-    return (
-        <>
-            <StyledPlayButton
-                title={t("vccard.header.play-button")}
-                onClick={() => setPopupShown(true)}
-            >
-                <div className="icon">
-                    <Image
-                        src={assetsUrl("vccard/play-button.svg")}
-                        width={85}
-                        height={85}
-                        alt="Play button"
-                        priority
-                    />
-                </div>
-                <div className="label">
-                    {t("vccard.header.play-button")}
-                    <StyledColoredText>.</StyledColoredText>
-                </div>
-            </StyledPlayButton>
-            {popupShown && <VideoPopup close={() => setPopupShown(false)} />}
-        </>
-    )
-}
+import { StyledNote } from "./index.styles"
+import { Materials } from "components/pages/media/data"
+import { SocialMediaUrls } from "config"
 
 const HeaderContent = () => (
-    <StyledContentWrapper>
-        <div className="top-group">
-            <GenericHeaderText
-                label={<Trans i18nKey="vccard.header.label" />}
-                title={<Trans i18nKey="vccard.header.title" />}
-                paragraph={<Trans i18nKey="vccard.header.paragraph" />}
-                showLabelAccents
-            />
-            <PlayButton />
-        </div>
-        <div className="bottom-group">
+    <GenericContent
+        label={<Trans i18nKey="vccard.header.label" />}
+        title={<Trans i18nKey="vccard.header.title" />}
+        paragraph={<Trans i18nKey="vccard.header.paragraph" />}
+        ytEmbedSrc={Materials.promoVideoEmbedYoutube}
+        showLabelAccents
+    >
+        <>
             <Buttons />
             {/* TODO: ASAP temporary note -> make it better */}
             <StyledNote>
@@ -57,8 +22,8 @@ const HeaderContent = () => (
                     @SzymonJankowski
                 </a>
             </StyledNote>
-        </div>
-    </StyledContentWrapper>
+        </>
+    </GenericContent>
 )
 
 export default HeaderContent

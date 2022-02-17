@@ -68,6 +68,17 @@ export const coreTeam: PersonInterface[] = [
             },
         ],
     },
+    {
+        name: "Maciej Czarkowski",
+        localeKey: "maciej-czarkowski",
+        avatarImg: require("/public/assets/team-avatars/maciej_czarkowski.png"),
+        socialMedia: [
+            {
+                type: SocialMediaEnum.linkedIn,
+                url: "https://www.linkedin.com/in/maciej-czarkowski/"
+            }
+        ]
+    }
 ]
 
 export const team: PersonInterface[] = [

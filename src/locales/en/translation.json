@@ -8,21 +8,53 @@
         "wallet-connected": "Connected",
         "home": "Home"
     },
-    "ecosystem": {
-        "label": "Our Ecosystem",
-        "title": "A new method of distributing video games",
-        "paragraph": "Video Game Cartridges on the Blochchain. Decentralized cryptocurrency distribution model moved to video game publishing."
-    },
-    "cartridges": {
-        "label": "Cartridges",
-        "title": {
-            "1": "1 Token",
-            "2": "1 Video Game"
+    "home": {
+        "header": {
+            "paragraph": "DeFinitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!",
+            "scroll-note": "Scroll to <strong>learn more</strong>",
+            "add-hash-wallet": "Add # to your wallet",
+            "all-gamers": "All gamers: ",
+            "contract": "Contract: ",
+            "label": "Video Game <strong>Cartridges</strong> on Blockchain",
+            "title": "Decentralized Game Publishing Platform<strong>.</strong>",
+            "button": "More about cartridges"
         },
-        "paragraph": "Cartridge with a video game on the Blockchain. You must have one piece of the game to play. Freely shape the rules of the secondary market as a Game Creator. Liquidity pools with video games!",
-        "button": {
-            "1": "More about",
-            "2": "cartridges"
+        "how-it-works": {
+            "label": "How it works",
+            "title": "Layer 2 for <strong>Game Distribution</strong>",
+            "paragraph": "Issue your Game as Licence-pegged ERC-20  Token Monetize how you want with creating a Game Contract Start playing with our Game Launcher"
+        },
+        "ecosystem": {
+            "label": "Our Ecosystem",
+            "title": "Solving the Gaming Industires biggest Problems<strong>.</strong>",
+            "paragraph": "New Economy for Creators. Freedom for Gamers.<br> No Intermediaries.",
+            "testnet-note": "Testnet live",
+            "boxes": [
+                {
+                    "label": "Game <strong>Contract</strong>",
+                    "title": "Publish your game in 5 steps<strong>.</strong>",
+                    "paragraph": "HashUp wants to make the process of releasing games as simple as can be. With GameContract we’re able to take the developer's journey to the next level.",
+                    "link-label": "Create <strong>ERC20</strong> license"
+                },
+                {
+                    "label": "Game <strong>Xplorer</strong>",
+                    "title": "Blockchain explorer for the Gamers<strong>.</strong>",
+                    "paragraph": "Future of gaming social media. Create a stunning profile, add your friends and follow influencers. Showcase your collection!",
+                    "link-label": "Explore"
+                },
+                {
+                    "label": "Game <strong>Cap</strong>",
+                    "title": "Browse all available games in one place<strong>.</strong>",
+                    "paragraph": "GameCap.io is the world's first price-tracking website for decentralized software licenses. View their current prices and data at a glance.",
+                    "link-label": "soon"
+                }
+            ]
+        },
+        "cartridges": {
+            "label": "Cartridges",
+            "title": "1 Token <strong>=</strong> 1 Video Game<strong>.</strong><br/> Buy<strong>2</strong>Play",
+            "paragraph": "Cartridge with a video game on the Blockchain. You must have one piece of the game to play. Freely shape the rules of the secondary market as a Game Creator. Liquidity pools with video games!",
+            "button": "More about cartridges"
         }
     },
     "game-cap": {
@@ -44,23 +76,6 @@
         "title": "First blockchain explorer for the gamers",
         "paragraph": "View Player Transactions, their items and NFTs. Take pride in your game collection and collect them. Vote for video games and leave comments under players and profiles! Follow infuencers and friends.",
         "button": "More about"
-    },
-    "header": {
-        "description": "DeFinitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!",
-        "scroll": {
-            "1": "Scroll to",
-            "2": " learn more"
-        },
-        "add-hash-wallet": "Add # to your wallet",
-        "all-gamers": "All gamers: ",
-        "contract": "Contract: ",
-        "label": {
-            "1": "Video Game",
-            "2": "Cartridges",
-            "3": "on Blockchain"
-        },
-        "title": "Decentralized Game Publishing Platform",
-        "button": "More about cartridges"
     },
     "igo-form": {
         "title": "Subscribe to IGO of <i>PONG</i> game"
@@ -180,10 +195,6 @@
                 "role": "CLO",
                 "description": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups."
             },
-            "rafal-bielenia": {
-                "role": "Teach Lead",
-                "description": "He has an extensive background in software and algorithmics, having worked at Google and Microsoft."
-            },
             "cezary-dobrowolski": {
                 "role": "CMO",
                 "description": "Marketing should develop the product."
@@ -243,6 +254,10 @@
             "tomasz-kopera": {
                 "role": "Advisor",
                 "description": "Founder and CEO of Blockchain Ventures Hub."
+            },
+            "maciej-czarkowski": {
+                "role": "Tech Lead",
+                "description": "Developer and pianist, so just switching context between keyboards."
             }
         },
         "advisors": "Advisors",

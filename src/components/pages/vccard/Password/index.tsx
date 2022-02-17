@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useState, KeyboardEvent, FC } from "react"
 import { Trans, useTranslation } from "react-i18next"
 import { StyledContentWrapper, StyledInputBox } from "./index.styles"
-import { StyledTitle } from "components/shared/Header/GenericHeaderText/index.styles"
+import { StyledTitle } from "components/shared/Header/GenericContent/index.styles"
 import Cookies from "js-cookie"
 
 export const PasswordConfig = {

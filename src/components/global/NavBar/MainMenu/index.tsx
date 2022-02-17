@@ -55,7 +55,7 @@ const EcosystemMenu: FC<{ readonly isSelected: boolean }> = ({ isSelected }) => 
             <span className="label">
                 {t("menu.ecosystem")}
                 <div className="icon-wrapper">
-                    <Image src={assetsUrl("nav-bar/arrow.svg")} alt="" width={20} height={20} />
+                    <Image src={assetsUrl("random-icons/arrow.svg")} alt="" width={20} height={20} />
                 </div>
             </span>
             <ul className="menu">
