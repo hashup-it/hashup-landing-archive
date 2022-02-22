@@ -1,11 +1,6 @@
 import styled from "styled-components"
 import { MediaQuery, Swatches, GLOBAL_HORIZONTAL_PADDING_PX } from "__styles__/consts"
 
-export const StyledRoadmap = styled.div`
-    text-align: center;
-    margin-top: 0px;
-`
-
 export const StyledCarousele = styled.div`
     width: 100vw;
     position: relative;

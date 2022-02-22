@@ -4,6 +4,7 @@ import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledCarouselWrapper = styled.div`
     width: calc(100% - 150px);
+    margin: auto;
     margin-top: 100px;
 
     ${MediaQuery.tablet} {
@@ -73,7 +74,7 @@ export const StyledControlButton = styled.button<{ isDisabled: boolean; isPrev?:
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(${() => assetsUrl("random-icons/arrow.svg")});
+        background-image: url(${() => assetsUrl("random-icons/gray-arrow.svg")});
         background-position: center;
         background-repeat: no-repeat;
         transform: ${p => (p.isPrev ? "rotate( 90deg)" : "rotate(-90deg)")};

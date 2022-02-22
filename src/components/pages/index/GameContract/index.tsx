@@ -1,30 +1,24 @@
 import { StyledColoredText } from "components/shared/utils.styles"
-import {
-    StyledSectionLabel,
-    StyledSectionParagraph,
-    StyledSectionTitle,
-    StyledSectionWrapper,
-} from "components/shared/section.styles"
 import { StyledButton1 } from "components/shared/buttons.styles"
 import Link from "next/link"
 import {
     StyledBackgroundFlare,
-    StyledAnchor,
-    StyledButtonBox,
     StyledImagesBox,
     StyledImgWrapper,
+    StyledButtonBox,
 } from "./index.styles"
-import { useTranslation } from "react-i18next"
+import { Trans, useTranslation } from "react-i18next"
 import Image from "next/image"
 import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
-
-import laptopImg from "/public/assets/game-contract/laptop.png"
-import websiteImg from "/public/assets/game-contract/floating-website.png"
-import redDots1Img from "/public/assets/game-contract/red-dots-1.png"
-import redDots2Img from "/public/assets/game-contract/red-dots-2.png"
 import { useCallback } from "react"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
+import SectionType2 from "components/shared/SectionType2"
+
+import laptopImg from "/public/assets/home/game-contract/laptop.png"
+import websiteImg from "/public/assets/home/game-contract/floating-website.png"
+import redDots1Img from "/public/assets/home/game-contract/red-dots-1.png"
+import redDots2Img from "/public/assets/home/game-contract/red-dots-2.png"
 
 interface ParallaxProps {
     readonly laptop: CSSProperties
@@ -109,25 +103,18 @@ const Button = () => {
     )
 }
 
-const Cartridges = () => {
-    const { t } = useTranslation()
-
-    return (
-        <StyledSectionWrapper>
-            <StyledAnchor id="game-contract" />
+const Cartridges = () => (
+    <SectionType2
+        title={<Trans i18nKey="home.game-contract.title" />}
+        paragraph={<Trans i18nKey="home.game-contract.paragraph" />}
+        label={<Trans i18nKey="home.game-contract.label" />}
+        anchor="game-contract"
+    >
+        <>
             <StyledBackgroundFlare />
-            <StyledSectionLabel>
-                Game<StyledColoredText>Contract</StyledColoredText>.io
-            </StyledSectionLabel>
-            <StyledSectionTitle>
-                {t("game-contract.title")}
-                <StyledColoredText>!</StyledColoredText>
-            </StyledSectionTitle>
-            <StyledSectionParagraph>{t("game-contract.paragraph")}</StyledSectionParagraph>
-            <StyledButtonBox>{/* <Button /> */}</StyledButtonBox>
             <ImagesBox />
-        </StyledSectionWrapper>
-    )
-}
+        </>
+    </SectionType2>
+)
 
 export default Cartridges

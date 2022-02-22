@@ -1,5 +1,4 @@
 import { FC } from "react"
-import { StyledColoredText } from "components/shared/utils.styles"
 import { randomInt } from "util/math"
 import {
     StyledNote,
@@ -8,8 +7,8 @@ import {
     StyledNoteLabel,
     StyledNotesArea,
 } from "./index.styles"
-import { Trans, useTranslation } from "react-i18next"
-import { StyledSectionTitle, StyledSectionWrapper } from "components/shared/section.styles"
+import { Trans } from "react-i18next"
+import SectionType2 from "components/shared/SectionType2"
 
 interface NoteProps {
     readonly label: JSX.Element
@@ -28,53 +27,29 @@ export const Note: FC<NoteProps> = ({ content, label, icon }) => (
     </StyledNote>
 )
 
-const InfoNotes = () => {
-    const { t } = useTranslation()
+const Notes = () => (
+    <StyledNotesArea>
+        <Note
+            icon={"assets/icons/info-bubble-1.svg"}
+            label={<Trans i18nKey={"home.info-notes.notes.0.title"} />}
+            content={<Trans i18nKey={"home.info-notes.notes.0.content"} />}
+        />
+        <Note
+            icon={"assets/icons/info-bubble-2.svg"}
+            label={<Trans i18nKey={"home.info-notes.notes.1.title"} />}
+            content={<Trans i18nKey={"home.info-notes.notes.1.content"} />}
+        />
+        <Note
+            icon={"assets/icons/info-bubble-3.svg"}
+            label={<Trans i18nKey={"home.info-notes.notes.2.title"} />}
+            content={<Trans i18nKey={"home.info-notes.notes.2.content"} />}
+        />
+    </StyledNotesArea>
+)
 
-    return (
-        <StyledSectionWrapper>
-            <StyledSectionTitle>
-                <StyledColoredText>{t("info-notes.header-def")}</StyledColoredText>
-                <Trans i18nKey={"info-notes.header-form"} />
-            </StyledSectionTitle>
-            <StyledNotesArea>
-                <Note
-                    icon={"assets/icons/info-bubble-1.svg"}
-                    label={
-                        <>
-                            <StyledColoredText>{t("info-notes.note-1.title.1")}</StyledColoredText>{" "}
-                            {t("info-notes.note-1.title.2")}
-                            <StyledColoredText>.</StyledColoredText>
-                        </>
-                    }
-                    content={<Trans i18nKey={"info-notes.note-1.content"} />}
-                />
-                <Note
-                    icon={"assets/icons/info-bubble-2.svg"}
-                    label={
-                        <>
-                            {t("info-notes.note-2.title.1")}
-                            <br />
-                            <StyledColoredText>{t("info-notes.note-2.title.2")}</StyledColoredText>.
-                        </>
-                    }
-                    content={<Trans i18nKey={"info-notes.note-2.content"} />}
-
-                />
-
-                <Note
-                    icon={"assets/icons/info-bubble-3.svg"}
-                    label={
-                        <>
-                            <Trans i18nKey={"info-notes.note-3.title.1"} />{" "}
-                            <StyledColoredText>{t("info-notes.note-3.title.2")}</StyledColoredText>!
-                        </>
-                    }
-                    content={t("info-notes.note-3.content")}
-                />
-            </StyledNotesArea>
-        </StyledSectionWrapper>
-    )
-}
-
+const InfoNotes = () => (
+    <SectionType2 title={<Trans i18nKey={"home.info-notes.title"} />}>
+        <Notes />
+    </SectionType2>
+)
 export default InfoNotes

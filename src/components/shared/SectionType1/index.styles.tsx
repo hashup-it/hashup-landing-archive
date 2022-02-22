@@ -17,31 +17,47 @@ export const StyledSectionWrapper = styled.div`
     }
 
     div.first {
-        position: relative;
-        z-index: 10;
-        text-align: left;
+        padding-right: 30px;
 
-        ${StyledSectionTitle} {
-            text-align: left;
-            margin-left: 0;
+        ${MediaQuery.tablet} {
+            padding-right: 0;
         }
 
-        ${StyledSectionParagraph} {
+        div.content {
+            position: relative;
+            z-index: 10;
             text-align: left;
-            margin-bottom: 50px;
 
-            ${MediaQuery.tablet} {
-                margin-bottom: 10px;
+            ${StyledSectionTitle} {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            ${StyledSectionParagraph} {
+                text-align: left;
+                margin-bottom: 50px;
+
+                ${MediaQuery.tablet} {
+                    margin-bottom: 10px;
+                }
+            }
+
+            ${StyledButton1} {
+                width: 330px;
+
+                ${MediaQuery.mobileL} {
+                    display: block;
+                    margin: auto;
+                }
             }
         }
+    }
 
-        ${StyledButton1} {
-            width: 330px;
+    div.second {
+        padding-left: 30px;
 
-            ${MediaQuery.mobileL} {
-                display: block;
-                margin: auto;
-            }
+        ${MediaQuery.tablet} {
+            padding-left: 0;
         }
     }
 `
@@ -66,9 +82,6 @@ export const StyledBackgroundImgWrapper = styled.div`
         top: -00px;
         left: -600px;
         width: 1500px;
-    }
-
-    ${MediaQuery.mobileL} {
     }
 `
 

@@ -1,19 +1,19 @@
-import SectionType1 from "components/pages/index/SectionType1"
+import { useCallback } from "react"
+import SectionType1 from "components/shared/SectionType1"
 import { StyledColoredText } from "components/shared/utils.styles"
 import { StyledButton1 } from "components/shared/buttons.styles"
 import { StyledImagesBox, StyledImgWrapper } from "./index.styles"
-import { StyledMainImageWrapper } from "components/pages/index/SectionType1/index.styles"
+import { StyledMainImageWrapper } from "components/shared/SectionType1/index.styles"
 import { Trans, useTranslation } from "react-i18next"
 import Image from "next/image"
 import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
-
-import bgImg from "/public/assets/game-xplorer/lying-website.png"
-import mainImg from "/public/assets/game-xplorer/website-preview.png"
-import redDotsImg1 from "/public/assets/game-xplorer/red-dots-1.png"
-import redDotsImg2 from "/public/assets/game-xplorer/red-dots-2.png"
-import { useCallback } from "react"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
+
+import bgImg from "/public/assets/home/game-xplorer/lying-website.png"
+import mainImg from "/public/assets/home/game-xplorer/website-preview.png"
+import redDotsImg1 from "/public/assets/home/game-xplorer/red-dots-1.png"
+import redDotsImg2 from "/public/assets/home/game-xplorer/red-dots-2.png"
 
 interface ParallaxProps {
     readonly mainImage: CSSProperties
@@ -28,7 +28,7 @@ const ImagesBox = () => {
 
             return {
                 mainImage: {
-                    transform: `translateX(${getParallaxValue(percentage, 250, 100, 55)}px)`,
+                    transform: `translateX(${getParallaxValue(percentage, 250, 25, 55)}px)`,
                     opacity,
                 },
                 redDots1: {
@@ -77,30 +77,18 @@ const Button = () => {
     )
 }
 
-const GameXplorer = () => {
-    const { t } = useTranslation()
-
-    return (
-        <SectionType1
-            anchor="game-xplorer"
-            label={
-                <>
-                    Game<StyledColoredText>Xplorer</StyledColoredText>.io
-                </>
-            }
-            title={
-                <>
-                    {t("game-xplorer.title")}
-                    <StyledColoredText>!</StyledColoredText>
-                </>
-            }
-            paragraph={<Trans i18nKey={"game-xplorer.paragraph"} components={{ b: <b /> }} />}
-            button={<></>}
-            bgImgSrc={bgImg}
-            bgImgAlt="GameXplorer.io website preview"
-            imagesBox={<ImagesBox />}
-        />
-    )
-}
+const GameXplorer = () => (
+    <SectionType1
+        anchor="game-xplorer"
+        label={<Trans i18nKey={"home.game-xplorer.label"} />}
+        title={<Trans i18nKey={"home.game-xplorer.title"} />}
+        paragraph={<Trans i18nKey={"home.game-xplorer.paragraph"} />}
+        bgImg={{
+            src: bgImg,
+            alt: "GameXplorer.io website preview",
+        }}
+        imagesBox={<ImagesBox />}
+    />
+)
 
 export default GameXplorer

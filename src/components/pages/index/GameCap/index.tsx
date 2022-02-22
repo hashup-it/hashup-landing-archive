@@ -1,18 +1,18 @@
 import { StyledColoredText } from "components/shared/utils.styles"
 import { StyledButton1 } from "components/shared/buttons.styles"
-import SectionType1 from "components/pages/index/SectionType1"
+import SectionType1 from "components/shared/SectionType1"
 import { StyledImagesBox, StyledImgWrapper } from "./index.styles"
-import { StyledMainImageWrapper } from "components/pages/index/SectionType1/index.styles"
+import { StyledMainImageWrapper } from "components/shared/SectionType1/index.styles"
 import { Trans, useTranslation } from "react-i18next"
 import Image from "next/image"
-
-import bgImg from "/public/assets/game-cap/lying-website.png"
-import redDotsImg1 from "/public/assets/game-cap/red-dots.png"
-import mainImg from "/public/assets/game-cap/website-preview.png"
 import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
 import { useCallback } from "react"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
+
+import mainImg from "/public/assets/home/game-cap/website-preview.png"
+import redDotsImg1 from "/public/assets/home/game-cap/red-dots.png"
+import bgImg from "/public/assets/home/game-cap/lying-website.png"
 
 interface ParallaxProps {
     readonly mainImage: CSSProperties
@@ -26,12 +26,12 @@ const ImagesBox = () => {
 
             return {
                 mainImage: {
-                    transform: `translateX(${getParallaxValue(percentage, 250, 100, 55)}px)`,
-                    opacity
+                    transform: `translateX(${getParallaxValue(percentage, 250, 25, 55)}px)`,
+                    opacity,
                 },
                 redDots1: {
                     transform: `translateX(${getParallaxValue(percentage, -300, 0, 55)}px)`,
-                    opacity
+                    opacity,
                 },
             }
         }, []),
@@ -70,30 +70,18 @@ const Button = () => {
     )
 }
 
-const GameCap = () => {
-    const { t } = useTranslation()
-
-    return (
-        <SectionType1
-            anchor="game-cap"
-            label={
-                <>
-                    Game<StyledColoredText>Cap</StyledColoredText>.io
-                </>
-            }
-            title={
-                <>
-                    {t("game-cap.title")}
-                    <StyledColoredText>.</StyledColoredText>
-                </>
-            }
-            paragraph={<Trans i18nKey={"game-cap.paragraph"} />}
-            button={<></>}
-            bgImgSrc={bgImg}
-            bgImgAlt="GameCap.io website preview"
-            imagesBox={<ImagesBox />}
-        />
-    )
-}
+const GameCap = () => (
+    <SectionType1
+        anchor="game-cap"
+        label={<Trans i18nKey="home.game-cap.label" />}
+        title={<Trans i18nKey="home.game-cap.title" />}
+        paragraph={<Trans i18nKey={"home.game-cap.paragraph"} />}
+        bgImg={{
+            src: bgImg,
+            alt: "GameCap.io website preview",
+        }}
+        imagesBox={<ImagesBox />}
+    />
+)
 
 export default GameCap

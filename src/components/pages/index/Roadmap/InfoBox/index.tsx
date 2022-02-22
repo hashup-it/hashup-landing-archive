@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { InfoBoxInterface } from "./interfaces"
+import { BulletInterface } from "./interfaces"
 import { useTranslation } from "react-i18next"
 import {
     StyledBullet,
@@ -9,26 +9,26 @@ import {
     StyledWrapper,
 } from "./index.styles"
 
-interface InfoBoxProps extends InfoBoxInterface {
+interface InfoBoxProps {
     readonly highlighted: boolean
+    readonly index: number
+    readonly bullets: BulletInterface[]
 }
 
-const InfoBox: FC<InfoBoxProps> = ({ highlighted, labelLocale, bullets }) => {
+const InfoBox: FC<InfoBoxProps> = ({ highlighted, bullets, index }) => {
     const { t } = useTranslation()
 
     return (
         <StyledWrapper>
             <StyledInfoBox highlighted={highlighted}>
-                <StyledLabel>{t(labelLocale)}</StyledLabel>
+                <StyledLabel>{t(`home.roadmap.boxes.${index}.label`)}</StyledLabel>
                 <StyledBulletsList>
-                    {bullets.map(item => (
-                        <StyledBullet
-                            key={item.contentLocale}
-                            isDone={item.isDone}
-                            bold={item.bold}
-                        >
+                    {bullets.map((item, i) => (
+                        <StyledBullet key={i} isDone={item.isDone} bold={item.bold}>
                             <div className="icon" />
-                            <div className="content">{t(item.contentLocale)}</div>
+                            <div className="content">
+                                {t(`home.roadmap.boxes.${index}.bullets.${i}`)}
+                            </div>
                         </StyledBullet>
                     ))}
                 </StyledBulletsList>

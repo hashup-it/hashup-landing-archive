@@ -1,12 +1,12 @@
 import { LogoInterface } from "components/pages/index/LogosContainer/interfaces"
 
-import adSharesImg from "/public/assets/partners/adshares.png"
-import tubblyImg from "/public/assets/partners/tubbly.png"
-import blockchainAllianceImg from "/public/assets/partners/blockchain-alliance.png"
-import adriaGamesImg from "/public/assets/partners/adria-games.png"
-import unitedIdeasImg from "/public/assets/partners/united-ideas.png"
-import flybridgeImg from "/public/assets/partners/flybridge.png"
-import synapseImg from "/public/assets/partners/synapse.png"
+import adSharesImg from "/public/assets/home/partners/adshares.png"
+import tubblyImg from "/public/assets/home/partners/tubbly.png"
+import blockchainAllianceImg from "/public/assets/home/partners/blockchain-alliance.png"
+import adriaGamesImg from "/public/assets/home/partners/adria-games.png"
+import unitedIdeasImg from "/public/assets/home/partners/united-ideas.png"
+import flybridgeImg from "/public/assets/home/partners/flybridge.png"
+import synapseImg from "/public/assets/home/partners/synapse.png"
 
 
 export const partnersData: LogoInterface[] = [

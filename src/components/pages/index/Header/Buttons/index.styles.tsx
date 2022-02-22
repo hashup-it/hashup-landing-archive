@@ -16,37 +16,6 @@ export const StyledButtonsBox = styled.div`
     }
 `
 
-export const StyledButton = styled.button`
-    width: 280px;
-    display: block;
-    cursor: pointer;
-    border-radius: 15px;
-    background-color: ${Swatches.primary_color};
-    transition: opacity 100ms ease;
-    padding: 16px 0;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    box-shadow: 0px 8px 40px -10px rgba(255, 0, 0, 1);
-
-    :hover {
-        opacity: 0.9;
-        transition: opacity 100ms ease;
-    }
-
-    ${MediaQuery.tablet} {
-        width: 240px;
-    }
-
-    ${MediaQuery.mobileL} {
-        flex: 1;
-        width: 280px;
-    }
-`
-
 export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
     text-decoration: none;
     box-sizing: border-box;

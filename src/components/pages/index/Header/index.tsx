@@ -1,4 +1,4 @@
-import BottomNav from "./BottomNav"
+import BottomNav from "components/shared/Header/BottomNav"
 import FullScreenHeader from "components/shared/Header/FullScreenHeader"
 import ImgBackground from "components/shared/Header/ImgBackground"
 import VideoBackground from "components/shared/Header/VideoBackground"
@@ -7,7 +7,7 @@ import GenericContent from "components/shared/Header/GenericContent"
 import { Materials } from "components/pages/media/data"
 import Buttons from "./Buttons"
 
-import bgImg from "/public/assets/header/cartridge.png"
+import bgImg from "/public/assets/home/header/cartridge.png"
 
 const Header = () => (
     <FullScreenHeader

@@ -17,10 +17,6 @@ export const StyledButtonBox = styled.div`
     margin-top: 20px;
 `
 
-export const StyledAnchor = styled.div`
-    position: absolute;
-    top: 200px;
-`
 
 export const StyledImagesBox = styled.div`
     margin-top: 100px;

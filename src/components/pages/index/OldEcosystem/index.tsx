@@ -18,10 +18,11 @@ import {
 import { Trans, useTranslation } from "react-i18next"
 import Image from "next/image"
 import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
-import laptopImg from "/public/assets/our-ecosystem/laptop.png"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { useCallback } from "react"
 import { CSSProperties } from "styled-components"
+
+import laptopImg from "/public/assets/home/our-ecosystem/laptop.png"
 
 export interface IconInterface {
     readonly label: JSX.Element

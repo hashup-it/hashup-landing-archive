@@ -1,13 +1,8 @@
 import styled, { keyframes } from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 
-export const StyledAnchor = styled.div`
-    position: absolute;
-    top: 180px;
-`
-
 export const StyledImagesBox = styled.div`
-    margin-top: -60px;
+    margin-top: 50px;
     position: relative;
 
     ${MediaQuery.tablet} {

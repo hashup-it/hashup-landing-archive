@@ -32,10 +32,10 @@ const TeamMobile = () => {
 
     return (
         <StyledTeamMobileWrapper>
-            <StyledSmallSectionTitle>{t("team.team")}</StyledSmallSectionTitle>
+            <StyledSmallSectionTitle>{t("home.team.team")}</StyledSmallSectionTitle>
             <Carousel items={teamItems} />
 
-            <StyledSmallSectionTitle>{t("team.advisors")}</StyledSmallSectionTitle>
+            <StyledSmallSectionTitle>{t("home.team.advisors")}</StyledSmallSectionTitle>
             <Carousel items={advisorsItems} />
         </StyledTeamMobileWrapper>
     )
@@ -47,10 +47,10 @@ const TeamDesktop = () => {
 
     return (
         <StyledTeamDesktopWrapper>
-            <StyledSmallSectionTitle>{t("team.team")}</StyledSmallSectionTitle>
+            <StyledSmallSectionTitle>{t("home.team.team")}</StyledSmallSectionTitle>
             <StyledPeopleContainer>{teamItems}</StyledPeopleContainer>
 
-            <StyledSmallSectionTitle>{t("team.advisors")}</StyledSmallSectionTitle>
+            <StyledSmallSectionTitle>{t("home.team.advisors")}</StyledSmallSectionTitle>
             <StyledPeopleContainer>{advisorsItems}</StyledPeopleContainer>
         </StyledTeamDesktopWrapper>
     )
@@ -62,7 +62,7 @@ export const TeamSection = () => {
     return (
         <StyledSectionContainer>
             <StyledSmallSectionLabel>
-                <StyledColoredText>{t("team.ourteam")}</StyledColoredText>
+                <StyledColoredText>{t("home.team.ourteam")}</StyledColoredText>
             </StyledSmallSectionLabel>
 
             <TeamDesktop />

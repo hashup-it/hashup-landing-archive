@@ -1,13 +1,13 @@
-import nestJsImg from "/public/assets/tech-stack/nest-js.png"
-import awsImg from "/public/assets/tech-stack/aws.png"
-import bscImg from "/public/assets/tech-stack/binance-smart-chain.png"
-import ethereumImg from "/public/assets/tech-stack/ethereum.png"
-import etherscanImg from "/public/assets/tech-stack/etherscan.png"
-import flutterImg from "/public/assets/tech-stack/flutter.png"
-import nextImg from "/public/assets/tech-stack/next-js.png"
-import polygonImg from "/public/assets/tech-stack/polygon.png"
-import metamaskImg from "/public/assets/tech-stack/metamask.png"
-import arweaveImg from "/public/assets/tech-stack/arweave.png"
+import nestJsImg from "/public/assets/home/tech-stack/nest-js.png"
+import awsImg from "/public/assets/home/tech-stack/aws.png"
+import bscImg from "/public/assets/home/tech-stack/binance-smart-chain.png"
+import ethereumImg from "/public/assets/home/tech-stack/ethereum.png"
+import etherscanImg from "/public/assets/home/tech-stack/etherscan.png"
+import flutterImg from "/public/assets/home/tech-stack/flutter.png"
+import nextImg from "/public/assets/home/tech-stack/next-js.png"
+import polygonImg from "/public/assets/home/tech-stack/polygon.png"
+import metamaskImg from "/public/assets/home/tech-stack/metamask.png"
+import arweaveImg from "/public/assets/home/tech-stack/arweave.png"
 
 interface LogoInterface {
     readonly className: string

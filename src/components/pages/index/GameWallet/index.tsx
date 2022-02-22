@@ -1,21 +1,15 @@
-import { StyledColoredText } from "components/shared/utils.styles"
-import {
-    StyledSectionLabel,
-    StyledSectionParagraph,
-    StyledSectionTitle,
-    StyledSectionWrapper,
-} from "components/shared/section.styles"
-import { StyledImagesBox, StyledAnchor, StyledImgWrapper } from "./index.styles"
-import { Trans, useTranslation } from "react-i18next"
+import { StyledImagesBox, StyledImgWrapper } from "./index.styles"
+import { Trans } from "react-i18next"
 import Image from "next/image"
-
-import tabletImg from "/public/assets/game-wallet/tablet.png"
-import phoneImg from "/public/assets/game-wallet/phone.png"
-import redDots1Img from "/public/assets/game-wallet/red-dots.png"
-import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
 import { useCallback } from "react"
+import { RawDeviceWidthPx } from "__styles__/consts"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
+
+import tabletImg from "/public/assets/home/game-wallet/tablet.png"
+import phoneImg from "/public/assets/home/game-wallet/phone.png"
+import redDots1Img from "/public/assets/home/game-wallet/red-dots.png"
+import SectionType2 from "components/shared/SectionType2"
 
 interface ParallaxProps {
     readonly tablet: CSSProperties
@@ -78,27 +72,16 @@ const ImagesBox = () => {
     )
 }
 
-const GameWallet = () => {
-    const { t } = useTranslation()
-
-    return (
-        <>
-            <StyledSectionWrapper>
-                <StyledAnchor id="game-wallet" />
-                <StyledSectionLabel>
-                    Game<StyledColoredText>Wallet</StyledColoredText>
-                </StyledSectionLabel>
-                <StyledSectionTitle>
-                    {t("game-wallet.title")}
-                    <StyledColoredText>!</StyledColoredText>
-                </StyledSectionTitle>
-                <StyledSectionParagraph>
-                    <Trans i18nKey={"game-wallet.paragraph"} />
-                </StyledSectionParagraph>
-            </StyledSectionWrapper>
-            <ImagesBox />
-        </>
-    )
-}
+const GameWallet = () => (
+    <SectionType2
+        anchor="game-wallet"
+        title={<Trans i18nKey={"home.game-wallet.title"} />}
+        label={<Trans i18nKey={"home.game-wallet.label"} />}
+        paragraph={<Trans i18nKey={"home.game-wallet.paragraph"} />}
+        marginTop="300px"
+    >
+        <ImagesBox />
+    </SectionType2>
+)
 
 export default GameWallet

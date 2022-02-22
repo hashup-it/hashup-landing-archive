@@ -1,58 +1,49 @@
-import {
-    StyledSectionLabel,
-    StyledSectionParagraph,
-    StyledSectionTitle,
-    StyledSectionWrapper,
-} from "components/shared/section.styles"
 import { StyledBoxesArea } from "./index.styles"
 import { Trans } from "react-i18next"
 import Box from "./Box"
 import { assetsUrl } from "config"
+import SectionType2 from "components/shared/SectionType2"
 
 const Ecosystem = () => (
-    <StyledSectionWrapper>
-        <StyledSectionLabel>
-            <Trans i18nKey="home.ecosystem.label" />
-        </StyledSectionLabel>
-        <StyledSectionTitle>
-            <Trans i18nKey="home.ecosystem.title" />
-        </StyledSectionTitle>
-        <StyledSectionParagraph>
-            <Trans i18nKey="home.ecosystem.paragraph" />
-        </StyledSectionParagraph>
+    <SectionType2
+        label={<Trans i18nKey="home.ecosystem.label" />}
+        paragraph={<Trans i18nKey="home.ecosystem.paragraph" />}
+        title={<Trans i18nKey="home.ecosystem.title" />}
+        marginTop="120px"
+    >
         <StyledBoxesArea>
             <Box
                 index={0}
                 icon={{
-                    src: assetsUrl("ecosystem/icon-gamecontract.svg"),
+                    src: assetsUrl("home/ecosystem/icon-gamecontract.svg"),
                     alt: "GameContract HashUp",
                 }}
                 link={{
                     href: "https://test.gamecontract.io",
-                    title: "GameContract"
+                    title: "GameContract",
                 }}
             />
             <Box
                 index={1}
                 icon={{
-                    src: assetsUrl("ecosystem/icon-gamexplorer.svg"),
+                    src: assetsUrl("home/ecosystem/icon-gamexplorer.svg"),
                     alt: "GameXplorer HashUp",
                 }}
                 link={{
                     href: "https://test.gamexplorer.io",
-                    title: "GameXplorer"
+                    title: "GameXplorer",
                 }}
             />
             <Box
                 index={2}
                 icon={{
-                    src: assetsUrl("ecosystem/icon-gamecap.svg"),
+                    src: assetsUrl("home/ecosystem/icon-gamecap.svg"),
                     alt: "GameCap HashUp",
                 }}
                 isDisabled
             />
         </StyledBoxesArea>
-    </StyledSectionWrapper>
+    </SectionType2>
 )
 
 export default Ecosystem

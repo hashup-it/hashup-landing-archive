@@ -8,8 +8,10 @@ export const StyledBackgroundFlare = styled.div`
     border-radius: 100px;
     background-color: ${Swatches.primary_color};
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 16%;
     z-index: 0;
-    transform: translate(-140px, -100px);
     opacity: 0.08;
 `
 
@@ -105,9 +107,4 @@ export const StyledCartridgeImgWrapper = styled.div`
     &.green {
         /* transform: translateX(665px); */
     }
-`
-
-export const StyledAnchor = styled.div`
-    position: absolute;
-    top: 200px;
 `

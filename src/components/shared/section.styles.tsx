@@ -1,16 +1,16 @@
 import styled from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 
-export const StyledSectionWrapper = styled.div`
+export const StyledSectionWrapper = styled.div<{marginTop?: string}>`
     margin: auto;
-    padding: 270px 0 100px;
+    margin-top: ${p => p.marginTop ? p.marginTop : '200px'};
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 
     ${MediaQuery.tablet} {
-        padding-top: 200px;
+        margin-top: 200px;
     }
 `
 

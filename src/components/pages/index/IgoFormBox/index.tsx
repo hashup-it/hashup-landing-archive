@@ -1,11 +1,11 @@
-import { Trans, useTranslation } from "react-i18next"
+import { Trans } from "react-i18next"
 import { StyledBoxWrapper, StyledLine, StyledForm, StyledImg, StyledTitle } from "./index.styles"
 import Image from "next/image"
-
-import cartridgeImg from "/public/assets/2d-cartridges/without-extras/red.png"
 import dynamic from "next/dynamic"
 import LazyLoad from "react-lazyload"
 import { StyledLoadingSpinner } from "components/shared/loading.styles"
+
+import cartridgeImg from "/public/assets/2d-cartridges/without-extras/red.png"
 
 const Form = dynamic(() => import("./Form"), { ssr: false })
 

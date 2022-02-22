@@ -12,7 +12,7 @@ import {
 import { SocialMediaEnum, PersonInterface, RoleEnum } from "./interfaces"
 import { StyledColoredText } from "components/shared/utils.styles"
 import { useTranslation } from "react-i18next"
-import { assetsUrl, SocialMediaIcons } from "config"
+import { SocialMediaIcons } from "config"
 import { useSplitText } from "./logic"
 import Image from "next/image"
 
@@ -85,7 +85,7 @@ const PersonBox: FC<PersonProps> = ({
                     </StyledAvatarWrapper>
                     <StyledRole>
                         <StyledColoredText>
-                            {t(`team.team-members.${localeKey}.role`).toUpperCase()}
+                            {t(`home.team.team-members.${localeKey}.role`).toUpperCase()}
                         </StyledColoredText>
                     </StyledRole>
                     <StyledNameBox>
@@ -93,7 +93,7 @@ const PersonBox: FC<PersonProps> = ({
                         <div className="line">{secondLine}</div>
                     </StyledNameBox>
                     <StyledDescription>
-                        {t(`team.team-members.${localeKey}.description`)}
+                        {t(`home.team.team-members.${localeKey}.description`)}
                     </StyledDescription>
                     <StyledSocialMediaBox>
                         {socialMedia.map((item, index) => (

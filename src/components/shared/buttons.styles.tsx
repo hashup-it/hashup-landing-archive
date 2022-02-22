@@ -1,8 +1,9 @@
-import { FC } from "react"
 import styled from "styled-components"
-import { Swatches } from "__styles__/consts"
+import { MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledButton1 = styled.button`
+    // Transparent background, red border, border radius
+
     margin: 0;
     box-sizing: border-box;
     padding: 16px 35px;
@@ -20,5 +21,25 @@ export const StyledButton1 = styled.button`
     :hover {
         opacity: 0.8;
         transition: 100ms ease opacity;
+    }
+`
+
+export const StyledButton2 = styled(StyledButton1)`
+    min-width: 240px;
+    background-color: ${Swatches.primary_color} !important;
+    box-shadow: 0px 8px 40px -10px rgba(255, 0, 0, 1);
+
+    :hover {
+        opacity: 0.9;
+        transition: opacity 100ms ease;
+    }
+
+    /* ${MediaQuery.tablet} { */
+        /* width: 240px; */
+    /* } */
+/*  */
+    /* ${MediaQuery.mobileL} { */
+        /* flex: 1; */
+        /* width: 280px; */
     }
 `

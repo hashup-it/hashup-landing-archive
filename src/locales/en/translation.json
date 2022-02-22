@@ -55,27 +55,192 @@
             "title": "1 Token <strong>=</strong> 1 Video Game<strong>.</strong><br/> Buy<strong>2</strong>Play",
             "paragraph": "Cartridge with a video game on the Blockchain. You must have one piece of the game to play. Freely shape the rules of the secondary market as a Game Creator. Liquidity pools with video games!",
             "button": "More about cartridges"
+        },
+        "game-wallet": {
+            "label": "Game<strong>Wallet</strong>",
+            "title": "Store video games like cryptocurrencies<strong>!</strong>",
+            "paragraph": "Imagine if gamers were to decide the pricing of games! <strong>Buy</strong> a game, <strong>play</strong> a game, <strong>borrow</strong> a game, <strong>sell</strong> a game. With us, you will finally <strong>own</strong> the games!",
+            "button": "More about"
+        },
+        "game-contract": {
+            "label": "Game<strong>Contract</strong>.io",
+            "title": "Publish your game by creating GameContract<strong>!</strong>",
+            "paragraph": "Publish games without middlemen with the help of GameContract.io in 5 minutes. Create cartridges on the blockchain in the Smart Contracts factory!",
+            "button": "More about"
+        },
+        "game-xplorer": {
+            "label": "Game<strong>Xplorer</strong>.io",
+            "title": "First blockchain explorer for the gamers<strong>!</strong>",
+            "paragraph": "View Player Transactions, their items and NFTs. Take pride in your game collection and collect them. Vote for video games and leave comments under players and profiles! Follow infuencers and friends.",
+            "button": "More about"
+        },
+        "game-cap": {
+            "label": "Game<strong>Cap</strong>.io",
+            "title": "Video Games Market Cap Listing<strong>.</strong>",
+            "paragraph": "Imagine <strong>CoinMarketCap with video games</strong> that lets you list their prices. Ranking games based on their true value! <strong>Nothing shows the quality of a game better than its true price.</strong>",
+            "button": "More about"
+        },
+        "info-notes": {
+            "title": "<strong>DEFInitive</strong> edition of Video Game Market",
+            "notes": [
+                {
+                    "title": "<strong>Liquidity pool</strong> with video games",
+                    "content": "You have an impact on the <strong>price of games!</strong>"
+                },
+                {
+                    "title": "DAO <br/><strong>Publisher</strong>",
+                    "content": "Hash Holders <strong>decide</strong> which games get released!"
+                },
+                {
+                    "title": "Independent <strong>advertising system</strong>!",
+                    "content": "Hit up players based on their past purchases!"
+                },
+                {
+                    "title": "<strong>Blockchain Explorer</strong> for Gamers<strong>!</strong>",
+                    "content": "Explore player libraries, collect games like never before."
+                }
+            ]
+        },
+        "roadmap": {
+            "label": "Roadmap",
+            "title": "Look, <strong>when are we going to do all this</strong>",
+            "boxes": [
+                {
+                    "label": "2021",
+                    "bullets": [
+                        "Whitepaper",
+                        "Seed Funding",
+                        "Start of work on HashUp",
+                        "# Token Issue",
+                        "HashUp employs 15 people"
+                    ]
+                },
+                {
+                    "label": "Q1-Q2 2022",
+                    "bullets": [
+                        "GameXplorer.io",
+                        "GameCap.io",
+                        "Private founding & ICO",
+                        "Premiere of Pong - first ever video game on The HashUp Cartridge",
+                        "Listing on DEX",
+                        "First PC computer games premiere",
+                        "Selling idea of HashUp to Indie Games Studios around the world"
+                    ]
+                },
+                {
+                    "label": "Q3-Q4 2022",
+                    "bullets": [
+                        "Multiplatform GameWallet",
+                        "HashUp on Video Games Events",
+                        "HashUp Video Games #Forum is live, where your like power is your cartridge balance",
+                        "First CEX listing",
+                        "HashUp Fiat => Crypto Ramp",
+                        "HashUp Crypto => Computers Games Ramp",
+                        "Unity, Unreal Engine HashUp plug-ins"
+                    ]
+                },
+                {
+                    "label": "2023",
+                    "bullets": [
+                        "HashUp on 5 Chains",
+                        "GameWallet p2p Messager and Video Games #Forum integration",
+                        "GamePaper.io - Kickstarter for Computer Games on Blockchain",
+                        "Gamexchange.finace - First DEX of computer games nad software",
+                        "HashUp.Games start working on our first AAA Games Exclusive on HashUp's",
+                        "Start working on HashUp's Software Edition"
+                    ]
+                },
+                {
+                    "label": "2024++",
+                    "bullets": [
+                        "Preparing for next crypto bubble: 30mld$+ market cap potencial",
+                        "Research into the economic issues surrounding the open distribution of software so that creators can make the most of their potential",
+                        "Integration of a decentralised software distribution platform with mobile devices and consoles and with devices yet to be developed",
+                        "Integration with alternative networks such as Helium, so you can play anywhere without needing an internet connection"
+                    ]
+                }
+            ]
+        },
+        "team": {
+            "ourteam": "Our team",
+            "team": "Meet our team",
+            "advisors": "Advisors",
+            "advisor": "Advisor",
+            "team-members": {
+                "szymon-jankowski": {
+                    "role": "CEO",
+                    "description": "He believes that technology will enable the rise of crypto-anarchism in the future."
+                },
+                "filip-szydlowski": {
+                    "role": "CLO",
+                    "description": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups."
+                },
+                "cezary-dobrowolski": {
+                    "role": "CMO",
+                    "description": "Marketing should develop the product."
+                },
+                "marcin-wenus": {
+                    "role": "Advisor",
+                    "description": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor."
+                },
+                "tomasz-smus": {
+                    "role": "Advisor",
+                    "description": "Doctor of Law and Economics. He brought Bitcoin to the Polish world."
+                },
+                "krzysztof-piech": {
+                    "role": "Advisor",
+                    "description": "One of the first Bitcoin pioneers in the Polish academic world."
+                },
+                "krzysztof-chmielewski": {
+                    "role": "Advisor",
+                    "description": "Senior lecturer in game research and design at Kazimierz Wielki University. Production manager at Flybridge Studio."
+                },
+                "damian-sarnecki": {
+                    "role": "Blockchain Dev",
+                    "description": "A programmer fascinated by the world of blockchain from the technological side."
+                },
+                "robert-dziubek": {
+                    "role": "Blockchain Dev",
+                    "description": "Formulates solutions that integrate blockchain technology applications."
+                },
+                "jakub-jaworski": {
+                    "role": "Project Manager",
+                    "description": "I've screwed over so much in crypto that I now work for free to have somewhere to sleep."
+                },
+                "tomasz-fiema": {
+                    "role": "Head of Design",
+                    "description": "Designer minimalist. Hobbistically interested in gamedev."
+                },
+                "szymon-fialkowski": {
+                    "role": "CTO",
+                    "description": "For years developing scalable applications on AWS, focused on migration to Web 3.0."
+                },
+                "jakub-stebel": {
+                    "role": "Business analyst",
+                    "description": "He is passionate about investing and economic analysis."
+                },
+                "patryk-rossa": {
+                    "role": "Front-end dev",
+                    "description": "Computer science student, passionate about new technologies."
+                },
+                "kamil-kaminski": {
+                    "role": "3D Artist",
+                    "description": "A budding 3D generalist with a passion for cryptocurrencies."
+                },
+                "pawel-laskarzewski": {
+                    "role": "Advisor",
+                    "description": "Technology consultant and solution architect with extensive experience in the ICT industry. Synapse Network founder."
+                },
+                "tomasz-kopera": {
+                    "role": "Advisor",
+                    "description": "Founder and CEO of Blockchain Ventures Hub."
+                },
+                "maciej-czarkowski": {
+                    "role": "Tech Lead",
+                    "description": "Developer and pianist, so just switching context between keyboards."
+                }
+            }
         }
-    },
-    "game-cap": {
-        "title": "Video Games Market Cap Listing",
-        "paragraph": "Imagine <strong>CoinMarketCap with video games</strong> that lets you list their prices. Ranking games based on their true value! <strong>Nothing shows the quality of a game better than its true price.</strong>",
-        "button": "More about"
-    },
-    "game-contract": {
-        "title": "Publish your game by creating GameContract",
-        "paragraph": "Publish games without middlemen with the help of GameContract.io in 5 minutes. Create cartridges on the blockchain in the Smart Contracts factory!",
-        "button": "More about"
-    },
-    "game-wallet": {
-        "title": "Store video games like cryptocurrencies",
-        "paragraph": "Imagine if gamers were to decide the pricing of games! <strong>Buy</strong> a game, <strong>play</strong> a game, <strong>borrow</strong> a game, <strong>sell</strong> a game. With us, you will finally <strong>own</strong> the games!",
-        "button": "More about"
-    },
-    "game-xplorer": {
-        "title": "First blockchain explorer for the gamers",
-        "paragraph": "View Player Transactions, their items and NFTs. Take pride in your game collection and collect them. Vote for video games and leave comments under players and profiles! Follow infuencers and friends.",
-        "button": "More about"
     },
     "igo-form": {
         "title": "Subscribe to IGO of <i>PONG</i> game"
@@ -96,172 +261,11 @@
             "metamask": "Add Hash to the Metamask"
         }
     },
-    "info-notes": {
-        "header-def": "DEFInitive",
-        "header-form": " edition of Video Game Market",
-        "note-1": {
-            "title": {
-                "1": "Liquidity pool",
-                "2": "with video games"
-            },
-            "content": "You have an impact on the <strong>price of games!</strong>"
-        },
-        "note-2": {
-            "title": {
-                "1": "DAO",
-                "2": "Publisher"
-            },
-            "content": "Hash Holders <strong>decide</strong> which games get released!"
-        },
-        "note-3": {
-            "title": {
-                "1": "<strong>Independent</strong>",
-                "2": "advertising system"
-            },
-            "content": "Hit up players based on their past purchases!"
-        },
-        "note-4": {
-            "title": {
-                "1": "Blockchain Explorer",
-                "2": "<strong>for Gamers</strong>"
-            },
-            "content": "Explore player libraries, collect games like never before."
-        }
-    },
     "partners": {
         "label": "Together we will change the world",
         "header-our": "Our ",
         "header-partners": " partners",
         "text": "Alone we can do so little; together we can do so much."
-    },
-    "roadmap": {
-        "roadmap": "Roadmap",
-        "header-look": "Look, ",
-        "header-when": "when are we going to do all this",
-        "box-1": {
-            "label": "2021",
-            "bullet-1": "Whitepaper",
-            "bullet-2": "Seed Funding",
-            "bullet-3": "Start of work on HashUp",
-            "bullet-4": "# Token Issue",
-            "bullet-5": "HashUp employs 15 people"
-        },
-        "box-2": {
-            "label": "Q1-Q2 2022",
-            "bullet-1": "GameXplorer.io",
-            "bullet-2": "GameCap.io",
-            "bullet-3": "Private founding & ICO",
-            "bullet-4": "Premiere of Pong - first ever video game on The HashUp Cartridge",
-            "bullet-5": "Listing on DEX",
-            "bullet-6": "First PC computer games premiere",
-            "bullet-7": "Selling idea of HashUp to Indie Games Studios around the world"
-        },
-        "box-3": {
-            "label": "Q3-Q4 2022",
-            "bullet-1": "Multiplatform GameWallet",
-            "bullet-2": "HashUp on Video Games Events",
-            "bullet-3": "HashUp Video Games #Forum is live, where your like power is your cartridge balance",
-            "bullet-4": "First CEX listing",
-            "bullet-5": "HashUp Fiat => Crypto Ramp",
-            "bullet-6": "HashUp Crypto => Computers Games Ramp",
-            "bullet-7": "Unity, Unreal Engine HashUp plug-ins"
-        },
-        "box-4": {
-            "label": "2023",
-            "bullet-1": "HashUp on 5 Chains",
-            "bullet-2": "GameWallet p2p Messager and Video Games #Forum integration",
-            "bullet-3": "GamePaper.io - Kickstarter for Computer Games on Blockchain",
-            "bullet-4": "Gamexchange.finace - First DEX of computer games nad software",
-            "bullet-5": "HashUp.Games start working on our first AAA Games Exclusive on HashUp's",
-            "bullet-6": "Start working on HashUp's Software Edition"
-        },
-        "box-5": {
-            "label": "2024++",
-            "bullet-1": "Preparing for next crypto bubble: 30mld$+ market cap potencial",
-            "bullet-2": "Research into the economic issues surrounding the open distribution of software so that creators can make the most of their potential",
-            "bullet-3": "Integration of a decentralised software distribution platform with mobile devices and consoles and with devices yet to be developed",
-            "bullet-4": "Integration with alternative networks such as Helium, so you can play anywhere without needing an internet connection"
-        }
-    },
-    "team": {
-        "ourteam": "Our team",
-        "team": "Meet our team",
-        "team-members": {
-            "szymon-jankowski": {
-                "role": "CEO",
-                "description": "He believes that technology will enable the rise of crypto-anarchism in the future."
-            },
-            "filip-szydlowski": {
-                "role": "CLO",
-                "description": "Lawyer and cryptocurrency supporter, familiar with working at law firms and startups."
-            },
-            "cezary-dobrowolski": {
-                "role": "CMO",
-                "description": "Marketing should develop the product."
-            },
-            "marcin-wenus": {
-                "role": "Advisor",
-                "description": "Founder of Comparic.pl, Comparic24.tv and Invest Cuffs Foundation. CEO of Gameparic Studio. Investor."
-            },
-            "tomasz-smus": {
-                "role": "Advisor",
-                "description": "Doctor of Law and Economics. He brought Bitcoin to the Polish world."
-            },
-            "krzysztof-piech": {
-                "role": "Advisor",
-                "description": "One of the first Bitcoin pioneers in the Polish academic world."
-            },
-            "krzysztof-chmielewski": {
-                "role": "Advisor",
-                "description": "Senior lecturer in game research and design at Kazimierz Wielki University. Production manager at Flybridge Studio."
-            },
-            "damian-sarnecki": {
-                "role": "Blockchain Dev",
-                "description": "A programmer fascinated by the world of blockchain from the technological side."
-            },
-            "robert-dziubek": {
-                "role": "Blockchain Dev",
-                "description": "Formulates solutions that integrate blockchain technology applications."
-            },
-            "jakub-jaworski": {
-                "role": "Project Manager",
-                "description": "I've screwed over so much in crypto that I now work for free to have somewhere to sleep."
-            },
-            "tomasz-fiema": {
-                "role": "Head of Design",
-                "description": "Designer minimalist. Hobbistically interested in gamedev."
-            },
-            "szymon-fialkowski": {
-                "role": "CTO",
-                "description": "For years developing scalable applications on AWS, focused on migration to Web 3.0."
-            },
-            "jakub-stebel": {
-                "role": "Business analyst",
-                "description": "He is passionate about investing and economic analysis."
-            },
-            "patryk-rossa": {
-                "role": "Front-end dev",
-                "description": "Computer science student, passionate about new technologies."
-            },
-            "kamil-kaminski": {
-                "role": "3D Artist",
-                "description": "A budding 3D generalist with a passion for cryptocurrencies."
-            },
-            "pawel-laskarzewski": {
-                "role": "Advisor",
-                "description": "Technology consultant and solution architect with extensive experience in the ICT industry. Synapse Network founder."
-            },
-            "tomasz-kopera": {
-                "role": "Advisor",
-                "description": "Founder and CEO of Blockchain Ventures Hub."
-            },
-            "maciej-czarkowski": {
-                "role": "Tech Lead",
-                "description": "Developer and pianist, so just switching context between keyboards."
-            }
-        },
-        "advisors": "Advisors",
-        "advisor": "Advisor"
     },
     "footer": {
         "span": "Our ",
@@ -406,5 +410,36 @@
                 "label": "View the file"
             }
         ]
+    },
+    "gamecontract": {
+        "header": {
+            "label": "Game <strong>Contract</strong>",
+            "title": "Publish your game in 5 steps<strong>.</strong>",
+            "paragraph": "HashUp wants to make the process of releasing games as simple as can be. With GameContract we’re able to take the developer's journey to the next level.",
+            "button-1": "How it works?",
+            "button-2": "Questions and answers"
+        },
+        "license": {
+            "title": "Choice of <strong>licence</strong>",
+            "paragraph": "You are free to shape the economic model of your game. Perhaps you want a limited supply? Would you prefer a free market price for your game? <br/><br/>You can also allow secondary market and set your earnings out of it. Complete freedom for creators!"
+        },
+        "settings": {
+            "title": "Cartridge <strong>settings</strong>",
+            "paragraph": "Create a product card. Provide all of the informations required, and them feel free to personalise its appearance. <br/><br/>Upload media and…",
+            "notes": [
+                {
+                    "title": "Editable Metadata",
+                    "paragraph": "Describe your game, add a link to GamePaper and its social media."
+                },
+                {
+                    "title": "Price",
+                    "paragraph": "Set your inicial or fixed pricing."
+                },
+                {
+                    "title": "Registration",
+                    "paragraph": "Finalize the process with your contact data. We're done!"
+                }
+            ]
+        }
     }
 }

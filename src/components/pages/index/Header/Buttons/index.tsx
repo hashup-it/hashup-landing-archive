@@ -2,7 +2,6 @@ import { FC } from "react"
 import { StyledColoredText } from "components/shared/utils.styles"
 import {
     StyledButtonsBox,
-    StyledButton,
     StyledWhitepaperBox,
     StyledWhitepaperMenu,
     StyledWhitepaperLangItem,
@@ -13,6 +12,7 @@ import { useState } from "react"
 import { assetsUrl, Languages } from "config"
 import Link from "next/link"
 import Image from "next/image"
+import { StyledButton2 } from "components/shared/buttons.styles"
 
 const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lang }) => {
     const { t } = useTranslation()
@@ -51,7 +51,7 @@ const WhitepaperButton = () => {
                 Whitepaper<StyledColoredText>.</StyledColoredText>
                 <div className="arrow-wrapper">
                     <Image
-                        src={assetsUrl("header/arrow.svg")}
+                        src={assetsUrl("random-icons/red-arrow.svg")}
                         width={20}
                         height={20}
                         alt=""
@@ -74,7 +74,7 @@ const Buttons = () => {
         <StyledButtonsBox>
             <Link href="cartridges" passHref>
                 <a>
-                    <StyledButton>{t("home.header.button")} </StyledButton>
+                    <StyledButton2>{t("home.header.button")} </StyledButton2>
                 </a>
             </Link>
             <WhitepaperButton />

@@ -24,7 +24,7 @@ export const StyledSocialBoxA = styled.a<{ isFilled?: boolean }>`
 
     :hover {
         :after {
-            transform: translateX(8px);
+            transform: translateX(7px) rotate(-90deg);
             transition: transform 150ms ease;
         }
     }
@@ -33,13 +33,14 @@ export const StyledSocialBoxA = styled.a<{ isFilled?: boolean }>`
         content: "";
         position: absolute;
         display: block;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 20px;
         right: 25px;
-        top: calc(50% - 8px);
-        background-image: url(${() => assetsUrl("community/arrow.svg")});
+        top: 28px;
+        background-image: url(${() => assetsUrl("random-icons/gray-arrow.svg")});
         background-position: center;
         background-repeat: no-repeat;
+        transform: rotate(-90deg);
         background-size: 100%;
         transition: transform 100ms ease;
     }

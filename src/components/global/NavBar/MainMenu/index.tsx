@@ -55,7 +55,7 @@ const EcosystemMenu: FC<{ readonly isSelected: boolean }> = ({ isSelected }) => 
             <span className="label">
                 {t("menu.ecosystem")}
                 <div className="icon-wrapper">
-                    <Image src={assetsUrl("random-icons/arrow.svg")} alt="" width={20} height={20} />
+                    <Image src={assetsUrl("random-icons/gray-arrow.svg")} alt="" width={20} height={20} />
                 </div>
             </span>
             <ul className="menu">
@@ -73,11 +73,6 @@ const MainMenu: FC<{ readonly isMobileMenuShown: boolean }> = ({ isMobileMenuSho
 
     return (
         <StyledMainMenu>
-            <StyledMenuItem isSelected={router.asPath === "/"}>
-                <Link href="/" passHref>
-                    <a title="Ecosystem">{t("menu.home")}</a>
-                </Link>
-            </StyledMenuItem>
             {/* <EcosystemMenu isSelected={allEcosystemUrls.includes(router.asPath)} /> */}
             <StyledMenuItem>
                 <Link href="/#ecosystem" passHref>

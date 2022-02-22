@@ -28,7 +28,6 @@ export const StyledLogosContainer = styled.div`
         grid-template-columns: repeat(4, 1fr);
         gap: 40px 20px;
     }
-
     ${MediaQuery.tablet} {
         grid-template-columns: repeat(3, 1fr);
         gap: 40px 20px;
@@ -36,13 +35,9 @@ export const StyledLogosContainer = styled.div`
 `
 
 export const StyledLogoWrapper = styled.div`
-    max-width: 55%;
-
-    ${MediaQuery.tablet} {
-        max-width: 40%;
-    }
+    width: 65%;
 
     ${MediaQuery.mobileL} {
-        max-width: 65%;
+        width: 80%;
     }
 `

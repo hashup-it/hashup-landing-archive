@@ -1,22 +1,17 @@
-import {
-    StyledSectionLabel,
-    StyledSectionParagraph,
-    StyledSectionTitle,
-    StyledSectionWrapper,
-} from "components/shared/section.styles"
 import { StyledItem, StyledCarouselWrapper, StyledControlButton } from "./index.styles"
 import { Trans } from "react-i18next"
 import AliceCarousel from "react-alice-carousel"
 import "react-alice-carousel/lib/alice-carousel.css"
-
-import infographic1Desktop from "/public/assets/how-it-works/infographic-1-desktop.png"
-import infographic1Mobile from "/public/assets/how-it-works/infographic-1-mobile.png"
-import infographic2Desktop from "/public/assets/how-it-works/infographic-2-desktop.png"
-import infographic2Mobile from "/public/assets/how-it-works/infographic-2-mobile.png"
 import Image from "next/image"
 import { FC, useEffect, useState } from "react"
 import { useWindowWidth } from "@react-hook/window-size/throttled"
 import { DeviceWidth, GLOBAL_CONTENT_WIDTH_PX } from "__styles__/consts"
+
+import infographic1Desktop from "/public/assets/home/how-it-works/infographic-1-desktop.png"
+import infographic1Mobile from "/public/assets/home/how-it-works/infographic-1-mobile.png"
+import infographic2Desktop from "/public/assets/home/how-it-works/infographic-2-desktop.png"
+import infographic2Mobile from "/public/assets/home/how-it-works/infographic-2-mobile.png"
+import SectionType2 from "components/shared/SectionType2"
 
 const MOBILE_IMG_BELOW_PX: number = 450
 
@@ -82,16 +77,11 @@ const carouselItems = [
 ]
 
 const HowItWorks = () => (
-    <StyledSectionWrapper>
-        <StyledSectionLabel>
-            <Trans i18nKey="home.how-it-works.label" />
-        </StyledSectionLabel>
-        <StyledSectionTitle>
-            <Trans i18nKey="home.how-it-works.title" />
-        </StyledSectionTitle>
-        <StyledSectionParagraph>
-            <Trans i18nKey="home.how-it-works.paragraph" />
-        </StyledSectionParagraph>
+    <SectionType2
+        title={<Trans i18nKey="home.how-it-works.title" />}
+        label={<Trans i18nKey="home.how-it-works.label" />}
+        paragraph={<Trans i18nKey="home.how-it-works.paragraph" />}
+    >
         <StyledCarouselWrapper>
             <AliceCarousel
                 items={carouselItems}
@@ -106,7 +96,7 @@ const HowItWorks = () => (
                 mouseTracking
             />
         </StyledCarouselWrapper>
-    </StyledSectionWrapper>
+    </SectionType2>
 )
 
 export default HowItWorks

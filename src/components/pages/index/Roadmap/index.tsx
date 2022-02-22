@@ -1,14 +1,13 @@
 import InfoBox from "./InfoBox"
-import { StyledColoredText } from "components/shared/utils.styles"
-import { StyledCarousele, StyledRoadmap } from "./index.styles"
+import { StyledCarousele } from "./index.styles"
 import { highlightedId, infoBoxesData } from "./data"
 import AliceCarousel from "react-alice-carousel"
-import { useTranslation } from "react-i18next"
 import "react-alice-carousel/lib/alice-carousel.css"
-import { StyledSectionLabel, StyledSectionTitle } from "components/shared/section.styles"
+import { Trans } from "react-i18next"
+import SectionType2 from "components/shared/SectionType2"
 
 const carouseleItems: JSX.Element[] = infoBoxesData.map((item, index) => (
-    <InfoBox key={index} highlighted={index === highlightedId} {...item} />
+    <InfoBox key={index} highlighted={index === highlightedId} bullets={item} index={index} />
 ))
 
 const Carousele = () => (
@@ -23,19 +22,13 @@ const Carousele = () => (
     </StyledCarousele>
 )
 
-const Roadmap = () => {
-    const { t } = useTranslation()
-
-    return (
-        <StyledRoadmap>
-            <StyledSectionLabel>{t("roadmap.roadmap")}</StyledSectionLabel>
-            <StyledSectionTitle>
-                {t("roadmap.header-look")}
-                <StyledColoredText>{t("roadmap.header-when")}</StyledColoredText>
-            </StyledSectionTitle>
-            <Carousele />
-        </StyledRoadmap>
-    )
-}
+const Roadmap = () => (
+    <SectionType2
+        title={<Trans i18nKey="home.roadmap.title" />}
+        label={<Trans i18nKey="home.roadmap.label" />}
+    >
+        <Carousele />
+    </SectionType2>
+)
 
 export default Roadmap

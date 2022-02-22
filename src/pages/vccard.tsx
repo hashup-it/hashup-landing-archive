@@ -2,11 +2,11 @@ import HeaderContent from "../components/pages/vccard/HeaderContent"
 import Password, { PasswordConfig } from "../components/pages/vccard/Password"
 import Cookies from "js-cookie"
 import VideoBackground from "components/shared/Header/VideoBackground"
-
-import bgImg from "/public/assets/header/cartridge.png"
 import { FC, useEffect, useState } from "react"
 import FullScreenHeader from "components/shared/Header/FullScreenHeader"
 import ImgBackground from "components/shared/Header/ImgBackground"
+
+import bgImg from "/public/assets/home/header/cartridge.png"
 
 const HeaderBackground: FC<{ readonly children: JSX.Element }> = ({ children }) => (
     <FullScreenHeader

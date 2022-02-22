@@ -26,9 +26,7 @@ const LogosContainer: FC<LogosContainerProps> = ({ data, label, header }) => (
                         <Image
                             src={item.logoPath}
                             alt={item.logoAlt}
-                            quality={50}
-                            sizes={`240px`}
-                            objectFit="scale-down"
+                            quality={15}
                             loading="lazy"
                             placeholder="blur"
                             lazyBoundary="300px"
