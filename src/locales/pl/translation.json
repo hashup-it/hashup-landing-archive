@@ -18,7 +18,7 @@
         "provision": "Jesteś jedynym wydawcą. Nie pozwól nikomu zarabiać na twojej ciężkiej pracy. Zarobisz w ten sposób więcej pieniędzy, czy obniżysz cenę gry, aby dotrzeć do większej liczby odbiorców? Decyzja należy do Ciebie!"
     },
     "igo-form": {
-        "title": "Subscribe to IGO of <i>PONG</i> game"
+        "title": "Subscribe to IGO of <i>HashBall</i> game"
     },
     "header": {
         "description": "DEFInitywna edycja nośnika licencji gry. Wymiana grami P2P między graczami. Kartridż na blockchain. Bez pośredników. 0% prowizji.",
@@ -27,7 +27,7 @@
             "1": "Przewiń, aby ",
             "2": " dowiedzieć się więcej"
         },
-        "ico-signup": "Zapisz się na IGO gry PONG",
+        "ico-signup": "Zapisz się na IGO gry HashBall",
         "add-hash-wallet": "Dodaj # do portfela",
         "all-gamers": "Wszystkich graczy: ",
         "contract": "Kontrakt: ",

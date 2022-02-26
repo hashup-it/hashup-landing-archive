@@ -17,7 +17,7 @@ const Images = () => (
 const License = () => (
     <SectionType1
         label=""
-        anchor="license"
+        anchor="how-it-works"
         title={<Trans i18nKey="gamecontract.license.title" />}
         paragraph={<Trans i18nKey="gamecontract.license.paragraph" />}
         imagesBox={<Images />}

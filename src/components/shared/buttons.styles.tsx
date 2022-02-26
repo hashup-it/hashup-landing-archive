@@ -33,13 +33,4 @@ export const StyledButton2 = styled(StyledButton1)`
         opacity: 0.9;
         transition: opacity 100ms ease;
     }
-
-    /* ${MediaQuery.tablet} { */
-        /* width: 240px; */
-    /* } */
-/*  */
-    /* ${MediaQuery.mobileL} { */
-        /* flex: 1; */
-        /* width: 280px; */
-    }
 `

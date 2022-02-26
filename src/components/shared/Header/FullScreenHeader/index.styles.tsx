@@ -11,6 +11,21 @@ export const StyledContainer = styled.div`
     min-height: 100vh;
     left: calc(-50vw + 50%);
     background-color: black;
+
+    div.top-flare {
+        width: 900px;
+        height: 500px;
+        background-color: red;
+        position: absolute;
+        z-index: 9;
+        left: 50%;
+        top: -35%;
+        transform: translateX(-50%);
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        filter: blur(500px);
+        opacity: 0.1;
+    }
 `
 
 export const StyledBackgroundBox = styled.div`

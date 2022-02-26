@@ -7,5 +7,5 @@ export const StyledContentBox = styled.div`
 
 export const StyledAnchor = styled.div`
     position: absolute;
-    top: 200px;
+    top: -100px;
 `

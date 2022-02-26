@@ -4,6 +4,7 @@ import SideSocialMenu from "../SideSocialMenu"
 
 interface FullScreenHeaderProps {
     readonly children: JSX.Element
+    readonly topFlare?: boolean
     readonly extraContent?: JSX.Element
     readonly desktopBackground: JSX.Element
     readonly mobileBackground?: JSX.Element
@@ -14,8 +15,10 @@ const FullScreenHeader: FC<FullScreenHeaderProps> = ({
     mobileBackground,
     children,
     extraContent,
+    topFlare,
 }) => (
     <StyledContainer>
+        {topFlare && <div className="top-flare" />}
         <SideSocialMenu />
         <StyledContentBox>
             <div className="inner">{children}</div>

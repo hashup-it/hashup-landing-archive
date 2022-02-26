@@ -16,4 +16,8 @@ export const StyledNotesBox = styled.div`
     ${MediaQuery.laptop} {
         gap: 70px;
     }
+
+    ${MediaQuery.mobileL} {
+        gap: 40px;
+    }
 `

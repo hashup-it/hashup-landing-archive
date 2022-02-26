@@ -8,6 +8,12 @@
         "wallet-connected": "Connected",
         "home": "Home"
     },
+    "shared": {
+        "community": {
+            "label": "Do you have any more questions<strong>?</strong>",
+            "title": "Join our Community<strong>.</strong>"
+        }
+    },
     "home": {
         "header": {
             "paragraph": "DeFinitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!",
@@ -121,7 +127,7 @@
                         "GameXplorer.io",
                         "GameCap.io",
                         "Private founding & ICO",
-                        "Premiere of Pong - first ever video game on The HashUp Cartridge",
+                        "Premiere of HashBall - first ever video game on The HashUp Cartridge",
                         "Listing on DEX",
                         "First PC computer games premiere",
                         "Selling idea of HashUp to Indie Games Studios around the world"
@@ -243,7 +249,7 @@
         }
     },
     "igo-form": {
-        "title": "Subscribe to IGO of <i>PONG</i> game"
+        "title": "Subscribe to IGO of <i>HashBall</i> game"
     },
     "airdrop": {
         "reserve": "Reserve your unique Nickname to receive the Airdrop",

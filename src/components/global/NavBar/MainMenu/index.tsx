@@ -74,9 +74,9 @@ const MainMenu: FC<{ readonly isMobileMenuShown: boolean }> = ({ isMobileMenuSho
     return (
         <StyledMainMenu>
             {/* <EcosystemMenu isSelected={allEcosystemUrls.includes(router.asPath)} /> */}
-            <StyledMenuItem>
-                <Link href="/#ecosystem" passHref>
-                    <a title="Ecosystem">{t("menu.ecosystem")}</a>
+            <StyledMenuItem isSelected={router.asPath === '/gamecontract'}>
+                <Link href="/gamecontract" passHref>
+                    <a title="GameContract">GameContract</a>
                 </Link>
             </StyledMenuItem>
             <StyledMenuItem isSelected={router.asPath === "/cartridges"}>

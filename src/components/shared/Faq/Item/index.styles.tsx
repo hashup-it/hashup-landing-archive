@@ -10,6 +10,7 @@ export const StyledItem = styled.div`
         padding: 0px 80px 22px 0;
         font-size: 18px;
         line-height: 160%;
+        text-align: left;
 
         ${MediaQuery.tablet} {
             padding-right: 0;
