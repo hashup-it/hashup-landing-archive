@@ -35,7 +35,7 @@ const Item: FC<ItemProps> = ({ question, answer }) => {
                 trigger={<Header question={question} isOpen={isOpen} />}
                 onOpening={() => setIsOpen(true)}
                 onClosing={() => setIsOpen(false)}
-                transitionTime={200}
+                transitionTime={120}
             >
                 <p className="answer">{answer}</p>
             </Collapsible>

@@ -72,7 +72,7 @@
             "label": "Game<strong>Contract</strong>.io",
             "title": "Publish your game by creating GameContract<strong>!</strong>",
             "paragraph": "Publish games without middlemen with the help of GameContract.io in 5 minutes. Create cartridges on the blockchain in the Smart Contracts factory!",
-            "button": "More about"
+            "button": "More about <strong>GameContract</strong>"
         },
         "game-xplorer": {
             "label": "Game<strong>Xplorer</strong>.io",
@@ -446,6 +446,24 @@
                     "paragraph": "Finalize the process with your contact data. We're done!"
                 }
             ]
-        }
+        },
+        "faq": [
+            {
+                "a": "dupa",
+                "q": "siema"
+            },
+            {
+                "a": "elo",
+                "q": "dupa"
+            },
+            {
+                "a": "co tam",
+                "q": "slychac"
+            },
+            {
+                "a": "witam",
+                "q": "czesc"
+            }
+        ]
     }
 }

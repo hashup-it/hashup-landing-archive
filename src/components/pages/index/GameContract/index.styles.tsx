@@ -14,7 +14,7 @@ export const StyledBackgroundFlare = styled.div`
 `
 
 export const StyledButtonBox = styled.div`
-    margin-top: 20px;
+    margin-top: 40px;
 `
 
 

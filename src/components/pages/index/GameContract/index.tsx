@@ -89,20 +89,6 @@ const ImagesBox = () => {
     )
 }
 
-const Button = () => {
-    const { t } = useTranslation()
-
-    return (
-        <Link href="game-contract" passHref>
-            <a>
-                <StyledButton1>
-                    {t("game-contract.button")} <StyledColoredText>GameContract</StyledColoredText>
-                </StyledButton1>
-            </a>
-        </Link>
-    )
-}
-
 const Cartridges = () => (
     <SectionType2
         title={<Trans i18nKey="home.game-contract.title" />}
@@ -111,6 +97,15 @@ const Cartridges = () => (
         anchor="game-contract"
     >
         <>
+            <StyledButtonBox>
+                <Link href="gamecontract" passHref>
+                    <a>
+                        <StyledButton1>
+                            <Trans i18nKey="home.game-contract.button" />
+                        </StyledButton1>
+                    </a>
+                </Link>
+            </StyledButtonBox>
             <StyledBackgroundFlare />
             <ImagesBox />
         </>
