@@ -6,12 +6,12 @@ import { FC, useEffect, useState } from "react"
 import FullScreenHeader from "components/shared/Header/FullScreenHeader"
 import ImgBackground from "components/shared/Header/ImgBackground"
 
-import bgImg from "/public/assets/home/header/cartridge.png"
+import bgImg from "/public/assets/2d-cartridges/placeholder.png"
 
 const HeaderBackground: FC<{ readonly children: JSX.Element }> = ({ children }) => (
     <FullScreenHeader
         desktopBackground={
-            <VideoBackground src="https://cdn.hashup.it/landing/Hashup_web.mp4" opacity={0.4} />
+            <VideoBackground src="https://cdn.hashup.it/landing/Hashup_web_v2.mp4" opacity={0.4} />
         }
         mobileBackground={<ImgBackground src={bgImg} alt="HashUp Cartridge" />}
     >

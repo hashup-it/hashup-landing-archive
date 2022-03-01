@@ -7,12 +7,12 @@ import GenericContent from "components/shared/Header/GenericContent"
 import { Materials } from "components/pages/media/data"
 import Buttons from "./Buttons"
 
-import bgImg from "/public/assets/home/header/cartridge.png"
+import bgImg from "/public/assets/2d-cartridges/placeholder.png"
 
 const Header = () => (
     <FullScreenHeader
         desktopBackground={
-            <VideoBackground src="https://cdn.hashup.it/landing/Hashup_web.mp4" opacity={0.4} />
+            <VideoBackground src="https://cdn.hashup.it/landing/Hashup_web_v2.mp4" opacity={0.4} />
         }
         mobileBackground={<ImgBackground src={bgImg} alt="HashUp Cartridge" />}
         extraContent={<BottomNav />}

@@ -1,4 +1,3 @@
-import { StyledColoredText } from "components/shared/utils.styles"
 import { StyledButton1 } from "components/shared/buttons.styles"
 import Link from "next/link"
 import {
@@ -7,7 +6,7 @@ import {
     StyledImgWrapper,
     StyledButtonBox,
 } from "./index.styles"
-import { Trans, useTranslation } from "react-i18next"
+import { Trans } from "react-i18next"
 import Image from "next/image"
 import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
 import { useCallback } from "react"
@@ -15,10 +14,10 @@ import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
 import SectionType2 from "components/shared/SectionType2"
 
-import laptopImg from "/public/assets/home/game-contract/laptop.png"
-import websiteImg from "/public/assets/home/game-contract/floating-website.png"
-import redDots1Img from "/public/assets/home/game-contract/red-dots-1.png"
-import redDots2Img from "/public/assets/home/game-contract/red-dots-2.png"
+import laptopImg from "/public/assets/infographics/game-contract/laptop.png"
+import websiteImg from "/public/assets/infographics/game-contract/floating-website.png"
+import redDots1Img from "/public/assets/design-elements/red-dots-3.png"
+import redDots2Img from "/public/assets/design-elements/red-dots-4.png"
 
 interface ParallaxProps {
     readonly laptop: CSSProperties
@@ -34,19 +33,19 @@ const ImagesBox = () => {
 
             return {
                 laptop: {
-                    transform: `translateX(${getParallaxValue(percentage, -150, 0, 45)}px)`,
+                    transform: `translateX(${getParallaxValue(percentage, -150, 0, 46)}px)`,
                     opacity,
                 },
                 website: {
-                    transform: `translateX(${getParallaxValue(percentage, 400, 0, 45)}px)`,
+                    transform: `translateX(${getParallaxValue(percentage, 400, 0, 46)}px)`,
                     opacity,
                 },
                 redDots1: {
-                    transform: `translateX(${getParallaxValue(percentage, 200, 100, 50)}px)`,
+                    transform: `translateX(${getParallaxValue(percentage, 200, 100, 46)}px)`,
                     opacity,
                 },
                 redDots2: {
-                    transform: `translateX(${getParallaxValue(percentage, 150, 0, 60)}px)`,
+                    transform: `translateX(${getParallaxValue(percentage, 150, 0, 46)}px)`,
                     opacity,
                 },
             }

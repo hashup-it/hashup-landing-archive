@@ -4,12 +4,20 @@ import { Trans } from "react-i18next"
 import { StyledImagesBox } from "./index.styles"
 import Image from "next/image"
 
-import licensePreviewImg from "/public/assets/game-contract/license/license-preview.png"
+import licensePreviewImg from "/public/assets/infographics/game-contract/license-preview.png"
 
 const Images = () => (
     <StyledImagesBox>
         <StyledMainImageWrapper>
-            <Image src={licensePreviewImg} alt="License preview" />
+            <Image
+                src={licensePreviewImg}
+                alt="License preview"
+                loading="lazy"
+                placeholder="blur"
+                lazyBoundary="400px"
+                quality={50}
+                sizes="100%"
+            />
         </StyledMainImageWrapper>
     </StyledImagesBox>
 )

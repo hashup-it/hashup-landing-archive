@@ -10,9 +10,9 @@ import { useCallback } from "react"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
 
-import mainImg from "/public/assets/home/game-cap/website-preview.png"
-import redDotsImg1 from "/public/assets/home/game-cap/red-dots.png"
-import bgImg from "/public/assets/home/game-cap/lying-website.png"
+import mainImg from "/public/assets/infographics/game-cap/website-preview.png"
+import bgImg from "/public/assets/infographics/game-cap/lying-website.png"
+import redDotsImg1 from "/public/assets/design-elements/red-dots-1.png"
 
 interface ParallaxProps {
     readonly mainImage: CSSProperties

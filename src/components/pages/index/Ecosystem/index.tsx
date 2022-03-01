@@ -15,7 +15,7 @@ const Ecosystem = () => (
             <Box
                 index={0}
                 icon={{
-                    src: assetsUrl("home/ecosystem/icon-gamecontract.svg"),
+                    src: assetsUrl("random-icons/ecosystem/icon-gamecontract.svg"),
                     alt: "GameContract HashUp",
                 }}
                 link={{
@@ -26,7 +26,7 @@ const Ecosystem = () => (
             <Box
                 index={1}
                 icon={{
-                    src: assetsUrl("home/ecosystem/icon-gamexplorer.svg"),
+                    src: assetsUrl("random-icons/ecosystem/icon-gamexplorer.svg"),
                     alt: "GameXplorer HashUp",
                 }}
                 link={{
@@ -37,7 +37,7 @@ const Ecosystem = () => (
             <Box
                 index={2}
                 icon={{
-                    src: assetsUrl("home/ecosystem/icon-gamecap.svg"),
+                    src: assetsUrl("random-icons/ecosystem/icon-gamecap.svg"),
                     alt: "GameCap HashUp",
                 }}
                 isDisabled

@@ -7,16 +7,23 @@ import { ArrowButton } from "components/shared/ArrowButton"
 import BottomNav from "components/shared/Header/BottomNav"
 import Image from "next/image"
 
-import laptopImg from "/public/assets/home/game-contract/laptop.png"
-import redDotsImg from "/public/assets/home/game-contract/red-dots-2.png"
+import laptopImg from "/public/assets/infographics/game-contract/laptop.png"
+import redDotsImg from "/public/assets/design-elements/red-dots-4.png"
 
 const Background = () => (
     <StyledBackground>
         <div className="laptop-img">
-            <Image src={laptopImg} alt="GameContract preview" />
+            <Image
+                src={laptopImg}
+                alt="GameContract preview"
+                loading="lazy"
+                placeholder="blur"
+                quality={50}
+                sizes="(min-width: 600px) 1200px, (max-width: 600px) 120%, 100%"
+            />
         </div>
         <div className="red-dots">
-            <Image src={redDotsImg} alt="" quality={8} />
+            <Image src={redDotsImg} alt="" quality={8} sizes="400px" />
         </div>
         <div className="dark-flare" />
     </StyledBackground>

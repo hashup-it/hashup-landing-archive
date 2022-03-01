@@ -9,7 +9,7 @@ const GameContract = () => (
         <Header />
         <License />
         <Settings />
-        <Faq localeKey="gamecontract.faq" numberOfItems={4} />
+        {/* <Faq localeKey="gamecontract.faq" numberOfItems={4} /> */}
         <Community />
     </>
 )

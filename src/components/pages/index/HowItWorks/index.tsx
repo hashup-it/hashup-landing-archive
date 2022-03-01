@@ -7,10 +7,10 @@ import { FC, useEffect, useState } from "react"
 import { useWindowWidth } from "@react-hook/window-size/throttled"
 import { DeviceWidth, GLOBAL_CONTENT_WIDTH_PX } from "__styles__/consts"
 
-import infographic1Desktop from "/public/assets/home/how-it-works/infographic-1-desktop.png"
-import infographic1Mobile from "/public/assets/home/how-it-works/infographic-1-mobile.png"
-import infographic2Desktop from "/public/assets/home/how-it-works/infographic-2-desktop.png"
-import infographic2Mobile from "/public/assets/home/how-it-works/infographic-2-mobile.png"
+import infographic1Desktop from "/public/assets/infographics/how-it-works/infographic-1-desktop.png"
+import infographic1Mobile from "/public/assets/infographics/how-it-works/infographic-1-mobile.png"
+import infographic2Desktop from "/public/assets/infographics/how-it-works/infographic-2-desktop.png"
+import infographic2Mobile from "/public/assets/infographics/how-it-works/infographic-2-mobile.png"
 import SectionType2 from "components/shared/SectionType2"
 
 const MOBILE_IMG_BELOW_PX: number = 450
@@ -42,6 +42,8 @@ const CarouselItem: FC<{ desktopImg: string; mobileImg: string; alt: string }> =
                         quality={95}
                         lazyBoundary="400px"
                         sizes="130vw" // Keep it bigger to be super sharp
+                        loading="lazy"
+                        placeholder="blur"
                     />
                 </div>
             ) : (
@@ -51,9 +53,10 @@ const CarouselItem: FC<{ desktopImg: string; mobileImg: string; alt: string }> =
                         alt={alt}
                         quality={75}
                         layout="responsive"
+                        loading="lazy"
                         placeholder="blur"
-                        sizes={`(min-width: ${DeviceWidth.laptopL}) ${GLOBAL_CONTENT_WIDTH_PX}px, 100vw`}
                         lazyBoundary="400px"
+                        sizes={`(min-width: ${DeviceWidth.laptopL}) ${GLOBAL_CONTENT_WIDTH_PX}px, 100vw`}
                     />
                 </div>
             )}

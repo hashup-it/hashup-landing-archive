@@ -29,7 +29,13 @@ const Box: FC<BoxProps> = ({ index, isDisabled, icon, link }) => {
         <StyledBoxWrapper isDisabled={!!isDisabled}>
             <StyledHeader>
                 <div className="icon">
-                    <Image src={icon.src} alt={icon.alt} width={60} height={60} />
+                    <Image
+                        src={icon.src}
+                        alt={icon.alt}
+                        width={60}
+                        height={60}
+                        
+                    />
                 </div>
                 <div className="label">
                     <Trans i18nKey={`home.ecosystem.boxes.${index}.label`} />

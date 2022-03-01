@@ -66,7 +66,7 @@ export const StyledLabel = styled.h2<{ showAccents?: boolean }>`
                 display: block;
                 width: 13px;
                 height: 10px;
-                background-image: url(${() => assetsUrl("icons/header-trapeze.svg")});
+                background-image: url(${() => assetsUrl("random-icons/small-red-trapeze.svg")});
                 background-position: center;
                 background-repeat: no-repeat;
             }

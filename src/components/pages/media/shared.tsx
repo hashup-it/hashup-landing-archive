@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 import Image from "next/image"
 
-const downloadSvg = require("/public/assets/media/download-icon.svg")
+import downloadSvg from "/public/assets/random-icons/download-icon.svg"
 
 export const StyledDownloadButton = styled.a`
     border-radius: 15px;

@@ -62,7 +62,7 @@ const Password: FC<{ setAuthorized: () => void }> = ({ setAuthorized }) => {
         <StyledContentWrapper>
             <div className="icon">
                 <Image
-                    src={assetsUrl("vccard/key-icon.svg")}
+                    src={assetsUrl("random-icons/red-key-icon.svg")}
                     width={100}
                     height={100}
                     alt=""

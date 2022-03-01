@@ -449,20 +449,8 @@
         },
         "faq": [
             {
-                "a": "dupa",
-                "q": "siema"
-            },
-            {
-                "a": "elo",
-                "q": "dupa"
-            },
-            {
-                "a": "co tam",
-                "q": "slychac"
-            },
-            {
-                "a": "witam",
-                "q": "czesc"
+                "q": "Test question",
+                "a": "Test answer"
             }
         ]
     }

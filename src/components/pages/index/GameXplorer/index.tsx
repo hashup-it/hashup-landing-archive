@@ -10,10 +10,10 @@ import { DeviceWidth, RawDeviceWidthPx } from "__styles__/consts"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
 
-import bgImg from "/public/assets/home/game-xplorer/lying-website.png"
-import mainImg from "/public/assets/home/game-xplorer/website-preview.png"
-import redDotsImg1 from "/public/assets/home/game-xplorer/red-dots-1.png"
-import redDotsImg2 from "/public/assets/home/game-xplorer/red-dots-2.png"
+import bgImg from "/public/assets/infographics/game-xplorer/lying-website.png"
+import mainImg from "/public/assets/infographics/game-xplorer/website-preview.png"
+import redDotsImg1 from "/public/assets/design-elements/red-dots-2.png"
+import redDotsImg2 from "/public/assets/design-elements/red-dots-1.png"
 
 interface ParallaxProps {
     readonly mainImage: CSSProperties

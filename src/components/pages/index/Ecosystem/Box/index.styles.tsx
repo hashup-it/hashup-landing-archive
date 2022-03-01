@@ -7,6 +7,7 @@ export const StyledBoxWrapper = styled.div<{ isDisabled: boolean }>`
     padding: 28px 28px 60px;
     box-sizing: border-box;
     border-top: ${Swatches.primary_color} 2px solid;
+    text-align: left;
 
     ${p =>
         p.isDisabled &&

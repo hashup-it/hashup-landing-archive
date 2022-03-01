@@ -6,9 +6,9 @@ import { RawDeviceWidthPx } from "__styles__/consts"
 import { getParallaxValue, useParallax } from "hooks/parallax"
 import { CSSProperties } from "styled-components"
 
-import tabletImg from "/public/assets/home/game-wallet/tablet.png"
-import phoneImg from "/public/assets/home/game-wallet/phone.png"
-import redDots1Img from "/public/assets/home/game-wallet/red-dots.png"
+import tabletImg from "/public/assets/infographics/game-wallet/tablet.png"
+import phoneImg from "/public/assets/infographics/game-wallet/phone.png"
+import redDotsImg from "/public/assets/design-elements/red-dots-1.png"
 import SectionType2 from "components/shared/SectionType2"
 
 interface ParallaxProps {
@@ -65,7 +65,7 @@ const ImagesBox = () => {
                 />
             </StyledImgWrapper>
             <StyledImgWrapper className="red-dots-1" style={result?.redDots1}>
-                <Image src={redDots1Img} alt="" quality={1} />
+                <Image src={redDotsImg} alt="" quality={1} />
             </StyledImgWrapper>
             <div className="flare" />
         </StyledImagesBox>
