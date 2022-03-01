@@ -12,6 +12,7 @@ const Note: FC<{ readonly index: number }> = ({ index }) => (
                 alt=""
                 width={65}
                 height={65}
+                lazyBoundary="400px"
             />
         </div>
         <h3>

@@ -48,9 +48,9 @@ const Header = () => {
                     <a href="#how-it-works">
                         <StyledButton2>{t("gamecontract.header.button-1")}</StyledButton2>
                     </a>
-                    <a href="#faq">
+                    {/* <a href="#faq">
                         <ArrowButton title="FAQ" label={t("gamecontract.header.button-2")} />
-                    </a>
+                    </a> */}
                 </StyledButtons>
             </GenericContent>
         </FullScreenHeader>
