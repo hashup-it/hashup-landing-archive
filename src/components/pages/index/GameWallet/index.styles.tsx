@@ -6,7 +6,7 @@ export const StyledImagesBox = styled.div`
     position: relative;
 
     ${MediaQuery.tablet} {
-        margin-bottom: 250px;
+        margin-bottom: 160px;
     }
 
     div.flare {

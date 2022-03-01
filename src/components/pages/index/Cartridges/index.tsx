@@ -2,6 +2,7 @@ import { CartridgeType } from "config"
 import { StyledButton1 } from "components/shared/buttons.styles"
 import Link from "next/link"
 import {
+    StyledContentBox,
     StyledBackgroundFlare,
     StyledCartridgesBox,
     StyledCartridgeImgWrapper,
@@ -72,7 +73,7 @@ const Cartridges = () => (
         label={<Trans i18nKey="home.cartridges.label" />}
         paragraph={<Trans i18nKey="home.cartridges.paragraph" />}
     >
-        <>
+        <StyledContentBox>
             <StyledBackgroundFlare />
             <CartridgesBox />
             <Link href="cartridges" passHref>
@@ -82,7 +83,7 @@ const Cartridges = () => (
                     </StyledButton1>
                 </a>
             </Link>
-        </>
+        </StyledContentBox>
     </SectionType2>
 )
 

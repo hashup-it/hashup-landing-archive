@@ -10,6 +10,7 @@ export const StyledCarouselWrapper = styled.div`
     ${MediaQuery.tablet} {
         width: 100%;
         margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     ul.alice-carousel__stage {
@@ -26,7 +27,6 @@ export const StyledCarouselWrapper = styled.div`
 export const StyledControlButton = styled.button<{ isDisabled: boolean; isPrev?: boolean }>`
     width: 50px;
     height: 50px;
-    background-color: red;
     position: relative;
     border-radius: 100%;
     background-color: black;

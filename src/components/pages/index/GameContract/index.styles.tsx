@@ -17,7 +17,6 @@ export const StyledButtonBox = styled.div`
     margin-top: 40px;
 `
 
-
 export const StyledImagesBox = styled.div`
     margin-top: 100px;
     width: 100%;
@@ -28,7 +27,7 @@ export const StyledImagesBox = styled.div`
     }
 
     ${MediaQuery.tablet} {
-        margin-top: -30px;
+        margin-top: -50px;
     }
 
     div.flare {
@@ -143,7 +142,7 @@ export const StyledImgWrapper = styled.div`
         /* animation: ${levitationAnim} 4.5s ease-in-out infinite; */
 
         ${MediaQuery.laptopL} {
-            top: 30px;
+            top: -15%;
             right: 10px;
             width: 60%;
         }
@@ -151,12 +150,8 @@ export const StyledImgWrapper = styled.div`
         ${MediaQuery.tablet} {
             animation: none;
             width: 110%;
-            top: 5%;
+            top: -15%;
             right: -40%;
-        }
-
-        ${MediaQuery.mobileL} {
-            top: 12%;
         }
     }
 `

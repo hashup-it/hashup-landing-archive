@@ -1,6 +1,12 @@
 import styled from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 
+export const StyledContentBox = styled.div`
+    ${MediaQuery.tablet} {
+        margin-bottom: 100px;
+    }
+`
+
 export const StyledBackgroundFlare = styled.div`
     filter: blur(500px);
     width: 500px;
@@ -25,8 +31,8 @@ export const StyledCartridgesBox = styled.div`
     justify-content: center;
 
     ${MediaQuery.tablet} {
-        margin-top: 60px;
-        margin-bottom: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     div.gold-glow {
