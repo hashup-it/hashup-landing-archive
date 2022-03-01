@@ -34,7 +34,8 @@ const Box: FC<BoxProps> = ({ index, isDisabled, icon, link }) => {
                         alt={icon.alt}
                         width={60}
                         height={60}
-                        
+                        loading="lazy"
+                        lazyBoundary="300px"
                     />
                 </div>
                 <div className="label">
