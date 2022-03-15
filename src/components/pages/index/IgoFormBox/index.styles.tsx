@@ -1,6 +1,6 @@
 import { StyledLoadingSpinner } from "components/shared/loading.styles"
 import styled from "styled-components"
-import { maxWidth, MediaQuery, minHeight, Swatches } from "__styles__/consts"
+import { maxWidth, MediaQuery, Swatches } from "__styles__/consts"
 
 export const StyledBoxWrapper = styled.div`
     position: relative;

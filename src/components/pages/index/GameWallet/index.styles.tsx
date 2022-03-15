@@ -103,3 +103,7 @@ export const StyledImgWrapper = styled.div`
         }
     }
 `
+
+export const StyledButtonBox = styled.div`
+    margin: 45px auto 90px;
+`

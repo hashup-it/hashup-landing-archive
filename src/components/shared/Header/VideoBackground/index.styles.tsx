@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { MediaQuery } from "__styles__/consts"
+import { maxHeight, MediaQuery } from "__styles__/consts"
 
 export const StyledBackgroundContainer = styled.div`
     width: 100vw;

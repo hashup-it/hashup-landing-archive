@@ -34,7 +34,7 @@ export const DeviceWidth = {
     desktopL: "2560px",
 } as const
 
-export const minHeight = (height: string): string => `@media(min-height: ${height})`
+export const maxHeight = (height: string): string => `@media(max-height: ${height})`
 export const maxWidth = (width: string): string => `@media(max-width: ${width})`
 
 export const MediaQuery = {

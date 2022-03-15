@@ -66,7 +66,7 @@
             "label": "Game<strong>Wallet</strong>",
             "title": "Store video games like cryptocurrencies<strong>!</strong>",
             "paragraph": "Imagine if gamers were to decide the pricing of games! <strong>Buy</strong> a game, <strong>play</strong> a game, <strong>borrow</strong> a game, <strong>sell</strong> a game. With us, you will finally <strong>own</strong> the games!",
-            "button": "More about"
+            "button": "More about <strong>GameWallet</strong>"
         },
         "game-contract": {
             "label": "Game<strong>Contract</strong>.io",
@@ -294,7 +294,7 @@
         "nowallet": "Don't have a wallet? ",
         "create": "Create one"
     },
-    "cartridges-tab": {
+    "cartridges": {
         "header": "A cartridge with the game and a floppy disk with software on the blockchain",
         "header-paragraph": "You will eventually become the owner of the software you purchased. Send the game to a buddy, why does anyone prevent you from doing that?",
         "cartridge-for": "Cartridge for",
@@ -315,12 +315,12 @@
             "bullet-4": "Color: Gold refers to uniqueness."
         },
         "gray": {
-            "description": "The HashUp Cartridge Standart. Own the game.",
+            "description": "The HashUp Cartridge Standard. Own the game.",
             "target": "Gamers!",
             "bullet-1": "Supply: 0-100mln",
             "bullet-2": "Fee for exchange: 0-20%",
             "bullet-3": "Price: Defined by free market!",
-            "bullet-4": "Color:Gray as neutral"
+            "bullet-4": "Color: Gray as neutral"
         },
         "blue": {
             "description": "Full control for the creator.",
@@ -334,7 +334,7 @@
             "description": "No exchange between players. What it is now. Only the Creator can send the game between addresses!",
             "target": "Creators who are afraid of the free market!",
             "bullet-1": "Supply: 0-100mln",
-            "bullet-2": "Free for exchange: No exchange!",
+            "bullet-2": "Free for exchange: Non-exchangeable!",
             "bullet-3": "Price: Editable!",
             "bullet-4": "Color: Red - watch out!"
         }
@@ -453,5 +453,13 @@
                 "a": "Test answer"
             }
         ]
+    },
+    "gamewallet": {
+        "header": {
+            "label": "Game <strong>Wallet</strong>",
+            "title": "Your source of value<strong>.</strong>",
+            "paragraph": "Wallet for the most popular cryptocurrencies and cartridges based on the HashUp ecosystem. Makes it possible to buy and sell games directly on it!",
+            "info-box": "More information soon..."
+        }
     }
 }

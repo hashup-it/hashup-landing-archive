@@ -2,9 +2,13 @@ import { EcosystemItemProps } from "./index"
 
 export const ecosystemData: EcosystemItemProps[] = [
     {
-        href: "/gamecap",
-        label: "GameCap",
+        href: "/gamecontract",
+        label: "GameContract",
     },
+    {
+        href: "/gamewallet",
+        label: "GameWallet"
+    }
 ]
 
 export const allEcosystemUrls = ecosystemData.map(item => item.href)

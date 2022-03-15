@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next"
 import { assetsUrl, CartridgeColor, CartridgeType } from "config"
 import { CartridgeInterface } from "../../interfaces"
 import { capitalizeFirstLetter } from "util/string"
-import { StyledSectionTitle, StyledSmallSectionLabel } from "components/shared/section.styles"
 import Image from "next/image"
 
 interface DescriptionBoxProps {
@@ -37,14 +36,14 @@ const DescriptionBox: FC<DescriptionBoxProps> = ({
                 </StyledColoredText>{" "}
                 Cartridge
             </h2>
-            <div className="label">{t(`cartridges-tab.${colorText}.description`)}</div>
+            <div className="label">{t(`cartridges.${colorText}.description`)}</div>
             <StyledForInfo>
-                <div className="label">{t("cartridges-tab.cartridge-for")}</div>
-                <div className="content">{t(`cartridges-tab.${colorText}.target`)}</div>
+                <div className="label">{t("cartridges.cartridge-for")}</div>
+                <div className="content">{t(`cartridges.${colorText}.target`)}</div>
             </StyledForInfo>
             <StyledBulletList markerSrc={assetsUrl(`icons/check-${colorText}.svg`)}>
                 {Array.from(Array(numberOfBullets).keys()).map((_, index) => (
-                    <li key={index}>{t(`cartridges-tab.${colorText}.bullet-${index + 1}`)}</li>
+                    <li key={index}>{t(`cartridges.${colorText}.bullet-${index + 1}`)}</li>
                 ))}
             </StyledBulletList>
         </StyledDescriptionBox>

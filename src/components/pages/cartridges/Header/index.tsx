@@ -27,10 +27,10 @@ const Header = () => {
             <div className="inner-container">
                 <StyledBackgroundFlare />
                 <StyledTitle>
-                    {t("cartridges-tab.header")}
+                    {t("cartridges.header")}
                     <StyledColoredText>.</StyledColoredText>
                 </StyledTitle>
-                <StyledParagraph>{t("cartridges-tab.header-paragraph")}</StyledParagraph>
+                <StyledParagraph>{t("cartridges.header-paragraph")}</StyledParagraph>
                 <Thumbnails />
                 <SideSocialMenu />
             </div>

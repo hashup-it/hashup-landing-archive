@@ -1,4 +1,4 @@
-import { StyledImagesBox, StyledImgWrapper } from "./index.styles"
+import { StyledImagesBox, StyledImgWrapper, StyledButtonBox } from "./index.styles"
 import { Trans } from "react-i18next"
 import Image from "next/image"
 import { useCallback } from "react"
@@ -10,6 +10,8 @@ import tabletImg from "/public/assets/infographics/game-wallet/tablet.png"
 import phoneImg from "/public/assets/infographics/game-wallet/phone.png"
 import redDotsImg from "/public/assets/design-elements/red-dots-1.png"
 import SectionType2 from "components/shared/SectionType2"
+import { StyledButton1 } from "components/shared/buttons.styles"
+import Link from "next/link"
 
 interface ParallaxProps {
     readonly tablet: CSSProperties
@@ -72,6 +74,18 @@ const ImagesBox = () => {
     )
 }
 
+const Button = () => (
+    <StyledButtonBox>
+        <Link href="/gamewallet" passHref>
+            <a>
+                <StyledButton1>
+                    <Trans i18nKey="home.game-wallet.button" />
+                </StyledButton1>
+            </a>
+        </Link>
+    </StyledButtonBox>
+)
+
 const GameWallet = () => (
     <SectionType2
         anchor="game-wallet"
@@ -80,7 +94,10 @@ const GameWallet = () => (
         paragraph={<Trans i18nKey={"home.game-wallet.paragraph"} />}
         marginTop="300px"
     >
-        <ImagesBox />
+        <>
+            <Button />
+            <ImagesBox />
+        </>
     </SectionType2>
 )
 

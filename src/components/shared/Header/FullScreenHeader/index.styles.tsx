@@ -2,6 +2,7 @@ import styled from "styled-components"
 import {
     GLOBAL_CONTENT_WIDTH_PX,
     GLOBAL_HORIZONTAL_PADDING_PX,
+    maxHeight,
     MediaQuery,
 } from "__styles__/consts"
 

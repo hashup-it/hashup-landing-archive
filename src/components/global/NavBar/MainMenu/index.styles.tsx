@@ -55,12 +55,14 @@ export const StyledEcosystemBox = styled.div<{ isSelected: boolean; isExpanded: 
     display: inline-block;
     position: relative;
     cursor: pointer;
+    z-index: 99999;
 
     span.label {
         display: flex;
         position: relative;
         z-index: 999;
         padding-right: 10px;
+        font-size: 16px;
 
         div.icon-wrapper {
             position: absolute;
@@ -71,7 +73,7 @@ export const StyledEcosystemBox = styled.div<{ isSelected: boolean; isExpanded: 
 
     :before {
         content: "";
-        left: -14px;
+        left: -22px;
         top: 50%;
         transform: translateY(-50%);
         border-radius: 100%;
@@ -103,12 +105,13 @@ export const StyledEcosystemBox = styled.div<{ isSelected: boolean; isExpanded: 
 
 export const StyledEcosystemItem = styled.li<{ isSelected: boolean }>`
     list-style: none;
-    font-size: 15px;
+    font-size: 14px;
 
     a {
+        text-align: center;
         display: block;
         position: relative;
-        padding: 8px 30px;
+        padding: 10px 22px;
 
         :hover {
             background-color: rgba(255, 255, 255, 0.1);
@@ -117,7 +120,7 @@ export const StyledEcosystemItem = styled.li<{ isSelected: boolean }>`
         :before {
             content: "";
             top: 50%;
-            left: 10px;
+            left: 6px;
             transform: translateY(-50%);
             border-radius: 100%;
             background-color: ${Swatches.primary_color};
