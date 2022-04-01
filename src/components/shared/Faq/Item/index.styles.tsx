@@ -25,6 +25,7 @@ export const StyledHeader = styled.div<{ isOpen: boolean }>`
     align-items: center;
     padding: 22px 0;
     gap: 30px;
+    text-align: left;
 
     :hover {
         cursor: pointer;

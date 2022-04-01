@@ -23,7 +23,7 @@ const Header: FC<{ readonly question: string; readonly isOpen: boolean }> = ({
 
 export interface ItemProps {
     readonly question: string
-    readonly answer: string
+    readonly answer: JSX.Element
 }
 
 const Item: FC<ItemProps> = ({ question, answer }) => {

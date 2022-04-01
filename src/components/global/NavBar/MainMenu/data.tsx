@@ -8,6 +8,10 @@ export const ecosystemData: EcosystemItemProps[] = [
     {
         href: "/gamewallet",
         label: "GameWallet"
+    },
+    {
+        href: "/gamexplorer",
+        label: "GameXplorer"
     }
 ]
 

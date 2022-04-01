@@ -14,6 +14,7 @@ import bgImg from "/public/assets/infographics/game-xplorer/lying-website.png"
 import mainImg from "/public/assets/infographics/game-xplorer/website-preview.png"
 import redDotsImg1 from "/public/assets/design-elements/red-dots-2.png"
 import redDotsImg2 from "/public/assets/design-elements/red-dots-1.png"
+import Link from "next/link"
 
 interface ParallaxProps {
     readonly mainImage: CSSProperties
@@ -67,15 +68,15 @@ const ImagesBox = () => {
     )
 }
 
-const Button = () => {
-    const { t } = useTranslation()
-
-    return (
-        <StyledButton1>
-            {t("game-xplorer.button")} <StyledColoredText>GameXplorer</StyledColoredText>
-        </StyledButton1>
-    )
-}
+const Button = () => (
+    <StyledButton1>
+        <Link href="/gamexplorer" passHref>
+            <a>
+                <Trans i18nKey="home.game-xplorer.button" />
+            </a>
+        </Link>
+    </StyledButton1>
+)
 
 const GameXplorer = () => (
     <SectionType1
@@ -88,6 +89,7 @@ const GameXplorer = () => (
             alt: "GameXplorer.io website preview",
         }}
         imagesBox={<ImagesBox />}
+        button={<Button />}
     />
 )
 

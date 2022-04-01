@@ -78,7 +78,7 @@
             "label": "Game<strong>Xplorer</strong>.io",
             "title": "First blockchain explorer for the gamers<strong>!</strong>",
             "paragraph": "View Player Transactions, their items and NFTs. Take pride in your game collection and collect them. Vote for video games and leave comments under players and profiles! Follow infuencers and friends.",
-            "button": "More about"
+            "button": "More about <strong>GameXplorer</strong>"
         },
         "game-cap": {
             "label": "Game<strong>Cap</strong>.io",
@@ -151,7 +151,7 @@
                         "HashUp on 5 Chains",
                         "GameWallet p2p Messager and Video Games #Forum integration",
                         "GamePaper.io - Kickstarter for Computer Games on Blockchain",
-                        "Gamexchange.finace - First DEX of computer games nad software",
+                        "Gamexchange.finace - First DEX of computer games and software",
                         "HashUp.Games start working on our first AAA Games Exclusive on HashUp's",
                         "Start working on HashUp's Software Edition"
                     ]
@@ -449,8 +449,28 @@
         },
         "faq": [
             {
-                "q": "Test question",
-                "a": "Test answer"
+                "q": "What do I need to release the game and how can I do it?",
+                "a": "Before publishing your game, you should create a dedicated website/subpage for your game. Additionally, you require a GamePaper that contains the description of the game. Once everything is ready, all you need to do is create a game license through our GameContract page. Here you can find step-by-step instructions on how to do it <a href='https://doc.clickup.com/p/h/q8ccu-183/35e495082878040'>here</a>."
+            },
+            {
+                "q": "What is the license I will issue?",
+                "a": "Game licenses are distributed on the HashUp platform in the form of ERC-20 tokens. In short, they work just like other cryptocurrencies. Owning a unit entitles the owner to start the game."
+            },
+            {
+                "q": "How can I secure my game files and where can I store them?",
+                "a": "Please be informed that during the MVP phase, we only support browser-based games. However, in the near future, we plan to introduce a special launcher to manage game files via the GameContract platform."
+            },
+            {
+                "q": "Who grants approval for my game?",
+                "a": "In the initial phase, this is the responsibility of the HashUp team. Ultimately, this task will be put in the hands of the community, who can decide whether a game can appear on the platform."
+            },
+            {
+                "q": "How do I earn money here?",
+                "a": "Your regular income comes from a percentage of each license transaction of your game made by users. As an issuer, you can also leave a part of the offer in your portfolio to liquidate it in the future and earn additional income."
+            },
+            {
+                "q": "Can I edit the game after it has been released?",
+                "a": "Editing the information after the game has been released is dependent on the type of cartridge you have chosen. You can always modify the metadata, but if you opt for a blue cartridge, you will gain access to edit the data that defines the economic model of your license - including the turnover fee already during the distribution process."
             }
         ]
     },
@@ -460,6 +480,82 @@
             "title": "Your source of value<strong>.</strong>",
             "paragraph": "Wallet for the most popular cryptocurrencies and cartridges based on the HashUp ecosystem. Makes it possible to buy and sell games directly on it!",
             "info-box": "More information soon..."
+        }
+    },
+    "gamexplorer": {
+        "header": {
+            "label": "Game <strong>Xplorer</strong>",
+            "title": "First blockchain explorer for the Gamers.",
+            "paragraph": "Public and transparent blockchain explorer, in the gaming world. Future of gaming social media. Create a stunning profile, add your friends and follow influencers.",
+            "button-1": "How it works?",
+            "button-2": "Questions and answers"
+        },
+        "follow": {
+            "label": "",
+            "title": "Follow the gamer network!",
+            "paragraph": "The platform focuses on presenting a player's game library and achievements as well as their blockchain account balance. Showcase your collection and compare with your friends. Ultimate metaverse clout!"
+        },
+        "discover": {
+            "label": "",
+            "title": "Discover your player profile<strong>!</strong>",
+            "paragraph": "Stand out from other players and modify your profile! Show off your NFT on your avatar and the number of games you own.<br /><br />Most iconic players will definitely love the customisation and possibilities to stand out from the others!"
+        },
+        "details": {
+            "label": "",
+            "title": "See smallest details<strong>!</strong>",
+            "paragraph": "View the transactions that have taken place recently on each cartridge and each wallet. Discover how detailed transacting on blockchain is. <br /><br />Analyze the transaction history and speculate on games value. Trade and earn!"
+        },
+        "faq": [
+            {
+                "q": "Can I use the HashUp ecosystem without connecting my wallet to the GameXplorer app?",
+                "a": "In the future we are planning a solution to simplify this process, but currently this is not possible. Your licenses will be stored in GameWallet. Want to learn how to set up and use a wallet? You can find the instructions <a href='https://hashup-it.gitbook.io/hashup-it-1/'>here</a>."
+            },
+            {
+                "q": "What is a game I have purchased?",
+                "a": "The gaming licenses you purchased on the HashUp platform are in the form of ERC-20 tokens. In short, they work just like other cryptocurrencies. Owning a unit entitles the owner to launch the game."
+            },
+            {
+                "q": "How to buy a game?",
+                "a": "Each game can be purchased through the game profiles in the GameXplorer app and on the GameCap platform. There is also an option to buy directly on the developer's website. In the future, we will enable transactions via the GameSwap plugin, just like tokens are exchanged on decentralised exchanges."
+            },
+            {
+                "q": "Why do I have to pay to edit my profile?",
+                "a": "All the data you enter in your profile is stored on the blockchain network. This way we can guarantee the heterogeneity and uniqueness of each user. Unfortunately, all changes have to be saved again in the blockchain network, which involves a transaction fee. HashUp does not charge any additional fees."
+            },
+            {
+                "q": "Can I trade or sell the game? (or lend, sell, exchange?)",
+                "a": "The game you purchased is your property. Depending on the type of license you choose (the colour of the cartridge), you can resell it, exchange it, or even give it away to another player."
+            }
+        ]
+    },
+    "gamecap": {
+        "header": {
+            "label": "Game <strong>Cap</strong>",
+            "title": "Browse all available games in one place.",
+            "paragraph": "GameCap.io is the world's first price-tracking website for software licences in the form of Cartridges on the blockchain. View their current prices and data at a glance.",
+            "button-1": "How it works?",
+            "button-2": "Questions and answers"
+        },
+        "follow": {
+            "label": "Historical charts",
+            "title": "Follow the figures!",
+            "paragraph": "See historical charts of a particular game and study the changes in prices over different periods of time. Assess the volume and market cap for your positions. Tracking the value of a game has never been so easy!"
+        },
+        "game-profile": {
+            "label": "Game Profile",
+            "title": "Discover the special game profile!",
+            "paragraph": "Each title has its own, custom profile. See what developers want to share with you! Follow them on social media, view GamePaper, and get the detailed data, such as:",
+            "items": [
+                "Game description",
+                "Price chart",
+                "Game news",
+                "User reviews"
+            ]
+        },
+        "visible": {
+            "label": "How it works",
+            "title": "Be visible for users<strong>!</strong>",
+            "paragraph": "Try our unique advertising methods. Each day is being auctioned, similarly to NFT. This means that its price will be determined by the free market and will be subject to the native asset of the HashUp ecosystem, the # token. <br /><br />Win the bid, and you’re free to advertise your game."
         }
     }
 }
