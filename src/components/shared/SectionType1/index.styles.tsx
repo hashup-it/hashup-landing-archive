@@ -3,7 +3,7 @@ import { StyledSectionParagraph, StyledSectionTitle } from "components/shared/se
 import { StyledButton1 } from "components/shared/buttons.styles"
 import { MediaQuery } from "__styles__/consts"
 
-export const StyledSectionWrapper = styled.div<{ reversed: boolean }>`
+export const StyledSectionWrapper = styled.div<{ reversed?: boolean }>`
     position: relative;
     width: 100%;
     margin: 300px auto 40px;
