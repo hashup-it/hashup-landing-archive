@@ -44,17 +44,6 @@ export const coreTeam: PersonInterface[] = [
         ],
     },
     {
-        name: "Cezary Dobrowolski",
-        localeKey: "cezary-dobrowolski",
-        avatarImg: require("/public/assets/team-avatars/cezary_dobrowolski.png"),
-        socialMedia: [
-            {
-                type: SocialMediaEnum.linkedIn,
-                url: "https://www.linkedin.com/in/cezary-krzysztof-dobrowolski-b0a2001a5/",
-            },
-        ],
-    },
-    {
         name: "Szymon Fiałkowski",
         localeKey: "szymon-fialkowski",
         avatarImg: require("/public/assets/team-avatars/szymon_fialkowski.png"),
@@ -65,17 +54,6 @@ export const coreTeam: PersonInterface[] = [
             },
         ],
     },
-    {
-        name: "Maciej Czarkowski",
-        localeKey: "maciej-czarkowski",
-        avatarImg: require("/public/assets/team-avatars/maciej_czarkowski.png"),
-        socialMedia: [
-            {
-                type: SocialMediaEnum.linkedIn,
-                url: "https://www.linkedin.com/in/maciej-czarkowski/"
-            }
-        ]
-    }
 ]
 
 export const team: PersonInterface[] = [
