@@ -25,12 +25,13 @@ export const StyledWhitepaperBox = styled.div<{ isMenuShown: boolean }>`
     font-size: 16px;
     text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-left: 20px;
     position: relative;
     background-color: transparent;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    opacity: 0.5;
 
     ${props =>
         props.isMenuShown &&

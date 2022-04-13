@@ -37,13 +37,6 @@ const FooterBottom = () => {
                     >
                         Privacy Policy
                     </StyledFooterLink>
-                    <StyledFooterLink
-                        href={Documents.airdropTermsOfUse}
-                        target="_blank"
-                        rel="noopener noreferer"
-                    >
-                        Airdrop Terms of Use
-                    </StyledFooterLink>
                 </StyledDocumentGroup>
             </div>
         </StyledFooterBottom>

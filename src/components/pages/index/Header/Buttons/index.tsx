@@ -42,9 +42,9 @@ const WhitepaperButton = () => {
 
     return (
         <StyledWhitepaperBox
-            onClick={() => setIsMenuShown(!isMenuShown)}
-            onMouseEnter={() => setIsMenuShown(true)}
-            onMouseLeave={() => setIsMenuShown(false)}
+            // onClick={() => setIsMenuShown(!isMenuShown)}
+            // onMouseEnter={() => setIsMenuShown(true)}
+            // onMouseLeave={() => setIsMenuShown(false)}
             isMenuShown={isMenuShown}
         >
             <div className="button-content">

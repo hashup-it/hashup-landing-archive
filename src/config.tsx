@@ -61,9 +61,9 @@ export const BrandAssets = {
 } as const
 
 export const Documents = {
-    termsAndConditions: "https://cdn.hashup.it/landing/Hash_Token_Terms_of_Use.pdf",
-    airdropTermsOfUse: "https://cdn.hashup.it/landing/Hash_Token_Airdrop_Terms_and_Conditions.pdf",
-    privacyPolicy: "https://cdn.hashup.it/landing/Data_Protection_Policy.pdf",
+    termsAndConditions: "https://cdn.hashup.it/landing/HashUp.IT_-_Terms_And_Contitions.pdf",
+    // airdropTermsOfUse: "https://cdn.hashup.it/landing/Hash_Token_Airdrop_Terms_and_Conditions.pdf",
+    privacyPolicy: "https://cdn.hashup.it/landing/HashUp.IT_-_Data_Protection_Policy.pdf",
     lightpaper: "https://cdn.hashup.it/landing/lightpaper.pdf",
     pitchdeck: "https://cdn.hashup.it/landing/HashUp_PitchDeck.pdf",
 } as const
