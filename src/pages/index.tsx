@@ -32,7 +32,7 @@ const LandingPage = () => (
         <TechStack />
         <Team />
         <Roadmap />
-        <Airdrop />
+        {/* <Airdrop /> */}
     </>
 )
 
