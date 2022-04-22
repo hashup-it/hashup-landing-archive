@@ -16,24 +16,24 @@
     },
     "home": {
         "header": {
-            "paragraph": "DeFinitive Edition of Game Publishing Platform. P2P swap with video games between players. Own the game like never before!",
+            "paragraph": "ERC20 Software License Carrier. Own the games and software like never before! ",
             "scroll-note": "Scroll to <strong>learn more</strong>",
             "add-hash-wallet": "Add # to your wallet",
             "all-gamers": "All gamers: ",
             "contract": "Contract: ",
-            "label": "Video Game <strong>Cartridges</strong> on Blockchain",
-            "title": "Decentralized Game Publishing Platform<strong>.</strong>",
+            "label": "ERC20 <strong>Cartridges</strong>",
+            "title": "Decentralised Games Marketplace<strong>.</strong>",
             "button": "More about cartridges"
         },
         "how-it-works": {
             "label": "How it works",
-            "title": "Layer 2 for <strong>Game Distribution</strong>",
-            "paragraph": "Issue your Game as Licence-pegged ERC-20  Token Monetize how you want with creating a Game Contract Start playing with our Game Launcher"
+            "title": "We use <strong>ERC20</strong> as a License Carrier.",
+            "paragraph": "We combined the physical license with the ERC20 standard to create the ERC20 Cartridge. Swap games on DEX! We use AMM for software price discovery!"
         },
         "ecosystem": {
             "label": "Our Ecosystem",
             "title": "Solving the Gaming Industires biggest Problems<strong>.</strong>",
-            "paragraph": "New Economy for Creators. Freedom for Gamers.<br> No Intermediaries.",
+            "paragraph": "We copied Coinmarketcap and explorer blockchain to create a game distribution platform!",
             "testnet-note": "Testnet live",
             "boxes": [
                 {
@@ -51,15 +51,15 @@
                 {
                     "label": "Game <strong>Cap</strong>",
                     "title": "Browse all available games in one place<strong>.</strong>",
-                    "paragraph": "GameCap.io is the world's first price-tracking website for decentralized software licenses. View their current prices and data at a glance.",
+                    "paragraph": "GameCap.io is the world's first price-tracking website for decentralized software licenses. View their current prices and data at a glance. CoinMarketCap with games!",
                     "link-label": "soon"
                 }
             ]
         },
         "cartridges": {
-            "label": "Cartridges",
-            "title": "1 Token <strong>=</strong> 1 Video Game<strong>.</strong><br/> Buy<strong>2</strong>Play",
-            "paragraph": "Cartridge with a video game on the Blockchain. You must have one piece of the game to play. Freely shape the rules of the secondary market as a Game Creator. Liquidity pools with video games!",
+            "label": "ERC20 Cartridges",
+            "title": "1 unit of <strong>ERC20 Cartridge</strong> = 1 copy <strong>of game.</strong><br/> Buy<strong>2</strong>Play",
+            "paragraph": "Compatibility with the ERC20 standard allows games to be held in cryptocurrency wallets! Provide liquidity with games on Uniswap!",
             "button": "More about cartridges"
         },
         "game-wallet": {
@@ -175,7 +175,7 @@
             "team-members": {
                 "szymon-jankowski": {
                     "role": "CEO",
-                    "description": "He believes that technology will enable the rise of crypto-anarchism in the future."
+                    "description": "I fight for freedom with an eternal code. I want to create derivatives out of everything. I started with computer games at HashUp."
                 },
                 "filip-szydlowski": {
                     "role": "CLO",
