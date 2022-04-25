@@ -19,7 +19,9 @@ const Faq: FC<{ readonly localeKey: string; readonly numberOfItems: number }> = 
                         question={t(`${localeKey}.${index}.q`)}
                         answer={
                             // It might be done better but for now it just works
-                            <div dangerouslySetInnerHTML={{__html: t(`${localeKey}.${index}.a`)}} />
+                            <div
+                                dangerouslySetInnerHTML={{ __html: t(`${localeKey}.${index}.a`) }}
+                            />
                         }
                     />
                 ))}

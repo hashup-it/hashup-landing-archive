@@ -1,7 +1,4 @@
-import {
-    StyledAddress,
-    StyledWrapper,
-} from "./index.styles"
+import { StyledAddress, StyledWrapper } from "./index.styles"
 import { WalletSelector } from "../../WalletSelector"
 import { useTranslation } from "react-i18next"
 import { useAccountContext } from "contexts/account"

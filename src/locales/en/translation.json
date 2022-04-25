@@ -532,7 +532,7 @@
         "header": {
             "label": "Game <strong>Cap</strong>",
             "title": "Browse all available games in one place.",
-            "paragraph": "GameCap.io is the world's first price-tracking website for software licences in the form of Cartridges on the blockchain. View their current prices and data at a glance.",
+            "paragraph": "GameCap.io is the world's first price-tracking website for software licences in the form of Cartridges on the blockchain.",
             "button-1": "How it works?",
             "button-2": "Questions and answers"
         },
@@ -541,15 +541,15 @@
             "title": "Follow the figures!",
             "paragraph": "See historical charts of a particular game and study the changes in prices over different periods of time. Assess the volume and market cap for your positions. Tracking the value of a game has never been so easy!"
         },
-        "game-profile": {
+        "discover": {
             "label": "Game Profile",
             "title": "Discover the special game profile!",
             "paragraph": "Each title has its own, custom profile. See what developers want to share with you! Follow them on social media, view GamePaper, and get the detailed data, such as:",
             "items": [
-                "Game description",
-                "Price chart",
-                "Game news",
-                "User reviews"
+                "Game <br/>description",
+                "Price <br/>chart",
+                "Game <br/>news",
+                "User <br/>reviews"
             ]
         },
         "visible": {

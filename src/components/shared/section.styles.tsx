@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import { MediaQuery, Swatches } from "__styles__/consts"
 
-export const StyledSectionWrapper = styled.div<{marginTop?: string}>`
+export const StyledSectionWrapper = styled.div<{ marginTop?: string }>`
     margin: auto;
-    margin-top: ${p => p.marginTop ? p.marginTop : '200px'};
+    margin-top: ${p => (p.marginTop ? p.marginTop : "200px")};
     display: flex;
     flex-direction: column;
     align-items: center;

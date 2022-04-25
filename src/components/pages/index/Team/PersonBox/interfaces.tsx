@@ -25,5 +25,5 @@ export interface PersonInterface {
 
     // Use when 'name' field is more than 2 words long
     // It's number of words (in 'name' field) before break line
-    readonly wordsBeforeNameBreak?: number 
+    readonly wordsBeforeNameBreak?: number
 }

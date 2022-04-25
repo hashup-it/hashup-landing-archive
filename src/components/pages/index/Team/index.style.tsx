@@ -45,5 +45,4 @@ export const StyledCarousel = styled.div`
     margin: 45px 0;
     width: calc(100% + ${GLOBAL_HORIZONTAL_PADDING_PX}px * 2);
     margin-left: -${GLOBAL_HORIZONTAL_PADDING_PX}px;
-
 `

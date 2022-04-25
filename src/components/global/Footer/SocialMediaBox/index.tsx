@@ -19,7 +19,12 @@ const SocialMediaBox = () => {
             </StyledSocialMediaText>
             <StyledSocialsContainer>
                 {footerSocialsData.map((social, index) => (
-                    <StyledSocialIconWrapper href={social.destination} target="_blank" rel="noreferrer" key={index}>
+                    <StyledSocialIconWrapper
+                        href={social.destination}
+                        target="_blank"
+                        rel="noreferrer"
+                        key={index}
+                    >
                         <div className="icon-wrapper">
                             <Image src={social.icon} alt="" />
                         </div>

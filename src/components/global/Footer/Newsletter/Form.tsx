@@ -3,7 +3,7 @@ import { scriptsUrl } from "config"
 
 const Form = () => (
     <>
-        <Script src={scriptsUrl('mailer-newsletter.js')} />
+        <Script src={scriptsUrl("mailer-newsletter.js")} />
         <div
             className="ml-form-embed"
             data-account="3556595:b7a5n7e8w5"

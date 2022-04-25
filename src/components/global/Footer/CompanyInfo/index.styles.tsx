@@ -1,12 +1,12 @@
-import { MediaQuery } from "__styles__/consts";
-import styled from "styled-components";
-import { Swatches } from "__styles__/consts";
+import { MediaQuery } from "__styles__/consts"
+import styled from "styled-components"
+import { Swatches } from "__styles__/consts"
 
 export const StyledCompanyInfo = styled.div`
     font-size: 13px;
     color: ${Swatches.text_secondary};
     line-height: 22px;
-`;
+`
 
 export const StyledCompanyIds = styled.div`
     font-style: normal;

@@ -12,11 +12,7 @@ import { StyledImagexBox } from "./index.styles"
 )
 */
 
-const Images = () => (
-    <div>
-        test
-    </div>
-)
+const Images = () => <div>test</div>
 
 const Follow = () => (
     <SectionType1

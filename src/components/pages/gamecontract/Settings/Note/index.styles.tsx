@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledNoteBox = styled.div`
     width: 230px;
     text-align: left;
-   
+
     div.icon {
         margin-left: -8px;
     }

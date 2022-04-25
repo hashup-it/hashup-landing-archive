@@ -8,7 +8,6 @@ import unitedIdeasImg from "/public/assets/partners/united-ideas.png"
 import flybridgeImg from "/public/assets/partners/flybridge.png"
 import synapseImg from "/public/assets/partners/synapse.png"
 
-
 export const partnersData: LogoInterface[] = [
     {
         className: "ad-shares",

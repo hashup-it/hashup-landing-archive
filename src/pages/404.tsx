@@ -36,7 +36,7 @@ const Page404 = () => {
     return (
         <StyledWrapper>
             <StyledErrorText>404 :/</StyledErrorText>
-            <StyledDescription>{t('error-404-description')}</StyledDescription>
+            <StyledDescription>{t("error-404-description")}</StyledDescription>
         </StyledWrapper>
     )
 }

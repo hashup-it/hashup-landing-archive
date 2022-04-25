@@ -1,8 +1,7 @@
-import { MediaQuery } from "__styles__/consts";
-import styled from "styled-components";
+import { MediaQuery } from "__styles__/consts"
+import styled from "styled-components"
 
 export const StyledFooterMenu = styled.div``
-
 
 export const StyledMenuItems = styled.nav`
     display: flex;

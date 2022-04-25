@@ -1,33 +1,33 @@
-import { SocialMediaIcons, SocialMediaUrls } from "config";
+import { SocialMediaIcons, SocialMediaUrls } from "config"
 
 interface FooterSocialInterface {
-    icon: string,
+    icon: string
     destination: string
 }
 
-export const footerSocialsData : FooterSocialInterface[] = [
+export const footerSocialsData: FooterSocialInterface[] = [
     {
         icon: SocialMediaIcons.linkedin,
-        destination: SocialMediaUrls.linkedIn
+        destination: SocialMediaUrls.linkedIn,
     },
     {
         icon: SocialMediaIcons.telegram,
-        destination: SocialMediaUrls.telegram
+        destination: SocialMediaUrls.telegram,
     },
     {
         icon: SocialMediaIcons.twitter,
-        destination: SocialMediaUrls.twitter
+        destination: SocialMediaUrls.twitter,
     },
     {
         icon: SocialMediaIcons.facebook,
-        destination: SocialMediaUrls.facebook
+        destination: SocialMediaUrls.facebook,
     },
     {
         icon: SocialMediaIcons.instagram,
-        destination: SocialMediaUrls.instagram
+        destination: SocialMediaUrls.instagram,
     },
     {
         icon: SocialMediaIcons.discord,
-        destination: SocialMediaUrls.discord
-    }
+        destination: SocialMediaUrls.discord,
+    },
 ]

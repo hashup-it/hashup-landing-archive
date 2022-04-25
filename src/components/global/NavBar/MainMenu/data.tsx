@@ -7,12 +7,16 @@ export const ecosystemData: EcosystemItemProps[] = [
     },
     {
         href: "/gamewallet",
-        label: "GameWallet"
+        label: "GameWallet",
     },
     {
         href: "/gamexplorer",
-        label: "GameXplorer"
-    }
+        label: "GameXplorer",
+    },
+    {
+        href: "/gamecap",
+        label: "GameCap",
+    },
 ]
 
 export const allEcosystemUrls = ecosystemData.map(item => item.href)

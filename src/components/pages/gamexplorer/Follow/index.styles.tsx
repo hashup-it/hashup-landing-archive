@@ -1,5 +1,3 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-export const StyledImagexBox = styled.div`
-    
-`
+export const StyledImagexBox = styled.div``

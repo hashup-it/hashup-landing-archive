@@ -10,9 +10,7 @@ const CartridgeThumbnail: FC<{ color: CartridgeColor; type: CartridgeType }> = (
 
     return (
         <StyledBox href={`#${anchor}`} color={color}>
-            <div className="label">
-                {anchor}
-            </div>
+            <div className="label">{anchor}</div>
             <div className="text">Cartridge</div>
         </StyledBox>
     )

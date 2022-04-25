@@ -54,7 +54,7 @@ const LocaleTemplate = {
         paragraph: "",
         button: {
             "1": "",
-            "2": ""
+            "2": "",
         },
     },
     "game-cap": {
@@ -81,33 +81,33 @@ const LocaleTemplate = {
         "header-def": "",
         "header-form": "",
         "note-1": {
-            "title": {
+            title: {
                 "1": "",
-                "2": ""
+                "2": "",
             },
-            content: ""
+            content: "",
         },
         "note-2": {
-            "title": {
+            title: {
                 "1": "",
-                "2": ""
+                "2": "",
             },
-            content: ""
+            content: "",
         },
         "note-3": {
-            "title": {
+            title: {
                 "1": "",
-                "2": ""
+                "2": "",
             },
-            content: ""
+            content: "",
         },
         "note-4": {
-            "title": {
+            title: {
                 "1": "",
-                "2": ""
+                "2": "",
             },
-            content: ""
-        }
+            content: "",
+        },
     },
     partners: {
         label: "",

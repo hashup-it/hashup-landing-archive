@@ -46,7 +46,13 @@ export const ArrowButton: FC<{ label: JSX.Element | string; title: string }> = (
         <div className="button-content">
             {label}
             <div className="arrow-wrapper">
-                <Image src={assetsUrl("random-icons/red-arrow.svg")} width={20} height={20} alt="" priority />
+                <Image
+                    src={assetsUrl("random-icons/red-arrow.svg")}
+                    width={20}
+                    height={20}
+                    alt=""
+                    priority
+                />
             </div>
         </div>
     </StyledArrowButton>
