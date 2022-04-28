@@ -10,12 +10,14 @@ const Discover = () => (
         title={<Trans i18nKey="gamecap.discover.title" />}
         paragraph={<Trans i18nKey="gamecap.discover.paragraph" />}
     >
-        <StyledItemsBox>
-            {[...Array(4)].map((v, idx) => (
-                <Item key={idx} text={<Trans i18nKey={`gamecap.discover.items.${idx}`} />} />
-            ))}
-        </StyledItemsBox>
-        <StyledFlare />
+        <>
+            <StyledItemsBox>
+                {[...Array(4)].map((v, idx) => (
+                    <Item key={idx} text={<Trans i18nKey={`gamecap.discover.items.${idx}`} />} />
+                ))}
+            </StyledItemsBox>
+            <StyledFlare />
+        </>
     </SectionType2>
 )
 
