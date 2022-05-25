@@ -9,7 +9,7 @@ import {
 import { useTranslation } from "react-i18next"
 import { getWhitepaper } from "util/whitepaper"
 import { useState } from "react"
-import { assetsUrl, Languages } from "config"
+import { assetsUrl, Documents, Languages } from "config"
 import Link from "next/link"
 import Image from "next/image"
 import { StyledButton2 } from "components/shared/buttons.styles"
@@ -19,7 +19,7 @@ const WhitepaperLangItem: FC<{ readonly lang: keyof typeof Languages }> = ({ lan
 
     return (
         <StyledWhitepaperLangItem
-            href={getWhitepaper(lang)}
+            href={lang == "pl" ? Documents.whitepaperPL : Documents.whitepaperEN}
             target="_blank"
             rel="noopener noreferrer"
         >
@@ -42,9 +42,9 @@ const WhitepaperButton = () => {
 
     return (
         <StyledWhitepaperBox
-            // onClick={() => setIsMenuShown(!isMenuShown)}
-            // onMouseEnter={() => setIsMenuShown(true)}
-            // onMouseLeave={() => setIsMenuShown(false)}
+            onClick={() => setIsMenuShown(!isMenuShown)}
+            onMouseEnter={() => setIsMenuShown(true)}
+            onMouseLeave={() => setIsMenuShown(false)}
             isMenuShown={isMenuShown}
         >
             <div className="button-content">

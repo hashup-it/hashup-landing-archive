@@ -66,6 +66,8 @@ export const Documents = {
     privacyPolicy: "https://cdn.hashup.it/landing/HashUp.IT_-_Data_Protection_Policy.pdf",
     lightpaper: "https://cdn.hashup.it/landing/lightpaper.pdf",
     pitchdeck: "https://cdn.hashup.it/landing/HashUp_PitchDeck.pdf",
+    whitepaperPL: "https://cdn.hashup.it/hashup-whitepaper-pl.pdf",
+    whitepaperEN: "https://cdn.hashup.it/hashup-whitepaper-eng.pdf",
 } as const
 
 export const CompanyInfo = {
